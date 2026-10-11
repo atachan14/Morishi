@@ -50,3 +50,5 @@ npm run build
 個体の見比べ表示と条件付き合体比較： [ecosystem-identity](docs/ecosystem-identity.md)。
 
 朝の試遊版の横断境界と実時間確認： [ecosystem-boundary](docs/ecosystem-boundary.md)。
+
+タッチ相当のスマホ操作と保存失敗への対処： [ecosystem-mobile](docs/ecosystem-mobile.md)。

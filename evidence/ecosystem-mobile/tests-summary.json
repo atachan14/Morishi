@@ -1,0 +1,26 @@
+{
+  "tests": 164,
+  "passed": 164,
+  "failed": 0,
+  "durationMs": 14477.8084,
+  "buildPassed": true,
+  "gameRulesChanged": false,
+  "saveFormatChanged": false,
+  "touchEquivalentNotPhysicalDevice": true,
+  "testedTouchViewports": [
+    [
+      320,
+      568
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "oldRunCompatibility": "browser regression verifies exact legacy raw and snapshots",
+  "noPublishOrPush": true
+}

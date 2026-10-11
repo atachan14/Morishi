@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {createState,place,step,Clock,chooseTarget,effectiveRange,validatePlacement,WIDTH,HEIGHT,SEED_RADIUS,EPSILON,footprint,insideTerritory,territoryCoverage,clientToWorld,viewport,placementForecast,attackDamage,stalled,enemyPositions,finishRun,type Unit} from '../src/sim.js';
+import {createState,place,step,Clock,chooseTarget,effectiveRange,validatePlacement,WIDTH,HEIGHT,SEED_RADIUS,EPSILON,footprint,insideTerritory,territoryCoverage,clientToWorld,viewport,placementForecast,attackDamage,stalled,enemyPositions,finishRun,runActivity,type Unit} from '../src/sim.js';
 test('same seed and actions reproduce the entire state',()=>{
   function run(){const s=createState(77);place(s,1.23456789,2.3456789);place(s,1.34567,6.76543);for(let i=0;i<250;i++){step(s);if(i===100)place(s,2.1345,4.4321);}return s;}
   assert.deepEqual(run(),run());assert.notDeepEqual(createState(77).cards,createState(78).cards);
@@ -121,4 +121,14 @@ test('attack feedback records the actual target and position, never the next cho
 test('voluntary run finish preserves progress and freezes all gameplay',()=>{
   const s=createState(19),initial=structuredClone(s);assert.equal(finishRun(s),false);assert.deepEqual(s,initial);
   place(s,1.25,3.78);for(let i=0;i<50;i++)step(s);const tick=s.tick,territory=structuredClone(s.territory);assert.equal(finishRun(s),true);assert.equal(s.tick,tick);assert.deepEqual(s.territory,territory);assert.equal(s.outcome,'loss');const ended=structuredClone(s);assert.equal(finishRun(s),false);step(s);assert.deepEqual(s,ended);
+});
+test('run guidance distinguishes future growth from waiting without a useful next change',()=>{
+  const s=createState();assert.equal(runActivity(s),'ready');place(s,1,4.5);for(const u of s.units)u.stats.range=.5;
+  assert.equal(runActivity(s),'growing');s.units.at(-1)!.age=224;assert.equal(runActivity(s),'needs-placement');const before=structuredClone(s);runActivity(s);assert.deepEqual(s,before);
+  finishRun(s);assert.equal(runActivity(s),'ended');
+});
+test('weak-combat guidance does not end a slow but real attack',()=>{
+  const s=createState();place(s,1,2);const ally=s.units.at(-1)!,enemy=s.units[0];s.units=[ally,enemy];ally.age=224;enemy.age=224;enemy.stats.range=.5;enemy.y=2;enemy.x=1+effectiveRange(ally)-1e-6;
+  assert.equal(runActivity(s),'weak-combat');const hp=enemy.hp;step(s);assert.ok(enemy.hp<hp);assert.equal(s.outcome,'playing');
+  enemy.x=2;assert.equal(runActivity(s),'fighting');
 });

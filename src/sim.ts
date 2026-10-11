@@ -108,6 +108,14 @@ export function placementForecast(s:State,x:number,y:number):PlacementForecast|u
 export function stalled(s:State):boolean {
   return s.cards.length===0&&s.units.length>0&&s.units.every(u=>u.age>=224)&&s.units.every(u=>!chooseTarget(u,s.units));
 }
+export function runActivity(s:State):'ready'|'growing'|'fighting'|'weak-combat'|'needs-placement'|'ended' {
+  if(s.outcome!=='playing')return 'ended';
+  if(!s.started)return 'ready';
+  const attacks=s.units.map(u=>{const target=chooseTarget(u,s.units);return target?attackDamage(u,target):0;});
+  const damage=attacks.reduce((sum,value)=>sum+value,0);
+  if(damage>0)return damage<1?'weak-combat':'fighting';
+  return s.units.some(u=>u.team==='ally'&&u.age<224)?'growing':'needs-placement';
+}
 function event(s:State,message:string) { s.events.unshift(message);s.events=s.events.slice(0,5); }
 export function finishRun(s:State):boolean {
   if(s.outcome!=='playing'||!s.started)return false;

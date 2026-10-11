@@ -18,4 +18,3 @@ trials.push({card:card.id,...point,hp:stats.maxHp,initialRange:stats.range,futur
 result.variants.push({name,trials:trials.length,survivors:trials.filter(t=>t.death===null).length,shooters:trials.filter(t=>t.ownShots>0).length,newSoloShooters:trials.filter(t=>t.ownShots>0&&!t.merged).length,immediateDanger:trials.filter(t=>t.incoming.length).length,best:trials.sort((a,b)=>b.ownShots-a.ownShots||Number(a.death!==null)-Number(b.death!==null)).slice(0,6),examples:trials.filter(t=>t.kind==='presence1.3').slice(0,6),safeButNoShot:trials.filter(t=>t.death===null&&t.ownShots===0).slice(0,3)});
 console.log(JSON.stringify({seed,tick,name,...result.variants.at(-1),best:result.variants.at(-1).best.slice(0,2),examples:undefined,safeButNoShot:undefined}));}
 fs.mkdirSync('evidence/ecosystem-recovery',{recursive:true});fs.writeFileSync(`evidence/ecosystem-recovery/${seed}-parameters.json`,JSON.stringify(result,null,2));
-

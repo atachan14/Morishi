@@ -1,0 +1,78 @@
+{
+  "sameRules": true,
+  "gameSeconds": 600,
+  "rows": [
+    {
+      "seed": 11,
+      "name": "legal",
+      "tick": 6000,
+      "shots": 519,
+      "allyShots": 386,
+      "enemyShots": 133,
+      "maxAllyGapSeconds": 455.2,
+      "saveReplayExact": true,
+      "placements": 88,
+      "dead": 37,
+      "merges": 62,
+      "kills": 11,
+      "origins": 12,
+      "maxGapSeconds": 183.5,
+      "maxLateGapSeconds": 15.7,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.02,
+        "ice": 1.01,
+        "electric": 1.04,
+        "dark": 1.04
+      }
+    },
+    {
+      "seed": 11,
+      "name": "nurture-late",
+      "tick": 6000,
+      "shots": 659,
+      "allyShots": 560,
+      "enemyShots": 99,
+      "maxAllyGapSeconds": 219.9,
+      "saveReplayExact": true,
+      "placements": 90,
+      "dead": 20,
+      "merges": 79,
+      "kills": 13,
+      "origins": 15,
+      "maxGapSeconds": 195.6,
+      "maxLateGapSeconds": 23.4,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.03,
+        "ice": 1.01,
+        "electric": 1.04,
+        "dark": 1.05
+      }
+    },
+    {
+      "seed": 11,
+      "name": "nurture-early",
+      "tick": 6000,
+      "shots": 470,
+      "allyShots": 331,
+      "enemyShots": 139,
+      "maxAllyGapSeconds": 426.5,
+      "saveReplayExact": true,
+      "placements": 89,
+      "dead": 40,
+      "merges": 57,
+      "kills": 12,
+      "origins": 13,
+      "maxGapSeconds": 56.3,
+      "maxLateGapSeconds": 56.3,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.03,
+        "ice": 1.01,
+        "electric": 1.03,
+        "dark": 1.05
+      }
+    }
+  ]
+}

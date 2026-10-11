@@ -1,0 +1,82 @@
+{
+  "syntheticParameters": true,
+  "gameSeconds": 600,
+  "rows": [
+    {
+      "seed": 20261011,
+      "name": "baseline",
+      "tick": 6000,
+      "shots": 448,
+      "placements": 82,
+      "dead": 37,
+      "merges": 59,
+      "kills": 5,
+      "origins": 5,
+      "maxGapSeconds": 185.2,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.01,
+        "ice": 1,
+        "electric": 1.02,
+        "dark": 1.02
+      }
+    },
+    {
+      "seed": 20261011,
+      "name": "growth6",
+      "tick": 6000,
+      "shots": 388,
+      "placements": 81,
+      "dead": 37,
+      "merges": 60,
+      "kills": 4,
+      "origins": 4,
+      "maxGapSeconds": 221.9,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.01,
+        "ice": 1,
+        "electric": 1.01,
+        "dark": 1.02
+      }
+    },
+    {
+      "seed": 20261011,
+      "name": "density1.1",
+      "tick": 6000,
+      "shots": 429,
+      "placements": 82,
+      "dead": 37,
+      "merges": 58,
+      "kills": 5,
+      "origins": 5,
+      "maxGapSeconds": 179.8,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.01,
+        "ice": 1,
+        "electric": 1.02,
+        "dark": 1.02
+      }
+    },
+    {
+      "seed": 20261011,
+      "name": "density1.25",
+      "tick": 6000,
+      "shots": 687,
+      "placements": 83,
+      "dead": 36,
+      "merges": 49,
+      "kills": 6,
+      "origins": 6,
+      "maxGapSeconds": 58.2,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.01,
+        "ice": 1,
+        "electric": 1.02,
+        "dark": 1.03
+      }
+    }
+  ]
+}

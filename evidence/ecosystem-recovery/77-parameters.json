@@ -1,0 +1,1699 @@
+{
+  "seed": 77,
+  "tick": 2400,
+  "maxHistoricalGapSeconds": 184.8,
+  "checkpoint": {
+    "allies": [
+      {
+        "id": 25,
+        "hp": 5042.543,
+        "d": 203.753722,
+        "stats": {
+          "speed": 4,
+          "defense": 309.833899,
+          "attack": 292.776525,
+          "range": 628.96246,
+          "maxHp": 5042.543,
+          "regen": 4.528268,
+          "presence": 139.918034
+        }
+      }
+    ],
+    "enemies": [
+      {
+        "id": 5,
+        "hp": 324.969349,
+        "d": 200,
+        "stats": {
+          "speed": 3.2036759999999997,
+          "range": 124.42937,
+          "defense": 93.170879,
+          "attack": 54.766212,
+          "maxHp": 404.846054,
+          "regen": 0.304717,
+          "presence": 148.119451
+        }
+      },
+      {
+        "id": 9,
+        "hp": 1692.124554,
+        "d": 349.668643,
+        "stats": {
+          "defense": 113.575204,
+          "speed": 4,
+          "attack": 187.830674,
+          "range": 301.70116,
+          "maxHp": 1692.124554,
+          "regen": 1.864879,
+          "presence": 233.621829
+        }
+      },
+      {
+        "id": 12,
+        "hp": 1125.597808,
+        "d": 296.407878,
+        "stats": {
+          "speed": 4,
+          "defense": 132.791824,
+          "attack": 93.912277,
+          "range": 295.187454,
+          "maxHp": 1125.597808,
+          "regen": 1.202131,
+          "presence": 210.537466
+        }
+      },
+      {
+        "id": 16,
+        "hp": 1248.499579,
+        "d": 321.889345,
+        "stats": {
+          "speed": 4,
+          "range": 318.620146,
+          "attack": 165.533681,
+          "defense": 95.438286,
+          "maxHp": 1291.316567,
+          "regen": 1.431237,
+          "presence": 209.92046
+        }
+      },
+      {
+        "id": 17,
+        "hp": 1229.018441,
+        "d": 283.55093,
+        "stats": {
+          "attack": 149.13157,
+          "speed": 4,
+          "range": 190.854858,
+          "defense": 132.730396,
+          "maxHp": 1229.018441,
+          "regen": 1.10262,
+          "presence": 187.10786
+        }
+      },
+      {
+        "id": 21,
+        "hp": 1309.433186,
+        "d": 313.552228,
+        "stats": {
+          "range": 264.589436,
+          "speed": 4,
+          "attack": 91.070879,
+          "defense": 169.530664,
+          "maxHp": 1309.433186,
+          "regen": 1.267374,
+          "presence": 201.207396
+        }
+      },
+      {
+        "id": 22,
+        "hp": 964.102124,
+        "d": 255.42263,
+        "stats": {
+          "defense": 139.455892,
+          "range": 190.561764,
+          "speed": 3.1508655,
+          "attack": 96.512178,
+          "maxHp": 964.102124,
+          "regen": 0.805991,
+          "presence": 187.160546
+        }
+      }
+    ],
+    "boosts": {
+      "fire": 1.01,
+      "ice": 1,
+      "electric": 1.02,
+      "dark": 1.02
+    },
+    "hand": [
+      {
+        "id": 37,
+        "bindings": {
+          "fire": "attack",
+          "ice": "range",
+          "electric": "defense",
+          "dark": "speed"
+        },
+        "fixed": {
+          "hp": 116.778726,
+          "hpReg": 0.060009,
+          "presenceHalo": 2.758982,
+          "elements": {
+            "fire": 21.231124,
+            "ice": 30.191133,
+            "electric": 27.617985,
+            "dark": 18.065726
+          }
+        }
+      },
+      {
+        "id": 38,
+        "bindings": {
+          "fire": "defense",
+          "ice": "attack",
+          "electric": "range",
+          "dark": "speed"
+        },
+        "fixed": {
+          "hp": 117.208641,
+          "hpReg": 0.084098,
+          "presenceHalo": 3.914435,
+          "elements": {
+            "fire": 21.938971,
+            "ice": 14.76791,
+            "electric": 33.946909,
+            "dark": 26.753635
+          }
+        }
+      },
+      {
+        "id": 39,
+        "bindings": {
+          "fire": "range",
+          "ice": "defense",
+          "electric": "speed",
+          "dark": "attack"
+        },
+        "fixed": {
+          "hp": 124.345748,
+          "hpReg": 0.104031,
+          "presenceHalo": 3.471673,
+          "elements": {
+            "fire": 22.437799,
+            "ice": 30.722126,
+            "electric": 19.877947,
+            "dark": 24.045528
+          }
+        }
+      },
+      {
+        "id": 40,
+        "bindings": {
+          "fire": "defense",
+          "ice": "speed",
+          "electric": "attack",
+          "dark": "range"
+        },
+        "fixed": {
+          "hp": 116.666586,
+          "hpReg": 0.071054,
+          "presenceHalo": 3.720337,
+          "elements": {
+            "fire": 28.304298,
+            "ice": 21.022956,
+            "electric": 30.796508,
+            "dark": 17.095539
+          }
+        }
+      },
+      {
+        "id": 41,
+        "bindings": {
+          "fire": "range",
+          "ice": "speed",
+          "electric": "attack",
+          "dark": "defense"
+        },
+        "fixed": {
+          "hp": 122.647613,
+          "hpReg": 0.116453,
+          "presenceHalo": 2.712304,
+          "elements": {
+            "fire": 28.570362,
+            "ice": 21.040804,
+            "electric": 20.536198,
+            "dark": 27.068946
+          }
+        }
+      },
+      {
+        "id": 42,
+        "bindings": {
+          "fire": "defense",
+          "ice": "attack",
+          "electric": "speed",
+          "dark": "range"
+        },
+        "fixed": {
+          "hp": 106.811046,
+          "hpReg": 0.150555,
+          "presenceHalo": 3.383562,
+          "elements": {
+            "fire": 28.693582,
+            "ice": 28.201612,
+            "electric": 18.262759,
+            "dark": 21.91392
+          }
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "name": "baseline",
+      "trials": 120,
+      "survivors": 30,
+      "shooters": 10,
+      "newSoloShooters": 10,
+      "immediateDanger": 96,
+      "best": [
+        {
+          "card": 38,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.630097,
+              "rate": 4
+            }
+          ],
+          "firstShot": 40.7,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 69,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence2.1",
+          "x": 2729.96366872177,
+          "y": 437.52273272177,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 40.7,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 69,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2601.0510919999997,
+          "y": 657.468896,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 50,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 51,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2703.229451269805,
+          "y": 410.7885152698053,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 50,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 51,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.530597,
+              "rate": 4
+            }
+          ],
+          "firstShot": 50.2,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 39,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence2.1",
+          "x": 2729.96366872177,
+          "y": 437.52273272177,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": 50.2,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 39,
+          "merged": false
+        }
+      ],
+      "examples": [
+        {
+          "card": 37,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 17.425136,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 50.691257,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.5,
+          "maxD": 9.2,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 17.425136,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 43.083384,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 9.8,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 18.557899,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 53.986563,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.5,
+          "maxD": 9.2,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 18.557899,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 45.884122,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 9.8,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 39,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 16.862534,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 49.054598,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 9.8,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 39,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 16.862534,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 41.692359,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 9.8,
+          "ownShots": 0,
+          "merged": false
+        }
+      ],
+      "safeButNoShot": [
+        {
+          "card": 37,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.922704,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 38,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.922704,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 39,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.481179,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 0,
+          "merged": false
+        }
+      ]
+    },
+    {
+      "name": "ally-growth6",
+      "trials": 120,
+      "survivors": 30,
+      "shooters": 10,
+      "newSoloShooters": 10,
+      "immediateDanger": 96,
+      "best": [
+        {
+          "card": 37,
+          "kind": "outside-range+100",
+          "x": 2601.0510919999997,
+          "y": 657.468896,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": 30.4,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 80,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "outside-range+100",
+          "x": 2703.229451269805,
+          "y": 410.7885152698053,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": 30.4,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 80,
+          "merged": false
+        },
+        {
+          "card": 41,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 133.379279,
+          "initialRange": 61.140574,
+          "futureRange": 170.850764,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.539683,
+              "rate": 4
+            }
+          ],
+          "firstShot": 27.6,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 78,
+          "merged": false
+        },
+        {
+          "card": 41,
+          "kind": "presence2.1",
+          "x": 2729.96366872177,
+          "y": 437.52273272177,
+          "hp": 133.379279,
+          "initialRange": 61.140574,
+          "futureRange": 170.850764,
+          "incoming": [],
+          "firstShot": 27.6,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 78,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2601.0510919999997,
+          "y": 657.468896,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 25,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 74,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2703.229451269805,
+          "y": 410.7885152698053,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 25,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 74,
+          "merged": false
+        }
+      ],
+      "examples": [
+        {
+          "card": 37,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 17.425136,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 50.691257,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.5,
+          "maxD": 10.4,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 17.425136,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 43.083384,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 18.557899,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 53.986563,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.5,
+          "maxD": 10.4,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 18.557899,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 45.884122,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 39,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 16.862534,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 49.054598,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 39,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 16.862534,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 41.692359,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        }
+      ],
+      "safeButNoShot": [
+        {
+          "card": 37,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.935135,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 38,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.935135,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 39,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.481179,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 0,
+          "merged": false
+        }
+      ]
+    },
+    {
+      "name": "growth6",
+      "trials": 120,
+      "survivors": 30,
+      "shooters": 10,
+      "newSoloShooters": 10,
+      "immediateDanger": 96,
+      "best": [
+        {
+          "card": 37,
+          "kind": "outside-range+100",
+          "x": 2601.0510919999997,
+          "y": 657.468896,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": 30.4,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 80,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "outside-range+100",
+          "x": 2703.229451269805,
+          "y": 410.7885152698053,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": 30.4,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 80,
+          "merged": false
+        },
+        {
+          "card": 41,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 133.379279,
+          "initialRange": 61.140574,
+          "futureRange": 170.850764,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.539683,
+              "rate": 4
+            }
+          ],
+          "firstShot": 27.6,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 78,
+          "merged": false
+        },
+        {
+          "card": 41,
+          "kind": "presence2.1",
+          "x": 2729.96366872177,
+          "y": 437.52273272177,
+          "hp": 133.379279,
+          "initialRange": 61.140574,
+          "futureRange": 170.850764,
+          "incoming": [],
+          "firstShot": 27.6,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 78,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2601.0510919999997,
+          "y": 657.468896,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 25,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 74,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2703.229451269805,
+          "y": 410.7885152698053,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 25,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 74,
+          "merged": false
+        }
+      ],
+      "examples": [
+        {
+          "card": 37,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 17.425136,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 50.691257,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.5,
+          "maxD": 10.4,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 17.425136,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 43.083384,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 18.557899,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 53.986563,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.5,
+          "maxD": 10.4,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 18.557899,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 45.884122,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 39,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 16.862534,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 49.054598,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 39,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 16.862534,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 41.692359,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 0.7,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        }
+      ],
+      "safeButNoShot": [
+        {
+          "card": 37,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.935135,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 38,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.935135,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 39,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.481179,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 0,
+          "merged": false
+        }
+      ]
+    },
+    {
+      "name": "ally-hp2",
+      "trials": 120,
+      "survivors": 30,
+      "shooters": 10,
+      "newSoloShooters": 10,
+      "immediateDanger": 96,
+      "best": [
+        {
+          "card": 38,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 254.928794,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.630097,
+              "rate": 4
+            }
+          ],
+          "firstShot": 40.7,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 69,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence2.1",
+          "x": 2729.96366872177,
+          "y": 437.52273272177,
+          "hp": 254.928794,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 40.7,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 69,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2601.0510919999997,
+          "y": 657.468896,
+          "hp": 254.928794,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 50,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 51,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2703.229451269805,
+          "y": 410.7885152698053,
+          "hp": 254.928794,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 50,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 51,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 253.993729,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.530597,
+              "rate": 4
+            }
+          ],
+          "firstShot": 50.2,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 39,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence2.1",
+          "x": 2729.96366872177,
+          "y": 437.52273272177,
+          "hp": 253.993729,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": 50.2,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 39,
+          "merged": false
+        }
+      ],
+      "examples": [
+        {
+          "card": 37,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 253.993729,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 17.425136,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 50.691257,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 1.3,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 253.993729,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 17.425136,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 43.083384,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 1.3,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 254.928794,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 18.557899,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 53.986563,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 1,
+          "maxD": 10.7,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 254.928794,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 18.557899,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 45.884122,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 1.3,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 39,
+          "kind": "presence1.3",
+          "x": 2757.3545457,
+          "y": 657.468896,
+          "hp": 270.452002,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 16.862534,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 49.054598,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 1.3,
+          "maxD": 11.6,
+          "ownShots": 0,
+          "merged": false
+        },
+        {
+          "card": 39,
+          "kind": "presence1.3",
+          "x": 2813.752683303953,
+          "y": 521.3117473039529,
+          "hp": 270.452002,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 5,
+              "hit": 16.862534,
+              "rate": 3.2036759999999997
+            },
+            {
+              "id": 9,
+              "hit": 41.692359,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": 1.6,
+          "maxD": 12.5,
+          "ownShots": 0,
+          "merged": false
+        }
+      ],
+      "safeButNoShot": [
+        {
+          "card": 37,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 253.993729,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.922704,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 38,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 254.928794,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.922704,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 39,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 270.452002,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.481179,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 0,
+          "merged": false
+        }
+      ]
+    },
+    {
+      "name": "presence1",
+      "trials": 90,
+      "survivors": 30,
+      "shooters": 10,
+      "newSoloShooters": 10,
+      "immediateDanger": 66,
+      "best": [
+        {
+          "card": 38,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.630097,
+              "rate": 4
+            }
+          ],
+          "firstShot": 40.7,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 69,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "presence2.1",
+          "x": 2729.96366872177,
+          "y": 437.52273272177,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 40.7,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 69,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2601.0510919999997,
+          "y": 657.468896,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 50,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 51,
+          "merged": false
+        },
+        {
+          "card": 38,
+          "kind": "outside-range+100",
+          "x": 2703.229451269805,
+          "y": 410.7885152698053,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": 50,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 51,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.530597,
+              "rate": 4
+            }
+          ],
+          "firstShot": 50.2,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 39,
+          "merged": false
+        },
+        {
+          "card": 37,
+          "kind": "presence2.1",
+          "x": 2729.96366872177,
+          "y": 437.52273272177,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": 50.2,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 39,
+          "merged": false
+        }
+      ],
+      "examples": [],
+      "safeButNoShot": [
+        {
+          "card": 37,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 126.996865,
+          "initialRange": 64.609024,
+          "futureRange": 180.542976,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.922704,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 38,
+          "kind": "support",
+          "x": 704.7307020000001,
+          "y": 656.33431,
+          "hp": 127.464397,
+          "initialRange": 72.646386,
+          "futureRange": 203.002516,
+          "incoming": [],
+          "firstShot": null,
+          "death": null,
+          "maxD": 203.922704,
+          "ownShots": 0,
+          "merged": true
+        },
+        {
+          "card": 39,
+          "kind": "presence2.1",
+          "x": 2638.8589849,
+          "y": 657.468896,
+          "hp": 135.226001,
+          "initialRange": 48.01689,
+          "futureRange": 134.178038,
+          "incoming": [
+            {
+              "id": 9,
+              "hit": 1.481179,
+              "rate": 4
+            }
+          ],
+          "firstShot": null,
+          "death": null,
+          "maxD": 200,
+          "ownShots": 0,
+          "merged": false
+        }
+      ]
+    }
+  ]
+}

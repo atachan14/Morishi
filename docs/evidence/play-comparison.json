@@ -1,0 +1,35 @@
+{
+  "identicalStateHashes": 52,
+  "lossDetailsBefore": 0,
+  "lossDetailsAfter": 20,
+  "detail": [
+    {
+      "policy": "forward",
+      "initialChoiceAtZero": 13,
+      "earlyDamageRatio": 0.6,
+      "lateDamageRatio": 0.77,
+      "lateDeaths": 21
+    },
+    {
+      "policy": "cluster",
+      "initialChoiceAtZero": 13,
+      "earlyDamageRatio": 1.06,
+      "lateDamageRatio": 0.68,
+      "lateDeaths": 45
+    },
+    {
+      "policy": "range",
+      "initialChoiceAtZero": 13,
+      "earlyDamageRatio": 1.12,
+      "lateDamageRatio": 1.01,
+      "lateDeaths": 21
+    },
+    {
+      "policy": "rear",
+      "initialChoiceAtZero": 13,
+      "earlyDamageRatio": null,
+      "lateDamageRatio": null,
+      "lateDeaths": null
+    }
+  ]
+}

@@ -116,6 +116,28 @@ export function runActivity(s:State):'ready'|'growing'|'fighting'|'weak-combat'|
   if(damage>0)return damage<1?'weak-combat':'fighting';
   return s.units.some(u=>u.team==='ally'&&u.age<224)?'growing':'needs-placement';
 }
+export function decisionHint(s:State):{kind:'supply'|'last-cards'|'other';text:string;readyInTicks:number} {
+  if(s.outcome==='playing'&&s.started&&s.cards.length>0&&s.charges===0){
+    const readyInTicks=80-s.tick%80;
+    return {kind:'supply',readyInTicks,text:`配置力は補充待ち。定期補充まで${(readyInTicks/10).toFixed(1)}ゲーム秒（敵攻略でも補充）。時間を進めて観察するか、2×/4×で待てます。`};
+  }
+  if(s.outcome==='playing'&&s.started&&s.cards.length>0&&s.cards.length<=3)return {kind:'last-cards',readyInTicks:0,text:`残りの芽は${s.cards.length}体。残った敵へ育つと届く位置か、配置前の破線と敵の射程を確認して使いましょう。`};
+  return {kind:'other',text:'',readyInTicks:0};
+}
+export type ResultDiagnosis={kind:'unreachable'|'defeated'|'manual'|'win';message:string;suggestion:string;enemyId?:number;allyId?:number;distance?:number;range?:number;gap?:number};
+export function resultDiagnosis(s:State):ResultDiagnosis|undefined {
+  if(s.outcome==='playing')return undefined;
+  if(s.outcome==='win')return {kind:'win',message:'全ての敵を攻略しました。',suggestion:'同じseedで別の広げ方や、新しいseedを試せます。'};
+  const enemies=s.units.filter(u=>u.team==='enemy'),allies=s.units.filter(u=>u.team==='ally');
+  if(s.events[0]?.startsWith('今回はここまで。'))return {kind:'manual',message:`自分でrunを区切りました。敵${enemies.length}体、未配置の芽${s.cards.length}体が残っています。`,suggestion:'ここまでの広げ方を手がかりに、同じseedで再挑戦できます。'};
+  if(allies.length===0&&s.cards.length===0)return {kind:'defeated',message:'芽を使い切り、味方の植物が残っていません。',suggestion:'次は配置前の赤い線で狙われ方を見て、味方同士の射程が重なる位置も試せます。'};
+  if(stalled(s)&&allies.length&&enemies.length){
+    const pairs=enemies.flatMap(e=>allies.map(a=>{const distance=Math.hypot(e.x-a.x,e.y-a.y),range=effectiveRange(a);return {enemyId:e.id,allyId:a.id,distance,range,gap:Math.max(0,distance-range)};}));
+    pairs.sort((a,b)=>a.gap-b.gap||a.enemyId-b.enemyId||a.allyId-b.allyId);const pair=pairs[0];
+    return {kind:'unreachable',...pair,message:`芽を使い切り、残った敵${enemies.length}体に味方の攻撃が届いていません。敵 #${pair.enemyId} と味方 #${pair.allyId} の距離は${pair.distance.toFixed(2)}、味方の射程は${pair.range.toFixed(2)}です。`,suggestion:'次はこの敵への中継に最後の芽を残し、育った射程の破線が届く位置を確認してみましょう。'};
+  }
+  return {kind:'manual',message:`敵${enemies.length}体、未配置の芽${s.cards.length}体が残っています。`,suggestion:'結果の盤面から、次に狙う敵や広げる方向を選べます。'};
+}
 function event(s:State,message:string) { s.events.unshift(message);s.events=s.events.slice(0,5); }
 export function finishRun(s:State):boolean {
   if(s.outcome!=='playing'||!s.started)return false;

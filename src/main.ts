@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import {createState,place,validatePlacement,step,Clock,WIDTH,HEIGHT,growth,effectiveRange,dominant,footprint,SEED_RADIUS,territoryCoverage,viewport,screenToWorld,clientToWorld,placementForecast,chooseTarget,insideTerritory,finishRun,runActivity,type Stats} from './sim';
+import {createState,place,validatePlacement,step,Clock,WIDTH,HEIGHT,growth,effectiveRange,dominant,footprint,SEED_RADIUS,territoryCoverage,viewport,screenToWorld,clientToWorld,placementForecast,chooseTarget,insideTerritory,finishRun,runActivity,decisionHint,resultDiagnosis,type Stats} from './sim';
 import './style.css';
 import {TapGesture,ForegroundGate} from './runtime';
 import {RunStore,capture,type Action} from './session';
@@ -47,7 +47,8 @@ function refresh(){
   $('status').textContent=state.outcome==='win'?'攻略完了':state.outcome==='loss'?'再挑戦できます':`${clock.paused?'停止中':'進行中'} · ${(state.tick/10).toFixed(1)}秒 · seed ${state.seed}`;
   $('coverage').textContent=`領域 約${Math.round(territoryCoverage(state)*100)}%`;
   const hints={ready:'明るい左端に1つ植えて、時間を進めてみましょう。',growing:'いまは成長中。領域が広がるのを待つか、中継の芽を置けます。',fighting:'交戦中。前へ植えると、射程の端で弱まった攻撃を強くできます。','weak-combat':'射程の端でゆっくり削っています。前へ植えるか、今回を区切れます。','needs-placement':'成長が落ち着きました。広がった領域に次の芽を置いてみましょう。',ended:state.outcome==='win'?'攻略完了。広げた領域を眺めてみましょう。':'ここまでの領域を、次の配置の手がかりに。'};
-  $('activity').textContent=clock.paused&&state.started&&state.outcome==='playing'?'停止中。位置を動かして、攻撃と新しい領域の違いを見てみましょう。':hints[runActivity(state)];
+  const decision=decisionHint(state);
+  $('activity').textContent=decision.kind!=='other'?`${clock.paused?'停止中。':''}${decision.text}`:clock.paused&&state.started&&state.outcome==='playing'?'停止中。位置を動かして、攻撃と新しい領域の違いを見てみましょう。':hints[runActivity(state)];
   $('play').textContent=clock.paused?'▶ 時間を進める':'Ⅱ 停止して考える';
   ($('play') as HTMLButtonElement).disabled=state.outcome!=='playing';
   ($('tick') as HTMLButtonElement).disabled=state.outcome!=='playing'||!clock.paused||!state.started;
@@ -57,7 +58,12 @@ function refresh(){
   refreshEnemyList();
   $('events').innerHTML=state.events.map(e=>`<p class="event">${escape(e)}</p>`).join('');
   $('run-result').hidden=state.outcome==='playing';
-  if(state.outcome!=='playing'){html('run-result',`<strong>${state.outcome==='win'?'攻略完了！':'今回はここまで。'}</strong><p>領域 約${Math.round(territoryCoverage(state)*100)}% · 敵攻略 ${7-state.units.filter(u=>u.team==='enemy').length}/7体 · ${(state.tick/10).toFixed(1)}秒</p><p>${escape(state.events[0])}</p><div><button id="retry-run">同じseedで再挑戦</button><button id="next-run">新seedで始める</button></div>`);$('retry-run').onclick=()=>reset(state.seed);$('next-run').onclick=()=>reset((state.seed+1)>>>0);}
+  if(state.outcome!=='playing'){
+    const diagnosis=resultDiagnosis(state);
+    html('run-result',`<strong>${state.outcome==='win'?'攻略完了！':'今回はここまで。'}</strong><p>領域 約${Math.round(territoryCoverage(state)*100)}% · 敵攻略 ${7-state.units.filter(u=>u.team==='enemy').length}/7体 · ${(state.tick/10).toFixed(1)}秒</p><p>${escape(diagnosis?.message??state.events[0])}</p><p class="hint">${escape(diagnosis?.suggestion)}</p><div>${diagnosis?.enemyId?'<button id="inspect-gap">味方の射程で確認</button>':''}<button id="retry-run">同じseedで再挑戦</button><button id="next-run">新seedで始める</button></div>`);
+    if(diagnosis?.enemyId)$('inspect-gap').onclick=()=>{selected=diagnosis.allyId!;message(`味方 #${diagnosis.allyId} の射程円と敵 #${diagnosis.enemyId} の位置を比較できます。`);refresh();};
+    $('retry-run').onclick=()=>reset(state.seed);$('next-run').onclick=()=>reset((state.seed+1)>>>0);
+  }
 }
 function message(text:string){$('message').textContent=text;}
 function reset(seed:number){if(!Number.isInteger(seed)||seed<0||seed>4294967295){message('seedは0〜4294967295の整数を指定してください。');return;}state=createState(seed);clock=new Clock();actions=[];savedTick=lastAttemptTick=-1;persist(true);taps.cancel();foreground.interrupt(clock);hovered=null;selected=null;($('speed') as HTMLSelectElement).value='1';($('seed') as HTMLInputElement).value=String(seed);message('明るい左端に植物を配置して、時間を進めましょう。');refresh();}

@@ -44,3 +44,5 @@ export function stepEco(s:State){if(s.outcome!=='playing')return;s.tick++;
  if(s.hand.length<ECO_LIMITS.hand&&s.nextCard<ECO_LIMITS.generations){s.drawProgress=round(s.drawProgress+TICK_SECONDS*s.player.drowHeist/DRAW_SECONDS);if(s.drawProgress>=1&&s.nextCard<ECO_LIMITS.generations){s.drawProgress=round(s.drawProgress-1);const id=s.nextCard++;s.hand.push({kind:'plant',id,seed:generateSeed(s.seed,'hand',id,s.tick,s.player.boosts,s.player.rewards.map(r=>r.id))});event(s,'draw',`芽 #${id+1} が手札へ。能力はこの時点で確定。`);}}
  if(s.charges<ECO_LIMITS.charges){s.turnProgress=round(s.turnProgress+TICK_SECONDS*s.player.turnHeist/TURN_SECONDS);if(s.turnProgress>=1){s.turnProgress=round(s.turnProgress-1);s.charges++;event(s,'charge','配置力＋1。');}}
 }
+
+export function finishEco(s:State){if(s.outcome!=='playing')return false;s.outcome='ended';event(s,'finish','今回の観察を終了しました。');return true;}

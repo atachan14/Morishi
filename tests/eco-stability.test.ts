@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {generateSeed} from '../src/eco-contract.js';
-import {createEco,placeEco,stepEco,mergeContacts,currentStats,validateEcoPlacement,ECO_LIMITS,type State} from '../src/eco-sim.js';
+import {finishEco,createEco,placeEco,stepEco,mergeContacts,currentStats,validateEcoPlacement,ECO_LIMITS,type State} from '../src/eco-sim.js';
 import {findPlantSpace,gardenGuidance,placementPreview} from '../src/eco-guidance.js';
 import {ecoCapture,ecoReplay} from '../src/eco-save.js';
 const view={x:2048,y:1536,zoom:1};
@@ -38,4 +38,8 @@ test('short multi-seed placement witnesses agree with exact input rules after gi
 });
 test('placement preview is read-only and uses the card binding, actual targeting and range growth',()=>{
  const s=createEco(11),before=structuredClone(s),card=s.hand[2],p={x:s.units[0].x-70,y:s.units[0].y-38},preview=placementPreview(s,p.x,p.y,card.seed);assert.deepEqual(s,before);assert.ok(placeEco(s,p.x,p.y,card.id).ok);const u=s.units.at(-1)!;assert.equal(preview.futureRange,currentStats({...u,diameter:200}).range);assert.ok(preview.target);assert.ok(preview.damage>0);
+});
+
+test('voluntary finish keeps the board and resource fractions, rejects further actions, and restores exactly',()=>{
+ const s=createEco(77);for(let i=0;i<22;i++)stepEco(s);const before=structuredClone(s);assert.equal(finishEco(s),true);assert.equal(s.outcome,'ended');assert.equal(s.tick,before.tick);assert.deepEqual(s.units,before.units);assert.deepEqual(s.hand,before.hand);assert.equal(s.drawProgress,before.drawProgress);const ended=structuredClone(s);assert.equal(finishEco(s),false);for(let i=0;i<100;i++)stepEco(s);assert.deepEqual(s,ended);assert.equal(placeEco(s,2048,1536,s.hand[0].id).ok,false);assert.deepEqual(ecoReplay(ecoCapture(s,view)).state,s);
 });

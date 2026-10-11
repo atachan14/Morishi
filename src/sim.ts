@@ -20,12 +20,19 @@ export function dominant(stats: Stats): keyof Stats {
 function unit(state: State, team: Unit['team'], x: number, y: number, stats: Stats): Unit {
   return {id:state.nextId++,team,x,y,hp:stats.vitality,maxHp:stats.vitality,age:0,cooldown:0,stats:{...stats},target:null};
 }
+export function enemyPositions(seed:number):{x:number;y:number}[] {
+  // Keep the user-tested entry board as a reference; new seeds vary the route.
+  if((seed>>>0)===20261011)return [[4,2],[4,6],[6,4],[8,1],[8,7],[10,3],[10,6]].map(([x,y])=>({x,y}));
+  const random=rng((seed>>>0)^0x9E3779B9);
+  const anchors=[[3.9,2],[3.9,6],[6,4],[8,1],[8,7],[10,3],[10,6]];
+  const mirrored=random()>.5;
+  return anchors.map(([x,y])=>({x:x+(random()-.5)*.7,y:Math.max(.6,Math.min(HEIGHT-.6,(mirrored?HEIGHT-y:y)+(random()-.5)*1.4))}));
+}
 export function createState(seed = 20261011): State {
   if (!Number.isFinite(seed)) throw new Error('Seed must be finite');
   const random = rng(seed);
   const state: State = {seed:seed>>>0,tick:0,nextId:1,units:[],cards:[],territory:[],charges:3,outcome:'playing',started:false,events:['左端の明るい領域に、自由な位置で最初の植物を配置しましょう。']};
-  const spots = [[4,2],[4,6],[6,4],[8,1],[8,7],[10,3],[10,6]];
-  for (const [x,y] of spots) state.units.push(unit(state,'enemy',x,y,makeStats(random)));
+  for (const {x,y} of enemyPositions(seed)) state.units.push(unit(state,'enemy',x,y,makeStats(random)));
   for(let i=0;i<18;i++) state.cards.push(makeStats(random));
   return state;
 }
@@ -102,6 +109,10 @@ export function stalled(s:State):boolean {
   return s.cards.length===0&&s.units.length>0&&s.units.every(u=>u.age>=224)&&s.units.every(u=>!chooseTarget(u,s.units));
 }
 function event(s:State,message:string) { s.events.unshift(message);s.events=s.events.slice(0,5); }
+export function finishRun(s:State):boolean {
+  if(s.outcome!=='playing'||!s.started)return false;
+  s.outcome='loss';event(s,'今回はここまで。広げた領域を眺めて、同じseedで別の広げ方も試せます。');return true;
+}
 function expand(s:State) {
   for(const u of s.units.filter(u=>u.team==='ally'&&u.hp>0)) {
     const radius=1.6+Math.min(u.age/160,1.4);

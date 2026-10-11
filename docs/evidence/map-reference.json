@@ -1,0 +1,463 @@
+{
+  "map": "reference-fixed",
+  "summary": [
+    {
+      "policy": "front",
+      "wins": 12,
+      "losses": 1,
+      "unfinished": 0,
+      "meanTicks": 667,
+      "meanPlacements": 16.5,
+      "meanEnemies": 0.2
+    },
+    {
+      "policy": "wait",
+      "wins": 12,
+      "losses": 1,
+      "unfinished": 0,
+      "meanTicks": 814,
+      "meanPlacements": 16.5,
+      "meanEnemies": 0.1
+    },
+    {
+      "policy": "rear",
+      "wins": 0,
+      "losses": 13,
+      "unfinished": 0,
+      "meanTicks": 1292,
+      "meanPlacements": 18,
+      "meanEnemies": 5
+    }
+  ],
+  "trials": [
+    {
+      "seed": 1,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 611,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.922,
+      "firstKill": 62,
+      "idleTicks": 1
+    },
+    {
+      "seed": 2,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 595,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.924,
+      "firstKill": 53,
+      "idleTicks": 1
+    },
+    {
+      "seed": 3,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 631,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.913,
+      "firstKill": 51,
+      "idleTicks": 27
+    },
+    {
+      "seed": 4,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 711,
+      "placements": 17,
+      "enemies": 0,
+      "coverage": 0.909,
+      "firstKill": 72,
+      "idleTicks": 79
+    },
+    {
+      "seed": 5,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 721,
+      "placements": 18,
+      "enemies": 0,
+      "coverage": 0.941,
+      "firstKill": 63,
+      "idleTicks": 0
+    },
+    {
+      "seed": 6,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 602,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.944,
+      "firstKill": 71,
+      "idleTicks": 0
+    },
+    {
+      "seed": 7,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 873,
+      "placements": 18,
+      "enemies": 0,
+      "coverage": 0.901,
+      "firstKill": 52,
+      "idleTicks": 78
+    },
+    {
+      "seed": 8,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 531,
+      "placements": 15,
+      "enemies": 0,
+      "coverage": 0.943,
+      "firstKill": 53,
+      "idleTicks": 1
+    },
+    {
+      "seed": 9,
+      "policy": "front",
+      "outcome": "loss",
+      "tick": 862,
+      "placements": 18,
+      "enemies": 2,
+      "coverage": 0.781,
+      "firstKill": 53,
+      "idleTicks": 210
+    },
+    {
+      "seed": 10,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 611,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.931,
+      "firstKill": 51,
+      "idleTicks": 0
+    },
+    {
+      "seed": 11,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 551,
+      "placements": 15,
+      "enemies": 0,
+      "coverage": 0.929,
+      "firstKill": 52,
+      "idleTicks": 0
+    },
+    {
+      "seed": 12,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 602,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.932,
+      "firstKill": 63,
+      "idleTicks": 1
+    },
+    {
+      "seed": 20261011,
+      "policy": "front",
+      "outcome": "win",
+      "tick": 774,
+      "placements": 18,
+      "enemies": 0,
+      "coverage": 0.939,
+      "firstKill": 63,
+      "idleTicks": 91
+    },
+    {
+      "seed": 1,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 731,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.885,
+      "firstKill": 441,
+      "idleTicks": 108
+    },
+    {
+      "seed": 2,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 813,
+      "placements": 17,
+      "enemies": 0,
+      "coverage": 0.89,
+      "firstKill": 434,
+      "idleTicks": 106
+    },
+    {
+      "seed": 3,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 902,
+      "placements": 18,
+      "enemies": 0,
+      "coverage": 0.904,
+      "firstKill": 423,
+      "idleTicks": 84
+    },
+    {
+      "seed": 4,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 951,
+      "placements": 18,
+      "enemies": 0,
+      "coverage": 0.964,
+      "firstKill": 431,
+      "idleTicks": 103
+    },
+    {
+      "seed": 5,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 751,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.874,
+      "firstKill": 434,
+      "idleTicks": 98
+    },
+    {
+      "seed": 6,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 722,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.861,
+      "firstKill": 433,
+      "idleTicks": 91
+    },
+    {
+      "seed": 7,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 911,
+      "placements": 18,
+      "enemies": 0,
+      "coverage": 0.904,
+      "firstKill": 432,
+      "idleTicks": 82
+    },
+    {
+      "seed": 8,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 772,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.891,
+      "firstKill": 435,
+      "idleTicks": 103
+    },
+    {
+      "seed": 9,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 702,
+      "placements": 15,
+      "enemies": 0,
+      "coverage": 0.869,
+      "firstKill": 434,
+      "idleTicks": 89
+    },
+    {
+      "seed": 10,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 661,
+      "placements": 14,
+      "enemies": 0,
+      "coverage": 0.87,
+      "firstKill": 310,
+      "idleTicks": 69
+    },
+    {
+      "seed": 11,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 741,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.877,
+      "firstKill": 423,
+      "idleTicks": 79
+    },
+    {
+      "seed": 12,
+      "policy": "wait",
+      "outcome": "win",
+      "tick": 738,
+      "placements": 16,
+      "enemies": 0,
+      "coverage": 0.878,
+      "firstKill": 444,
+      "idleTicks": 105
+    },
+    {
+      "seed": 20261011,
+      "policy": "wait",
+      "outcome": "loss",
+      "tick": 1184,
+      "placements": 18,
+      "enemies": 1,
+      "coverage": 0.82,
+      "firstKill": 433,
+      "idleTicks": 286
+    },
+    {
+      "seed": 1,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.436,
+      "firstKill": 414,
+      "idleTicks": 502
+    },
+    {
+      "seed": 2,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 276,
+      "idleTicks": 863
+    },
+    {
+      "seed": 3,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1630,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.452,
+      "firstKill": 312,
+      "idleTicks": 138
+    },
+    {
+      "seed": 4,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 449,
+      "idleTicks": 850
+    },
+    {
+      "seed": 5,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 310,
+      "idleTicks": 833
+    },
+    {
+      "seed": 6,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 410,
+      "idleTicks": 701
+    },
+    {
+      "seed": 7,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 546,
+      "idleTicks": 703
+    },
+    {
+      "seed": 8,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 479,
+      "idleTicks": 674
+    },
+    {
+      "seed": 9,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 318,
+      "idleTicks": 689
+    },
+    {
+      "seed": 10,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 328,
+      "idleTicks": 812
+    },
+    {
+      "seed": 11,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 416,
+      "idleTicks": 853
+    },
+    {
+      "seed": 12,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.445,
+      "firstKill": 656,
+      "idleTicks": 603
+    },
+    {
+      "seed": 20261011,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 1264,
+      "placements": 18,
+      "enemies": 5,
+      "coverage": 0.443,
+      "firstKill": 610,
+      "idleTicks": 687
+    }
+  ]
+}

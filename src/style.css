@@ -3,3 +3,5 @@
 .preview-status{font-size:11px;min-height:34px;padding:9px 2px;color:#b9e795}.preview-status.invalid{color:#f0a194}
 
 .forecast-panel{min-height:88px;padding:11px 13px;border:1px solid #405b4c;border-radius:10px;background:#1b302b;font-size:12px;line-height:1.8;color:#bad5b1}.forecast-panel strong{color:#dcebbb;font-weight:600}.forecast-panel small{display:block;font-size:10px;color:#96b7a7}.run-result{padding:18px;margin:12px 0;border:1px solid #86a667;border-radius:12px;background:#294237}.run-result strong{font-size:19px;color:#dbeaaf}.run-result p{font-size:12px;line-height:1.7}.run-result>div{display:flex;gap:8px;flex-wrap:wrap}.run-result button{font-size:12px}progress{width:100%;height:7px;margin-top:12px;accent-color:#b8d997}#refill-info{margin:6px 0;font-size:11px}@media(max-width:760px){.forecast-panel{font-size:11px;min-height:96px}.run-result{padding:13px}}
+
+.controls .quiet{background:transparent;border-color:#486455;color:#acc2b3;font-size:11px;padding:10px}

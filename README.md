@@ -31,3 +31,6 @@ npm run build
 [http://127.0.0.1:8781/ecosystem.html](http://127.0.0.1:8781/ecosystem.html) から独立した庭を試せます。既存runは元ページに保持し、比較版は別の保存キーを使います。個体別の属性→能力の1対1対応、実直径の成長と接触吸収、手札入りでの基礎能力固定、独立したドロー／配置力時計を実装しています。自然成長上限や倍率、時計間隔は仮値です。
 
 仮仕様・理由・将来のスキルカード枠は [docs/ecosystem-prototype.md](docs/ecosystem-prototype.md)、検証は [docs/ecosystem-verification.md](docs/ecosystem-verification.md) を参照してください。
+
+
+比較版の最新安定化では、全滅時に停止して再配置を案内し、待っても変化しない庭を止めます。[継続と配置不能の確認](docs/ecosystem-stability.md)、[具体的な配置試遊](docs/ecosystem-play-record.md)。新しい庭は局所射程で開始し、観察Paneから初回の広域射程も選べます。保存済みの庭は元の射程を維持。[局所射程と保存互換の比較](docs/ecosystem-local-range.md)。

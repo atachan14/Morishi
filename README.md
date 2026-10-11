@@ -34,3 +34,5 @@ npm run build
 
 
 比較版の最新安定化では、全滅時に停止して再配置を案内し、待っても変化しない庭を止めます。[継続と配置不能の確認](docs/ecosystem-stability.md)、[具体的な配置試遊](docs/ecosystem-play-record.md)。新しい庭は局所射程で開始し、観察Paneから初回の広域射程も選べます。保存済みの庭は元の射程を維持。[局所射程と保存互換の比較](docs/ecosystem-local-range.md)。
+
+吸収集中・分散・前後配置の原因と比較は [docs/ecosystem-roles.md](docs/ecosystem-roles.md)。観察Paneの「新しい庭の比較設定」から全能力25%継承／攻撃・防御のみ継承を選べます。標準は従来の100%継承のままです。

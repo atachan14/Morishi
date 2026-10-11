@@ -1,0 +1,64 @@
+// Existing Edge, isolated temporary profile, local loopback only.
+import {spawn} from 'node:child_process';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
+import assert from 'node:assert/strict';
+import {createEco,placeEco,stepEco} from '../.test-dist/src/eco-sim.js';
+import {ecoCapture,ecoReplay} from '../.test-dist/src/eco-save.js';
+const output=process.argv[2]??path.join(os.tmpdir(),'morishi-browser-check');await fs.mkdir(output,{recursive:true});
+const profile=await fs.mkdtemp(path.join(os.tmpdir(),'morishi-headless-'));
+const edge=spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',['--headless=new','--remote-debugging-port=0','--remote-debugging-address=127.0.0.1',`--user-data-dir=${profile}`,'--no-first-run','--no-default-browser-check','--disable-background-networking','--window-size=1366,768','about:blank'],{windowsHide:true,stdio:['ignore','pipe','pipe']});
+let stderr='';edge.stderr.on('data',b=>stderr=(stderr+b.toString()).slice(-5000));edge.on('error',e=>stderr+=String(e));
+const delay=ms=>new Promise(r=>setTimeout(r,ms));let ws;
+const report={browser:null,isolated:true,userBrowserTouched:false,viewports:[],runtimeErrors:[]};
+try{
+ let port;for(let i=0;i<100;i++){try{port=+(await fs.readFile(path.join(profile,'DevToolsActivePort'),'utf8')).split('\n')[0];break;}catch{}await delay(100);}
+ if(!port)throw new Error(`Headless launch failed: ${stderr}`);
+ const version=await(await fetch(`http://127.0.0.1:${port}/json/version`)).json();report.browser=version.Browser;ws=new WebSocket(version.webSocketDebuggerUrl);await new Promise((r,j)=>{ws.onopen=r;ws.onerror=j;});
+ let seq=0;const pending=new Map();ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){const p=pending.get(m.id);pending.delete(m.id);if(p){clearTimeout(p.timer);m.error?p.reject(new Error(JSON.stringify(m.error))):p.resolve(m.result);}}else if(m.method==='Runtime.exceptionThrown'||(m.method==='Runtime.consoleAPICalled'&&m.params.type==='error'))report.runtimeErrors.push({sessionId:m.sessionId,method:m.method,details:m.params});};
+ const call=(method,params={},sessionId)=>new Promise((resolve,reject)=>{const id=++seq,timer=setTimeout(()=>{pending.delete(id);reject(new Error(`CDP timeout: ${method}`));},15000);pending.set(id,{resolve,reject,timer});ws.send(JSON.stringify({id,method,params,...(sessionId?{sessionId}:{})}));});
+ for(const [width,height,mobile] of [[1366,900,false],[390,844,true]]){
+  const row={width,height,mobile,checks:[],failures:[]};report.viewports.push(row);
+  const {browserContextId}=await call('Target.createBrowserContext');const {targetId}=await call('Target.createTarget',{url:'about:blank',browserContextId});const {sessionId}=await call('Target.attachToTarget',{targetId,flatten:true});
+  const cmd=(method,params={})=>call(method,params,sessionId);
+  const evaluate=async expression=>{const r=await cmd('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
+  const wait=async expression=>{for(let i=0;i<100;i++){if(await evaluate(expression))return;await delay(50);}throw new Error(`Wait failed: ${expression}`);};
+  const run=()=>evaluate('JSON.parse(localStorage.getItem("morishi.ecosystem.v1"))');
+  const mouse=async(x,y)=>{await cmd('Input.dispatchMouseEvent',{type:'mouseMoved',x,y});await cmd('Input.dispatchMouseEvent',{type:'mousePressed',x,y,button:'left',clickCount:1});await cmd('Input.dispatchMouseEvent',{type:'mouseReleased',x,y,button:'left',clickCount:1});await delay(80);};
+  const native=async(x,y,touch=mobile)=>{if(touch){await cmd('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y,id:1}]});await cmd('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await delay(80);}else await mouse(x,y);};
+  const click=async selector=>{await evaluate(`document.querySelector(${JSON.stringify(selector)}).scrollIntoView({block:'center'})`);await delay(100);const p=await evaluate(`(()=>{const r=document.querySelector(${JSON.stringify(selector)}).getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2};})()`);await native(p.x,p.y);};
+  const point=async(x,y)=>{await evaluate('document.querySelector("canvas").scrollIntoView({block:"center"})');await delay(100);return evaluate(`(()=>{const r=document.querySelector('canvas').getBoundingClientRect(),v=JSON.parse(localStorage.getItem("morishi.ecosystem.v1")).view,s=Math.min(r.width/4096,r.height/3072)*v.zoom;return {x:r.x+r.width/2+(${x}-v.x)*s,y:r.y+r.height/2+(${y}-v.y)*s};})()`);};
+  const screenshot=async name=>{await evaluate('window.scrollTo(0,0)');await delay(100);const image=await cmd('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await fs.writeFile(path.join(output,`${width}x${height}-${name}.png`),Buffer.from(image.data,'base64'));};
+  const reload=async()=>{await evaluate('window.__beforeReload=true');await cmd('Page.reload');await wait('window.__beforeReload===undefined&&document.querySelector("#eco")?.dataset.ready==="true"');};
+  try{
+   await cmd('Runtime.enable');await cmd('Page.enable');await cmd('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile});await cmd('Emulation.setTouchEmulationEnabled',{enabled:mobile,maxTouchPoints:5});await cmd('Page.navigate',{url:'http://127.0.0.1:8781/ecosystem.html'});await wait('document.querySelector("#eco")?.dataset.ready==="true"');
+   let saved=await run();ecoReplay(saved);assert.equal(saved.state.units.length,27);assert.equal(saved.state.hand.length,4);assert.equal(saved.state.tick,0);await evaluate('localStorage.setItem("morishi.run.v1","old run untouched")');
+   await screenshot('opening');const initial=structuredClone(saved.state);
+   await click('[data-card="2"]');assert.deepEqual((await run()).state,initial);if(mobile){assert.equal(await evaluate('document.querySelector("main").dataset.pane'),'left');assert.equal(await evaluate('document.querySelector("#confirm-card").hidden'),false);await click('#confirm-card');assert.equal(await evaluate('document.querySelector("main").dataset.pane'),'board');}
+   assert.equal(await evaluate('document.querySelector("#cancel").hidden'),false);await click('#cancel');assert.deepEqual((await run()).state,initial);
+   await click('[data-card="2"]');if(mobile)await click('#confirm-card');let p=await point(730,650);await cmd('Input.dispatchMouseEvent',{type:'mousePressed',x:p.x,y:p.y,button:'left',clickCount:1});await cmd('Input.dispatchMouseEvent',{type:'mouseMoved',x:p.x+18,y:p.y+12,buttons:1});await cmd('Input.dispatchMouseEvent',{type:'mouseReleased',x:p.x+18,y:p.y+12,button:'left',clickCount:1});await delay(100);assert.deepEqual((await run()).state,initial,'pan is not a placement');p=await point(730,650);await native(p.x,p.y);saved=await run();assert.equal(saved.state.units.at(-1).id,28);assert.equal(saved.state.units.at(-1).seed.index,2);assert.deepEqual(saved.state.hand.map(c=>c.id),[0,1,3]);assert.deepEqual(saved.state.units.at(-1).seed,initial.hand[2].seed);ecoReplay(saved);
+   await screenshot('placed');const afterPlace=structuredClone(saved.state);await reload();assert.deepEqual((await run()).state,afterPlace);assert.equal(await evaluate('document.querySelector("#play").textContent'),'時間を進める');
+   if(!mobile){await cmd('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:5});const b=await evaluate(`(()=>{const r=document.querySelector('[data-card="0"]').getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2};})()`);await native(b.x,b.y,true);assert.equal(await evaluate('document.querySelector("#cancel").hidden'),true,'wide touch needs confirm');await cmd('Emulation.setTouchEmulationEnabled',{enabled:false});}
+   if(mobile)await click('[data-pane="left"]');await evaluate('document.querySelector("#draw-heist").value="2";document.querySelector("#draw-heist").dispatchEvent(new Event("change"));document.querySelector("#turn-heist").value="0.5";document.querySelector("#turn-heist").dispatchEvent(new Event("change"));');saved=await run();assert.equal(saved.state.player.drowHeist,2);assert.equal(saved.state.player.turnHeist,.5);
+   if(mobile)await click('[data-pane="board"]');for(let i=0;i<10&&!(await run()).state.player.rewards.length;i++){await click('#skip');await wait('document.querySelector("#skip").textContent==="変化まで"');}
+   saved=await run();assert.ok(saved.state.player.rewards.length);assert.ok(saved.state.tick>0);ecoReplay(saved);for(const c of saved.state.hand.filter(c=>c.id<4))assert.deepEqual(c,initial.hand.find(old=>old.id===c.id));const fresh=saved.state.hand.filter(c=>c.id>=4);assert.ok(fresh.length);row.rewardProof={tick:saved.state.tick,boosts:saved.state.player.boosts,rewards:saved.state.player.rewards,handEntry:fresh.map(c=>c.seed.entry)};
+   await evaluate('document.querySelector("#speed").value="4";document.querySelector("#speed").dispatchEvent(new Event("change"))');await click('#play');await delay(900);await screenshot('battle');await click('#play');const stopped=await run();ecoReplay(stopped);await reload();assert.deepEqual((await run()).state,stopped.state);assert.equal(await evaluate('localStorage.getItem("morishi.run.v1")'),'old run untouched');
+   const mature=createEco(20261011);placeEco(mature,730,650,2);for(let i=0;i<900;i++)stepEco(mature);assert.ok(mature.merges>0);const matureSave=ecoCapture(mature,{x:2048,y:1536,zoom:1});ecoReplay(matureSave);const {identifier}=await cmd('Page.addScriptToEvaluateOnNewDocument',{source:'localStorage.setItem("morishi.ecosystem.v1",'+JSON.stringify(JSON.stringify(matureSave))+');'});await reload();await cmd('Page.removeScriptToEvaluateOnNewDocument',{identifier});assert.deepEqual((await run()).state,mature);await screenshot('grown-overview');row.growthProof={tick:mature.tick,merges:mature.merges,maxDiameter:Math.max(...mature.units.map(u=>u.diameter)),units:mature.units.length};
+   if(mobile)await click('[data-pane="right"]');await click('#enemy-list button:first-child');if(mobile)assert.equal(await evaluate('document.querySelector("main").dataset.pane'),'board');await screenshot('grown-detail');assert.ok((await evaluate('document.querySelector("#enemy-detail").textContent')).includes('実直径'));
+   assert.equal(await evaluate('document.documentElement.scrollWidth>innerWidth'),false);assert.equal(await evaluate('localStorage.getItem("morishi.run.v1")'),'old run untouched');
+   row.checks.push('natural desktop/touch placement and phone confirmation; cancel/pan consume nothing; exact paused restore; independent clock settings; natural defeat freezes old hand; grown contact merges render at actual diameter; old save key untouched; no horizontal overflow');
+  }catch(e){row.failures.push(String(e));try{row.failedSave=await run();await screenshot('failure');}catch{}}
+  finally{await call('Target.disposeBrowserContext',{browserContextId});}
+ }
+
+ await fs.writeFile(path.join(output,'browser-check.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({browser:report.browser,viewports:report.viewports.map(r=>({width:r.width,height:r.height,checks:r.checks,failures:r.failures,backgroundVisibility:r.backgroundVisibility})),runtimeErrors:report.runtimeErrors.length},null,2));
+ await call('Browser.close');
+ if(report.viewports.some(r=>r.failures.length)||report.runtimeErrors.length)process.exitCode=1;
+}catch(e){console.error(e);process.exitCode=1;await fs.writeFile(path.join(output,'browser-check.json'),JSON.stringify({...report,fatal:String(e),stderr},null,2)+'\n');}
+finally{
+ if(ws?.readyState===1)ws.close();if(edge.exitCode===null)edge.kill();await delay(200);
+ // Only the exact temporary profile created by this process may be removed.
+ const resolved=path.resolve(profile),tempRoot=path.resolve(os.tmpdir());
+ if(path.dirname(resolved)===tempRoot&&path.basename(resolved).startsWith('morishi-headless-'))try{await fs.rm(resolved,{recursive:true,force:true,maxRetries:3,retryDelay:100});}catch(e){console.error(`Temporary profile cleanup failed: ${e}`);}
+}

@@ -25,3 +25,9 @@ npm run build
 右の観察Pane（スマホ幅では「敵・観察」タブ）上部の「検証用盤面」から比較36×27・敵24体を選び、「選択した盤面で始める」で試せます。基準盤面へも同じ導線で戻せます。[入口と再開の検証](docs/entry-tail.md)。
 
 新しい遊び比較runは、撃破後に手札へ入る芽だけへplayer倍率を適用します。既存手札と配置済み個体の基礎能力は維持し、成長は続きます。旧保存runは元のルールで再開します。詳細と暫定値は [docs/hand-entry-boost.md](docs/hand-entry-boost.md)。
+
+## 直径・属性対応・独立時計の比較版
+
+[http://127.0.0.1:8781/ecosystem.html](http://127.0.0.1:8781/ecosystem.html) から独立した庭を試せます。既存runは元ページに保持し、比較版は別の保存キーを使います。個体別の属性→能力の1対1対応、実直径の成長と接触吸収、手札入りでの基礎能力固定、独立したドロー／配置力時計を実装しています。自然成長上限や倍率、時計間隔は仮値です。
+
+仮仕様・理由・将来のスキルカード枠は [docs/ecosystem-prototype.md](docs/ecosystem-prototype.md)、検証は [docs/ecosystem-verification.md](docs/ecosystem-verification.md) を参照してください。

@@ -1,0 +1,90 @@
+{
+  "syntheticParameters": true,
+  "gameSeconds": 600,
+  "rows": [
+    {
+      "seed": 11,
+      "name": "baseline",
+      "enemyMerges": 9,
+      "allyMerges": 53,
+      "tick": 6000,
+      "shots": 519,
+      "placements": 88,
+      "dead": 37,
+      "merges": 62,
+      "kills": 11,
+      "origins": 12,
+      "maxGapSeconds": 183.5,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.02,
+        "ice": 1.01,
+        "electric": 1.04,
+        "dark": 1.04
+      }
+    },
+    {
+      "seed": 11,
+      "name": "spacing1.25",
+      "enemyMerges": 0,
+      "allyMerges": 72,
+      "tick": 6000,
+      "shots": 913,
+      "placements": 94,
+      "dead": 20,
+      "merges": 72,
+      "kills": 17,
+      "origins": 17,
+      "maxGapSeconds": 139.8,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.06,
+        "ice": 1.01,
+        "electric": 1.04,
+        "dark": 1.06
+      }
+    },
+    {
+      "seed": 11,
+      "name": "spacing1.5",
+      "enemyMerges": 0,
+      "allyMerges": 82,
+      "tick": 6000,
+      "shots": 1605,
+      "placements": 92,
+      "dead": 10,
+      "merges": 82,
+      "kills": 15,
+      "origins": 15,
+      "maxGapSeconds": 15.4,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.05,
+        "ice": 1.01,
+        "electric": 1.04,
+        "dark": 1.05
+      }
+    },
+    {
+      "seed": 11,
+      "name": "pockets1.25",
+      "enemyMerges": 2,
+      "allyMerges": 73,
+      "tick": 6000,
+      "shots": 836,
+      "placements": 94,
+      "dead": 20,
+      "merges": 75,
+      "kills": 17,
+      "origins": 17,
+      "maxGapSeconds": 153.9,
+      "outcome": "playing",
+      "boosts": {
+        "fire": 1.06,
+        "ice": 1.01,
+        "electric": 1.04,
+        "dark": 1.06
+      }
+    }
+  ]
+}

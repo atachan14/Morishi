@@ -1,0 +1,54 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "expectedFailure": true,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "pre": {
+        "text": "存在感 1.40 / 1.5 · 配置力が足りません。時間を進めると補充されます。",
+        "invalid": true,
+        "forecastHidden": true
+      },
+      "post": {
+        "safe": {
+          "x": 5.55,
+          "y": 7.95
+        },
+        "shown": {
+          "text": "自由配置 · 緑の円＝可 / 赤＝不可",
+          "invalid": false,
+          "forecastHidden": true
+        },
+        "charges": 1
+      },
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(recovered.text.endsWith('配置できます。'))\n"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "pre": {
+        "text": "存在感 1.40 / 1.5 · 配置力が足りません。時間を進めると補充されます。",
+        "invalid": true,
+        "forecastHidden": true
+      },
+      "post": {
+        "safe": {
+          "x": 5.55,
+          "y": 7.95
+        },
+        "shown": {
+          "text": "自由配置 · 緑の円＝可 / 赤＝不可",
+          "invalid": false,
+          "forecastHidden": true
+        },
+        "charges": 1
+      },
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(recovered.text.endsWith('配置できます。'))\n"
+      ]
+    }
+  ]
+}

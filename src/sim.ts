@@ -85,7 +85,7 @@ export function validatePlacement(state: State, x: number, y: number): Placement
   if(state.cards.length===0) return {ok:false,reason:'今回の芽は使い切りました。残った植物を観察するか、同じseedで再挑戦できます。'};
   if(state.charges<1) return {ok:false,reason:'配置力が足りません。時間を進めると補充されます。'};
   if(state.units.some(u=>Math.hypot(u.x-x,u.y-y)<footprint(u)+SEED_RADIUS-EPSILON)) return {ok:false,reason:'植物の円が重なっています。少し離して配置してください。'};
-  if(!insideTerritory(state,x,y)) return {ok:false,reason:'敵の存在感Areaの外に配置できます。'};
+  if(!insideTerritory(state,x,y)) return {ok:false,reason:'敵の存在感合計が閾値を超えています。'};
   return {ok:true,reason:'配置できます。'};
 }
 export function place(state: State,x:number,y:number): Placement {

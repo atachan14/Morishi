@@ -85,7 +85,7 @@ $('skip').onclick=()=>{if(skip.active){skip.cancel();persist(false,true);refresh
 $('tick').onclick=()=>{skip.cancel();if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(clock.paused)step(state);persist();refresh();};
 $('finish').onclick=()=>{skip.cancel();if(finishRun(state)){actions.push({tick:state.tick,kind:'finish'});lastAttemptTick=-1;persist();clock.suspend();message('盤面を残して、このrunを終えました。');refresh();}};
 $('speed').onchange=()=>{clock.speed=Number(($('speed') as HTMLSelectElement).value);lastAttemptTick=-1;persist();};
-document.querySelectorAll<HTMLButtonElement>('[data-pane]').forEach(b=>b.onclick=()=>{if(!introActive)persist(false,true);taps.cancel();document.querySelector('main')!.setAttribute('data-pane',b.dataset.pane!);document.querySelectorAll('[data-pane].active').forEach(t=>t.classList.remove('active'));b.classList.add('active');hovered=null;});
+document.querySelectorAll<HTMLButtonElement>('.tabs button[data-pane]').forEach(b=>b.onclick=()=>{if(!introActive)persist(false,true);taps.cancel();document.querySelector('main')!.setAttribute('data-pane',b.dataset.pane!);document.querySelectorAll('.tabs button[data-pane].active').forEach(t=>t.classList.remove('active'));b.classList.add('active');hovered=null;});
 function interrupt(){skip.cancel();foreground.interrupt(clock);persist(false,true);taps.cancel();hovered=null;if(state.started&&state.outcome==='playing')message('画面を離れたため停止しました。戻ったら時間を進めるボタンで再開できます。');refresh();}
 document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt();});
 window.addEventListener('blur',interrupt);

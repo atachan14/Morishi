@@ -1,12 +1,12 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {createState,place,step,insideTerritory,enemyPresenceAt,presenceAt,PRESENCE_LIMIT,REFILL_TICKS,distanceFalloff,PRESENCE_STRENGTH} from '../src/sim.js';
+import {createState,place,step,validatePlacement,insideTerritory,enemyPresenceAt,presenceAt,PRESENCE_LIMIT,REFILL_TICKS,distanceFalloff,PRESENCE_STRENGTH} from '../src/sim.js';
 import {EventSkip} from '../src/runtime.js';
 
 test('summed decaying presence blocks a gap even when each enemy is below threshold; death releases it',()=>{
   const s=createState(),a=s.units[0],b=s.units[1];s.units=[a,b];a.x=2;b.x=10;a.y=b.y=4;a.age=b.age=117;a.stats.presence=b.stats.presence=2;
   assert.ok(presenceAt(a,6,4)<PRESENCE_LIMIT);assert.ok(presenceAt(b,6,4)<PRESENCE_LIMIT);assert.ok(enemyPresenceAt(s,6,4)>PRESENCE_LIMIT);assert.equal(insideTerritory(s,6,4),false);
-  b.hp=0;assert.equal(insideTerritory(s,6,4),true);const field=enemyPresenceAt(s,6,4);a.stats.range=100;assert.equal(enemyPresenceAt(s,6,4),field);
+  assert.deepEqual(validatePlacement(s,6,4),{ok:false,reason:'敵の存在感合計が閾値を超えています。'});b.hp=0;assert.equal(validatePlacement(s,6,4).ok,true);assert.equal(insideTerritory(s,6,4),true);const field=enemyPresenceAt(s,6,4);a.stats.range=100;assert.equal(enemyPresenceAt(s,6,4),field);
 });
 test('analytic threshold boundary accepts equality and rejects just inside, independently of display samples',()=>{
   const s=createState(),u=s.units[0];s.units=[u];u.x=5;u.y=4;u.age=117;u.stats.presence=2;const distance=2*1.3*(2-PRESENCE_LIMIT/2);

@@ -1,0 +1,310 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        {
+          "label": "summed presence blocks",
+          "expected": {
+            "ok": false,
+            "reason": "敵の存在感合計が閾値を超えています。"
+          },
+          "shown": {
+            "text": "存在感 1.75 / 1.5 · 敵の存在感合計が閾値を超えています。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "overlap outside selectable body",
+          "expected": {
+            "ok": false,
+            "reason": "植物の円が重なっています。少し離して配置してください。"
+          },
+          "shown": {
+            "text": "存在感 2.00 / 1.5 · 植物の円が重なっています。少し離して配置してください。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "seed circle crosses board",
+          "expected": {
+            "ok": false,
+            "reason": "植物の円全体が盤面内に入る位置を選んでください。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 植物の円全体が盤面内に入る位置を選んでください。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "legal between enemies",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        {
+          "label": "zoomed world point",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        {
+          "label": "panned world point",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        {
+          "label": "no placement charge",
+          "expected": {
+            "ok": false,
+            "reason": "配置力が足りません。時間を進めると補充されます。"
+          },
+          "shown": {
+            "text": "存在感 1.40 / 1.5 · 配置力が足りません。時間を進めると補充されます。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "recovery refreshes stationary preview",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 1.40 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        {
+          "label": "pre-kill field blocks",
+          "expected": {
+            "ok": false,
+            "reason": "敵の存在感合計が閾値を超えています。"
+          },
+          "shown": {
+            "text": "存在感 1.74 / 1.5 · 敵の存在感合計が閾値を超えています。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "death refreshes stationary preview",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        "native rejected placements never changed action count; legal placements added exactly one"
+      ],
+      "failures": [],
+      "preRecovery": {
+        "text": "存在感 1.40 / 1.5 · 配置力が足りません。時間を進めると補充されます。",
+        "invalid": true,
+        "forecastHidden": true
+      },
+      "recovered": {
+        "safe": {
+          "x": 5.55,
+          "y": 7.95
+        },
+        "shown": {
+          "text": "存在感 1.40 / 1.5 · 配置できます。",
+          "invalid": false,
+          "forecastHidden": false
+        },
+        "charges": 1
+      },
+      "released": {
+        "text": "存在感 0.00 / 1.5 · 配置できます。",
+        "invalid": false,
+        "forecastHidden": false
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        {
+          "label": "summed presence blocks",
+          "expected": {
+            "ok": false,
+            "reason": "敵の存在感合計が閾値を超えています。"
+          },
+          "shown": {
+            "text": "存在感 1.75 / 1.5 · 敵の存在感合計が閾値を超えています。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "overlap outside selectable body",
+          "expected": {
+            "ok": false,
+            "reason": "植物の円が重なっています。少し離して配置してください。"
+          },
+          "shown": {
+            "text": "存在感 2.00 / 1.5 · 植物の円が重なっています。少し離して配置してください。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "seed circle crosses board",
+          "expected": {
+            "ok": false,
+            "reason": "植物の円全体が盤面内に入る位置を選んでください。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 植物の円全体が盤面内に入る位置を選んでください。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "legal between enemies",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        {
+          "label": "zoomed world point",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        {
+          "label": "panned world point",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        {
+          "label": "no placement charge",
+          "expected": {
+            "ok": false,
+            "reason": "配置力が足りません。時間を進めると補充されます。"
+          },
+          "shown": {
+            "text": "存在感 1.40 / 1.5 · 配置力が足りません。時間を進めると補充されます。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "recovery refreshes stationary preview",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 1.40 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        {
+          "label": "pre-kill field blocks",
+          "expected": {
+            "ok": false,
+            "reason": "敵の存在感合計が閾値を超えています。"
+          },
+          "shown": {
+            "text": "存在感 1.74 / 1.5 · 敵の存在感合計が閾値を超えています。",
+            "invalid": true,
+            "forecastHidden": true
+          }
+        },
+        {
+          "label": "death refreshes stationary preview",
+          "expected": {
+            "ok": true,
+            "reason": "配置できます。"
+          },
+          "shown": {
+            "text": "存在感 0.00 / 1.5 · 配置できます。",
+            "invalid": false,
+            "forecastHidden": false
+          }
+        },
+        "native rejected placements never changed action count; legal placements added exactly one"
+      ],
+      "failures": [],
+      "preRecovery": {
+        "text": "存在感 1.40 / 1.5 · 配置力が足りません。時間を進めると補充されます。",
+        "invalid": true,
+        "forecastHidden": true
+      },
+      "recovered": {
+        "safe": {
+          "x": 5.55,
+          "y": 7.95
+        },
+        "shown": {
+          "text": "存在感 1.40 / 1.5 · 配置できます。",
+          "invalid": false,
+          "forecastHidden": false
+        },
+        "charges": 1
+      },
+      "released": {
+        "text": "存在感 0.00 / 1.5 · 配置できます。",
+        "invalid": false,
+        "forecastHidden": false
+      }
+    }
+  ],
+  "runtimeErrors": []
+}

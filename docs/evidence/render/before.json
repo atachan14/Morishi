@@ -1,0 +1,166 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "same natural 197-ally snapshot/full camera; short sampled CPU profile and frame intervals paused/4x"
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "20261011-safe-retention-peak",
+          "playing": false,
+          "tick": 42961,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 73,
+          "p50": 16.699999999999818,
+          "p95": 33.5,
+          "max": 33.59999999999991,
+          "top": []
+        },
+        {
+          "name": "20261011-safe-retention-peak",
+          "playing": true,
+          "tick": 42961,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 55,
+          "p50": 33.30000000000018,
+          "p95": 33.5,
+          "max": 33.5,
+          "top": []
+        },
+        {
+          "name": "20261011-safe-retention",
+          "playing": false,
+          "tick": 43200,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 73,
+          "p50": 16.699999999999818,
+          "p95": 33.5,
+          "max": 33.59999999999991,
+          "top": []
+        },
+        {
+          "name": "20261011-safe-retention",
+          "playing": true,
+          "tick": 43200,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 54,
+          "p50": 33.30000000000018,
+          "p95": 33.5,
+          "max": 33.599999999999454,
+          "top": []
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "same natural 197-ally snapshot/full camera; short sampled CPU profile and frame intervals paused/4x"
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "20261011-safe-retention-peak",
+          "playing": false,
+          "tick": 42961,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 72,
+          "p50": 16.699999999999818,
+          "p95": 33.5,
+          "max": 33.59999999999991,
+          "top": []
+        },
+        {
+          "name": "20261011-safe-retention-peak",
+          "playing": true,
+          "tick": 42961,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 54,
+          "p50": 33.30000000000018,
+          "p95": 33.5,
+          "max": 33.5,
+          "top": []
+        },
+        {
+          "name": "20261011-safe-retention",
+          "playing": false,
+          "tick": 43200,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 72,
+          "p50": 16.699999999999818,
+          "p95": 33.5,
+          "max": 33.600000000000364,
+          "top": []
+        },
+        {
+          "name": "20261011-safe-retention",
+          "playing": true,
+          "tick": 43200,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 54,
+          "p50": 33.30000000000018,
+          "p95": 33.400000000000546,
+          "max": 33.599999999999454,
+          "top": []
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": []
+}

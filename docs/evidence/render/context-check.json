@@ -1,0 +1,26 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "real WebGL context loss/restore preserves paused simulation and redraws cached board pixel-exactly"
+      ],
+      "failures": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "real WebGL context loss/restore preserves paused simulation and redraws cached board pixel-exactly"
+      ],
+      "failures": []
+    }
+  ],
+  "runtimeErrors": []
+}

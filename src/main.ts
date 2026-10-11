@@ -5,6 +5,7 @@ import './style.css';
 import {TapGesture,ForegroundGate,canvasSize,EventSkip} from './runtime';
 import {RunStore,capture,type Action} from './session';
 import {BoardCamera,introView,type View} from './camera';
+import {presenceVisualKey,boardVisualKey} from './render-cache';
 let camera=new BoardCamera(),introActive=false,introElapsed=0,introTarget:View={x:6,y:4.5,zoom:1};
 let state=createState(20261011,undefined,'endless'), clock=new Clock(), selected:number|null=null, hovered:{x:number;y:number}|null=null;
 const taps=new TapGesture(),foreground=new ForegroundGate(),skip=new EventSkip();
@@ -97,10 +98,15 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt()
 window.addEventListener('blur',interrupt);
 window.addEventListener('pagehide',interrupt);
 class Board extends Phaser.Scene {
-  graphics!:Phaser.GameObjects.Graphics; textById=new Map<number,Phaser.GameObjects.Text>(); cell=40;ox=0;oy=0;elapsed=0;fieldTick=-1;fieldState=state;fieldView='';fieldHeight=0;fieldRects:{x:number;y:number;width:number}[]=[];
+  graphics!:Phaser.GameObjects.Graphics; boardImage!:Phaser.GameObjects.RenderTexture; visualKey='';textById=new Map<number,Phaser.GameObjects.Text>(); cell=40;ox=0;oy=0;elapsed=0;fieldKey='';fieldState=state;fieldView='';fieldHeight=0;fieldRects:{x:number;y:number;width:number}[]=[];
   knownTerritory=new Set<number>();pulseState=state;pulses:{x:number;y:number;radius:number;time:number;captured:boolean}[]=[];viewTime=0;
   create(){
-    this.graphics=this.add.graphics();
+    this.graphics=this.add.graphics().setVisible(false);
+    // Cache graphics at 2x resolution; ID text remains native and sharp at every zoom.
+    this.boardImage=this.add.renderTexture(0,0,this.scale.width*2,this.scale.height*2).setOrigin(0).setDisplaySize(this.scale.width,this.scale.height);
+    const restored=()=>{this.visualKey='';};
+    this.game.renderer.on(Phaser.Renderer.Events.RESTORE_WEBGL,restored);
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN,()=>this.game.renderer.off(Phaser.Renderer.Events.RESTORE_WEBGL,restored));
     const canvas=this.game.canvas;
     let drag:{id:number;startX:number;startY:number;lastX:number;lastY:number;panning:boolean}|null=null;
     const point=(e:PointerEvent)=>{const rect=canvas.getBoundingClientRect();if(rect.width<=0||rect.height<=0)return null;return {position:camera.point(e.clientX,e.clientY,rect),key:`${rect.left},${rect.top},${rect.width},${rect.height},${camera.view.x},${camera.view.y},${camera.view.zoom}`};};
@@ -143,17 +149,20 @@ class Board extends Phaser.Scene {
     if(!introActive&&(state.tick-lastAttemptTick>=10||(state.outcome!=='playing'&&lastAttemptTick!==state.tick)))persist();this.elapsed+=delta;if(this.elapsed>150){refresh();this.elapsed=0;}this.draw();
   }  draw(){
     if(this.scale.width<=0||this.scale.height<=0)return;
-    const g=this.graphics;g.clear();const layout=camera.layout(this.scale.width,this.scale.height);this.cell=layout.scale;this.ox=layout.ox;this.oy=layout.oy;
-    g.fillStyle(0x182a2c);g.fillRect(this.ox,this.oy,state.stage.width*this.cell,state.stage.height*this.cell);
-    g.fillStyle(0x294e43);g.fillRect(this.ox,this.oy,state.stage.width*this.cell,state.stage.height*this.cell);
-
     if(this.pulseState!==state){this.pulseState=state;this.knownTerritory.clear();this.pulses=[];}
     for(const t of state.territory)if(!this.knownTerritory.has(t.id)){this.knownTerritory.add(t.id);if(!state.units.some(u=>u.id===t.id))this.pulses.push({x:t.x,y:t.y,radius:t.radius,time:this.viewTime,captured:true});}
     this.pulses=this.pulses.filter(p=>this.viewTime-p.time<1500);
+    const key=boardVisualKey(state,camera.view,this.scale.width,this.scale.height,selected,hovered);
+    if(!this.pulses.length&&this.visualKey===key)return;
+    this.visualKey=this.pulses.length?'':key;
+    const g=this.graphics;g.clear();const layout=camera.layout(this.scale.width,this.scale.height);this.cell=layout.scale;this.ox=layout.ox;this.oy=layout.oy;
+    g.fillStyle(0x182a2c);g.fillRect(this.ox,this.oy,state.stage.width*this.cell,state.stage.height*this.cell);
+    g.fillStyle(0x294e43);g.fillRect(this.ox,this.oy,state.stage.width*this.cell,state.stage.height*this.cell);
     // Cached contour of the summed field; exact placement never uses these samples.
     const bounds=camera.bounds(this.scale.width,this.scale.height),viewKey=JSON.stringify(bounds);
-    if(this.fieldState!==state||this.fieldTick!==state.tick||this.fieldView!==viewKey){
-      this.fieldState=state;this.fieldTick=state.tick;this.fieldView=viewKey;this.fieldHeight=bounds.height/72;this.fieldRects=[];
+    const fieldKey=presenceVisualKey(state);
+    if(this.fieldState!==state||this.fieldKey!==fieldKey||this.fieldView!==viewKey){
+      this.fieldState=state;this.fieldKey=fieldKey;this.fieldView=viewKey;this.fieldHeight=bounds.height/72;this.fieldRects=[];
       for(let yi=0;yi<72;yi++){let left=-1;for(let xi=0;xi<=96;xi++){
         const blocked=xi<96&&enemyPresenceAt(state,bounds.x+(xi+.5)*bounds.width/96,bounds.y+(yi+.5)*bounds.height/72)>PRESENCE_LIMIT;
         if(blocked&&left<0)left=xi;
@@ -194,6 +203,9 @@ class Board extends Phaser.Scene {
       g.lineStyle(1,0xc2d5d0,.65);g.strokeRect(hpLeft,hpY,hpWidth,4);
       let text=this.textById.get(u.id);if(!text){text=this.add.text(x,y-r-12,String(u.id),{color:'#c2d5d0'}).setOrigin(.5);this.textById.set(u.id,text);}text.setVisible(visible);text.setPosition(x,y-r-12).setFontSize(Math.max(9,this.cell*.23));
     }
+    const width=this.scale.width,height=this.scale.height;
+    if(this.boardImage.width!==width*2||this.boardImage.height!==height*2)this.boardImage.resize(width*2,height*2).setDisplaySize(width,height);
+    g.setScale(2);this.boardImage.clear().draw(g);g.setScale(1);
   }
 }
 const game=new Phaser.Game({type:Phaser.AUTO,parent:'board',backgroundColor:'#101f21',scene:Board,scale:{mode:Phaser.Scale.NONE,width:600,height:450},render:{antialias:true},banner:false});

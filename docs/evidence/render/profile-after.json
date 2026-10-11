@@ -1,0 +1,382 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "same natural 197-ally snapshot/full camera; short sampled CPU profile and frame intervals paused/4x"
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "playing": false,
+          "frames": 92,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182,
+          "max": 266.8000000000002,
+          "top": [
+            {
+              "fn": "(idle) | ",
+              "ms": 1388.919
+            },
+            {
+              "fn": "(program) | ",
+              "ms": 316.628
+            },
+            {
+              "fn": "territoryCoverage | http://127.0.0.1:8781/src/sim.ts?t=1791708173331",
+              "ms": 23.465
+            },
+            {
+              "fn": "step | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 9.422
+            },
+            {
+              "fn": "bindTexture | ",
+              "ms": 7.991
+            },
+            {
+              "fn": "batchQuad | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 6.139
+            },
+            {
+              "fn": "boardVisualKey | http://127.0.0.1:8781/src/render-cache.ts",
+              "ms": 4.633
+            },
+            {
+              "fn": "preRender | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 3.43
+            },
+            {
+              "fn": "flush | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 3.376
+            },
+            {
+              "fn": "batchTexture | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 3.074
+            },
+            {
+              "fn": "emit | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 2.327
+            },
+            {
+              "fn": "clear | ",
+              "ms": 1.571
+            },
+            {
+              "fn": "update | http://127.0.0.1:8781/src/main.ts?t=1791710505665",
+              "ms": 1.568
+            },
+            {
+              "fn": "setQuad | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 1.539
+            },
+            {
+              "fn": "activeTexture | ",
+              "ms": 1.539
+            },
+            {
+              "fn": "requestAnimationFrame | ",
+              "ms": 1.522
+            },
+            {
+              "fn": "TextWebGLRenderer | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 1.522
+            },
+            {
+              "fn": "querySelectorAll | ",
+              "ms": 1.519
+            }
+          ]
+        },
+        {
+          "playing": true,
+          "frames": 78,
+          "p50": 16.699999999999818,
+          "p95": 33.5,
+          "max": 50.100000000000364,
+          "top": [
+            {
+              "fn": "GraphicsWebGLRenderer | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 335.691
+            },
+            {
+              "fn": "batchLine | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 177.041
+            },
+            {
+              "fn": "batchQuad | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 166.541
+            },
+            {
+              "fn": "earcutLinked | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 128.956
+            },
+            {
+              "fn": "(program) | ",
+              "ms": 108.424
+            },
+            {
+              "fn": "(idle) | ",
+              "ms": 97.615
+            },
+            {
+              "fn": "isEarHashed | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 74.712
+            },
+            {
+              "fn": "bufferData | ",
+              "ms": 71.415
+            },
+            {
+              "fn": "batchStrokePath | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 62.227
+            },
+            {
+              "fn": "batchFillPath | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 53.686
+            },
+            {
+              "fn": "earcut | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 42.372
+            },
+            {
+              "fn": "draw | http://127.0.0.1:8781/src/main.ts?t=1791710505665",
+              "ms": 41.758
+            },
+            {
+              "fn": "(garbage collector) | ",
+              "ms": 37.791
+            },
+            {
+              "fn": " | http://127.0.0.1:8781/src/sim.ts?t=1791708173331",
+              "ms": 30.524
+            },
+            {
+              "fn": "batchGameObject | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 23.233
+            },
+            {
+              "fn": "step | http://127.0.0.1:8781/src/sim.ts?t=1791708173331",
+              "ms": 22.982
+            },
+            {
+              "fn": "bufferSubData | ",
+              "ms": 17.085
+            },
+            {
+              "fn": "boardVisualKey | http://127.0.0.1:8781/src/render-cache.ts",
+              "ms": 11.419
+            },
+            {
+              "fn": "step | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 7.62
+            },
+            {
+              "fn": "batchTexture | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 7.579
+            },
+            {
+              "fn": "enemyPresenceAt | http://127.0.0.1:8781/src/sim.ts?t=1791708173331",
+              "ms": 4.918
+            },
+            {
+              "fn": "bindTexture | ",
+              "ms": 4.725
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "same natural 197-ally snapshot/full camera; short sampled CPU profile and frame intervals paused/4x"
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "playing": false,
+          "frames": 92,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182,
+          "max": 266.5999999999999,
+          "top": [
+            {
+              "fn": "(idle) | ",
+              "ms": 1420.826
+            },
+            {
+              "fn": "(program) | ",
+              "ms": 308.526
+            },
+            {
+              "fn": "territoryCoverage | http://127.0.0.1:8781/src/sim.ts?t=1791708173331",
+              "ms": 17.35
+            },
+            {
+              "fn": "boardVisualKey | http://127.0.0.1:8781/src/render-cache.ts",
+              "ms": 13.945
+            },
+            {
+              "fn": "TextWebGLRenderer | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 6.141
+            },
+            {
+              "fn": "refresh | http://127.0.0.1:8781/src/main.ts?t=1791710505665",
+              "ms": 4.754
+            },
+            {
+              "fn": "batchTexture | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 3.579
+            },
+            {
+              "fn": "update | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 3.164
+            },
+            {
+              "fn": "bindTexture | ",
+              "ms": 3.03
+            },
+            {
+              "fn": "preRender | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 2.167
+            },
+            {
+              "fn": "render | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 1.542
+            },
+            {
+              "fn": "draw | http://127.0.0.1:8781/src/main.ts?t=1791710505665",
+              "ms": 1.541
+            },
+            {
+              "fn": "requestAnimationFrame | ",
+              "ms": 1.534
+            },
+            {
+              "fn": "activeTexture | ",
+              "ms": 1.516
+            },
+            {
+              "fn": "step | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 1.51
+            },
+            {
+              "fn": "refreshEnemyList | http://127.0.0.1:8781/src/main.ts?t=1791710505665",
+              "ms": 1.506
+            },
+            {
+              "fn": "flush | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 1.245
+            }
+          ]
+        },
+        {
+          "playing": true,
+          "frames": 76,
+          "p50": 16.700000000000728,
+          "p95": 33.5,
+          "max": 66.89999999999964,
+          "top": [
+            {
+              "fn": "GraphicsWebGLRenderer | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 310.344
+            },
+            {
+              "fn": "batchLine | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 219.814
+            },
+            {
+              "fn": "batchQuad | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 155.302
+            },
+            {
+              "fn": "(program) | ",
+              "ms": 110.274
+            },
+            {
+              "fn": "isEarHashed | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 96.522
+            },
+            {
+              "fn": "batchFillPath | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 72.896
+            },
+            {
+              "fn": "sortLinked | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 69.112
+            },
+            {
+              "fn": "bufferData | ",
+              "ms": 68.713
+            },
+            {
+              "fn": "earcutLinked | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 63.597
+            },
+            {
+              "fn": "batchStrokePath | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 61.916
+            },
+            {
+              "fn": " | http://127.0.0.1:8781/src/sim.ts?t=1791708173331",
+              "ms": 54.929
+            },
+            {
+              "fn": "(idle) | ",
+              "ms": 54.599
+            },
+            {
+              "fn": "earcut | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 42.135
+            },
+            {
+              "fn": "insideTerritory | http://127.0.0.1:8781/src/sim.ts?t=1791708173331",
+              "ms": 24.445
+            },
+            {
+              "fn": "draw | http://127.0.0.1:8781/src/main.ts?t=1791710505665",
+              "ms": 21.962
+            },
+            {
+              "fn": "step | http://127.0.0.1:8781/src/sim.ts?t=1791708173331",
+              "ms": 20.677
+            },
+            {
+              "fn": "bufferSubData | ",
+              "ms": 16.463
+            },
+            {
+              "fn": "(garbage collector) | ",
+              "ms": 14.991
+            },
+            {
+              "fn": "GetCalcMatrix | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 12.789
+            },
+            {
+              "fn": "batchGameObject | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 9.016
+            },
+            {
+              "fn": "step | http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+              "ms": 7.728
+            },
+            {
+              "fn": "bindTexture | ",
+              "ms": 4.609
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": []
+}

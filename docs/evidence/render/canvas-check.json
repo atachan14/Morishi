@@ -1,0 +1,100 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "same natural 197-ally snapshot/full camera; short sampled CPU profile and frame intervals paused/4x"
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "20261011-safe-retention",
+          "playing": false,
+          "tick": 43200,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 91,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182,
+          "max": 16.90000000000009,
+          "top": []
+        },
+        {
+          "name": "20261011-safe-retention",
+          "playing": true,
+          "tick": 43200,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 90,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182,
+          "max": 16.899999999999636,
+          "top": []
+        }
+      ],
+      "canvasFallback": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "same natural 197-ally snapshot/full camera; short sampled CPU profile and frame intervals paused/4x"
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "20261011-safe-retention",
+          "playing": false,
+          "tick": 43200,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 91,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182,
+          "max": 16.899999999999636,
+          "top": []
+        },
+        {
+          "name": "20261011-safe-retention",
+          "playing": true,
+          "tick": 43200,
+          "view": {
+            "x": 18,
+            "y": 13.5,
+            "zoom": 1
+          },
+          "units": 202,
+          "profiled": false,
+          "frames": 89,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182,
+          "max": 16.899999999999636,
+          "top": []
+        }
+      ],
+      "canvasFallback": true
+    }
+  ],
+  "runtimeErrors": []
+}

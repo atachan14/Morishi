@@ -21,3 +21,5 @@ npm run build
 原文記録は `docs/restart/2026-10-11-first-concept.md`、今回の仮仕様とテスト手順は `docs/prototype-scope.md`、確認結果と制約は `docs/verification.md` にあります。
 
 可変ステージと継続供給の実装・互換・検証は [docs/stage-supply.md](docs/stage-supply.md) を参照。通常起動は12×9・敵7体の基準盤面で、大きな設定はまだ検証用です。
+
+右の観察Pane（スマホ幅では「敵・観察」タブ）上部の「検証用盤面」から比較36×27・敵24体を選び、「選択した盤面で始める」で試せます。基準盤面へも同じ導線で戻せます。[入口と再開の検証](docs/entry-tail.md)。

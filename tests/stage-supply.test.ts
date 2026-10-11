@@ -37,6 +37,7 @@ test('more than 18 placements preserve four-item supply and bounded history with
  const stage={width:96,height:72,enemyCount:8},s=createState(1,stage,'endless'),actions:Action[]=[];
  for(let i=0;i<70;i++){s.charges=1;const p=Array.from({length:140},(_,j)=>({x:.4+(j%20)*.8,y:.4+Math.floor(j/20)*.8})).find(p=>validatePlacement(s,p.x,p.y).ok)!;assert.ok(p);const expected=supplyStats(1,stage,i);assert.equal(place(s,p.x,p.y).ok,true);actions.push({tick:s.tick,kind:'place',...p});assert.deepEqual(s.units.at(-1)!.stats,expected);assert.equal(s.cards.length,4);assert.equal(s.territory.length,0);}
  const saved=capture(s,1,actions),restored=replay(saved);assert.equal(saved.actions.length,64);assert.equal(saved.snapshot.supplyIndex,70);assert.deepEqual(restored.state,s);assert.deepEqual(restored.state.cards[0],supplyStats(1,stage,70));assert.ok(JSON.stringify(saved).length<SAVE_LIMITS.maxBytes);
+ const p={x:20.1234,y:.4};s.charges=restored.state.charges=1;assert.equal(place(s,p.x,p.y).ok,true);assert.equal(place(restored.state,p.x,p.y).ok,true);assert.deepEqual(restored.state,s);assert.deepEqual(s.units.at(-1)!.stats,supplyStats(1,stage,70));for(let i=0;i<5;i++){step(s);step(restored.state);}assert.deepEqual(restored.state,s);assert.equal(s.supplyIndex,71);assert.deepEqual(s.cards[0],supplyStats(1,stage,71));
 });
 test('late indexed snapshots do not replay supply history and no living allies is not an endless loss',()=>{
  const s=createState(11,large,'endless');s.supplyIndex=1000000000;s.nextId=large.enemyCount+1+s.supplyIndex;s.started=true;s.tick=1000000000;for(const u of s.units)u.age=s.tick;s.cards=Array.from({length:4},(_,i)=>supplyStats(s.seed,s.stage,s.supplyIndex+i));const saved=capture(s,4,[]);assert.deepEqual(replay(saved).state,s);const before=s.tick;step(s);assert.equal(s.tick,before+1);assert.equal(s.outcome,'playing');assert.equal(s.cards.length,4);s.charges=0;s.tick=239;for(const u of s.units)u.age=239;step(s);assert.equal(s.charges,1);
@@ -48,4 +49,11 @@ test('forged stage, queue, indexed origins and oversized live arrays are rejecte
 
 test('save safety budgets reject a too-large live snapshot before overwriting its last good save',()=>{
  const good=createState(1,large,'endless');let raw=JSON.stringify(capture(good,1,[]));const original=raw,store=new RunStore({getItem:()=>raw,setItem:(_k,v)=>{raw=v;}});const excessive=structuredClone(good);excessive.units.push(...Array.from({length:SAVE_LIMITS.maxUnits},()=>({...good.units[0]})));assert.equal(store.write(capture(excessive,1,[])),false);assert.equal(raw,original);assert.equal(store.read().kind,'loaded');
+});
+
+test('camera culling never affects offscreen combat or the supply clock',()=>{
+ const stage={width:96,height:72,enemyCount:40},s=createState(11,stage,'endless'),target=s.units.at(-1)!,points=[] as {x:number;y:number}[];
+ for(let dy=-3;dy<=3;dy+=.4)for(let dx=-3;dx<=3;dx+=.4){const p={x:target.x+dx,y:target.y+dy};if(validatePlacement(s,p.x,p.y).ok)points.push(p);}
+ points.sort((a,b)=>Math.hypot(a.x-target.x,a.y-target.y)-Math.hypot(b.x-target.x,b.y-target.y));assert.ok(points.length);const p=points[0];place(s,p.x,p.y);const expected=structuredClone(s),c=new BoardCamera({x:0,y:0,zoom:12},stage),bounds=c.bounds(600,450);assert.ok(target.x>bounds.x+bounds.width||target.y>bounds.y+bounds.height);const originalHP=target.hp;const clock=new Clock();clock.paused=false;
+ for(let i=0;i<10;i++){c.pan(1,-1,10);clock.advance(s,100);step(expected);}assert.deepEqual(s,expected);assert.ok(!s.units.find(u=>u.id===target.id)||s.units.find(u=>u.id===target.id)!.hp<originalHP);assert.equal(s.tick,10);
 });

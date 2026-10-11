@@ -1,5 +1,7 @@
 export type StageConfig={width:number;height:number;enemyCount:number};
 export const DEFAULT_STAGE:Readonly<StageConfig>=Object.freeze({width:12,height:9,enemyCount:7});
+// Reversible comparison preset; not a final size or difficulty.
+export const COMPARISON_STAGE:Readonly<StageConfig>=Object.freeze({width:36,height:27,enemyCount:24});
 // Technical generation limits, not a selected difficulty or finished stage size.
 export const STAGE_LIMITS={minExtent:6,maxExtent:256,maxEnemies:256} as const;
 export const INITIAL_CARDS=18;

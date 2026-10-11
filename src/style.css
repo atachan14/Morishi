@@ -14,3 +14,7 @@
 #board{width:min(100%,max(300px,calc(133.333dvh - 426.667px)))}.help summary{cursor:pointer;color:#a6bab0;font-size:12px;padding:11px 0;min-height:44px}#selected-panel{border-bottom:1px solid #40574b;padding-bottom:8px;margin-bottom:18px}#selected-panel[hidden]{display:none}@media(max-width:760px){#board{width:100%}}
 html{overflow-anchor:none;scrollbar-gutter:stable}#selected-panel+h2{margin-top:0}
 .camera-controls{position:absolute;right:6px;bottom:6px;display:flex;gap:4px;z-index:2}.camera-controls button{padding:4px 10px;min-height:36px;background:#182a2ce8}#board{position:relative}
+
+.stage-label{display:block;font-size:11px;margin:15px 0 8px}.stage-label select{display:block;width:100%;min-width:0;font-size:12px;padding:8px;margin-top:6px}
+
+#stage-controls{border-bottom:1px solid #40574b;padding-bottom:15px;margin-bottom:18px}#stage-controls .stage-label{margin-top:0}

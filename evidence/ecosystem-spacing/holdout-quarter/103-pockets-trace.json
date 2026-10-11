@@ -1,0 +1,2713 @@
+{
+  "seed": 103,
+  "layout": "pockets",
+  "openingDistance": 20,
+  "actions": [
+    {
+      "tick": 0,
+      "card": 0,
+      "x": 773.871918,
+      "y": 645.538458,
+      "kind": "opening"
+    },
+    {
+      "tick": 0,
+      "card": 1,
+      "x": 783.871918,
+      "y": 628.2179499243113,
+      "kind": "opening"
+    },
+    {
+      "tick": 0,
+      "card": 2,
+      "x": 783.871918,
+      "y": 662.8589660756887,
+      "kind": "opening"
+    },
+    {
+      "tick": 57,
+      "card": 3,
+      "x": 2916.001398,
+      "y": 865.561072,
+      "kind": "staging-merge-needed",
+      "target": 8,
+      "incoming": [],
+      "initialRange": 37.1972,
+      "futureRange": 103.943576
+    },
+    {
+      "tick": 80,
+      "card": 4,
+      "x": 2904.4513979999997,
+      "y": 865.561072,
+      "kind": "merge-support",
+      "target": 8,
+      "incoming": [],
+      "initialRange": 65.509224,
+      "futureRange": 183.058486
+    },
+    {
+      "tick": 152,
+      "card": 5,
+      "x": 2892.5921545,
+      "y": 865.561072,
+      "kind": "merge-support",
+      "target": 8,
+      "incoming": [],
+      "initialRange": 45.078498,
+      "futureRange": 125.96702
+    },
+    {
+      "tick": 162,
+      "card": 6,
+      "x": 2890.6545475,
+      "y": 865.561072,
+      "kind": "merge-support",
+      "target": 8,
+      "incoming": [],
+      "initialRange": 53.015034,
+      "futureRange": 148.144812
+    },
+    {
+      "tick": 172,
+      "card": 7,
+      "x": 2888.7558085,
+      "y": 865.561072,
+      "kind": "merge-support",
+      "target": 8,
+      "incoming": [],
+      "initialRange": 54.010506,
+      "futureRange": 150.926552
+    },
+    {
+      "tick": 200,
+      "card": 8,
+      "x": 955.5310719999999,
+      "y": 865.546484,
+      "kind": "staging-merge-needed",
+      "target": 4,
+      "incoming": [],
+      "initialRange": 56.09171,
+      "futureRange": 156.742252
+    },
+    {
+      "tick": 240,
+      "card": 9,
+      "x": 941.431072,
+      "y": 865.546484,
+      "kind": "merge-support",
+      "target": 4,
+      "incoming": [],
+      "initialRange": 36.005466,
+      "futureRange": 100.613404
+    },
+    {
+      "tick": 280,
+      "card": 10,
+      "x": 934.615444,
+      "y": 865.546484,
+      "kind": "merge-support",
+      "target": 4,
+      "incoming": [],
+      "initialRange": 60.699284,
+      "futureRange": 169.617622
+    },
+    {
+      "tick": 320,
+      "card": 11,
+      "x": 928.1152475,
+      "y": 865.546484,
+      "kind": "merge-support",
+      "target": 4,
+      "incoming": [],
+      "initialRange": 35.323464,
+      "futureRange": 98.707626
+    },
+    {
+      "tick": 360,
+      "card": 12,
+      "x": 3256.936462386883,
+      "y": 1298.2082036392744,
+      "kind": "staging-merge-needed",
+      "target": 11,
+      "incoming": [],
+      "initialRange": 46.725838,
+      "futureRange": 130.570334
+    },
+    {
+      "tick": 400,
+      "card": 13,
+      "x": 3264.7700022552135,
+      "y": 1309.9319255537537,
+      "kind": "merge-support",
+      "target": 11,
+      "incoming": [],
+      "initialRange": 51.419612,
+      "futureRange": 143.686578
+    },
+    {
+      "tick": 440,
+      "card": 14,
+      "x": 3268.556562276672,
+      "y": 1315.5989131343188,
+      "kind": "merge-support",
+      "target": 11,
+      "incoming": [],
+      "initialRange": 48.587776,
+      "futureRange": 135.773316
+    },
+    {
+      "tick": 480,
+      "card": 15,
+      "x": 3272.1678779468525,
+      "y": 1321.0036290074167,
+      "kind": "merge-support",
+      "target": 11,
+      "incoming": [],
+      "initialRange": 70.424978,
+      "futureRange": 196.79503
+    },
+    {
+      "tick": 556,
+      "card": 16,
+      "x": 3278.703686422661,
+      "y": 1330.7851576908297,
+      "kind": "merge-support",
+      "target": 11,
+      "incoming": [],
+      "initialRange": 48.296498,
+      "futureRange": 134.959372
+    },
+    {
+      "tick": 566,
+      "card": 17,
+      "x": 3279.6723717325717,
+      "y": 1332.234897715979,
+      "kind": "merge-support",
+      "target": 11,
+      "incoming": [],
+      "initialRange": 69.057502,
+      "futureRange": 192.973768
+    },
+    {
+      "tick": 609,
+      "card": 18,
+      "x": 934.2990307770538,
+      "y": 2148.197515428146,
+      "kind": "nurture",
+      "target": 14,
+      "incoming": [],
+      "initialRange": 38.946516,
+      "futureRange": 108.831856
+    },
+    {
+      "tick": 640,
+      "card": 19,
+      "x": 742.0735555073146,
+      "y": 2207.3387175553817,
+      "kind": "merge-support",
+      "target": 14,
+      "incoming": [],
+      "initialRange": 53.199566,
+      "futureRange": 148.660468
+    },
+    {
+      "tick": 720,
+      "card": 20,
+      "x": 741.9874806105106,
+      "y": 2207.3390397982034,
+      "kind": "merge-support",
+      "target": 14,
+      "incoming": [],
+      "initialRange": 37.02086,
+      "futureRange": 103.450812
+    },
+    {
+      "tick": 781,
+      "card": 22,
+      "x": 3502.692221,
+      "y": 2200.283327,
+      "kind": "nurture",
+      "target": 20,
+      "incoming": [],
+      "initialRange": 82.49809,
+      "futureRange": 230.532044
+    },
+    {
+      "tick": 800,
+      "card": 21,
+      "x": 3513.6422209999996,
+      "y": 2200.283327,
+      "kind": "merge-support",
+      "target": 20,
+      "incoming": [],
+      "initialRange": 42.120282,
+      "futureRange": 117.700602
+    },
+    {
+      "tick": 880,
+      "card": 23,
+      "x": 3526.7799419999997,
+      "y": 2200.283327,
+      "kind": "merge-support",
+      "target": 20,
+      "incoming": [],
+      "initialRange": 45.454942,
+      "futureRange": 127.01895
+    },
+    {
+      "tick": 946,
+      "card": 24,
+      "x": 3537.1031135,
+      "y": 2200.283327,
+      "kind": "merge-support",
+      "target": 20,
+      "incoming": [],
+      "initialRange": 38.297314,
+      "futureRange": 107.017728
+    },
+    {
+      "tick": 960,
+      "card": 25,
+      "x": 3539.4845124999997,
+      "y": 2200.283327,
+      "kind": "merge-support",
+      "target": 20,
+      "incoming": [],
+      "initialRange": 60.040784,
+      "futureRange": 167.777518
+    },
+    {
+      "tick": 986,
+      "card": 26,
+      "x": 3415.371293686522,
+      "y": 2243.035330313478,
+      "kind": "nurture",
+      "target": 22,
+      "incoming": [],
+      "initialRange": 85.402914,
+      "futureRange": 238.649266
+    },
+    {
+      "tick": 1040,
+      "card": 27,
+      "x": 3426.826423855222,
+      "y": 2231.5802001447782,
+      "kind": "merge-support",
+      "target": 22,
+      "incoming": [],
+      "initialRange": 32.0077,
+      "futureRange": 89.442076
+    },
+    {
+      "tick": 1120,
+      "card": 28,
+      "x": 3435.7952746974643,
+      "y": 2222.611349302536,
+      "kind": "merge-support",
+      "target": 22,
+      "incoming": [],
+      "initialRange": 51.259118,
+      "futureRange": 143.238096
+    },
+    {
+      "tick": 1154,
+      "card": 29,
+      "x": 3231.0839010522686,
+      "y": 2407.722975481062,
+      "kind": "nurture",
+      "target": 21,
+      "incoming": [],
+      "initialRange": 62.790254,
+      "futureRange": 175.460616
+    },
+    {
+      "tick": 1200,
+      "card": 30,
+      "x": 3245.864652295642,
+      "y": 2405.167707668314,
+      "kind": "merge-support",
+      "target": 21,
+      "incoming": [],
+      "initialRange": 58.28517,
+      "futureRange": 162.871644
+    },
+    {
+      "tick": 1280,
+      "card": 31,
+      "x": 3258.431839262632,
+      "y": 2402.99511700187,
+      "kind": "merge-support",
+      "target": 21,
+      "incoming": [],
+      "initialRange": 36.948976,
+      "futureRange": 103.249944
+    },
+    {
+      "tick": 1360,
+      "card": 32,
+      "x": 3270.610246650217,
+      "y": 2400.889737787578,
+      "kind": "merge-support",
+      "target": 21,
+      "incoming": [],
+      "initialRange": 38.21171,
+      "futureRange": 106.778516
+    },
+    {
+      "tick": 1379,
+      "card": 33,
+      "x": 3130.590474,
+      "y": 2387.7335900000003,
+      "kind": "nurture",
+      "target": 24,
+      "incoming": [],
+      "initialRange": 56.08687,
+      "futureRange": 156.728732
+    },
+    {
+      "tick": 1440,
+      "card": 34,
+      "x": 3130.590474,
+      "y": 2370.48359,
+      "kind": "merge-support",
+      "target": 24,
+      "incoming": [],
+      "initialRange": 50.09727,
+      "futureRange": 139.991436
+    },
+    {
+      "tick": 1495,
+      "card": 39,
+      "x": 2709.3180564322292,
+      "y": 2392.9628575677716,
+      "kind": "nurture",
+      "target": 18,
+      "incoming": [],
+      "initialRange": 68.66796,
+      "futureRange": 191.885236
+    },
+    {
+      "tick": 1520,
+      "card": 35,
+      "x": 2700.9388406429393,
+      "y": 2401.3420733570606,
+      "kind": "merge-support",
+      "target": 18,
+      "incoming": [],
+      "initialRange": 37.888988,
+      "futureRange": 105.876708
+    },
+    {
+      "tick": 1600,
+      "card": 36,
+      "x": 2691.72969087482,
+      "y": 2410.55122312518,
+      "kind": "merge-support",
+      "target": 18,
+      "incoming": [],
+      "initialRange": 40.138274,
+      "futureRange": 112.162094
+    },
+    {
+      "tick": 1680,
+      "card": 37,
+      "x": 2682.956203383171,
+      "y": 2419.3247106168287,
+      "kind": "merge-support",
+      "target": 18,
+      "incoming": [],
+      "initialRange": 50.961256,
+      "futureRange": 142.405752
+    },
+    {
+      "tick": 1714,
+      "card": 41,
+      "x": 3037.4083282194806,
+      "y": 2357.378054133725,
+      "kind": "nurture",
+      "target": 23,
+      "incoming": [],
+      "initialRange": 87.646258,
+      "futureRange": 244.918046
+    },
+    {
+      "tick": 1760,
+      "card": 38,
+      "x": 3043.148579474946,
+      "y": 2343.5198610079688,
+      "kind": "merge-support",
+      "target": 23,
+      "incoming": [],
+      "initialRange": 34.455828,
+      "futureRange": 96.283106
+    },
+    {
+      "tick": 1782,
+      "card": 44,
+      "x": 2886.1779272784433,
+      "y": 435.6376712784431,
+      "kind": "nurture",
+      "target": 6,
+      "incoming": [],
+      "initialRange": 76.642982,
+      "futureRange": 214.170578
+    },
+    {
+      "tick": 1840,
+      "card": 40,
+      "x": 2874.298533076066,
+      "y": 423.758277076066,
+      "kind": "merge-support",
+      "target": 6,
+      "incoming": [],
+      "initialRange": 67.476708,
+      "futureRange": 188.556408
+    },
+    {
+      "tick": 1920,
+      "card": 42,
+      "x": 2865.3511446924003,
+      "y": 414.8108886924,
+      "kind": "merge-support",
+      "target": 6,
+      "incoming": [],
+      "initialRange": 33.850538,
+      "futureRange": 94.591688
+    },
+    {
+      "tick": 2000,
+      "card": 43,
+      "x": 2856.6286689446065,
+      "y": 406.08841294460643,
+      "kind": "merge-support",
+      "target": 6,
+      "incoming": [],
+      "initialRange": 34.132722,
+      "futureRange": 95.380222
+    },
+    {
+      "tick": 2080,
+      "card": 45,
+      "x": 2847.982947870144,
+      "y": 397.4426918701438,
+      "kind": "merge-support",
+      "target": 6,
+      "incoming": [],
+      "initialRange": 38.264192,
+      "futureRange": 106.925174
+    },
+    {
+      "tick": 2160,
+      "card": 46,
+      "x": 2839.3762534331486,
+      "y": 388.83599743314835,
+      "kind": "merge-support",
+      "target": 6,
+      "incoming": [],
+      "initialRange": 44.914966,
+      "futureRange": 125.510046
+    },
+    {
+      "tick": 2171,
+      "card": 47,
+      "x": 3056.726461914882,
+      "y": 501.5772541531228,
+      "kind": "staging-merge-needed",
+      "target": 7,
+      "incoming": [],
+      "initialRange": 55.697226,
+      "futureRange": 155.639912
+    },
+    {
+      "tick": 2240,
+      "card": 48,
+      "x": 3039.680884628443,
+      "y": 494.5167446649551,
+      "kind": "merge-support",
+      "target": 7,
+      "incoming": [],
+      "initialRange": 58.558412,
+      "futureRange": 163.63519
+    },
+    {
+      "tick": 2320,
+      "card": 49,
+      "x": 3028.0564554296893,
+      "y": 489.7017484296667,
+      "kind": "merge-support",
+      "target": 7,
+      "incoming": [],
+      "initialRange": 57.932748,
+      "futureRange": 161.88684
+    },
+    {
+      "tick": 2400,
+      "card": 50,
+      "x": 3016.6778419342245,
+      "y": 484.98857239265817,
+      "kind": "merge-support",
+      "target": 7,
+      "incoming": [],
+      "initialRange": 54.12907,
+      "futureRange": 151.257868
+    },
+    {
+      "tick": 2480,
+      "card": 51,
+      "x": 3005.3899132200754,
+      "y": 480.31295922202077,
+      "kind": "merge-support",
+      "target": 7,
+      "incoming": [],
+      "initialRange": 42.712692,
+      "futureRange": 119.356028
+    },
+    {
+      "tick": 2560,
+      "card": 52,
+      "x": 2994.149474223587,
+      "y": 475.6570169365375,
+      "kind": "merge-support",
+      "target": 7,
+      "incoming": [],
+      "initialRange": 62.015132,
+      "futureRange": 173.294624
+    },
+    {
+      "tick": 2640,
+      "card": 53,
+      "x": 3000.251462687363,
+      "y": 445.10225463495556,
+      "kind": "merge-support",
+      "target": 7,
+      "incoming": [],
+      "initialRange": 47.634258,
+      "futureRange": 133.108814
+    },
+    {
+      "tick": 2699,
+      "card": 54,
+      "x": 948.4712650000001,
+      "y": 2435.195314,
+      "kind": "staging-merge-needed",
+      "target": 17,
+      "incoming": [],
+      "initialRange": 50.350192,
+      "futureRange": 140.6982
+    },
+    {
+      "tick": 2720,
+      "card": 55,
+      "x": 937.221265,
+      "y": 2435.195314,
+      "kind": "merge-support",
+      "target": 17,
+      "incoming": [],
+      "initialRange": 40.819956,
+      "futureRange": 114.066982
+    },
+    {
+      "tick": 2800,
+      "card": 56,
+      "x": 924.124093,
+      "y": 2435.195314,
+      "kind": "merge-support",
+      "target": 17,
+      "incoming": [],
+      "initialRange": 54.965592,
+      "futureRange": 153.595438
+    },
+    {
+      "tick": 2810,
+      "card": 57,
+      "x": 922.2061955,
+      "y": 2435.195314,
+      "kind": "merge-support",
+      "target": 17,
+      "incoming": [],
+      "initialRange": 46.500482,
+      "futureRange": 129.940598
+    },
+    {
+      "tick": 2880,
+      "card": 58,
+      "x": 911.3235815,
+      "y": 2435.195314,
+      "kind": "merge-support",
+      "target": 17,
+      "incoming": [],
+      "initialRange": 39.364702,
+      "futureRange": 110.000432
+    },
+    {
+      "tick": 2960,
+      "card": 59,
+      "x": 899.065194,
+      "y": 2435.195314,
+      "kind": "merge-support",
+      "target": 17,
+      "incoming": [],
+      "initialRange": 43.87376,
+      "futureRange": 122.600506
+    },
+    {
+      "tick": 3040,
+      "card": 60,
+      "x": 886.8761460000001,
+      "y": 2435.195314,
+      "kind": "merge-support",
+      "target": 17,
+      "incoming": [],
+      "initialRange": 56.3734,
+      "futureRange": 157.529406
+    },
+    {
+      "tick": 3120,
+      "card": 61,
+      "x": 874.726955,
+      "y": 2435.195314,
+      "kind": "merge-support",
+      "target": 17,
+      "incoming": [],
+      "initialRange": 51.058402,
+      "futureRange": 142.677214
+    },
+    {
+      "tick": 3182,
+      "card": 62,
+      "x": 937.2098961789218,
+      "y": 2107.1962622093074,
+      "kind": "staging-merge-needed",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 59.544244,
+      "futureRange": 166.38999
+    },
+    {
+      "tick": 3200,
+      "card": 63,
+      "x": 926.6174149724193,
+      "y": 2105.0892865183337,
+      "kind": "merge-support",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 56.516448,
+      "futureRange": 157.929138
+    },
+    {
+      "tick": 3280,
+      "card": 64,
+      "x": 913.7112050733828,
+      "y": 2102.522081748488,
+      "kind": "merge-support",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 59.692068,
+      "futureRange": 166.80307
+    },
+    {
+      "tick": 3360,
+      "card": 65,
+      "x": 901.5241280287689,
+      "y": 2100.0979213974506,
+      "kind": "merge-support",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 71.692508,
+      "futureRange": 200.337008
+    },
+    {
+      "tick": 3440,
+      "card": 66,
+      "x": 735.9949518367525,
+      "y": 2208.823712519666,
+      "kind": "merge-support",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 72.703666,
+      "futureRange": 203.162582
+    },
+    {
+      "tick": 3520,
+      "card": 67,
+      "x": 735.9138280794823,
+      "y": 2208.8250928698412,
+      "kind": "merge-support",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 43.678792,
+      "futureRange": 122.055688
+    },
+    {
+      "tick": 3600,
+      "card": 68,
+      "x": 735.8327663132387,
+      "y": 2208.8264721652167,
+      "kind": "merge-support",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 84.550274,
+      "futureRange": 236.266654
+    },
+    {
+      "tick": 3680,
+      "card": 69,
+      "x": 735.751766538022,
+      "y": 2208.827850405792,
+      "kind": "merge-support",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 57.76083,
+      "futureRange": 161.406432
+    },
+    {
+      "tick": 3760,
+      "card": 70,
+      "x": 735.6708282539043,
+      "y": 2208.8292276000743,
+      "kind": "merge-support",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 54.375088,
+      "futureRange": 151.945342
+    },
+    {
+      "tick": 3840,
+      "card": 71,
+      "x": 735.5899514608858,
+      "y": 2208.830603748063,
+      "kind": "merge-support",
+      "target": 15,
+      "incoming": [],
+      "initialRange": 59.855608,
+      "futureRange": 167.260062
+    }
+  ],
+  "milestones": [
+    {
+      "tick": 600,
+      "allies": 5,
+      "enemies": 14,
+      "kills": 8,
+      "origins": 8,
+      "merges": 17,
+      "allyShots": 224,
+      "legalGridPoints": 687,
+      "safeCurrentRangeGridPoints": 627,
+      "gridPoints": 768
+    },
+    {
+      "tick": 1200,
+      "allies": 6,
+      "enemies": 9,
+      "kills": 13,
+      "origins": 13,
+      "merges": 27,
+      "allyShots": 408,
+      "legalGridPoints": 707,
+      "safeCurrentRangeGridPoints": 638,
+      "gridPoints": 768
+    },
+    {
+      "tick": 1800,
+      "allies": 9,
+      "enemies": 5,
+      "kills": 17,
+      "origins": 18,
+      "merges": 36,
+      "allyShots": 688,
+      "legalGridPoints": 724,
+      "safeCurrentRangeGridPoints": 669,
+      "gridPoints": 768
+    },
+    {
+      "tick": 2400,
+      "allies": 10,
+      "enemies": 4,
+      "kills": 18,
+      "origins": 19,
+      "merges": 43,
+      "allyShots": 730,
+      "legalGridPoints": 725,
+      "safeCurrentRangeGridPoints": 669,
+      "gridPoints": 768
+    },
+    {
+      "tick": 3000,
+      "allies": 10,
+      "enemies": 2,
+      "kills": 20,
+      "origins": 22,
+      "merges": 53,
+      "allyShots": 800,
+      "legalGridPoints": 738,
+      "safeCurrentRangeGridPoints": 707,
+      "gridPoints": 768
+    },
+    {
+      "tick": 3600,
+      "allies": 10,
+      "enemies": 1,
+      "kills": 21,
+      "origins": 23,
+      "merges": 61,
+      "allyShots": 843,
+      "legalGridPoints": 741,
+      "safeCurrentRangeGridPoints": 709,
+      "gridPoints": 768
+    },
+    {
+      "tick": 3899,
+      "allies": 10,
+      "enemies": 0,
+      "kills": 22,
+      "origins": 24,
+      "merges": 65,
+      "allyShots": 890,
+      "legalGridPoints": 0,
+      "safeCurrentRangeGridPoints": 0,
+      "gridPoints": 768
+    }
+  ],
+  "allyShots": 890,
+  "enemyShots": 264,
+  "dead": 2,
+  "lastAllyShot": 3899,
+  "maxAllyGap": 579,
+  "saveChecks": 97,
+  "maxSaveBytes": 26900,
+  "openingCard": {
+    "kind": "plant",
+    "id": 3,
+    "seed": {
+      "generator": "eco-seed-1",
+      "runSeed": 103,
+      "source": "hand",
+      "index": 3,
+      "initialDiameter": 8,
+      "bindings": {
+        "fire": "defense",
+        "ice": "range",
+        "electric": "speed",
+        "dark": "attack"
+      },
+      "raw": {
+        "hp": 126.147565,
+        "hpReg": 0.105633,
+        "presenceHalo": 3.135698,
+        "elements": {
+          "fire": 28.834431,
+          "ice": 17.381869,
+          "electric": 27.285161,
+          "dark": 22.49854
+        }
+      },
+      "fixed": {
+        "hp": 126.147565,
+        "hpReg": 0.105633,
+        "presenceHalo": 3.135698,
+        "elements": {
+          "fire": 28.834431,
+          "ice": 17.381869,
+          "electric": 27.285161,
+          "dark": 22.49854
+        }
+      },
+      "entry": {
+        "tick": 0,
+        "boosts": {
+          "fire": 1,
+          "ice": 1,
+          "electric": 1,
+          "dark": 1
+        },
+        "rewardIds": []
+      }
+    }
+  },
+  "firstAllyShot": 10,
+  "firstEnemyShot": 10,
+  "nextAttemptTick": 3850,
+  "firstEnemyMerge": 489,
+  "root": 90,
+  "target": 15,
+  "plannerStalled": false,
+  "save": {
+    "version": "eco-2026-10-11-v1",
+    "state": {
+      "rules": "diameter-linear-1",
+      "seed": 103,
+      "tick": 3899,
+      "nextId": 100,
+      "nextCard": 78,
+      "units": [
+        {
+          "id": 25,
+          "team": "ally",
+          "x": 793.871918,
+          "y": 645.538458,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "initial",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 131.374034,
+              "hpReg": 0.119419,
+              "presenceHalo": 3.883269,
+              "elements": {
+                "fire": 20.224805,
+                "ice": 20.450007,
+                "electric": 19.869421,
+                "dark": 35.455767
+              }
+            },
+            "fixed": {
+              "hp": 131.374034,
+              "hpReg": 0.119419,
+              "presenceHalo": 3.883269,
+              "elements": {
+                "fire": 20.224805,
+                "ice": 20.450007,
+                "electric": 19.869421,
+                "dark": 35.455767
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          },
+          "born": 0,
+          "age": 3899,
+          "diameter": 200,
+          "hp": 838.382034,
+          "attackProgress": 1,
+          "bonus": {
+            "elements": {
+              "fire": 20.723218,
+              "ice": 18.717789,
+              "electric": 23.121089,
+              "dark": 23.117906
+            },
+            "hp": 380.21509,
+            "regen": 0.374025
+          },
+          "lineage": [
+            25,
+            28,
+            29,
+            30
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1",
+          "lastShot": {
+            "tick": 334,
+            "x": 1112.347744,
+            "y": 865.546484,
+            "target": 4,
+            "damage": 5.508691
+          }
+        },
+        {
+          "id": 27,
+          "team": "ally",
+          "x": 846.172826,
+          "y": 2206.948996,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "initial",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "speed",
+              "ice": "defense",
+              "electric": "range",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 133.722621,
+              "hpReg": 0.156769,
+              "presenceHalo": 3.640739,
+              "elements": {
+                "fire": 22.099289,
+                "ice": 31.189083,
+                "electric": 22.022081,
+                "dark": 20.689548
+              }
+            },
+            "fixed": {
+              "hp": 133.722621,
+              "hpReg": 0.156769,
+              "presenceHalo": 3.640739,
+              "elements": {
+                "fire": 22.099289,
+                "ice": 31.189083,
+                "electric": 22.022081,
+                "dark": 20.689548
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          },
+          "born": 0,
+          "age": 3899,
+          "diameter": 213.159417,
+          "hp": 2195.134027,
+          "attackProgress": 0,
+          "bonus": {
+            "elements": {
+              "fire": 73.497931,
+              "ice": 76.954631,
+              "electric": 80.75015,
+              "dark": 74.347121
+            },
+            "hp": 1706.77999,
+            "regen": 1.632837
+          },
+          "lineage": [
+            27,
+            46,
+            47,
+            48,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1",
+          "lastShot": {
+            "tick": 3899,
+            "x": 1392.008846,
+            "y": 2197.661398,
+            "target": 15,
+            "damage": 12.66678
+          }
+        },
+        {
+          "id": 36,
+          "team": "ally",
+          "x": 955.531072,
+          "y": 865.546484,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 8,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 114.987453,
+              "hpReg": 0.15258,
+              "presenceHalo": 2.81919,
+              "elements": {
+                "fire": 14.703674,
+                "ice": 24.28982,
+                "electric": 31.30937,
+                "dark": 25.697136
+              }
+            },
+            "fixed": {
+              "hp": 114.987453,
+              "hpReg": 0.15258,
+              "presenceHalo": 2.81919,
+              "elements": {
+                "fire": 14.850711,
+                "ice": 24.532718,
+                "electric": 31.30937,
+                "dark": 26.211079
+              }
+            },
+            "entry": {
+              "tick": 200,
+              "boosts": {
+                "fire": 1.01,
+                "ice": 1.01,
+                "electric": 1,
+                "dark": 1.02
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8
+              ]
+            }
+          },
+          "born": 200,
+          "age": 3699,
+          "diameter": 200,
+          "hp": 783.858688,
+          "attackProgress": 1,
+          "bonus": {
+            "elements": {
+              "fire": 23.703501,
+              "ice": 20.576678,
+              "electric": 16.965492,
+              "dark": 17.152787
+            },
+            "hp": 382.839946,
+            "regen": 0.327031
+          },
+          "lineage": [
+            36,
+            37,
+            38,
+            39
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1",
+          "lastShot": {
+            "tick": 335,
+            "x": 1112.347744,
+            "y": 865.546484,
+            "target": 4,
+            "damage": 22.53663
+          }
+        },
+        {
+          "id": 40,
+          "team": "ally",
+          "x": 3256.936462,
+          "y": 1298.208204,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 12,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "speed",
+              "electric": "range",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 111.201707,
+              "hpReg": 0.100379,
+              "presenceHalo": 3.970164,
+              "elements": {
+                "fire": 25.973319,
+                "ice": 27.963455,
+                "electric": 21.618321,
+                "dark": 20.444905
+              }
+            },
+            "fixed": {
+              "hp": 111.201707,
+              "hpReg": 0.100379,
+              "presenceHalo": 3.970164,
+              "elements": {
+                "fire": 26.233052,
+                "ice": 28.522724,
+                "electric": 21.834504,
+                "dark": 21.058252
+              }
+            },
+            "entry": {
+              "tick": 360,
+              "boosts": {
+                "fire": 1.01,
+                "ice": 1.02,
+                "electric": 1.01,
+                "dark": 1.03
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4
+              ]
+            }
+          },
+          "born": 360,
+          "age": 3539,
+          "diameter": 200,
+          "hp": 769.294776,
+          "attackProgress": 1,
+          "bonus": {
+            "elements": {
+              "fire": 38.445977,
+              "ice": 33.594094,
+              "electric": 24.249211,
+              "dark": 34.84436
+            },
+            "hp": 659.281905,
+            "regen": 0.609845
+          },
+          "lineage": [
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1",
+          "lastShot": {
+            "tick": 609,
+            "x": 3144.939008,
+            "y": 1130.592168,
+            "target": 11,
+            "damage": 23.612646
+          }
+        },
+        {
+          "id": 49,
+          "team": "ally",
+          "x": 3502.692221,
+          "y": 2200.283327,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 22,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "speed",
+              "ice": "attack",
+              "electric": "defense",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 107.754427,
+              "hpReg": 0.10426,
+              "presenceHalo": 3.749013,
+              "elements": {
+                "fire": 18.977191,
+                "ice": 23.039483,
+                "electric": 16.915529,
+                "dark": 37.067797
+              }
+            },
+            "fixed": {
+              "hp": 107.754427,
+              "hpReg": 0.10426,
+              "presenceHalo": 3.749013,
+              "elements": {
+                "fire": 19.166963,
+                "ice": 23.730667,
+                "electric": 17.084684,
+                "dark": 38.550509
+              }
+            },
+            "entry": {
+              "tick": 760,
+              "boosts": {
+                "fire": 1.01,
+                "ice": 1.03,
+                "electric": 1.01,
+                "dark": 1.04
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11
+              ]
+            }
+          },
+          "born": 781,
+          "age": 3118,
+          "diameter": 200,
+          "hp": 1367.458597,
+          "attackProgress": 1,
+          "bonus": {
+            "elements": {
+              "fire": 42.245354,
+              "ice": 49.324868,
+              "electric": 32.096267,
+              "dark": 35.697519
+            },
+            "hp": 991.665033,
+            "regen": 0.904234
+          },
+          "lineage": [
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1",
+          "lastShot": {
+            "tick": 1712,
+            "x": 2911.047034,
+            "y": 2191.23388,
+            "target": 18,
+            "damage": 2.019483
+          }
+        },
+        {
+          "id": 57,
+          "team": "ally",
+          "x": 3231.083901,
+          "y": 2407.722975,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 29,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "attack",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 116.951087,
+              "hpReg": 0.108635,
+              "presenceHalo": 2.822792,
+              "elements": {
+                "fire": 29.050733,
+                "ice": 23.056078,
+                "electric": 22.263048,
+                "dark": 21.630141
+              }
+            },
+            "fixed": {
+              "hp": 116.951087,
+              "hpReg": 0.108635,
+              "presenceHalo": 2.822792,
+              "elements": {
+                "fire": 29.34124,
+                "ice": 24.208882,
+                "electric": 22.708309,
+                "dark": 22.495347
+              }
+            },
+            "entry": {
+              "tick": 1040,
+              "boosts": {
+                "fire": 1.01,
+                "ice": 1.05,
+                "electric": 1.02,
+                "dark": 1.04
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20
+              ]
+            }
+          },
+          "born": 1154,
+          "age": 2745,
+          "diameter": 200,
+          "hp": 1102.824994,
+          "attackProgress": 1,
+          "bonus": {
+            "elements": {
+              "fire": 40.214734,
+              "ice": 27.289467,
+              "electric": 27.353724,
+              "dark": 32.626603
+            },
+            "hp": 694.958078,
+            "regen": 0.703904
+          },
+          "lineage": [
+            57,
+            58,
+            59,
+            60,
+            61,
+            62
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1",
+          "lastShot": {
+            "tick": 1782,
+            "x": 2909.513203,
+            "y": 2666.1442,
+            "target": 23,
+            "damage": 16.589831
+          }
+        },
+        {
+          "id": 63,
+          "team": "ally",
+          "x": 2709.318056,
+          "y": 2392.962858,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 39,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "defense",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 137.333313,
+              "hpReg": 0.140914,
+              "presenceHalo": 3.289262,
+              "elements": {
+                "fire": 31.458659,
+                "ice": 25.904155,
+                "electric": 15.136935,
+                "dark": 23.500251
+              }
+            },
+            "fixed": {
+              "hp": 137.333313,
+              "hpReg": 0.140914,
+              "presenceHalo": 3.289262,
+              "elements": {
+                "fire": 32.087832,
+                "ice": 27.199363,
+                "electric": 15.591043,
+                "dark": 24.440261
+              }
+            },
+            "entry": {
+              "tick": 1440,
+              "boosts": {
+                "fire": 1.02,
+                "ice": 1.05,
+                "electric": 1.03,
+                "dark": 1.04
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21
+              ]
+            }
+          },
+          "born": 1495,
+          "age": 2404,
+          "diameter": 200,
+          "hp": 852.196176,
+          "attackProgress": 1,
+          "bonus": {
+            "elements": {
+              "fire": 17.139671,
+              "ice": 18.704728,
+              "electric": 19.971989,
+              "dark": 23.980314
+            },
+            "hp": 373.246247,
+            "regen": 0.323552
+          },
+          "lineage": [
+            63,
+            64,
+            65,
+            66
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1",
+          "lastShot": {
+            "tick": 1714,
+            "x": 2911.047034,
+            "y": 2191.23388,
+            "target": 18,
+            "damage": 1.761049
+          }
+        },
+        {
+          "id": 67,
+          "team": "ally",
+          "x": 3037.408328,
+          "y": 2357.378054,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 41,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "defense",
+              "electric": "attack",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 117.128197,
+              "hpReg": 0.066985,
+              "presenceHalo": 3.935447,
+              "elements": {
+                "fire": 40.153132,
+                "ice": 20.898786,
+                "electric": 18.354075,
+                "dark": 16.594007
+              }
+            },
+            "fixed": {
+              "hp": 117.128197,
+              "hpReg": 0.066985,
+              "presenceHalo": 3.935447,
+              "elements": {
+                "fire": 40.956195,
+                "ice": 22.152713,
+                "electric": 18.904697,
+                "dark": 17.257767
+              }
+            },
+            "entry": {
+              "tick": 1535,
+              "boosts": {
+                "fire": 1.02,
+                "ice": 1.06,
+                "electric": 1.03,
+                "dark": 1.04
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21,
+                24
+              ]
+            }
+          },
+          "born": 1714,
+          "age": 2185,
+          "diameter": 200,
+          "hp": 519.610751,
+          "attackProgress": 1,
+          "bonus": {
+            "elements": {
+              "fire": 4.319054,
+              "ice": 5.131114,
+              "electric": 8.795969,
+              "dark": 8.414726
+            },
+            "hp": 111.126164,
+            "regen": 0.130373
+          },
+          "lineage": [
+            67,
+            68
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1"
+        },
+        {
+          "id": 69,
+          "team": "ally",
+          "x": 2886.177927,
+          "y": 435.637671,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 44,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "speed",
+              "electric": "range",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 109.514973,
+              "hpReg": 0.083322,
+              "presenceHalo": 2.836169,
+              "elements": {
+                "fire": 18.617209,
+                "ice": 27.209928,
+                "electric": 34.771338,
+                "dark": 15.401525
+              }
+            },
+            "fixed": {
+              "hp": 109.514973,
+              "hpReg": 0.083322,
+              "presenceHalo": 2.836169,
+              "elements": {
+                "fire": 18.989553,
+                "ice": 28.842524,
+                "electric": 35.814478,
+                "dark": 16.171601
+              }
+            },
+            "entry": {
+              "tick": 1720,
+              "boosts": {
+                "fire": 1.02,
+                "ice": 1.06,
+                "electric": 1.03,
+                "dark": 1.05
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21,
+                24,
+                18
+              ]
+            }
+          },
+          "born": 1782,
+          "age": 2117,
+          "diameter": 259.827325,
+          "hp": 2168.763387,
+          "attackProgress": 1,
+          "bonus": {
+            "elements": {
+              "fire": 54.66355,
+              "ice": 61.218592,
+              "electric": 59.394689,
+              "dark": 65.113237
+            },
+            "hp": 1704.93007,
+            "regen": 1.460137
+          },
+          "lineage": [
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1",
+          "lastShot": {
+            "tick": 2801,
+            "x": 3253.67018,
+            "y": 875.985198,
+            "target": 9,
+            "damage": 25.001943
+          }
+        },
+        {
+          "id": 82,
+          "team": "ally",
+          "x": 948.471265,
+          "y": 2435.195314,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 54,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "defense",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 111.206665,
+              "hpReg": 0.158695,
+              "presenceHalo": 3.90233,
+              "elements": {
+                "fire": 31.150555,
+                "ice": 23.387894,
+                "electric": 19.05381,
+                "dark": 22.40774
+              }
+            },
+            "fixed": {
+              "hp": 111.206665,
+              "hpReg": 0.158695,
+              "presenceHalo": 3.90233,
+              "elements": {
+                "fire": 31.773566,
+                "ice": 25.258926,
+                "electric": 19.625424,
+                "dark": 23.528127
+              }
+            },
+            "entry": {
+              "tick": 2280,
+              "boosts": {
+                "fire": 1.02,
+                "ice": 1.08,
+                "electric": 1.03,
+                "dark": 1.05
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21,
+                24,
+                18,
+                23,
+                6
+              ]
+            }
+          },
+          "born": 2699,
+          "age": 1200,
+          "diameter": 200,
+          "hp": 1262.745188,
+          "attackProgress": 1,
+          "bonus": {
+            "elements": {
+              "fire": 38.110853,
+              "ice": 53.403841,
+              "electric": 52.935115,
+              "dark": 44.291908
+            },
+            "hp": 874.911944,
+            "regen": 0.844687
+          },
+          "lineage": [
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89
+          ],
+          "enemyOrigins": [],
+          "rangeFactor": 2,
+          "mergePolicy": "quarter-v1",
+          "targetPolicy": "presence-nearest-v1",
+          "lastShot": {
+            "tick": 3182,
+            "x": 1307.299017,
+            "y": 2435.195314,
+            "target": 17,
+            "damage": 18.124568
+          }
+        }
+      ],
+      "hand": [
+        {
+          "kind": "plant",
+          "id": 72,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 72,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "attack",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 123.968663,
+              "hpReg": 0.089909,
+              "presenceHalo": 3.751689,
+              "elements": {
+                "fire": 22.792737,
+                "ice": 19.166943,
+                "electric": 23.61224,
+                "dark": 30.428079
+              }
+            },
+            "fixed": {
+              "hp": 123.968663,
+              "hpReg": 0.089909,
+              "presenceHalo": 3.751689,
+              "elements": {
+                "fire": 23.476519,
+                "ice": 20.700298,
+                "electric": 24.320607,
+                "dark": 32.558045
+              }
+            },
+            "entry": {
+              "tick": 3480,
+              "boosts": {
+                "fire": 1.03,
+                "ice": 1.08,
+                "electric": 1.03,
+                "dark": 1.07
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21,
+                24,
+                18,
+                23,
+                6,
+                7,
+                9,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 73,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 73,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "speed",
+              "ice": "attack",
+              "electric": "range",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 117.981398,
+              "hpReg": 0.150025,
+              "presenceHalo": 3.335261,
+              "elements": {
+                "fire": 22.114936,
+                "ice": 14.47119,
+                "electric": 31.430177,
+                "dark": 27.983697
+              }
+            },
+            "fixed": {
+              "hp": 117.981398,
+              "hpReg": 0.150025,
+              "presenceHalo": 3.335261,
+              "elements": {
+                "fire": 22.778384,
+                "ice": 15.628885,
+                "electric": 32.373082,
+                "dark": 29.942556
+              }
+            },
+            "entry": {
+              "tick": 3560,
+              "boosts": {
+                "fire": 1.03,
+                "ice": 1.08,
+                "electric": 1.03,
+                "dark": 1.07
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21,
+                24,
+                18,
+                23,
+                6,
+                7,
+                9,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 74,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 74,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 119.42931,
+              "hpReg": 0.087803,
+              "presenceHalo": 3.857725,
+              "elements": {
+                "fire": 31.752222,
+                "ice": 18.270792,
+                "electric": 14.823389,
+                "dark": 31.153597
+              }
+            },
+            "fixed": {
+              "hp": 119.42931,
+              "hpReg": 0.087803,
+              "presenceHalo": 3.857725,
+              "elements": {
+                "fire": 32.704789,
+                "ice": 19.732455,
+                "electric": 15.268091,
+                "dark": 33.334349
+              }
+            },
+            "entry": {
+              "tick": 3640,
+              "boosts": {
+                "fire": 1.03,
+                "ice": 1.08,
+                "electric": 1.03,
+                "dark": 1.07
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21,
+                24,
+                18,
+                23,
+                6,
+                7,
+                9,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 75,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 75,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "range",
+              "electric": "speed",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 115.268061,
+              "hpReg": 0.138604,
+              "presenceHalo": 3.256132,
+              "elements": {
+                "fire": 33.171941,
+                "ice": 14.755328,
+                "electric": 22.381884,
+                "dark": 25.690847
+              }
+            },
+            "fixed": {
+              "hp": 115.268061,
+              "hpReg": 0.138604,
+              "presenceHalo": 3.256132,
+              "elements": {
+                "fire": 34.167099,
+                "ice": 15.935754,
+                "electric": 23.053341,
+                "dark": 27.489206
+              }
+            },
+            "entry": {
+              "tick": 3720,
+              "boosts": {
+                "fire": 1.03,
+                "ice": 1.08,
+                "electric": 1.03,
+                "dark": 1.07
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21,
+                24,
+                18,
+                23,
+                6,
+                7,
+                9,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 76,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 76,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "speed",
+              "ice": "range",
+              "electric": "attack",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 99.811681,
+              "hpReg": 0.158366,
+              "presenceHalo": 2.875047,
+              "elements": {
+                "fire": 25.009253,
+                "ice": 24.906265,
+                "electric": 17.218672,
+                "dark": 28.86581
+              }
+            },
+            "fixed": {
+              "hp": 99.811681,
+              "hpReg": 0.158366,
+              "presenceHalo": 2.875047,
+              "elements": {
+                "fire": 25.759531,
+                "ice": 26.898766,
+                "electric": 17.735232,
+                "dark": 30.886417
+              }
+            },
+            "entry": {
+              "tick": 3800,
+              "boosts": {
+                "fire": 1.03,
+                "ice": 1.08,
+                "electric": 1.03,
+                "dark": 1.07
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21,
+                24,
+                18,
+                23,
+                6,
+                7,
+                9,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 77,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 77,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "speed",
+              "ice": "range",
+              "electric": "defense",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 102.632698,
+              "hpReg": 0.155522,
+              "presenceHalo": 3.77352,
+              "elements": {
+                "fire": 22.975116,
+                "ice": 17.205893,
+                "electric": 32.49109,
+                "dark": 23.327901
+              }
+            },
+            "fixed": {
+              "hp": 102.632698,
+              "hpReg": 0.155522,
+              "presenceHalo": 3.77352,
+              "elements": {
+                "fire": 23.664369,
+                "ice": 18.582364,
+                "electric": 33.465823,
+                "dark": 24.960854
+              }
+            },
+            "entry": {
+              "tick": 3880,
+              "boosts": {
+                "fire": 1.03,
+                "ice": 1.08,
+                "electric": 1.03,
+                "dark": 1.07
+              },
+              "rewardIds": [
+                1,
+                3,
+                5,
+                8,
+                13,
+                2,
+                4,
+                10,
+                11,
+                14,
+                16,
+                20,
+                22,
+                21,
+                24,
+                18,
+                23,
+                6,
+                7,
+                9,
+                17
+              ]
+            }
+          }
+        }
+      ],
+      "charges": 1,
+      "drawProgress": 0,
+      "turnProgress": 0.725,
+      "player": {
+        "boosts": {
+          "fire": 1.03,
+          "ice": 1.09,
+          "electric": 1.03,
+          "dark": 1.07
+        },
+        "drowHeist": 1,
+        "turnHeist": 1,
+        "rewards": [
+          {
+            "id": 1,
+            "tick": 57,
+            "species": "ice",
+            "elements": {
+              "fire": 23.772264,
+              "ice": 36.607339,
+              "electric": 27.699792,
+              "dark": 34.896605
+            },
+            "enemyOrigins": [
+              1
+            ]
+          },
+          {
+            "id": 3,
+            "tick": 152,
+            "species": "dark",
+            "elements": {
+              "fire": 31.620614,
+              "ice": 25.936814,
+              "electric": 46.24181,
+              "dark": 46.536762
+            },
+            "enemyOrigins": [
+              3
+            ]
+          },
+          {
+            "id": 5,
+            "tick": 162,
+            "species": "dark",
+            "elements": {
+              "fire": 32.491762,
+              "ice": 33.032487,
+              "electric": 37.500765,
+              "dark": 50.190986
+            },
+            "enemyOrigins": [
+              5
+            ]
+          },
+          {
+            "id": 8,
+            "tick": 193,
+            "species": "fire",
+            "elements": {
+              "fire": 49.254697,
+              "ice": 23.088556,
+              "electric": 47.121175,
+              "dark": 42.679572
+            },
+            "enemyOrigins": [
+              8
+            ]
+          },
+          {
+            "id": 13,
+            "tick": 215,
+            "species": "ice",
+            "elements": {
+              "fire": 50.53174,
+              "ice": 55.645688,
+              "electric": 35.699757,
+              "dark": 26.602815
+            },
+            "enemyOrigins": [
+              13
+            ]
+          },
+          {
+            "id": 2,
+            "tick": 221,
+            "species": "electric",
+            "elements": {
+              "fire": 40.020545,
+              "ice": 35.899813,
+              "electric": 58.6128,
+              "dark": 39.514843
+            },
+            "enemyOrigins": [
+              2
+            ]
+          },
+          {
+            "id": 4,
+            "tick": 335,
+            "species": "dark",
+            "elements": {
+              "fire": 50.876173,
+              "ice": 44.582847,
+              "electric": 40.36307,
+              "dark": 71.05791
+            },
+            "enemyOrigins": [
+              4
+            ]
+          },
+          {
+            "id": 10,
+            "tick": 556,
+            "species": "ice",
+            "elements": {
+              "fire": 65.389495,
+              "ice": 87.623476,
+              "electric": 51.482363,
+              "dark": 62.192667
+            },
+            "enemyOrigins": [
+              10
+            ]
+          },
+          {
+            "id": 11,
+            "tick": 609,
+            "species": "dark",
+            "elements": {
+              "fire": 45.363332,
+              "ice": 83.163214,
+              "electric": 62.431098,
+              "dark": 96.082355
+            },
+            "enemyOrigins": [
+              11
+            ]
+          },
+          {
+            "id": 14,
+            "tick": 781,
+            "species": "ice",
+            "elements": {
+              "fire": 78.866157,
+              "ice": 83.613072,
+              "electric": 41.726042,
+              "dark": 82.834727
+            },
+            "enemyOrigins": [
+              14
+            ]
+          },
+          {
+            "id": 16,
+            "tick": 946,
+            "species": "electric",
+            "elements": {
+              "fire": 69.67861,
+              "ice": 73.910531,
+              "electric": 84.129729,
+              "dark": 59.321131
+            },
+            "enemyOrigins": [
+              16
+            ]
+          },
+          {
+            "id": 20,
+            "tick": 986,
+            "species": "ice",
+            "elements": {
+              "fire": 49.334127,
+              "ice": 115.879525,
+              "electric": 52.09669,
+              "dark": 69.729658
+            },
+            "enemyOrigins": [
+              20
+            ]
+          },
+          {
+            "id": 22,
+            "tick": 1154,
+            "species": "fire",
+            "elements": {
+              "fire": 87.899748,
+              "ice": 63.137836,
+              "electric": 73.185805,
+              "dark": 62.816611
+            },
+            "enemyOrigins": [
+              22
+            ]
+          },
+          {
+            "id": 21,
+            "tick": 1379,
+            "species": "electric",
+            "elements": {
+              "fire": 56.547329,
+              "ice": 87.839452,
+              "electric": 90.65024,
+              "dark": 52.00298
+            },
+            "enemyOrigins": [
+              21
+            ]
+          },
+          {
+            "id": 24,
+            "tick": 1495,
+            "species": "ice",
+            "elements": {
+              "fire": 80.01658,
+              "ice": 83.35879,
+              "electric": 63.650495,
+              "dark": 60.014132
+            },
+            "enemyOrigins": [
+              24
+            ]
+          },
+          {
+            "id": 18,
+            "tick": 1714,
+            "species": "dark",
+            "elements": {
+              "fire": 97.632461,
+              "ice": 71.886923,
+              "electric": 69.321964,
+              "dark": 133.504917
+            },
+            "enemyOrigins": [
+              18,
+              19
+            ]
+          },
+          {
+            "id": 23,
+            "tick": 1782,
+            "species": "ice",
+            "elements": {
+              "fire": 61.088905,
+              "ice": 85.869915,
+              "electric": 81.551517,
+              "dark": 58.52966
+            },
+            "enemyOrigins": [
+              23
+            ]
+          },
+          {
+            "id": 6,
+            "tick": 2171,
+            "species": "ice",
+            "elements": {
+              "fire": 74.346796,
+              "ice": 84.503547,
+              "electric": 67.130302,
+              "dark": 61.059355
+            },
+            "enemyOrigins": [
+              6
+            ]
+          },
+          {
+            "id": 7,
+            "tick": 2699,
+            "species": "fire",
+            "elements": {
+              "fire": 90.773987,
+              "ice": 65.515035,
+              "electric": 62.066411,
+              "dark": 68.684567
+            },
+            "enemyOrigins": [
+              7
+            ]
+          },
+          {
+            "id": 9,
+            "tick": 2801,
+            "species": "dark",
+            "elements": {
+              "fire": 81.578726,
+              "ice": 97.341713,
+              "electric": 92.920879,
+              "dark": 117.135778
+            },
+            "enemyOrigins": [
+              9,
+              12
+            ]
+          },
+          {
+            "id": 17,
+            "tick": 3182,
+            "species": "dark",
+            "elements": {
+              "fire": 63.215399,
+              "ice": 49.165087,
+              "electric": 86.706938,
+              "dark": 87.952572
+            },
+            "enemyOrigins": [
+              17
+            ]
+          },
+          {
+            "id": 15,
+            "tick": 3899,
+            "species": "ice",
+            "elements": {
+              "fire": 46.444848,
+              "ice": 112.927247,
+              "electric": 63.68897,
+              "dark": 63.978935
+            },
+            "enemyOrigins": [
+              15
+            ]
+          }
+        ]
+      },
+      "merges": 65,
+      "outcome": "win",
+      "events": [
+        {
+          "tick": 3899,
+          "kind": "win",
+          "text": "攻略完了。"
+        },
+        {
+          "tick": 3899,
+          "kind": "kill",
+          "text": "ice主体の敵を攻略 · 次の手札の同属性 ×1.09"
+        },
+        {
+          "tick": 3880,
+          "kind": "draw",
+          "text": "芽 #78 が手札へ。能力はこの時点で確定。"
+        },
+        {
+          "tick": 3841,
+          "kind": "merge",
+          "text": "味方 #27 が #99 を吸収 · 直径 213.2"
+        },
+        {
+          "tick": 3840,
+          "kind": "place",
+          "text": "芽 #72 を配置。次の札はドロー時計で補充します。"
+        },
+        {
+          "tick": 3840,
+          "kind": "charge",
+          "text": "配置力＋1。"
+        },
+        {
+          "tick": 3800,
+          "kind": "draw",
+          "text": "芽 #77 が手札へ。能力はこの時点で確定。"
+        },
+        {
+          "tick": 3761,
+          "kind": "merge",
+          "text": "味方 #27 が #98 を吸収 · 直径 213.0"
+        }
+      ],
+      "enemyLayout": "spaced-pockets-v1",
+      "rangeFactor": 2,
+      "mergePolicy": "quarter-v1",
+      "targetPolicy": "presence-nearest-v1"
+    },
+    "view": {
+      "x": 2048,
+      "y": 1536,
+      "zoom": 1
+    },
+    "speed": 1,
+    "checksum": "37918148"
+  },
+  "lastWallMs": 2196.3708999999994,
+  "finalActionReplayExact": true
+}

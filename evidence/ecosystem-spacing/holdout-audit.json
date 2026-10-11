@@ -1,0 +1,5816 @@
+{
+  "geometryOnly": true,
+  "resourcesIgnoredForGeometry": true,
+  "noLegalPlacementAfterVictory": true,
+  "gridIsNotExactArea": true,
+  "rows": [
+    {
+      "dir": "holdout-quarter",
+      "seed": 103,
+      "layout": "legacy",
+      "outcome": "win",
+      "gameSeconds": 490.4,
+      "firstAllyShotSeconds": 1,
+      "firstEnemyMergeSeconds": 45.9,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 5.7,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 6,
+      "firstAfterMergeNewFront": {
+        "tick": 560,
+        "card": 17,
+        "x": 3401.803145354986,
+        "y": 2047.2747816450142,
+        "kind": "nurture",
+        "target": 20,
+        "incoming": [],
+        "initialRange": 69.057502,
+        "futureRange": 192.973768
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 3,
+        "staging-merge-needed": 6,
+        "merge-support": 66
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 764,
+        "outsideEnemyCurrentRange": 718,
+        "enemyBlocked": 4
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 751,
+        "outsideEnemyCurrentRange": 768,
+        "enemyBlocked": 0
+      },
+      "minLegalGeometry": 704,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 764,
+          "outsideEnemyCurrentRange": 718,
+          "enemyBlocked": 4
+        },
+        {
+          "tick": 50,
+          "kills": 0,
+          "gridPoints": 768,
+          "legalGeometry": 763,
+          "outsideEnemyCurrentRange": 710,
+          "enemyBlocked": 5
+        },
+        {
+          "tick": 57,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 710,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 100,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 757,
+          "outsideEnemyCurrentRange": 703,
+          "enemyBlocked": 11
+        },
+        {
+          "tick": 102,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 757,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 11
+        },
+        {
+          "tick": 150,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 747,
+          "outsideEnemyCurrentRange": 695,
+          "enemyBlocked": 20
+        },
+        {
+          "tick": 162,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 741,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 190,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 692,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 197,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 27
+        },
+        {
+          "tick": 200,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 27
+        },
+        {
+          "tick": 215,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 250,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 732,
+          "outsideEnemyCurrentRange": 691,
+          "enemyBlocked": 34
+        },
+        {
+          "tick": 300,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 725,
+          "outsideEnemyCurrentRange": 686,
+          "enemyBlocked": 41
+        },
+        {
+          "tick": 302,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 726,
+          "outsideEnemyCurrentRange": 693,
+          "enemyBlocked": 40
+        },
+        {
+          "tick": 305,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 727,
+          "outsideEnemyCurrentRange": 698,
+          "enemyBlocked": 39
+        },
+        {
+          "tick": 350,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 723,
+          "outsideEnemyCurrentRange": 691,
+          "enemyBlocked": 40
+        },
+        {
+          "tick": 400,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 715,
+          "outsideEnemyCurrentRange": 682,
+          "enemyBlocked": 48
+        },
+        {
+          "tick": 450,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 713,
+          "outsideEnemyCurrentRange": 668,
+          "enemyBlocked": 49
+        },
+        {
+          "tick": 500,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 710,
+          "outsideEnemyCurrentRange": 647,
+          "enemyBlocked": 53
+        },
+        {
+          "tick": 548,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 704,
+          "outsideEnemyCurrentRange": 605,
+          "enemyBlocked": 61
+        },
+        {
+          "tick": 550,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 704,
+          "outsideEnemyCurrentRange": 605,
+          "enemyBlocked": 61
+        },
+        {
+          "tick": 600,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 704,
+          "outsideEnemyCurrentRange": 605,
+          "enemyBlocked": 61
+        },
+        {
+          "tick": 835,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 708,
+          "outsideEnemyCurrentRange": 605,
+          "enemyBlocked": 56
+        },
+        {
+          "tick": 1221,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 713,
+          "outsideEnemyCurrentRange": 607,
+          "enemyBlocked": 48
+        },
+        {
+          "tick": 1646,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 718,
+          "outsideEnemyCurrentRange": 610,
+          "enemyBlocked": 41
+        },
+        {
+          "tick": 2719,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 724,
+          "outsideEnemyCurrentRange": 666,
+          "enemyBlocked": 31
+        },
+        {
+          "tick": 3543,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 737,
+          "outsideEnemyCurrentRange": 703,
+          "enemyBlocked": 16
+        },
+        {
+          "tick": 4904,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 751,
+          "outsideEnemyCurrentRange": 768,
+          "enemyBlocked": 0
+        }
+      ],
+      "actions": 78,
+      "dead": 4,
+      "saveChecks": 98,
+      "maxSaveBytes": 26866,
+      "exactActionReplay": true,
+      "plannerStalled": false,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "attack",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 103.151015,
+              "hpReg": 0.087053,
+              "presenceHalo": 3.472676,
+              "elements": {
+                "fire": 18.854458,
+                "ice": 23.765386,
+                "electric": 23.939363,
+                "dark": 29.440793
+              }
+            },
+            "fixed": {
+              "hp": 103.151015,
+              "hpReg": 0.087053,
+              "presenceHalo": 3.472676,
+              "elements": {
+                "fire": 18.854458,
+                "ice": 23.765386,
+                "electric": 23.939363,
+                "dark": 29.440793
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "defense",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 105.879133,
+              "hpReg": 0.082991,
+              "presenceHalo": 3.921673,
+              "elements": {
+                "fire": 27.605998,
+                "ice": 19.093356,
+                "electric": 25.322757,
+                "dark": 23.977888
+              }
+            },
+            "fixed": {
+              "hp": 105.879133,
+              "hpReg": 0.082991,
+              "presenceHalo": 3.921673,
+              "elements": {
+                "fire": 27.605998,
+                "ice": 19.093356,
+                "electric": 25.322757,
+                "dark": 23.977888
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "attack",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 98.214369,
+              "hpReg": 0.132199,
+              "presenceHalo": 3.158352,
+              "elements": {
+                "fire": 23.197417,
+                "ice": 20.058194,
+                "electric": 28.455825,
+                "dark": 24.288564
+              }
+            },
+            "fixed": {
+              "hp": 98.214369,
+              "hpReg": 0.132199,
+              "presenceHalo": 3.158352,
+              "elements": {
+                "fire": 23.197417,
+                "ice": 20.058194,
+                "electric": 28.455825,
+                "dark": 24.288564
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "speed",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 126.147565,
+              "hpReg": 0.105633,
+              "presenceHalo": 3.135698,
+              "elements": {
+                "fire": 28.834431,
+                "ice": 17.381869,
+                "electric": 27.285161,
+                "dark": 22.49854
+              }
+            },
+            "fixed": {
+              "hp": 126.147565,
+              "hpReg": 0.105633,
+              "presenceHalo": 3.135698,
+              "elements": {
+                "fire": 28.834431,
+                "ice": 17.381869,
+                "electric": 27.285161,
+                "dark": 22.49854
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-quarter",
+      "seed": 103,
+      "layout": "pockets",
+      "outcome": "win",
+      "gameSeconds": 389.9,
+      "firstAllyShotSeconds": 1,
+      "firstEnemyMergeSeconds": 48.9,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 5.7,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 11,
+      "firstAfterMergeNewFront": {
+        "tick": 609,
+        "card": 18,
+        "x": 934.2990307770538,
+        "y": 2148.197515428146,
+        "kind": "nurture",
+        "target": 14,
+        "incoming": [],
+        "initialRange": 38.946516,
+        "futureRange": 108.831856
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 8,
+        "staging-merge-needed": 6,
+        "merge-support": 55
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 765,
+        "outsideEnemyCurrentRange": 711,
+        "enemyBlocked": 3
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 747,
+        "outsideEnemyCurrentRange": 768,
+        "enemyBlocked": 0
+      },
+      "minLegalGeometry": 687,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 765,
+          "outsideEnemyCurrentRange": 711,
+          "enemyBlocked": 3
+        },
+        {
+          "tick": 50,
+          "kills": 0,
+          "gridPoints": 768,
+          "legalGeometry": 763,
+          "outsideEnemyCurrentRange": 697,
+          "enemyBlocked": 5
+        },
+        {
+          "tick": 57,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 762,
+          "outsideEnemyCurrentRange": 699,
+          "enemyBlocked": 6
+        },
+        {
+          "tick": 100,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 758,
+          "outsideEnemyCurrentRange": 691,
+          "enemyBlocked": 10
+        },
+        {
+          "tick": 150,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 749,
+          "outsideEnemyCurrentRange": 681,
+          "enemyBlocked": 19
+        },
+        {
+          "tick": 152,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 749,
+          "outsideEnemyCurrentRange": 685,
+          "enemyBlocked": 19
+        },
+        {
+          "tick": 162,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 747,
+          "outsideEnemyCurrentRange": 685,
+          "enemyBlocked": 21
+        },
+        {
+          "tick": 193,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 741,
+          "outsideEnemyCurrentRange": 679,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 200,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 679,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 215,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 681,
+          "enemyBlocked": 29
+        },
+        {
+          "tick": 221,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 685,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 250,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 734,
+          "outsideEnemyCurrentRange": 678,
+          "enemyBlocked": 33
+        },
+        {
+          "tick": 300,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 720,
+          "outsideEnemyCurrentRange": 666,
+          "enemyBlocked": 47
+        },
+        {
+          "tick": 335,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 714,
+          "outsideEnemyCurrentRange": 666,
+          "enemyBlocked": 51
+        },
+        {
+          "tick": 350,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 709,
+          "outsideEnemyCurrentRange": 661,
+          "enemyBlocked": 55
+        },
+        {
+          "tick": 400,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 701,
+          "outsideEnemyCurrentRange": 653,
+          "enemyBlocked": 62
+        },
+        {
+          "tick": 450,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 695,
+          "outsideEnemyCurrentRange": 643,
+          "enemyBlocked": 67
+        },
+        {
+          "tick": 500,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 690,
+          "outsideEnemyCurrentRange": 631,
+          "enemyBlocked": 71
+        },
+        {
+          "tick": 550,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 687,
+          "outsideEnemyCurrentRange": 625,
+          "enemyBlocked": 74
+        },
+        {
+          "tick": 556,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 689,
+          "outsideEnemyCurrentRange": 637,
+          "enemyBlocked": 72
+        },
+        {
+          "tick": 600,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 687,
+          "outsideEnemyCurrentRange": 632,
+          "enemyBlocked": 75
+        },
+        {
+          "tick": 609,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 692,
+          "outsideEnemyCurrentRange": 633,
+          "enemyBlocked": 69
+        },
+        {
+          "tick": 781,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 695,
+          "outsideEnemyCurrentRange": 632,
+          "enemyBlocked": 66
+        },
+        {
+          "tick": 946,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 699,
+          "outsideEnemyCurrentRange": 639,
+          "enemyBlocked": 61
+        },
+        {
+          "tick": 986,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 703,
+          "outsideEnemyCurrentRange": 641,
+          "enemyBlocked": 57
+        },
+        {
+          "tick": 1154,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 706,
+          "outsideEnemyCurrentRange": 646,
+          "enemyBlocked": 52
+        },
+        {
+          "tick": 1379,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 709,
+          "outsideEnemyCurrentRange": 647,
+          "enemyBlocked": 49
+        },
+        {
+          "tick": 1495,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 713,
+          "outsideEnemyCurrentRange": 650,
+          "enemyBlocked": 43
+        },
+        {
+          "tick": 1714,
+          "kills": 16,
+          "gridPoints": 768,
+          "legalGeometry": 720,
+          "outsideEnemyCurrentRange": 662,
+          "enemyBlocked": 36
+        },
+        {
+          "tick": 1782,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 724,
+          "outsideEnemyCurrentRange": 682,
+          "enemyBlocked": 30
+        },
+        {
+          "tick": 2171,
+          "kills": 18,
+          "gridPoints": 768,
+          "legalGeometry": 725,
+          "outsideEnemyCurrentRange": 685,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 2699,
+          "kills": 19,
+          "gridPoints": 768,
+          "legalGeometry": 729,
+          "outsideEnemyCurrentRange": 697,
+          "enemyBlocked": 20
+        },
+        {
+          "tick": 2801,
+          "kills": 20,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 726,
+          "enemyBlocked": 11
+        },
+        {
+          "tick": 3182,
+          "kills": 21,
+          "gridPoints": 768,
+          "legalGeometry": 741,
+          "outsideEnemyCurrentRange": 730,
+          "enemyBlocked": 6
+        },
+        {
+          "tick": 3899,
+          "kills": 22,
+          "gridPoints": 768,
+          "legalGeometry": 747,
+          "outsideEnemyCurrentRange": 768,
+          "enemyBlocked": 0
+        }
+      ],
+      "actions": 72,
+      "dead": 2,
+      "saveChecks": 97,
+      "maxSaveBytes": 26900,
+      "exactActionReplay": true,
+      "plannerStalled": false,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "attack",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 103.151015,
+              "hpReg": 0.087053,
+              "presenceHalo": 3.472676,
+              "elements": {
+                "fire": 18.854458,
+                "ice": 23.765386,
+                "electric": 23.939363,
+                "dark": 29.440793
+              }
+            },
+            "fixed": {
+              "hp": 103.151015,
+              "hpReg": 0.087053,
+              "presenceHalo": 3.472676,
+              "elements": {
+                "fire": 18.854458,
+                "ice": 23.765386,
+                "electric": 23.939363,
+                "dark": 29.440793
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "defense",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 105.879133,
+              "hpReg": 0.082991,
+              "presenceHalo": 3.921673,
+              "elements": {
+                "fire": 27.605998,
+                "ice": 19.093356,
+                "electric": 25.322757,
+                "dark": 23.977888
+              }
+            },
+            "fixed": {
+              "hp": 105.879133,
+              "hpReg": 0.082991,
+              "presenceHalo": 3.921673,
+              "elements": {
+                "fire": 27.605998,
+                "ice": 19.093356,
+                "electric": 25.322757,
+                "dark": 23.977888
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "attack",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 98.214369,
+              "hpReg": 0.132199,
+              "presenceHalo": 3.158352,
+              "elements": {
+                "fire": 23.197417,
+                "ice": 20.058194,
+                "electric": 28.455825,
+                "dark": 24.288564
+              }
+            },
+            "fixed": {
+              "hp": 98.214369,
+              "hpReg": 0.132199,
+              "presenceHalo": 3.158352,
+              "elements": {
+                "fire": 23.197417,
+                "ice": 20.058194,
+                "electric": 28.455825,
+                "dark": 24.288564
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "speed",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 126.147565,
+              "hpReg": 0.105633,
+              "presenceHalo": 3.135698,
+              "elements": {
+                "fire": 28.834431,
+                "ice": 17.381869,
+                "electric": 27.285161,
+                "dark": 22.49854
+              }
+            },
+            "fixed": {
+              "hp": 126.147565,
+              "hpReg": 0.105633,
+              "presenceHalo": 3.135698,
+              "elements": {
+                "fire": 28.834431,
+                "ice": 17.381869,
+                "electric": 27.285161,
+                "dark": 22.49854
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-quarter",
+      "seed": 509,
+      "layout": "legacy",
+      "outcome": "win",
+      "gameSeconds": 510.9,
+      "firstAllyShotSeconds": 0.9,
+      "firstEnemyMergeSeconds": 47.2,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.3,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 6,
+      "firstAfterMergeNewFront": {
+        "tick": 520,
+        "card": 16,
+        "x": 2594.530001,
+        "y": 2542.941878,
+        "kind": "staging-merge-needed",
+        "target": 23,
+        "incoming": [],
+        "initialRange": 56.893102,
+        "futureRange": 158.98166
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 0,
+        "staging-merge-needed": 9,
+        "merge-support": 67
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 765,
+        "outsideEnemyCurrentRange": 717,
+        "enemyBlocked": 3
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 754,
+        "outsideEnemyCurrentRange": 768,
+        "enemyBlocked": 0
+      },
+      "minLegalGeometry": 703,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 765,
+          "outsideEnemyCurrentRange": 717,
+          "enemyBlocked": 3
+        },
+        {
+          "tick": 43,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 715,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 50,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 760,
+          "outsideEnemyCurrentRange": 714,
+          "enemyBlocked": 8
+        },
+        {
+          "tick": 93,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 752,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 16
+        },
+        {
+          "tick": 100,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 752,
+          "outsideEnemyCurrentRange": 705,
+          "enemyBlocked": 16
+        },
+        {
+          "tick": 105,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 752,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 16
+        },
+        {
+          "tick": 150,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 749,
+          "outsideEnemyCurrentRange": 702,
+          "enemyBlocked": 19
+        },
+        {
+          "tick": 200,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 695,
+          "enemyBlocked": 30
+        },
+        {
+          "tick": 232,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 732,
+          "outsideEnemyCurrentRange": 690,
+          "enemyBlocked": 35
+        },
+        {
+          "tick": 250,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 730,
+          "outsideEnemyCurrentRange": 685,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 276,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 730,
+          "outsideEnemyCurrentRange": 683,
+          "enemyBlocked": 36
+        },
+        {
+          "tick": 300,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 723,
+          "outsideEnemyCurrentRange": 680,
+          "enemyBlocked": 43
+        },
+        {
+          "tick": 350,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 715,
+          "outsideEnemyCurrentRange": 675,
+          "enemyBlocked": 51
+        },
+        {
+          "tick": 392,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 713,
+          "outsideEnemyCurrentRange": 674,
+          "enemyBlocked": 53
+        },
+        {
+          "tick": 400,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 713,
+          "outsideEnemyCurrentRange": 673,
+          "enemyBlocked": 53
+        },
+        {
+          "tick": 450,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 707,
+          "outsideEnemyCurrentRange": 662,
+          "enemyBlocked": 58
+        },
+        {
+          "tick": 460,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 710,
+          "outsideEnemyCurrentRange": 672,
+          "enemyBlocked": 54
+        },
+        {
+          "tick": 484,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 707,
+          "outsideEnemyCurrentRange": 654,
+          "enemyBlocked": 57
+        },
+        {
+          "tick": 492,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 708,
+          "outsideEnemyCurrentRange": 655,
+          "enemyBlocked": 56
+        },
+        {
+          "tick": 500,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 707,
+          "outsideEnemyCurrentRange": 640,
+          "enemyBlocked": 57
+        },
+        {
+          "tick": 550,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 703,
+          "outsideEnemyCurrentRange": 623,
+          "enemyBlocked": 61
+        },
+        {
+          "tick": 600,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 703,
+          "outsideEnemyCurrentRange": 617,
+          "enemyBlocked": 63
+        },
+        {
+          "tick": 1045,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 708,
+          "outsideEnemyCurrentRange": 632,
+          "enemyBlocked": 57
+        },
+        {
+          "tick": 1957,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 714,
+          "outsideEnemyCurrentRange": 651,
+          "enemyBlocked": 46
+        },
+        {
+          "tick": 2718,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 726,
+          "outsideEnemyCurrentRange": 681,
+          "enemyBlocked": 32
+        },
+        {
+          "tick": 3882,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 723,
+          "enemyBlocked": 17
+        },
+        {
+          "tick": 5109,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 754,
+          "outsideEnemyCurrentRange": 768,
+          "enemyBlocked": 0
+        }
+      ],
+      "actions": 79,
+      "dead": 5,
+      "saveChecks": 98,
+      "maxSaveBytes": 26960,
+      "exactActionReplay": true,
+      "plannerStalled": false,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "speed",
+              "electric": "attack",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 126.846207,
+              "hpReg": 0.158214,
+              "presenceHalo": 3.854157,
+              "elements": {
+                "fire": 21.826533,
+                "ice": 24.308963,
+                "electric": 17.347996,
+                "dark": 32.516508
+              }
+            },
+            "fixed": {
+              "hp": 126.846207,
+              "hpReg": 0.158214,
+              "presenceHalo": 3.854157,
+              "elements": {
+                "fire": 21.826533,
+                "ice": 24.308963,
+                "electric": 17.347996,
+                "dark": 32.516508
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 98.844137,
+              "hpReg": 0.152779,
+              "presenceHalo": 3.085053,
+              "elements": {
+                "fire": 23.549984,
+                "ice": 16.448197,
+                "electric": 25.678003,
+                "dark": 30.323815
+              }
+            },
+            "fixed": {
+              "hp": 98.844137,
+              "hpReg": 0.152779,
+              "presenceHalo": 3.085053,
+              "elements": {
+                "fire": 23.549984,
+                "ice": 16.448197,
+                "electric": 25.678003,
+                "dark": 30.323815
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "defense",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 104.0607,
+              "hpReg": 0.157967,
+              "presenceHalo": 2.88062,
+              "elements": {
+                "fire": 16.830464,
+                "ice": 22.756385,
+                "electric": 27.141875,
+                "dark": 29.271276
+              }
+            },
+            "fixed": {
+              "hp": 104.0607,
+              "hpReg": 0.157967,
+              "presenceHalo": 2.88062,
+              "elements": {
+                "fire": 16.830464,
+                "ice": 22.756385,
+                "electric": 27.141875,
+                "dark": 29.271276
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "speed",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 101.26443,
+              "hpReg": 0.149717,
+              "presenceHalo": 3.752632,
+              "elements": {
+                "fire": 23.626202,
+                "ice": 26.391972,
+                "electric": 15.504649,
+                "dark": 30.477177
+              }
+            },
+            "fixed": {
+              "hp": 101.26443,
+              "hpReg": 0.149717,
+              "presenceHalo": 3.752632,
+              "elements": {
+                "fire": 23.626202,
+                "ice": 26.391972,
+                "electric": 15.504649,
+                "dark": 30.477177
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-quarter",
+      "seed": 509,
+      "layout": "pockets",
+      "outcome": "win",
+      "gameSeconds": 409.2,
+      "firstAllyShotSeconds": 0.9,
+      "firstEnemyMergeSeconds": 49.9,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.3,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 5,
+      "firstAfterMergeNewFront": {
+        "tick": 520,
+        "card": 16,
+        "x": 2594.530001,
+        "y": 2620.003307,
+        "kind": "staging-merge-needed",
+        "target": 23,
+        "incoming": [],
+        "initialRange": 55.799004,
+        "futureRange": 155.92432
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 1,
+        "staging-merge-needed": 7,
+        "merge-support": 59
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 766,
+        "outsideEnemyCurrentRange": 713,
+        "enemyBlocked": 2
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 753,
+        "outsideEnemyCurrentRange": 768,
+        "enemyBlocked": 0
+      },
+      "minLegalGeometry": 692,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 766,
+          "outsideEnemyCurrentRange": 713,
+          "enemyBlocked": 2
+        },
+        {
+          "tick": 43,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 760,
+          "outsideEnemyCurrentRange": 705,
+          "enemyBlocked": 8
+        },
+        {
+          "tick": 50,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 758,
+          "outsideEnemyCurrentRange": 702,
+          "enemyBlocked": 10
+        },
+        {
+          "tick": 100,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 753,
+          "outsideEnemyCurrentRange": 693,
+          "enemyBlocked": 15
+        },
+        {
+          "tick": 114,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 751,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 17
+        },
+        {
+          "tick": 141,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 751,
+          "outsideEnemyCurrentRange": 689,
+          "enemyBlocked": 17
+        },
+        {
+          "tick": 150,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 749,
+          "outsideEnemyCurrentRange": 687,
+          "enemyBlocked": 19
+        },
+        {
+          "tick": 200,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 681,
+          "enemyBlocked": 30
+        },
+        {
+          "tick": 237,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 730,
+          "outsideEnemyCurrentRange": 674,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 249,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 730,
+          "outsideEnemyCurrentRange": 673,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 250,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 730,
+          "outsideEnemyCurrentRange": 673,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 300,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 716,
+          "outsideEnemyCurrentRange": 667,
+          "enemyBlocked": 50
+        },
+        {
+          "tick": 319,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 716,
+          "outsideEnemyCurrentRange": 672,
+          "enemyBlocked": 50
+        },
+        {
+          "tick": 350,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 713,
+          "outsideEnemyCurrentRange": 666,
+          "enemyBlocked": 53
+        },
+        {
+          "tick": 400,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 702,
+          "outsideEnemyCurrentRange": 654,
+          "enemyBlocked": 62
+        },
+        {
+          "tick": 414,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 701,
+          "outsideEnemyCurrentRange": 662,
+          "enemyBlocked": 63
+        },
+        {
+          "tick": 450,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 696,
+          "outsideEnemyCurrentRange": 659,
+          "enemyBlocked": 67
+        },
+        {
+          "tick": 486,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 697,
+          "outsideEnemyCurrentRange": 654,
+          "enemyBlocked": 65
+        },
+        {
+          "tick": 500,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 695,
+          "outsideEnemyCurrentRange": 640,
+          "enemyBlocked": 67
+        },
+        {
+          "tick": 550,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 692,
+          "outsideEnemyCurrentRange": 631,
+          "enemyBlocked": 70
+        },
+        {
+          "tick": 572,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 699,
+          "outsideEnemyCurrentRange": 643,
+          "enemyBlocked": 64
+        },
+        {
+          "tick": 583,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 695,
+          "outsideEnemyCurrentRange": 626,
+          "enemyBlocked": 68
+        },
+        {
+          "tick": 584,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 700,
+          "outsideEnemyCurrentRange": 628,
+          "enemyBlocked": 63
+        },
+        {
+          "tick": 600,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 698,
+          "outsideEnemyCurrentRange": 627,
+          "enemyBlocked": 64
+        },
+        {
+          "tick": 660,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 704,
+          "outsideEnemyCurrentRange": 641,
+          "enemyBlocked": 57
+        },
+        {
+          "tick": 827,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 709,
+          "outsideEnemyCurrentRange": 647,
+          "enemyBlocked": 52
+        },
+        {
+          "tick": 1282,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 712,
+          "outsideEnemyCurrentRange": 652,
+          "enemyBlocked": 46
+        },
+        {
+          "tick": 1697,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 716,
+          "outsideEnemyCurrentRange": 668,
+          "enemyBlocked": 40
+        },
+        {
+          "tick": 2807,
+          "kills": 16,
+          "gridPoints": 768,
+          "legalGeometry": 729,
+          "outsideEnemyCurrentRange": 710,
+          "enemyBlocked": 25
+        },
+        {
+          "tick": 4092,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 753,
+          "outsideEnemyCurrentRange": 768,
+          "enemyBlocked": 0
+        }
+      ],
+      "actions": 70,
+      "dead": 2,
+      "saveChecks": 90,
+      "maxSaveBytes": 26996,
+      "exactActionReplay": true,
+      "plannerStalled": false,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "speed",
+              "electric": "attack",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 126.846207,
+              "hpReg": 0.158214,
+              "presenceHalo": 3.854157,
+              "elements": {
+                "fire": 21.826533,
+                "ice": 24.308963,
+                "electric": 17.347996,
+                "dark": 32.516508
+              }
+            },
+            "fixed": {
+              "hp": 126.846207,
+              "hpReg": 0.158214,
+              "presenceHalo": 3.854157,
+              "elements": {
+                "fire": 21.826533,
+                "ice": 24.308963,
+                "electric": 17.347996,
+                "dark": 32.516508
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 98.844137,
+              "hpReg": 0.152779,
+              "presenceHalo": 3.085053,
+              "elements": {
+                "fire": 23.549984,
+                "ice": 16.448197,
+                "electric": 25.678003,
+                "dark": 30.323815
+              }
+            },
+            "fixed": {
+              "hp": 98.844137,
+              "hpReg": 0.152779,
+              "presenceHalo": 3.085053,
+              "elements": {
+                "fire": 23.549984,
+                "ice": 16.448197,
+                "electric": 25.678003,
+                "dark": 30.323815
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "defense",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 104.0607,
+              "hpReg": 0.157967,
+              "presenceHalo": 2.88062,
+              "elements": {
+                "fire": 16.830464,
+                "ice": 22.756385,
+                "electric": 27.141875,
+                "dark": 29.271276
+              }
+            },
+            "fixed": {
+              "hp": 104.0607,
+              "hpReg": 0.157967,
+              "presenceHalo": 2.88062,
+              "elements": {
+                "fire": 16.830464,
+                "ice": 22.756385,
+                "electric": 27.141875,
+                "dark": 29.271276
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "speed",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 101.26443,
+              "hpReg": 0.149717,
+              "presenceHalo": 3.752632,
+              "elements": {
+                "fire": 23.626202,
+                "ice": 26.391972,
+                "electric": 15.504649,
+                "dark": 30.477177
+              }
+            },
+            "fixed": {
+              "hp": 101.26443,
+              "hpReg": 0.149717,
+              "presenceHalo": 3.752632,
+              "elements": {
+                "fire": 23.626202,
+                "ice": 26.391972,
+                "electric": 15.504649,
+                "dark": 30.477177
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-quarter",
+      "seed": 811,
+      "layout": "legacy",
+      "outcome": "win",
+      "gameSeconds": 596.1,
+      "firstAllyShotSeconds": 0.8,
+      "firstEnemyMergeSeconds": 49.7,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.9,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 5,
+      "firstAfterMergeNewFront": {
+        "tick": 531,
+        "card": 16,
+        "x": 2780.699118,
+        "y": 833.653165,
+        "kind": "staging-merge-needed",
+        "target": 8,
+        "incoming": [],
+        "initialRange": 38.772826,
+        "futureRange": 108.346496
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 0,
+        "staging-merge-needed": 8,
+        "merge-support": 78
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 766,
+        "outsideEnemyCurrentRange": 715,
+        "enemyBlocked": 2
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 750,
+        "outsideEnemyCurrentRange": 768,
+        "enemyBlocked": 0
+      },
+      "minLegalGeometry": 700,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 766,
+          "outsideEnemyCurrentRange": 715,
+          "enemyBlocked": 2
+        },
+        {
+          "tick": 49,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 759,
+          "outsideEnemyCurrentRange": 713,
+          "enemyBlocked": 9
+        },
+        {
+          "tick": 50,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 759,
+          "outsideEnemyCurrentRange": 712,
+          "enemyBlocked": 9
+        },
+        {
+          "tick": 100,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 755,
+          "outsideEnemyCurrentRange": 700,
+          "enemyBlocked": 13
+        },
+        {
+          "tick": 103,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 755,
+          "outsideEnemyCurrentRange": 702,
+          "enemyBlocked": 13
+        },
+        {
+          "tick": 146,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 748,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 20
+        },
+        {
+          "tick": 150,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 748,
+          "outsideEnemyCurrentRange": 693,
+          "enemyBlocked": 20
+        },
+        {
+          "tick": 200,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 737,
+          "outsideEnemyCurrentRange": 685,
+          "enemyBlocked": 30
+        },
+        {
+          "tick": 205,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 695,
+          "enemyBlocked": 29
+        },
+        {
+          "tick": 250,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 728,
+          "outsideEnemyCurrentRange": 690,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 293,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 722,
+          "outsideEnemyCurrentRange": 684,
+          "enemyBlocked": 43
+        },
+        {
+          "tick": 300,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 721,
+          "outsideEnemyCurrentRange": 683,
+          "enemyBlocked": 44
+        },
+        {
+          "tick": 350,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 716,
+          "outsideEnemyCurrentRange": 679,
+          "enemyBlocked": 49
+        },
+        {
+          "tick": 400,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 710,
+          "outsideEnemyCurrentRange": 664,
+          "enemyBlocked": 55
+        },
+        {
+          "tick": 404,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 714,
+          "outsideEnemyCurrentRange": 665,
+          "enemyBlocked": 51
+        },
+        {
+          "tick": 450,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 707,
+          "outsideEnemyCurrentRange": 658,
+          "enemyBlocked": 57
+        },
+        {
+          "tick": 469,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 711,
+          "outsideEnemyCurrentRange": 670,
+          "enemyBlocked": 53
+        },
+        {
+          "tick": 500,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 704,
+          "outsideEnemyCurrentRange": 623,
+          "enemyBlocked": 59
+        },
+        {
+          "tick": 531,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 704,
+          "outsideEnemyCurrentRange": 598,
+          "enemyBlocked": 59
+        },
+        {
+          "tick": 550,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 700,
+          "outsideEnemyCurrentRange": 598,
+          "enemyBlocked": 63
+        },
+        {
+          "tick": 600,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 700,
+          "outsideEnemyCurrentRange": 581,
+          "enemyBlocked": 63
+        },
+        {
+          "tick": 696,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 705,
+          "outsideEnemyCurrentRange": 591,
+          "enemyBlocked": 56
+        },
+        {
+          "tick": 1883,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 708,
+          "outsideEnemyCurrentRange": 614,
+          "enemyBlocked": 48
+        },
+        {
+          "tick": 2881,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 717,
+          "outsideEnemyCurrentRange": 619,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 4514,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 733,
+          "outsideEnemyCurrentRange": 696,
+          "enemyBlocked": 19
+        },
+        {
+          "tick": 5961,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 750,
+          "outsideEnemyCurrentRange": 768,
+          "enemyBlocked": 0
+        }
+      ],
+      "actions": 89,
+      "dead": 2,
+      "saveChecks": 108,
+      "maxSaveBytes": 26885,
+      "exactActionReplay": true,
+      "plannerStalled": false,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "defense",
+              "electric": "range",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 109.559338,
+              "hpReg": 0.076533,
+              "presenceHalo": 3.254452,
+              "elements": {
+                "fire": 27.600313,
+                "ice": 24.394151,
+                "electric": 29.098076,
+                "dark": 14.90746
+              }
+            },
+            "fixed": {
+              "hp": 109.559338,
+              "hpReg": 0.076533,
+              "presenceHalo": 3.254452,
+              "elements": {
+                "fire": 27.600313,
+                "ice": 24.394151,
+                "electric": 29.098076,
+                "dark": 14.90746
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "range",
+              "electric": "defense",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 105.394978,
+              "hpReg": 0.1434,
+              "presenceHalo": 3.447878,
+              "elements": {
+                "fire": 18.635016,
+                "ice": 26.050011,
+                "electric": 19.860955,
+                "dark": 31.454018
+              }
+            },
+            "fixed": {
+              "hp": 105.394978,
+              "hpReg": 0.1434,
+              "presenceHalo": 3.447878,
+              "elements": {
+                "fire": 18.635016,
+                "ice": 26.050011,
+                "electric": 19.860955,
+                "dark": 31.454018
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 139.880246,
+              "hpReg": 0.108943,
+              "presenceHalo": 3.994948,
+              "elements": {
+                "fire": 27.771132,
+                "ice": 26.96823,
+                "electric": 23.163486,
+                "dark": 18.097152
+              }
+            },
+            "fixed": {
+              "hp": 139.880246,
+              "hpReg": 0.108943,
+              "presenceHalo": 3.994948,
+              "elements": {
+                "fire": 27.771132,
+                "ice": 26.96823,
+                "electric": 23.163486,
+                "dark": 18.097152
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 115.324493,
+              "hpReg": 0.074125,
+              "presenceHalo": 2.861403,
+              "elements": {
+                "fire": 27.896923,
+                "ice": 21.818826,
+                "electric": 16.726783,
+                "dark": 29.557468
+              }
+            },
+            "fixed": {
+              "hp": 115.324493,
+              "hpReg": 0.074125,
+              "presenceHalo": 2.861403,
+              "elements": {
+                "fire": 27.896923,
+                "ice": 21.818826,
+                "electric": 16.726783,
+                "dark": 29.557468
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-quarter",
+      "seed": 811,
+      "layout": "pockets",
+      "outcome": "win",
+      "gameSeconds": 529.2,
+      "firstAllyShotSeconds": 0.8,
+      "firstEnemyMergeSeconds": 51.1,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.9,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 6,
+      "firstAfterMergeNewFront": {
+        "tick": 570,
+        "card": 17,
+        "x": 1657.81639,
+        "y": 2657.917649,
+        "kind": "staging-merge-needed",
+        "target": 17,
+        "incoming": [],
+        "initialRange": 48.034662,
+        "futureRange": 134.227702
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 2,
+        "staging-merge-needed": 7,
+        "merge-support": 72
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 767,
+        "outsideEnemyCurrentRange": 710,
+        "enemyBlocked": 1
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 746,
+        "outsideEnemyCurrentRange": 768,
+        "enemyBlocked": 0
+      },
+      "minLegalGeometry": 689,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 767,
+          "outsideEnemyCurrentRange": 710,
+          "enemyBlocked": 1
+        },
+        {
+          "tick": 49,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 698,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 50,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 698,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 100,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 758,
+          "outsideEnemyCurrentRange": 683,
+          "enemyBlocked": 10
+        },
+        {
+          "tick": 121,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 756,
+          "outsideEnemyCurrentRange": 681,
+          "enemyBlocked": 12
+        },
+        {
+          "tick": 150,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 753,
+          "outsideEnemyCurrentRange": 680,
+          "enemyBlocked": 15
+        },
+        {
+          "tick": 150,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 753,
+          "outsideEnemyCurrentRange": 680,
+          "enemyBlocked": 15
+        },
+        {
+          "tick": 200,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 741,
+          "outsideEnemyCurrentRange": 675,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 248,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 723,
+          "outsideEnemyCurrentRange": 676,
+          "enemyBlocked": 43
+        },
+        {
+          "tick": 250,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 723,
+          "outsideEnemyCurrentRange": 676,
+          "enemyBlocked": 43
+        },
+        {
+          "tick": 300,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 709,
+          "outsideEnemyCurrentRange": 668,
+          "enemyBlocked": 57
+        },
+        {
+          "tick": 308,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 710,
+          "outsideEnemyCurrentRange": 667,
+          "enemyBlocked": 56
+        },
+        {
+          "tick": 350,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 705,
+          "outsideEnemyCurrentRange": 659,
+          "enemyBlocked": 61
+        },
+        {
+          "tick": 400,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 700,
+          "outsideEnemyCurrentRange": 647,
+          "enemyBlocked": 66
+        },
+        {
+          "tick": 402,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 704,
+          "outsideEnemyCurrentRange": 662,
+          "enemyBlocked": 62
+        },
+        {
+          "tick": 450,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 696,
+          "outsideEnemyCurrentRange": 654,
+          "enemyBlocked": 68
+        },
+        {
+          "tick": 500,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 691,
+          "outsideEnemyCurrentRange": 647,
+          "enemyBlocked": 73
+        },
+        {
+          "tick": 522,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 695,
+          "outsideEnemyCurrentRange": 609,
+          "enemyBlocked": 69
+        },
+        {
+          "tick": 550,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 694,
+          "outsideEnemyCurrentRange": 608,
+          "enemyBlocked": 70
+        },
+        {
+          "tick": 563,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 698,
+          "outsideEnemyCurrentRange": 614,
+          "enemyBlocked": 66
+        },
+        {
+          "tick": 600,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 689,
+          "outsideEnemyCurrentRange": 573,
+          "enemyBlocked": 73
+        },
+        {
+          "tick": 829,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 691,
+          "outsideEnemyCurrentRange": 586,
+          "enemyBlocked": 70
+        },
+        {
+          "tick": 979,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 692,
+          "outsideEnemyCurrentRange": 589,
+          "enemyBlocked": 66
+        },
+        {
+          "tick": 1297,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 696,
+          "outsideEnemyCurrentRange": 590,
+          "enemyBlocked": 61
+        },
+        {
+          "tick": 1557,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 702,
+          "outsideEnemyCurrentRange": 594,
+          "enemyBlocked": 53
+        },
+        {
+          "tick": 1681,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 704,
+          "outsideEnemyCurrentRange": 595,
+          "enemyBlocked": 50
+        },
+        {
+          "tick": 2269,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 708,
+          "outsideEnemyCurrentRange": 603,
+          "enemyBlocked": 43
+        },
+        {
+          "tick": 3987,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 724,
+          "outsideEnemyCurrentRange": 681,
+          "enemyBlocked": 25
+        },
+        {
+          "tick": 5292,
+          "kills": 16,
+          "gridPoints": 768,
+          "legalGeometry": 746,
+          "outsideEnemyCurrentRange": 768,
+          "enemyBlocked": 0
+        }
+      ],
+      "actions": 84,
+      "dead": 2,
+      "saveChecks": 105,
+      "maxSaveBytes": 26920,
+      "exactActionReplay": true,
+      "plannerStalled": false,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "defense",
+              "electric": "range",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 109.559338,
+              "hpReg": 0.076533,
+              "presenceHalo": 3.254452,
+              "elements": {
+                "fire": 27.600313,
+                "ice": 24.394151,
+                "electric": 29.098076,
+                "dark": 14.90746
+              }
+            },
+            "fixed": {
+              "hp": 109.559338,
+              "hpReg": 0.076533,
+              "presenceHalo": 3.254452,
+              "elements": {
+                "fire": 27.600313,
+                "ice": 24.394151,
+                "electric": 29.098076,
+                "dark": 14.90746
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "range",
+              "electric": "defense",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 105.394978,
+              "hpReg": 0.1434,
+              "presenceHalo": 3.447878,
+              "elements": {
+                "fire": 18.635016,
+                "ice": 26.050011,
+                "electric": 19.860955,
+                "dark": 31.454018
+              }
+            },
+            "fixed": {
+              "hp": 105.394978,
+              "hpReg": 0.1434,
+              "presenceHalo": 3.447878,
+              "elements": {
+                "fire": 18.635016,
+                "ice": 26.050011,
+                "electric": 19.860955,
+                "dark": 31.454018
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 139.880246,
+              "hpReg": 0.108943,
+              "presenceHalo": 3.994948,
+              "elements": {
+                "fire": 27.771132,
+                "ice": 26.96823,
+                "electric": 23.163486,
+                "dark": 18.097152
+              }
+            },
+            "fixed": {
+              "hp": 139.880246,
+              "hpReg": 0.108943,
+              "presenceHalo": 3.994948,
+              "elements": {
+                "fire": 27.771132,
+                "ice": 26.96823,
+                "electric": 23.163486,
+                "dark": 18.097152
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 115.324493,
+              "hpReg": 0.074125,
+              "presenceHalo": 2.861403,
+              "elements": {
+                "fire": 27.896923,
+                "ice": 21.818826,
+                "electric": 16.726783,
+                "dark": 29.557468
+              }
+            },
+            "fixed": {
+              "hp": 115.324493,
+              "hpReg": 0.074125,
+              "presenceHalo": 2.861403,
+              "elements": {
+                "fire": 27.896923,
+                "ice": 21.818826,
+                "electric": 16.726783,
+                "dark": 29.557468
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-default",
+      "seed": 103,
+      "layout": "legacy",
+      "outcome": "playing",
+      "gameSeconds": 600,
+      "firstAllyShotSeconds": 1,
+      "firstEnemyMergeSeconds": 48.9,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.4,
+      "firstRootDiameter200Seconds": 54.6,
+      "afterEnemyMergeNewFronts": 1,
+      "firstAfterMergeNewFront": {
+        "tick": 560,
+        "card": 17,
+        "x": 869.3281320000001,
+        "y": 2377.151994,
+        "kind": "nurture",
+        "target": 17,
+        "incoming": [],
+        "initialRange": 69.741238,
+        "futureRange": 194.884396
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 1,
+        "staging-merge-needed": 4,
+        "merge-support": 10
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 764,
+        "outsideEnemyCurrentRange": 718,
+        "enemyBlocked": 4
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 727,
+        "outsideEnemyCurrentRange": 556,
+        "enemyBlocked": 30
+      },
+      "minLegalGeometry": 722,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 764,
+          "outsideEnemyCurrentRange": 718,
+          "enemyBlocked": 4
+        },
+        {
+          "tick": 44,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 763,
+          "outsideEnemyCurrentRange": 713,
+          "enemyBlocked": 5
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 764,
+          "outsideEnemyCurrentRange": 714,
+          "enemyBlocked": 4
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 764,
+          "outsideEnemyCurrentRange": 714,
+          "enemyBlocked": 4
+        },
+        {
+          "tick": 59,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 717,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 68,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 717,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 84,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 759,
+          "outsideEnemyCurrentRange": 717,
+          "enemyBlocked": 9
+        },
+        {
+          "tick": 100,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 759,
+          "outsideEnemyCurrentRange": 714,
+          "enemyBlocked": 9
+        },
+        {
+          "tick": 126,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 754,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 14
+        },
+        {
+          "tick": 150,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 750,
+          "outsideEnemyCurrentRange": 706,
+          "enemyBlocked": 17
+        },
+        {
+          "tick": 171,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 746,
+          "outsideEnemyCurrentRange": 707,
+          "enemyBlocked": 21
+        },
+        {
+          "tick": 177,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 747,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 20
+        },
+        {
+          "tick": 186,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 746,
+          "outsideEnemyCurrentRange": 711,
+          "enemyBlocked": 21
+        },
+        {
+          "tick": 195,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 747,
+          "outsideEnemyCurrentRange": 716,
+          "enemyBlocked": 19
+        },
+        {
+          "tick": 200,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 747,
+          "outsideEnemyCurrentRange": 716,
+          "enemyBlocked": 19
+        },
+        {
+          "tick": 201,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 749,
+          "outsideEnemyCurrentRange": 718,
+          "enemyBlocked": 17
+        },
+        {
+          "tick": 215,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 749,
+          "outsideEnemyCurrentRange": 720,
+          "enemyBlocked": 17
+        },
+        {
+          "tick": 219,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 749,
+          "outsideEnemyCurrentRange": 727,
+          "enemyBlocked": 17
+        },
+        {
+          "tick": 250,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 744,
+          "outsideEnemyCurrentRange": 725,
+          "enemyBlocked": 22
+        },
+        {
+          "tick": 300,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 723,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 333,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 720,
+          "enemyBlocked": 25
+        },
+        {
+          "tick": 350,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 718,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 360,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 721,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 400,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 713,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 450,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 736,
+          "outsideEnemyCurrentRange": 706,
+          "enemyBlocked": 27
+        },
+        {
+          "tick": 500,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 731,
+          "outsideEnemyCurrentRange": 683,
+          "enemyBlocked": 31
+        },
+        {
+          "tick": 550,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 722,
+          "outsideEnemyCurrentRange": 520,
+          "enemyBlocked": 39
+        },
+        {
+          "tick": 557,
+          "kills": 16,
+          "gridPoints": 768,
+          "legalGeometry": 726,
+          "outsideEnemyCurrentRange": 535,
+          "enemyBlocked": 35
+        },
+        {
+          "tick": 581,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 731,
+          "outsideEnemyCurrentRange": 556,
+          "enemyBlocked": 30
+        },
+        {
+          "tick": 600,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 731,
+          "outsideEnemyCurrentRange": 556,
+          "enemyBlocked": 30
+        }
+      ],
+      "actions": 18,
+      "dead": 1,
+      "saveChecks": 42,
+      "maxSaveBytes": 24271,
+      "exactActionReplay": true,
+      "plannerStalled": true,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "attack",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 103.151015,
+              "hpReg": 0.087053,
+              "presenceHalo": 3.472676,
+              "elements": {
+                "fire": 18.854458,
+                "ice": 23.765386,
+                "electric": 23.939363,
+                "dark": 29.440793
+              }
+            },
+            "fixed": {
+              "hp": 103.151015,
+              "hpReg": 0.087053,
+              "presenceHalo": 3.472676,
+              "elements": {
+                "fire": 18.854458,
+                "ice": 23.765386,
+                "electric": 23.939363,
+                "dark": 29.440793
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "defense",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 105.879133,
+              "hpReg": 0.082991,
+              "presenceHalo": 3.921673,
+              "elements": {
+                "fire": 27.605998,
+                "ice": 19.093356,
+                "electric": 25.322757,
+                "dark": 23.977888
+              }
+            },
+            "fixed": {
+              "hp": 105.879133,
+              "hpReg": 0.082991,
+              "presenceHalo": 3.921673,
+              "elements": {
+                "fire": 27.605998,
+                "ice": 19.093356,
+                "electric": 25.322757,
+                "dark": 23.977888
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "attack",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 98.214369,
+              "hpReg": 0.132199,
+              "presenceHalo": 3.158352,
+              "elements": {
+                "fire": 23.197417,
+                "ice": 20.058194,
+                "electric": 28.455825,
+                "dark": 24.288564
+              }
+            },
+            "fixed": {
+              "hp": 98.214369,
+              "hpReg": 0.132199,
+              "presenceHalo": 3.158352,
+              "elements": {
+                "fire": 23.197417,
+                "ice": 20.058194,
+                "electric": 28.455825,
+                "dark": 24.288564
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "speed",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 126.147565,
+              "hpReg": 0.105633,
+              "presenceHalo": 3.135698,
+              "elements": {
+                "fire": 28.834431,
+                "ice": 17.381869,
+                "electric": 27.285161,
+                "dark": 22.49854
+              }
+            },
+            "fixed": {
+              "hp": 126.147565,
+              "hpReg": 0.105633,
+              "presenceHalo": 3.135698,
+              "elements": {
+                "fire": 28.834431,
+                "ice": 17.381869,
+                "electric": 27.285161,
+                "dark": 22.49854
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-default",
+      "seed": 103,
+      "layout": "pockets",
+      "outcome": "win",
+      "gameSeconds": 86.9,
+      "firstAllyShotSeconds": 1,
+      "firstEnemyMergeSeconds": 48.9,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.4,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 2,
+      "firstAfterMergeNewFront": {
+        "tick": 640,
+        "card": 19,
+        "x": 3502.692221,
+        "y": 2200.283327,
+        "kind": "nurture",
+        "target": 20,
+        "incoming": [],
+        "initialRange": 55.265568,
+        "futureRange": 154.433692
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 2,
+        "staging-merge-needed": 5,
+        "merge-support": 15
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 765,
+        "outsideEnemyCurrentRange": 711,
+        "enemyBlocked": 3
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 753,
+        "outsideEnemyCurrentRange": 768,
+        "enemyBlocked": 0
+      },
+      "minLegalGeometry": 714,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 765,
+          "outsideEnemyCurrentRange": 711,
+          "enemyBlocked": 3
+        },
+        {
+          "tick": 44,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 763,
+          "outsideEnemyCurrentRange": 703,
+          "enemyBlocked": 5
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 764,
+          "outsideEnemyCurrentRange": 703,
+          "enemyBlocked": 4
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 764,
+          "outsideEnemyCurrentRange": 703,
+          "enemyBlocked": 4
+        },
+        {
+          "tick": 59,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 763,
+          "outsideEnemyCurrentRange": 705,
+          "enemyBlocked": 5
+        },
+        {
+          "tick": 68,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 762,
+          "outsideEnemyCurrentRange": 707,
+          "enemyBlocked": 6
+        },
+        {
+          "tick": 80,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 100,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 760,
+          "outsideEnemyCurrentRange": 704,
+          "enemyBlocked": 8
+        },
+        {
+          "tick": 150,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 752,
+          "outsideEnemyCurrentRange": 693,
+          "enemyBlocked": 16
+        },
+        {
+          "tick": 151,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 752,
+          "outsideEnemyCurrentRange": 695,
+          "enemyBlocked": 16
+        },
+        {
+          "tick": 167,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 751,
+          "outsideEnemyCurrentRange": 696,
+          "enemyBlocked": 17
+        },
+        {
+          "tick": 176,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 750,
+          "outsideEnemyCurrentRange": 702,
+          "enemyBlocked": 18
+        },
+        {
+          "tick": 200,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 744,
+          "outsideEnemyCurrentRange": 698,
+          "enemyBlocked": 23
+        },
+        {
+          "tick": 215,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 743,
+          "outsideEnemyCurrentRange": 700,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 239,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 741,
+          "outsideEnemyCurrentRange": 700,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 250,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 700,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 281,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 734,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 32
+        },
+        {
+          "tick": 300,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 733,
+          "outsideEnemyCurrentRange": 690,
+          "enemyBlocked": 33
+        },
+        {
+          "tick": 350,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 718,
+          "outsideEnemyCurrentRange": 681,
+          "enemyBlocked": 44
+        },
+        {
+          "tick": 400,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 714,
+          "outsideEnemyCurrentRange": 674,
+          "enemyBlocked": 48
+        },
+        {
+          "tick": 402,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 718,
+          "outsideEnemyCurrentRange": 686,
+          "enemyBlocked": 44
+        },
+        {
+          "tick": 416,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 720,
+          "outsideEnemyCurrentRange": 686,
+          "enemyBlocked": 41
+        },
+        {
+          "tick": 423,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 724,
+          "outsideEnemyCurrentRange": 697,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 450,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 722,
+          "outsideEnemyCurrentRange": 693,
+          "enemyBlocked": 39
+        },
+        {
+          "tick": 458,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 725,
+          "outsideEnemyCurrentRange": 700,
+          "enemyBlocked": 35
+        },
+        {
+          "tick": 500,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 721,
+          "outsideEnemyCurrentRange": 677,
+          "enemyBlocked": 38
+        },
+        {
+          "tick": 550,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 720,
+          "outsideEnemyCurrentRange": 673,
+          "enemyBlocked": 39
+        },
+        {
+          "tick": 576,
+          "kills": 16,
+          "gridPoints": 768,
+          "legalGeometry": 724,
+          "outsideEnemyCurrentRange": 691,
+          "enemyBlocked": 35
+        },
+        {
+          "tick": 600,
+          "kills": 16,
+          "gridPoints": 768,
+          "legalGeometry": 724,
+          "outsideEnemyCurrentRange": 689,
+          "enemyBlocked": 35
+        },
+        {
+          "tick": 615,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 727,
+          "outsideEnemyCurrentRange": 711,
+          "enemyBlocked": 31
+        },
+        {
+          "tick": 626,
+          "kills": 18,
+          "gridPoints": 768,
+          "legalGeometry": 730,
+          "outsideEnemyCurrentRange": 719,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 746,
+          "kills": 19,
+          "gridPoints": 768,
+          "legalGeometry": 731,
+          "outsideEnemyCurrentRange": 720,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 836,
+          "kills": 20,
+          "gridPoints": 768,
+          "legalGeometry": 736,
+          "outsideEnemyCurrentRange": 746,
+          "enemyBlocked": 18
+        },
+        {
+          "tick": 845,
+          "kills": 21,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 749,
+          "enemyBlocked": 14
+        },
+        {
+          "tick": 847,
+          "kills": 22,
+          "gridPoints": 768,
+          "legalGeometry": 747,
+          "outsideEnemyCurrentRange": 757,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 869,
+          "kills": 23,
+          "gridPoints": 768,
+          "legalGeometry": 753,
+          "outsideEnemyCurrentRange": 768,
+          "enemyBlocked": 0
+        }
+      ],
+      "actions": 25,
+      "dead": 0,
+      "saveChecks": 46,
+      "maxSaveBytes": 24306,
+      "exactActionReplay": true,
+      "plannerStalled": false,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "attack",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 103.151015,
+              "hpReg": 0.087053,
+              "presenceHalo": 3.472676,
+              "elements": {
+                "fire": 18.854458,
+                "ice": 23.765386,
+                "electric": 23.939363,
+                "dark": 29.440793
+              }
+            },
+            "fixed": {
+              "hp": 103.151015,
+              "hpReg": 0.087053,
+              "presenceHalo": 3.472676,
+              "elements": {
+                "fire": 18.854458,
+                "ice": 23.765386,
+                "electric": 23.939363,
+                "dark": 29.440793
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "speed",
+              "electric": "defense",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 105.879133,
+              "hpReg": 0.082991,
+              "presenceHalo": 3.921673,
+              "elements": {
+                "fire": 27.605998,
+                "ice": 19.093356,
+                "electric": 25.322757,
+                "dark": 23.977888
+              }
+            },
+            "fixed": {
+              "hp": 105.879133,
+              "hpReg": 0.082991,
+              "presenceHalo": 3.921673,
+              "elements": {
+                "fire": 27.605998,
+                "ice": 19.093356,
+                "electric": 25.322757,
+                "dark": 23.977888
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "attack",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 98.214369,
+              "hpReg": 0.132199,
+              "presenceHalo": 3.158352,
+              "elements": {
+                "fire": 23.197417,
+                "ice": 20.058194,
+                "electric": 28.455825,
+                "dark": 24.288564
+              }
+            },
+            "fixed": {
+              "hp": 98.214369,
+              "hpReg": 0.132199,
+              "presenceHalo": 3.158352,
+              "elements": {
+                "fire": 23.197417,
+                "ice": 20.058194,
+                "electric": 28.455825,
+                "dark": 24.288564
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 103,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "speed",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 126.147565,
+              "hpReg": 0.105633,
+              "presenceHalo": 3.135698,
+              "elements": {
+                "fire": 28.834431,
+                "ice": 17.381869,
+                "electric": 27.285161,
+                "dark": 22.49854
+              }
+            },
+            "fixed": {
+              "hp": 126.147565,
+              "hpReg": 0.105633,
+              "presenceHalo": 3.135698,
+              "elements": {
+                "fire": 28.834431,
+                "ice": 17.381869,
+                "electric": 27.285161,
+                "dark": 22.49854
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-default",
+      "seed": 509,
+      "layout": "legacy",
+      "outcome": "playing",
+      "gameSeconds": 600,
+      "firstAllyShotSeconds": 0.9,
+      "firstEnemyMergeSeconds": 47.2,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.1,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 1,
+      "firstAfterMergeNewFront": {
+        "tick": 600,
+        "card": 18,
+        "x": 957.0678730000001,
+        "y": 2553.324028,
+        "kind": "nurture",
+        "target": 13,
+        "incoming": [],
+        "initialRange": 66.126792,
+        "futureRange": 184.784212
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 1,
+        "staging-merge-needed": 4,
+        "merge-support": 12
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 765,
+        "outsideEnemyCurrentRange": 717,
+        "enemyBlocked": 3
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 738,
+        "outsideEnemyCurrentRange": 523,
+        "enemyBlocked": 22
+      },
+      "minLegalGeometry": 734,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 765,
+          "outsideEnemyCurrentRange": 717,
+          "enemyBlocked": 3
+        },
+        {
+          "tick": 41,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 762,
+          "outsideEnemyCurrentRange": 715,
+          "enemyBlocked": 6
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 760,
+          "outsideEnemyCurrentRange": 716,
+          "enemyBlocked": 8
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 760,
+          "outsideEnemyCurrentRange": 716,
+          "enemyBlocked": 8
+        },
+        {
+          "tick": 59,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 758,
+          "outsideEnemyCurrentRange": 715,
+          "enemyBlocked": 10
+        },
+        {
+          "tick": 67,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 756,
+          "outsideEnemyCurrentRange": 718,
+          "enemyBlocked": 12
+        },
+        {
+          "tick": 71,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 756,
+          "outsideEnemyCurrentRange": 721,
+          "enemyBlocked": 12
+        },
+        {
+          "tick": 99,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 755,
+          "outsideEnemyCurrentRange": 718,
+          "enemyBlocked": 13
+        },
+        {
+          "tick": 100,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 755,
+          "outsideEnemyCurrentRange": 716,
+          "enemyBlocked": 13
+        },
+        {
+          "tick": 119,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 756,
+          "outsideEnemyCurrentRange": 719,
+          "enemyBlocked": 12
+        },
+        {
+          "tick": 150,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 753,
+          "outsideEnemyCurrentRange": 712,
+          "enemyBlocked": 15
+        },
+        {
+          "tick": 195,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 744,
+          "outsideEnemyCurrentRange": 712,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 200,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 744,
+          "outsideEnemyCurrentRange": 712,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 225,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 711,
+          "enemyBlocked": 27
+        },
+        {
+          "tick": 250,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 705,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 289,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 736,
+          "outsideEnemyCurrentRange": 701,
+          "enemyBlocked": 30
+        },
+        {
+          "tick": 300,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 735,
+          "outsideEnemyCurrentRange": 701,
+          "enemyBlocked": 31
+        },
+        {
+          "tick": 333,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 736,
+          "outsideEnemyCurrentRange": 706,
+          "enemyBlocked": 30
+        },
+        {
+          "tick": 348,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 720,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 350,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 738,
+          "outsideEnemyCurrentRange": 720,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 378,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 716,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 393,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 742,
+          "outsideEnemyCurrentRange": 722,
+          "enemyBlocked": 23
+        },
+        {
+          "tick": 400,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 742,
+          "outsideEnemyCurrentRange": 720,
+          "enemyBlocked": 23
+        },
+        {
+          "tick": 450,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 737,
+          "outsideEnemyCurrentRange": 715,
+          "enemyBlocked": 27
+        },
+        {
+          "tick": 456,
+          "kills": 16,
+          "gridPoints": 768,
+          "legalGeometry": 741,
+          "outsideEnemyCurrentRange": 717,
+          "enemyBlocked": 23
+        },
+        {
+          "tick": 491,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 506,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 500,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 506,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 550,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 736,
+          "outsideEnemyCurrentRange": 504,
+          "enemyBlocked": 27
+        },
+        {
+          "tick": 600,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 734,
+          "outsideEnemyCurrentRange": 502,
+          "enemyBlocked": 29
+        },
+        {
+          "tick": 659,
+          "kills": 18,
+          "gridPoints": 768,
+          "legalGeometry": 741,
+          "outsideEnemyCurrentRange": 523,
+          "enemyBlocked": 22
+        }
+      ],
+      "actions": 20,
+      "dead": 3,
+      "saveChecks": 44,
+      "maxSaveBytes": 24294,
+      "exactActionReplay": true,
+      "plannerStalled": true,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "speed",
+              "electric": "attack",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 126.846207,
+              "hpReg": 0.158214,
+              "presenceHalo": 3.854157,
+              "elements": {
+                "fire": 21.826533,
+                "ice": 24.308963,
+                "electric": 17.347996,
+                "dark": 32.516508
+              }
+            },
+            "fixed": {
+              "hp": 126.846207,
+              "hpReg": 0.158214,
+              "presenceHalo": 3.854157,
+              "elements": {
+                "fire": 21.826533,
+                "ice": 24.308963,
+                "electric": 17.347996,
+                "dark": 32.516508
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 98.844137,
+              "hpReg": 0.152779,
+              "presenceHalo": 3.085053,
+              "elements": {
+                "fire": 23.549984,
+                "ice": 16.448197,
+                "electric": 25.678003,
+                "dark": 30.323815
+              }
+            },
+            "fixed": {
+              "hp": 98.844137,
+              "hpReg": 0.152779,
+              "presenceHalo": 3.085053,
+              "elements": {
+                "fire": 23.549984,
+                "ice": 16.448197,
+                "electric": 25.678003,
+                "dark": 30.323815
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "defense",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 104.0607,
+              "hpReg": 0.157967,
+              "presenceHalo": 2.88062,
+              "elements": {
+                "fire": 16.830464,
+                "ice": 22.756385,
+                "electric": 27.141875,
+                "dark": 29.271276
+              }
+            },
+            "fixed": {
+              "hp": 104.0607,
+              "hpReg": 0.157967,
+              "presenceHalo": 2.88062,
+              "elements": {
+                "fire": 16.830464,
+                "ice": 22.756385,
+                "electric": 27.141875,
+                "dark": 29.271276
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "speed",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 101.26443,
+              "hpReg": 0.149717,
+              "presenceHalo": 3.752632,
+              "elements": {
+                "fire": 23.626202,
+                "ice": 26.391972,
+                "electric": 15.504649,
+                "dark": 30.477177
+              }
+            },
+            "fixed": {
+              "hp": 101.26443,
+              "hpReg": 0.149717,
+              "presenceHalo": 3.752632,
+              "elements": {
+                "fire": 23.626202,
+                "ice": 26.391972,
+                "electric": 15.504649,
+                "dark": 30.477177
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-default",
+      "seed": 509,
+      "layout": "pockets",
+      "outcome": "playing",
+      "gameSeconds": 600,
+      "firstAllyShotSeconds": 0.9,
+      "firstEnemyMergeSeconds": 57.6,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.1,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 1,
+      "firstAfterMergeNewFront": {
+        "tick": 630,
+        "card": 18,
+        "x": 957.0678730000001,
+        "y": 2553.324028,
+        "kind": "nurture",
+        "target": 13,
+        "incoming": [],
+        "initialRange": 66.126792,
+        "futureRange": 184.784212
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 1,
+        "staging-merge-needed": 5,
+        "merge-support": 13
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 766,
+        "outsideEnemyCurrentRange": 713,
+        "enemyBlocked": 2
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 730,
+        "outsideEnemyCurrentRange": 484,
+        "enemyBlocked": 31
+      },
+      "minLegalGeometry": 717,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 766,
+          "outsideEnemyCurrentRange": 713,
+          "enemyBlocked": 2
+        },
+        {
+          "tick": 41,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 705,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 758,
+          "outsideEnemyCurrentRange": 704,
+          "enemyBlocked": 10
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 758,
+          "outsideEnemyCurrentRange": 704,
+          "enemyBlocked": 10
+        },
+        {
+          "tick": 59,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 758,
+          "outsideEnemyCurrentRange": 705,
+          "enemyBlocked": 10
+        },
+        {
+          "tick": 67,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 757,
+          "outsideEnemyCurrentRange": 707,
+          "enemyBlocked": 11
+        },
+        {
+          "tick": 74,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 757,
+          "outsideEnemyCurrentRange": 710,
+          "enemyBlocked": 11
+        },
+        {
+          "tick": 99,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 757,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 11
+        },
+        {
+          "tick": 100,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 757,
+          "outsideEnemyCurrentRange": 707,
+          "enemyBlocked": 11
+        },
+        {
+          "tick": 123,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 755,
+          "outsideEnemyCurrentRange": 705,
+          "enemyBlocked": 13
+        },
+        {
+          "tick": 150,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 753,
+          "outsideEnemyCurrentRange": 700,
+          "enemyBlocked": 15
+        },
+        {
+          "tick": 200,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 744,
+          "outsideEnemyCurrentRange": 695,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 207,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 743,
+          "outsideEnemyCurrentRange": 696,
+          "enemyBlocked": 25
+        },
+        {
+          "tick": 219,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 696,
+          "enemyBlocked": 27
+        },
+        {
+          "tick": 225,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 742,
+          "outsideEnemyCurrentRange": 701,
+          "enemyBlocked": 25
+        },
+        {
+          "tick": 240,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 743,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 250,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 26
+        },
+        {
+          "tick": 300,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 731,
+          "outsideEnemyCurrentRange": 702,
+          "enemyBlocked": 34
+        },
+        {
+          "tick": 333,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 733,
+          "outsideEnemyCurrentRange": 707,
+          "enemyBlocked": 32
+        },
+        {
+          "tick": 350,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 731,
+          "outsideEnemyCurrentRange": 704,
+          "enemyBlocked": 34
+        },
+        {
+          "tick": 400,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 722,
+          "outsideEnemyCurrentRange": 693,
+          "enemyBlocked": 42
+        },
+        {
+          "tick": 450,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 717,
+          "outsideEnemyCurrentRange": 689,
+          "enemyBlocked": 46
+        },
+        {
+          "tick": 459,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 718,
+          "outsideEnemyCurrentRange": 687,
+          "enemyBlocked": 44
+        },
+        {
+          "tick": 480,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 721,
+          "outsideEnemyCurrentRange": 690,
+          "enemyBlocked": 41
+        },
+        {
+          "tick": 481,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 725,
+          "outsideEnemyCurrentRange": 696,
+          "enemyBlocked": 36
+        },
+        {
+          "tick": 500,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 725,
+          "outsideEnemyCurrentRange": 695,
+          "enemyBlocked": 36
+        },
+        {
+          "tick": 550,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 718,
+          "outsideEnemyCurrentRange": 689,
+          "enemyBlocked": 43
+        },
+        {
+          "tick": 553,
+          "kills": 16,
+          "gridPoints": 768,
+          "legalGeometry": 724,
+          "outsideEnemyCurrentRange": 703,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 600,
+          "kills": 16,
+          "gridPoints": 768,
+          "legalGeometry": 717,
+          "outsideEnemyCurrentRange": 460,
+          "enemyBlocked": 43
+        },
+        {
+          "tick": 621,
+          "kills": 17,
+          "gridPoints": 768,
+          "legalGeometry": 725,
+          "outsideEnemyCurrentRange": 462,
+          "enemyBlocked": 38
+        },
+        {
+          "tick": 744,
+          "kills": 18,
+          "gridPoints": 768,
+          "legalGeometry": 732,
+          "outsideEnemyCurrentRange": 484,
+          "enemyBlocked": 31
+        }
+      ],
+      "actions": 22,
+      "dead": 4,
+      "saveChecks": 47,
+      "maxSaveBytes": 24330,
+      "exactActionReplay": true,
+      "plannerStalled": true,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "speed",
+              "electric": "attack",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 126.846207,
+              "hpReg": 0.158214,
+              "presenceHalo": 3.854157,
+              "elements": {
+                "fire": 21.826533,
+                "ice": 24.308963,
+                "electric": 17.347996,
+                "dark": 32.516508
+              }
+            },
+            "fixed": {
+              "hp": 126.846207,
+              "hpReg": 0.158214,
+              "presenceHalo": 3.854157,
+              "elements": {
+                "fire": 21.826533,
+                "ice": 24.308963,
+                "electric": 17.347996,
+                "dark": 32.516508
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 98.844137,
+              "hpReg": 0.152779,
+              "presenceHalo": 3.085053,
+              "elements": {
+                "fire": 23.549984,
+                "ice": 16.448197,
+                "electric": 25.678003,
+                "dark": 30.323815
+              }
+            },
+            "fixed": {
+              "hp": 98.844137,
+              "hpReg": 0.152779,
+              "presenceHalo": 3.085053,
+              "elements": {
+                "fire": 23.549984,
+                "ice": 16.448197,
+                "electric": 25.678003,
+                "dark": 30.323815
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "defense",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 104.0607,
+              "hpReg": 0.157967,
+              "presenceHalo": 2.88062,
+              "elements": {
+                "fire": 16.830464,
+                "ice": 22.756385,
+                "electric": 27.141875,
+                "dark": 29.271276
+              }
+            },
+            "fixed": {
+              "hp": 104.0607,
+              "hpReg": 0.157967,
+              "presenceHalo": 2.88062,
+              "elements": {
+                "fire": 16.830464,
+                "ice": 22.756385,
+                "electric": 27.141875,
+                "dark": 29.271276
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 509,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "range",
+              "electric": "speed",
+              "dark": "attack"
+            },
+            "raw": {
+              "hp": 101.26443,
+              "hpReg": 0.149717,
+              "presenceHalo": 3.752632,
+              "elements": {
+                "fire": 23.626202,
+                "ice": 26.391972,
+                "electric": 15.504649,
+                "dark": 30.477177
+              }
+            },
+            "fixed": {
+              "hp": 101.26443,
+              "hpReg": 0.149717,
+              "presenceHalo": 3.752632,
+              "elements": {
+                "fire": 23.626202,
+                "ice": 26.391972,
+                "electric": 15.504649,
+                "dark": 30.477177
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-default",
+      "seed": 811,
+      "layout": "legacy",
+      "outcome": "win",
+      "gameSeconds": 158.4,
+      "firstAllyShotSeconds": 0.8,
+      "firstEnemyMergeSeconds": 50,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.1,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 1,
+      "firstAfterMergeNewFront": {
+        "tick": 560,
+        "card": 16,
+        "x": 2022.7610412754348,
+        "y": 1251.7812230663417,
+        "kind": "staging-merge-needed",
+        "target": 23,
+        "incoming": [],
+        "initialRange": 39.156714,
+        "futureRange": 109.41923
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 0,
+        "staging-merge-needed": 6,
+        "merge-support": 27
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 766,
+        "outsideEnemyCurrentRange": 715,
+        "enemyBlocked": 2
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 757,
+        "outsideEnemyCurrentRange": 768,
+        "enemyBlocked": 0
+      },
+      "minLegalGeometry": 713,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 766,
+          "outsideEnemyCurrentRange": 715,
+          "enemyBlocked": 2
+        },
+        {
+          "tick": 41,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 759,
+          "outsideEnemyCurrentRange": 714,
+          "enemyBlocked": 9
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 759,
+          "outsideEnemyCurrentRange": 717,
+          "enemyBlocked": 9
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 759,
+          "outsideEnemyCurrentRange": 717,
+          "enemyBlocked": 9
+        },
+        {
+          "tick": 59,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 759,
+          "outsideEnemyCurrentRange": 719,
+          "enemyBlocked": 9
+        },
+        {
+          "tick": 63,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 760,
+          "outsideEnemyCurrentRange": 719,
+          "enemyBlocked": 8
+        },
+        {
+          "tick": 100,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 757,
+          "outsideEnemyCurrentRange": 709,
+          "enemyBlocked": 11
+        },
+        {
+          "tick": 150,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 749,
+          "outsideEnemyCurrentRange": 701,
+          "enemyBlocked": 19
+        },
+        {
+          "tick": 200,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 695,
+          "enemyBlocked": 29
+        },
+        {
+          "tick": 201,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 701,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 207,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 740,
+          "outsideEnemyCurrentRange": 703,
+          "enemyBlocked": 28
+        },
+        {
+          "tick": 219,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 739,
+          "outsideEnemyCurrentRange": 706,
+          "enemyBlocked": 29
+        },
+        {
+          "tick": 250,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 735,
+          "outsideEnemyCurrentRange": 704,
+          "enemyBlocked": 31
+        },
+        {
+          "tick": 276,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 731,
+          "outsideEnemyCurrentRange": 705,
+          "enemyBlocked": 34
+        },
+        {
+          "tick": 300,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 728,
+          "outsideEnemyCurrentRange": 701,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 306,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 728,
+          "outsideEnemyCurrentRange": 708,
+          "enemyBlocked": 37
+        },
+        {
+          "tick": 350,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 727,
+          "outsideEnemyCurrentRange": 704,
+          "enemyBlocked": 38
+        },
+        {
+          "tick": 400,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 723,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 41
+        },
+        {
+          "tick": 425,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 723,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 41
+        },
+        {
+          "tick": 450,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 721,
+          "outsideEnemyCurrentRange": 693,
+          "enemyBlocked": 42
+        },
+        {
+          "tick": 461,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 722,
+          "outsideEnemyCurrentRange": 693,
+          "enemyBlocked": 41
+        },
+        {
+          "tick": 500,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 720,
+          "outsideEnemyCurrentRange": 469,
+          "enemyBlocked": 43
+        },
+        {
+          "tick": 550,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 713,
+          "outsideEnemyCurrentRange": 277,
+          "enemyBlocked": 50
+        },
+        {
+          "tick": 600,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 713,
+          "outsideEnemyCurrentRange": 277,
+          "enemyBlocked": 50
+        },
+        {
+          "tick": 1326,
+          "kills": 12,
+          "gridPoints": 768,
+          "legalGeometry": 721,
+          "outsideEnemyCurrentRange": 414,
+          "enemyBlocked": 36
+        },
+        {
+          "tick": 1404,
+          "kills": 13,
+          "gridPoints": 768,
+          "legalGeometry": 730,
+          "outsideEnemyCurrentRange": 485,
+          "enemyBlocked": 27
+        },
+        {
+          "tick": 1557,
+          "kills": 14,
+          "gridPoints": 768,
+          "legalGeometry": 749,
+          "outsideEnemyCurrentRange": 668,
+          "enemyBlocked": 8
+        },
+        {
+          "tick": 1584,
+          "kills": 15,
+          "gridPoints": 768,
+          "legalGeometry": 757,
+          "outsideEnemyCurrentRange": 768,
+          "enemyBlocked": 0
+        }
+      ],
+      "actions": 36,
+      "dead": 4,
+      "saveChecks": 50,
+      "maxSaveBytes": 24219,
+      "exactActionReplay": true,
+      "plannerStalled": false,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "defense",
+              "electric": "range",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 109.559338,
+              "hpReg": 0.076533,
+              "presenceHalo": 3.254452,
+              "elements": {
+                "fire": 27.600313,
+                "ice": 24.394151,
+                "electric": 29.098076,
+                "dark": 14.90746
+              }
+            },
+            "fixed": {
+              "hp": 109.559338,
+              "hpReg": 0.076533,
+              "presenceHalo": 3.254452,
+              "elements": {
+                "fire": 27.600313,
+                "ice": 24.394151,
+                "electric": 29.098076,
+                "dark": 14.90746
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "range",
+              "electric": "defense",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 105.394978,
+              "hpReg": 0.1434,
+              "presenceHalo": 3.447878,
+              "elements": {
+                "fire": 18.635016,
+                "ice": 26.050011,
+                "electric": 19.860955,
+                "dark": 31.454018
+              }
+            },
+            "fixed": {
+              "hp": 105.394978,
+              "hpReg": 0.1434,
+              "presenceHalo": 3.447878,
+              "elements": {
+                "fire": 18.635016,
+                "ice": 26.050011,
+                "electric": 19.860955,
+                "dark": 31.454018
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 139.880246,
+              "hpReg": 0.108943,
+              "presenceHalo": 3.994948,
+              "elements": {
+                "fire": 27.771132,
+                "ice": 26.96823,
+                "electric": 23.163486,
+                "dark": 18.097152
+              }
+            },
+            "fixed": {
+              "hp": 139.880246,
+              "hpReg": 0.108943,
+              "presenceHalo": 3.994948,
+              "elements": {
+                "fire": 27.771132,
+                "ice": 26.96823,
+                "electric": 23.163486,
+                "dark": 18.097152
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 115.324493,
+              "hpReg": 0.074125,
+              "presenceHalo": 2.861403,
+              "elements": {
+                "fire": 27.896923,
+                "ice": 21.818826,
+                "electric": 16.726783,
+                "dark": 29.557468
+              }
+            },
+            "fixed": {
+              "hp": 115.324493,
+              "hpReg": 0.074125,
+              "presenceHalo": 2.861403,
+              "elements": {
+                "fire": 27.896923,
+                "ice": 21.818826,
+                "electric": 16.726783,
+                "dark": 29.557468
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "dir": "holdout-default",
+      "seed": 811,
+      "layout": "pockets",
+      "outcome": "playing",
+      "gameSeconds": 600,
+      "firstAllyShotSeconds": 0.8,
+      "firstEnemyMergeSeconds": 51.1,
+      "firstAlliedMergeSeconds": 4,
+      "firstKillSeconds": 4.1,
+      "firstRootDiameter200Seconds": 57.4,
+      "afterEnemyMergeNewFronts": 1,
+      "firstAfterMergeNewFront": {
+        "tick": 560,
+        "card": 17,
+        "x": 3402.696038,
+        "y": 2648.755973,
+        "kind": "staging-merge-needed",
+        "target": 24,
+        "incoming": [],
+        "initialRange": 48.967376,
+        "futureRange": 136.834066
+      },
+      "kinds": {
+        "opening": 3,
+        "nurture": 0,
+        "staging-merge-needed": 6,
+        "merge-support": 12
+      },
+      "initial": {
+        "gridPoints": 768,
+        "legalGeometry": 767,
+        "outsideEnemyCurrentRange": 710,
+        "enemyBlocked": 1
+      },
+      "geometryAtEnd": {
+        "gridPoints": 768,
+        "legalGeometry": 701,
+        "outsideEnemyCurrentRange": 208,
+        "enemyBlocked": 63
+      },
+      "minLegalGeometry": 699,
+      "snapshots": [
+        {
+          "tick": 0,
+          "gridPoints": 768,
+          "legalGeometry": 767,
+          "outsideEnemyCurrentRange": 710,
+          "enemyBlocked": 1
+        },
+        {
+          "tick": 41,
+          "kills": 1,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 701,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 704,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 50,
+          "kills": 2,
+          "gridPoints": 768,
+          "legalGeometry": 761,
+          "outsideEnemyCurrentRange": 704,
+          "enemyBlocked": 7
+        },
+        {
+          "tick": 56,
+          "kills": 3,
+          "gridPoints": 768,
+          "legalGeometry": 760,
+          "outsideEnemyCurrentRange": 705,
+          "enemyBlocked": 8
+        },
+        {
+          "tick": 65,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 760,
+          "outsideEnemyCurrentRange": 702,
+          "enemyBlocked": 8
+        },
+        {
+          "tick": 100,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 759,
+          "outsideEnemyCurrentRange": 693,
+          "enemyBlocked": 9
+        },
+        {
+          "tick": 150,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 754,
+          "outsideEnemyCurrentRange": 688,
+          "enemyBlocked": 14
+        },
+        {
+          "tick": 200,
+          "kills": 4,
+          "gridPoints": 768,
+          "legalGeometry": 743,
+          "outsideEnemyCurrentRange": 685,
+          "enemyBlocked": 25
+        },
+        {
+          "tick": 201,
+          "kills": 5,
+          "gridPoints": 768,
+          "legalGeometry": 744,
+          "outsideEnemyCurrentRange": 692,
+          "enemyBlocked": 24
+        },
+        {
+          "tick": 207,
+          "kills": 6,
+          "gridPoints": 768,
+          "legalGeometry": 745,
+          "outsideEnemyCurrentRange": 696,
+          "enemyBlocked": 23
+        },
+        {
+          "tick": 225,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 741,
+          "outsideEnemyCurrentRange": 698,
+          "enemyBlocked": 27
+        },
+        {
+          "tick": 250,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 731,
+          "outsideEnemyCurrentRange": 694,
+          "enemyBlocked": 36
+        },
+        {
+          "tick": 300,
+          "kills": 7,
+          "gridPoints": 768,
+          "legalGeometry": 719,
+          "outsideEnemyCurrentRange": 686,
+          "enemyBlocked": 47
+        },
+        {
+          "tick": 339,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 717,
+          "outsideEnemyCurrentRange": 683,
+          "enemyBlocked": 49
+        },
+        {
+          "tick": 350,
+          "kills": 8,
+          "gridPoints": 768,
+          "legalGeometry": 716,
+          "outsideEnemyCurrentRange": 680,
+          "enemyBlocked": 50
+        },
+        {
+          "tick": 354,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 720,
+          "outsideEnemyCurrentRange": 687,
+          "enemyBlocked": 46
+        },
+        {
+          "tick": 400,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 716,
+          "outsideEnemyCurrentRange": 682,
+          "enemyBlocked": 50
+        },
+        {
+          "tick": 450,
+          "kills": 9,
+          "gridPoints": 768,
+          "legalGeometry": 708,
+          "outsideEnemyCurrentRange": 677,
+          "enemyBlocked": 56
+        },
+        {
+          "tick": 460,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 712,
+          "outsideEnemyCurrentRange": 681,
+          "enemyBlocked": 52
+        },
+        {
+          "tick": 500,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 707,
+          "outsideEnemyCurrentRange": 678,
+          "enemyBlocked": 57
+        },
+        {
+          "tick": 550,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 709,
+          "outsideEnemyCurrentRange": 372,
+          "enemyBlocked": 56
+        },
+        {
+          "tick": 600,
+          "kills": 10,
+          "gridPoints": 768,
+          "legalGeometry": 700,
+          "outsideEnemyCurrentRange": 208,
+          "enemyBlocked": 65
+        },
+        {
+          "tick": 702,
+          "kills": 11,
+          "gridPoints": 768,
+          "legalGeometry": 699,
+          "outsideEnemyCurrentRange": 208,
+          "enemyBlocked": 63
+        }
+      ],
+      "actions": 21,
+      "dead": 7,
+      "saveChecks": 39,
+      "maxSaveBytes": 24253,
+      "exactActionReplay": true,
+      "plannerStalled": true,
+      "initialHand": [
+        {
+          "kind": "plant",
+          "id": 0,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 0,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "defense",
+              "electric": "range",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 109.559338,
+              "hpReg": 0.076533,
+              "presenceHalo": 3.254452,
+              "elements": {
+                "fire": 27.600313,
+                "ice": 24.394151,
+                "electric": 29.098076,
+                "dark": 14.90746
+              }
+            },
+            "fixed": {
+              "hp": 109.559338,
+              "hpReg": 0.076533,
+              "presenceHalo": 3.254452,
+              "elements": {
+                "fire": 27.600313,
+                "ice": 24.394151,
+                "electric": 29.098076,
+                "dark": 14.90746
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 1,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 1,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "attack",
+              "ice": "range",
+              "electric": "defense",
+              "dark": "speed"
+            },
+            "raw": {
+              "hp": 105.394978,
+              "hpReg": 0.1434,
+              "presenceHalo": 3.447878,
+              "elements": {
+                "fire": 18.635016,
+                "ice": 26.050011,
+                "electric": 19.860955,
+                "dark": 31.454018
+              }
+            },
+            "fixed": {
+              "hp": 105.394978,
+              "hpReg": 0.1434,
+              "presenceHalo": 3.447878,
+              "elements": {
+                "fire": 18.635016,
+                "ice": 26.050011,
+                "electric": 19.860955,
+                "dark": 31.454018
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 2,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 2,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "range",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "defense"
+            },
+            "raw": {
+              "hp": 139.880246,
+              "hpReg": 0.108943,
+              "presenceHalo": 3.994948,
+              "elements": {
+                "fire": 27.771132,
+                "ice": 26.96823,
+                "electric": 23.163486,
+                "dark": 18.097152
+              }
+            },
+            "fixed": {
+              "hp": 139.880246,
+              "hpReg": 0.108943,
+              "presenceHalo": 3.994948,
+              "elements": {
+                "fire": 27.771132,
+                "ice": 26.96823,
+                "electric": 23.163486,
+                "dark": 18.097152
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        },
+        {
+          "kind": "plant",
+          "id": 3,
+          "seed": {
+            "generator": "eco-seed-1",
+            "runSeed": 811,
+            "source": "hand",
+            "index": 3,
+            "initialDiameter": 8,
+            "bindings": {
+              "fire": "defense",
+              "ice": "attack",
+              "electric": "speed",
+              "dark": "range"
+            },
+            "raw": {
+              "hp": 115.324493,
+              "hpReg": 0.074125,
+              "presenceHalo": 2.861403,
+              "elements": {
+                "fire": 27.896923,
+                "ice": 21.818826,
+                "electric": 16.726783,
+                "dark": 29.557468
+              }
+            },
+            "fixed": {
+              "hp": 115.324493,
+              "hpReg": 0.074125,
+              "presenceHalo": 2.861403,
+              "elements": {
+                "fire": 27.896923,
+                "ice": 21.818826,
+                "electric": 16.726783,
+                "dark": 29.557468
+              }
+            },
+            "entry": {
+              "tick": 0,
+              "boosts": {
+                "fire": 1,
+                "ice": 1,
+                "electric": 1,
+                "dark": 1
+              },
+              "rewardIds": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1698 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "mouse fractional placement",
+        "unit selection without placement or false invalid hint",
+        "mouse drag and right click cancelled",
+        "placement after Pane/scroll",
+        "fractional placement after actual viewport resize",
+        "same three placements and exactly 117 ticks, selected ally 8"
+      ],
+      "failures": [],
+      "layout": {
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "scrollWidth": 1351,
+        "board": {
+          "x": 376.828125,
+          "y": 303.59375,
+          "width": 597.328125,
+          "height": 447.984375,
+          "top": 303.59375,
+          "right": 974.15625,
+          "bottom": 751.578125,
+          "left": 376.828125
+        },
+        "canvas": {
+          "x": 377.828125,
+          "y": 304.59375,
+          "width": 595,
+          "height": 445,
+          "top": 304.59375,
+          "right": 972.828125,
+          "bottom": 749.59375,
+          "left": 377.828125
+        },
+        "play": {
+          "x": 274,
+          "y": 249.59375,
+          "width": 121.3125,
+          "height": 44,
+          "top": 249.59375,
+          "right": 395.3125,
+          "bottom": 293.59375,
+          "left": 274
+        },
+        "controlsVisible": true,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2340000109726117,
+          "y": 2.3450002605995435,
+          "clientX": 439.6759033203125,
+          "clientY": 277.5409851074219,
+          "rect": {
+            "x": 377.828125,
+            "y": 161.59375,
+            "width": 595,
+            "height": 445,
+            "top": 161.59375,
+            "right": 972.828125,
+            "bottom": 606.59375,
+            "left": 377.828125
+          },
+          "time": 1929.2999999523163
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2340000109726117,
+          "y": 2.3450002605995435
+        }
+      },
+      "supplyLayout": {
+        "controlsVisible": true,
+        "boardVisible": true,
+        "activity": "停止中 · 配置力0 · 定期補充まで8.0ゲーム秒 · 敵攻略でも＋1"
+      },
+      "deterministicState": {
+        "seed": 20261011,
+        "tick": 117,
+        "nextId": 11,
+        "units": [
+          {
+            "id": 1,
+            "team": "enemy",
+            "x": 4,
+            "y": 2,
+            "hp": 75.36920834689387,
+            "maxHp": 98,
+            "age": 117,
+            "cooldown": 2,
+            "stats": {
+              "power": 17.13,
+              "range": 3.46,
+              "presence": 1.31,
+              "vitality": 98
+            },
+            "target": 8,
+            "lastShot": {
+              "tick": 109,
+              "targetId": 8,
+              "x": 1.2340000109726117,
+              "y": 2.3450002605995435,
+              "damage": 7.707457897369942
+            }
+          },
+          {
+            "id": 2,
+            "team": "enemy",
+            "x": 4,
+            "y": 6,
+            "hp": 85.87387182468582,
+            "maxHp": 114,
+            "age": 117,
+            "cooldown": 7,
+            "stats": {
+              "power": 13.93,
+              "range": 3.5,
+              "presence": 1.23,
+              "vitality": 114
+            },
+            "target": 9,
+            "lastShot": {
+              "tick": 114,
+              "targetId": 9,
+              "x": 1.3210000027431523,
+              "y": 5.431999840897121,
+              "damage": 6.977397747203703
+            }
+          },
+          {
+            "id": 3,
+            "team": "enemy",
+            "x": 6,
+            "y": 4,
+            "hp": 117,
+            "maxHp": 117,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 21.27,
+              "range": 3.03,
+              "presence": 0.89,
+              "vitality": 117
+            },
+            "target": null
+          },
+          {
+            "id": 4,
+            "team": "enemy",
+            "x": 8,
+            "y": 1,
+            "hp": 115,
+            "maxHp": 115,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 14.15,
+              "range": 3.64,
+              "presence": 1.08,
+              "vitality": 115
+            },
+            "target": null
+          },
+          {
+            "id": 5,
+            "team": "enemy",
+            "x": 8,
+            "y": 7,
+            "hp": 117,
+            "maxHp": 117,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 19.81,
+              "range": 2.84,
+              "presence": 1.16,
+              "vitality": 117
+            },
+            "target": null
+          },
+          {
+            "id": 6,
+            "team": "enemy",
+            "x": 10,
+            "y": 3,
+            "hp": 110,
+            "maxHp": 110,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 18.75,
+              "range": 2.96,
+              "presence": 1.3,
+              "vitality": 110
+            },
+            "target": null
+          },
+          {
+            "id": 7,
+            "team": "enemy",
+            "x": 10,
+            "y": 6,
+            "hp": 122,
+            "maxHp": 122,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 14.98,
+              "range": 2.57,
+              "presence": 1.68,
+              "vitality": 122
+            },
+            "target": null
+          },
+          {
+            "id": 8,
+            "team": "ally",
+            "x": 1.2340000109726117,
+            "y": 2.3450002605995435,
+            "hp": 73.89287892367051,
+            "maxHp": 109,
+            "age": 117,
+            "cooldown": 10,
+            "stats": {
+              "power": 18.78,
+              "range": 2.9,
+              "presence": 1.36,
+              "vitality": 109
+            },
+            "target": 1,
+            "lastShot": {
+              "tick": 117,
+              "targetId": 1,
+              "x": 4,
+              "y": 2,
+              "damage": 6.36297023615802
+            }
+          },
+          {
+            "id": 9,
+            "team": "ally",
+            "x": 1.3210000027431523,
+            "y": 5.431999840897121,
+            "hp": 90.05102252796294,
+            "maxHp": 125,
+            "age": 117,
+            "cooldown": 10,
+            "stats": {
+              "power": 15.52,
+              "range": 3.01,
+              "presence": 1.24,
+              "vitality": 125
+            },
+            "target": 2,
+            "lastShot": {
+              "tick": 117,
+              "targetId": 2,
+              "x": 4,
+              "y": 6,
+              "damage": 6.055627347974772
+            }
+          },
+          {
+            "id": 10,
+            "team": "ally",
+            "x": 1.1110000438904486,
+            "y": 7.653999517205056,
+            "hp": 123,
+            "maxHp": 123,
+            "age": 117,
+            "cooldown": 5,
+            "stats": {
+              "power": 20.97,
+              "range": 2.88,
+              "presence": 0.9,
+              "vitality": 123
+            },
+            "target": 2,
+            "lastShot": {
+              "tick": 112,
+              "targetId": 2,
+              "x": 4,
+              "y": 6,
+              "damage": 2.43944387124608
+            }
+          }
+        ],
+        "cards": [
+          {
+            "power": 15.05,
+            "range": 2.95,
+            "presence": 1.19,
+            "vitality": 132
+          },
+          {
+            "power": 22.59,
+            "range": 3.14,
+            "presence": 1.32,
+            "vitality": 86
+          },
+          {
+            "power": 20.72,
+            "range": 2.73,
+            "presence": 1.63,
+            "vitality": 94
+          },
+          {
+            "power": 24.1,
+            "range": 3.28,
+            "presence": 0.92,
+            "vitality": 94
+          },
+          {
+            "power": 16.02,
+            "range": 3.27,
+            "presence": 1.69,
+            "vitality": 91
+          },
+          {
+            "power": 17.46,
+            "range": 2.84,
+            "presence": 1.64,
+            "vitality": 103
+          },
+          {
+            "power": 16.65,
+            "range": 2.85,
+            "presence": 1.4,
+            "vitality": 118
+          },
+          {
+            "power": 14.31,
+            "range": 3.38,
+            "presence": 1.57,
+            "vitality": 100
+          },
+          {
+            "power": 18.72,
+            "range": 3.27,
+            "presence": 1.35,
+            "vitality": 97
+          },
+          {
+            "power": 16.82,
+            "range": 3.41,
+            "presence": 1.2,
+            "vitality": 106
+          },
+          {
+            "power": 16.74,
+            "range": 3.41,
+            "presence": 1.2,
+            "vitality": 107
+          },
+          {
+            "power": 13.45,
+            "range": 3.56,
+            "presence": 1.43,
+            "vitality": 104
+          },
+          {
+            "power": 15.03,
+            "range": 2.74,
+            "presence": 1.73,
+            "vitality": 113
+          },
+          {
+            "power": 14.55,
+            "range": 2.8,
+            "presence": 1.52,
+            "vitality": 123
+          },
+          {
+            "power": 20.73,
+            "range": 3.05,
+            "presence": 1.44,
+            "vitality": 91
+          }
+        ],
+        "territory": [
+          {
+            "id": 8,
+            "x": 1.2340000109726117,
+            "y": 2.3450002605995435,
+            "radius": 2.33125
+          },
+          {
+            "id": 9,
+            "x": 1.3210000027431523,
+            "y": 5.431999840897121,
+            "radius": 2.33125
+          },
+          {
+            "id": 10,
+            "x": 1.1110000438904486,
+            "y": 7.653999517205056,
+            "radius": 2.33125
+          }
+        ],
+        "charges": 1,
+        "outcome": "playing",
+        "started": true,
+        "events": [
+          "植物を配置 (1.11, 7.65)。射程円を見ながら進めてみましょう。",
+          "植物を配置 (1.32, 5.43)。射程円を見ながら進めてみましょう。",
+          "植物を配置 (1.23, 2.35)。射程円を見ながら進めてみましょう。",
+          "左端の明るい領域に、自由な位置で最初の植物を配置しましょう。"
+        ]
+      },
+      "deterministicTick": 117
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "mobile": false,
+      "checks": [
+        "mouse fractional placement",
+        "unit selection without placement or false invalid hint",
+        "mouse drag and right click cancelled",
+        "placement after Pane/scroll",
+        "fractional placement after actual viewport resize",
+        "same three placements and exactly 117 ticks, selected ally 8"
+      ],
+      "failures": [],
+      "layout": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "scrollWidth": 1905,
+        "board": {
+          "x": 526.5,
+          "y": 303.59375,
+          "width": 852,
+          "height": 639,
+          "top": 303.59375,
+          "right": 1378.5,
+          "bottom": 942.59375,
+          "left": 526.5
+        },
+        "canvas": {
+          "x": 527.5,
+          "y": 304.59375,
+          "width": 850,
+          "height": 637,
+          "top": 304.59375,
+          "right": 1377.5,
+          "bottom": 941.59375,
+          "left": 527.5
+        },
+        "play": {
+          "x": 526.5,
+          "y": 249.59375,
+          "width": 121.3125,
+          "height": 44,
+          "top": 249.59375,
+          "right": 647.8125,
+          "bottom": 293.59375,
+          "left": 526.5
+        },
+        "controlsVisible": true,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2339997823047484,
+          "y": 2.3449998313628337,
+          "clientX": 615.173095703125,
+          "clientY": 387.567626953125,
+          "rect": {
+            "x": 527.5,
+            "y": 221.59375,
+            "width": 850,
+            "height": 637,
+            "top": 221.59375,
+            "right": 1377.5,
+            "bottom": 858.59375,
+            "left": 527.5
+          },
+          "time": 964.5
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2339997823047484,
+          "y": 2.3449998313628337
+        }
+      },
+      "supplyLayout": {
+        "controlsVisible": true,
+        "boardVisible": true,
+        "activity": "停止中 · 配置力0 · 定期補充まで8.0ゲーム秒 · 敵攻略でも＋1"
+      },
+      "deterministicState": {
+        "seed": 20261011,
+        "tick": 117,
+        "nextId": 11,
+        "units": [
+          {
+            "id": 1,
+            "team": "enemy",
+            "x": 4,
+            "y": 2,
+            "hp": 75.3692162246605,
+            "maxHp": 98,
+            "age": 117,
+            "cooldown": 2,
+            "stats": {
+              "power": 17.13,
+              "range": 3.46,
+              "presence": 1.31,
+              "vitality": 98
+            },
+            "target": 8,
+            "lastShot": {
+              "tick": 109,
+              "targetId": 8,
+              "x": 1.2339997823047484,
+              "y": 2.3449998313628337,
+              "damage": 7.707457036993032
+            }
+          },
+          {
+            "id": 2,
+            "team": "enemy",
+            "x": 4,
+            "y": 6,
+            "hp": 85.87389011265302,
+            "maxHp": 114,
+            "age": 117,
+            "cooldown": 7,
+            "stats": {
+              "power": 13.93,
+              "range": 3.5,
+              "presence": 1.23,
+              "vitality": 114
+            },
+            "target": 9,
+            "lastShot": {
+              "tick": 114,
+              "targetId": 9,
+              "x": 1.3209996006365283,
+              "y": 5.432000224594045,
+              "damage": 6.977396498357709
+            }
+          },
+          {
+            "id": 3,
+            "team": "enemy",
+            "x": 6,
+            "y": 4,
+            "hp": 117,
+            "maxHp": 117,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 21.27,
+              "range": 3.03,
+              "presence": 0.89,
+              "vitality": 117
+            },
+            "target": null
+          },
+          {
+            "id": 4,
+            "team": "enemy",
+            "x": 8,
+            "y": 1,
+            "hp": 115,
+            "maxHp": 115,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 14.15,
+              "range": 3.64,
+              "presence": 1.08,
+              "vitality": 115
+            },
+            "target": null
+          },
+          {
+            "id": 5,
+            "team": "enemy",
+            "x": 8,
+            "y": 7,
+            "hp": 117,
+            "maxHp": 117,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 19.81,
+              "range": 2.84,
+              "presence": 1.16,
+              "vitality": 117
+            },
+            "target": null
+          },
+          {
+            "id": 6,
+            "team": "enemy",
+            "x": 10,
+            "y": 3,
+            "hp": 110,
+            "maxHp": 110,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 18.75,
+              "range": 2.96,
+              "presence": 1.3,
+              "vitality": 110
+            },
+            "target": null
+          },
+          {
+            "id": 7,
+            "team": "enemy",
+            "x": 10,
+            "y": 6,
+            "hp": 122,
+            "maxHp": 122,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 14.98,
+              "range": 2.57,
+              "presence": 1.68,
+              "vitality": 122
+            },
+            "target": null
+          },
+          {
+            "id": 8,
+            "team": "ally",
+            "x": 1.2339997823047484,
+            "y": 2.3449998313628337,
+            "hp": 73.89288666706271,
+            "maxHp": 109,
+            "age": 117,
+            "cooldown": 10,
+            "stats": {
+              "power": 18.78,
+              "range": 2.9,
+              "presence": 1.36,
+              "vitality": 109
+            },
+            "target": 1,
+            "lastShot": {
+              "tick": 117,
+              "targetId": 1,
+              "x": 4,
+              "y": 2,
+              "damage": 6.362969110762786
+            }
+          },
+          {
+            "id": 9,
+            "team": "ally",
+            "x": 1.3209996006365283,
+            "y": 5.432000224594045,
+            "hp": 90.05103501642287,
+            "maxHp": 125,
+            "age": 117,
+            "cooldown": 10,
+            "stats": {
+              "power": 15.52,
+              "range": 3.01,
+              "presence": 1.24,
+              "vitality": 125
+            },
+            "target": 2,
+            "lastShot": {
+              "tick": 117,
+              "targetId": 2,
+              "x": 4,
+              "y": 6,
+              "damage": 6.055625730077158
+            }
+          },
+          {
+            "id": 10,
+            "team": "ally",
+            "x": 1.1110001413445727,
+            "y": 7.654000179893092,
+            "hp": 123,
+            "maxHp": 123,
+            "age": 117,
+            "cooldown": 5,
+            "stats": {
+              "power": 20.97,
+              "range": 2.88,
+              "presence": 0.9,
+              "vitality": 123
+            },
+            "target": 2,
+            "lastShot": {
+              "tick": 112,
+              "targetId": 2,
+              "x": 4,
+              "y": 6,
+              "damage": 2.4394420896506497
+            }
+          }
+        ],
+        "cards": [
+          {
+            "power": 15.05,
+            "range": 2.95,
+            "presence": 1.19,
+            "vitality": 132
+          },
+          {
+            "power": 22.59,
+            "range": 3.14,
+            "presence": 1.32,
+            "vitality": 86
+          },
+          {
+            "power": 20.72,
+            "range": 2.73,
+            "presence": 1.63,
+            "vitality": 94
+          },
+          {
+            "power": 24.1,
+            "range": 3.28,
+            "presence": 0.92,
+            "vitality": 94
+          },
+          {
+            "power": 16.02,
+            "range": 3.27,
+            "presence": 1.69,
+            "vitality": 91
+          },
+          {
+            "power": 17.46,
+            "range": 2.84,
+            "presence": 1.64,
+            "vitality": 103
+          },
+          {
+            "power": 16.65,
+            "range": 2.85,
+            "presence": 1.4,
+            "vitality": 118
+          },
+          {
+            "power": 14.31,
+            "range": 3.38,
+            "presence": 1.57,
+            "vitality": 100
+          },
+          {
+            "power": 18.72,
+            "range": 3.27,
+            "presence": 1.35,
+            "vitality": 97
+          },
+          {
+            "power": 16.82,
+            "range": 3.41,
+            "presence": 1.2,
+            "vitality": 106
+          },
+          {
+            "power": 16.74,
+            "range": 3.41,
+            "presence": 1.2,
+            "vitality": 107
+          },
+          {
+            "power": 13.45,
+            "range": 3.56,
+            "presence": 1.43,
+            "vitality": 104
+          },
+          {
+            "power": 15.03,
+            "range": 2.74,
+            "presence": 1.73,
+            "vitality": 113
+          },
+          {
+            "power": 14.55,
+            "range": 2.8,
+            "presence": 1.52,
+            "vitality": 123
+          },
+          {
+            "power": 20.73,
+            "range": 3.05,
+            "presence": 1.44,
+            "vitality": 91
+          }
+        ],
+        "territory": [
+          {
+            "id": 8,
+            "x": 1.2339997823047484,
+            "y": 2.3449998313628337,
+            "radius": 2.33125
+          },
+          {
+            "id": 9,
+            "x": 1.3209996006365283,
+            "y": 5.432000224594045,
+            "radius": 2.33125
+          },
+          {
+            "id": 10,
+            "x": 1.1110001413445727,
+            "y": 7.654000179893092,
+            "radius": 2.33125
+          }
+        ],
+        "charges": 1,
+        "outcome": "playing",
+        "started": true,
+        "events": [
+          "植物を配置 (1.11, 7.65)。射程円を見ながら進めてみましょう。",
+          "植物を配置 (1.32, 5.43)。射程円を見ながら進めてみましょう。",
+          "植物を配置 (1.23, 2.34)。射程円を見ながら進めてみましょう。",
+          "左端の明るい領域に、自由な位置で最初の植物を配置しましょう。"
+        ]
+      },
+      "deterministicTick": 117
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "touch fractional placement",
+        "unit selection without placement or false invalid hint",
+        "touch drag and multitouch cancelled",
+        "repeated mobile Pane switches and visible selected stats",
+        "placement after Pane/scroll",
+        "fractional placement after actual viewport resize",
+        "same three placements and exactly 117 ticks, selected ally 8"
+      ],
+      "failures": [],
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "board": {
+          "x": 12,
+          "y": 342.59375,
+          "width": 366,
+          "height": 274.5,
+          "top": 342.59375,
+          "right": 378,
+          "bottom": 617.09375,
+          "left": 12
+        },
+        "canvas": {
+          "x": 13,
+          "y": 343.59375,
+          "width": 364,
+          "height": 272,
+          "top": 343.59375,
+          "right": 377,
+          "bottom": 615.59375,
+          "left": 13
+        },
+        "play": {
+          "x": 12,
+          "y": 288.59375,
+          "width": 101.984375,
+          "height": 44,
+          "top": 288.59375,
+          "right": 113.984375,
+          "bottom": 332.59375,
+          "left": 12
+        },
+        "controlsVisible": true,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2339999675750726,
+          "y": 2.3450004353242764,
+          "clientX": 50.96088790893555,
+          "clientY": 411.4648742675781,
+          "rect": {
+            "x": 13,
+            "y": 340.59375,
+            "width": 364,
+            "height": 272,
+            "top": 340.59375,
+            "right": 377,
+            "bottom": 612.59375,
+            "left": 13
+          },
+          "time": 794.5
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2339999675750726,
+          "y": 2.3450004353242764
+        }
+      },
+      "supplyLayout": {
+        "controlsVisible": true,
+        "boardVisible": true,
+        "activity": "停止中 · 配置力0 · 定期補充まで8.0ゲーム秒 · 敵攻略でも＋1"
+      },
+      "deterministicState": {
+        "seed": 20261011,
+        "tick": 117,
+        "nextId": 11,
+        "units": [
+          {
+            "id": 1,
+            "team": "enemy",
+            "x": 4,
+            "y": 2,
+            "hp": 75.36921127933675,
+            "maxHp": 98,
+            "age": 117,
+            "cooldown": 2,
+            "stats": {
+              "power": 17.13,
+              "range": 3.46,
+              "presence": 1.31,
+              "vitality": 98
+            },
+            "target": 8,
+            "lastShot": {
+              "tick": 109,
+              "targetId": 8,
+              "x": 1.2339999675750726,
+              "y": 2.3450004353242764,
+              "damage": 7.707457577100727
+            }
+          },
+          {
+            "id": 2,
+            "team": "enemy",
+            "x": 4,
+            "y": 6,
+            "hp": 85.87387658758631,
+            "maxHp": 114,
+            "age": 117,
+            "cooldown": 7,
+            "stats": {
+              "power": 13.93,
+              "range": 3.5,
+              "presence": 1.23,
+              "vitality": 114
+            },
+            "target": 9,
+            "lastShot": {
+              "tick": 114,
+              "targetId": 9,
+              "x": 1.3209999729605275,
+              "y": 5.432000104118796,
+              "damage": 6.977397848532676
+            }
+          },
+          {
+            "id": 3,
+            "team": "enemy",
+            "x": 6,
+            "y": 4,
+            "hp": 117,
+            "maxHp": 117,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 21.27,
+              "range": 3.03,
+              "presence": 0.89,
+              "vitality": 117
+            },
+            "target": null
+          },
+          {
+            "id": 4,
+            "team": "enemy",
+            "x": 8,
+            "y": 1,
+            "hp": 115,
+            "maxHp": 115,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 14.15,
+              "range": 3.64,
+              "presence": 1.08,
+              "vitality": 115
+            },
+            "target": null
+          },
+          {
+            "id": 5,
+            "team": "enemy",
+            "x": 8,
+            "y": 7,
+            "hp": 117,
+            "maxHp": 117,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 19.81,
+              "range": 2.84,
+              "presence": 1.16,
+              "vitality": 117
+            },
+            "target": null
+          },
+          {
+            "id": 6,
+            "team": "enemy",
+            "x": 10,
+            "y": 3,
+            "hp": 110,
+            "maxHp": 110,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 18.75,
+              "range": 2.96,
+              "presence": 1.3,
+              "vitality": 110
+            },
+            "target": null
+          },
+          {
+            "id": 7,
+            "team": "enemy",
+            "x": 10,
+            "y": 6,
+            "hp": 122,
+            "maxHp": 122,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 14.98,
+              "range": 2.57,
+              "presence": 1.68,
+              "vitality": 122
+            },
+            "target": null
+          },
+          {
+            "id": 8,
+            "team": "ally",
+            "x": 1.2339999675750726,
+            "y": 2.3450004353242764,
+            "hp": 73.89288180609344,
+            "maxHp": 109,
+            "age": 117,
+            "cooldown": 10,
+            "stats": {
+              "power": 18.78,
+              "range": 2.9,
+              "presence": 1.36,
+              "vitality": 109
+            },
+            "target": 1,
+            "lastShot": {
+              "tick": 117,
+              "targetId": 1,
+              "x": 4,
+              "y": 2,
+              "damage": 6.362969817237609
+            }
+          },
+          {
+            "id": 9,
+            "team": "ally",
+            "x": 1.3209999729605275,
+            "y": 5.432000104118796,
+            "hp": 90.05102151467322,
+            "maxHp": 125,
+            "age": 117,
+            "cooldown": 10,
+            "stats": {
+              "power": 15.52,
+              "range": 3.01,
+              "presence": 1.24,
+              "vitality": 125
+            },
+            "target": 2,
+            "lastShot": {
+              "tick": 117,
+              "targetId": 2,
+              "x": 4,
+              "y": 6,
+              "damage": 6.055627479247884
+            }
+          },
+          {
+            "id": 10,
+            "team": "ally",
+            "x": 1.11100002635609,
+            "y": 7.6540000221946025,
+            "hp": 123,
+            "maxHp": 123,
+            "age": 117,
+            "cooldown": 5,
+            "stats": {
+              "power": 20.97,
+              "range": 2.88,
+              "presence": 0.9,
+              "vitality": 123
+            },
+            "target": 2,
+            "lastShot": {
+              "tick": 112,
+              "targetId": 2,
+              "x": 4,
+              "y": 6,
+              "damage": 2.4394419335509396
+            }
+          }
+        ],
+        "cards": [
+          {
+            "power": 15.05,
+            "range": 2.95,
+            "presence": 1.19,
+            "vitality": 132
+          },
+          {
+            "power": 22.59,
+            "range": 3.14,
+            "presence": 1.32,
+            "vitality": 86
+          },
+          {
+            "power": 20.72,
+            "range": 2.73,
+            "presence": 1.63,
+            "vitality": 94
+          },
+          {
+            "power": 24.1,
+            "range": 3.28,
+            "presence": 0.92,
+            "vitality": 94
+          },
+          {
+            "power": 16.02,
+            "range": 3.27,
+            "presence": 1.69,
+            "vitality": 91
+          },
+          {
+            "power": 17.46,
+            "range": 2.84,
+            "presence": 1.64,
+            "vitality": 103
+          },
+          {
+            "power": 16.65,
+            "range": 2.85,
+            "presence": 1.4,
+            "vitality": 118
+          },
+          {
+            "power": 14.31,
+            "range": 3.38,
+            "presence": 1.57,
+            "vitality": 100
+          },
+          {
+            "power": 18.72,
+            "range": 3.27,
+            "presence": 1.35,
+            "vitality": 97
+          },
+          {
+            "power": 16.82,
+            "range": 3.41,
+            "presence": 1.2,
+            "vitality": 106
+          },
+          {
+            "power": 16.74,
+            "range": 3.41,
+            "presence": 1.2,
+            "vitality": 107
+          },
+          {
+            "power": 13.45,
+            "range": 3.56,
+            "presence": 1.43,
+            "vitality": 104
+          },
+          {
+            "power": 15.03,
+            "range": 2.74,
+            "presence": 1.73,
+            "vitality": 113
+          },
+          {
+            "power": 14.55,
+            "range": 2.8,
+            "presence": 1.52,
+            "vitality": 123
+          },
+          {
+            "power": 20.73,
+            "range": 3.05,
+            "presence": 1.44,
+            "vitality": 91
+          }
+        ],
+        "territory": [
+          {
+            "id": 8,
+            "x": 1.2339999675750726,
+            "y": 2.3450004353242764,
+            "radius": 2.33125
+          },
+          {
+            "id": 9,
+            "x": 1.3209999729605275,
+            "y": 5.432000104118796,
+            "radius": 2.33125
+          },
+          {
+            "id": 10,
+            "x": 1.11100002635609,
+            "y": 7.6540000221946025,
+            "radius": 2.33125
+          }
+        ],
+        "charges": 1,
+        "outcome": "playing",
+        "started": true,
+        "events": [
+          "植物を配置 (1.11, 7.65)。射程円を見ながら進めてみましょう。",
+          "植物を配置 (1.32, 5.43)。射程円を見ながら進めてみましょう。",
+          "植物を配置 (1.23, 2.35)。射程円を見ながら進めてみましょう。",
+          "左端の明るい領域に、自由な位置で最初の植物を配置しましょう。"
+        ]
+      },
+      "deterministicTick": 117
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "mobile": true,
+      "checks": [
+        "touch fractional placement",
+        "unit selection without placement or false invalid hint",
+        "touch drag and multitouch cancelled",
+        "repeated mobile Pane switches and visible selected stats",
+        "placement after Pane/scroll",
+        "fractional placement after actual viewport resize",
+        "same three placements and exactly 117 ticks, selected ally 8"
+      ],
+      "failures": [],
+      "layout": {
+        "viewport": {
+          "width": 320,
+          "height": 740
+        },
+        "scrollWidth": 320,
+        "board": {
+          "x": 12,
+          "y": 393.59375,
+          "width": 296,
+          "height": 222,
+          "top": 393.59375,
+          "right": 308,
+          "bottom": 615.59375,
+          "left": 12
+        },
+        "canvas": {
+          "x": 13,
+          "y": 394.59375,
+          "width": 294,
+          "height": 220,
+          "top": 394.59375,
+          "right": 307,
+          "bottom": 614.59375,
+          "left": 13
+        },
+        "play": {
+          "x": 12,
+          "y": 288.59375,
+          "width": 101.984375,
+          "height": 44,
+          "top": 288.59375,
+          "right": 113.984375,
+          "bottom": 332.59375,
+          "left": 12
+        },
+        "controlsVisible": true,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2339999285611236,
+          "y": 2.345000527121804,
+          "clientX": 43.49777603149414,
+          "clientY": 321.9159851074219,
+          "rect": {
+            "x": 13,
+            "y": 264.59375,
+            "width": 294,
+            "height": 220,
+            "top": 264.59375,
+            "right": 307,
+            "bottom": 484.59375,
+            "left": 13
+          },
+          "time": 778.7999999523163
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2339999285611236,
+          "y": 2.345000527121804
+        }
+      },
+      "supplyLayout": {
+        "controlsVisible": true,
+        "boardVisible": true,
+        "activity": "停止中 · 配置力0 · 定期補充まで8.0ゲーム秒 · 敵攻略でも＋1"
+      },
+      "deterministicState": {
+        "seed": 20261011,
+        "tick": 117,
+        "nextId": 11,
+        "units": [
+          {
+            "id": 1,
+            "team": "enemy",
+            "x": 4,
+            "y": 2,
+            "hp": 75.3692135493221,
+            "maxHp": 98,
+            "age": 117,
+            "cooldown": 2,
+            "stats": {
+              "power": 17.13,
+              "range": 3.46,
+              "presence": 1.31,
+              "vitality": 98
+            },
+            "target": 8,
+            "lastShot": {
+              "tick": 109,
+              "targetId": 8,
+              "x": 1.2339999285611236,
+              "y": 2.345000527121804,
+              "damage": 7.707457329182366
+            }
+          },
+          {
+            "id": 2,
+            "team": "enemy",
+            "x": 4,
+            "y": 6,
+            "hp": 85.87387776791,
+            "maxHp": 114,
+            "age": 117,
+            "cooldown": 7,
+            "stats": {
+              "power": 13.93,
+              "range": 3.5,
+              "presence": 1.23,
+              "vitality": 114
+            },
+            "target": 9,
+            "lastShot": {
+              "tick": 114,
+              "targetId": 9,
+              "x": 1.3209999431263313,
+              "y": 5.4320001775568185,
+              "damage": 6.977397792996806
+            }
+          },
+          {
+            "id": 3,
+            "team": "enemy",
+            "x": 6,
+            "y": 4,
+            "hp": 117,
+            "maxHp": 117,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 21.27,
+              "range": 3.03,
+              "presence": 0.89,
+              "vitality": 117
+            },
+            "target": null
+          },
+          {
+            "id": 4,
+            "team": "enemy",
+            "x": 8,
+            "y": 1,
+            "hp": 115,
+            "maxHp": 115,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 14.15,
+              "range": 3.64,
+              "presence": 1.08,
+              "vitality": 115
+            },
+            "target": null
+          },
+          {
+            "id": 5,
+            "team": "enemy",
+            "x": 8,
+            "y": 7,
+            "hp": 117,
+            "maxHp": 117,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 19.81,
+              "range": 2.84,
+              "presence": 1.16,
+              "vitality": 117
+            },
+            "target": null
+          },
+          {
+            "id": 6,
+            "team": "enemy",
+            "x": 10,
+            "y": 3,
+            "hp": 110,
+            "maxHp": 110,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 18.75,
+              "range": 2.96,
+              "presence": 1.3,
+              "vitality": 110
+            },
+            "target": null
+          },
+          {
+            "id": 7,
+            "team": "enemy",
+            "x": 10,
+            "y": 6,
+            "hp": 122,
+            "maxHp": 122,
+            "age": 117,
+            "cooldown": 0,
+            "stats": {
+              "power": 14.98,
+              "range": 2.57,
+              "presence": 1.68,
+              "vitality": 122
+            },
+            "target": null
+          },
+          {
+            "id": 8,
+            "team": "ally",
+            "x": 1.2339999285611236,
+            "y": 2.345000527121804,
+            "hp": 73.8928840373587,
+            "maxHp": 109,
+            "age": 117,
+            "cooldown": 10,
+            "stats": {
+              "power": 18.78,
+              "range": 2.9,
+              "presence": 1.36,
+              "vitality": 109
+            },
+            "target": 1,
+            "lastShot": {
+              "tick": 117,
+              "targetId": 1,
+              "x": 4,
+              "y": 2,
+              "damage": 6.362969492953987
+            }
+          },
+          {
+            "id": 9,
+            "team": "ally",
+            "x": 1.3209999431263313,
+            "y": 5.4320001775568185,
+            "hp": 90.05102207003192,
+            "maxHp": 125,
+            "age": 117,
+            "cooldown": 10,
+            "stats": {
+              "power": 15.52,
+              "range": 3.01,
+              "presence": 1.24,
+              "vitality": 125
+            },
+            "target": 2,
+            "lastShot": {
+              "tick": 117,
+              "targetId": 2,
+              "x": 4,
+              "y": 6,
+              "damage": 6.055627407300384
+            }
+          },
+          {
+            "id": 10,
+            "team": "ally",
+            "x": 1.1110000470105335,
+            "y": 7.65400011399213,
+            "hp": 123,
+            "maxHp": 123,
+            "age": 117,
+            "cooldown": 5,
+            "stats": {
+              "power": 20.97,
+              "range": 2.88,
+              "presence": 0.9,
+              "vitality": 123
+            },
+            "target": 2,
+            "lastShot": {
+              "tick": 112,
+              "targetId": 2,
+              "x": 4,
+              "y": 6,
+              "damage": 2.439441731969721
+            }
+          }
+        ],
+        "cards": [
+          {
+            "power": 15.05,
+            "range": 2.95,
+            "presence": 1.19,
+            "vitality": 132
+          },
+          {
+            "power": 22.59,
+            "range": 3.14,
+            "presence": 1.32,
+            "vitality": 86
+          },
+          {
+            "power": 20.72,
+            "range": 2.73,
+            "presence": 1.63,
+            "vitality": 94
+          },
+          {
+            "power": 24.1,
+            "range": 3.28,
+            "presence": 0.92,
+            "vitality": 94
+          },
+          {
+            "power": 16.02,
+            "range": 3.27,
+            "presence": 1.69,
+            "vitality": 91
+          },
+          {
+            "power": 17.46,
+            "range": 2.84,
+            "presence": 1.64,
+            "vitality": 103
+          },
+          {
+            "power": 16.65,
+            "range": 2.85,
+            "presence": 1.4,
+            "vitality": 118
+          },
+          {
+            "power": 14.31,
+            "range": 3.38,
+            "presence": 1.57,
+            "vitality": 100
+          },
+          {
+            "power": 18.72,
+            "range": 3.27,
+            "presence": 1.35,
+            "vitality": 97
+          },
+          {
+            "power": 16.82,
+            "range": 3.41,
+            "presence": 1.2,
+            "vitality": 106
+          },
+          {
+            "power": 16.74,
+            "range": 3.41,
+            "presence": 1.2,
+            "vitality": 107
+          },
+          {
+            "power": 13.45,
+            "range": 3.56,
+            "presence": 1.43,
+            "vitality": 104
+          },
+          {
+            "power": 15.03,
+            "range": 2.74,
+            "presence": 1.73,
+            "vitality": 113
+          },
+          {
+            "power": 14.55,
+            "range": 2.8,
+            "presence": 1.52,
+            "vitality": 123
+          },
+          {
+            "power": 20.73,
+            "range": 3.05,
+            "presence": 1.44,
+            "vitality": 91
+          }
+        ],
+        "territory": [
+          {
+            "id": 8,
+            "x": 1.2339999285611236,
+            "y": 2.345000527121804,
+            "radius": 2.33125
+          },
+          {
+            "id": 9,
+            "x": 1.3209999431263313,
+            "y": 5.4320001775568185,
+            "radius": 2.33125
+          },
+          {
+            "id": 10,
+            "x": 1.1110000470105335,
+            "y": 7.65400011399213,
+            "radius": 2.33125
+          }
+        ],
+        "charges": 1,
+        "outcome": "playing",
+        "started": true,
+        "events": [
+          "植物を配置 (1.11, 7.65)。射程円を見ながら進めてみましょう。",
+          "植物を配置 (1.32, 5.43)。射程円を見ながら進めてみましょう。",
+          "植物を配置 (1.23, 2.35)。射程円を見ながら進めてみましょう。",
+          "左端の明るい領域に、自由な位置で最初の植物を配置しましょう。"
+        ]
+      },
+      "deterministicTick": 117
+    }
+  ],
+  "runtimeErrors": []
+}

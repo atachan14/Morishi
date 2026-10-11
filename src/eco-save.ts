@@ -1,6 +1,7 @@
 import {createEco,currentStats,ECO_RULES,ECO_LIMITS,WORLD,type State} from './eco-sim.js';
 import {ELEMENTS,generateSeed,ones,round,dominantElement,type Elements,type Seed} from './eco-contract.js';
 export const ECO_SAVE_KEY='morishi.ecosystem.v1',ECO_BACKUP_KEY='morishi.ecosystem.previous.v1';
+export const ECO_CHECKPOINT_KEY='morishi.ecosystem.checkpoint.v1';
 export type View={x:number;y:number;zoom:number};
 export type Save={version:'eco-2026-10-11-v1';state:State;view:View;speed:number;checksum:string};
 export interface Storage {getItem(k:string):string|null;setItem(k:string,v:string):void;}
@@ -30,6 +31,8 @@ export function ecoReplay(input:unknown):Save{
  return structuredClone(v);
 }
 export class EcoStore{
+ readCheckpoint():{kind:'empty'}|{kind:'loaded';save:Save}|{kind:'invalid'}{try{const raw=this.storage.getItem(ECO_CHECKPOINT_KEY);if(raw===null)return {kind:'empty'};if(raw.length>2000000)throw new Error('Oversized checkpoint');return {kind:'loaded',save:ecoReplay(JSON.parse(raw))};}catch{return {kind:'invalid'};}}
+ writeCheckpoint(save:Save){try{ecoReplay(save);const raw=JSON.stringify(save);if(new TextEncoder().encode(raw).length>2000000)return false;this.storage.setItem(ECO_CHECKPOINT_KEY,raw);return true;}catch{return false;}}
  protectedSave=false;private replacementPending=false;constructor(private storage:Storage){}
  read():{kind:'empty'}|{kind:'loaded';save:Save}|{kind:'invalid'}|{kind:'unavailable'}{try{const raw=this.storage.getItem(ECO_SAVE_KEY);if(raw===null)return {kind:'empty'};if(raw.length>2000000)throw new Error('Oversized');return {kind:'loaded',save:ecoReplay(JSON.parse(raw))};}catch{this.protectedSave=true;return {kind:'invalid'};}}
  write(save:Save,replace=false){if(replace)this.replacementPending=true;const needsBackup=replace||this.replacementPending;if(this.protectedSave&&!needsBackup)return false;try{ecoReplay(save);const raw=JSON.stringify(save);if(new TextEncoder().encode(raw).length>2000000)return false;const prior=needsBackup?this.storage.getItem(ECO_SAVE_KEY):null;if(prior!==null)this.storage.setItem(ECO_BACKUP_KEY,prior);this.storage.setItem(ECO_SAVE_KEY,raw);this.protectedSave=false;this.replacementPending=false;return true;}catch{return false;}}

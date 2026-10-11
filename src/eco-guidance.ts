@@ -1,5 +1,5 @@
 import {bodyRadius,zeros,type Seed} from './eco-contract.js';
-import {WORLD,ECO_LIMITS,TICK_SECONDS,DRAW_SECONDS,TURN_SECONDS,GROWTH_PER_SECOND,PRESENCE_STRENGTH,PRESENCE_LIMIT,falloff,currentStats,targetFor,damageFor,type State,type Unit} from './eco-sim.js';
+import {WORLD,ECO_LIMITS,TICK_SECONDS,DRAW_SECONDS,TURN_SECONDS,GROWTH_PER_SECOND,PRESENCE_STRENGTH,PRESENCE_LIMIT,falloff,currentStats,targetFor,damageFor,validateEcoPlacement,enemyPresence,type State,type Unit} from './eco-sim.js';
 
 export type Point={x:number;y:number};
 export type Space={kind:'found';point:Point;checked:number}|{kind:'blocked';cause:'body'|'presence'|'mixed'|'bounds';checked:number}|{kind:'unknown';checked:number};
@@ -37,3 +37,5 @@ export function gardenGuidance(s:State):Guidance{
  return {...base,kind:'ready',space,canAdvance,text:combat.attacks?'戦闘が進んでいます。別の方向から支援するか、合体まで育てるか考えられます。':'手札を置けます。植物が育つと身体と射程が広がります。'};
 }
 export function placementPreview(s:State,x:number,y:number,seed:Seed){const probe:Unit={...(s.targetPolicy?{targetPolicy:s.targetPolicy}:{}),...(s.mergePolicy?{mergePolicy:s.mergePolicy}:{}),...(s.rangeFactor===2?{rangeFactor:2 as const}:{}),id:s.nextId,team:'ally',x,y,seed,born:s.tick,age:0,diameter:seed.initialDiameter,hp:1,attackProgress:0,bonus:{elements:zeros(),hp:0,regen:0},lineage:[s.nextId],enemyOrigins:[]};probe.hp=currentStats(probe).maxHp;const target=targetFor(probe,s.units),combined=[...s.units,probe],incoming=s.units.filter(u=>u.team==='enemy'&&targetFor(u,combined)?.id===probe.id);return {target:target?.id??null,damage:target?damageFor(probe,target):0,incoming:incoming.map(u=>u.id),futureRange:currentStats({...probe,diameter:ECO_LIMITS.naturalDiameter}).range};}
+
+export function placementReport(s:State,x:number,y:number,cardId:number){const validation=validateEcoPlacement(s,x,y,cardId),card=s.hand.find(c=>c.id===cardId),radius=card?bodyRadius(card.seed.initialDiameter):0,finite=Number.isFinite(x)&&Number.isFinite(y);const bodies=finite&&card?s.units.map(u=>({id:u.id,team:u.team,distance:Math.hypot(u.x-x,u.y-y),required:bodyRadius(u.diameter)+radius})).filter(u=>u.distance<u.required-1e-6):[];const enemies=finite?s.units.filter(u=>u.team==='enemy').map(u=>({id:u.id,presence:PRESENCE_STRENGTH*falloff(Math.hypot(u.x-x,u.y-y),currentStats(u).presence)})).filter(u=>u.presence>0).sort((a,b)=>b.presence-a.presence||a.id-b.id):[];return {tick:s.tick,x,y,validation,bodies,enemies,enemyTotal:finite?enemyPresence(s,x,y):0,limit:PRESENCE_LIMIT};}

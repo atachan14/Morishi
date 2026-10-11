@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {createState,place,step,Clock,chooseTarget,effectiveRange,validatePlacement,WIDTH,HEIGHT,SEED_RADIUS,EPSILON,footprint,insideTerritory,territoryCoverage,clientToWorld,viewport,type Unit} from '../src/sim.js';
+import {createState,place,step,Clock,chooseTarget,effectiveRange,validatePlacement,WIDTH,HEIGHT,SEED_RADIUS,EPSILON,footprint,insideTerritory,territoryCoverage,clientToWorld,viewport,placementForecast,attackDamage,stalled,type Unit} from '../src/sim.js';
 test('same seed and actions reproduce the entire state',()=>{
   function run(){const s=createState(77);place(s,1.23456789,2.3456789);place(s,1.34567,6.76543);for(let i=0;i<250;i++){step(s);if(i===100)place(s,2.1345,4.4321);}return s;}
   assert.deepEqual(run(),run());assert.notDeepEqual(createState(77).cards,createState(78).cards);
@@ -79,4 +79,30 @@ test('mouse/touch client coordinates map to the same world point after resize, o
     assert.ok(Math.abs(mapped.x-point.x)<1e-12);assert.ok(Math.abs(mapped.y-point.y)<1e-12);assert.equal(validatePlacement(s,mapped.x,mapped.y).ok,true);
   }
   assert.deepEqual(s,before);assert.throws(()=>clientToWorld(1,2,{left:0,top:0,width:0,height:0}));
+});
+test('forecast is non-mutating and exactly agrees with immediate target and incoming damage',()=>{
+  const s=createState(1);const before=structuredClone(s);const forecast=placementForecast(s,2,2)!;assert.ok(forecast);assert.deepEqual(s,before);
+  place(s,2,2);const u=s.units.at(-1)!;const target=chooseTarget(u,s.units);assert.equal(forecast.targetId,target?.id??null);assert.equal(forecast.damage,target?attackDamage(u,target):0);
+  const incoming=s.units.filter(v=>v.team==='enemy'&&chooseTarget(v,s.units)?.id===u.id);
+  assert.deepEqual(forecast.incomingIds,incoming.map(v=>v.id));assert.equal(forecast.incomingDamage,incoming.reduce((sum,v)=>sum+attackDamage(v,u),0));
+  assert.equal(placementForecast(createState(),-1,2),undefined);
+});
+test('forecast distinguishes immediate attack, future growth, and pure expansion',()=>{
+  const s=createState(1);s.cards[0].range=3;
+  const future=placementForecast(s,2,2)!;assert.equal(future.targetId,null);assert.equal(future.grownTargetId,1);
+  const rear=placementForecast(s,.35,4.5)!;assert.equal(rear.targetId,null);assert.equal(rear.grownTargetId,null);
+  s.cards[0].range=4;assert.equal(placementForecast(s,2,2)!.targetId,1);
+  assert.ok(rear.newArea>=0&&rear.newArea<=1);
+});
+test('distance falloff affects real damage and respects exact range boundary',()=>{
+  const s=createState();place(s,1,2);const u=s.units.at(-1)!;u.stats.range=4;const foe=s.units[0];
+  foe.x=2;assert.ok(attackDamage(u,foe)>0);const near=attackDamage(u,foe);foe.x=3;assert.ok(attackDamage(u,foe)<near);foe.x=1+effectiveRange(u);assert.equal(attackDamage(u,foe),0);
+});
+test('exhausted mature unreachable board ends; future growth or remaining cards prevent premature loss',()=>{
+  const s=createState();place(s,.35,4.5);for(const u of s.units){u.age=224;u.stats.range=.5;}s.cards=[];assert.equal(stalled(s),true);step(s);assert.equal(s.outcome,'loss');
+  const growing=createState();place(growing,.35,4.5);growing.cards=[];assert.equal(stalled(growing),false);step(growing);assert.equal(growing.outcome,'playing');
+  const supplied=createState();place(supplied,.35,4.5);for(const u of supplied.units)u.age=224;assert.equal(stalled(supplied),false);step(supplied);assert.equal(supplied.outcome,'playing');
+});
+test('kills do not produce unlimited charges or extra plants',()=>{
+  const s=createState();place(s,2,2);for(const u of s.units.filter(u=>u.team==='enemy'))u.hp=0;const cards=s.cards.length;step(s);assert.equal(s.charges,5);assert.equal(s.cards.length,cards);assert.equal(s.outcome,'win');
 });

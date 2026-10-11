@@ -5,6 +5,7 @@ export type Stats = { power: number; range: number; presence: number; vitality: 
 export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null };
 export type State = { seed: number; tick: number; nextId: number; units: Unit[]; cards: Stats[]; territory: Territory[]; charges: number; outcome: 'playing' | 'win' | 'loss'; started: boolean; events: string[] };
 export type Placement = { ok: boolean; reason: string };
+export type PlacementForecast = { targetId:number|null; damage:number; grownTargetId:number|null; incomingIds:number[]; incomingDamage:number; newArea:number; note:string };
 function rng(seed: number) { let s = seed >>> 0; return () => { s += 0x6D2B79F5; let t = Math.imul(s ^ s >>> 15, 1 | s); t ^= t + Math.imul(t ^ t >>> 7, 61 | t); return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 export function makeStats(random: () => number): Stats {
   const weights = Array.from({length: 4}, () => 0.35 + random());
@@ -69,11 +70,35 @@ export function place(state: State,x:number,y:number): Placement {
 }
 export function growth(u: Unit) { return 0.65 + Math.min(u.age/180,0.65); }
 export function effectiveRange(u: Unit) { return u.stats.range * growth(u); }
+export function attackDamage(u:Unit,target:Unit):number {
+  const distance=Math.hypot(u.x-target.x,u.y-target.y),range=effectiveRange(u);
+  if(distance>=range-EPSILON)return 0;
+  return u.stats.power*growth(u)*Math.max(0,1-distance/range);
+}
 export function chooseTarget(u: Unit, units: Unit[]): Unit | undefined {
   return units.filter(v=>v.team!==u.team&&v.hp>0&&Math.hypot(v.x-u.x,v.y-u.y)<effectiveRange(u)-EPSILON).sort((a,b)=>{
     const score=(v:Unit)=>v.stats.presence*growth(v)/(1+Math.hypot(v.x-u.x,v.y-u.y));
     return score(b)-score(a)||a.id-b.id;
   })[0];
+}
+export function placementForecast(s:State,x:number,y:number):PlacementForecast|undefined {
+  if(!validatePlacement(s,x,y).ok)return undefined;
+  const stats=s.cards[0],seed:Unit={id:s.nextId,team:'ally',x,y,hp:stats.vitality,maxHp:stats.vitality,age:0,cooldown:0,stats,target:null};
+  const others=[...s.units,seed];const target=chooseTarget(seed,others);
+  const grown={...seed,age:224};const grownTarget=chooseTarget(grown,others);
+  const incoming=s.units.filter(u=>u.team==='enemy'&&chooseTarget(u,others)?.id===seed.id);
+  let total=0,fresh=0;
+  // Small deterministic local area estimate for UI only; no effect on placement/territory.
+  for(let yi=0;yi<12;yi++)for(let xi=0;xi<12;xi++){
+    const px=x-1.6+(xi+.5)*3.2/12,py=y-1.6+(yi+.5)*3.2/12;
+    if(Math.hypot(px-x,py-y)>1.6||px<0||px>WIDTH||py<0||py>HEIGHT)continue;
+    total++;if(!insideTerritory(s,px,py)&&!s.units.some(u=>u.team==='enemy'&&Math.hypot(px-u.x,py-u.y)<1.15-EPSILON))fresh++;
+  }
+  const note=target?`今、敵 #${target.id} に攻撃が届きます。`:grownTarget?`育つと敵 #${grownTarget.id} に届く位置です。`:'今の位置では育っても敵に届きません。領域を広げる中継向きです。';
+  return {targetId:target?.id??null,damage:target?attackDamage(seed,target):0,grownTargetId:grownTarget?.id??null,incomingIds:incoming.map(u=>u.id),incomingDamage:incoming.reduce((sum,u)=>sum+attackDamage(u,seed),0),newArea:total?fresh/total:0,note};
+}
+export function stalled(s:State):boolean {
+  return s.cards.length===0&&s.units.length>0&&s.units.every(u=>u.age>=224)&&s.units.every(u=>!chooseTarget(u,s.units));
 }
 function event(s:State,message:string) { s.events.unshift(message);s.events=s.events.slice(0,5); }
 function expand(s:State) {
@@ -93,8 +118,7 @@ export function step(s:State) {
   for(const u of [...s.units].sort((a,b)=>a.id-b.id)) {
     const target=chooseTarget(u,s.units);u.target=target?.id??null;
     if(!target||u.cooldown>0)continue;
-    const falloff=1-Math.hypot(u.x-target.x,u.y-target.y)/effectiveRange(u);
-    const amount=u.stats.power*growth(u)*Math.max(0,falloff);
+    const amount=attackDamage(u,target);
     damage.set(target.id,(damage.get(target.id)??0)+amount);u.cooldown=10;
   }
   for(const u of s.units)u.hp=Math.max(0,u.hp-(damage.get(u.id)??0));
@@ -105,6 +129,7 @@ export function step(s:State) {
   s.units=s.units.filter(u=>u.hp>0);expand(s);
   if(!s.units.some(u=>u.team==='enemy')){s.outcome='win';event(s,'攻略完了！植物が広げた領域を眺めてみましょう。');}
   else if(!s.units.some(u=>u.team==='ally')&&s.cards.length===0){s.outcome='loss';event(s,'配置する植物を使い切りました。新しい盤面で再挑戦できます。');}
+  else if(stalled(s)){s.outcome='loss';event(s,'芽を使い切り、成長しても攻撃が届かない盤面になりました。同じseedで前線への配置を試せます。');}
 }
 export class Clock {
   paused=true; speed=1; private accumulated=0;

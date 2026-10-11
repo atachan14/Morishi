@@ -1,0 +1,372 @@
+{
+  "version": 1,
+  "seeds": 128,
+  "policies": [
+    "forward",
+    "rear",
+    "mixed"
+  ],
+  "maxTicks": 2400,
+  "runs": 384,
+  "checkpoints": 7043,
+  "accepted": 6908,
+  "rejected": 97888,
+  "outcomes": {
+    "win": 27,
+    "loss": 307,
+    "playing": 50
+  },
+  "failures": [],
+  "unfinished": [
+    {
+      "seed": 0,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 4294967295,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 387276917,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 3428989595,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 3
+    },
+    {
+      "seed": 535203442,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 4203543429,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 4
+    },
+    {
+      "seed": 1309757276,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 1
+    },
+    {
+      "seed": 1697034193,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 1
+    },
+    {
+      "seed": 1070406884,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 2084311110,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 4
+    },
+    {
+      "seed": 3098215336,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 1457683801,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 3
+    },
+    {
+      "seed": 4112119562,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 2471588027,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 831056492,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1218333409,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 3
+    },
+    {
+      "seed": 591706100,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 1605610326,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1992887243,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1992887243,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 3
+    },
+    {
+      "seed": 3006791469,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 3
+    },
+    {
+      "seed": 3781345303,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 3
+    },
+    {
+      "seed": 4168622220,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 4168622220,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 3541994911,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1901463376,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 260931841,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1274836067,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 3929271828,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 1
+    },
+    {
+      "seed": 3929271828,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 3
+    },
+    {
+      "seed": 21581449,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1035485675,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 1
+    },
+    {
+      "seed": 3689921436,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 3689921436,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1422762592,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 4
+    },
+    {
+      "seed": 4077198353,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 4077198353,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1810039509,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 169507974,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 1570689117,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 4225124878,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1957966034,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 317434499,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 3985774486,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 3985774486,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 3359147177,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 1718615642,
+      "policy": "rear",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 5
+    },
+    {
+      "seed": 78084107,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 3
+    },
+    {
+      "seed": 2732519868,
+      "policy": "forward",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 2
+    },
+    {
+      "seed": 2732519868,
+      "policy": "mixed",
+      "tick": 2400,
+      "cards": 0,
+      "enemies": 3
+    }
+  ]
+}

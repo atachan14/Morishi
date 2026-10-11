@@ -1,0 +1,474 @@
+{
+  "maxTicks": 36000,
+  "runs": [
+    {
+      "seed": 0,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 7121,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 163.7183493971138,
+      "active": []
+    },
+    {
+      "seed": 4294967295,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 3501,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 42.198229829903084,
+      "active": []
+    },
+    {
+      "seed": 387276917,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 3541,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 18.491034566580993,
+      "active": []
+    },
+    {
+      "seed": 3428989595,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 5198,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 41.8820255745145,
+      "active": []
+    },
+    {
+      "seed": 535203442,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 5261,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 75.15103671191264,
+      "active": []
+    },
+    {
+      "seed": 4203543429,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 4181,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 16.041305497249596,
+      "active": []
+    },
+    {
+      "seed": 1309757276,
+      "policy": "mixed",
+      "outcome": "win",
+      "tick": 5374,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 81.47177312855501,
+      "active": []
+    },
+    {
+      "seed": 1697034193,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 4231,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 77.50203153858945,
+      "active": []
+    },
+    {
+      "seed": 1070406884,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 34737,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 213.03878639994764,
+      "active": []
+    },
+    {
+      "seed": 2084311110,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 3471,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 36.49669832571544,
+      "active": []
+    },
+    {
+      "seed": 3098215336,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 2599,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 12.682021893641377,
+      "active": []
+    },
+    {
+      "seed": 1457683801,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 3051,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 46.467566014844806,
+      "active": []
+    },
+    {
+      "seed": 4112119562,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 12101,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 222.08624046479645,
+      "active": []
+    },
+    {
+      "seed": 2471588027,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 2964,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 16.25534465430792,
+      "active": []
+    },
+    {
+      "seed": 831056492,
+      "policy": "rear",
+      "outcome": "playing",
+      "tick": 36000,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 14.20578456740077,
+      "active": [
+        {
+          "id": 21,
+          "target": 3,
+          "damage": 0.004227912073633474
+        }
+      ]
+    },
+    {
+      "seed": 1218333409,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 2482,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 1.6681186619296113,
+      "active": []
+    },
+    {
+      "seed": 591706100,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 2721,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 47.23391237889268,
+      "active": []
+    },
+    {
+      "seed": 1605610326,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 11231,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 97.82604117157007,
+      "active": []
+    },
+    {
+      "seed": 1992887243,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 2941,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 34.95505603354809,
+      "active": []
+    },
+    {
+      "seed": 1992887243,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 4901,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 69.43977013307472,
+      "active": []
+    },
+    {
+      "seed": 3006791469,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 2669,
+      "maxQuietTicks": 7,
+      "totalHpDecrease": 27.259249459128,
+      "active": []
+    },
+    {
+      "seed": 3781345303,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 2942,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 24.134540959285914,
+      "active": []
+    },
+    {
+      "seed": 4168622220,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 2441,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 2.7038288367930363,
+      "active": []
+    },
+    {
+      "seed": 4168622220,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 9926,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 108.8692596554256,
+      "active": []
+    },
+    {
+      "seed": 3541994911,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 3101,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 33.41628742146804,
+      "active": []
+    },
+    {
+      "seed": 1901463376,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 8141,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 109.55963135908746,
+      "active": []
+    },
+    {
+      "seed": 260931841,
+      "policy": "rear",
+      "outcome": "playing",
+      "tick": 36000,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 63.06930517067758,
+      "active": [
+        {
+          "id": 3,
+          "target": 22,
+          "damage": 0.018770626538891645
+        }
+      ]
+    },
+    {
+      "seed": 1274836067,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 8286,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 86.68805220302306,
+      "active": []
+    },
+    {
+      "seed": 3929271828,
+      "policy": "forward",
+      "outcome": "win",
+      "tick": 5620,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 82.22494537665023,
+      "active": []
+    },
+    {
+      "seed": 3929271828,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 2881,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 22.397315312528008,
+      "active": []
+    },
+    {
+      "seed": 21581449,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 4051,
+      "maxQuietTicks": 4,
+      "totalHpDecrease": 224.2534153782094,
+      "active": []
+    },
+    {
+      "seed": 1035485675,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 3751,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 54.66240193511271,
+      "active": []
+    },
+    {
+      "seed": 3689921436,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 13226,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 204.91855433816363,
+      "active": []
+    },
+    {
+      "seed": 3689921436,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 3481,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 126.86764310276612,
+      "active": []
+    },
+    {
+      "seed": 1422762592,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 33751,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 66.14393640354876,
+      "active": []
+    },
+    {
+      "seed": 4077198353,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 2841,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 24.158263110763528,
+      "active": []
+    },
+    {
+      "seed": 4077198353,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 3332,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 44.960277363237765,
+      "active": []
+    },
+    {
+      "seed": 1810039509,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 4571,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 66.83613121333428,
+      "active": []
+    },
+    {
+      "seed": 169507974,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 5757,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 67.62047441211507,
+      "active": []
+    },
+    {
+      "seed": 1570689117,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 6046,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 72.70493364380343,
+      "active": []
+    },
+    {
+      "seed": 4225124878,
+      "policy": "rear",
+      "outcome": "playing",
+      "tick": 36000,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 91.53725492251579,
+      "active": [
+        {
+          "id": 24,
+          "target": 3,
+          "damage": 0.02724323063170242
+        }
+      ]
+    },
+    {
+      "seed": 1957966034,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 6745,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 94.53583894618578,
+      "active": []
+    },
+    {
+      "seed": 317434499,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 2581,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 32.59815366497742,
+      "active": []
+    },
+    {
+      "seed": 3985774486,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 3801,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 131.12766030770626,
+      "active": []
+    },
+    {
+      "seed": 3985774486,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 8111,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 184.23316202901015,
+      "active": []
+    },
+    {
+      "seed": 3359147177,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 3222,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 45.48317942216545,
+      "active": []
+    },
+    {
+      "seed": 1718615642,
+      "policy": "rear",
+      "outcome": "loss",
+      "tick": 6161,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 82.82242491806801,
+      "active": []
+    },
+    {
+      "seed": 78084107,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 2865,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 9.657717631774858,
+      "active": []
+    },
+    {
+      "seed": 2732519868,
+      "policy": "forward",
+      "outcome": "loss",
+      "tick": 14787,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 141.6966613400724,
+      "active": []
+    },
+    {
+      "seed": 2732519868,
+      "policy": "mixed",
+      "outcome": "loss",
+      "tick": 4203,
+      "maxQuietTicks": 9,
+      "totalHpDecrease": 67.10957926721699,
+      "active": []
+    }
+  ],
+  "failures": []
+}

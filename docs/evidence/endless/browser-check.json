@@ -1,0 +1,409 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "naturally reached late states: exact reload, stopped resume, win/manual finish, depleted-allies recovery and supply wait; full/local frame sampling"
+      ],
+      "failures": [],
+      "runs": [
+        {
+          "name": "20261011-safe-retention-peak",
+          "tick": 42961,
+          "units": 202,
+          "allies": 197,
+          "bytes": 48375,
+          "full": {
+            "frames": 31,
+            "p95": 33.59999999999991,
+            "max": 33.600000000000136,
+            "over50": 0,
+            "longTasks": []
+          },
+          "running": {
+            "frames": 26,
+            "p95": 33.5,
+            "max": 33.59999999999991,
+            "over50": 0,
+            "longTasks": []
+          },
+          "local": {
+            "frames": 42,
+            "p95": 16.800000000000068,
+            "max": 16.899999999999977,
+            "over50": 0,
+            "longTasks": []
+          },
+          "text": {
+            "activity": "停止中 · 配置力0 · 定期補充まで23.9ゲーム秒 · 敵攻略でも＋1",
+            "supply": "配置力 0 / 5 · 芽の供給 継続",
+            "refill": "次の補充まで 23.9ゲーム秒（停止中）",
+            "result": "",
+            "resultHidden": true,
+            "playDisabled": false
+          },
+          "writes": [
+            {
+              "key": "morishi.run.v1",
+              "bytes": 48375,
+              "ms": 0.39999985694885254
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 48376,
+              "ms": 0.2999999523162842
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 48376,
+              "ms": 0.20000004768371582
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 48376,
+              "ms": 0.20000004768371582
+            }
+          ]
+        },
+        {
+          "name": "11-safe-retention-peak",
+          "tick": 42961,
+          "units": 194,
+          "allies": 191,
+          "bytes": 47098,
+          "full": {
+            "frames": 33,
+            "p95": 33.5,
+            "max": 33.5,
+            "over50": 0,
+            "longTasks": []
+          },
+          "running": {
+            "frames": 24,
+            "p95": 33.5,
+            "max": 50.30000000000018,
+            "over50": 1,
+            "longTasks": []
+          },
+          "local": {
+            "frames": 42,
+            "p95": 16.799999999999955,
+            "max": 16.800000000000068,
+            "over50": 0,
+            "longTasks": []
+          },
+          "text": {
+            "activity": "停止中 · 配置力0 · 定期補充まで23.9ゲーム秒 · 敵攻略でも＋1",
+            "supply": "配置力 0 / 5 · 芽の供給 継続",
+            "refill": "次の補充まで 23.9ゲーム秒（停止中）",
+            "result": "",
+            "resultHidden": true,
+            "playDisabled": false
+          },
+          "writes": [
+            {
+              "key": "morishi.run.v1",
+              "bytes": 47098,
+              "ms": 0.2999999523162842
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 47099,
+              "ms": 0.2999999523162842
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 47099,
+              "ms": 0.20000004768371582
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 47099,
+              "ms": 0.2999999523162842
+            }
+          ]
+        },
+        {
+          "name": "11-attack-zero",
+          "tick": 151,
+          "units": 22,
+          "allies": 0,
+          "bytes": 6077,
+          "full": {
+            "frames": 42,
+            "p95": 16.700000000000045,
+            "max": 16.799999999999955,
+            "over50": 0,
+            "longTasks": []
+          },
+          "running": {
+            "frames": 42,
+            "p95": 16.799999999999955,
+            "max": 16.799999999999955,
+            "over50": 0,
+            "longTasks": []
+          },
+          "text": {
+            "activity": "停止中 · 芽を選び、射程と狙われ方を確認",
+            "supply": "配置力 2 / 5 · 芽の供給 継続",
+            "refill": "次の補充まで 8.9ゲーム秒（停止中）",
+            "result": "",
+            "resultHidden": true,
+            "playDisabled": false
+          },
+          "writes": [
+            {
+              "key": "morishi.run.v1",
+              "bytes": 6080,
+              "ms": 0.20000004768371582
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 6080,
+              "ms": 0.10000014305114746
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 6080,
+              "ms": 0
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 6080,
+              "ms": 0.09999990463256836
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 6080,
+              "ms": 0
+            }
+          ]
+        },
+        {
+          "name": "11-attack-waiting",
+          "tick": 1,
+          "units": 27,
+          "allies": 3,
+          "bytes": 7032,
+          "full": {
+            "frames": 41,
+            "p95": 16.80000000000001,
+            "max": 16.899999999999977,
+            "over50": 0,
+            "longTasks": []
+          },
+          "running": {
+            "frames": 42,
+            "p95": 16.799999999999955,
+            "max": 16.899999999999864,
+            "over50": 0,
+            "longTasks": []
+          },
+          "local": {
+            "frames": 42,
+            "p95": 16.799999999999955,
+            "max": 16.800000000000068,
+            "over50": 0,
+            "longTasks": []
+          },
+          "text": {
+            "activity": "停止中 · 配置力0 · 定期補充まで23.9ゲーム秒 · 敵攻略でも＋1",
+            "supply": "配置力 0 / 5 · 芽の供給 継続",
+            "refill": "次の補充まで 23.9ゲーム秒（停止中）",
+            "result": "",
+            "resultHidden": true,
+            "playDisabled": false
+          },
+          "writes": [
+            {
+              "key": "morishi.run.v1",
+              "bytes": 7027,
+              "ms": 0.10000014305114746
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 7072,
+              "ms": 0.09999990463256836
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 6966,
+              "ms": 0.09999990463256836
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 6991,
+              "ms": 0
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 6991,
+              "ms": 0
+            }
+          ]
+        },
+        {
+          "name": "11-attack",
+          "tick": 2939,
+          "units": 28,
+          "allies": 28,
+          "bytes": 14834,
+          "full": {
+            "frames": 41,
+            "p95": 16.799999999999955,
+            "max": 16.899999999999864,
+            "over50": 0,
+            "longTasks": []
+          },
+          "text": {
+            "activity": "攻略完了",
+            "supply": "配置力 2 / 5 · 芽の供給 継続",
+            "refill": "次の補充まで 18.1ゲーム秒（停止中）",
+            "result": "攻略完了！配置可能 約100% · 敵攻略 24/24体 · 293.9秒全ての敵を攻略しました。同じseedで別の広げ方や、新しいseedを試せます。同じseedで再挑戦新seedで始める",
+            "resultHidden": false,
+            "playDisabled": true
+          },
+          "writes": []
+        }
+      ],
+      "recovery": {
+        "beforeCharges": 0,
+        "afterCharges": 1,
+        "ticks": 80
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "naturally reached late states: exact reload, stopped resume, win/manual finish, depleted-allies recovery and supply wait; full/local frame sampling"
+      ],
+      "failures": [],
+      "runs": [
+        {
+          "name": "20261011-safe-retention-peak",
+          "tick": 42961,
+          "units": 202,
+          "allies": 197,
+          "bytes": 48375,
+          "full": {
+            "frames": 32,
+            "p95": 33.5,
+            "max": 33.59999999999991,
+            "over50": 0,
+            "longTasks": []
+          },
+          "running": {
+            "frames": 26,
+            "p95": 33.5,
+            "max": 33.5,
+            "over50": 0,
+            "longTasks": []
+          },
+          "local": {
+            "frames": 42,
+            "p95": 16.799999999999955,
+            "max": 16.800000000000068,
+            "over50": 0,
+            "longTasks": []
+          },
+          "text": {
+            "activity": "停止中 · 配置力0 · 定期補充まで23.9ゲーム秒 · 敵攻略でも＋1",
+            "supply": "配置力 0 / 5 · 芽の供給 継続",
+            "refill": "次の補充まで 23.9ゲーム秒（停止中）",
+            "result": "",
+            "resultHidden": true,
+            "playDisabled": false
+          },
+          "writes": [
+            {
+              "key": "morishi.run.v1",
+              "bytes": 48375,
+              "ms": 0.40000009536743164
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 48376,
+              "ms": 0.6999998092651367
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 48376,
+              "ms": 0.2999999523162842
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 48376,
+              "ms": 0.20000004768371582
+            }
+          ]
+        },
+        {
+          "name": "11-safe-retention-peak",
+          "tick": 42961,
+          "units": 194,
+          "allies": 191,
+          "bytes": 47098,
+          "full": {
+            "frames": 34,
+            "p95": 33.5,
+            "max": 33.5,
+            "over50": 0,
+            "longTasks": []
+          },
+          "running": {
+            "frames": 24,
+            "p95": 33.5,
+            "max": 33.5,
+            "over50": 0,
+            "longTasks": []
+          },
+          "local": {
+            "frames": 42,
+            "p95": 16.899999999999977,
+            "max": 16.90000000000009,
+            "over50": 0,
+            "longTasks": []
+          },
+          "text": {
+            "activity": "停止中 · 配置力0 · 定期補充まで23.9ゲーム秒 · 敵攻略でも＋1",
+            "supply": "配置力 0 / 5 · 芽の供給 継続",
+            "refill": "次の補充まで 23.9ゲーム秒（停止中）",
+            "result": "",
+            "resultHidden": true,
+            "playDisabled": false
+          },
+          "writes": [
+            {
+              "key": "morishi.run.v1",
+              "bytes": 47098,
+              "ms": 0.20000004768371582
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 47099,
+              "ms": 0.2999999523162842
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 47099,
+              "ms": 0.2999999523162842
+            },
+            {
+              "key": "morishi.run.v1",
+              "bytes": 47099,
+              "ms": 0.3000001907348633
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": []
+}

@@ -1,0 +1,31 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "native planting after natural ally depletion; zero charge refill via ordinary event skip without enemy kill"
+      ],
+      "failures": [],
+      "runs": [
+        {
+          "case": "natural zero allies, native replant",
+          "tick": 151,
+          "charges": 1
+        },
+        {
+          "case": "natural retained state, refill without kill",
+          "fromTick": 42961,
+          "toTick": 43384,
+          "charges": 1,
+          "skips": 3
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": []
+}

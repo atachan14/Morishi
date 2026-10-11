@@ -1,0 +1,142 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "two real 24-enemy runs: first placement, enemy+ally info, 4x play/pause, bounded event skip, remote group selection, zoom and drag with no extra placement"
+      ],
+      "failures": [],
+      "runs": [
+        {
+          "seed": 20261011,
+          "firstEnemy": 6,
+          "remoteWhilePlaying": 19,
+          "firstEnemyHP": 0,
+          "secondEnemy": 19,
+          "playingTicks": 49,
+          "secondPlacement": {
+            "x": 2.42355162424501,
+            "y": 22.91927980809473,
+            "score": 0.3788956180001677
+          },
+          "zoomOuts": 0,
+          "secondSkipTicks": 31,
+          "finalEnemies": 23,
+          "skipTicks": 12,
+          "skipMs": 106.26960000000054,
+          "stop": "時間送り停止 · 撃破・植物の消滅",
+          "units": 23,
+          "perf": {
+            "frames": 156,
+            "p50": 16.699999999999818,
+            "p95": 16.800000000000182,
+            "max": 16.900000000000546,
+            "over50ms": 0,
+            "longTasks": []
+          }
+        },
+        {
+          "seed": 11,
+          "firstEnemy": 6,
+          "remoteWhilePlaying": 19,
+          "firstEnemyHP": 13.061999999999987,
+          "secondEnemy": 19,
+          "playingTicks": 49,
+          "secondPlacement": {
+            "x": 2.6427144765155384,
+            "y": 22.97099866999546,
+            "score": -0.23735550851179643
+          },
+          "zoomOuts": 0,
+          "secondSkipTicks": 35,
+          "finalEnemies": 24,
+          "skipTicks": 12,
+          "skipMs": 96.03880000000026,
+          "stop": "時間送り停止 · 撃破・植物の消滅",
+          "units": 24,
+          "perf": {
+            "frames": 156,
+            "p50": 16.69999999999891,
+            "p95": 16.799999999999272,
+            "max": 16.80000000000109,
+            "over50ms": 0,
+            "longTasks": []
+          }
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "two real 24-enemy runs: first placement, enemy+ally info, 4x play/pause, bounded event skip, remote group selection, zoom and drag with no extra placement"
+      ],
+      "failures": [],
+      "runs": [
+        {
+          "seed": 20261011,
+          "firstEnemy": 6,
+          "remoteWhilePlaying": 19,
+          "firstEnemyHP": 0,
+          "secondEnemy": 19,
+          "playingTicks": 63,
+          "secondPlacement": {
+            "x": 2.0235516242450102,
+            "y": 23.319279808094727,
+            "score": -4.752185981430777
+          },
+          "zoomOuts": 1,
+          "secondSkipTicks": 21,
+          "finalEnemies": 23,
+          "skipTicks": 54,
+          "skipMs": 93.95860000000175,
+          "stop": "時間送り停止 · 成長完了",
+          "units": 23,
+          "perf": {
+            "frames": 203,
+            "p50": 16.699999999999818,
+            "p95": 16.800000000000182,
+            "max": 16.900000000000546,
+            "over50ms": 0,
+            "longTasks": []
+          }
+        },
+        {
+          "seed": 11,
+          "firstEnemy": 6,
+          "remoteWhilePlaying": 19,
+          "firstEnemyHP": 13.061999999999987,
+          "secondEnemy": 19,
+          "playingTicks": 59,
+          "secondPlacement": {
+            "x": 2.6427144765155384,
+            "y": 22.97099866999546,
+            "score": -0.23735550851179643
+          },
+          "zoomOuts": 0,
+          "secondSkipTicks": 35,
+          "finalEnemies": 24,
+          "skipTicks": 2,
+          "skipMs": 98.85049999999683,
+          "stop": "時間送り停止 · 撃破・植物の消滅",
+          "units": 24,
+          "perf": {
+            "frames": 192,
+            "p50": 16.69999999999891,
+            "p95": 16.80000000000109,
+            "max": 17.19999999999891,
+            "over50ms": 0,
+            "longTasks": []
+          }
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": []
+}

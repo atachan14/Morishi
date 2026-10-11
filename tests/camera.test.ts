@@ -21,3 +21,7 @@ test('same-rules snapshot-3 restores game state with a default full camera',()=>
  let hash=2166136261;for(const c of JSON.stringify(old))hash=Math.imul(hash^c.charCodeAt(0),16777619);old.checksum=(hash>>>0).toString(16);
  const result=replay(old);assert.deepEqual(result.state,s);assert.deepEqual(result.save.view,{x:6,y:4.5,zoom:1});
 });
+
+test('remote selection reveals its point without changing zoom; visible and invalid points leave the view intact',()=>{
+ const stage={width:36,height:27,enemyCount:24},s=createState(11,stage),before=structuredClone(s),c=new BoardCamera({x:0,y:0,zoom:9},stage),p={x:32.1234,y:24.4567};assert.equal(c.focusIfOutside(p,600,450,.378),true);assert.equal(c.view.zoom,9);const b=c.bounds(600,450);assert.ok(p.x>=b.x&&p.x<=b.x+b.width&&p.y>=b.y&&p.y<=b.y+b.height);const view={...c.view};assert.equal(c.focusIfOutside(p,600,450,.378),false);assert.deepEqual(c.view,view);assert.equal(c.focusIfOutside({x:NaN,y:4},600,450),false);assert.deepEqual(c.view,view);assert.deepEqual(s,before);
+});

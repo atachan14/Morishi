@@ -8,6 +8,11 @@ export class BoardCamera {
  set(v:View){const {width,height}=this.stage,zoom=Math.max(1,Math.min(this.maxZoom,Number.isFinite(v.zoom)?v.zoom:1)),hx=width/(2*zoom),hy=height/(2*zoom);this.view={zoom,x:Math.max(hx,Math.min(width-hx,Number.isFinite(v.x)?v.x:width/2)),y:Math.max(hy,Math.min(height-hy,Number.isFinite(v.y)?v.y:height/2))};}
  layout(width:number,height:number){const base=viewport(width,height,this.stage),scale=base.scale*this.view.zoom;return {scale,ox:base.ox+this.stage.width*base.scale/2-this.view.x*scale,oy:base.oy+this.stage.height*base.scale/2-this.view.y*scale};}
  point(clientX:number,clientY:number,rect:{left:number;top:number;width:number;height:number}){const base=clientToWorld(clientX,clientY,rect,this.stage);return {x:this.view.x+(base.x-this.stage.width/2)/this.view.zoom,y:this.view.y+(base.y-this.stage.height/2)/this.view.zoom};}
+ focusIfOutside(p:{x:number;y:number},width:number,height:number,radius=0){
+  if(!Number.isFinite(p.x)||!Number.isFinite(p.y)||p.x<0||p.x>this.stage.width||p.y<0||p.y>this.stage.height)return false;
+  const b=this.bounds(width,height);if(p.x-radius>=b.x&&p.x+radius<=b.x+b.width&&p.y-radius>=b.y&&p.y+radius<=b.y+b.height)return false;
+  const before={...this.view};this.set({...this.view,x:p.x,y:p.y});return this.view.x!==before.x||this.view.y!==before.y;
+ }
  pan(dx:number,dy:number,baseScale:number){this.set({...this.view,x:this.view.x-dx/(baseScale*this.view.zoom),y:this.view.y-dy/(baseScale*this.view.zoom)});}
  zoomAt(factor:number,anchor:{x:number;y:number}){const old=this.view,zoom=Math.max(1,Math.min(this.maxZoom,old.zoom*factor));this.set({zoom,x:anchor.x-(anchor.x-old.x)*old.zoom/zoom,y:anchor.y-(anchor.y-old.y)*old.zoom/zoom});}
  bounds(width:number,height:number){const l=this.layout(width,height),x=Math.max(0,-l.ox/l.scale),y=Math.max(0,-l.oy/l.scale),right=Math.min(this.stage.width,(width-l.ox)/l.scale),bottom=Math.min(this.stage.height,(height-l.oy)/l.scale);return {x,y,width:right-x,height:bottom-y};}

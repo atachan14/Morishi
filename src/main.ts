@@ -36,6 +36,7 @@ const selectedPanel=document.createElement('section');selectedPanel.id='selected
 const escape=(text='')=>text.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 const enemyButtons=new Map<number,{button:HTMLButtonElement;name:HTMLSpanElement;hp:HTMLSpanElement}>();
 function html(id:string,value:string){if($(id).innerHTML!==value)$(id).innerHTML=value;}
+function selectUnit(id:number,reveal=false){const unit=state.units.find(u=>u.id===id);if(!unit)return;selected=id;$('left').scrollTop=0;if(reveal&&camera.focusIfOutside(unit,game.scale.width,game.scale.height,footprint(unit))){taps.cancel();hovered=null;persist(false,true);}refresh();}
 function refreshEnemyList(){
   const enemies=state.units.filter(u=>u.team==='enemy');
   $('enemy-count').textContent=`敵 ${enemies.length}体 / 味方 ${state.units.filter(u=>u.team==='ally').length}体`;
@@ -43,7 +44,7 @@ function refreshEnemyList(){
   for(const [id,entry] of enemyButtons)if(!alive.has(id)){entry.button.remove();enemyButtons.delete(id);}
   for(const enemy of enemies){
     let entry=enemyButtons.get(enemy.id);
-    if(!entry){const button=document.createElement('button'),name=document.createElement('span'),hp=document.createElement('span');button.className='enemy';name.className='enemy-name';button.append(name,hp);button.onclick=()=>{selected=enemy.id;$('left').scrollTop=0;refresh();};$('enemy-list').append(button);entry={button,name,hp};enemyButtons.set(enemy.id,entry);}
+    if(!entry){const button=document.createElement('button'),name=document.createElement('span'),hp=document.createElement('span');button.className='enemy';name.className='enemy-name';button.append(name,hp);button.onclick=()=>selectUnit(enemy.id,true);$('enemy-list').append(button);entry={button,name,hp};enemyButtons.set(enemy.id,entry);}
     entry.name.textContent=`#${enemy.id} ${labels[dominant(enemy.stats)]}型`;entry.hp.textContent=`HP ${Math.ceil(enemy.hp)}`;entry.button.setAttribute('aria-pressed',String(selected===enemy.id));
   }
 }
@@ -77,7 +78,7 @@ function refresh(){
   if(state.outcome!=='playing'){
     const diagnosis=resultDiagnosis(state);
     html('run-result',`<strong>${state.outcome==='win'?'攻略完了！':'今回はここまで。'}</strong><p>配置可能 約${Math.round(territoryCoverage(state)*100)}% · 敵攻略 ${stageProgress(state).defeated}/${state.stage.enemyCount}体 · ${(state.tick/10).toFixed(1)}秒</p><p>${escape(diagnosis?.message??state.events[0])}</p><p class="hint">${escape(diagnosis?.suggestion)}</p><div>${diagnosis?.enemyId?'<button id="inspect-gap">味方の射程で確認</button>':''}<button id="retry-run">同じseedで再挑戦</button><button id="next-run">新seedで始める</button></div>`);
-    if(diagnosis?.enemyId)$('inspect-gap').onclick=()=>{selected=diagnosis.allyId!;message(`味方 #${diagnosis.allyId} の射程円と敵 #${diagnosis.enemyId} の位置を比較できます。`);refresh();};
+    if(diagnosis?.enemyId)$('inspect-gap').onclick=()=>{selectUnit(diagnosis.allyId!,true);message(`味方 #${diagnosis.allyId} の射程円と敵 #${diagnosis.enemyId} の位置を比較できます。`);refresh();};
     $('retry-run').onclick=()=>reset(state.seed);$('next-run').onclick=()=>reset((state.seed+1)>>>0);
   }
 }

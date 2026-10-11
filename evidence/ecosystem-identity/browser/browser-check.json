@@ -1,0 +1,298 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "upper-half identity pane; four proportional element petals and attribute-role bars; same hand phenotype; current body/range/presence diagram; non-contact growth comparison",
+        "late-to-new autosave resets; both absorbed detail selections follow lineage; pending hand survives absorption; paused historical and real-time shot effects expire; bounded wall-time draw/rAF samples; giant camera fit and exact reload; armed pan/pinch/cancel do not plant; confirmed tap plants once; 128-body boundary fixture",
+        "organic battle checkpoint; seed/range/combat/clock reproduction; explicit point independent of normal/new-run saves; exact stopped restore; failed overlap report with no spend and correct ID; successful placement clears report; quota and unknown-checkpoint failures retain raw; short real active operation; candidate hit/rate detail agrees with current snapshot and states growth assumptions",
+        "bounded mature same-card nurture search; no-cost candidate; expected legal point; native planting once; frozen hand, manual point and exact paused reload retained",
+        "new run uses spaced nonuniform pockets; old run retry preserves omitted layout; current pocket retry and reload retain generation; no extra comparison controls",
+        "three curated profiles; optional nearest presence ties with exact backups and frozen basis; guard saved run retained; folded ranking explanation matches real candidates with exact backups, frozen hand and paused reload; folded comparison settings; new local range default and explicit 2/5 run switching with exact raw backups; old comparison keeps 5 on reload and replant; discoverable bidirectional entry preserves real legacy save; atomic wipe pause; mature wipe does not wait endlessly; exact paused reload; no-cost legal candidate; PC direct/phone confirmed replant with fixed hand; voluntary finish keeps board; no horizontal overflow and full-width canvas"
+      ],
+      "failures": [],
+      "layout": {
+        "canvas": 764,
+        "wrap": 764,
+        "handBottom": 732,
+        "viewport": 768,
+        "overflow": false
+      },
+      "autosaveAfterNewTick": 50,
+      "absorbedSelectionsFollowed": true,
+      "costs": [
+        {
+          "fixture": "giant",
+          "synthetic": true,
+          "actualWallMs": 2014.4909000000007,
+          "drawMs": {
+            "p50": 0.40000009536743164,
+            "p95": 0.6000001430511475,
+            "max": 0.7999999523162842,
+            "count": 114
+          },
+          "rafDeltaMs": {
+            "p50": 17.600000000000136,
+            "p95": 18.5,
+            "max": 18.69999999999999,
+            "count": 114
+          },
+          "bullets": 0,
+          "badGradients": 0,
+          "gradientCalls": 1026,
+          "logItems": 8,
+          "nodes": 419,
+          "overflow": false
+        },
+        {
+          "fixture": "dense-128",
+          "synthetic": true,
+          "actualWallMs": 2027.7366000000002,
+          "drawMs": {
+            "p50": 2.299999952316284,
+            "p95": 2.6999998092651367,
+            "max": 3.1999998092651367,
+            "count": 113
+          },
+          "rafDeltaMs": {
+            "p50": 17.700000000000045,
+            "p95": 18.100000000000136,
+            "max": 18.599999999999966,
+            "count": 113
+          },
+          "bullets": 0,
+          "badGradients": 0,
+          "gradientCalls": 14464,
+          "logItems": 1,
+          "nodes": 442,
+          "overflow": false
+        }
+      ],
+      "gestures": {
+        "panDidNotPlant": true,
+        "pinchDidNotPlant": false,
+        "cancelDidNotPlant": false,
+        "confirmedTapPlantsOnce": true
+      },
+      "pausedVfxExpires": true,
+      "organic": {
+        "seed": 11,
+        "sourceTick": 600,
+        "realWallMs": 1785.6227,
+        "gameTicksAdvanced": 34,
+        "placedCard": 18,
+        "events": 8,
+        "units": 9
+      },
+      "nurture": {
+        "seed": 11,
+        "tick": 2400,
+        "expectedReachGameSeconds": 34.59069144049197,
+        "operationWallMs": 1349.1336999999985,
+        "card": 42,
+        "checked": 160
+      },
+      "proof": {
+        "wipeTick": 56,
+        "recoveredSeed": {
+          "generator": "eco-seed-1",
+          "runSeed": 20261011,
+          "source": "hand",
+          "index": 0,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "range",
+            "ice": "defense",
+            "electric": "attack",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 110.710861,
+            "hpReg": 0.08086,
+            "presenceHalo": 2.824753,
+            "elements": {
+              "fire": 20.89959,
+              "ice": 23.534757,
+              "electric": 25.370703,
+              "dark": 26.19495
+            }
+          },
+          "fixed": {
+            "hp": 110.710861,
+            "hpReg": 0.08086,
+            "presenceHalo": 2.824753,
+            "elements": {
+              "fire": 20.89959,
+              "ice": 23.534757,
+              "electric": 25.370703,
+              "dark": 26.19495
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "unmodifiedLegacy": true,
+        "merges": 14
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "upper-half identity pane; four proportional element petals and attribute-role bars; same hand phenotype; current body/range/presence diagram; non-contact growth comparison",
+        "late-to-new autosave resets; both absorbed detail selections follow lineage; pending hand survives absorption; paused historical and real-time shot effects expire; bounded wall-time draw/rAF samples; giant camera fit and exact reload; armed pan/pinch/cancel do not plant; confirmed tap plants once; 128-body boundary fixture",
+        "organic battle checkpoint; seed/range/combat/clock reproduction; explicit point independent of normal/new-run saves; exact stopped restore; failed overlap report with no spend and correct ID; successful placement clears report; quota and unknown-checkpoint failures retain raw; short real active operation; candidate hit/rate detail agrees with current snapshot and states growth assumptions",
+        "bounded mature same-card nurture search; no-cost candidate; expected legal point; native planting once; frozen hand, manual point and exact paused reload retained",
+        "new run uses spaced nonuniform pockets; old run retry preserves omitted layout; current pocket retry and reload retain generation; no extra comparison controls",
+        "three curated profiles; optional nearest presence ties with exact backups and frozen basis; guard saved run retained; folded ranking explanation matches real candidates with exact backups, frozen hand and paused reload; folded comparison settings; new local range default and explicit 2/5 run switching with exact raw backups; old comparison keeps 5 on reload and replant; discoverable bidirectional entry preserves real legacy save; atomic wipe pause; mature wipe does not wait endlessly; exact paused reload; no-cost legal candidate; PC direct/phone confirmed replant with fixed hand; voluntary finish keeps board; no horizontal overflow and full-width canvas"
+      ],
+      "failures": [],
+      "layout": {
+        "canvas": 368,
+        "wrap": 368,
+        "handBottom": 830.5,
+        "viewport": 844,
+        "overflow": false
+      },
+      "autosaveAfterNewTick": 50,
+      "absorbedSelectionsFollowed": true,
+      "costs": [
+        {
+          "fixture": "giant",
+          "synthetic": true,
+          "actualWallMs": 2062.9225000000006,
+          "drawMs": {
+            "p50": 0.40000009536743164,
+            "p95": 0.5999999046325684,
+            "max": 0.6000001430511475,
+            "count": 115
+          },
+          "rafDeltaMs": {
+            "p50": 17.600000000000023,
+            "p95": 18.5,
+            "max": 18.600000000000136,
+            "count": 115
+          },
+          "bullets": 0,
+          "badGradients": 0,
+          "gradientCalls": 1035,
+          "logItems": 8,
+          "nodes": 419,
+          "overflow": false
+        },
+        {
+          "fixture": "dense-128",
+          "synthetic": true,
+          "actualWallMs": 2044.3755999999994,
+          "drawMs": {
+            "p50": 2.6000001430511475,
+            "p95": 3,
+            "max": 3.200000047683716,
+            "count": 113
+          },
+          "rafDeltaMs": {
+            "p50": 17.699999999999818,
+            "p95": 18.59999999999991,
+            "max": 18.700000000000045,
+            "count": 113
+          },
+          "bullets": 0,
+          "badGradients": 0,
+          "gradientCalls": 14464,
+          "logItems": 1,
+          "nodes": 442,
+          "overflow": false
+        }
+      ],
+      "gestures": {
+        "panDidNotPlant": true,
+        "pinchDidNotPlant": true,
+        "cancelDidNotPlant": true,
+        "confirmedTapPlantsOnce": true
+      },
+      "pausedVfxExpires": true,
+      "organic": {
+        "seed": 11,
+        "sourceTick": 600,
+        "realWallMs": 2079.3947000000044,
+        "gameTicksAdvanced": 39,
+        "placedCard": 18,
+        "events": 8,
+        "units": 9
+      },
+      "nurture": {
+        "seed": 11,
+        "tick": 2400,
+        "expectedReachGameSeconds": 34.59069144049197,
+        "operationWallMs": 2446.4891999999963,
+        "card": 42,
+        "checked": 160
+      },
+      "proof": {
+        "wipeTick": 56,
+        "recoveredSeed": {
+          "generator": "eco-seed-1",
+          "runSeed": 20261011,
+          "source": "hand",
+          "index": 0,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "range",
+            "ice": "defense",
+            "electric": "attack",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 110.710861,
+            "hpReg": 0.08086,
+            "presenceHalo": 2.824753,
+            "elements": {
+              "fire": 20.89959,
+              "ice": 23.534757,
+              "electric": 25.370703,
+              "dark": 26.19495
+            }
+          },
+          "fixed": {
+            "hp": 110.710861,
+            "hpReg": 0.08086,
+            "presenceHalo": 2.824753,
+            "elements": {
+              "fire": 20.89959,
+              "ice": 23.534757,
+              "electric": 25.370703,
+              "dark": 26.19495
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "unmodifiedLegacy": true,
+        "merges": 14
+      }
+    }
+  ],
+  "runtimeErrors": []
+}

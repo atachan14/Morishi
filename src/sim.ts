@@ -112,15 +112,9 @@ export function placementForecast(s:State,x:number,y:number):PlacementForecast|u
   const others=[...s.units,seed];const target=chooseTarget(seed,others);
   const grown={...seed,age:224};const grownTarget=chooseTarget(grown,others);
   const incoming=s.units.filter(u=>u.team==='enemy'&&chooseTarget(u,others)?.id===seed.id);
-  let total=0,fresh=0;
-  // Small deterministic local area estimate for UI only; no effect on placement/territory.
-  for(let yi=0;yi<12;yi++)for(let xi=0;xi<12;xi++){
-    const px=x-1.6+(xi+.5)*3.2/12,py=y-1.6+(yi+.5)*3.2/12;
-    if(Math.hypot(px-x,py-y)>1.6||px<0||px>WIDTH||py<0||py>HEIGHT)continue;
-    total++;if(!insideTerritory(s,px,py)&&insideTerritory(s,px,py))fresh++;
-  }
+  // Retired friendly-claim forecast: placement no longer creates legal territory.
   const note=target?`今、敵 #${target.id} に攻撃が届きます。`:grownTarget?`育つと敵 #${grownTarget.id} に届く位置です。`:'今の位置では育っても敵に届きません。別の位置を試せます。';
-  return {targetId:target?.id??null,damage:target?attackDamage(seed,target):0,grownTargetId:grownTarget?.id??null,incomingIds:incoming.map(u=>u.id),incomingDamage:incoming.reduce((sum,u)=>sum+attackDamage(u,seed),0),newArea:total?fresh/total:0,note};
+  return {targetId:target?.id??null,damage:target?attackDamage(seed,target):0,grownTargetId:grownTarget?.id??null,incomingIds:incoming.map(u=>u.id),incomingDamage:incoming.reduce((sum,u)=>sum+attackDamage(u,seed),0),newArea:0,note};
 }
 export function stalled(s:State):boolean {
   return s.cards.length===0&&s.units.length>0&&s.units.every(u=>u.age>=224)&&s.units.every(u=>!chooseTarget(u,s.units));

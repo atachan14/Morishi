@@ -1,0 +1,1498 @@
+{
+  "maxTicks": 600,
+  "seeds": [
+    20261011,
+    1,
+    11
+  ],
+  "runs": [
+    {
+      "seed": 20261011,
+      "policy": "focus-left",
+      "initial": {
+        "legal": 461,
+        "total": 609,
+        "outsideOldStrip": 356,
+        "enemyGap": 235,
+        "referenceGap": {
+          "x": 4,
+          "y": 4,
+          "legal": true,
+          "presence": 0
+        }
+      },
+      "placements": [
+        {
+          "tick": 0,
+          "x": 3.1500000000000004,
+          "y": 1.15,
+          "target": 1,
+          "incoming": [
+            1
+          ]
+        },
+        {
+          "tick": 0,
+          "x": 2.35,
+          "y": 1.5500000000000003,
+          "target": 1,
+          "incoming": []
+        },
+        {
+          "tick": 0,
+          "x": 3.1500000000000004,
+          "y": 0.35,
+          "target": 1,
+          "incoming": []
+        },
+        {
+          "tick": 21,
+          "x": 3.5500000000000003,
+          "y": 7.55,
+          "target": 2,
+          "incoming": []
+        },
+        {
+          "tick": 81,
+          "x": 3.95,
+          "y": 3.95,
+          "target": 3,
+          "incoming": [
+            6
+          ]
+        },
+        {
+          "tick": 101,
+          "x": 5.95,
+          "y": 0.35,
+          "target": 4,
+          "incoming": []
+        },
+        {
+          "tick": 131,
+          "x": 5.95,
+          "y": 7.15,
+          "target": 5,
+          "incoming": []
+        },
+        {
+          "tick": 172,
+          "x": 8.75,
+          "y": 1.15,
+          "target": 6,
+          "incoming": []
+        },
+        {
+          "tick": 214,
+          "x": 8.75,
+          "y": 3.5500000000000003,
+          "target": 7,
+          "incoming": []
+        },
+        {
+          "tick": 240,
+          "x": 7.55,
+          "y": 4.75,
+          "target": 7,
+          "incoming": []
+        }
+      ],
+      "events": [
+        {
+          "tick": 21,
+          "lost": [
+            1
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 63,
+          "lost": [
+            8
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 81,
+          "lost": [
+            2
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 101,
+          "lost": [
+            3
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 106,
+          "lost": [
+            11
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 131,
+          "lost": [
+            4
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 156,
+          "lost": [
+            12
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 172,
+          "lost": [
+            5
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 212,
+          "lost": [
+            15
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 214,
+          "lost": [
+            6
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 217,
+          "lost": [
+            14
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 240,
+          "lost": [],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 251,
+          "lost": [
+            7
+          ],
+          "charges": 1,
+          "outcome": "win"
+        }
+      ],
+      "released": [
+        {
+          "tick": 21,
+          "enemies": [
+            1
+          ],
+          "areaSamples": 31,
+          "legalNow": 27,
+          "example": {
+            "x": 3.95,
+            "y": 1.15
+          }
+        },
+        {
+          "tick": 81,
+          "enemies": [
+            2
+          ],
+          "areaSamples": 67,
+          "legalNow": 62,
+          "example": {
+            "x": 4.35,
+            "y": 3.95
+          }
+        },
+        {
+          "tick": 101,
+          "enemies": [
+            3
+          ],
+          "areaSamples": 45,
+          "legalNow": 45,
+          "example": {
+            "x": 6.35,
+            "y": 2.35
+          }
+        },
+        {
+          "tick": 131,
+          "enemies": [
+            4
+          ],
+          "areaSamples": 42,
+          "legalNow": 41,
+          "example": {
+            "x": 6.75,
+            "y": 0.35
+          }
+        },
+        {
+          "tick": 172,
+          "enemies": [
+            5
+          ],
+          "areaSamples": 33,
+          "legalNow": 30,
+          "example": {
+            "x": 7.15,
+            "y": 4.35
+          }
+        },
+        {
+          "tick": 214,
+          "enemies": [
+            6
+          ],
+          "areaSamples": 61,
+          "legalNow": 61,
+          "example": {
+            "x": 9.15,
+            "y": 1.15
+          }
+        },
+        {
+          "tick": 251,
+          "enemies": [
+            7
+          ],
+          "areaSamples": 127,
+          "legalNow": 0
+        }
+      ],
+      "result": {
+        "tick": 251,
+        "outcome": "win",
+        "enemies": 0,
+        "allies": 5,
+        "cards": 8,
+        "charges": 1,
+        "placeableNow": 0,
+        "fieldOpenNow": 609,
+        "damageNow": 0
+      }
+    },
+    {
+      "seed": 20261011,
+      "policy": "nearest",
+      "initial": {
+        "legal": 461,
+        "total": 609,
+        "outsideOldStrip": 356,
+        "enemyGap": 235,
+        "referenceGap": {
+          "x": 4,
+          "y": 4,
+          "legal": true,
+          "presence": 0
+        }
+      },
+      "placements": [
+        {
+          "tick": 0,
+          "x": 6.75,
+          "y": 3.95,
+          "target": 3,
+          "incoming": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "tick": 0,
+          "x": 5.95,
+          "y": 4.75,
+          "target": 3,
+          "incoming": []
+        },
+        {
+          "tick": 0,
+          "x": 5.95,
+          "y": 3.1500000000000004,
+          "target": 3,
+          "incoming": []
+        },
+        {
+          "tick": 21,
+          "x": 7.55,
+          "y": 1.9500000000000002,
+          "target": 4,
+          "incoming": [
+            4
+          ]
+        },
+        {
+          "tick": 61,
+          "x": 6.75,
+          "y": 1.5500000000000003,
+          "target": 4,
+          "incoming": []
+        },
+        {
+          "tick": 82,
+          "x": 2.35,
+          "y": 5.55,
+          "target": 2,
+          "incoming": [
+            2
+          ]
+        },
+        {
+          "tick": 122,
+          "x": 5.95,
+          "y": 7.15,
+          "target": 5,
+          "incoming": [
+            6,
+            7
+          ]
+        },
+        {
+          "tick": 240,
+          "x": 5.95,
+          "y": 7.15,
+          "target": 5,
+          "incoming": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "tick": 480,
+          "x": 5.95,
+          "y": 7.15,
+          "target": 5,
+          "incoming": [
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "events": [
+        {
+          "tick": 21,
+          "lost": [
+            3,
+            8
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 51,
+          "lost": [
+            9
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 61,
+          "lost": [
+            1
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 81,
+          "lost": [
+            10
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 82,
+          "lost": [
+            4
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 101,
+          "lost": [
+            11
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 122,
+          "lost": [
+            2,
+            12
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 151,
+          "lost": [
+            13
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 161,
+          "lost": [
+            14
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 240,
+          "lost": [],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 251,
+          "lost": [
+            15
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 480,
+          "lost": [],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 491,
+          "lost": [
+            16
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        }
+      ],
+      "released": [
+        {
+          "tick": 21,
+          "enemies": [
+            3
+          ],
+          "areaSamples": 13,
+          "legalNow": 5,
+          "example": {
+            "x": 5.55,
+            "y": 3.95
+          }
+        },
+        {
+          "tick": 61,
+          "enemies": [
+            1
+          ],
+          "areaSamples": 52,
+          "legalNow": 52,
+          "example": {
+            "x": 3.1500000000000004,
+            "y": 0.75
+          }
+        },
+        {
+          "tick": 82,
+          "enemies": [
+            4
+          ],
+          "areaSamples": 40,
+          "legalNow": 29,
+          "example": {
+            "x": 6.75,
+            "y": 0.35
+          }
+        },
+        {
+          "tick": 122,
+          "enemies": [
+            2
+          ],
+          "areaSamples": 86,
+          "legalNow": 80,
+          "example": {
+            "x": 3.1500000000000004,
+            "y": 4.35
+          }
+        }
+      ],
+      "result": {
+        "tick": 600,
+        "outcome": "playing",
+        "enemies": 3,
+        "allies": 0,
+        "cards": 9,
+        "charges": 0,
+        "placeableNow": 0,
+        "fieldOpenNow": 388,
+        "damageNow": 0
+      }
+    },
+    {
+      "seed": 1,
+      "policy": "focus-left",
+      "initial": {
+        "legal": 487,
+        "total": 609,
+        "outsideOldStrip": 382,
+        "enemyGap": 258,
+        "referenceGap": {
+          "x": 4,
+          "y": 4,
+          "legal": true,
+          "presence": 0
+        }
+      },
+      "placements": [
+        {
+          "tick": 0,
+          "x": 1.9500000000000002,
+          "y": 1.5500000000000003,
+          "target": 1,
+          "incoming": [
+            1
+          ]
+        },
+        {
+          "tick": 0,
+          "x": 3.5500000000000003,
+          "y": 0.75,
+          "target": 1,
+          "incoming": [
+            3
+          ]
+        },
+        {
+          "tick": 0,
+          "x": 2.35,
+          "y": 2.35,
+          "target": 1,
+          "incoming": []
+        },
+        {
+          "tick": 31,
+          "x": 3.1500000000000004,
+          "y": 7.55,
+          "target": 2,
+          "incoming": []
+        },
+        {
+          "tick": 71,
+          "x": 4.35,
+          "y": 5.15,
+          "target": 3,
+          "incoming": [
+            6
+          ]
+        },
+        {
+          "tick": 91,
+          "x": 6.35,
+          "y": 6.35,
+          "target": 5,
+          "incoming": []
+        },
+        {
+          "tick": 121,
+          "x": 6.75,
+          "y": 5.55,
+          "target": 5,
+          "incoming": []
+        },
+        {
+          "tick": 131,
+          "x": 9.950000000000001,
+          "y": 7.15,
+          "target": 7,
+          "incoming": []
+        },
+        {
+          "tick": 181,
+          "x": 8.35,
+          "y": 6.35,
+          "target": 7,
+          "incoming": []
+        }
+      ],
+      "events": [
+        {
+          "tick": 31,
+          "lost": [
+            1
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 71,
+          "lost": [
+            2
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 91,
+          "lost": [
+            3
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 115,
+          "lost": [
+            8
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 117,
+          "lost": [
+            11
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 121,
+          "lost": [
+            4
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 131,
+          "lost": [
+            5
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 134,
+          "lost": [
+            9
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 181,
+          "lost": [
+            6
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 182,
+          "lost": [
+            7
+          ],
+          "charges": 1,
+          "outcome": "win"
+        }
+      ],
+      "released": [
+        {
+          "tick": 31,
+          "enemies": [
+            1
+          ],
+          "areaSamples": 31,
+          "legalNow": 27,
+          "example": {
+            "x": 3.1500000000000004,
+            "y": 1.5500000000000003
+          }
+        },
+        {
+          "tick": 71,
+          "enemies": [
+            2
+          ],
+          "areaSamples": 54,
+          "legalNow": 49,
+          "example": {
+            "x": 4.35,
+            "y": 4.35
+          }
+        },
+        {
+          "tick": 91,
+          "enemies": [
+            3
+          ],
+          "areaSamples": 69,
+          "legalNow": 67,
+          "example": {
+            "x": 6.35,
+            "y": 2.35
+          }
+        },
+        {
+          "tick": 121,
+          "enemies": [
+            4
+          ],
+          "areaSamples": 58,
+          "legalNow": 58,
+          "example": {
+            "x": 6.35,
+            "y": 0.35
+          }
+        },
+        {
+          "tick": 131,
+          "enemies": [
+            5
+          ],
+          "areaSamples": 67,
+          "legalNow": 59,
+          "example": {
+            "x": 7.95,
+            "y": 4.35
+          }
+        },
+        {
+          "tick": 181,
+          "enemies": [
+            6
+          ],
+          "areaSamples": 49,
+          "legalNow": 49,
+          "example": {
+            "x": 9.55,
+            "y": 1.5500000000000003
+          }
+        },
+        {
+          "tick": 182,
+          "enemies": [
+            7
+          ],
+          "areaSamples": 59,
+          "legalNow": 0
+        }
+      ],
+      "result": {
+        "tick": 182,
+        "outcome": "win",
+        "enemies": 0,
+        "allies": 6,
+        "cards": 9,
+        "charges": 1,
+        "placeableNow": 0,
+        "fieldOpenNow": 609,
+        "damageNow": 0
+      }
+    },
+    {
+      "seed": 1,
+      "policy": "nearest",
+      "initial": {
+        "legal": 487,
+        "total": 609,
+        "outsideOldStrip": 382,
+        "enemyGap": 258,
+        "referenceGap": {
+          "x": 4,
+          "y": 4,
+          "legal": true,
+          "presence": 0
+        }
+      },
+      "placements": [
+        {
+          "tick": 0,
+          "x": 10.75,
+          "y": 3.5500000000000003,
+          "target": 6,
+          "incoming": [
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "tick": 0,
+          "x": 9.55,
+          "y": 2.35,
+          "target": 6,
+          "incoming": [
+            3
+          ]
+        },
+        {
+          "tick": 0,
+          "x": 9.950000000000001,
+          "y": 3.95,
+          "target": 6,
+          "incoming": []
+        },
+        {
+          "tick": 31,
+          "x": 7.15,
+          "y": 5.15,
+          "target": 3,
+          "incoming": [
+            2,
+            3
+          ]
+        },
+        {
+          "tick": 240,
+          "x": 11.55,
+          "y": 5.95,
+          "target": 7,
+          "incoming": [
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "tick": 480,
+          "x": 11.55,
+          "y": 5.95,
+          "target": 7,
+          "incoming": [
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "tick": 491,
+          "x": 4.35,
+          "y": 8.35,
+          "target": 2,
+          "incoming": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "events": [
+        {
+          "tick": 31,
+          "lost": [
+            6,
+            8
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 61,
+          "lost": [
+            10
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 71,
+          "lost": [
+            11
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 81,
+          "lost": [
+            9
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 240,
+          "lost": [],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 251,
+          "lost": [
+            12
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 480,
+          "lost": [],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 491,
+          "lost": [
+            7,
+            13
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 511,
+          "lost": [
+            14
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        }
+      ],
+      "released": [
+        {
+          "tick": 31,
+          "enemies": [
+            6
+          ],
+          "areaSamples": 24,
+          "legalNow": 10,
+          "example": {
+            "x": 10.35,
+            "y": 2.35
+          }
+        },
+        {
+          "tick": 491,
+          "enemies": [
+            7
+          ],
+          "areaSamples": 62,
+          "legalNow": 62,
+          "example": {
+            "x": 9.15,
+            "y": 2.7500000000000004
+          }
+        }
+      ],
+      "result": {
+        "tick": 600,
+        "outcome": "playing",
+        "enemies": 5,
+        "allies": 0,
+        "cards": 11,
+        "charges": 0,
+        "placeableNow": 0,
+        "fieldOpenNow": 245,
+        "damageNow": 0
+      }
+    },
+    {
+      "seed": 11,
+      "policy": "focus-left",
+      "initial": {
+        "legal": 470,
+        "total": 609,
+        "outsideOldStrip": 365,
+        "enemyGap": 239,
+        "referenceGap": {
+          "x": 4,
+          "y": 4,
+          "legal": true,
+          "presence": 0.393813156816861
+        }
+      },
+      "placements": [
+        {
+          "tick": 0,
+          "x": 2.7500000000000004,
+          "y": 6.35,
+          "target": 2,
+          "incoming": [
+            2,
+            3
+          ]
+        },
+        {
+          "tick": 0,
+          "x": 3.5500000000000003,
+          "y": 7.15,
+          "target": 2,
+          "incoming": []
+        },
+        {
+          "tick": 0,
+          "x": 2.7500000000000004,
+          "y": 7.15,
+          "target": 2,
+          "incoming": []
+        },
+        {
+          "tick": 21,
+          "x": 2.35,
+          "y": 3.1500000000000004,
+          "target": 1,
+          "incoming": []
+        },
+        {
+          "tick": 51,
+          "x": 4.75,
+          "y": 3.5500000000000003,
+          "target": 3,
+          "incoming": [
+            7
+          ]
+        },
+        {
+          "tick": 71,
+          "x": 5.95,
+          "y": 0.75,
+          "target": 4,
+          "incoming": []
+        },
+        {
+          "tick": 112,
+          "x": 6.35,
+          "y": 5.95,
+          "target": 5,
+          "incoming": []
+        },
+        {
+          "tick": 131,
+          "x": 7.55,
+          "y": 6.35,
+          "target": 7,
+          "incoming": []
+        }
+      ],
+      "events": [
+        {
+          "tick": 21,
+          "lost": [
+            2
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 51,
+          "lost": [
+            1
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 61,
+          "lost": [
+            8
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 71,
+          "lost": [
+            3
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 101,
+          "lost": [
+            9
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 112,
+          "lost": [
+            4
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 131,
+          "lost": [
+            5
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 172,
+          "lost": [
+            6,
+            7
+          ],
+          "charges": 2,
+          "outcome": "win"
+        }
+      ],
+      "released": [
+        {
+          "tick": 21,
+          "enemies": [
+            2
+          ],
+          "areaSamples": 13,
+          "legalNow": 9,
+          "example": {
+            "x": 3.1500000000000004,
+            "y": 5.55
+          }
+        },
+        {
+          "tick": 51,
+          "enemies": [
+            1
+          ],
+          "areaSamples": 49,
+          "legalNow": 47,
+          "example": {
+            "x": 3.5500000000000003,
+            "y": 1.15
+          }
+        },
+        {
+          "tick": 71,
+          "enemies": [
+            3
+          ],
+          "areaSamples": 52,
+          "legalNow": 49,
+          "example": {
+            "x": 6.75,
+            "y": 2.7500000000000004
+          }
+        },
+        {
+          "tick": 112,
+          "enemies": [
+            4
+          ],
+          "areaSamples": 44,
+          "legalNow": 38,
+          "example": {
+            "x": 6.75,
+            "y": 0.35
+          }
+        },
+        {
+          "tick": 131,
+          "enemies": [
+            5
+          ],
+          "areaSamples": 49,
+          "legalNow": 44,
+          "example": {
+            "x": 7.55,
+            "y": 4.75
+          }
+        },
+        {
+          "tick": 172,
+          "enemies": [
+            6,
+            7
+          ],
+          "areaSamples": 185,
+          "legalNow": 0
+        }
+      ],
+      "result": {
+        "tick": 172,
+        "outcome": "win",
+        "enemies": 0,
+        "allies": 6,
+        "cards": 10,
+        "charges": 2,
+        "placeableNow": 0,
+        "fieldOpenNow": 609,
+        "damageNow": 0
+      }
+    },
+    {
+      "seed": 11,
+      "policy": "nearest",
+      "initial": {
+        "legal": 470,
+        "total": 609,
+        "outsideOldStrip": 365,
+        "enemyGap": 239,
+        "referenceGap": {
+          "x": 4,
+          "y": 4,
+          "legal": true,
+          "presence": 0.393813156816861
+        }
+      },
+      "placements": [
+        {
+          "tick": 0,
+          "x": 4.35,
+          "y": 5.95,
+          "target": 2,
+          "incoming": [
+            1,
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "tick": 0,
+          "x": 3.5500000000000003,
+          "y": 6.75,
+          "target": 2,
+          "incoming": []
+        },
+        {
+          "tick": 0,
+          "x": 3.5500000000000003,
+          "y": 5.15,
+          "target": 2,
+          "incoming": []
+        },
+        {
+          "tick": 21,
+          "x": 7.15,
+          "y": 4.35,
+          "target": 3,
+          "incoming": [
+            3,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "tick": 61,
+          "x": 6.35,
+          "y": 3.1500000000000004,
+          "target": 3,
+          "incoming": [
+            6
+          ]
+        },
+        {
+          "tick": 81,
+          "x": 11.55,
+          "y": 5.95,
+          "target": 7,
+          "incoming": []
+        },
+        {
+          "tick": 240,
+          "x": 5.95,
+          "y": 6.35,
+          "target": 5,
+          "incoming": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "tick": 480,
+          "x": 5.95,
+          "y": 6.35,
+          "target": 5,
+          "incoming": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "events": [
+        {
+          "tick": 21,
+          "lost": [
+            2,
+            8
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 42,
+          "lost": [
+            11
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 61,
+          "lost": [
+            1
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 71,
+          "lost": [
+            9
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 81,
+          "lost": [
+            3
+          ],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 101,
+          "lost": [
+            10
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 111,
+          "lost": [
+            12
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 123,
+          "lost": [
+            13
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 240,
+          "lost": [],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 251,
+          "lost": [
+            14
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        },
+        {
+          "tick": 480,
+          "lost": [],
+          "charges": 1,
+          "outcome": "playing"
+        },
+        {
+          "tick": 491,
+          "lost": [
+            15
+          ],
+          "charges": 0,
+          "outcome": "playing"
+        }
+      ],
+      "released": [
+        {
+          "tick": 21,
+          "enemies": [
+            2
+          ],
+          "areaSamples": 13,
+          "legalNow": 5,
+          "example": {
+            "x": 3.1500000000000004,
+            "y": 5.95
+          }
+        },
+        {
+          "tick": 61,
+          "enemies": [
+            1
+          ],
+          "areaSamples": 58,
+          "legalNow": 58,
+          "example": {
+            "x": 3.5500000000000003,
+            "y": 1.15
+          }
+        },
+        {
+          "tick": 81,
+          "enemies": [
+            3
+          ],
+          "areaSamples": 68,
+          "legalNow": 59,
+          "example": {
+            "x": 6.35,
+            "y": 2.35
+          }
+        }
+      ],
+      "result": {
+        "tick": 600,
+        "outcome": "playing",
+        "enemies": 4,
+        "allies": 0,
+        "cards": 10,
+        "charges": 0,
+        "placeableNow": 0,
+        "fieldOpenNow": 329,
+        "damageNow": 0
+      }
+    }
+  ]
+}

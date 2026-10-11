@@ -54,9 +54,9 @@ function refresh(){
   $('future').innerHTML=state.cards.slice(1,4).map((s,i)=>`<div class="preview">次${i+1} · ${labels[dominant(s)]}型 · 攻${s.power.toFixed(0)} / 射${s.range.toFixed(1)}</div>`).join('');
   $('status').textContent=state.outcome==='win'?'攻略完了':state.outcome==='loss'?'再挑戦できます':`${clock.paused?'停止中':'進行中'} · ${(state.tick/10).toFixed(1)}秒 · seed ${state.seed}`;
   $('coverage').textContent=`配置可能 約${Math.round(territoryCoverage(state)*100)}%`;
-  const hints={ready:'存在感が低い場所に最初の芽を置く',growing:'成長中 · 射程が広がる',fighting:'交戦中 · 味方の射程を重ねる','weak-combat':'射程の端で交戦中 · 前へ配置 / 今回を終える','needs-placement':'次の芽で、広がった領域をつなぐ',ended:state.outcome==='win'?'攻略完了':'広げた領域を、次の配置の手がかりに'};
+  const hints={ready:'存在感が低い場所に最初の芽を置く',growing:'成長中 · 射程が広がる',fighting:'交戦中 · 味方の射程を重ねる','weak-combat':'射程の端で交戦中 · 前へ配置 / 今回を終える','needs-placement':'存在感の低い場所へ次の芽を置く',ended:state.outcome==='win'?'攻略完了':'残った敵と射程を、次の配置の手がかりに'};
   const decision=decisionHint(state);
-  $('activity').textContent=decision.kind!=='other'?`${clock.paused?'停止中 · ':''}${decision.text}`:clock.paused&&state.started&&state.outcome==='playing'?'停止中 · 位置を動かして射程と広がりを確認':hints[runActivity(state)];
+  $('activity').textContent=decision.kind!=='other'?`${clock.paused?'停止中 · ':''}${decision.text}`:clock.paused&&state.started&&state.outcome==='playing'?'停止中 · 芽を選び、射程と狙われ方を確認':hints[runActivity(state)];
   $('skip').textContent=skip.active?'送り停止':'変化まで';
   ($('skip') as HTMLButtonElement).disabled=introActive||!state.started||state.outcome!=='playing';
   $('play').textContent=skip.active?'送り停止':clock.paused?'▶ 時間を進める':'Ⅱ 停止して考える';
@@ -83,7 +83,7 @@ $('same').onclick=()=>reset(Number(($('seed') as HTMLInputElement).value));
 $('play').onclick=()=>{if(skip.active){skip.cancel();clock.suspend();persist(false,true);refresh();return;}if(introActive||state.outcome!=='playing'||document.hidden)return;if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(!state.started){message('最初の植物を配置してから時間を進められます。');return;}clock.paused=!clock.paused;refresh();};
 $('skip').onclick=()=>{if(skip.active){skip.cancel();persist(false,true);refresh();return;}if(introActive||document.hidden)return;if(saveFailed){persist(false,true);if(saveFailed)return;}clock.suspend();skip.start(state);refresh();};
 $('tick').onclick=()=>{skip.cancel();if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(clock.paused)step(state);persist();refresh();};
-$('finish').onclick=()=>{skip.cancel();if(finishRun(state)){actions.push({tick:state.tick,kind:'finish'});lastAttemptTick=-1;persist();clock.suspend();message('ここまで広げた領域を残して、このrunを終えました。');refresh();}};
+$('finish').onclick=()=>{skip.cancel();if(finishRun(state)){actions.push({tick:state.tick,kind:'finish'});lastAttemptTick=-1;persist();clock.suspend();message('盤面を残して、このrunを終えました。');refresh();}};
 $('speed').onchange=()=>{clock.speed=Number(($('speed') as HTMLSelectElement).value);lastAttemptTick=-1;persist();};
 document.querySelectorAll<HTMLButtonElement>('[data-pane]').forEach(b=>b.onclick=()=>{if(!introActive)persist(false,true);taps.cancel();document.querySelector('main')!.setAttribute('data-pane',b.dataset.pane!);document.querySelectorAll('[data-pane].active').forEach(t=>t.classList.remove('active'));b.classList.add('active');hovered=null;});
 function interrupt(){skip.cancel();foreground.interrupt(clock);persist(false,true);taps.cancel();hovered=null;if(state.started&&state.outcome==='playing')message('画面を離れたため停止しました。戻ったら時間を進めるボタンで再開できます。');refresh();}
@@ -140,9 +140,9 @@ class Board extends Phaser.Scene {
     const g=this.graphics;g.clear();const layout=camera.layout(this.scale.width,this.scale.height);this.cell=layout.scale;this.ox=layout.ox;this.oy=layout.oy;
     g.fillStyle(0x182a2c);g.fillRect(this.ox,this.oy,WIDTH*this.cell,HEIGHT*this.cell);
     g.fillStyle(0x294e43);g.fillRect(this.ox,this.oy,WIDTH*this.cell,HEIGHT*this.cell);
-    for(const t of state.territory)g.fillCircle(this.ox+t.x*this.cell,this.oy+t.y*this.cell,t.radius*this.cell);
+
     if(this.pulseState!==state){this.pulseState=state;this.knownTerritory.clear();this.pulses=[];}
-    for(const t of state.territory)if(!this.knownTerritory.has(t.id)){this.knownTerritory.add(t.id);this.pulses.push({x:t.x,y:t.y,radius:t.radius,time:this.viewTime,captured:!state.units.some(u=>u.id===t.id)});}
+    for(const t of state.territory)if(!this.knownTerritory.has(t.id)){this.knownTerritory.add(t.id);if(!state.units.some(u=>u.id===t.id))this.pulses.push({x:t.x,y:t.y,radius:t.radius,time:this.viewTime,captured:true});}
     this.pulses=this.pulses.filter(p=>this.viewTime-p.time<1500);
     // Cached contour of the summed field; exact placement never uses these samples.
     if(this.fieldState!==state||this.fieldTick!==state.tick){

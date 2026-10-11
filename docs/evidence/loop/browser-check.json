@@ -1,0 +1,632 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "initial insertion between enemies at world 4,4 works outside old strip",
+        "three short seeds: focused legal placements, resource from kills, event pauses, actual field release and conquest"
+      ],
+      "failures": [],
+      "seeds": [
+        {
+          "seed": 20261011,
+          "placements": 10,
+          "eventStops": [
+            {
+              "tick": 21,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                1
+              ],
+              "released": 22,
+              "charges": 1
+            },
+            {
+              "tick": 63,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 81,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                2
+              ],
+              "released": 49,
+              "charges": 1
+            },
+            {
+              "tick": 101,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                3
+              ],
+              "released": 29,
+              "charges": 1
+            },
+            {
+              "tick": 106,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 131,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                4
+              ],
+              "released": 40,
+              "charges": 1
+            },
+            {
+              "tick": 156,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 172,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                5
+              ],
+              "released": 33,
+              "charges": 1
+            },
+            {
+              "tick": 212,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 214,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                6
+              ],
+              "released": 61,
+              "charges": 1
+            },
+            {
+              "tick": 217,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 240,
+              "reason": "時間送り停止 · 配置力回復",
+              "dead": [],
+              "released": 0,
+              "charges": 1
+            },
+            {
+              "tick": 251,
+              "reason": "時間送り停止 · 終局",
+              "dead": [
+                7
+              ],
+              "released": 127,
+              "charges": 1
+            }
+          ],
+          "releaseSamples": 361,
+          "result": {
+            "tick": 251,
+            "outcome": "win",
+            "enemies": 0,
+            "allies": 5,
+            "cards": 8
+          }
+        },
+        {
+          "seed": 1,
+          "placements": 9,
+          "eventStops": [
+            {
+              "tick": 31,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                1
+              ],
+              "released": 19,
+              "charges": 1
+            },
+            {
+              "tick": 71,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                2
+              ],
+              "released": 35,
+              "charges": 1
+            },
+            {
+              "tick": 91,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                3
+              ],
+              "released": 51,
+              "charges": 1
+            },
+            {
+              "tick": 115,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 117,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 121,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                4
+              ],
+              "released": 58,
+              "charges": 1
+            },
+            {
+              "tick": 131,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                5
+              ],
+              "released": 67,
+              "charges": 1
+            },
+            {
+              "tick": 134,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 181,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                6
+              ],
+              "released": 49,
+              "charges": 1
+            },
+            {
+              "tick": 182,
+              "reason": "時間送り停止 · 終局",
+              "dead": [
+                7
+              ],
+              "released": 59,
+              "charges": 1
+            }
+          ],
+          "releaseSamples": 338,
+          "result": {
+            "tick": 182,
+            "outcome": "win",
+            "enemies": 0,
+            "allies": 6,
+            "cards": 9
+          }
+        },
+        {
+          "seed": 11,
+          "placements": 8,
+          "eventStops": [
+            {
+              "tick": 21,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                2
+              ],
+              "released": 9,
+              "charges": 1
+            },
+            {
+              "tick": 51,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                1
+              ],
+              "released": 33,
+              "charges": 1
+            },
+            {
+              "tick": 61,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 71,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                3
+              ],
+              "released": 46,
+              "charges": 1
+            },
+            {
+              "tick": 101,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 112,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                4
+              ],
+              "released": 40,
+              "charges": 1
+            },
+            {
+              "tick": 131,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                5
+              ],
+              "released": 47,
+              "charges": 1
+            },
+            {
+              "tick": 172,
+              "reason": "時間送り停止 · 終局",
+              "dead": [
+                6,
+                7
+              ],
+              "released": 185,
+              "charges": 2
+            }
+          ],
+          "releaseSamples": 360,
+          "result": {
+            "tick": 172,
+            "outcome": "win",
+            "enemies": 0,
+            "allies": 6,
+            "cards": 10
+          }
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "initial insertion between enemies at world 4,4 works outside old strip",
+        "three short seeds: focused legal placements, resource from kills, event pauses, actual field release and conquest"
+      ],
+      "failures": [],
+      "seeds": [
+        {
+          "seed": 20261011,
+          "placements": 10,
+          "eventStops": [
+            {
+              "tick": 21,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                1
+              ],
+              "released": 22,
+              "charges": 1
+            },
+            {
+              "tick": 63,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 81,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                2
+              ],
+              "released": 49,
+              "charges": 1
+            },
+            {
+              "tick": 101,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                3
+              ],
+              "released": 29,
+              "charges": 1
+            },
+            {
+              "tick": 106,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 131,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                4
+              ],
+              "released": 40,
+              "charges": 1
+            },
+            {
+              "tick": 156,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 172,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                5
+              ],
+              "released": 33,
+              "charges": 1
+            },
+            {
+              "tick": 212,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 214,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                6
+              ],
+              "released": 61,
+              "charges": 1
+            },
+            {
+              "tick": 217,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 240,
+              "reason": "時間送り停止 · 配置力回復",
+              "dead": [],
+              "released": 0,
+              "charges": 1
+            },
+            {
+              "tick": 251,
+              "reason": "時間送り停止 · 終局",
+              "dead": [
+                7
+              ],
+              "released": 127,
+              "charges": 1
+            }
+          ],
+          "releaseSamples": 361,
+          "result": {
+            "tick": 251,
+            "outcome": "win",
+            "enemies": 0,
+            "allies": 5,
+            "cards": 8
+          }
+        },
+        {
+          "seed": 1,
+          "placements": 9,
+          "eventStops": [
+            {
+              "tick": 31,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                1
+              ],
+              "released": 19,
+              "charges": 1
+            },
+            {
+              "tick": 71,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                2
+              ],
+              "released": 35,
+              "charges": 1
+            },
+            {
+              "tick": 91,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                3
+              ],
+              "released": 51,
+              "charges": 1
+            },
+            {
+              "tick": 115,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 117,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 121,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                4
+              ],
+              "released": 58,
+              "charges": 1
+            },
+            {
+              "tick": 131,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                5
+              ],
+              "released": 67,
+              "charges": 1
+            },
+            {
+              "tick": 134,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 181,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                6
+              ],
+              "released": 49,
+              "charges": 1
+            },
+            {
+              "tick": 182,
+              "reason": "時間送り停止 · 終局",
+              "dead": [
+                7
+              ],
+              "released": 59,
+              "charges": 1
+            }
+          ],
+          "releaseSamples": 338,
+          "result": {
+            "tick": 182,
+            "outcome": "win",
+            "enemies": 0,
+            "allies": 6,
+            "cards": 9
+          }
+        },
+        {
+          "seed": 11,
+          "placements": 8,
+          "eventStops": [
+            {
+              "tick": 21,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                2
+              ],
+              "released": 9,
+              "charges": 1
+            },
+            {
+              "tick": 51,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                1
+              ],
+              "released": 33,
+              "charges": 1
+            },
+            {
+              "tick": 61,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 71,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                3
+              ],
+              "released": 46,
+              "charges": 1
+            },
+            {
+              "tick": 101,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [],
+              "released": 0,
+              "charges": 0
+            },
+            {
+              "tick": 112,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                4
+              ],
+              "released": 40,
+              "charges": 1
+            },
+            {
+              "tick": 131,
+              "reason": "時間送り停止 · 撃破・植物の消滅",
+              "dead": [
+                5
+              ],
+              "released": 47,
+              "charges": 1
+            },
+            {
+              "tick": 172,
+              "reason": "時間送り停止 · 終局",
+              "dead": [
+                6,
+                7
+              ],
+              "released": 185,
+              "charges": 2
+            }
+          ],
+          "releaseSamples": 360,
+          "result": {
+            "tick": 172,
+            "outcome": "win",
+            "enemies": 0,
+            "allies": 6,
+            "cards": 10
+          }
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": []
+}

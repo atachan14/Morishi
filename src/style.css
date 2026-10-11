@@ -9,3 +9,4 @@
 .activity-hint{font-size:11px;line-height:1.7;color:#b9d3af;min-height:37px;padding:4px 2px 10px}
 
 .enemy .enemy-name{color:#e0ecdf;font-size:12px}.enemy[aria-pressed=true]{border-color:#b7cd87;background:#3c4233}
+#save-status{max-width:1352px;margin:10px auto 0;padding:8px 24px;min-height:35px}#save-status.save-error{color:#f3c2ae;background:#442e29;border:1px solid #ad7865;border-radius:8px;font-weight:600}@media(max-width:760px){#save-status{margin:8px 12px 0;padding:8px 10px}}

@@ -21,7 +21,7 @@ test('reload restores a run without offline time or a running clock',()=>{
   const loaded=store.read();assert.equal(loaded.kind,'loaded');if(loaded.kind==='loaded'){const clock=new Clock();clock.speed=loaded.save.speed;clock.advance(loaded.state,600000);assert.deepEqual(loaded.state,s);assert.equal(clock.paused,true);}
 });
 test('corrupt and incompatible saves remain untouched until explicit replacement with backup',()=>{
-  for(const raw of ['{bad',JSON.stringify({version:'future'}),'x'.repeat(16001)]){
+  for(const raw of ['{bad',JSON.stringify({version:'future'}),'x'.repeat(64001)]){
     const mem=new Memory();mem.data.set(SAVE_KEY,raw);const store=new RunStore(mem);assert.equal(store.read().kind,'invalid');
     const save=capture(createState(),1,[]);assert.equal(store.write(save),false);assert.equal(mem.getItem(SAVE_KEY),raw);
     assert.equal(store.write(save,true),true);assert.equal(mem.getItem(BACKUP_KEY),raw);assert.equal(store.read().kind,'loaded');
@@ -52,4 +52,42 @@ test('full conquest replays the completed result and rejects advancing beyond it
 test('bounded 60-game-minute log restores the exact long-running state',()=>{
   const s=createState(11);place(s,1,2);for(let i=0;i<36000;i++)step(s);
   assert.equal(s.tick,36000);assert.deepEqual(replay(capture(s,1,[{tick:0,kind:'place',x:1,y:2}])).state,s);
+});
+test('saving beyond the old boundary restores the latest state, then resumes exactly at 4x',()=>{
+  const mem=new Memory(),store=new RunStore(mem),s=createState(11),a:Action[]=[{tick:0,kind:'place',x:1,y:2}];place(s,1,2);
+  for(let i=0;i<36000;i++)step(s);assert.equal(store.write(capture(s,4,a)),true);
+  for(let i=0;i<100;i++)step(s);assert.equal(store.write(capture(s,4,a)),true);
+  const loaded=store.read();assert.equal(loaded.kind,'loaded');if(loaded.kind==='loaded'){
+    assert.deepEqual(loaded.state,s);const clock=new Clock();clock.speed=4;clock.advance(loaded.state,600000);assert.deepEqual(loaded.state,s);
+    clock.paused=false;clock.advance(loaded.state,250);for(let i=0;i<10;i++)step(s);assert.deepEqual(loaded.state,s);
+  }
+});
+test('very late tick snapshots have bounded size and do not replay elapsed history',()=>{
+  const s=createState(11),a:Action[]=[{tick:0,kind:'place',x:1,y:2}];place(s,1,2);s.tick=1000000000;for(const u of s.units)u.age=s.tick;
+  const save=capture(s,2,a);assert.ok(JSON.stringify(save).length<10000);assert.deepEqual(replay(save).state,s);
+});
+test('legacy logs migrate exactly and preserve the raw original before the first new save',()=>{
+  const legacy={version:'2026-10-11-runtime-1',seed:11,tick:100,speed:4,actions:[{tick:0,kind:'place',x:1,y:2}]};
+  const mem=new Memory(),raw=JSON.stringify(legacy);mem.data.set(SAVE_KEY,raw);const store=new RunStore(mem),loaded=store.read();assert.equal(loaded.kind,'loaded');
+  if(loaded.kind==='loaded'){const expected=createState(11);place(expected,1,2);for(let i=0;i<100;i++)step(expected);assert.deepEqual(loaded.state,expected);assert.equal(mem.getItem(SAVE_KEY),raw);assert.equal(store.write(loaded.save),true);assert.equal(mem.getItem(BACKUP_KEY),raw);assert.equal(JSON.parse(mem.getItem(SAVE_KEY)!).version,'2026-10-11-snapshot-2');}
+});
+test('snapshot checksum corruption and inconsistent signed fields are rejected without mutation',()=>{
+  const s=createState(11),a:Action[]=[{tick:0,kind:'place',x:1,y:2}];place(s,1,2);step(s);
+  const save=capture(s,1,a);save.snapshot.units[0].hp-=1;assert.throws(()=>replay(save));
+  for(const mutate of [(v:typeof s)=>v.units[0].hp=-1,(v:typeof s)=>v.units[0].age=-1,(v:typeof s)=>v.units.push({...v.units[0]}),(v:typeof s)=>v.nextId=25,(v:typeof s)=>v.territory[0].radius=Infinity,(v:typeof s)=>v.units[0].stats.range=500,(v:typeof s)=>v.outcome='win']){
+    const bad=structuredClone(s);mutate(bad);assert.throws(()=>replay(capture(bad,1,a)));
+  }
+});
+test('failed migration backup leaves original legacy save intact and can retry safely',()=>{
+  const mem=new Memory(),raw=JSON.stringify({version:'2026-10-11-runtime-1',seed:11,tick:0,speed:1,actions:[]});mem.data.set(SAVE_KEY,raw);
+  const store=new RunStore(mem),loaded=store.read();assert.equal(loaded.kind,'loaded');if(loaded.kind!=='loaded')return;
+  const put=mem.setItem.bind(mem);mem.setItem=(key,value)=>{if(key===BACKUP_KEY)throw new Error('Quota');put(key,value);};
+  assert.equal(store.write(loaded.save),false);assert.equal(mem.getItem(SAVE_KEY),raw);
+  mem.setItem=put;assert.equal(store.write(loaded.save),true);assert.equal(mem.getItem(BACKUP_KEY),raw);
+});
+test('failed late snapshot write preserves the last exact save and succeeds after retry',()=>{
+  const s=createState(11),a:Action[]=[{tick:0,kind:'place',x:1,y:2}];place(s,1,2);s.tick=40000;for(const u of s.units)u.age=s.tick;
+  const mem=new Memory(),store=new RunStore(mem);assert.equal(store.write(capture(s,2,a)),true);const previous=mem.getItem(SAVE_KEY);
+  step(s);const put=mem.setItem.bind(mem);mem.setItem=()=>{throw new Error('Quota');};assert.equal(store.write(capture(s,2,a)),false);assert.equal(mem.getItem(SAVE_KEY),previous);
+  mem.setItem=put;assert.equal(store.write(capture(s,2,a)),true);const loaded=store.read();assert.equal(loaded.kind,'loaded');if(loaded.kind==='loaded')assert.deepEqual(loaded.state,s);
 });

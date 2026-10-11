@@ -1,0 +1,12 @@
+{
+  "seed": 11,
+  "gameHours": 24,
+  "tick": 864000,
+  "outcome": "playing",
+  "restores": 88,
+  "largestBytes": 3065,
+  "maxRestoreMs": 1.343,
+  "exact": true,
+  "backgroundCatchup": false,
+  "browserSoak": false
+}

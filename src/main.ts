@@ -6,16 +6,24 @@ import {RunStore,capture,type Action} from './session';
 let state=createState(), clock=new Clock(), selected:number|null=null, hovered:{x:number;y:number}|null=null;
 const taps=new TapGesture(),foreground=new ForegroundGate();
 const store=new RunStore({getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)});
-let actions:Action[]=[],savedTick=-1,saveNotice='この端末に自動保存します。';
+let actions:Action[]=[],savedTick=-1,lastAttemptTick=-1,saveFailed=false,saveNotice='この端末に自動保存します。';
 const loaded=store.read();
 if(loaded.kind==='loaded'){state=loaded.state;actions=loaded.save.actions;clock.speed=loaded.save.speed;savedTick=state.tick;saveNotice='保存したrunを停止状態で再開しました。';}
 else if(loaded.kind==='invalid')saveNotice='以前の保存を読めませんでした。元データは保持しています。新seedまたは入力seedで始めると、元データを退避して保存を再開します。';
 else if(loaded.kind==='unavailable')saveNotice='この環境では端末保存を利用できません。';
-function persist(replace=false){if(!replace&&savedTick===state.tick)return;const ok=store.write(capture(state,clock.speed,actions),replace);savedTick=state.tick;if(ok){saveNotice='この端末に保存済み。再読込後は停止状態から再開できます。';}else if(!store.protectedSave)saveNotice='保存できませんでした。最後に成功した保存は保持しています（上限はゲーム内60分）。';const label=document.getElementById('save-status');if(label)label.textContent=saveNotice;}
+if(loaded.kind==='invalid'||loaded.kind==='unavailable')saveFailed=true;
+function persist(replace=false,force=false){
+  if(!replace&&!force&&lastAttemptTick===state.tick)return;
+  const ok=store.write(capture(state,clock.speed,actions),replace);lastAttemptTick=state.tick;saveFailed=!ok;
+  if(ok){savedTick=state.tick;saveNotice=`この端末に保存済み（${(savedTick/10).toFixed(1)}秒）。再読込後は停止状態から再開できます。`;}
+  else {clock.suspend();taps.cancel();hovered=null;saveNotice=store.protectedSave?'保存を利用できないため停止しました。以前のデータは保持しています。新seed/入力seedで始めると退避して保存を試せます。':'保存に失敗したため停止しました。現在の盤面はこの画面に残っています。再読込すると最後の保存へ戻ります。時間を進めるボタンで保存を再試行します。';}
+  const label=document.getElementById('save-status');if(label){label.textContent=saveNotice;label.classList.toggle('save-error',saveFailed);label.setAttribute('role',saveFailed?'alert':'status');}
+}
 const palette={power:0xec8a62,range:0x80c9e4,presence:0xc1a1eb,vitality:0x9ecf74};
 const labels={power:'攻撃',range:'射程',presence:'存在感',vitality:'生命'};
 document.querySelector('#app')!.innerHTML=`<header><div><small>配置と観察の小さな試作</small><h1>Morishi <span>芽を置いて、領域を広げる。</span></h1></div><button id="restart">新seedで始める</button></header><nav class="tabs"><button data-pane="left">配置・味方</button><button data-pane="board" class="active">盤面</button><button data-pane="right">敵・観察</button></nav><main data-pane="board"><aside id="left"><h2>次に植える植物</h2><div id="card"></div><p class="hint">明るい領域の自由な位置をタップで配置。敵の近くほど戦闘に届きやすく、味方を少し離して置くと領域が広がります。</p><h2>配置の準備</h2><div id="supply"></div><progress id="refill" max="80" value="0"></progress><p id="refill-info" class="hint"></p><p class="hint">進行8秒で配置力＋1（最大5）。敵攻略でも＋1。次の3体は公開されています。</p><div id="future"></div><h2>選んだ植物</h2><div id="selection">盤面の植物を選ぶと能力と射程を表示します。</div></aside><section id="center"><div class="board-header"><span id="status"></span><span id="coverage"></span></div><div id="activity" class="activity-hint"></div><div id="board"></div><div id="preview" class="preview-status">スナップなしの自由配置</div><div id="forecast" class="forecast-panel">カーソルを動かすと、攻撃の届き方と狙われ方を確認できます。</div><div id="run-result" class="run-result" hidden></div><div id="message" role="status" aria-live="polite"></div><div class="controls"><button id="play" class="primary">▶ 時間を進める</button><button id="tick">1 Tick</button><button id="finish" class="quiet">今回を終える</button><label>速度 <select id="speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div><div class="legend"><span>● 攻撃</span><span>◆ 射程</span><span>✦ 存在感</span><span>■ 生命</span><span>赤い輪＝敵</span></div><p class="hint">敵は全て初期配置済み。円は射程、線は狙っている相手。遠い相手への攻撃は弱くなります。</p></section><aside id="right"><h2>盤面を読む</h2><div id="enemies"><p id="enemy-count"></p><div id="enemy-list"></div></div><h2>最近のできごと</h2><div id="events"></div><h2>この試作でできること</h2><p class="hint">配置 → 成長と戦闘を観察 → 停止して考える → 新しい領域へ配置。</p><p class="hint">成長すると見た目と射程が広がります。色と形は能力の配分から決まり、種族の固定データはありません。</p><label class="seed-label">生成seed <input id="seed" value="20261011" inputmode="numeric"></label><button id="same">入力seedで始める</button><p class="hint">生成後に乱数は使用しません。合体・属性・デッキ育成はこの版では未実装です。</p></aside></main><footer>ローカル試作 · まずは浅く楽しめる配置と領域の変化を確かめる</footer>`;
 const $=(id:string)=>document.getElementById(id)!;
+const escape=(text='')=>text.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 const enemyButtons=new Map<number,{button:HTMLButtonElement;name:HTMLSpanElement;hp:HTMLSpanElement}>();
 function html(id:string,value:string){if($(id).innerHTML!==value)$(id).innerHTML=value;}
 function refreshEnemyList(){
@@ -47,20 +55,20 @@ function refresh(){
   const u=state.units.find(u=>u.id===selected);
   $('selection').innerHTML=u?`<strong>${u.team==='ally'?'味方':'敵'} #${u.id} · ${labels[dominant(u.stats)]}型</strong>${statsHtml(u.stats)}<p>HP ${u.hp.toFixed(0)} / ${u.maxHp} · 現在の射程 ${effectiveRange(u).toFixed(1)}<br>成長倍率 ${growth(u).toFixed(2)}×</p>`:'植物をタップすると能力と射程を表示します。';
   refreshEnemyList();
-  $('events').innerHTML=state.events.map(e=>`<p class="event">${e}</p>`).join('');
+  $('events').innerHTML=state.events.map(e=>`<p class="event">${escape(e)}</p>`).join('');
   $('run-result').hidden=state.outcome==='playing';
-  if(state.outcome!=='playing'){html('run-result',`<strong>${state.outcome==='win'?'攻略完了！':'今回はここまで。'}</strong><p>領域 約${Math.round(territoryCoverage(state)*100)}% · 敵攻略 ${7-state.units.filter(u=>u.team==='enemy').length}/7体 · ${(state.tick/10).toFixed(1)}秒</p><p>${state.events[0]}</p><div><button id="retry-run">同じseedで再挑戦</button><button id="next-run">新seedで始める</button></div>`);$('retry-run').onclick=()=>reset(state.seed);$('next-run').onclick=()=>reset((state.seed+1)>>>0);}
+  if(state.outcome!=='playing'){html('run-result',`<strong>${state.outcome==='win'?'攻略完了！':'今回はここまで。'}</strong><p>領域 約${Math.round(territoryCoverage(state)*100)}% · 敵攻略 ${7-state.units.filter(u=>u.team==='enemy').length}/7体 · ${(state.tick/10).toFixed(1)}秒</p><p>${escape(state.events[0])}</p><div><button id="retry-run">同じseedで再挑戦</button><button id="next-run">新seedで始める</button></div>`);$('retry-run').onclick=()=>reset(state.seed);$('next-run').onclick=()=>reset((state.seed+1)>>>0);}
 }
 function message(text:string){$('message').textContent=text;}
-function reset(seed:number){if(!Number.isInteger(seed)||seed<0||seed>4294967295){message('seedは0〜4294967295の整数を指定してください。');return;}state=createState(seed);clock=new Clock();actions=[];savedTick=-1;persist(true);taps.cancel();foreground.interrupt(clock);hovered=null;selected=null;($('speed') as HTMLSelectElement).value='1';($('seed') as HTMLInputElement).value=String(seed);message('明るい左端に植物を配置して、時間を進めましょう。');refresh();}
+function reset(seed:number){if(!Number.isInteger(seed)||seed<0||seed>4294967295){message('seedは0〜4294967295の整数を指定してください。');return;}state=createState(seed);clock=new Clock();actions=[];savedTick=lastAttemptTick=-1;persist(true);taps.cancel();foreground.interrupt(clock);hovered=null;selected=null;($('speed') as HTMLSelectElement).value='1';($('seed') as HTMLInputElement).value=String(seed);message('明るい左端に植物を配置して、時間を進めましょう。');refresh();}
 $('restart').onclick=()=>reset((state.seed+1)>>>0);
 $('same').onclick=()=>reset(Number(($('seed') as HTMLInputElement).value));
-$('play').onclick=()=>{if(state.outcome!=='playing'||document.hidden)return;if(!state.started){message('最初の植物を配置してから時間を進められます。');return;}clock.paused=!clock.paused;refresh();};
-$('tick').onclick=()=>{if(clock.paused)step(state);persist();refresh();};
-$('finish').onclick=()=>{if(finishRun(state)){actions.push({tick:state.tick,kind:'finish'});savedTick=-1;persist();clock.suspend();message('ここまで広げた領域を残して、このrunを終えました。');refresh();}};
-$('speed').onchange=()=>{clock.speed=Number(($('speed') as HTMLSelectElement).value);savedTick=-1;persist();};
+$('play').onclick=()=>{if(state.outcome!=='playing'||document.hidden)return;if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(!state.started){message('最初の植物を配置してから時間を進められます。');return;}clock.paused=!clock.paused;refresh();};
+$('tick').onclick=()=>{if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(clock.paused)step(state);persist();refresh();};
+$('finish').onclick=()=>{if(finishRun(state)){actions.push({tick:state.tick,kind:'finish'});lastAttemptTick=-1;persist();clock.suspend();message('ここまで広げた領域を残して、このrunを終えました。');refresh();}};
+$('speed').onchange=()=>{clock.speed=Number(($('speed') as HTMLSelectElement).value);lastAttemptTick=-1;persist();};
 document.querySelectorAll<HTMLButtonElement>('[data-pane]').forEach(b=>b.onclick=()=>{taps.cancel();document.querySelector('main')!.setAttribute('data-pane',b.dataset.pane!);document.querySelectorAll('[data-pane].active').forEach(t=>t.classList.remove('active'));b.classList.add('active');hovered=null;});
-function interrupt(){foreground.interrupt(clock);persist();taps.cancel();hovered=null;if(state.started&&state.outcome==='playing')message('画面を離れたため停止しました。戻ったら時間を進めるボタンで再開できます。');refresh();}
+function interrupt(){foreground.interrupt(clock);persist(false,true);taps.cancel();hovered=null;if(state.started&&state.outcome==='playing')message('画面を離れたため停止しました。戻ったら時間を進めるボタンで再開できます。');refresh();}
 document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt();});
 window.addEventListener('blur',interrupt);
 window.addEventListener('pagehide',interrupt);
@@ -83,7 +91,7 @@ class Board extends Phaser.Scene {
       const pos=p.position;hovered=pos;
       const u=state.units.filter(u=>Math.hypot(u.x-pos.x,u.y-pos.y)<=footprint(u)).sort((a,b)=>Math.hypot(a.x-pos.x,a.y-pos.y)-Math.hypot(b.x-pos.x,b.y-pos.y)||a.id-b.id)[0];
       if(u){selected=u.id;message('選んだ植物の円が現在の射程です。');}
-      else if(state.outcome==='playing'){const result=place(state,pos.x,pos.y);if(result.ok){actions.push({tick:state.tick,kind:'place',x:pos.x,y:pos.y});savedTick=-1;persist();}message(result.ok?'自由な位置に配置しました。時間を進めると植物が育ちます。':result.reason);}
+      else if(state.outcome==='playing'){if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}const result=place(state,pos.x,pos.y);if(result.ok){actions.push({tick:state.tick,kind:'place',x:pos.x,y:pos.y});lastAttemptTick=-1;persist();}message(result.ok?'自由な位置に配置しました。時間を進めると植物が育ちます。':result.reason);}
       else message('このrunは終了しています。植物の情報は確認できます。');
       refresh();
     };
@@ -92,7 +100,7 @@ class Board extends Phaser.Scene {
     window.addEventListener('pointerdown',outsideDown);window.addEventListener('pointermove',move);window.addEventListener('pointerup',up);window.addEventListener('pointercancel',cancel);
     this.events.once(Phaser.Scenes.Events.SHUTDOWN,()=>{cancel();canvas.removeEventListener('pointerdown',down);canvas.removeEventListener('pointerleave',leave);canvas.removeEventListener('contextmenu',context);window.removeEventListener('pointerdown',outsideDown);window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',cancel);});
   }
-  update(_time:number,delta:number){this.viewTime=_time;if(!document.hidden)clock.advance(state,foreground.frame(delta));if(state.tick-savedTick>=10||(state.outcome!=='playing'&&savedTick!==state.tick))persist();this.elapsed+=delta;if(this.elapsed>150){refresh();this.elapsed=0;}this.draw();}
+  update(_time:number,delta:number){this.viewTime=_time;if(!document.hidden)clock.advance(state,foreground.frame(delta));if(state.tick-lastAttemptTick>=10||(state.outcome!=='playing'&&lastAttemptTick!==state.tick))persist();this.elapsed+=delta;if(this.elapsed>150){refresh();this.elapsed=0;}this.draw();}
   draw(){
     if(this.scale.width<=0||this.scale.height<=0)return;
     const g=this.graphics;g.clear();const layout=viewport(this.scale.width,this.scale.height);this.cell=layout.scale;this.ox=layout.ox;this.oy=layout.oy;
@@ -131,6 +139,6 @@ class Board extends Phaser.Scene {
 }
 const game=new Phaser.Game({type:Phaser.AUTO,parent:'board',backgroundColor:'#101f21',scene:Board,scale:{mode:Phaser.Scale.RESIZE,width:600,height:450},render:{antialias:true},banner:false});
 new ResizeObserver(entries=>{taps.cancel();const {width,height}=entries[0].contentRect;if(width>0&&height>0){game.scale.resize(width,height);game.scale.refresh();hovered=null;}}).observe($('board'));
-const saveStatus=document.createElement('p');saveStatus.id='save-status';saveStatus.className='hint';saveStatus.textContent=saveNotice;$('right').append(saveStatus);
+const saveStatus=document.createElement('p');saveStatus.id='save-status';saveStatus.className=saveFailed?'hint save-error':'hint';saveStatus.textContent=saveNotice;saveStatus.setAttribute('role',saveFailed?'alert':'status');document.querySelector('header')!.after(saveStatus);
 ($('speed') as HTMLSelectElement).value=String(clock.speed);($('seed') as HTMLInputElement).value=String(state.seed);
 refresh();message(loaded.kind==='loaded'?'保存したrunを復元しました。時間を進めるボタンで再開できます。':'明るい左端に植物を配置して、時間を進めましょう。');

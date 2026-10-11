@@ -1,0 +1,140 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "three curated profiles; optional nearest presence ties with exact backups and frozen basis; guard saved run retained; folded ranking explanation matches real candidates with exact backups, frozen hand and paused reload; folded comparison settings; new local range default and explicit 2/5 run switching with exact raw backups; old comparison keeps 5 on reload and replant; discoverable bidirectional entry preserves real legacy save; atomic wipe pause; mature wipe does not wait endlessly; exact paused reload; no-cost legal candidate; PC direct/phone confirmed replant with fixed hand; voluntary finish keeps board; no horizontal overflow and full-width canvas"
+      ],
+      "failures": [],
+      "layout": {
+        "canvas": 764,
+        "wrap": 764,
+        "handBottom": 717,
+        "viewport": 768,
+        "overflow": false
+      },
+      "proof": {
+        "wipeTick": 56,
+        "recoveredSeed": {
+          "generator": "eco-seed-1",
+          "runSeed": 20261011,
+          "source": "hand",
+          "index": 0,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "range",
+            "ice": "defense",
+            "electric": "attack",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 110.710861,
+            "hpReg": 0.08086,
+            "presenceHalo": 2.824753,
+            "elements": {
+              "fire": 20.89959,
+              "ice": 23.534757,
+              "electric": 25.370703,
+              "dark": 26.19495
+            }
+          },
+          "fixed": {
+            "hp": 110.710861,
+            "hpReg": 0.08086,
+            "presenceHalo": 2.824753,
+            "elements": {
+              "fire": 20.89959,
+              "ice": 23.534757,
+              "electric": 25.370703,
+              "dark": 26.19495
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "unmodifiedLegacy": true,
+        "merges": 14
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "three curated profiles; optional nearest presence ties with exact backups and frozen basis; guard saved run retained; folded ranking explanation matches real candidates with exact backups, frozen hand and paused reload; folded comparison settings; new local range default and explicit 2/5 run switching with exact raw backups; old comparison keeps 5 on reload and replant; discoverable bidirectional entry preserves real legacy save; atomic wipe pause; mature wipe does not wait endlessly; exact paused reload; no-cost legal candidate; PC direct/phone confirmed replant with fixed hand; voluntary finish keeps board; no horizontal overflow and full-width canvas"
+      ],
+      "failures": [],
+      "layout": {
+        "canvas": 368,
+        "wrap": 368,
+        "handBottom": 815.5,
+        "viewport": 844,
+        "overflow": false
+      },
+      "proof": {
+        "wipeTick": 56,
+        "recoveredSeed": {
+          "generator": "eco-seed-1",
+          "runSeed": 20261011,
+          "source": "hand",
+          "index": 0,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "range",
+            "ice": "defense",
+            "electric": "attack",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 110.710861,
+            "hpReg": 0.08086,
+            "presenceHalo": 2.824753,
+            "elements": {
+              "fire": 20.89959,
+              "ice": 23.534757,
+              "electric": 25.370703,
+              "dark": 26.19495
+            }
+          },
+          "fixed": {
+            "hp": 110.710861,
+            "hpReg": 0.08086,
+            "presenceHalo": 2.824753,
+            "elements": {
+              "fire": 20.89959,
+              "ice": 23.534757,
+              "electric": 25.370703,
+              "dark": 26.19495
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "unmodifiedLegacy": true,
+        "merges": 14
+      }
+    }
+  ],
+  "runtimeErrors": []
+}

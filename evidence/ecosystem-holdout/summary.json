@@ -1,0 +1,28 @@
+{
+  "baselineHead": "423aa2b",
+  "seedFormula": "(0xA341316C + (i+1)*0x9E3779B9) mod 2^32, i=0..63",
+  "seedCount": 64,
+  "initialProfileCount": 3,
+  "initialOpenings": 192,
+  "naturalTrajectories": 24,
+  "ticksPerTrajectory": 605,
+  "mergeChanges": 111,
+  "deathTransitions": 94,
+  "malformedCases": 14,
+  "interruptionCases": 4,
+  "testsPassed": 170,
+  "testsFailed": 0,
+  "testConcurrency": 1,
+  "testDurationMs": 30657.6629,
+  "buildPassed": true,
+  "gameRulesChanged": false,
+  "userStorageTouched": false,
+  "browserRuntimeErrors": 0,
+  "browserViewports": [
+    "1366x900",
+    "390x844"
+  ],
+  "realPhone": false,
+  "funAssessed": false,
+  "failureModel": "Atomic per-key write failure, not physical power loss"
+}

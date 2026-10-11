@@ -1,3 +1,4 @@
+import {resolveUnitSelection} from './eco-selection.js';
 import {ELEMENTS,dominantElement,bodyRadius,rolesFrom,elementScale,type Seed} from './eco-contract';
 import {finishEco,createEco,stepEco,placeEco,validateEcoPlacement,currentElements,currentStats,targetCandidates,targetFor,enemyPresence,WORLD,ECO_LIMITS,type Unit} from './eco-sim';
 import {EcoStore,ecoCapture,type View,type Save} from './eco-save';
@@ -39,9 +40,9 @@ function focusUnit(id:number){const u=state.units.find(u=>u.id===id);if(!u)retur
 const detailMemo=new Map<string,string>();
 function detail(id:string,html:string){if(detailMemo.get(id)===html)return;detailMemo.set(id,html);const el=$(id),open=Array.from(el.querySelectorAll('details')).map(d=>d.open);el.innerHTML=html;el.querySelectorAll('details').forEach((d,i)=>d.open=open[i]??false);}
 function guidance(){const key=[state.seed,state.tick,state.nextId,state.hand.length,state.charges,state.outcome,state.player.drowHeist,state.player.turnHeist].join(':');if(key!==guidanceKey){guidanceKey=key;guidanceCache=gardenGuidance(state);}return guidanceCache;}
-function resolveSelection(id:number|null,team:Unit['team']){if(id===null)return null;return state.units.find(u=>u.team===team&&u.id===id)?.id??state.units.find(u=>u.team===team&&u.lineage.includes(id))?.id??null;}
+
 function refresh(){if(state.outcome!=='playing'){armed=null;hover=null;candidate=null;}
- selectedAlly=resolveSelection(selectedAlly,'ally');selectedEnemy=resolveSelection(selectedEnemy,'enemy');
+ selectedAlly=resolveUnitSelection(state,selectedAlly,'ally');selectedEnemy=resolveUnitSelection(state,selectedEnemy,'enemy');
  if(selectedCard!==null&&!state.hand.some(c=>c.id===selectedCard)){selectedCard=null;armed=null;hover=null;candidate=null;}
 
  $('range-policy').textContent=`この庭：射程×${state.rangeFactor??5} · 吸収 ${state.mergePolicy==='quarter-v1'?'全能力25%':state.mergePolicy==='guard-v1'?'攻撃・防御のみ':'全能力100%'} · 標的同値は${state.targetPolicy?'近い方→ID':'ID順'}。保存した計算を維持しています。初期配置：${state.enemyLayout?'間隔を空けた非均等な小集団':'従来の小集団'}。`;

@@ -1,0 +1,162 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "new default run uses endless indexed supply",
+        "legacy finite run restored without conversion to endless",
+        "indexed supply past 18 works through native placement and seed reset preserves stage",
+        "three larger seeded fixtures: native fractional placement, zoom/pan, exact snapshot+view+queue reload, one-tick resume, variable-count result"
+      ],
+      "failures": [],
+      "seeds": [
+        {
+          "seed": 20261011,
+          "stage": {
+            "width": 36,
+            "height": 27,
+            "enemyCount": 24
+          },
+          "placement": {
+            "x": 16.169803370786518,
+            "y": 19.587499999999995
+          },
+          "supplyIndex": 1,
+          "queue": 4,
+          "view": {
+            "zoom": 6.595574894064917,
+            "x": 16.0553736178811,
+            "y": 19.48499401937352
+          },
+          "tick": 1,
+          "units": 25
+        },
+        {
+          "seed": 1,
+          "stage": {
+            "width": 36,
+            "height": 27,
+            "enemyCount": 24
+          },
+          "placement": {
+            "x": 7.169803370786519,
+            "y": 24.087499999999995
+          },
+          "supplyIndex": 1,
+          "queue": 4,
+          "view": {
+            "zoom": 6.595574894064917,
+            "x": 7.0553736178811,
+            "y": 23.98499401937352
+          },
+          "tick": 1,
+          "units": 25
+        },
+        {
+          "seed": 11,
+          "stage": {
+            "width": 36,
+            "height": 27,
+            "enemyCount": 24
+          },
+          "placement": {
+            "x": 16.169803370786518,
+            "y": 20.712499999999995
+          },
+          "supplyIndex": 1,
+          "queue": 4,
+          "view": {
+            "zoom": 6.595574894064917,
+            "x": 16.0553736178811,
+            "y": 20.60999401937352
+          },
+          "tick": 1,
+          "units": 25
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "new default run uses endless indexed supply",
+        "legacy finite run restored without conversion to endless",
+        "indexed supply past 18 works through native placement and seed reset preserves stage",
+        "three larger seeded fixtures: native fractional placement, zoom/pan, exact snapshot+view+queue reload, one-tick resume, variable-count result"
+      ],
+      "failures": [],
+      "seeds": [
+        {
+          "seed": 20261011,
+          "stage": {
+            "width": 36,
+            "height": 27,
+            "enemyCount": 24
+          },
+          "placement": {
+            "x": 16.166911764705883,
+            "y": 19.58749999999999
+          },
+          "supplyIndex": 1,
+          "queue": 4,
+          "view": {
+            "zoom": 6.595574894064917,
+            "x": 15.909587816133719,
+            "y": 19.36785680309688
+          },
+          "tick": 1,
+          "units": 25
+        },
+        {
+          "seed": 1,
+          "stage": {
+            "width": 36,
+            "height": 27,
+            "enemyCount": 24
+          },
+          "placement": {
+            "x": 7.166911764705885,
+            "y": 24.087499999999995
+          },
+          "supplyIndex": 1,
+          "queue": 4,
+          "view": {
+            "zoom": 6.595574894064917,
+            "x": 6.909587816133719,
+            "y": 23.86785680309688
+          },
+          "tick": 1,
+          "units": 25
+        },
+        {
+          "seed": 11,
+          "stage": {
+            "width": 36,
+            "height": 27,
+            "enemyCount": 24
+          },
+          "placement": {
+            "x": 16.166911764705883,
+            "y": 20.712499999999995
+          },
+          "supplyIndex": 1,
+          "queue": 4,
+          "view": {
+            "zoom": 6.595574894064917,
+            "x": 15.909587816133719,
+            "y": 20.49285680309688
+          },
+          "tick": 1,
+          "units": 25
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": []
+}

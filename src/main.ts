@@ -1,16 +1,16 @@
 import Phaser from 'phaser';
-import {createState,place,validatePlacement,step,Clock,WIDTH,HEIGHT,growth,effectiveRange,dominant,footprint,SEED_RADIUS,territoryCoverage,viewport,screenToWorld,clientToWorld,placementForecast,chooseTarget,insideTerritory,finishRun,runActivity,decisionHint,resultDiagnosis,enemyPresenceAt,PRESENCE_LIMIT,REFILL_TICKS,type Stats} from './sim';
+import {createState,place,validatePlacement,step,Clock,growth,effectiveRange,dominant,footprint,SEED_RADIUS,territoryCoverage,viewport,placementForecast,chooseTarget,insideTerritory,finishRun,runActivity,decisionHint,resultDiagnosis,stageProgress,enemyPresenceAt,PRESENCE_LIMIT,REFILL_TICKS,type Stats} from './sim';
 import './style.css';
 import {TapGesture,ForegroundGate,canvasSize,EventSkip} from './runtime';
 import {RunStore,capture,type Action} from './session';
 import {BoardCamera,introView,type View} from './camera';
 let camera=new BoardCamera(),introActive=false,introElapsed=0,introTarget:View={x:6,y:4.5,zoom:1};
-let state=createState(), clock=new Clock(), selected:number|null=null, hovered:{x:number;y:number}|null=null;
+let state=createState(20261011,undefined,'endless'), clock=new Clock(), selected:number|null=null, hovered:{x:number;y:number}|null=null;
 const taps=new TapGesture(),foreground=new ForegroundGate(),skip=new EventSkip();
 const store=new RunStore({getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)});
 let actions:Action[]=[],savedTick=-1,lastAttemptTick=-1,saveFailed=false,saveNotice='端末に自動保存';
 const loaded=store.read();
-if(loaded.kind==='loaded'){state=loaded.state;actions=loaded.save.actions;clock.speed=loaded.save.speed;camera=new BoardCamera(loaded.save.view);savedTick=state.tick;saveNotice='保存runを停止状態で復元';}
+if(loaded.kind==='loaded'){state=loaded.state;actions=loaded.save.actions;clock.speed=loaded.save.speed;camera=new BoardCamera(loaded.save.view,state.stage);savedTick=state.tick;saveNotice='保存runを停止状態で復元';}
 else if(loaded.kind==='invalid')saveNotice='旧ルールまたは不明な保存です。元データは保持しています。新seedまたは入力seedで始めると、元データを退避して保存を再開します。';
 else if(loaded.kind==='unavailable')saveNotice='この環境では端末保存を利用できません。';
 if(loaded.kind==='invalid'||loaded.kind==='unavailable')saveFailed=true;
@@ -24,7 +24,7 @@ function persist(replace=false,force=false){
 }
 const palette={power:0xec8a62,range:0x80c9e4,presence:0xc1a1eb,vitality:0x9ecf74};
 const labels={power:'攻撃',range:'射程',presence:'存在感距離',vitality:'生命'};
-document.querySelector('#app')!.innerHTML=`<header><div><small>配置と観察の小さな試作</small><h1>Morishi <span>芽を置いて、領域を広げる。</span></h1></div><button id="restart">新seedで始める</button></header><nav class="tabs"><button data-pane="left">配置・味方</button><button data-pane="board" class="active">盤面</button><button data-pane="right">敵・観察</button></nav><main data-pane="board"><aside id="left"><h2>次に植える植物</h2><div id="card"></div><details class="help"><summary>配置の見方</summary><p class="hint">敵存在感の合計が閾値以下の場所の自由な位置をタップで配置。敵の近くほど戦闘に届きやすく、存在感Areaと射程は別です。</p><p class="hint">進行24秒で配置力＋1（最大5）。敵攻略でも＋1。次の3体は公開されています。</p></details><h2>配置の準備</h2><div id="supply"></div><progress id="refill" max="240" value="0"></progress><p id="refill-info" class="hint"></p><div id="future"></div><h2>選んだ植物</h2><div id="selection">盤面の植物を選ぶと能力と射程を表示します。</div></aside><section id="center"><div class="board-header"><span id="status"></span><span id="coverage"></span></div><div id="activity" class="activity-hint"></div><div id="board"></div><div id="preview" class="preview-status">スナップなしの自由配置</div><div id="forecast" class="forecast-panel">カーソルを動かすと、攻撃の届き方と狙われ方を確認できます。</div><div id="run-result" class="run-result" hidden></div><div id="message" role="status" aria-live="polite"></div><div class="controls"><button id="play" class="primary">▶ 時間を進める</button><button id="tick">1 Tick</button><button id="skip">変化まで</button><button id="finish" class="quiet">今回を終える</button><label>速度 <select id="speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div><div class="legend"><span>● 攻撃</span><span>◆ 射程</span><span>✦ 存在感</span><span>■ 生命</span><span>赤い面＝存在感合計＞1.5</span><span>外周＝成長 · 棒の長さ＝耐久</span></div><p class="hint">敵は全て初期配置済み。実線円は等倍射程、破線円は減衰限界。赤い面は配置不可Area。遠い相手への攻撃は弱くなります。</p></section><aside id="right"><h2>盤面を読む</h2><div id="enemies"><p id="enemy-count"></p><div id="enemy-list"></div></div><h2>最近のできごと</h2><div id="events"></div><h2>この試作でできること</h2><p class="hint">配置 → 成長と戦闘を観察 → 停止して考える → 存在感の低い場所へ配置。</p><p class="hint">成長すると見た目と射程が広がります。色と形は能力の配分から決まり、種族の固定データはありません。</p><label class="seed-label">生成seed <input id="seed" value="20261011" inputmode="numeric"></label><button id="same">入力seedで始める</button><p class="hint">生成後に乱数は使用しません。合体・属性・デッキ育成はこの版では未実装です。</p></aside></main><footer>ローカル試作 · まずは浅く楽しめる配置と領域の変化を確かめる</footer>`;
+document.querySelector('#app')!.innerHTML=`<header><div><small>配置と観察の小さな試作</small><h1>Morishi <span>芽を置いて、領域を広げる。</span></h1></div><button id="restart">新seedで始める</button></header><nav class="tabs"><button data-pane="left">配置・味方</button><button data-pane="board" class="active">盤面</button><button data-pane="right">敵・観察</button></nav><main data-pane="board"><aside id="left"><h2>次に植える植物</h2><div id="card"></div><details class="help"><summary>配置の見方</summary><p class="hint">敵存在感の合計が閾値以下の場所の自由な位置をタップで配置。敵の近くほど戦闘に届きやすく、存在感Areaと射程は別です。</p><p class="hint">進行24秒で配置力＋1（最大5）。敵攻略でも＋1。次の3体は公開されています。</p></details><h2>配置の準備</h2><div id="supply"></div><progress id="refill" max="240" value="0"></progress><p id="refill-info" class="hint"></p><div id="future"></div><h2>選んだ植物</h2><div id="selection">盤面の植物を選ぶと能力と射程を表示します。</div></aside><section id="center"><div class="board-header"><span id="status"></span><span id="coverage"></span></div><div id="activity" class="activity-hint"></div><div id="board"></div><div id="preview" class="preview-status">スナップなしの自由配置</div><div id="forecast" class="forecast-panel">カーソルを動かすと、攻撃の届き方と狙われ方を確認できます。</div><div id="run-result" class="run-result" hidden></div><div id="message" role="status" aria-live="polite"></div><div class="controls"><button id="play" class="primary">▶ 時間を進める</button><button id="tick">1 Tick</button><button id="skip">変化まで</button><button id="finish" class="quiet">今回を終える</button><label>速度 <select id="speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div><div class="legend"><span>● 攻撃</span><span>◆ 射程</span><span>✦ 存在感</span><span>■ 生命</span><span>赤い面＝存在感合計＞1.5</span><span>外周＝成長 · 棒の長さ＝耐久</span></div><p class="hint">敵は全て初期配置済み。実線円は等倍射程、破線円は減衰限界。赤い面は配置不可Area。遠い相手への攻撃は弱くなります。</p></section><aside id="right"><h2>盤面を読む</h2><div id="enemies"><p id="enemy-count"></p><div id="enemy-list"></div></div><h2>最近のできごと</h2><div id="events"></div><h2>この試作でできること</h2><p class="hint">配置 → 成長と戦闘を観察 → 停止して考える → 存在感の低い場所へ配置。</p><p class="hint">成長すると見た目と射程が広がります。色と形は能力の配分から決まり、種族の固定データはありません。</p><label class="seed-label">生成seed <input id="seed" value="20261011" inputmode="numeric"></label><button id="same">入力seedで始める</button><p class="hint">同じseedで供給順序も再現します。合体・属性・デッキ育成はこの版では未実装です。</p></aside></main><footer>ローカル試作 · まずは浅く楽しめる配置と領域の変化を確かめる</footer>`;
 const $=(id:string)=>document.getElementById(id)!;
 $('activity').after(document.querySelector('.controls')!);
 const selectedPanel=document.createElement('section');selectedPanel.id='selected-panel';selectedPanel.append($('selection').previousElementSibling!,$('selection'));$('left').prepend(selectedPanel);
@@ -48,7 +48,7 @@ function refresh(){
   ($('speed') as HTMLSelectElement).disabled=introActive;
   document.querySelectorAll<HTMLButtonElement>('.camera-controls button').forEach(b=>b.disabled=introActive);
   $('card').innerHTML=state.cards[0]?`<div class="plant-card"><strong>${labels[dominant(state.cards[0])]}が得意な芽</strong>${statsHtml(state.cards[0])}</div>`:'今回の植物はすべて配置しました。';
-  $('supply').textContent=`配置力 ${state.charges} / 5 · 残りの芽 ${state.cards.length}`;
+  $('supply').textContent=`配置力 ${state.charges} / 5 · ${state.supplyMode==='endless'?'芽の供給 継続':`残りの芽 ${state.cards.length}`}`;
   ($('refill') as HTMLProgressElement).value=state.charges>=5?REFILL_TICKS:state.tick%REFILL_TICKS;
   $('refill-info').textContent=!state.cards.length?'残りの芽はありません。':state.charges>=5?'配置力は満タンです。次の芽を配置できます。':!state.started?'最初の配置後に補充が始まります。':`次の補充まで ${((REFILL_TICKS-state.tick%REFILL_TICKS)/10).toFixed(1)}ゲーム秒${clock.paused?'（停止中）':''}`;
   $('future').innerHTML=state.cards.slice(1,4).map((s,i)=>`<div class="preview">次${i+1} · ${labels[dominant(s)]}型 · 攻${s.power.toFixed(0)} / 射${s.range.toFixed(1)}</div>`).join('');
@@ -71,13 +71,13 @@ function refresh(){
   $('run-result').hidden=state.outcome==='playing';
   if(state.outcome!=='playing'){
     const diagnosis=resultDiagnosis(state);
-    html('run-result',`<strong>${state.outcome==='win'?'攻略完了！':'今回はここまで。'}</strong><p>配置可能 約${Math.round(territoryCoverage(state)*100)}% · 敵攻略 ${7-state.units.filter(u=>u.team==='enemy').length}/7体 · ${(state.tick/10).toFixed(1)}秒</p><p>${escape(diagnosis?.message??state.events[0])}</p><p class="hint">${escape(diagnosis?.suggestion)}</p><div>${diagnosis?.enemyId?'<button id="inspect-gap">味方の射程で確認</button>':''}<button id="retry-run">同じseedで再挑戦</button><button id="next-run">新seedで始める</button></div>`);
+    html('run-result',`<strong>${state.outcome==='win'?'攻略完了！':'今回はここまで。'}</strong><p>配置可能 約${Math.round(territoryCoverage(state)*100)}% · 敵攻略 ${stageProgress(state).defeated}/${state.stage.enemyCount}体 · ${(state.tick/10).toFixed(1)}秒</p><p>${escape(diagnosis?.message??state.events[0])}</p><p class="hint">${escape(diagnosis?.suggestion)}</p><div>${diagnosis?.enemyId?'<button id="inspect-gap">味方の射程で確認</button>':''}<button id="retry-run">同じseedで再挑戦</button><button id="next-run">新seedで始める</button></div>`);
     if(diagnosis?.enemyId)$('inspect-gap').onclick=()=>{selected=diagnosis.allyId!;message(`味方 #${diagnosis.allyId} の射程円と敵 #${diagnosis.enemyId} の位置を比較できます。`);refresh();};
     $('retry-run').onclick=()=>reset(state.seed);$('next-run').onclick=()=>reset((state.seed+1)>>>0);
   }
 }
 function message(text:string){$('message').textContent=text;}
-function reset(seed:number){skip.cancel();if(!Number.isInteger(seed)||seed<0||seed>4294967295){message('seedは0〜4294967295の整数を指定してください。');return;}if(store.protectedSave&&loaded.kind==='invalid'&&!window.confirm('旧保存を退避して、新しいルールのrunを始めますか？'))return;state=createState(seed);camera=new BoardCamera();introActive=true;introElapsed=0;introTarget=introView(state);clock=new Clock();actions=[];savedTick=lastAttemptTick=-1;persist(true);taps.cancel();foreground.interrupt(clock);hovered=null;selected=null;($('speed') as HTMLSelectElement).value='1';($('seed') as HTMLInputElement).value=String(seed);message('存在感が低い場所の自由な位置に配置して、時間を進めましょう。');refresh();}
+function reset(seed:number){skip.cancel();if(!Number.isInteger(seed)||seed<0||seed>4294967295){message('seedは0〜4294967295の整数を指定してください。');return;}if(store.protectedSave&&loaded.kind==='invalid'&&!window.confirm('旧保存を退避して、新しいルールのrunを始めますか？'))return;state=createState(seed,state.stage,'endless');camera=new BoardCamera(undefined,state.stage);introActive=true;introElapsed=0;introTarget=introView(state);clock=new Clock();actions=[];savedTick=lastAttemptTick=-1;persist(true);taps.cancel();foreground.interrupt(clock);hovered=null;selected=null;($('speed') as HTMLSelectElement).value='1';($('seed') as HTMLInputElement).value=String(seed);message('存在感が低い場所の自由な位置に配置して、時間を進めましょう。');refresh();}
 $('restart').onclick=()=>reset((state.seed+1)>>>0);
 $('same').onclick=()=>reset(Number(($('seed') as HTMLInputElement).value));
 $('play').onclick=()=>{if(skip.active){skip.cancel();clock.suspend();persist(false,true);refresh();return;}if(introActive||state.outcome!=='playing'||document.hidden)return;if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(!state.started){message('最初の植物を配置してから時間を進められます。');return;}clock.paused=!clock.paused;refresh();};
@@ -91,7 +91,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt()
 window.addEventListener('blur',interrupt);
 window.addEventListener('pagehide',interrupt);
 class Board extends Phaser.Scene {
-  graphics!:Phaser.GameObjects.Graphics; textById=new Map<number,Phaser.GameObjects.Text>(); cell=40;ox=0;oy=0;elapsed=0;fieldTick=-1;fieldState=state;fieldRects:{x:number;y:number;width:number}[]=[];
+  graphics!:Phaser.GameObjects.Graphics; textById=new Map<number,Phaser.GameObjects.Text>(); cell=40;ox=0;oy=0;elapsed=0;fieldTick=-1;fieldState=state;fieldView='';fieldHeight=0;fieldRects:{x:number;y:number;width:number}[]=[];
   knownTerritory=new Set<number>();pulseState=state;pulses:{x:number;y:number;radius:number;time:number;captured:boolean}[]=[];viewTime=0;
   create(){
     this.graphics=this.add.graphics();
@@ -103,7 +103,7 @@ class Board extends Phaser.Scene {
     const move=(e:PointerEvent)=>{if(e.pointerType==='mouse'&&e.buttons!==0&&e.buttons!==1)taps.cancel();taps.move(e.pointerId,e.clientX,e.clientY);
       if(drag&&!taps.tracking(drag.id)){if(drag.panning)persist(false,true);drag=null;}
       if(drag?.id===e.pointerId&&(drag.panning||Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY)>8)){
-        drag.panning=true;const rect=canvas.getBoundingClientRect();camera.pan(e.clientX-drag.lastX,e.clientY-drag.lastY,viewport(rect.width,rect.height).scale);drag.lastX=e.clientX;drag.lastY=e.clientY;hovered=null;return;
+        drag.panning=true;const rect=canvas.getBoundingClientRect();camera.pan(e.clientX-drag.lastX,e.clientY-drag.lastY,viewport(rect.width,rect.height,state.stage).scale);drag.lastX=e.clientX;drag.lastY=e.clientY;hovered=null;return;
       }
       const pos=e.target===canvas?point(e)?.position??null:null;hovered=pos&&state.units.some(u=>Math.hypot(u.x-pos.x,u.y-pos.y)<=footprint(u))?null:pos;};
     const cancel=()=>{if(drag?.panning)persist(false,true);drag=null;taps.cancel();hovered=null;};
@@ -116,7 +116,7 @@ class Board extends Phaser.Scene {
       const pos=p.position;hovered=pos;if(skip.active){skip.cancel();persist(false,true);}
       const u=state.units.filter(u=>Math.hypot(u.x-pos.x,u.y-pos.y)<=footprint(u)).sort((a,b)=>Math.hypot(a.x-pos.x,a.y-pos.y)-Math.hypot(b.x-pos.x,b.y-pos.y)||a.id-b.id)[0];
       if(u){selected=u.id;$('left').scrollTop=0;hovered=null;message('選んだ植物の円が現在の射程です。');}
-      else if(state.outcome==='playing'){if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}const result=place(state,pos.x,pos.y);if(result.ok){actions.push({tick:state.tick,kind:'place',x:pos.x,y:pos.y});lastAttemptTick=-1;persist();hovered=null;}message(result.ok?'自由な位置に配置しました。時間を進めると植物が育ちます。':result.reason);}
+      else if(state.outcome==='playing'){if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}const result=place(state,pos.x,pos.y);if(result.ok){actions.push({tick:state.tick,kind:'place',x:pos.x,y:pos.y});if(state.supplyMode==='endless')actions=actions.slice(-64);lastAttemptTick=-1;persist();hovered=null;}message(result.ok?'自由な位置に配置しました。時間を進めると植物が育ちます。':result.reason);}
       else message('このrunは終了しています。植物の情報は確認できます。');
       refresh();
     };
@@ -130,7 +130,7 @@ class Board extends Phaser.Scene {
   update(_time:number,delta:number){
     this.viewTime=_time;const safeDelta=document.hidden?0:foreground.frame(delta);
     if(!document.hidden){
-      if(introActive){introElapsed+=safeDelta;const t=Math.max(0,Math.min(1,(introElapsed-200)/500)),a=t*t*(3-2*t);camera.set({zoom:1+(introTarget.zoom-1)*a,x:6+(introTarget.x-6)*a,y:4.5+(introTarget.y-4.5)*a});if(t===1){introActive=false;persist(false,true);refresh();}}
+      if(introActive){introElapsed+=safeDelta;const t=Math.max(0,Math.min(1,(introElapsed-200)/500)),a=t*t*(3-2*t);camera.set({zoom:1+(introTarget.zoom-1)*a,x:state.stage.width/2+(introTarget.x-state.stage.width/2)*a,y:state.stage.height/2+(introTarget.y-state.stage.height/2)*a});if(t===1){introActive=false;persist(false,true);refresh();}}
       else if(skip.active){const stopped=skip.chunk(state);if(stopped){persist(false,true);message('時間送り停止 · '+stopped);refresh();}}
       else clock.advance(state,safeDelta);
     }
@@ -138,22 +138,23 @@ class Board extends Phaser.Scene {
   }  draw(){
     if(this.scale.width<=0||this.scale.height<=0)return;
     const g=this.graphics;g.clear();const layout=camera.layout(this.scale.width,this.scale.height);this.cell=layout.scale;this.ox=layout.ox;this.oy=layout.oy;
-    g.fillStyle(0x182a2c);g.fillRect(this.ox,this.oy,WIDTH*this.cell,HEIGHT*this.cell);
-    g.fillStyle(0x294e43);g.fillRect(this.ox,this.oy,WIDTH*this.cell,HEIGHT*this.cell);
+    g.fillStyle(0x182a2c);g.fillRect(this.ox,this.oy,state.stage.width*this.cell,state.stage.height*this.cell);
+    g.fillStyle(0x294e43);g.fillRect(this.ox,this.oy,state.stage.width*this.cell,state.stage.height*this.cell);
 
     if(this.pulseState!==state){this.pulseState=state;this.knownTerritory.clear();this.pulses=[];}
     for(const t of state.territory)if(!this.knownTerritory.has(t.id)){this.knownTerritory.add(t.id);if(!state.units.some(u=>u.id===t.id))this.pulses.push({x:t.x,y:t.y,radius:t.radius,time:this.viewTime,captured:true});}
     this.pulses=this.pulses.filter(p=>this.viewTime-p.time<1500);
     // Cached contour of the summed field; exact placement never uses these samples.
-    if(this.fieldState!==state||this.fieldTick!==state.tick){
-      this.fieldState=state;this.fieldTick=state.tick;this.fieldRects=[];
+    const bounds=camera.bounds(this.scale.width,this.scale.height),viewKey=JSON.stringify(bounds);
+    if(this.fieldState!==state||this.fieldTick!==state.tick||this.fieldView!==viewKey){
+      this.fieldState=state;this.fieldTick=state.tick;this.fieldView=viewKey;this.fieldHeight=bounds.height/72;this.fieldRects=[];
       for(let yi=0;yi<72;yi++){let left=-1;for(let xi=0;xi<=96;xi++){
-        const blocked=xi<96&&enemyPresenceAt(state,(xi+.5)*WIDTH/96,(yi+.5)*HEIGHT/72)>PRESENCE_LIMIT;
+        const blocked=xi<96&&enemyPresenceAt(state,bounds.x+(xi+.5)*bounds.width/96,bounds.y+(yi+.5)*bounds.height/72)>PRESENCE_LIMIT;
         if(blocked&&left<0)left=xi;
-        if(!blocked&&left>=0){this.fieldRects.push({x:left*WIDTH/96,y:yi*HEIGHT/72,width:(xi-left)*WIDTH/96});left=-1;}
+        if(!blocked&&left>=0){this.fieldRects.push({x:bounds.x+left*bounds.width/96,y:bounds.y+yi*bounds.height/72,width:(xi-left)*bounds.width/96});left=-1;}
       }}
     }
-    g.fillStyle(0x703d40,.6);for(const r of this.fieldRects)g.fillRect(this.ox+r.x*this.cell,this.oy+r.y*this.cell,r.width*this.cell+.5,HEIGHT/72*this.cell+.5);    g.lineStyle(1,0x6c8579);g.strokeRect(this.ox,this.oy,WIDTH*this.cell,HEIGHT*this.cell);
+    g.fillStyle(0x703d40,.6);for(const r of this.fieldRects)g.fillRect(this.ox+r.x*this.cell,this.oy+r.y*this.cell,r.width*this.cell+.5,this.fieldHeight*this.cell+.5);    g.lineStyle(1,0x6c8579);g.strokeRect(this.ox,this.oy,state.stage.width*this.cell,state.stage.height*this.cell);
     for(const pulse of this.pulses){const age=(this.viewTime-pulse.time)/1500;const radius=pulse.radius*Math.min(1,.2+age*2);g.lineStyle(pulse.captured?3:2,pulse.captured?0xe4e6a4:0xa3e3b3,(1-age)*.75);g.strokeCircle(this.ox+pulse.x*this.cell,this.oy+pulse.y*this.cell,radius*this.cell);}
     if(hovered){const result=validatePlacement(state,hovered.x,hovered.y);const color=result.ok?0xb9e795:0xf0a194;const hx=this.ox+hovered.x*this.cell,hy=this.oy+hovered.y*this.cell;g.fillStyle(color,.18);g.fillCircle(hx,hy,SEED_RADIUS*this.cell);g.lineStyle(2,color);g.strokeCircle(hx,hy,SEED_RADIUS*this.cell);g.lineStyle(1,color,.35);if(state.cards[0])g.strokeCircle(hx,hy,state.cards[0].range*.65*this.cell);$('preview').textContent=`存在感 ${enemyPresenceAt(state,hovered.x,hovered.y).toFixed(2)} / ${PRESENCE_LIMIT.toFixed(1)} · ${result.reason}`;$('preview').classList.toggle('invalid',!result.ok);}
     else { $('preview').textContent=state.units.some(u=>u.id===selected)?`選択中 #${selected} · 実線＝等倍 / 破線＝減衰限界`:'自由配置 · 緑の円＝可 / 赤＝不可'; $('preview').classList.remove('invalid'); }
@@ -167,7 +168,7 @@ class Board extends Phaser.Scene {
       html('forecast',`<strong>${forecast.note}</strong><div>${forecast.targetId?`今の1撃 約${forecast.damage.toFixed(1)} · `:''}${forecast.incomingIds.length?`敵${forecast.incomingIds.length}体の標的候補（1巡 約${forecast.incomingDamage.toFixed(1)}）`:'今は敵から狙われません。'}</div><small> 線は今の攻撃 / 成長後の攻撃を示します。敵の現位置での目安です。</small>`);
     }else $('forecast').textContent=state.outcome!=='playing'?'下のボタンで同じseedの配置を試し直せます。':hovered?'配置できない位置です。存在感が低い場所の別の位置を選んでみましょう。':'カーソルを動かすと、攻撃の届き方と狙われ方を確認できます。';
     const aliveIds=new Set(state.units.map(u=>u.id));for(const [id,text] of this.textById)if(!aliveIds.has(id)){text.destroy();this.textById.delete(id);}
-    for(const u of state.units){const x=this.ox+u.x*this.cell,y=this.oy+u.y*this.cell;
+    for(const u of state.units){const x=this.ox+u.x*this.cell,y=this.oy+u.y*this.cell;const visible=x>=-50&&x<=this.scale.width+50&&y>=-50&&y<=this.scale.height+50;this.textById.get(u.id)?.setVisible(visible);if(!visible&&u.id!==selected)continue;
       if(u.id===selected){
         const limit=effectiveRange(u)*2*this.cell;
         g.lineStyle(1,0xd8e3df,.55);for(let i=0;i<32;i++){const a=i*Math.PI/16;g.beginPath();g.arc(x,y,limit,a,a+Math.PI/32);g.strokePath();}        g.lineStyle(1.5,u.team==='ally'?0xb9e795:0xefaaa0,.8);g.strokeCircle(x,y,effectiveRange(u)*this.cell);
@@ -185,13 +186,13 @@ class Board extends Phaser.Scene {
       const hpWidth=Math.max(8,this.cell*.8*u.maxHp/220),hpLeft=x-hpWidth/2,hpY=y+r+8;
       g.fillStyle(0x0a1819);g.fillRect(hpLeft,hpY,hpWidth,4);g.fillStyle(u.team==='enemy'?0xeb877b:0xb9e795);g.fillRect(hpLeft,hpY,hpWidth*Math.max(0,u.hp/u.maxHp),4);
       g.lineStyle(1,0xc2d5d0,.65);g.strokeRect(hpLeft,hpY,hpWidth,4);
-      let text=this.textById.get(u.id);if(!text){text=this.add.text(x,y-r-12,String(u.id),{color:'#c2d5d0'}).setOrigin(.5);this.textById.set(u.id,text);}text.setPosition(x,y-r-12).setFontSize(Math.max(9,this.cell*.23));
+      let text=this.textById.get(u.id);if(!text){text=this.add.text(x,y-r-12,String(u.id),{color:'#c2d5d0'}).setOrigin(.5);this.textById.set(u.id,text);}text.setVisible(visible);text.setPosition(x,y-r-12).setFontSize(Math.max(9,this.cell*.23));
     }
   }
 }
 const game=new Phaser.Game({type:Phaser.AUTO,parent:'board',backgroundColor:'#101f21',scene:Board,scale:{mode:Phaser.Scale.NONE,width:600,height:450},render:{antialias:true},banner:false});
 const cameraControls=document.createElement('div');cameraControls.className='camera-controls';
-for(const [label,action] of [['−',()=>camera.zoomAt(.8,camera.view)],['＋',()=>camera.zoomAt(1.25,camera.view)],['全体',()=>camera.set({x:6,y:4.5,zoom:1})]] as const){const button=document.createElement('button');button.textContent=label;button.setAttribute('aria-label',label==='全体'?'盤面全体を表示':label==='＋'?'拡大':'縮小');button.onclick=()=>{if(introActive)return;taps.cancel();hovered=null;action();persist(false,true);};cameraControls.append(button);}
+for(const [label,action] of [['−',()=>camera.zoomAt(.8,camera.view)],['＋',()=>camera.zoomAt(1.25,camera.view)],['全体',()=>camera.set({x:state.stage.width/2,y:state.stage.height/2,zoom:1})]] as const){const button=document.createElement('button');button.textContent=label;button.setAttribute('aria-label',label==='全体'?'盤面全体を表示':label==='＋'?'拡大':'縮小');button.onclick=()=>{if(introActive)return;taps.cancel();hovered=null;action();persist(false,true);};cameraControls.append(button);}
 $('board').append(cameraControls);
 new ResizeObserver(entries=>{if(!introActive)persist(false,true);taps.cancel();const size=canvasSize(entries[0].contentRect.width,entries[0].contentRect.height);if(size){game.scale.resize(size.width,size.height);hovered=null;}}).observe($('board'));
 const saveStatus=document.createElement('p');saveStatus.id='save-status';saveStatus.className=saveFailed?'hint save-error':'hint';saveStatus.textContent=saveNotice;saveStatus.setAttribute('role',saveFailed?'alert':'status');document.querySelector('header')!.after(saveStatus);

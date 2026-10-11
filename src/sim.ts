@@ -1,3 +1,4 @@
+import {DEFAULT_STAGE,INITIAL_CARDS,stageConfig,referenceStage,type StageConfig} from './stage.js';
 export const WIDTH = 12, HEIGHT = 9, TICK_MS = 100;
 export const EPSILON = 1e-9, SEED_RADIUS = 0.3;
 export const RULES='plateau-distance-1', REFILL_TICKS=240;
@@ -16,8 +17,8 @@ export function enemyPresenceAt(s:State,x:number,y:number):number {
   return s.units.filter(u=>u.team==='enemy'&&u.hp>0).reduce((sum,u)=>sum+presenceAt(u,x,y),0);
 }export type Territory = { id: number; x: number; y: number; radius: number };
 export type Stats = { power: number; range: number; presence: number; vitality: number };
-export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null; lastShot?:{tick:number;targetId:number;x:number;y:number;damage:number} };
-export type State = { seed: number; tick: number; nextId: number; units: Unit[]; cards: Stats[]; territory: Territory[]; charges: number; outcome: 'playing' | 'win' | 'loss'; started: boolean; events: string[] };
+export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null; born?:number;supplyIndex?:number;lastShot?:{tick:number;targetId:number;x:number;y:number;damage:number} };
+export type State = { stage:StageConfig; supplyMode:'finite'|'endless';supplyIndex:number; seed: number; tick: number; nextId: number; units: Unit[]; cards: Stats[]; territory: Territory[]; charges: number; outcome: 'playing' | 'win' | 'loss'; started: boolean; events: string[] };
 export type Placement = { ok: boolean; reason: string };
 export type PlacementForecast = { targetId:number|null; damage:number; grownTargetId:number|null; incomingIds:number[]; incomingDamage:number; newArea:number; note:string };
 function rng(seed: number) { let s = seed >>> 0; return () => { s += 0x6D2B79F5; let t = Math.imul(s ^ s >>> 15, 1 | s); t ^= t + Math.imul(t ^ t >>> 7, 61 | t); return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
@@ -34,7 +35,12 @@ export function dominant(stats: Stats): keyof Stats {
 function unit(state: State, team: Unit['team'], x: number, y: number, stats: Stats): Unit {
   return {id:state.nextId++,team,x,y,hp:stats.vitality,maxHp:stats.vitality,age:0,cooldown:0,stats:{...stats},target:null};
 }
-export function enemyPositions(seed:number):{x:number;y:number}[] {
+export function enemyPositions(seed:number,configuration:StageConfig=DEFAULT_STAGE):{x:number;y:number}[] {
+  const stage=stageConfig(configuration);
+  if(!referenceStage(stage)){
+    const random=rng((seed>>>0)^0x9E3779B9),cols=Math.ceil(Math.sqrt(stage.enemyCount*(stage.width-2.4)/(stage.height-2.4))),rows=Math.ceil(stage.enemyCount/cols),cw=(stage.width-2.4)/cols,ch=(stage.height-2.4)/rows;
+    return Array.from({length:stage.enemyCount},(_,i)=>({x:1.2+(i%cols+.5)*cw+(random()-.5)*Math.min(.7,cw*.2),y:1.2+(Math.floor(i/cols)+.5)*ch+(random()-.5)*Math.min(1.4,ch*.2)}));
+  }
   // Keep the user-tested entry board as a reference; new seeds vary the route.
   if((seed>>>0)===20261011)return [[4,2],[4,6],[6,4],[8,1],[8,7],[10,3],[10,6]].map(([x,y])=>({x,y}));
   const random=rng((seed>>>0)^0x9E3779B9);
@@ -42,46 +48,47 @@ export function enemyPositions(seed:number):{x:number;y:number}[] {
   const mirrored=random()>.5;
   return anchors.map(([x,y])=>({x:x+(random()-.5)*.7,y:Math.max(.6,Math.min(HEIGHT-.6,(mirrored?HEIGHT-y:y)+(random()-.5)*1.4))}));
 }
-export function createState(seed = 20261011): State {
+export function createState(seed = 20261011,configuration:StageConfig=DEFAULT_STAGE,supplyMode:'finite'|'endless'='finite'): State {
   if (!Number.isFinite(seed)) throw new Error('Seed must be finite');
-  const random = rng(seed);
-  const state: State = {seed:seed>>>0,tick:0,nextId:1,units:[],cards:[],territory:[],charges:3,outcome:'playing',started:false,events:['敵の存在感Areaの外なら、どこでも最初の植物を配置できます。']};
-  for (const {x,y} of enemyPositions(seed)) state.units.push(unit(state,'enemy',x,y,makeStats(random)));
+  const stage=stageConfig(configuration),random = rng(seed);
+  const state: State = {stage,supplyMode,supplyIndex:0,seed:seed>>>0,tick:0,nextId:1,units:[],cards:[],territory:[],charges:3,outcome:'playing',started:false,events:['敵の存在感Areaの外なら、どこでも最初の植物を配置できます。']};
+  for (const {x,y} of enemyPositions(seed,stage)) state.units.push(unit(state,'enemy',x,y,makeStats(random)));
   // Preserve a legal refuge even at full maturation, without random retry loops.
-  const corners=[[.3,.3],[11.7,.3],[.3,8.7],[11.7,8.7]];
+  const corners=[[.3,.3],[stage.width-.3,.3],[.3,stage.height-.3],[stage.width-.3,stage.height-.3]];
   const matureMin=()=>Math.min(...corners.map(([x,y])=>state.units.reduce((sum,u)=>sum+PRESENCE_STRENGTH*distanceFalloff(Math.hypot(x-u.x,y-u.y),u.stats.presence*1.3),0)));
   for(let i=0;i<8&&matureMin()>PRESENCE_LIMIT;i++)for(const u of state.units)u.stats.presence=Math.max(.5,+(u.stats.presence*.9).toFixed(2));
   if(matureMin()>PRESENCE_LIMIT)throw new Error('Presence field has no refuge');
-  for(let i=0;i<18;i++) state.cards.push(makeStats(random));
+  if(!['finite','endless'].includes(supplyMode))throw new Error('Invalid supply mode');
+  for(let i=0;i<(supplyMode==='finite'?INITIAL_CARDS:4);i++) state.cards.push(makeStats(random));
   return state;
 }
 export function footprint(u: Unit) { return SEED_RADIUS + Math.min(u.age / 180, 0.65) * 0.12; }
 export function insideTerritory(state: State, x: number, y: number): boolean {
-  if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||x>WIDTH||y<0||y>HEIGHT)return false;
+  if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||x>state.stage.width||y<0||y>state.stage.height)return false;
   return enemyPresenceAt(state,x,y)<=PRESENCE_LIMIT+EPSILON;
 }
 // Sampling is only for the percentage label; placement uses the analytic circle union.
 export function territoryCoverage(state: State): number {
   let claimed=0;const nx=60,ny=45;
-  for(let y=0;y<ny;y++)for(let x=0;x<nx;x++)if(insideTerritory(state,(x+.5)*WIDTH/nx,(y+.5)*HEIGHT/ny))claimed++;
+  for(let y=0;y<ny;y++)for(let x=0;x<nx;x++)if(insideTerritory(state,(x+.5)*state.stage.width/nx,(y+.5)*state.stage.height/ny))claimed++;
   return claimed/(nx*ny);
 }
-export function viewport(width:number,height:number) {
+export function viewport(width:number,height:number,stage:StageConfig=DEFAULT_STAGE) {
   if(!Number.isFinite(width)||!Number.isFinite(height)||width<=0||height<=0)throw new Error('Invalid viewport');
-  const scale=Math.min(width/WIDTH,height/HEIGHT);
-  return {scale,ox:(width-WIDTH*scale)/2,oy:(height-HEIGHT*scale)/2};
+  const scale=Math.min(width/stage.width,height/stage.height);
+  return {scale,ox:(width-stage.width*scale)/2,oy:(height-stage.height*scale)/2};
 }
-export function screenToWorld(px:number,py:number,width:number,height:number) {
-  const {scale,ox,oy}=viewport(width,height);
+export function screenToWorld(px:number,py:number,width:number,height:number,stage:StageConfig=DEFAULT_STAGE) {
+  const {scale,ox,oy}=viewport(width,height,stage);
   return {x:(px-ox)/scale,y:(py-oy)/scale};
 }
-export function clientToWorld(clientX:number,clientY:number,rect:{left:number;top:number;width:number;height:number}) {
-  return screenToWorld(clientX-rect.left,clientY-rect.top,rect.width,rect.height);
+export function clientToWorld(clientX:number,clientY:number,rect:{left:number;top:number;width:number;height:number},stage:StageConfig=DEFAULT_STAGE) {
+  return screenToWorld(clientX-rect.left,clientY-rect.top,rect.width,rect.height,stage);
 }
 export function validatePlacement(state: State, x: number, y: number): Placement {
   if(state.outcome!=='playing') return {ok:false,reason:'このステージは終了しました。新しい盤面を始められます。'};
   if(!Number.isFinite(x)||!Number.isFinite(y))return {ok:false,reason:'有効な位置を選んでください。'};
-  if(x<SEED_RADIUS-EPSILON||x>WIDTH-SEED_RADIUS+EPSILON||y<SEED_RADIUS-EPSILON||y>HEIGHT-SEED_RADIUS+EPSILON) return {ok:false,reason:'植物の円全体が盤面内に入る位置を選んでください。'};
+  if(x<SEED_RADIUS-EPSILON||x>state.stage.width-SEED_RADIUS+EPSILON||y<SEED_RADIUS-EPSILON||y>state.stage.height-SEED_RADIUS+EPSILON) return {ok:false,reason:'植物の円全体が盤面内に入る位置を選んでください。'};
   if(state.cards.length===0) return {ok:false,reason:'今回の芽は使い切りました。残った植物を観察するか、同じseedで再挑戦できます。'};
   if(state.charges<1) return {ok:false,reason:'配置力が足りません。時間を進めると補充されます。'};
   if(state.units.some(u=>Math.hypot(u.x-x,u.y-y)<footprint(u)+SEED_RADIUS-EPSILON)) return {ok:false,reason:'植物の円が重なっています。少し離して配置してください。'};
@@ -90,7 +97,7 @@ export function validatePlacement(state: State, x: number, y: number): Placement
 }
 export function place(state: State,x:number,y:number): Placement {
   const result=validatePlacement(state,x,y); if(!result.ok)return result;
-  const stats=state.cards.shift()!; state.units.push(unit(state,'ally',x,y,stats)); state.charges--; state.started=true;
+  const stats=state.cards.shift()!,index=state.supplyIndex++;const ally=unit(state,'ally',x,y,stats);if(state.supplyMode==='endless'){ally.born=state.tick;ally.supplyIndex=index;state.cards.push(supplyStats(state.seed,state.stage,state.supplyIndex+3));}state.units.push(ally); state.charges--; state.started=true;
   event(state,`植物を配置 (${x.toFixed(2)}, ${y.toFixed(2)})。射程円を見ながら進めてみましょう。`);
   expand(state); return result;
 }
@@ -140,14 +147,15 @@ export function resultDiagnosis(s:State):ResultDiagnosis|undefined {
   if(s.outcome==='playing')return undefined;
   if(s.outcome==='win')return {kind:'win',message:'全ての敵を攻略しました。',suggestion:'同じseedで別の広げ方や、新しいseedを試せます。'};
   const enemies=s.units.filter(u=>u.team==='enemy'),allies=s.units.filter(u=>u.team==='ally');
-  if(s.events[0]?.startsWith('今回はここまで。'))return {kind:'manual',message:`自分でrunを区切りました。敵${enemies.length}体、未配置の芽${s.cards.length}体が残っています。`,suggestion:'ここまでの広げ方を手がかりに、同じseedで再挑戦できます。'};
+  const remainingText=s.supplyMode==='endless'?`敵${enemies.length}体が残っています。`:`敵${enemies.length}体、未配置の芽${s.cards.length}体が残っています。`;
+  if(s.events[0]?.startsWith('今回はここまで。'))return {kind:'manual',message:`自分でrunを区切りました。${remainingText}`,suggestion:'ここまでの広げ方を手がかりに、同じseedで再挑戦できます。'};
   if(allies.length===0&&s.cards.length===0)return {kind:'defeated',message:'芽を使い切り、味方の植物が残っていません。',suggestion:'次は配置前の赤い線で狙われ方を見て、味方同士の射程が重なる位置も試せます。'};
   if(stalled(s)&&allies.length&&enemies.length){
     const pairs=enemies.flatMap(e=>allies.map(a=>{const distance=Math.hypot(e.x-a.x,e.y-a.y),range=effectiveRange(a)*2;return {enemyId:e.id,allyId:a.id,distance,range,gap:Math.max(0,distance-range)};}));
     pairs.sort((a,b)=>a.gap-b.gap||a.enemyId-b.enemyId||a.allyId-b.allyId);const pair=pairs[0];
     return {kind:'unreachable',...pair,message:`芽を使い切り、残った敵${enemies.length}体に味方の攻撃が届いていません。敵 #${pair.enemyId} と味方 #${pair.allyId} の距離は${pair.distance.toFixed(2)}、味方の射程は${pair.range.toFixed(2)}です。`,suggestion:'次はこの敵への中継に最後の芽を残し、育った射程の破線が届く位置を確認してみましょう。'};
   }
-  return {kind:'manual',message:`敵${enemies.length}体、未配置の芽${s.cards.length}体が残っています。`,suggestion:'結果の盤面から、次に狙う敵や広げる方向を選べます。'};
+  return {kind:'manual',message:remainingText,suggestion:'結果の盤面から、次に狙う敵や広げる方向を選べます。'};
 }
 function event(s:State,message:string) { s.events.unshift(message);s.events=s.events.slice(0,5); }
 export function finishRun(s:State):boolean {
@@ -155,6 +163,7 @@ export function finishRun(s:State):boolean {
   s.outcome='loss';event(s,'今回はここまで。広げた領域を眺めて、同じseedで別の広げ方も試せます。');return true;
 }
 function expand(s:State) {
+  if(s.supplyMode==='endless')return;
   for(const u of s.units.filter(u=>u.team==='ally'&&u.hp>0)) {
     const radius=1.6+Math.min(u.age/160,1.4);
     const existing=s.territory.find(t=>t.id===u.id);
@@ -195,4 +204,14 @@ export class Clock {
     this.accumulated+=elapsedMs*this.speed;
     while(this.accumulated+1e-8>=TICK_MS){this.accumulated-=TICK_MS;step(s);}
   }
+}
+
+export function stageProgress(s:State){const remaining=s.units.filter(u=>u.team==='enemy').length;return {total:s.stage.enemyCount,remaining,defeated:s.stage.enemyCount-remaining};}
+
+/** Indexed supply has bounded work even very late in a run. First 18 match legacy generation. */
+export function supplyStats(seed:number,stage:StageConfig,index:number):Stats {
+ if(!Number.isSafeInteger(index)||index<0)throw new Error('Invalid supply index');
+ if(index<INITIAL_CARDS){const random=rng(seed);for(let i=0;i<stage.enemyCount+index;i++)makeStats(random);return makeStats(random);}
+ const low=index>>>0,high=Math.floor(index/4294967296)>>>0,hash=(seed^Math.imul(stage.enemyCount,0x9e3779b9)^Math.imul(low,0x85ebca6b)^Math.imul(high,0xc2b2ae35))>>>0;
+ return makeStats(rng(hash));
 }

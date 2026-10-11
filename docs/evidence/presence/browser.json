@@ -1,0 +1,382 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "mouse fractional placement",
+        "unit selection without placement or false invalid hint",
+        "mouse drag and right click cancelled",
+        "placement after Pane/scroll",
+        "fractional placement after actual viewport resize",
+        "skip can be cancelled before its next frame",
+        "event skip advances then pauses on a meaningful event",
+        "play, 4x progress, pause",
+        "reload restores exact tick, speed and placements paused",
+        "real tab visibility pauses with no catch-up"
+      ],
+      "failures": [],
+      "layout": {
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "scrollWidth": 1351,
+        "board": {
+          "x": 376.828125,
+          "y": 303.59375,
+          "width": 597.328125,
+          "height": 447.984375,
+          "top": 303.59375,
+          "right": 974.15625,
+          "bottom": 751.578125,
+          "left": 376.828125
+        },
+        "canvas": {
+          "x": 377.828125,
+          "y": 304.59375,
+          "width": 595,
+          "height": 445,
+          "top": 304.59375,
+          "right": 972.828125,
+          "bottom": 749.59375,
+          "left": 377.828125
+        },
+        "play": {
+          "x": 274,
+          "y": 249.59375,
+          "width": 121.3125,
+          "height": 44,
+          "top": 249.59375,
+          "right": 395.3125,
+          "bottom": 293.59375,
+          "left": 274
+        },
+        "controlsVisible": true,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2340000109726117,
+          "y": 2.3450002605995435,
+          "clientX": 439.6759033203125,
+          "clientY": 277.5409851074219,
+          "rect": {
+            "x": 377.828125,
+            "y": 161.59375,
+            "width": 595,
+            "height": 445,
+            "top": 161.59375,
+            "right": 972.828125,
+            "bottom": 606.59375,
+            "left": 377.828125
+          },
+          "time": 1750.0999999046326
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2340000109726117,
+          "y": 2.3450002605995435
+        }
+      },
+      "supplyLayout": {
+        "controlsVisible": true,
+        "boardVisible": true,
+        "activity": "停止中 · 配置力0 · 定期補充まで24.0ゲーム秒 · 敵攻略でも＋1"
+      },
+      "backgroundVisibility": "hidden"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "mobile": false,
+      "checks": [
+        "mouse fractional placement",
+        "unit selection without placement or false invalid hint",
+        "mouse drag and right click cancelled",
+        "placement after Pane/scroll",
+        "fractional placement after actual viewport resize",
+        "skip can be cancelled before its next frame",
+        "event skip advances then pauses on a meaningful event",
+        "play, 4x progress, pause",
+        "reload restores exact tick, speed and placements paused",
+        "real tab visibility pauses with no catch-up"
+      ],
+      "failures": [],
+      "layout": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "scrollWidth": 1905,
+        "board": {
+          "x": 526.5,
+          "y": 303.59375,
+          "width": 852,
+          "height": 639,
+          "top": 303.59375,
+          "right": 1378.5,
+          "bottom": 942.59375,
+          "left": 526.5
+        },
+        "canvas": {
+          "x": 527.5,
+          "y": 304.59375,
+          "width": 850,
+          "height": 637,
+          "top": 304.59375,
+          "right": 1377.5,
+          "bottom": 941.59375,
+          "left": 527.5
+        },
+        "play": {
+          "x": 526.5,
+          "y": 249.59375,
+          "width": 121.3125,
+          "height": 44,
+          "top": 249.59375,
+          "right": 647.8125,
+          "bottom": 293.59375,
+          "left": 526.5
+        },
+        "controlsVisible": true,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2339997823047484,
+          "y": 2.3449998313628337,
+          "clientX": 615.173095703125,
+          "clientY": 387.567626953125,
+          "rect": {
+            "x": 527.5,
+            "y": 221.59375,
+            "width": 850,
+            "height": 637,
+            "top": 221.59375,
+            "right": 1377.5,
+            "bottom": 858.59375,
+            "left": 527.5
+          },
+          "time": 1157.2999999523163
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2339997823047484,
+          "y": 2.3449998313628337
+        }
+      },
+      "supplyLayout": {
+        "controlsVisible": true,
+        "boardVisible": true,
+        "activity": "停止中 · 配置力0 · 定期補充まで24.0ゲーム秒 · 敵攻略でも＋1"
+      },
+      "backgroundVisibility": "hidden"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "touch fractional placement",
+        "unit selection without placement or false invalid hint",
+        "touch drag and multitouch cancelled",
+        "repeated mobile Pane switches and visible selected stats",
+        "placement after Pane/scroll",
+        "fractional placement after actual viewport resize",
+        "skip can be cancelled before its next frame",
+        "event skip advances then pauses on a meaningful event",
+        "play, 4x progress, pause",
+        "reload restores exact tick, speed and placements paused",
+        "real tab visibility pauses with no catch-up"
+      ],
+      "failures": [],
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "board": {
+          "x": 12,
+          "y": 393.59375,
+          "width": 366,
+          "height": 274.5,
+          "top": 393.59375,
+          "right": 378,
+          "bottom": 668.09375,
+          "left": 12
+        },
+        "canvas": {
+          "x": 13,
+          "y": 394.59375,
+          "width": 364,
+          "height": 272,
+          "top": 394.59375,
+          "right": 377,
+          "bottom": 666.59375,
+          "left": 13
+        },
+        "play": {
+          "x": 12,
+          "y": 288.59375,
+          "width": 101.984375,
+          "height": 44,
+          "top": 288.59375,
+          "right": 113.984375,
+          "bottom": 332.59375,
+          "left": 12
+        },
+        "controlsVisible": true,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2339999675750726,
+          "y": 2.3450004353242764,
+          "clientX": 50.96088790893555,
+          "clientY": 387.4648742675781,
+          "rect": {
+            "x": 13,
+            "y": 316.59375,
+            "width": 364,
+            "height": 272,
+            "top": 316.59375,
+            "right": 377,
+            "bottom": 588.59375,
+            "left": 13
+          },
+          "time": 853.7999999523163
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2339999675750726,
+          "y": 2.3450004353242764
+        }
+      },
+      "supplyLayout": {
+        "controlsVisible": true,
+        "boardVisible": true,
+        "activity": "停止中 · 配置力0 · 定期補充まで24.0ゲーム秒 · 敵攻略でも＋1"
+      },
+      "backgroundVisibility": "hidden"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "mobile": true,
+      "checks": [
+        "touch fractional placement",
+        "unit selection without placement or false invalid hint",
+        "touch drag and multitouch cancelled",
+        "repeated mobile Pane switches and visible selected stats",
+        "placement after Pane/scroll",
+        "fractional placement after actual viewport resize",
+        "skip can be cancelled before its next frame",
+        "event skip advances then pauses on a meaningful event",
+        "play, 4x progress, pause",
+        "reload restores exact tick, speed and placements paused",
+        "real tab visibility pauses with no catch-up"
+      ],
+      "failures": [],
+      "layout": {
+        "viewport": {
+          "width": 320,
+          "height": 740
+        },
+        "scrollWidth": 320,
+        "board": {
+          "x": 12,
+          "y": 393.59375,
+          "width": 296,
+          "height": 222,
+          "top": 393.59375,
+          "right": 308,
+          "bottom": 615.59375,
+          "left": 12
+        },
+        "canvas": {
+          "x": 13,
+          "y": 394.59375,
+          "width": 294,
+          "height": 220,
+          "top": 394.59375,
+          "right": 307,
+          "bottom": 614.59375,
+          "left": 13
+        },
+        "play": {
+          "x": 12,
+          "y": 288.59375,
+          "width": 101.984375,
+          "height": 44,
+          "top": 288.59375,
+          "right": 113.984375,
+          "bottom": 332.59375,
+          "left": 12
+        },
+        "controlsVisible": true,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2339999285611236,
+          "y": 2.345000527121804,
+          "clientX": 43.49777603149414,
+          "clientY": 316.9159851074219,
+          "rect": {
+            "x": 13,
+            "y": 259.59375,
+            "width": 294,
+            "height": 220,
+            "top": 259.59375,
+            "right": 307,
+            "bottom": 479.59375,
+            "left": 13
+          },
+          "time": 1159.0999999046326
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2339999285611236,
+          "y": 2.345000527121804
+        }
+      },
+      "supplyLayout": {
+        "controlsVisible": true,
+        "boardVisible": true,
+        "activity": "停止中 · 配置力0 · 定期補充まで24.0ゲーム秒 · 敵攻略でも＋1"
+      },
+      "backgroundVisibility": "hidden"
+    }
+  ],
+  "runtimeErrors": []
+}

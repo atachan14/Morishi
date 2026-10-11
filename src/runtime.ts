@@ -1,4 +1,28 @@
 import type {Clock} from './sim.js';
+import {step,REFILL_TICKS,type State} from './sim.js';
+
+/** Bounded per-frame work; caller yields to input/visibility/save between chunks. */
+export class EventSkip {
+  active=false; ticks=0; reason='';
+  start(s:State){this.active=s.started&&s.outcome==='playing';this.ticks=0;this.reason='';}
+  cancel(){this.active=false;}
+  chunk(s:State,maxTicks=128):string {
+    if(!this.active)return this.reason;
+    const start=performance.now();
+    for(let i=0;i<Math.min(128,maxTicks)&&performance.now()-start<5;i++){
+      const ids=s.units.map(u=>u.id).join(','),charges=s.charges,growing=s.units.some(u=>u.age<117);
+      step(s);this.ticks++;
+      if(s.outcome!=='playing')this.reason='終局';
+      else if(s.units.map(u=>u.id).join(',')!==ids)this.reason='撃破・植物の消滅';
+      else if(s.charges>charges)this.reason='配置力回復';
+      else if(growing&&!s.units.some(u=>u.age<117))this.reason='成長完了';
+      else if(this.ticks>=36000)this.reason='1ゲーム時間の上限';
+      else if(!growing&&s.charges>=5&&s.tick%REFILL_TICKS===0)this.reason='配置力満タン';
+      if(this.reason){this.active=false;break;}
+    }
+    return this.reason;
+  }
+}
 
 /** Hidden Pane dimensions must never resize a WebGL framebuffer to zero. */
 export function canvasSize(width:number,height:number):{width:number;height:number}|null {

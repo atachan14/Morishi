@@ -1,6 +1,20 @@
 export const WIDTH = 12, HEIGHT = 9, TICK_MS = 100;
 export const EPSILON = 1e-9, SEED_RADIUS = 0.3;
-export type Territory = { id: number; x: number; y: number; radius: number };
+export const RULES='plateau-distance-1', REFILL_TICKS=240;
+export const PRESENCE_LIMIT=1.5;
+export const PRESENCE_STRENGTH=2;
+/** Shared plateau falloff: full strength through R, linearly zero at 2R. */
+export function distanceFalloff(distance:number,baseDistance:number):number {
+  if(!Number.isFinite(distance)||distance<0||!Number.isFinite(baseDistance)||baseDistance<=0)return 0;
+  return distance<=baseDistance?1:Math.max(0,2-distance/baseDistance);
+}
+/** Presence stat is distance; strength is shared. Growth widens its base distance. */
+export function presenceAt(u:Unit,x:number,y:number):number {
+  return PRESENCE_STRENGTH*distanceFalloff(Math.hypot(u.x-x,u.y-y),u.stats.presence*growth(u));
+}
+export function enemyPresenceAt(s:State,x:number,y:number):number {
+  return s.units.filter(u=>u.team==='enemy'&&u.hp>0).reduce((sum,u)=>sum+presenceAt(u,x,y),0);
+}export type Territory = { id: number; x: number; y: number; radius: number };
 export type Stats = { power: number; range: number; presence: number; vitality: number };
 export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null; lastShot?:{tick:number;targetId:number;x:number;y:number;damage:number} };
 export type State = { seed: number; tick: number; nextId: number; units: Unit[]; cards: Stats[]; territory: Territory[]; charges: number; outcome: 'playing' | 'win' | 'loss'; started: boolean; events: string[] };
@@ -31,16 +45,20 @@ export function enemyPositions(seed:number):{x:number;y:number}[] {
 export function createState(seed = 20261011): State {
   if (!Number.isFinite(seed)) throw new Error('Seed must be finite');
   const random = rng(seed);
-  const state: State = {seed:seed>>>0,tick:0,nextId:1,units:[],cards:[],territory:[],charges:3,outcome:'playing',started:false,events:['左端の明るい領域に、自由な位置で最初の植物を配置しましょう。']};
+  const state: State = {seed:seed>>>0,tick:0,nextId:1,units:[],cards:[],territory:[],charges:3,outcome:'playing',started:false,events:['敵の存在感Areaの外なら、どこでも最初の植物を配置できます。']};
   for (const {x,y} of enemyPositions(seed)) state.units.push(unit(state,'enemy',x,y,makeStats(random)));
+  // Preserve a legal refuge even at full maturation, without random retry loops.
+  const corners=[[.3,.3],[11.7,.3],[.3,8.7],[11.7,8.7]];
+  const matureMin=()=>Math.min(...corners.map(([x,y])=>state.units.reduce((sum,u)=>sum+PRESENCE_STRENGTH*distanceFalloff(Math.hypot(x-u.x,y-u.y),u.stats.presence*1.3),0)));
+  for(let i=0;i<8&&matureMin()>PRESENCE_LIMIT;i++)for(const u of state.units)u.stats.presence=Math.max(.5,+(u.stats.presence*.9).toFixed(2));
+  if(matureMin()>PRESENCE_LIMIT)throw new Error('Presence field has no refuge');
   for(let i=0;i<18;i++) state.cards.push(makeStats(random));
   return state;
 }
 export function footprint(u: Unit) { return SEED_RADIUS + Math.min(u.age / 180, 0.65) * 0.12; }
 export function insideTerritory(state: State, x: number, y: number): boolean {
   if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||x>WIDTH||y<0||y>HEIGHT)return false;
-  const claimed=x<=2+EPSILON || state.territory.some(t=>Math.hypot(x-t.x,y-t.y)<=t.radius+EPSILON);
-  return claimed && !state.units.some(u=>u.team==='enemy'&&Math.hypot(x-u.x,y-u.y)<1.15-EPSILON);
+  return enemyPresenceAt(state,x,y)<=PRESENCE_LIMIT+EPSILON;
 }
 // Sampling is only for the percentage label; placement uses the analytic circle union.
 export function territoryCoverage(state: State): number {
@@ -67,7 +85,7 @@ export function validatePlacement(state: State, x: number, y: number): Placement
   if(state.cards.length===0) return {ok:false,reason:'今回の芽は使い切りました。残った植物を観察するか、同じseedで再挑戦できます。'};
   if(state.charges<1) return {ok:false,reason:'配置力が足りません。時間を進めると補充されます。'};
   if(state.units.some(u=>Math.hypot(u.x-x,u.y-y)<footprint(u)+SEED_RADIUS-EPSILON)) return {ok:false,reason:'植物の円が重なっています。少し離して配置してください。'};
-  if(!insideTerritory(state,x,y)) return {ok:false,reason:'明るい自分の領域に配置できます。赤い敵領域には置けません。'};
+  if(!insideTerritory(state,x,y)) return {ok:false,reason:'敵の存在感Areaの外に配置できます。'};
   return {ok:true,reason:'配置できます。'};
 }
 export function place(state: State,x:number,y:number): Placement {
@@ -80,12 +98,11 @@ export function growth(u: Unit) { return 0.65 + Math.min(u.age/180,0.65); }
 export function effectiveRange(u: Unit) { return u.stats.range * growth(u); }
 export function attackDamage(u:Unit,target:Unit):number {
   const distance=Math.hypot(u.x-target.x,u.y-target.y),range=effectiveRange(u);
-  if(distance>=range-EPSILON)return 0;
-  return u.stats.power*growth(u)*Math.max(0,1-distance/range);
+  return u.stats.power*growth(u)*distanceFalloff(distance,range);
 }
 export function chooseTarget(u: Unit, units: Unit[]): Unit | undefined {
-  return units.filter(v=>v.team!==u.team&&v.hp>0&&Math.hypot(v.x-u.x,v.y-u.y)<effectiveRange(u)-EPSILON).sort((a,b)=>{
-    const score=(v:Unit)=>v.stats.presence*growth(v)/(1+Math.hypot(v.x-u.x,v.y-u.y));
+  return units.filter(v=>v.team!==u.team&&v.hp>0&&Math.hypot(v.x-u.x,v.y-u.y)<effectiveRange(u)*2-EPSILON).sort((a,b)=>{
+    const score=(v:Unit)=>presenceAt(v,u.x,u.y);
     return score(b)-score(a)||a.id-b.id;
   })[0];
 }
@@ -100,9 +117,9 @@ export function placementForecast(s:State,x:number,y:number):PlacementForecast|u
   for(let yi=0;yi<12;yi++)for(let xi=0;xi<12;xi++){
     const px=x-1.6+(xi+.5)*3.2/12,py=y-1.6+(yi+.5)*3.2/12;
     if(Math.hypot(px-x,py-y)>1.6||px<0||px>WIDTH||py<0||py>HEIGHT)continue;
-    total++;if(!insideTerritory(s,px,py)&&!s.units.some(u=>u.team==='enemy'&&Math.hypot(px-u.x,py-u.y)<1.15-EPSILON))fresh++;
+    total++;if(!insideTerritory(s,px,py)&&insideTerritory(s,px,py))fresh++;
   }
-  const note=target?`今、敵 #${target.id} に攻撃が届きます。`:grownTarget?`育つと敵 #${grownTarget.id} に届く位置です。`:'今の位置では育っても敵に届きません。領域を広げる中継向きです。';
+  const note=target?`今、敵 #${target.id} に攻撃が届きます。`:grownTarget?`育つと敵 #${grownTarget.id} に届く位置です。`:'今の位置では育っても敵に届きません。別の位置を試せます。';
   return {targetId:target?.id??null,damage:target?attackDamage(seed,target):0,grownTargetId:grownTarget?.id??null,incomingIds:incoming.map(u=>u.id),incomingDamage:incoming.reduce((sum,u)=>sum+attackDamage(u,seed),0),newArea:total?fresh/total:0,note};
 }
 export function stalled(s:State):boolean {
@@ -118,7 +135,7 @@ export function runActivity(s:State):'ready'|'growing'|'fighting'|'weak-combat'|
 }
 export function decisionHint(s:State):{kind:'supply'|'last-cards'|'other';text:string;readyInTicks:number} {
   if(s.outcome==='playing'&&s.started&&s.cards.length>0&&s.charges===0){
-    const readyInTicks=80-s.tick%80;
+    const readyInTicks=REFILL_TICKS-s.tick%REFILL_TICKS;
     return {kind:'supply',readyInTicks,text:`配置力0 · 定期補充まで${(readyInTicks/10).toFixed(1)}ゲーム秒 · 敵攻略でも＋1`};
   }
   if(s.outcome==='playing'&&s.started&&s.cards.length>0&&s.cards.length<=3)return {kind:'last-cards',readyInTicks:0,text:`残り${s.cards.length}芽 · 育った射程（破線）が残敵へ届く位置を確認`};
@@ -132,7 +149,7 @@ export function resultDiagnosis(s:State):ResultDiagnosis|undefined {
   if(s.events[0]?.startsWith('今回はここまで。'))return {kind:'manual',message:`自分でrunを区切りました。敵${enemies.length}体、未配置の芽${s.cards.length}体が残っています。`,suggestion:'ここまでの広げ方を手がかりに、同じseedで再挑戦できます。'};
   if(allies.length===0&&s.cards.length===0)return {kind:'defeated',message:'芽を使い切り、味方の植物が残っていません。',suggestion:'次は配置前の赤い線で狙われ方を見て、味方同士の射程が重なる位置も試せます。'};
   if(stalled(s)&&allies.length&&enemies.length){
-    const pairs=enemies.flatMap(e=>allies.map(a=>{const distance=Math.hypot(e.x-a.x,e.y-a.y),range=effectiveRange(a);return {enemyId:e.id,allyId:a.id,distance,range,gap:Math.max(0,distance-range)};}));
+    const pairs=enemies.flatMap(e=>allies.map(a=>{const distance=Math.hypot(e.x-a.x,e.y-a.y),range=effectiveRange(a)*2;return {enemyId:e.id,allyId:a.id,distance,range,gap:Math.max(0,distance-range)};}));
     pairs.sort((a,b)=>a.gap-b.gap||a.enemyId-b.enemyId||a.allyId-b.allyId);const pair=pairs[0];
     return {kind:'unreachable',...pair,message:`芽を使い切り、残った敵${enemies.length}体に味方の攻撃が届いていません。敵 #${pair.enemyId} と味方 #${pair.allyId} の距離は${pair.distance.toFixed(2)}、味方の射程は${pair.range.toFixed(2)}です。`,suggestion:'次はこの敵への中継に最後の芽を残し、育った射程の破線が届く位置を確認してみましょう。'};
   }
@@ -154,7 +171,7 @@ function expand(s:State) {
 export function step(s:State) {
   if(s.outcome!=='playing'||!s.started)return;
   s.tick++;
-  if(s.tick%80===0&&s.cards.length>0) s.charges=Math.min(5,s.charges+1);
+  if(s.tick%REFILL_TICKS===0&&s.cards.length>0) s.charges=Math.min(5,s.charges+1);
   for(const u of s.units) {u.age++;u.cooldown=Math.max(0,u.cooldown-1);}
   const damage=new Map<number,number>();
   for(const u of [...s.units].sort((a,b)=>a.id-b.id)) {

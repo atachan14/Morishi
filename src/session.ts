@@ -1,14 +1,14 @@
-import {createState,place,step,finishRun,WIDTH,HEIGHT,type State,type Stats} from './sim.js';
+import {createState,WIDTH,HEIGHT,RULES,type State,type Stats} from './sim.js';
 export const SAVE_KEY='morishi.run.v1', BACKUP_KEY='morishi.run.previous.v1';
-const VERSION='2026-10-11-snapshot-2', LEGACY='2026-10-11-runtime-1';
+const VERSION='2026-10-11-snapshot-3';
 const withinLimit=(raw:string)=>raw.length<=64000&&new TextEncoder().encode(raw).length<=64000;
 export type Action={tick:number;kind:'place';x:number;y:number}|{tick:number;kind:'finish'};
-export type RunSave={version:typeof VERSION;seed:number;tick:number;speed:number;actions:Action[];snapshot:State;checksum:string};
+export type RunSave={version:typeof VERSION;rules:typeof RULES;seed:number;tick:number;speed:number;actions:Action[];snapshot:State;checksum:string};
 export interface StorageLike {getItem(key:string):string|null;setItem(key:string,value:string):void;}
 // Corruption detection is paired with structural validation, not used as authentication.
 function checksum(value:unknown){const raw=JSON.stringify(value);let hash=2166136261;for(let i=0;i<raw.length;i++)hash=Math.imul(hash^raw.charCodeAt(i),16777619);return (hash>>>0).toString(16);}
 export function capture(state:State,speed:number,actions:Action[]):RunSave {
-  const payload:Omit<RunSave,'checksum'>={version:VERSION,seed:state.seed,tick:state.tick,speed,actions:structuredClone(actions),snapshot:structuredClone(state)};
+  const payload:Omit<RunSave,'checksum'>={version:VERSION,rules:RULES,seed:state.seed,tick:state.tick,speed,actions:structuredClone(actions),snapshot:structuredClone(state)};
   return {...payload,checksum:checksum(payload)};
 }
 const integer=(v:unknown,min:number,max=Number.MAX_SAFE_INTEGER):v is number=>typeof v==='number'&&Number.isSafeInteger(v)&&v>=min&&v<=max;
@@ -45,35 +45,29 @@ function validatedSnapshot(s:State,seed:number,tick:number,actions:Action[]):Sta
 export function replay(input:unknown):{state:State;save:RunSave} {
   const v=input as RunSave;
   if(!v||!integer(v.seed,0,4294967295)||!integer(v.tick,0)||![1,2,4].includes(v.speed)||!actionsValid(v.actions,v.tick))throw new Error('Invalid save');
-  if((v.version as string)===LEGACY){
-    if(v.tick>36000)throw new Error('Invalid legacy save');
-    const state=createState(v.seed);const advance=(tick:number)=>{while(state.tick<tick){const before=state.tick;step(state);if(state.tick===before)throw new Error('Impossible timeline');}};
-    for(const a of v.actions){advance(a.tick);if(a.kind==='place'){if(!place(state,a.x,a.y).ok)throw new Error('Invalid placement');}else if(!finishRun(state))throw new Error('Invalid finish');}
-    advance(v.tick);return {state,save:capture(state,v.speed,v.actions)};
-  }
-  if(v.version!==VERSION)throw new Error('Unsupported save');
-  const payload={version:v.version,seed:v.seed,tick:v.tick,speed:v.speed,actions:v.actions,snapshot:v.snapshot};
+  if(v.version!==VERSION||v.rules!==RULES)throw new Error('Unsupported save');
+  const payload={version:v.version,rules:v.rules,seed:v.seed,tick:v.tick,speed:v.speed,actions:v.actions,snapshot:v.snapshot};
   if(v.checksum!==checksum(payload))throw new Error('Corrupt save');
   const state=validatedSnapshot(v.snapshot,v.seed,v.tick,v.actions);
   return {state,save:capture(state,v.speed,v.actions)};
 }
 export type LoadResult={kind:'empty'}|{kind:'loaded';state:State;save:RunSave}|{kind:'unavailable'}|{kind:'invalid'};
 export class RunStore {
-  protectedSave=false;private migrationRaw:string|null=null;
+  protectedSave=false;
   constructor(private storage:StorageLike){}
   read():LoadResult {
     let raw:string|null;try{raw=this.storage.getItem(SAVE_KEY);}catch{this.protectedSave=true;return {kind:'unavailable'};}
     if(raw===null)return {kind:'empty'};
-    try{if(!withinLimit(raw))throw new Error('Oversized save');const data=JSON.parse(raw),result=replay(data);if(data.version===LEGACY)this.migrationRaw=raw;return {kind:'loaded',...result};}
+    try{if(!withinLimit(raw))throw new Error('Oversized save');const data=JSON.parse(raw),result=replay(data);return {kind:'loaded',...result};}
     catch{this.protectedSave=true;return {kind:'invalid'};}
   }
   write(save:RunSave,replace=false):boolean {
     if(this.protectedSave&&!replace)return false;
     try{
       const raw=JSON.stringify(save);if(!withinLimit(raw)||!integer(save.tick,0))return false;
-      const previous=replace?this.storage.getItem(SAVE_KEY):this.migrationRaw;
+      const previous=replace?this.storage.getItem(SAVE_KEY):null;
       if(previous!==null)this.storage.setItem(BACKUP_KEY,previous);
-      this.storage.setItem(SAVE_KEY,raw);this.protectedSave=false;this.migrationRaw=null;return true;
+      this.storage.setItem(SAVE_KEY,raw);this.protectedSave=false;return true;
     }catch{return false;}
   }
 }

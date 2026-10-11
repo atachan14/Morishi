@@ -1,0 +1,20 @@
+{
+  "tests": 164,
+  "passed": 164,
+  "failed": 0,
+  "durationMs": 9757.3424,
+  "commands": [
+    "node node_modules/typescript/bin/tsc -p tsconfig.test.json",
+    "node --test .test-dist/tests/*.test.js"
+  ],
+  "newBoundaryTests": "tests/eco-cross-boundary.test.ts",
+  "newBoundaryCaseCount": 10,
+  "mappingsCovered": 24,
+  "seedCountForMappingMatrix": 64,
+  "mergePoliciesCovered": [
+    "legacy",
+    "quarter-v1",
+    "guard-v1"
+  ],
+  "combatAndSaveRulesChanged": false
+}

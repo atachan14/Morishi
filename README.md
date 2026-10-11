@@ -39,7 +39,7 @@ npm run build
 
 存在感の標的順・前衛の具体例・代価は [docs/ecosystem-targets.md](docs/ecosystem-targets.md)。標準と旧runはID同値を維持。新案は同値だけ距離→IDで決め、射程外は候補に含めません。
 
-朝は [短い比較試遊](docs/ecosystem-morning-play.md) から。自動保存・吸収後の詳細・有限な弾表示の修正と、ゲーム時間／実時間を分けた確認は [長期安定性](docs/ecosystem-long-stability.md)。154テスト、PC/スマホ幅の操作検証を通過。
+朝は [短い比較試遊](docs/ecosystem-morning-play.md) から。自動保存・吸収後の詳細・有限な弾表示の修正と、ゲーム時間／実時間を分けた確認は [長期安定性](docs/ecosystem-long-stability.md)。164テスト、PC/スマホ幅の操作検証を通過。
 
 配置を続ける6条件の保存再生、手動の試遊地点、同条件リトライ、候補の攻撃・被弾表示は [能動試遊の記録](docs/ecosystem-active-trial.md)。
 
@@ -48,3 +48,5 @@ npm run build
 新規runの非均等な小集団配置、旧生成の維持と同一seedでの勝利経路は [敵の間隔比較](docs/ecosystem-spacing.md)。
 
 個体の見比べ表示と条件付き合体比較： [ecosystem-identity](docs/ecosystem-identity.md)。
+
+朝の試遊版の横断境界と実時間確認： [ecosystem-boundary](docs/ecosystem-boundary.md)。

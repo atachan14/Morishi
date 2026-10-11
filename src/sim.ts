@@ -119,9 +119,9 @@ export function runActivity(s:State):'ready'|'growing'|'fighting'|'weak-combat'|
 export function decisionHint(s:State):{kind:'supply'|'last-cards'|'other';text:string;readyInTicks:number} {
   if(s.outcome==='playing'&&s.started&&s.cards.length>0&&s.charges===0){
     const readyInTicks=80-s.tick%80;
-    return {kind:'supply',readyInTicks,text:`配置力は補充待ち。定期補充まで${(readyInTicks/10).toFixed(1)}ゲーム秒（敵攻略でも補充）。時間を進めて観察するか、2×/4×で待てます。`};
+    return {kind:'supply',readyInTicks,text:`配置力0 · 定期補充まで${(readyInTicks/10).toFixed(1)}ゲーム秒 · 敵攻略でも＋1`};
   }
-  if(s.outcome==='playing'&&s.started&&s.cards.length>0&&s.cards.length<=3)return {kind:'last-cards',readyInTicks:0,text:`残りの芽は${s.cards.length}体。残った敵へ育つと届く位置か、配置前の破線と敵の射程を確認して使いましょう。`};
+  if(s.outcome==='playing'&&s.started&&s.cards.length>0&&s.cards.length<=3)return {kind:'last-cards',readyInTicks:0,text:`残り${s.cards.length}芽 · 育った射程（破線）が残敵へ届く位置を確認`};
   return {kind:'other',text:'',readyInTicks:0};
 }
 export type ResultDiagnosis={kind:'unreachable'|'defeated'|'manual'|'win';message:string;suggestion:string;enemyId?:number;allyId?:number;distance?:number;range?:number;gap?:number};

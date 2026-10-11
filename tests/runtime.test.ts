@@ -1,7 +1,12 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {TapGesture,ForegroundGate} from '../src/runtime.js';
+import {TapGesture,ForegroundGate,canvasSize} from '../src/runtime.js';
 import {createState,place,Clock} from '../src/sim.js';
+
+test('hidden or tiny Pane sizes are ignored, and positive framebuffer sizes are whole pixels',()=>{
+  for(const [w,h] of [[0,0],[300,0],[0,200],[-1,200],[.5,200],[300,NaN],[Infinity,200]])assert.equal(canvasSize(w,h),null);
+  assert.deepEqual(canvasSize(364.7,273.5),{width:364,height:273});
+});
 test('short primary tap commits only on release and only once',()=>{
   const tap=new TapGesture();tap.down(1,10.125,20.375,100,'view');assert.equal(tap.up(1,11,21,200,'view'),true);assert.equal(tap.up(1,11,21,201,'view'),false);
 });

@@ -10,3 +10,6 @@
 
 .enemy .enemy-name{color:#e0ecdf;font-size:12px}.enemy[aria-pressed=true]{border-color:#b7cd87;background:#3c4233}
 #save-status{max-width:1352px;margin:10px auto 0;padding:8px 24px;min-height:35px}#save-status.save-error{color:#f3c2ae;background:#442e29;border:1px solid #ad7865;border-radius:8px;font-weight:600}@media(max-width:760px){#save-status{margin:8px 12px 0;padding:8px 10px}}
+#board{width:min(100%,calc(133.333dvh - 426.667px));margin-inline:auto}.controls{margin-bottom:10px}.forecast-panel[hidden]{display:none}#center{min-width:0}@media(min-width:761px){aside{max-height:calc(100dvh - 200px)}}@media(max-width:760px){#board{width:100%}.activity-hint{min-height:30px;padding-bottom:7px}.preview-status{min-height:26px;padding:6px 2px}}
+#board{width:min(100%,max(300px,calc(133.333dvh - 426.667px)))}.help summary{cursor:pointer;color:#a6bab0;font-size:12px;padding:11px 0;min-height:44px}#selected-panel{border-bottom:1px solid #40574b;padding-bottom:8px;margin-bottom:18px}#selected-panel[hidden]{display:none}@media(max-width:760px){#board{width:100%}}
+html{overflow-anchor:none;scrollbar-gutter:stable}#selected-panel+h2{margin-top:0}

@@ -1,0 +1,455 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "mouse fractional placement",
+        "unit selection without placement",
+        "mouse drag and right click cancelled",
+        "placement after Pane/scroll",
+        "play, 4x progress, pause",
+        "reload restores exact tick, speed and placements paused",
+        "real tab visibility pauses with no catch-up"
+      ],
+      "failures": [
+        "play/pause below viewport",
+        "board outside viewport"
+      ],
+      "layout": {
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "scrollWidth": 1351,
+        "board": {
+          "x": 274,
+          "y": 249.59375,
+          "width": 803,
+          "height": 602.25,
+          "top": 249.59375,
+          "right": 1077,
+          "bottom": 851.84375,
+          "left": 274
+        },
+        "canvas": {
+          "x": 275,
+          "y": 250.59375,
+          "width": 803,
+          "height": 602,
+          "top": 250.59375,
+          "right": 1078,
+          "bottom": 852.59375,
+          "left": 275
+        },
+        "play": {
+          "x": 274,
+          "y": 1021.84375,
+          "width": 121.3125,
+          "height": 44,
+          "top": 1021.84375,
+          "right": 395.3125,
+          "bottom": 1065.84375,
+          "left": 274
+        },
+        "controlsVisible": false,
+        "boardVisible": false,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.23399991767351,
+          "y": 2.345000029402318,
+          "clientX": 357.7075500488281,
+          "clientY": 239.4481964111328
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.23399991767351,
+          "y": 2.345000029402318
+        }
+      },
+      "backgroundVisibility": "hidden"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "mobile": false,
+      "checks": [
+        "mouse fractional placement",
+        "unit selection without placement",
+        "mouse drag and right click cancelled",
+        "placement after Pane/scroll",
+        "play, 4x progress, pause",
+        "reload restores exact tick, speed and placements paused",
+        "real tab visibility pauses with no catch-up"
+      ],
+      "failures": [
+        "play/pause below viewport"
+      ],
+      "layout": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "scrollWidth": 1905,
+        "board": {
+          "x": 526.5,
+          "y": 249.59375,
+          "width": 852,
+          "height": 639,
+          "top": 249.59375,
+          "right": 1378.5,
+          "bottom": 888.59375,
+          "left": 526.5
+        },
+        "canvas": {
+          "x": 527.5,
+          "y": 250.59375,
+          "width": 852,
+          "height": 639,
+          "top": 250.59375,
+          "right": 1379.5,
+          "bottom": 889.59375,
+          "left": 527.5
+        },
+        "play": {
+          "x": 526.5,
+          "y": 1058.59375,
+          "width": 121.3125,
+          "height": 44,
+          "top": 1058.59375,
+          "right": 647.8125,
+          "bottom": 1102.59375,
+          "left": 526.5
+        },
+        "controlsVisible": false,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2340001925616197,
+          "y": 2.344999931227993,
+          "clientX": 615.114013671875,
+          "clientY": 387.0887451171875
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2340001925616197,
+          "y": 2.344999931227993
+        }
+      },
+      "backgroundVisibility": "hidden"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "touch fractional placement",
+        "unit selection without placement",
+        "touch drag and multitouch cancelled",
+        "all mobile Pane switches",
+        "placement after Pane/scroll"
+      ],
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(tick>=10)\n"
+      ],
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "board": {
+          "x": 12,
+          "y": 295.59375,
+          "width": 366,
+          "height": 274.5,
+          "top": 295.59375,
+          "right": 378,
+          "bottom": 570.09375,
+          "left": 12
+        },
+        "canvas": {
+          "x": 13,
+          "y": 296.59375,
+          "width": 366,
+          "height": 274,
+          "top": 296.59375,
+          "right": 379,
+          "bottom": 570.59375,
+          "left": 13
+        },
+        "play": {
+          "x": 12,
+          "y": 755.09375,
+          "width": 101.984375,
+          "height": 44,
+          "top": 755.09375,
+          "right": 113.984375,
+          "bottom": 799.09375,
+          "left": 12
+        },
+        "controlsVisible": true,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.234000045887745,
+          "y": 2.344999661410812,
+          "clientX": 50.90177917480469,
+          "clientY": 355.9859619140625
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.234000045887745,
+          "y": 2.344999661410812
+        }
+      }
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "mobile": true,
+      "checks": [
+        "touch fractional placement",
+        "unit selection without placement",
+        "touch drag and multitouch cancelled",
+        "all mobile Pane switches",
+        "placement after Pane/scroll",
+        "play, 4x progress, pause",
+        "reload restores exact tick, speed and placements paused",
+        "real tab visibility pauses with no catch-up"
+      ],
+      "failures": [
+        "play/pause below viewport"
+      ],
+      "layout": {
+        "viewport": {
+          "width": 320,
+          "height": 740
+        },
+        "scrollWidth": 320,
+        "board": {
+          "x": 12,
+          "y": 295.59375,
+          "width": 296,
+          "height": 222,
+          "top": 295.59375,
+          "right": 308,
+          "bottom": 517.59375,
+          "left": 12
+        },
+        "canvas": {
+          "x": 13,
+          "y": 296.59375,
+          "width": 296,
+          "height": 222,
+          "top": 296.59375,
+          "right": 309,
+          "bottom": 518.59375,
+          "left": 13
+        },
+        "play": {
+          "x": 12,
+          "y": 702.59375,
+          "width": 101.984375,
+          "height": 44,
+          "top": 702.59375,
+          "right": 113.984375,
+          "bottom": 746.59375,
+          "left": 12
+        },
+        "controlsVisible": false,
+        "boardVisible": true,
+        "visibleEnemyButtons": 7
+      },
+      "coordinateCheck": {
+        "commanded": {
+          "x": 1.234,
+          "y": 2.345
+        },
+        "actualEvent": {
+          "x": 1.2340000255687815,
+          "y": 2.3449995711043075,
+          "clientX": 43.43866729736328,
+          "clientY": 316.43707275390625
+        },
+        "saved": {
+          "tick": 0,
+          "kind": "place",
+          "x": 1.2340000255687815,
+          "y": 2.3449995711043075
+        }
+      },
+      "backgroundVisibility": "hidden"
+    }
+  ],
+  "runtimeErrors": [
+    {
+      "sessionId": "6747A9A4ECEC0B272D3FA05F14E19D5E",
+      "method": "Runtime.exceptionThrown",
+      "details": {
+        "timestamp": 1791698794914.228,
+        "exceptionDetails": {
+          "exceptionId": 1,
+          "text": "Uncaught",
+          "lineNumber": 108538,
+          "columnNumber": 28,
+          "scriptId": "7",
+          "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+          "stackTrace": {
+            "callFrames": [
+              {
+                "functionName": "createResource",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 108538,
+                "columnNumber": 28
+              },
+              {
+                "functionName": "WebGLFramebufferWrapper2",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 108512,
+                "columnNumber": 25
+              },
+              {
+                "functionName": "createFramebuffer",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 101414,
+                "columnNumber": 38
+              },
+              {
+                "functionName": "resize",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 97967,
+                "columnNumber": 50
+              },
+              {
+                "functionName": "emit",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 123,
+                "columnNumber": 42
+              },
+              {
+                "functionName": "resize",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 100769,
+                "columnNumber": 25
+              },
+              {
+                "functionName": "onResize",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 100707,
+                "columnNumber": 27
+              },
+              {
+                "functionName": "emit",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 132,
+                "columnNumber": 42
+              },
+              {
+                "functionName": "refresh",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 109361,
+                "columnNumber": 25
+              },
+              {
+                "functionName": "step",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 109870,
+                "columnNumber": 29
+              },
+              {
+                "functionName": "emit",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 123,
+                "columnNumber": 42
+              },
+              {
+                "functionName": "step",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 8626,
+                "columnNumber": 33
+              },
+              {
+                "functionName": "step",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 9082,
+                "columnNumber": 25
+              },
+              {
+                "functionName": "step",
+                "scriptId": "7",
+                "url": "http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c",
+                "lineNumber": 16409,
+                "columnNumber": 28
+              }
+            ]
+          },
+          "exception": {
+            "type": "object",
+            "subtype": "error",
+            "className": "Error",
+            "description": "Error: Framebuffer status: Incomplete Attachment\n    at WebGLFramebufferWrapper2.createResource (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:108539:29)\n    at new WebGLFramebufferWrapper2 (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:108513:26)\n    at WebGLRenderer2.createFramebuffer (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:101415:39)\n    at RenderTarget2.resize (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:97968:51)\n    at WebGLRenderer2.emit (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:124:43)\n    at WebGLRenderer2.resize (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:100770:26)\n    at WebGLRenderer2.onResize (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:100708:28)\n    at ScaleManager2.emit (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:133:43)\n    at ScaleManager2.refresh (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:109362:26)\n    at ScaleManager2.step (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:109871:30)",
+            "objectId": "6203720209644559888.2.1",
+            "preview": {
+              "type": "object",
+              "subtype": "error",
+              "description": "Error: Framebuffer status: Incomplete Attachment\n    at WebGLFramebufferWrapper2.createResource (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:108539:29)\n    at new WebGLFramebufferWrapper2 (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:108513:26)\n    at WebGLRenderer2.createFramebuffer (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:101415:39)\n    at RenderTarget2.resize (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:97968:51)\n    at WebGLRenderer2.emit (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:124:43)\n    at WebGLRenderer2.resize (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:100770:26)\n    at WebGLRenderer2.onResize (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:100708:28)\n    at ScaleManager2.emit (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:133:43)\n    at ScaleManager2.refresh (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:109362:26)\n    at ScaleManager2.step (http://127.0.0.1:8781/node_modules/.vite/deps/phaser.js?v=b43ab79c:109871:30)",
+              "overflow": false,
+              "properties": [
+                {
+                  "name": "stack",
+                  "type": "string",
+                  "value": "Error: Framebuffer status: Incomplete Attachment\n …odules/.vite/deps/phaser.js?v=b43ab79c:109871:30)"
+                },
+                {
+                  "name": "message",
+                  "type": "string",
+                  "value": "Framebuffer status: Incomplete Attachment"
+                }
+              ]
+            }
+          },
+          "executionContextId": 2
+        }
+      }
+    }
+  ]
+}

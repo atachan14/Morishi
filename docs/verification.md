@@ -35,3 +35,5 @@
 ## 待機案内と入力対象保全（2026-10-11）
 
 自動テスト24件成功。成長中/微弱交戦/次の配置の案内を非破壊で検証し、敵選択ボタンのDOMをHP更新で破棄しない形へ変更。型検査・ビルド成功。ブラウザの実タップ・表示は環境エラーで未検証。
+
+2026-10-11 update: actual isolated Edge browser verification and screenshots are recorded in [browser-verification.md](browser-verification.md). Four viewport suites passed with zero runtime errors; 52 unit tests and the build passed.

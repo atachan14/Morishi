@@ -1,5 +1,11 @@
 import type {Clock} from './sim.js';
 
+/** Hidden Pane dimensions must never resize a WebGL framebuffer to zero. */
+export function canvasSize(width:number,height:number):{width:number;height:number}|null {
+  if(!Number.isFinite(width)||!Number.isFinite(height)||width<1||height<1)return null;
+  return {width:Math.floor(width),height:Math.floor(height)};
+}
+
 /** Only a short, single primary tap on the same viewport may commit an action. */
 export class TapGesture {
   private active=new Set<number>();

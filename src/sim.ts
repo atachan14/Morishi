@@ -18,9 +18,18 @@ export function enemyPresenceAt(s:State,x:number,y:number):number {
   return s.units.filter(u=>u.team==='enemy'&&u.hp>0).reduce((sum,u)=>sum+presenceAt(u,x,y),0);
 }export type Territory = { id: number; x: number; y: number; radius: number };
 export type Stats = { power: number; range: number; presence: number; vitality: number };
-export type SeedCard={id:number;baseStats:Stats};
-export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null; born?:number;supplyIndex?:number;seedIndex?:number;initial?:true;lastShot?:{tick:number;targetId:number;x:number;y:number;damage:number} };
-export type State = { stage:StageConfig; supplyMode:'finite'|'endless';supplyIndex:number; seed: number; tick: number; nextId: number; units: Unit[]; cards: Stats[]; territory: Territory[]; charges: number; outcome: 'playing' | 'win' | 'loss'; started: boolean; events: string[];opening?:'clustered-v1';hand?:SeedCard[];nextSeedIndex?:number };
+export type StatMultipliers=Record<keyof Stats,number>;
+export type FrozenSeed={generator:'composition-v1';rawStats:Stats;appliedMultipliers:StatMultipliers;rewardEnemyIds:number[];enteredAtTick:number};
+export type PlayerProgress={policy:'hand-entry-v1';multipliers:StatMultipliers;rewards:{enemyId:number;tick:number}[]};
+export type SeedCard={id:number;baseStats:Stats;snapshot?:FrozenSeed};
+// Provisional comparison tuning: +1 percentage point to the matching multiplier.
+export const KILL_BOOST=.01;
+export function baseMultipliers():StatMultipliers{return {power:1,range:1,presence:1,vitality:1};}
+export function applyMultipliers(raw:Stats,m:StatMultipliers):Stats{return {power:+(raw.power*m.power).toFixed(2),range:+(raw.range*m.range).toFixed(2),presence:+(raw.presence*m.presence).toFixed(2),vitality:Math.round(raw.vitality*m.vitality)};}
+export function multipliersFor(enemies:Unit[],ids:number[]):StatMultipliers{const m=baseMultipliers();for(const id of ids){const enemy=enemies.find(u=>u.id===id&&u.team==='enemy');if(!enemy)throw new Error('Invalid reward enemy');const key=dominant(enemy.stats);m[key]=+(m[key]+KILL_BOOST).toFixed(2);}return m;}
+export function freezeSeed(s:State,id:number,raw=supplyStats(s.seed,s.stage,id)):SeedCard{if(!s.player)return {id,baseStats:{...raw}};const snapshot:FrozenSeed={generator:'composition-v1',rawStats:{...raw},appliedMultipliers:{...s.player.multipliers},rewardEnemyIds:s.player.rewards.map(r=>r.enemyId),enteredAtTick:s.tick};return {id,baseStats:applyMultipliers(raw,snapshot.appliedMultipliers),snapshot};}
+export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null; born?:number;supplyIndex?:number;seedIndex?:number;initial?:true;seedSnapshot?:FrozenSeed;lastShot?:{tick:number;targetId:number;x:number;y:number;damage:number} };
+export type State = { stage:StageConfig; supplyMode:'finite'|'endless';supplyIndex:number; seed: number; tick: number; nextId: number; units: Unit[]; cards: Stats[]; territory: Territory[]; charges: number; outcome: 'playing' | 'win' | 'loss'; started: boolean; events: string[];opening?:'clustered-v1';hand?:SeedCard[];nextSeedIndex?:number;player?:PlayerProgress };
 export type Placement = { ok: boolean; reason: string };
 export type PlacementForecast = { targetId:number|null; damage:number; grownTargetId:number|null; incomingIds:number[]; incomingDamage:number; newArea:number; note:string };
 function rng(seed: number) { let s = seed >>> 0; return () => { s += 0x6D2B79F5; let t = Math.imul(s ^ s >>> 15, 1 | s); t ^= t + Math.imul(t ^ t >>> 7, 61 | t); return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
@@ -50,7 +59,7 @@ export function enemyPositions(seed:number,configuration:StageConfig=DEFAULT_STA
   const mirrored=random()>.5;
   return anchors.map(([x,y])=>({x:x+(random()-.5)*.7,y:Math.max(.6,Math.min(HEIGHT-.6,(mirrored?HEIGHT-y:y)+(random()-.5)*1.4))}));
 }
-export function createState(seed = 20261011,configuration:StageConfig=DEFAULT_STAGE,supplyMode:'finite'|'endless'='finite',opening:Opening='legacy'): State {
+export function createState(seed = 20261011,configuration:StageConfig=DEFAULT_STAGE,supplyMode:'finite'|'endless'='finite',opening:Opening='legacy',reinforcement=true): State {
   if (!Number.isFinite(seed)) throw new Error('Seed must be finite');
   const stage=stageConfig(configuration),random = rng(seed);
   const state: State = {stage,supplyMode,supplyIndex:0,seed:seed>>>0,tick:0,nextId:1,units:[],cards:[],territory:[],charges:3,outcome:'playing',started:false,events:['敵の存在感Areaの外なら、どこでも最初の植物を配置できます。']};
@@ -65,7 +74,7 @@ export function createState(seed = 20261011,configuration:StageConfig=DEFAULT_ST
   if(!['finite','endless'].includes(supplyMode))throw new Error('Invalid supply mode');
   for(let i=0;i<(supplyMode==='finite'?INITIAL_CARDS:4);i++) state.cards.push(makeStats(random));
   if(opening==='clustered-v1'){
-    state.opening=opening;state.hand=state.cards.map((baseStats,id)=>({id,baseStats:{...baseStats}}));state.nextSeedIndex=4;
+    state.opening=opening;if(reinforcement)state.player={policy:'hand-entry-v1',multipliers:baseMultipliers(),rewards:[]};state.hand=state.cards.map((baseStats,id)=>freezeSeed(state,id,baseStats));state.nextSeedIndex=4;
     const allyRandom=rng((seed>>>0)^0x414C4C59),enemies=[...state.units],mature=enemies.map(u=>({...u,age:117}));
     for(let i=0;i<initialAllyCount(stage.enemyCount);i++){
       const target=enemies[i],near=[...enemies].sort((a,b)=>Math.hypot(a.x-target.x,a.y-target.y)-Math.hypot(b.x-target.x,b.y-target.y)).slice(0,4),cx=near.reduce((n,u)=>n+u.x,0)/near.length,cy=near.reduce((n,u)=>n+u.y,0)/near.length,angle=Math.atan2(target.y-cy,target.x-cx),candidates=[] as {x:number;y:number}[];
@@ -114,8 +123,8 @@ export function validatePlacement(state: State, x: number, y: number,seedId?:num
 }
 export function place(state: State,x:number,y:number,seedId?:number): Placement {
   const result=validatePlacement(state,x,y,seedId); if(!result.ok)return result;
-  let stats:Stats,chosen:number|undefined;if(state.hand){const i=seedId===undefined?0:state.hand.findIndex(c=>c.id===seedId),card=state.hand.splice(i,1)[0];stats=card.baseStats;chosen=card.id;const id=state.nextSeedIndex!;state.nextSeedIndex=id+1;state.hand.push({id,baseStats:supplyStats(state.seed,state.stage,id)});state.cards=state.hand.map(c=>({...c.baseStats}));}else stats=state.cards.shift()!;
-  const index=state.supplyIndex++;const ally=unit(state,'ally',x,y,stats);if(state.supplyMode==='endless'){ally.born=state.tick;ally.supplyIndex=index;if(state.hand)ally.seedIndex=chosen;else state.cards.push(supplyStats(state.seed,state.stage,state.supplyIndex+3));}state.units.push(ally); state.charges--; state.started=true;
+  let stats:Stats,chosen:number|undefined,frozen:FrozenSeed|undefined;if(state.hand){const i=seedId===undefined?0:state.hand.findIndex(c=>c.id===seedId),card=state.hand.splice(i,1)[0];stats=card.baseStats;chosen=card.id;frozen=card.snapshot;const id=state.nextSeedIndex!;state.nextSeedIndex=id+1;state.hand.push(freezeSeed(state,id));state.cards=state.hand.map(c=>({...c.baseStats}));}else stats=state.cards.shift()!;
+  const index=state.supplyIndex++;const ally=unit(state,'ally',x,y,stats);if(state.supplyMode==='endless'){ally.born=state.tick;ally.supplyIndex=index;if(state.hand){ally.seedIndex=chosen;if(frozen)ally.seedSnapshot=structuredClone(frozen);}else state.cards.push(supplyStats(state.seed,state.stage,state.supplyIndex+3));}state.units.push(ally); state.charges--; state.started=true;
   event(state,`植物を配置 (${x.toFixed(2)}, ${y.toFixed(2)})。射程円を見ながら進めてみましょう。`);
   expand(state); return result;
 }
@@ -205,7 +214,7 @@ export function step(s:State) {
   for(const u of s.units)u.hp=Math.max(0,u.hp-(damage.get(u.id)??0));
   for(const dead of s.units.filter(u=>u.hp===0)) {
     event(s,dead.team==='enemy'?'敵を攻略！周辺を新しい領域に。':'味方の植物が倒れました。残った領域に再配置できます。');
-    if(dead.team==='enemy') {s.charges=Math.min(5,s.charges+1);s.territory.push({id:dead.id,x:dead.x,y:dead.y,radius:1.8});}
+    if(dead.team==='enemy') {if(s.player&&!s.player.rewards.some(r=>r.enemyId===dead.id)){s.player.rewards.push({enemyId:dead.id,tick:s.tick});s.player.rewards.sort((a,b)=>a.tick-b.tick||a.enemyId-b.enemyId);const key=dominant(dead.stats);s.player.multipliers[key]=+(s.player.multipliers[key]+KILL_BOOST).toFixed(2);const name={power:'攻撃',range:'射程',presence:'存在感距離',vitality:'生命'}[key];event(s,`${name}型を攻略 · 次に手札へ入る芽の${name}倍率 ×${s.player.multipliers[key].toFixed(2)}（仮）`);}s.charges=Math.min(5,s.charges+1);s.territory.push({id:dead.id,x:dead.x,y:dead.y,radius:1.8});}
   }
   s.units=s.units.filter(u=>u.hp>0);expand(s);
   if(!s.units.some(u=>u.team==='enemy')){s.outcome='win';event(s,'攻略完了！植物が広げた領域を眺めてみましょう。');}

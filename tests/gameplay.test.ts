@@ -27,7 +27,7 @@ test('chosen hand identity consumes that card only and arbitrary order restores 
   assert.equal(place(s,x+1,y,seedIndex).ok,false);assert.ok(s.hand!.some(c=>c.id===1));assert.ok(s.hand!.some(c=>c.id===3));
  }
  for(let i=0;i<200;i++)step(s);
- const save=capture(s,4,actions,new BoardCamera(introView(s),s.stage).view);assert.equal(save.version,'2026-10-11-snapshot-7');assert.deepEqual(replay(save).state,s);
+ const save=capture(s,4,actions,new BoardCamera(introView(s),s.stage).view);assert.equal(save.version,'2026-10-11-snapshot-8');assert.deepEqual(replay(save).state,s);
  assert.equal(capture(createState(11,COMPARISON_STAGE,'endless'),1,[]).version,'2026-10-11-snapshot-6');
 });
 

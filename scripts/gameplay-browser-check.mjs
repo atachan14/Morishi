@@ -44,7 +44,7 @@ try{
 
    if(mobile)await click('[data-pane="right"]');
    await evaluate('document.querySelector("#stage").value="play";document.querySelector("#seed").value="20261011"');await click('#same');await wait('document.querySelector("#app").dataset.ready==="true"');if(mobile)await click('[data-pane="board"]');
-   let saved=await run();assert.equal(saved.version,'2026-10-11-snapshot-7');replay(saved);assert.equal(saved.snapshot.units.filter(u=>u.initial).length,3);assert.equal(saved.snapshot.supplyIndex,0);
+   let saved=await run();assert.equal(saved.version,'2026-10-11-snapshot-8');replay(saved);assert.equal(saved.snapshot.units.filter(u=>u.initial).length,3);assert.equal(saved.snapshot.supplyIndex,0);
    const initial=structuredClone(saved.snapshot),touchClick=async selector=>{await evaluate(`document.querySelector(${JSON.stringify(selector)}).scrollIntoView({block:'center'})`);await delay(100);const p=await evaluate(`(()=>{const r=document.querySelector(${JSON.stringify(selector)}).getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2};})()`);await cmd('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:p.x,y:p.y,id:1}]});await cmd('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await delay(100);};
    const card='[data-seed="2"]';if(mobile)await touchClick(card);else await click(card);
    assert.deepEqual((await run()).snapshot,initial,'selection consumes nothing');assert.ok((await evaluate('document.querySelector("#selection").textContent')).includes('芽 #3'));

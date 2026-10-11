@@ -1,0 +1,182 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "natural enemy defeat does not change old hand or placed stats; only fresh entry gets multipliers; old and boosted cards place their fixed stats; snapshot-8 exact paused reload; real snapshot-7 retained without migration",
+        "desktop shortcut and wide touch confirmation; explicit sparse opening; hand choice/cancel/drag consume nothing; selected card #3 really planted; separate half-pane details; moving battle and paused exact reload"
+      ],
+      "failures": [],
+      "pointerProfile": {
+        "fine": true,
+        "pane": "board"
+      },
+      "detailSizes": {
+        "pane": 568,
+        "detail": 265
+      },
+      "boostProof": {
+        "tick": 81,
+        "rewards": [
+          {
+            "enemyId": 2,
+            "tick": 81
+          }
+        ],
+        "multipliers": {
+          "power": 1,
+          "range": 1.01,
+          "presence": 1,
+          "vitality": 1
+        },
+        "unchangedSeed": {
+          "id": 0,
+          "baseStats": {
+            "power": 20.73,
+            "range": 3.05,
+            "presence": 1.44,
+            "vitality": 91
+          },
+          "snapshot": {
+            "generator": "composition-v1",
+            "rawStats": {
+              "power": 20.73,
+              "range": 3.05,
+              "presence": 1.44,
+              "vitality": 91
+            },
+            "appliedMultipliers": {
+              "power": 1,
+              "range": 1,
+              "presence": 1,
+              "vitality": 1
+            },
+            "rewardEnemyIds": [],
+            "enteredAtTick": 0
+          }
+        },
+        "strongerSeed": {
+          "id": 5,
+          "baseStats": {
+            "power": 17.64,
+            "range": 3.3,
+            "presence": 1.18,
+            "vitality": 110
+          },
+          "snapshot": {
+            "generator": "composition-v1",
+            "rawStats": {
+              "power": 17.64,
+              "range": 3.27,
+              "presence": 1.18,
+              "vitality": 110
+            },
+            "appliedMultipliers": {
+              "power": 1,
+              "range": 1.01,
+              "presence": 1,
+              "vitality": 1
+            },
+            "rewardEnemyIds": [
+              2
+            ],
+            "enteredAtTick": 81
+          }
+        }
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "natural enemy defeat does not change old hand or placed stats; only fresh entry gets multipliers; old and boosted cards place their fixed stats; snapshot-8 exact paused reload; real snapshot-7 retained without migration",
+        "phone confirmation; explicit sparse opening; hand choice/cancel/drag consume nothing; selected card #3 really planted; separate half-pane details; moving battle and paused exact reload"
+      ],
+      "failures": [],
+      "pointerProfile": {
+        "fine": false,
+        "pane": "left"
+      },
+      "detailSizes": {
+        "pane": 604,
+        "detail": 283
+      },
+      "boostProof": {
+        "tick": 81,
+        "rewards": [
+          {
+            "enemyId": 2,
+            "tick": 81
+          }
+        ],
+        "multipliers": {
+          "power": 1,
+          "range": 1.01,
+          "presence": 1,
+          "vitality": 1
+        },
+        "unchangedSeed": {
+          "id": 0,
+          "baseStats": {
+            "power": 20.73,
+            "range": 3.05,
+            "presence": 1.44,
+            "vitality": 91
+          },
+          "snapshot": {
+            "generator": "composition-v1",
+            "rawStats": {
+              "power": 20.73,
+              "range": 3.05,
+              "presence": 1.44,
+              "vitality": 91
+            },
+            "appliedMultipliers": {
+              "power": 1,
+              "range": 1,
+              "presence": 1,
+              "vitality": 1
+            },
+            "rewardEnemyIds": [],
+            "enteredAtTick": 0
+          }
+        },
+        "strongerSeed": {
+          "id": 5,
+          "baseStats": {
+            "power": 17.64,
+            "range": 3.3,
+            "presence": 1.18,
+            "vitality": 110
+          },
+          "snapshot": {
+            "generator": "composition-v1",
+            "rawStats": {
+              "power": 17.64,
+              "range": 3.27,
+              "presence": 1.18,
+              "vitality": 110
+            },
+            "appliedMultipliers": {
+              "power": 1,
+              "range": 1.01,
+              "presence": 1,
+              "vitality": 1
+            },
+            "rewardEnemyIds": [
+              2
+            ],
+            "enteredAtTick": 81
+          }
+        }
+      }
+    }
+  ],
+  "runtimeErrors": []
+}

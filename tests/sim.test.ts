@@ -106,3 +106,8 @@ test('exhausted mature unreachable board ends; future growth or remaining cards 
 test('kills do not produce unlimited charges or extra plants',()=>{
   const s=createState();place(s,2,2);for(const u of s.units.filter(u=>u.team==='enemy'))u.hp=0;const cards=s.cards.length;step(s);assert.equal(s.charges,5);assert.equal(s.cards.length,cards);assert.equal(s.outcome,'win');
 });
+test('attack feedback records the actual target and position, never the next chosen target',()=>{
+  const s=createState();place(s,2,2);const ally=s.units.at(-1)!;ally.stats.range=10;ally.stats.power=1000;const target=chooseTarget(ally,s.units)!;const id=target.id,x=target.x,y=target.y;step(s);
+  assert.equal(ally.lastShot!.targetId,id);assert.equal(ally.lastShot!.x,x);assert.equal(ally.lastShot!.y,y);assert.equal(ally.lastShot!.tick,s.tick);assert.ok(ally.lastShot!.damage>0);assert.ok(!s.units.some(u=>u.id===id));
+  const next=chooseTarget(ally,s.units);assert.notEqual(next?.id,id);assert.equal(ally.lastShot!.targetId,id);
+});

@@ -2,7 +2,7 @@ export const WIDTH = 12, HEIGHT = 9, TICK_MS = 100;
 export const EPSILON = 1e-9, SEED_RADIUS = 0.3;
 export type Territory = { id: number; x: number; y: number; radius: number };
 export type Stats = { power: number; range: number; presence: number; vitality: number };
-export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null };
+export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null; lastShot?:{tick:number;targetId:number;x:number;y:number;damage:number} };
 export type State = { seed: number; tick: number; nextId: number; units: Unit[]; cards: Stats[]; territory: Territory[]; charges: number; outcome: 'playing' | 'win' | 'loss'; started: boolean; events: string[] };
 export type Placement = { ok: boolean; reason: string };
 export type PlacementForecast = { targetId:number|null; damage:number; grownTargetId:number|null; incomingIds:number[]; incomingDamage:number; newArea:number; note:string };
@@ -57,7 +57,8 @@ export function validatePlacement(state: State, x: number, y: number): Placement
   if(state.outcome!=='playing') return {ok:false,reason:'このステージは終了しました。新しい盤面を始められます。'};
   if(!Number.isFinite(x)||!Number.isFinite(y))return {ok:false,reason:'有効な位置を選んでください。'};
   if(x<SEED_RADIUS-EPSILON||x>WIDTH-SEED_RADIUS+EPSILON||y<SEED_RADIUS-EPSILON||y>HEIGHT-SEED_RADIUS+EPSILON) return {ok:false,reason:'植物の円全体が盤面内に入る位置を選んでください。'};
-  if(state.charges<1||state.cards.length===0) return {ok:false,reason:'配置力が足りません。時間を進めると補充されます。'};
+  if(state.cards.length===0) return {ok:false,reason:'今回の芽は使い切りました。残った植物を観察するか、同じseedで再挑戦できます。'};
+  if(state.charges<1) return {ok:false,reason:'配置力が足りません。時間を進めると補充されます。'};
   if(state.units.some(u=>Math.hypot(u.x-x,u.y-y)<footprint(u)+SEED_RADIUS-EPSILON)) return {ok:false,reason:'植物の円が重なっています。少し離して配置してください。'};
   if(!insideTerritory(state,x,y)) return {ok:false,reason:'明るい自分の領域に配置できます。赤い敵領域には置けません。'};
   return {ok:true,reason:'配置できます。'};
@@ -119,6 +120,7 @@ export function step(s:State) {
     const target=chooseTarget(u,s.units);u.target=target?.id??null;
     if(!target||u.cooldown>0)continue;
     const amount=attackDamage(u,target);
+    u.lastShot={tick:s.tick,targetId:target.id,x:target.x,y:target.y,damage:amount};
     damage.set(target.id,(damage.get(target.id)??0)+amount);u.cooldown=10;
   }
   for(const u of s.units)u.hp=Math.max(0,u.hp-(damage.get(u.id)??0));

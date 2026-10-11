@@ -18,6 +18,7 @@ export class BoardCamera {
  bounds(width:number,height:number){const l=this.layout(width,height),x=Math.max(0,-l.ox/l.scale),y=Math.max(0,-l.oy/l.scale),right=Math.min(this.stage.width,(width-l.ox)/l.scale),bottom=Math.min(this.stage.height,(height-l.oy)/l.scale);return {x,y,width:right-x,height:bottom-y};}
 }
 export function introView(s:State):View {
+ if(s.opening){const ally=s.units.find(u=>u.initial),enemy=ally?[...s.units].filter(u=>u.team==='enemy').sort((a,b)=>Math.hypot(a.x-ally.x,a.y-ally.y)-Math.hypot(b.x-ally.x,b.y-ally.y))[0]:undefined;if(ally&&enemy)return new BoardCamera({x:(ally.x+enemy.x)/2,y:(ally.y+enemy.y)/2,zoom:Math.max(1,s.stage.width/18,s.stage.height/13.5)},s.stage).view;}
  const candidates:{x:number;y:number}[]=[],{width,height}=s.stage,nx=referenceStage(s.stage)?Math.ceil((width-.6)/.8):32,ny=referenceStage(s.stage)?Math.ceil((height-.6)/.8):24;
  for(let yi=0;yi<ny;yi++)for(let xi=0;xi<nx;xi++){const x=referenceStage(s.stage)?.6+xi*.8:(xi+.5)*width/nx,y=referenceStage(s.stage)?.6+yi*.8:(yi+.5)*height/ny;if(validatePlacement(s,x,y).ok)candidates.push({x,y});}
  const index=(Math.imul(s.seed^0x56494557,1664525)>>>0)%Math.max(1,candidates.length),p=candidates[index]??{x:.3,y:.3};

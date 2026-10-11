@@ -1,0 +1,42 @@
+{
+  "browser": "Edg/154.0.4258.62",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "checks": [
+        "desktop shortcut and wide touch confirmation; explicit sparse opening; hand choice/cancel/drag consume nothing; selected card #3 really planted; separate half-pane details; moving battle and paused exact reload"
+      ],
+      "failures": [],
+      "pointerProfile": {
+        "fine": true,
+        "pane": "board"
+      },
+      "detailSizes": {
+        "pane": 568,
+        "detail": 265
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "phone confirmation; explicit sparse opening; hand choice/cancel/drag consume nothing; selected card #3 really planted; separate half-pane details; moving battle and paused exact reload"
+      ],
+      "failures": [],
+      "pointerProfile": {
+        "fine": false,
+        "pane": "left"
+      },
+      "detailSizes": {
+        "pane": 604,
+        "detail": 283
+      }
+    }
+  ],
+  "runtimeErrors": []
+}

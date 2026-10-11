@@ -1,4 +1,5 @@
 import {DEFAULT_STAGE,INITIAL_CARDS,stageConfig,referenceStage,type StageConfig} from './stage.js';
+import {clusteredPositions,initialAllyCount,generatedPoint,type Opening} from './opening.js';
 export const WIDTH = 12, HEIGHT = 9, TICK_MS = 100;
 export const EPSILON = 1e-9, SEED_RADIUS = 0.3;
 export const RULES='plateau-distance-1', REFILL_TICKS=240;
@@ -17,8 +18,9 @@ export function enemyPresenceAt(s:State,x:number,y:number):number {
   return s.units.filter(u=>u.team==='enemy'&&u.hp>0).reduce((sum,u)=>sum+presenceAt(u,x,y),0);
 }export type Territory = { id: number; x: number; y: number; radius: number };
 export type Stats = { power: number; range: number; presence: number; vitality: number };
-export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null; born?:number;supplyIndex?:number;lastShot?:{tick:number;targetId:number;x:number;y:number;damage:number} };
-export type State = { stage:StageConfig; supplyMode:'finite'|'endless';supplyIndex:number; seed: number; tick: number; nextId: number; units: Unit[]; cards: Stats[]; territory: Territory[]; charges: number; outcome: 'playing' | 'win' | 'loss'; started: boolean; events: string[] };
+export type SeedCard={id:number;baseStats:Stats};
+export type Unit = { id: number; team: 'ally' | 'enemy'; x: number; y: number; hp: number; maxHp: number; age: number; cooldown: number; stats: Stats; target: number | null; born?:number;supplyIndex?:number;seedIndex?:number;initial?:true;lastShot?:{tick:number;targetId:number;x:number;y:number;damage:number} };
+export type State = { stage:StageConfig; supplyMode:'finite'|'endless';supplyIndex:number; seed: number; tick: number; nextId: number; units: Unit[]; cards: Stats[]; territory: Territory[]; charges: number; outcome: 'playing' | 'win' | 'loss'; started: boolean; events: string[];opening?:'clustered-v1';hand?:SeedCard[];nextSeedIndex?:number };
 export type Placement = { ok: boolean; reason: string };
 export type PlacementForecast = { targetId:number|null; damage:number; grownTargetId:number|null; incomingIds:number[]; incomingDamage:number; newArea:number; note:string };
 function rng(seed: number) { let s = seed >>> 0; return () => { s += 0x6D2B79F5; let t = Math.imul(s ^ s >>> 15, 1 | s); t ^= t + Math.imul(t ^ t >>> 7, 61 | t); return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
@@ -48,11 +50,13 @@ export function enemyPositions(seed:number,configuration:StageConfig=DEFAULT_STA
   const mirrored=random()>.5;
   return anchors.map(([x,y])=>({x:x+(random()-.5)*.7,y:Math.max(.6,Math.min(HEIGHT-.6,(mirrored?HEIGHT-y:y)+(random()-.5)*1.4))}));
 }
-export function createState(seed = 20261011,configuration:StageConfig=DEFAULT_STAGE,supplyMode:'finite'|'endless'='finite'): State {
+export function createState(seed = 20261011,configuration:StageConfig=DEFAULT_STAGE,supplyMode:'finite'|'endless'='finite',opening:Opening='legacy'): State {
   if (!Number.isFinite(seed)) throw new Error('Seed must be finite');
   const stage=stageConfig(configuration),random = rng(seed);
   const state: State = {stage,supplyMode,supplyIndex:0,seed:seed>>>0,tick:0,nextId:1,units:[],cards:[],territory:[],charges:3,outcome:'playing',started:false,events:['敵の存在感Areaの外なら、どこでも最初の植物を配置できます。']};
-  for (const {x,y} of enemyPositions(seed,stage)) state.units.push(unit(state,'enemy',x,y,makeStats(random)));
+  if(!['legacy','clustered-v1'].includes(opening)||opening==='clustered-v1'&&supplyMode!=='endless')throw new Error('Invalid opening');
+  const positions=opening==='clustered-v1'?clusteredPositions(stage,rng((seed>>>0)^0x434C5553)):enemyPositions(seed,stage);
+  for (const {x,y} of positions) state.units.push(unit(state,'enemy',x,y,makeStats(random)));
   // Preserve a legal refuge even at full maturation, without random retry loops.
   const corners=[[.3,.3],[stage.width-.3,.3],[.3,stage.height-.3],[stage.width-.3,stage.height-.3]];
   const matureMin=()=>Math.min(...corners.map(([x,y])=>state.units.reduce((sum,u)=>sum+PRESENCE_STRENGTH*distanceFalloff(Math.hypot(x-u.x,y-u.y),u.stats.presence*1.3),0)));
@@ -60,8 +64,20 @@ export function createState(seed = 20261011,configuration:StageConfig=DEFAULT_ST
   if(matureMin()>PRESENCE_LIMIT)throw new Error('Presence field has no refuge');
   if(!['finite','endless'].includes(supplyMode))throw new Error('Invalid supply mode');
   for(let i=0;i<(supplyMode==='finite'?INITIAL_CARDS:4);i++) state.cards.push(makeStats(random));
+  if(opening==='clustered-v1'){
+    state.opening=opening;state.hand=state.cards.map((baseStats,id)=>({id,baseStats:{...baseStats}}));state.nextSeedIndex=4;
+    const allyRandom=rng((seed>>>0)^0x414C4C59),enemies=[...state.units],mature=enemies.map(u=>({...u,age:117}));
+    for(let i=0;i<initialAllyCount(stage.enemyCount);i++){
+      const target=enemies[i],near=[...enemies].sort((a,b)=>Math.hypot(a.x-target.x,a.y-target.y)-Math.hypot(b.x-target.x,b.y-target.y)).slice(0,4),cx=near.reduce((n,u)=>n+u.x,0)/near.length,cy=near.reduce((n,u)=>n+u.y,0)/near.length,angle=Math.atan2(target.y-cy,target.x-cx),candidates=[] as {x:number;y:number}[];
+      for(const distance of [5.8,6.6,7.4,8.2])for(let j=0;j<24;j++){const a=angle+j*Math.PI/12;candidates.push(generatedPoint({x:target.x+Math.cos(a)*distance,y:target.y+Math.sin(a)*distance}));}
+      const legal=candidates.find(p=>validatePlacement(state,p.x,p.y).ok&&mature.reduce((sum,u)=>sum+presenceAt(u,p.x,p.y),0)<=PRESENCE_LIMIT&&state.units.every(u=>Math.hypot(u.x-p.x,u.y-p.y)>=.756));
+      if(!legal)throw new Error('No experimental ally opening');const ally=unit(state,'ally',legal.x,legal.y,makeStats(allyRandom));ally.born=0;ally.initial=true;state.units.push(ally);
+    }
+    state.started=true;state.events=['初期味方から戦線を読み、中央下の手札を選んで配置できます。'];
+  }
   return state;
 }
+export function seedStats(state:State,seedId?:number){return state.hand?(seedId===undefined?state.hand[0]:state.hand.find(c=>c.id===seedId))?.baseStats:state.cards[0];}
 export function footprint(u: Unit) { return SEED_RADIUS + Math.min(u.age / 180, 0.65) * 0.12; }
 export function insideTerritory(state: State, x: number, y: number): boolean {
   if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||x>state.stage.width||y<0||y>state.stage.height)return false;
@@ -85,19 +101,21 @@ export function screenToWorld(px:number,py:number,width:number,height:number,sta
 export function clientToWorld(clientX:number,clientY:number,rect:{left:number;top:number;width:number;height:number},stage:StageConfig=DEFAULT_STAGE) {
   return screenToWorld(clientX-rect.left,clientY-rect.top,rect.width,rect.height,stage);
 }
-export function validatePlacement(state: State, x: number, y: number): Placement {
+export function validatePlacement(state: State, x: number, y: number,seedId?:number): Placement {
   if(state.outcome!=='playing') return {ok:false,reason:'このステージは終了しました。新しい盤面を始められます。'};
   if(!Number.isFinite(x)||!Number.isFinite(y))return {ok:false,reason:'有効な位置を選んでください。'};
   if(x<SEED_RADIUS-EPSILON||x>state.stage.width-SEED_RADIUS+EPSILON||y<SEED_RADIUS-EPSILON||y>state.stage.height-SEED_RADIUS+EPSILON) return {ok:false,reason:'植物の円全体が盤面内に入る位置を選んでください。'};
   if(state.cards.length===0) return {ok:false,reason:'今回の芽は使い切りました。残った植物を観察するか、同じseedで再挑戦できます。'};
+  if(state.hand&&!seedStats(state,seedId))return {ok:false,reason:'この芽は手札にありません。選び直してください。'};
   if(state.charges<1) return {ok:false,reason:'配置力が足りません。時間を進めると補充されます。'};
   if(state.units.some(u=>Math.hypot(u.x-x,u.y-y)<footprint(u)+SEED_RADIUS-EPSILON)) return {ok:false,reason:'植物の円が重なっています。少し離して配置してください。'};
   if(!insideTerritory(state,x,y)) return {ok:false,reason:'敵の存在感合計が閾値を超えています。'};
   return {ok:true,reason:'配置できます。'};
 }
-export function place(state: State,x:number,y:number): Placement {
-  const result=validatePlacement(state,x,y); if(!result.ok)return result;
-  const stats=state.cards.shift()!,index=state.supplyIndex++;const ally=unit(state,'ally',x,y,stats);if(state.supplyMode==='endless'){ally.born=state.tick;ally.supplyIndex=index;state.cards.push(supplyStats(state.seed,state.stage,state.supplyIndex+3));}state.units.push(ally); state.charges--; state.started=true;
+export function place(state: State,x:number,y:number,seedId?:number): Placement {
+  const result=validatePlacement(state,x,y,seedId); if(!result.ok)return result;
+  let stats:Stats,chosen:number|undefined;if(state.hand){const i=seedId===undefined?0:state.hand.findIndex(c=>c.id===seedId),card=state.hand.splice(i,1)[0];stats=card.baseStats;chosen=card.id;const id=state.nextSeedIndex!;state.nextSeedIndex=id+1;state.hand.push({id,baseStats:supplyStats(state.seed,state.stage,id)});state.cards=state.hand.map(c=>({...c.baseStats}));}else stats=state.cards.shift()!;
+  const index=state.supplyIndex++;const ally=unit(state,'ally',x,y,stats);if(state.supplyMode==='endless'){ally.born=state.tick;ally.supplyIndex=index;if(state.hand)ally.seedIndex=chosen;else state.cards.push(supplyStats(state.seed,state.stage,state.supplyIndex+3));}state.units.push(ally); state.charges--; state.started=true;
   event(state,`植物を配置 (${x.toFixed(2)}, ${y.toFixed(2)})。射程円を見ながら進めてみましょう。`);
   expand(state); return result;
 }
@@ -113,9 +131,9 @@ export function chooseTarget(u: Unit, units: Unit[]): Unit | undefined {
     return score(b)-score(a)||a.id-b.id;
   })[0];
 }
-export function placementForecast(s:State,x:number,y:number):PlacementForecast|undefined {
-  if(!validatePlacement(s,x,y).ok)return undefined;
-  const stats=s.cards[0],seed:Unit={id:s.nextId,team:'ally',x,y,hp:stats.vitality,maxHp:stats.vitality,age:0,cooldown:0,stats,target:null};
+export function placementForecast(s:State,x:number,y:number,seedId?:number):PlacementForecast|undefined {
+  if(!validatePlacement(s,x,y,seedId).ok)return undefined;
+  const stats=seedStats(s,seedId)!,seed:Unit={id:s.nextId,team:'ally',x,y,hp:stats.vitality,maxHp:stats.vitality,age:0,cooldown:0,stats,target:null};
   const others=[...s.units,seed];const target=chooseTarget(seed,others);
   const grown={...seed,age:224};const grownTarget=chooseTarget(grown,others);
   const incoming=s.units.filter(u=>u.team==='enemy'&&chooseTarget(u,others)?.id===seed.id);

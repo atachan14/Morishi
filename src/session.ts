@@ -2,17 +2,17 @@ import {DEFAULT_STAGE,INITIAL_CARDS,stageConfig,referenceStage,type StageConfig}
 import {createState,supplyStats,RULES,type State,type Stats} from './sim.js';
 import {BoardCamera,type View} from './camera.js';
 export const SAVE_KEY='morishi.run.v1', BACKUP_KEY='morishi.run.previous.v1';
-const VERSION='2026-10-11-snapshot-6',STAGED='2026-10-11-snapshot-5',PREVIOUS='2026-10-11-snapshot-4',CAMERALESS='2026-10-11-snapshot-3';
+const VERSION='2026-10-11-snapshot-7',INDEXED='2026-10-11-snapshot-6',STAGED='2026-10-11-snapshot-5',PREVIOUS='2026-10-11-snapshot-4',CAMERALESS='2026-10-11-snapshot-3';
 // Decoder safety budgets are separate from finite or indexed game supply.
 export const SAVE_LIMITS={maxBytes:2000000,maxUnits:2048,maxActions:1024} as const;
 const withinLimit=(raw:string)=>raw.length<=SAVE_LIMITS.maxBytes&&new TextEncoder().encode(raw).length<=SAVE_LIMITS.maxBytes;
-export type Action={tick:number;kind:'place';x:number;y:number}|{tick:number;kind:'finish'};
-export type RunSave={version:typeof VERSION;rules:typeof RULES;seed:number;tick:number;speed:number;actions:Action[];snapshot:State;view:View;checksum:string};
+export type Action={tick:number;kind:'place';x:number;y:number;seedIndex?:number}|{tick:number;kind:'finish'};
+export type RunSave={version:typeof VERSION|typeof INDEXED;rules:typeof RULES;seed:number;tick:number;speed:number;actions:Action[];snapshot:State;view:View;checksum:string};
 export interface StorageLike {getItem(key:string):string|null;setItem(key:string,value:string):void;}
 // Corruption detection is paired with structural validation, not used as authentication.
 function checksum(value:unknown){const raw=JSON.stringify(value);let hash=2166136261;for(let i=0;i<raw.length;i++)hash=Math.imul(hash^raw.charCodeAt(i),16777619);return (hash>>>0).toString(16);}
 export function capture(state:State,speed:number,actions:Action[],view:View={x:state.stage.width/2,y:state.stage.height/2,zoom:1}):RunSave {
-  const payload:Omit<RunSave,'checksum'>={version:VERSION,rules:RULES,seed:state.seed,tick:state.tick,speed,actions:structuredClone(state.supplyMode==='endless'?actions.slice(-64):actions),snapshot:structuredClone(state),view:{...view}};
+  const payload:Omit<RunSave,'checksum'>={version:state.opening?VERSION:INDEXED,rules:RULES,seed:state.seed,tick:state.tick,speed,actions:structuredClone(state.supplyMode==='endless'?actions.slice(-64):actions),snapshot:structuredClone(state),view:{...view}};
   return {...payload,checksum:checksum(payload)};
 }
 const integer=(v:unknown,min:number,max=Number.MAX_SAFE_INTEGER):v is number=>typeof v==='number'&&Number.isSafeInteger(v)&&v>=min&&v<=max;
@@ -22,29 +22,39 @@ function actionsValid(v:Action[],tick:number,stage:StageConfig,mode:State['suppl
   if(!Array.isArray(v)||v.length>SAVE_LIMITS.maxActions)return false;let previous=0,ended=false,count=0;
   for(const a of v){
     if(!a||!integer(a.tick,previous,tick)||ended)return false;previous=a.tick;
-    if(a.kind==='place'){if(++count>(mode==='finite'?INITIAL_CARDS:SAVE_LIMITS.maxActions)||!finite(a.x,.3-1e-9,stage.width-.3+1e-9)||!finite(a.y,.3-1e-9,stage.height-.3+1e-9))return false;}
+    if(a.kind==='place'){if(++count>(mode==='finite'?INITIAL_CARDS:SAVE_LIMITS.maxActions)||!finite(a.x,.3-1e-9,stage.width-.3+1e-9)||!finite(a.y,.3-1e-9,stage.height-.3+1e-9)||(a.seedIndex!==undefined&&!integer(a.seedIndex,0)))return false;}
     else if(a.kind==='finish'&&(count>0||mode==='endless'))ended=true;else return false;
   }
   return true;
 }
 function validatedSnapshot(s:State,seed:number,tick:number,actions:Action[],stage:StageConfig,mode:State['supplyMode']):State {
   if(!s||s.seed!==seed||s.tick!==tick||!integer(s.nextId,stage.enemyCount+1,mode==='finite'?stage.enemyCount+1+INITIAL_CARDS:Number.MAX_SAFE_INTEGER)||!integer(s.charges,0,5)||!['playing','win','loss'].includes(s.outcome)||typeof s.started!=='boolean'||!Array.isArray(s.units)||s.units.length>SAVE_LIMITS.maxUnits||!Array.isArray(s.cards)||s.cards.length>INITIAL_CARDS||!Array.isArray(s.territory)||s.territory.length>SAVE_LIMITS.maxUnits||!Array.isArray(s.events)||s.events.length>5||s.events.some(e=>typeof e!=='string'||e.length>300))throw new Error('Invalid snapshot');
-  const initial=createState(seed,stage,mode),placements=actions.filter((a):a is Extract<Action,{kind:'place'}>=>a.kind==='place');
-  const supplyIndex=s.nextId-stage.enemyCount-1;
+  if(s.opening!==undefined&&s.opening!=='clustered-v1'||!s.opening&&(s.hand!==undefined||s.nextSeedIndex!==undefined))throw new Error('Invalid opening');
+  const experimental=s.opening==='clustered-v1',initial=createState(seed,stage,mode,experimental?'clustered-v1':'legacy'),placements=actions.filter((a):a is Extract<Action,{kind:'place'}>=>a.kind==='place');
+  const supplyIndex=s.nextId-initial.nextId,handIds=new Set<number>();
   if(mode==='finite'){
     if(s.supplyIndex!==undefined&&s.supplyIndex!==supplyIndex)throw new Error('Invalid finite supply cursor');
     if(s.nextId!==stage.enemyCount+1+placements.length||s.cards.length!==INITIAL_CARDS-placements.length||s.started!==(placements.length>0)||(!s.started&&tick!==0)||JSON.stringify(s.cards)!==JSON.stringify(initial.cards.slice(placements.length)))throw new Error('Invalid inventory');
-  }else if(!integer(s.supplyIndex,0)||s.supplyIndex!==supplyIndex||s.cards.length!==4||s.started!==(supplyIndex>0)||(!s.started&&tick!==0)||JSON.stringify(s.cards)!==JSON.stringify(Array.from({length:4},(_,i)=>supplyStats(seed,stage,supplyIndex+i))))throw new Error('Invalid indexed inventory');
-  const origin=new Map(initial.units.map(u=>[u.id,{x:u.x,y:u.y,stats:u.stats,born:0,team:u.team}]));
-  if(mode==='finite')placements.forEach((a,i)=>origin.set(stage.enemyCount+1+i,{x:a.x,y:a.y,stats:initial.cards[i],born:a.tick,team:'ally'}));
+  }else if(!integer(s.supplyIndex,0)||s.supplyIndex!==supplyIndex||s.cards.length!==4||s.started!==(supplyIndex>0||initial.started)||(!s.started&&tick!==0)||(!experimental&&JSON.stringify(s.cards)!==JSON.stringify(Array.from({length:4},(_,i)=>supplyStats(seed,stage,supplyIndex+i)))))throw new Error('Invalid indexed inventory');
+  if(experimental){
+    if(!integer(s.nextSeedIndex,4)||s.nextSeedIndex!==supplyIndex+4||!Array.isArray(s.hand)||s.hand.length!==4)throw new Error('Invalid hand');
+    for(const card of s.hand){if(!integer(card.id,0,s.nextSeedIndex-1)||handIds.has(card.id)||JSON.stringify(card.baseStats)!==JSON.stringify(supplyStats(seed,stage,card.id)))throw new Error('Invalid seed identity');handIds.add(card.id);}
+    if(JSON.stringify(s.cards)!==JSON.stringify(s.hand.map(c=>c.baseStats)))throw new Error('Invalid hand stats');
+  }
+  const origin=new Map(initial.units.map(u=>[u.id,{x:u.x,y:u.y,stats:u.stats,born:0,team:u.team,initial:u.initial===true}]));
+  const usedSeeds=new Set<number>();
+  if(mode==='finite')placements.forEach((a,i)=>origin.set(stage.enemyCount+1+i,{x:a.x,y:a.y,stats:initial.cards[i],born:a.tick,team:'ally',initial:false}));
   else for(const u of s.units.filter(u=>u.team==='ally')){
-    if(!integer(u.supplyIndex,0,supplyIndex-1)||u.id!==stage.enemyCount+1+u.supplyIndex||!integer(u.born,0,tick)||!finite(u.x,.3-1e-9,stage.width-.3+1e-9)||!finite(u.y,.3-1e-9,stage.height-.3+1e-9))throw new Error('Invalid indexed origin');
-    origin.set(u.id,{x:u.x,y:u.y,stats:supplyStats(seed,stage,u.supplyIndex),born:u.born,team:'ally'});
+    if(experimental&&u.initial===true){if(!origin.get(u.id)?.initial||u.born!==0||u.supplyIndex!==undefined||u.seedIndex!==undefined)throw new Error('Invalid initial ally');continue;}
+    if(u.initial!==undefined||!integer(u.supplyIndex,0,supplyIndex-1)||u.id!==initial.nextId+u.supplyIndex||!integer(u.born,0,tick)||!finite(u.x,.3-1e-9,stage.width-.3+1e-9)||!finite(u.y,.3-1e-9,stage.height-.3+1e-9))throw new Error('Invalid indexed origin');
+    const sourceIndex=experimental?u.seedIndex:u.supplyIndex;
+    if(!integer(sourceIndex,0)||(experimental&&(!integer(sourceIndex,0,s.nextSeedIndex!-1)||handIds.has(sourceIndex)||usedSeeds.has(sourceIndex))))throw new Error('Invalid used seed');usedSeeds.add(sourceIndex);
+    origin.set(u.id,{x:u.x,y:u.y,stats:supplyStats(seed,stage,sourceIndex),born:u.born,team:'ally',initial:false});
   }
   const ids=new Set<number>();
   for(const u of s.units){
     const source=origin.get(u.id);
-    if(!source||ids.has(u.id)||u.team!==source.team||u.x!==source.x||u.y!==source.y||!stats(u.stats)||JSON.stringify(u.stats)!==JSON.stringify(source.stats)||u.maxHp!==u.stats.vitality||!finite(u.hp,Number.MIN_VALUE,u.maxHp)||!integer(u.age,0,tick)||u.age!==tick-source.born||!integer(u.cooldown,0,10)||(u.target!==null&&!integer(u.target,1,s.nextId-1)))throw new Error('Invalid unit');
+    if(!source||ids.has(u.id)||(u.initial===true)!==source.initial||u.team!==source.team||u.x!==source.x||u.y!==source.y||!stats(u.stats)||JSON.stringify(u.stats)!==JSON.stringify(source.stats)||u.maxHp!==u.stats.vitality||!finite(u.hp,Number.MIN_VALUE,u.maxHp)||!integer(u.age,0,tick)||u.age!==tick-source.born||!integer(u.cooldown,0,10)||(u.target!==null&&!integer(u.target,1,s.nextId-1)))throw new Error('Invalid unit');
     ids.add(u.id);const shot=u.lastShot;
     if(shot&&(!integer(shot.tick,source.born,tick)||!integer(shot.targetId,1,s.nextId-1)||!finite(shot.x,0,stage.width)||!finite(shot.y,0,stage.height)||!finite(shot.damage,0,60)))throw new Error('Invalid shot');
   }
@@ -52,21 +62,22 @@ function validatedSnapshot(s:State,seed:number,tick:number,actions:Action[],stag
   for(const t of s.territory){const source=origin.get(t.id);if(!source||territoryIds.has(t.id)||t.x!==source.x||t.y!==source.y||!finite(t.radius,1.6,3))throw new Error('Invalid territory');territoryIds.add(t.id);}
   const enemies=s.units.filter(u=>u.team==='enemy').length;
   if((s.outcome==='win'&&enemies!==0)||(s.outcome==='playing'&&enemies===0)||(actions.at(-1)?.kind==='finish'&&s.outcome!=='loss'))throw new Error('Invalid outcome');
-  return {stage:{...stage},supplyMode:mode,supplyIndex,seed,tick,nextId:s.nextId,charges:s.charges,outcome:s.outcome,started:s.started,cards:s.cards.map(v=>({...v})),events:[...s.events],territory:s.territory.map(t=>({id:t.id,x:t.x,y:t.y,radius:t.radius})),units:s.units.map(u=>({id:u.id,team:u.team,x:u.x,y:u.y,hp:u.hp,maxHp:u.maxHp,age:u.age,cooldown:u.cooldown,stats:{...u.stats},target:u.target,...(mode==='endless'&&u.team==='ally'?{born:u.born,supplyIndex:u.supplyIndex}:{}),...(u.lastShot?{lastShot:{...u.lastShot}}:{})}))};
+  return {stage:{...stage},supplyMode:mode,supplyIndex,seed,tick,nextId:s.nextId,charges:s.charges,outcome:s.outcome,started:s.started,cards:s.cards.map(v=>({...v})),events:[...s.events],territory:s.territory.map(t=>({id:t.id,x:t.x,y:t.y,radius:t.radius})),units:s.units.map(u=>({id:u.id,team:u.team,x:u.x,y:u.y,hp:u.hp,maxHp:u.maxHp,age:u.age,cooldown:u.cooldown,stats:{...u.stats},target:u.target,...(mode==='endless'&&u.team==='ally'?(u.initial?{born:0,initial:true as const}:{born:u.born,supplyIndex:u.supplyIndex,...(experimental?{seedIndex:u.seedIndex}:{})}):{}),...(u.lastShot?{lastShot:{...u.lastShot}}:{})})),...(experimental?{opening:'clustered-v1' as const,hand:s.hand!.map(c=>({id:c.id,baseStats:{...c.baseStats}})),nextSeedIndex:s.nextSeedIndex}:{})};
 }
 export function replay(input:unknown):{state:State;save:RunSave} {
  const v=input as Omit<RunSave,'version'>&{version:string};
  if(!v||!integer(v.seed,0,4294967295)||!integer(v.tick,0)||![1,2,4].includes(v.speed))throw new Error('Invalid save');
- if(![VERSION,STAGED,PREVIOUS,CAMERALESS].includes(v.version)||v.rules!==RULES)throw new Error('Unsupported save');
+ if(![VERSION,INDEXED,STAGED,PREVIOUS,CAMERALESS].includes(v.version)||v.rules!==RULES)throw new Error('Unsupported save');
  const payload={version:v.version,rules:v.rules,seed:v.seed,tick:v.tick,speed:v.speed,actions:v.actions,snapshot:v.snapshot,...(v.version!==CAMERALESS?{view:v.view}:{})};
  if(v.checksum!==checksum(payload))throw new Error('Corrupt save');
- const stage=stageConfig([VERSION,STAGED].includes(v.version)?v.snapshot?.stage:DEFAULT_STAGE);
- if([VERSION,STAGED].includes(v.version)&&!v.snapshot?.stage)throw new Error('Missing stage');
- if(![VERSION,STAGED].includes(v.version)&&v.snapshot?.stage&&!referenceStage(stageConfig(v.snapshot.stage)))throw new Error('Invalid legacy stage');
- const mode=v.version===VERSION?v.snapshot?.supplyMode:'finite';
+ const stage=stageConfig([VERSION,INDEXED,STAGED].includes(v.version)?v.snapshot?.stage:DEFAULT_STAGE);
+ if([VERSION,INDEXED,STAGED].includes(v.version)&&!v.snapshot?.stage)throw new Error('Missing stage');
+ if(![VERSION,INDEXED,STAGED].includes(v.version)&&v.snapshot?.stage&&!referenceStage(stageConfig(v.snapshot.stage)))throw new Error('Invalid legacy stage');
+ if(v.version!==VERSION&&(v.snapshot?.opening!==undefined||v.snapshot?.hand!==undefined||v.snapshot?.nextSeedIndex!==undefined))throw new Error('Invalid legacy opening');
+ const indexed=[VERSION,INDEXED].includes(v.version),mode=indexed?v.snapshot?.supplyMode:'finite';
  if(!['finite','endless'].includes(mode))throw new Error('Invalid supply mode');
- if(v.version===VERSION&&!integer(v.snapshot.supplyIndex,0))throw new Error('Missing supply cursor');
- if(v.version!==VERSION&&v.snapshot?.supplyMode==='endless')throw new Error('Invalid legacy supply');
+ if(indexed&&!integer(v.snapshot.supplyIndex,0))throw new Error('Missing supply cursor');
+ if(!indexed&&v.snapshot?.supplyMode==='endless')throw new Error('Invalid legacy supply');
  if(!actionsValid(v.actions,v.tick,stage,mode))throw new Error('Invalid actions');
  const state=validatedSnapshot(v.snapshot,v.seed,v.tick,v.actions,stage,mode),view=v.version!==CAMERALESS?v.view:{x:6,y:4.5,zoom:1};
  const camera=new BoardCamera(undefined,stage);

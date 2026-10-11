@@ -1,0 +1,1430 @@
+[
+  {
+    "seed": 11,
+    "policy": "tight",
+    "actions": [
+      {
+        "tick": 0,
+        "cardId": 0,
+        "x": 840.538635,
+        "y": 608.142813,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "attack",
+          "ice": "speed",
+          "electric": "range",
+          "dark": "defense"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 1,
+        "x": 840.538635,
+        "y": 684.142813,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "speed",
+          "ice": "range",
+          "electric": "defense",
+          "dark": "attack"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 2,
+        "x": 760.538635,
+        "y": 646.142813,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "speed",
+          "ice": "attack",
+          "electric": "range",
+          "dark": "defense"
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "tick": 40,
+        "kills": 1,
+        "allies": 6,
+        "enemies": 23,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 25,
+            "hp": 65.91,
+            "diameter": 20,
+            "attack": 23.912888,
+            "range": 142.371745,
+            "speed": 1.3168452916666666
+          },
+          {
+            "id": 26,
+            "hp": 80.26,
+            "diameter": 20,
+            "attack": 36.569438,
+            "range": 171.949715,
+            "speed": 1.1528562916666667
+          },
+          {
+            "id": 27,
+            "hp": 2.73,
+            "diameter": 20,
+            "attack": 37.837071,
+            "range": 92.71314,
+            "speed": 1.5988448333333334
+          },
+          {
+            "id": 28,
+            "hp": 143.5,
+            "diameter": 20,
+            "attack": 32.605093,
+            "range": 196.82862,
+            "speed": 0.7654291249999999
+          },
+          {
+            "id": 29,
+            "hp": 173.07,
+            "diameter": 20,
+            "attack": 39.9,
+            "range": 118.90666,
+            "speed": 0.7734911666666666
+          },
+          {
+            "id": 30,
+            "hp": 149.81,
+            "diameter": 20,
+            "attack": 39.730881,
+            "range": 98.512495,
+            "speed": 0.811902875
+          }
+        ]
+      },
+      {
+        "tick": 100,
+        "kills": 3,
+        "allies": 4,
+        "enemies": 21,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 26,
+            "hp": 28.44,
+            "diameter": 38,
+            "attack": 42.100949,
+            "range": 197.958915,
+            "speed": 1.3272379166666666
+          },
+          {
+            "id": 28,
+            "hp": 50.13,
+            "diameter": 38,
+            "attack": 37.536956,
+            "range": 226.601015,
+            "speed": 0.8812083333333334
+          },
+          {
+            "id": 29,
+            "hp": 204.53,
+            "diameter": 38,
+            "attack": 45.935294,
+            "range": 136.892545,
+            "speed": 0.8904898333333334
+          },
+          {
+            "id": 30,
+            "hp": 177.05,
+            "diameter": 38,
+            "attack": 45.740594,
+            "range": 113.413545,
+            "speed": 0.9347117083333334
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "kills": 3,
+        "allies": 0,
+        "enemies": 21,
+        "merges": 0,
+        "hp": []
+      },
+      {
+        "tick": 900,
+        "kills": 3,
+        "allies": 0,
+        "enemies": 8,
+        "merges": 13,
+        "hp": []
+      }
+    ],
+    "legalCorner": true,
+    "charges": 5,
+    "hand": 6
+  },
+  {
+    "seed": 11,
+    "policy": "spread",
+    "actions": [
+      {
+        "tick": 0,
+        "cardId": 0,
+        "x": 760.538635,
+        "y": 646.142813,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "attack",
+          "ice": "speed",
+          "electric": "range",
+          "dark": "defense"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 1,
+        "x": 2803.793133,
+        "y": 645.234321,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "speed",
+          "ice": "range",
+          "electric": "defense",
+          "dark": "attack"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 2,
+        "x": 800.069397,
+        "y": 2189.213356,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "speed",
+          "ice": "attack",
+          "electric": "range",
+          "dark": "defense"
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "tick": 40,
+        "kills": 2,
+        "allies": 6,
+        "enemies": 22,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 25,
+            "hp": 21.78,
+            "diameter": 20,
+            "attack": 23.912888,
+            "range": 142.371745,
+            "speed": 1.3168452916666666
+          },
+          {
+            "id": 26,
+            "hp": 80.26,
+            "diameter": 20,
+            "attack": 36.569438,
+            "range": 171.949715,
+            "speed": 1.1528562916666667
+          },
+          {
+            "id": 27,
+            "hp": 33.69,
+            "diameter": 20,
+            "attack": 37.837071,
+            "range": 92.71314,
+            "speed": 1.5988448333333334
+          },
+          {
+            "id": 28,
+            "hp": 145.42,
+            "diameter": 20,
+            "attack": 32.605093,
+            "range": 196.82862,
+            "speed": 0.7654291249999999
+          },
+          {
+            "id": 29,
+            "hp": 173.07,
+            "diameter": 20,
+            "attack": 39.9,
+            "range": 118.90666,
+            "speed": 0.7734911666666666
+          },
+          {
+            "id": 30,
+            "hp": 149.81,
+            "diameter": 20,
+            "attack": 39.730881,
+            "range": 98.512495,
+            "speed": 0.811902875
+          }
+        ]
+      },
+      {
+        "tick": 100,
+        "kills": 3,
+        "allies": 4,
+        "enemies": 21,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 26,
+            "hp": 74.6,
+            "diameter": 38,
+            "attack": 42.100949,
+            "range": 197.958915,
+            "speed": 1.3272379166666666
+          },
+          {
+            "id": 28,
+            "hp": 33.92,
+            "diameter": 38,
+            "attack": 37.536956,
+            "range": 226.601015,
+            "speed": 0.8812083333333334
+          },
+          {
+            "id": 29,
+            "hp": 204.53,
+            "diameter": 38,
+            "attack": 45.935294,
+            "range": 136.892545,
+            "speed": 0.8904898333333334
+          },
+          {
+            "id": 30,
+            "hp": 160.45,
+            "diameter": 38,
+            "attack": 45.740594,
+            "range": 113.413545,
+            "speed": 0.9347117083333334
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "kills": 7,
+        "allies": 1,
+        "enemies": 17,
+        "merges": 1,
+        "hp": [
+          {
+            "id": 26,
+            "hp": 361.73,
+            "diameter": 120.823167,
+            "attack": 98.348848,
+            "range": 437.831345,
+            "speed": 4
+          }
+        ]
+      },
+      {
+        "tick": 900,
+        "kills": 7,
+        "allies": 0,
+        "enemies": 7,
+        "merges": 11,
+        "hp": []
+      }
+    ],
+    "legalCorner": true,
+    "charges": 5,
+    "hand": 6
+  },
+  {
+    "seed": 11,
+    "policy": "distant",
+    "actions": [
+      {
+        "tick": 0,
+        "cardId": 0,
+        "x": 2048,
+        "y": 1536,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "attack",
+          "ice": "speed",
+          "electric": "range",
+          "dark": "defense"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 1,
+        "x": 2100,
+        "y": 1536,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "speed",
+          "ice": "range",
+          "electric": "defense",
+          "dark": "attack"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 2,
+        "x": 2048,
+        "y": 1588,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "speed",
+          "ice": "attack",
+          "electric": "range",
+          "dark": "defense"
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "tick": 40,
+        "kills": 0,
+        "allies": 6,
+        "enemies": 24,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 25,
+            "hp": 21.78,
+            "diameter": 20,
+            "attack": 23.912888,
+            "range": 142.371745,
+            "speed": 1.3168452916666666
+          },
+          {
+            "id": 26,
+            "hp": 80.26,
+            "diameter": 20,
+            "attack": 36.569438,
+            "range": 171.949715,
+            "speed": 1.1528562916666667
+          },
+          {
+            "id": 27,
+            "hp": 2.73,
+            "diameter": 20,
+            "attack": 37.837071,
+            "range": 92.71314,
+            "speed": 1.5988448333333334
+          },
+          {
+            "id": 28,
+            "hp": 145.42,
+            "diameter": 20,
+            "attack": 32.605093,
+            "range": 196.82862,
+            "speed": 0.7654291249999999
+          },
+          {
+            "id": 29,
+            "hp": 173.07,
+            "diameter": 20,
+            "attack": 39.9,
+            "range": 118.90666,
+            "speed": 0.7734911666666666
+          },
+          {
+            "id": 30,
+            "hp": 149.81,
+            "diameter": 20,
+            "attack": 39.730881,
+            "range": 98.512495,
+            "speed": 0.811902875
+          }
+        ]
+      },
+      {
+        "tick": 100,
+        "kills": 2,
+        "allies": 4,
+        "enemies": 22,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 26,
+            "hp": 28.44,
+            "diameter": 38,
+            "attack": 42.100949,
+            "range": 197.958915,
+            "speed": 1.3272379166666666
+          },
+          {
+            "id": 28,
+            "hp": 171.86,
+            "diameter": 38,
+            "attack": 37.536956,
+            "range": 226.601015,
+            "speed": 0.8812083333333334
+          },
+          {
+            "id": 29,
+            "hp": 204.53,
+            "diameter": 38,
+            "attack": 45.935294,
+            "range": 136.892545,
+            "speed": 0.8904898333333334
+          },
+          {
+            "id": 30,
+            "hp": 177.05,
+            "diameter": 38,
+            "attack": 45.740594,
+            "range": 113.413545,
+            "speed": 0.9347117083333334
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "kills": 3,
+        "allies": 1,
+        "enemies": 21,
+        "merges": 2,
+        "hp": [
+          {
+            "id": 28,
+            "hp": 743.58,
+            "diameter": 136.139847,
+            "attack": 112.739745,
+            "range": 717.139675,
+            "speed": 4
+          }
+        ]
+      },
+      {
+        "tick": 900,
+        "kills": 5,
+        "allies": 0,
+        "enemies": 7,
+        "merges": 14,
+        "hp": []
+      }
+    ],
+    "legalCorner": true,
+    "charges": 5,
+    "hand": 6
+  },
+  {
+    "seed": 77,
+    "policy": "tight",
+    "actions": [
+      {
+        "tick": 0,
+        "cardId": 0,
+        "x": 835.707563,
+        "y": 618.33431,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "defense",
+          "ice": "attack",
+          "electric": "speed",
+          "dark": "range"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 1,
+        "x": 835.707563,
+        "y": 694.33431,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "attack",
+          "ice": "defense",
+          "electric": "range",
+          "dark": "speed"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 2,
+        "x": 755.707563,
+        "y": 656.33431,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "range",
+          "ice": "defense",
+          "electric": "speed",
+          "dark": "attack"
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "tick": 40,
+        "kills": 1,
+        "allies": 5,
+        "enemies": 23,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 26,
+            "hp": 55.76,
+            "diameter": 20,
+            "attack": 20.231812,
+            "range": 109.83514,
+            "speed": 1.3494955
+          },
+          {
+            "id": 27,
+            "hp": 28.32,
+            "diameter": 20,
+            "attack": 31.393198,
+            "range": 179.812865,
+            "speed": 0.9613056666666666
+          },
+          {
+            "id": 28,
+            "hp": 105.61,
+            "diameter": 20,
+            "attack": 25.680601,
+            "range": 156.35239,
+            "speed": 1.2759531666666668
+          },
+          {
+            "id": 29,
+            "hp": 122.64,
+            "diameter": 20,
+            "attack": 28.014796,
+            "range": 151.23736,
+            "speed": 1.185034375
+          },
+          {
+            "id": 30,
+            "hp": 161.93,
+            "diameter": 20,
+            "attack": 34.838052,
+            "range": 162.74524,
+            "speed": 1.1395217499999999
+          }
+        ]
+      },
+      {
+        "tick": 100,
+        "kills": 2,
+        "allies": 2,
+        "enemies": 22,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 29,
+            "hp": 26.64,
+            "diameter": 38,
+            "attack": 32.252328,
+            "range": 174.1136,
+            "speed": 1.3642832916666665
+          },
+          {
+            "id": 30,
+            "hp": 191.37,
+            "diameter": 38,
+            "attack": 40.107673,
+            "range": 187.362165,
+            "speed": 1.311886375
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "kills": 3,
+        "allies": 0,
+        "enemies": 21,
+        "merges": 0,
+        "hp": []
+      },
+      {
+        "tick": 900,
+        "kills": 3,
+        "allies": 0,
+        "enemies": 9,
+        "merges": 12,
+        "hp": []
+      }
+    ],
+    "legalCorner": true,
+    "charges": 5,
+    "hand": 6
+  },
+  {
+    "seed": 77,
+    "policy": "spread",
+    "actions": [
+      {
+        "tick": 0,
+        "cardId": 0,
+        "x": 755.707563,
+        "y": 656.33431,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "defense",
+          "ice": "attack",
+          "electric": "speed",
+          "dark": "range"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 1,
+        "x": 2799.909832,
+        "y": 657.468896,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "attack",
+          "ice": "defense",
+          "electric": "range",
+          "dark": "speed"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 2,
+        "x": 803.803882,
+        "y": 2200.880335,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "range",
+          "ice": "defense",
+          "electric": "speed",
+          "dark": "attack"
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "tick": 40,
+        "kills": 1,
+        "allies": 5,
+        "enemies": 23,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 26,
+            "hp": 55.76,
+            "diameter": 20,
+            "attack": 20.231812,
+            "range": 109.83514,
+            "speed": 1.3494955
+          },
+          {
+            "id": 27,
+            "hp": 28.32,
+            "diameter": 20,
+            "attack": 31.393198,
+            "range": 179.812865,
+            "speed": 0.9613056666666666
+          },
+          {
+            "id": 28,
+            "hp": 95.41,
+            "diameter": 20,
+            "attack": 25.680601,
+            "range": 156.35239,
+            "speed": 1.2759531666666668
+          },
+          {
+            "id": 29,
+            "hp": 122.64,
+            "diameter": 20,
+            "attack": 28.014796,
+            "range": 151.23736,
+            "speed": 1.185034375
+          },
+          {
+            "id": 30,
+            "hp": 161.93,
+            "diameter": 20,
+            "attack": 34.838052,
+            "range": 162.74524,
+            "speed": 1.1395217499999999
+          }
+        ]
+      },
+      {
+        "tick": 100,
+        "kills": 2,
+        "allies": 2,
+        "enemies": 22,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 29,
+            "hp": 100.24,
+            "diameter": 38,
+            "attack": 32.252328,
+            "range": 174.1136,
+            "speed": 1.3642832916666665
+          },
+          {
+            "id": 30,
+            "hp": 191.37,
+            "diameter": 38,
+            "attack": 40.107673,
+            "range": 187.362165,
+            "speed": 1.311886375
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "kills": 3,
+        "allies": 0,
+        "enemies": 21,
+        "merges": 0,
+        "hp": []
+      },
+      {
+        "tick": 900,
+        "kills": 3,
+        "allies": 0,
+        "enemies": 7,
+        "merges": 14,
+        "hp": []
+      }
+    ],
+    "legalCorner": true,
+    "charges": 5,
+    "hand": 6
+  },
+  {
+    "seed": 77,
+    "policy": "distant",
+    "actions": [
+      {
+        "tick": 0,
+        "cardId": 0,
+        "x": 2048,
+        "y": 1536,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "defense",
+          "ice": "attack",
+          "electric": "speed",
+          "dark": "range"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 1,
+        "x": 2100,
+        "y": 1536,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "attack",
+          "ice": "defense",
+          "electric": "range",
+          "dark": "speed"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 2,
+        "x": 2048,
+        "y": 1588,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "range",
+          "ice": "defense",
+          "electric": "speed",
+          "dark": "attack"
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "tick": 40,
+        "kills": 0,
+        "allies": 5,
+        "enemies": 24,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 26,
+            "hp": 55.76,
+            "diameter": 20,
+            "attack": 20.231812,
+            "range": 109.83514,
+            "speed": 1.3494955
+          },
+          {
+            "id": 27,
+            "hp": 28.32,
+            "diameter": 20,
+            "attack": 31.393198,
+            "range": 179.812865,
+            "speed": 0.9613056666666666
+          },
+          {
+            "id": 28,
+            "hp": 119.76,
+            "diameter": 20,
+            "attack": 25.680601,
+            "range": 156.35239,
+            "speed": 1.2759531666666668
+          },
+          {
+            "id": 29,
+            "hp": 122.64,
+            "diameter": 20,
+            "attack": 28.014796,
+            "range": 151.23736,
+            "speed": 1.185034375
+          },
+          {
+            "id": 30,
+            "hp": 161.93,
+            "diameter": 20,
+            "attack": 34.838052,
+            "range": 162.74524,
+            "speed": 1.1395217499999999
+          }
+        ]
+      },
+      {
+        "tick": 100,
+        "kills": 0,
+        "allies": 3,
+        "enemies": 24,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 28,
+            "hp": 141.53,
+            "diameter": 38,
+            "attack": 29.565062,
+            "range": 180.002335,
+            "speed": 1.4689544583333334
+          },
+          {
+            "id": 29,
+            "hp": 144.93,
+            "diameter": 38,
+            "attack": 32.252328,
+            "range": 174.1136,
+            "speed": 1.3642832916666665
+          },
+          {
+            "id": 30,
+            "hp": 191.37,
+            "diameter": 38,
+            "attack": 40.107673,
+            "range": 187.362165,
+            "speed": 1.311886375
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "kills": 1,
+        "allies": 1,
+        "enemies": 23,
+        "merges": 2,
+        "hp": [
+          {
+            "id": 28,
+            "hp": 637.08,
+            "diameter": 136.139847,
+            "attack": 110.474543,
+            "range": 710.687975,
+            "speed": 4
+          }
+        ]
+      },
+      {
+        "tick": 900,
+        "kills": 1,
+        "allies": 0,
+        "enemies": 9,
+        "merges": 16,
+        "hp": []
+      }
+    ],
+    "legalCorner": true,
+    "charges": 5,
+    "hand": 6
+  },
+  {
+    "seed": 20261011,
+    "policy": "tight",
+    "actions": [
+      {
+        "tick": 0,
+        "cardId": 0,
+        "x": 823.298867,
+        "y": 612.514347,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "range",
+          "ice": "defense",
+          "electric": "attack",
+          "dark": "speed"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 1,
+        "x": 823.298867,
+        "y": 688.514347,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "attack",
+          "ice": "speed",
+          "electric": "range",
+          "dark": "defense"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 2,
+        "x": 743.298867,
+        "y": 650.514347,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "defense",
+          "ice": "range",
+          "electric": "speed",
+          "dark": "attack"
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "tick": 40,
+        "kills": 1,
+        "allies": 6,
+        "enemies": 23,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 25,
+            "hp": 3.17,
+            "diameter": 20,
+            "attack": 38.10672,
+            "range": 140.395885,
+            "speed": 1.2111172083333333
+          },
+          {
+            "id": 26,
+            "hp": 62.99,
+            "diameter": 20,
+            "attack": 21.075167,
+            "range": 147.01592,
+            "speed": 1.113065625
+          },
+          {
+            "id": 27,
+            "hp": 29.3,
+            "diameter": 20,
+            "attack": 25.010332,
+            "range": 145.037585,
+            "speed": 0.726918
+          },
+          {
+            "id": 28,
+            "hp": 137,
+            "diameter": 20,
+            "attack": 30.191137,
+            "range": 124.35256,
+            "speed": 1.2988329166666668
+          },
+          {
+            "id": 29,
+            "hp": 157.05,
+            "diameter": 20,
+            "attack": 30.570699,
+            "range": 177.330475,
+            "speed": 1.0173591666666668
+          },
+          {
+            "id": 30,
+            "hp": 159.04,
+            "diameter": 20,
+            "attack": 29.800939,
+            "range": 185.25566,
+            "speed": 0.91491175
+          }
+        ]
+      },
+      {
+        "tick": 100,
+        "kills": 2,
+        "allies": 2,
+        "enemies": 22,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 29,
+            "hp": 168.03,
+            "diameter": 38,
+            "attack": 35.194838,
+            "range": 204.15357,
+            "speed": 1.1712454166666666
+          },
+          {
+            "id": 30,
+            "hp": 187.96,
+            "diameter": 38,
+            "attack": 34.308644,
+            "range": 213.277525,
+            "speed": 1.0533017916666667
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "kills": 4,
+        "allies": 1,
+        "enemies": 20,
+        "merges": 1,
+        "hp": [
+          {
+            "id": 29,
+            "hp": 453.47,
+            "diameter": 134.740743,
+            "attack": 100.158299,
+            "range": 521.48596,
+            "speed": 4
+          }
+        ]
+      },
+      {
+        "tick": 900,
+        "kills": 4,
+        "allies": 0,
+        "enemies": 8,
+        "merges": 13,
+        "hp": []
+      }
+    ],
+    "legalCorner": true,
+    "charges": 5,
+    "hand": 6
+  },
+  {
+    "seed": 20261011,
+    "policy": "spread",
+    "actions": [
+      {
+        "tick": 0,
+        "cardId": 0,
+        "x": 743.298867,
+        "y": 650.514347,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "range",
+          "ice": "defense",
+          "electric": "attack",
+          "dark": "speed"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 1,
+        "x": 2807.111749,
+        "y": 647.201089,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "attack",
+          "ice": "speed",
+          "electric": "range",
+          "dark": "defense"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 2,
+        "x": 809.806257,
+        "y": 2203.465709,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "defense",
+          "ice": "range",
+          "electric": "speed",
+          "dark": "attack"
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "tick": 40,
+        "kills": 0,
+        "allies": 5,
+        "enemies": 24,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 26,
+            "hp": 62.99,
+            "diameter": 20,
+            "attack": 21.075167,
+            "range": 147.01592,
+            "speed": 1.113065625
+          },
+          {
+            "id": 27,
+            "hp": 29.3,
+            "diameter": 20,
+            "attack": 25.010332,
+            "range": 145.037585,
+            "speed": 0.726918
+          },
+          {
+            "id": 28,
+            "hp": 107.71,
+            "diameter": 20,
+            "attack": 30.191137,
+            "range": 124.35256,
+            "speed": 1.2988329166666668
+          },
+          {
+            "id": 29,
+            "hp": 157.05,
+            "diameter": 20,
+            "attack": 30.570699,
+            "range": 177.330475,
+            "speed": 1.0173591666666668
+          },
+          {
+            "id": 30,
+            "hp": 159.04,
+            "diameter": 20,
+            "attack": 29.800939,
+            "range": 185.25566,
+            "speed": 0.91491175
+          }
+        ]
+      },
+      {
+        "tick": 100,
+        "kills": 3,
+        "allies": 2,
+        "enemies": 21,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 29,
+            "hp": 65.73,
+            "diameter": 38,
+            "attack": 35.194838,
+            "range": 204.15357,
+            "speed": 1.1712454166666666
+          },
+          {
+            "id": 30,
+            "hp": 99.29,
+            "diameter": 38,
+            "attack": 34.308644,
+            "range": 213.277525,
+            "speed": 1.0533017916666667
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "kills": 3,
+        "allies": 0,
+        "enemies": 21,
+        "merges": 0,
+        "hp": []
+      },
+      {
+        "tick": 900,
+        "kills": 3,
+        "allies": 0,
+        "enemies": 7,
+        "merges": 14,
+        "hp": []
+      }
+    ],
+    "legalCorner": true,
+    "charges": 5,
+    "hand": 6
+  },
+  {
+    "seed": 20261011,
+    "policy": "distant",
+    "actions": [
+      {
+        "tick": 0,
+        "cardId": 0,
+        "x": 2048,
+        "y": 1536,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "range",
+          "ice": "defense",
+          "electric": "attack",
+          "dark": "speed"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 1,
+        "x": 2100,
+        "y": 1536,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "attack",
+          "ice": "speed",
+          "electric": "range",
+          "dark": "defense"
+        }
+      },
+      {
+        "tick": 0,
+        "cardId": 2,
+        "x": 2048,
+        "y": 1588,
+        "accepted": true,
+        "reason": "配置できます。",
+        "binding": {
+          "fire": "defense",
+          "ice": "range",
+          "electric": "speed",
+          "dark": "attack"
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "tick": 40,
+        "kills": 0,
+        "allies": 5,
+        "enemies": 24,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 26,
+            "hp": 62.99,
+            "diameter": 20,
+            "attack": 21.075167,
+            "range": 147.01592,
+            "speed": 1.113065625
+          },
+          {
+            "id": 27,
+            "hp": 29.3,
+            "diameter": 20,
+            "attack": 25.010332,
+            "range": 145.037585,
+            "speed": 0.726918
+          },
+          {
+            "id": 28,
+            "hp": 137,
+            "diameter": 20,
+            "attack": 30.191137,
+            "range": 124.35256,
+            "speed": 1.2988329166666668
+          },
+          {
+            "id": 29,
+            "hp": 157.05,
+            "diameter": 20,
+            "attack": 30.570699,
+            "range": 177.330475,
+            "speed": 1.0173591666666668
+          },
+          {
+            "id": 30,
+            "hp": 159.04,
+            "diameter": 20,
+            "attack": 29.800939,
+            "range": 185.25566,
+            "speed": 0.91491175
+          }
+        ]
+      },
+      {
+        "tick": 100,
+        "kills": 0,
+        "allies": 3,
+        "enemies": 24,
+        "merges": 0,
+        "hp": [
+          {
+            "id": 28,
+            "hp": 161.91,
+            "diameter": 38,
+            "attack": 34.757863,
+            "range": 143.16219,
+            "speed": 1.4952950833333334
+          },
+          {
+            "id": 29,
+            "hp": 185.61,
+            "diameter": 38,
+            "attack": 35.194838,
+            "range": 204.15357,
+            "speed": 1.1712454166666666
+          },
+          {
+            "id": 30,
+            "hp": 187.96,
+            "diameter": 38,
+            "attack": 34.308644,
+            "range": 213.277525,
+            "speed": 1.0533017916666667
+          }
+        ]
+      },
+      {
+        "tick": 300,
+        "kills": 1,
+        "allies": 1,
+        "enemies": 23,
+        "merges": 2,
+        "hp": [
+          {
+            "id": 28,
+            "hp": 716.32,
+            "diameter": 136.139847,
+            "attack": 132.570606,
+            "range": 601.250465,
+            "speed": 4
+          }
+        ]
+      },
+      {
+        "tick": 900,
+        "kills": 2,
+        "allies": 0,
+        "enemies": 9,
+        "merges": 15,
+        "hp": []
+      }
+    ],
+    "legalCorner": true,
+    "charges": 5,
+    "hand": 6
+  }
+]

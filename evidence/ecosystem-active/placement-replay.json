@@ -1,0 +1,79 @@
+{
+  "realTimeSoak": false,
+  "coordinateReplay": true,
+  "rows": [
+    {
+      "seed": 11,
+      "mode": "one-boss",
+      "ticks": 6000,
+      "peakUnits": 30,
+      "maxBytes": 27613,
+      "placementSaveChecks": 88,
+      "finalMatch": true,
+      "lastShotRecords": 2,
+      "liveUnits": 5,
+      "events": 8
+    },
+    {
+      "seed": 11,
+      "mode": "three-fronts",
+      "ticks": 6000,
+      "peakUnits": 30,
+      "maxBytes": 27615,
+      "placementSaveChecks": 92,
+      "finalMatch": true,
+      "lastShotRecords": 4,
+      "liveUnits": 5,
+      "events": 8
+    },
+    {
+      "seed": 77,
+      "mode": "one-boss",
+      "ticks": 6000,
+      "peakUnits": 30,
+      "maxBytes": 27613,
+      "placementSaveChecks": 82,
+      "finalMatch": true,
+      "lastShotRecords": 4,
+      "liveUnits": 8,
+      "events": 8
+    },
+    {
+      "seed": 77,
+      "mode": "three-fronts",
+      "ticks": 6000,
+      "peakUnits": 30,
+      "maxBytes": 27615,
+      "placementSaveChecks": 90,
+      "finalMatch": true,
+      "lastShotRecords": 3,
+      "liveUnits": 6,
+      "events": 8
+    },
+    {
+      "seed": 20261011,
+      "mode": "one-boss",
+      "ticks": 6000,
+      "peakUnits": 30,
+      "maxBytes": 27811,
+      "placementSaveChecks": 82,
+      "finalMatch": true,
+      "lastShotRecords": 4,
+      "liveUnits": 8,
+      "events": 8
+    },
+    {
+      "seed": 20261011,
+      "mode": "three-fronts",
+      "ticks": 6000,
+      "peakUnits": 30,
+      "maxBytes": 27814,
+      "placementSaveChecks": 91,
+      "finalMatch": true,
+      "lastShotRecords": 4,
+      "liveUnits": 5,
+      "events": 8
+    }
+  ],
+  "cpuMs": 7905
+}

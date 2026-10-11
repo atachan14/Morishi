@@ -38,3 +38,5 @@ npm run build
 吸収集中・分散・前後配置の原因と比較は [docs/ecosystem-roles.md](docs/ecosystem-roles.md)。観察Paneの「新しい庭の比較設定」から全能力25%継承／全能力25%＋存在感同値なら近い相手を選べます。標準は従来の100%継承のままです。
 
 存在感の標的順・前衛の具体例・代価は [docs/ecosystem-targets.md](docs/ecosystem-targets.md)。標準と旧runはID同値を維持。新案は同値だけ距離→IDで決め、射程外は候補に含めません。
+
+朝は [短い比較試遊](docs/ecosystem-morning-play.md) から。自動保存・吸収後の詳細・有限な弾表示の修正と、ゲーム時間／実時間を分けた確認は [長期安定性](docs/ecosystem-long-stability.md)。135テスト、PC/スマホ幅の操作検証を通過。

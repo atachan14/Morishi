@@ -77,7 +77,7 @@ function refresh(){
   }
 }
 function message(text:string){$('message').textContent=text;}
-function reset(seed:number){skip.cancel();if(!Number.isInteger(seed)||seed<0||seed>4294967295){message('seedは0〜4294967295の整数を指定してください。');return;}state=createState(seed);camera=new BoardCamera();introActive=true;introElapsed=0;introTarget=introView(state);clock=new Clock();actions=[];savedTick=lastAttemptTick=-1;persist(true);taps.cancel();foreground.interrupt(clock);hovered=null;selected=null;($('speed') as HTMLSelectElement).value='1';($('seed') as HTMLInputElement).value=String(seed);message('存在感が低い場所の自由な位置に配置して、時間を進めましょう。');refresh();}
+function reset(seed:number){skip.cancel();if(!Number.isInteger(seed)||seed<0||seed>4294967295){message('seedは0〜4294967295の整数を指定してください。');return;}if(store.protectedSave&&loaded.kind==='invalid'&&!window.confirm('旧保存を退避して、新しいルールのrunを始めますか？'))return;state=createState(seed);camera=new BoardCamera();introActive=true;introElapsed=0;introTarget=introView(state);clock=new Clock();actions=[];savedTick=lastAttemptTick=-1;persist(true);taps.cancel();foreground.interrupt(clock);hovered=null;selected=null;($('speed') as HTMLSelectElement).value='1';($('seed') as HTMLInputElement).value=String(seed);message('存在感が低い場所の自由な位置に配置して、時間を進めましょう。');refresh();}
 $('restart').onclick=()=>reset((state.seed+1)>>>0);
 $('same').onclick=()=>reset(Number(($('seed') as HTMLInputElement).value));
 $('play').onclick=()=>{if(skip.active){skip.cancel();clock.suspend();persist(false,true);refresh();return;}if(introActive||state.outcome!=='playing'||document.hidden)return;if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(!state.started){message('最初の植物を配置してから時間を進められます。');return;}clock.paused=!clock.paused;refresh();};
@@ -85,7 +85,7 @@ $('skip').onclick=()=>{if(skip.active){skip.cancel();persist(false,true);refresh
 $('tick').onclick=()=>{skip.cancel();if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(clock.paused)step(state);persist();refresh();};
 $('finish').onclick=()=>{skip.cancel();if(finishRun(state)){actions.push({tick:state.tick,kind:'finish'});lastAttemptTick=-1;persist();clock.suspend();message('ここまで広げた領域を残して、このrunを終えました。');refresh();}};
 $('speed').onchange=()=>{clock.speed=Number(($('speed') as HTMLSelectElement).value);lastAttemptTick=-1;persist();};
-document.querySelectorAll<HTMLButtonElement>('[data-pane]').forEach(b=>b.onclick=()=>{taps.cancel();document.querySelector('main')!.setAttribute('data-pane',b.dataset.pane!);document.querySelectorAll('[data-pane].active').forEach(t=>t.classList.remove('active'));b.classList.add('active');hovered=null;});
+document.querySelectorAll<HTMLButtonElement>('[data-pane]').forEach(b=>b.onclick=()=>{if(!introActive)persist(false,true);taps.cancel();document.querySelector('main')!.setAttribute('data-pane',b.dataset.pane!);document.querySelectorAll('[data-pane].active').forEach(t=>t.classList.remove('active'));b.classList.add('active');hovered=null;});
 function interrupt(){skip.cancel();foreground.interrupt(clock);persist(false,true);taps.cancel();hovered=null;if(state.started&&state.outcome==='playing')message('画面を離れたため停止しました。戻ったら時間を進めるボタンで再開できます。');refresh();}
 document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt();});
 window.addEventListener('blur',interrupt);
@@ -98,10 +98,10 @@ class Board extends Phaser.Scene {
     const canvas=this.game.canvas;
     let drag:{id:number;startX:number;startY:number;lastX:number;lastY:number;panning:boolean}|null=null;
     const point=(e:PointerEvent)=>{const rect=canvas.getBoundingClientRect();if(rect.width<=0||rect.height<=0)return null;return {position:camera.point(e.clientX,e.clientY,rect),key:`${rect.left},${rect.top},${rect.width},${rect.height},${camera.view.x},${camera.view.y},${camera.view.zoom}`};};
-    const down=(e:PointerEvent)=>{if(introActive||document.hidden)return;const p=point(e);if(!p)return;hovered=p.position;taps.down(e.pointerId,e.clientX,e.clientY,e.timeStamp,p.key,e.isPrimary,e.button);drag=e.isPrimary&&e.button===0?{id:e.pointerId,startX:e.clientX,startY:e.clientY,lastX:e.clientX,lastY:e.clientY,panning:false}:null;};
-    const outsideDown=(e:PointerEvent)=>{if(e.target!==canvas)taps.cancel();};
+    const down=(e:PointerEvent)=>{if(introActive||document.hidden)return;if(drag?.panning)persist(false,true);const p=point(e);if(!p)return;hovered=p.position;taps.down(e.pointerId,e.clientX,e.clientY,e.timeStamp,p.key,e.isPrimary,e.button);drag=e.isPrimary&&e.button===0?{id:e.pointerId,startX:e.clientX,startY:e.clientY,lastX:e.clientX,lastY:e.clientY,panning:false}:null;};
+    const outsideDown=(e:PointerEvent)=>{if(e.target!==canvas){if(drag?.panning)persist(false,true);drag=null;taps.cancel();}};
     const move=(e:PointerEvent)=>{if(e.pointerType==='mouse'&&e.buttons!==0&&e.buttons!==1)taps.cancel();taps.move(e.pointerId,e.clientX,e.clientY);
-      if(drag&&!taps.tracking(drag.id))drag=null;
+      if(drag&&!taps.tracking(drag.id)){if(drag.panning)persist(false,true);drag=null;}
       if(drag?.id===e.pointerId&&(drag.panning||Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY)>8)){
         drag.panning=true;const rect=canvas.getBoundingClientRect();camera.pan(e.clientX-drag.lastX,e.clientY-drag.lastY,viewport(rect.width,rect.height).scale);drag.lastX=e.clientX;drag.lastY=e.clientY;hovered=null;return;
       }
@@ -193,7 +193,7 @@ const game=new Phaser.Game({type:Phaser.AUTO,parent:'board',backgroundColor:'#10
 const cameraControls=document.createElement('div');cameraControls.className='camera-controls';
 for(const [label,action] of [['−',()=>camera.zoomAt(.8,camera.view)],['＋',()=>camera.zoomAt(1.25,camera.view)],['全体',()=>camera.set({x:6,y:4.5,zoom:1})]] as const){const button=document.createElement('button');button.textContent=label;button.setAttribute('aria-label',label==='全体'?'盤面全体を表示':label==='＋'?'拡大':'縮小');button.onclick=()=>{if(introActive)return;taps.cancel();hovered=null;action();persist(false,true);};cameraControls.append(button);}
 $('board').append(cameraControls);
-new ResizeObserver(entries=>{taps.cancel();const size=canvasSize(entries[0].contentRect.width,entries[0].contentRect.height);if(size){game.scale.resize(size.width,size.height);hovered=null;}}).observe($('board'));
+new ResizeObserver(entries=>{if(!introActive)persist(false,true);taps.cancel();const size=canvasSize(entries[0].contentRect.width,entries[0].contentRect.height);if(size){game.scale.resize(size.width,size.height);hovered=null;}}).observe($('board'));
 const saveStatus=document.createElement('p');saveStatus.id='save-status';saveStatus.className=saveFailed?'hint save-error':'hint';saveStatus.textContent=saveNotice;saveStatus.setAttribute('role',saveFailed?'alert':'status');document.querySelector('header')!.after(saveStatus);
 ($('speed') as HTMLSelectElement).value=String(clock.speed);($('seed') as HTMLInputElement).value=String(state.seed);
 refresh();message(loaded.kind==='loaded'?'保存したrunを復元しました。時間を進めるボタンで再開できます。':'存在感が低い場所の自由な位置に配置して、時間を進めましょう。');

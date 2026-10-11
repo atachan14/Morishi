@@ -33,3 +33,5 @@ snapshot-3とrules識別をchecksum対象に追加。旧snapshot-2／runtime-1�
 384run探索：合法配置5150、不正拒否160468、state/保存/中断checkpoint11465、失敗0。240秒時点11勝／3敗／370進行中。旧近接優先policyは参照seedで敗北するようになり、「そのpolicyなら必勝」という旧テスト前提を撤去し、合法入力から終局することと終局保存を検証。勝敗バランスは未評価。
 
 wheel zoom・drag pan・全体→合法点への開始演出・前camera保存は次の実装区切り。ここでは未実装。証拠は `docs/evidence/presence/`。
+
+同日camera工程完了: [camera-verification.md](camera-verification.md)。snapshot-4でview保存、同rulesのsnapshot-3はstateを維持して全体viewを補完。64テスト・4幅の拡大配置／pan／復元検証通過。

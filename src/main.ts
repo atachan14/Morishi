@@ -3,18 +3,21 @@ import {createState,place,validatePlacement,step,Clock,WIDTH,HEIGHT,growth,effec
 import './style.css';
 import {TapGesture,ForegroundGate,canvasSize,EventSkip} from './runtime';
 import {RunStore,capture,type Action} from './session';
+import {BoardCamera,introView,type View} from './camera';
+let camera=new BoardCamera(),introActive=false,introElapsed=0,introTarget:View={x:6,y:4.5,zoom:1};
 let state=createState(), clock=new Clock(), selected:number|null=null, hovered:{x:number;y:number}|null=null;
 const taps=new TapGesture(),foreground=new ForegroundGate(),skip=new EventSkip();
 const store=new RunStore({getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)});
 let actions:Action[]=[],savedTick=-1,lastAttemptTick=-1,saveFailed=false,saveNotice='端末に自動保存';
 const loaded=store.read();
-if(loaded.kind==='loaded'){state=loaded.state;actions=loaded.save.actions;clock.speed=loaded.save.speed;savedTick=state.tick;saveNotice='保存runを停止状態で復元';}
+if(loaded.kind==='loaded'){state=loaded.state;actions=loaded.save.actions;clock.speed=loaded.save.speed;camera=new BoardCamera(loaded.save.view);savedTick=state.tick;saveNotice='保存runを停止状態で復元';}
 else if(loaded.kind==='invalid')saveNotice='旧ルールまたは不明な保存です。元データは保持しています。新seedまたは入力seedで始めると、元データを退避して保存を再開します。';
 else if(loaded.kind==='unavailable')saveNotice='この環境では端末保存を利用できません。';
 if(loaded.kind==='invalid'||loaded.kind==='unavailable')saveFailed=true;
+introActive=loaded.kind==='empty';introTarget=introView(state);
 function persist(replace=false,force=false){
   if(!replace&&!force&&lastAttemptTick===state.tick)return;
-  const ok=store.write(capture(state,clock.speed,actions),replace);lastAttemptTick=state.tick;saveFailed=!ok;
+  const ok=store.write(capture(state,clock.speed,actions,camera.view),replace);lastAttemptTick=state.tick;saveFailed=!ok;
   if(ok){savedTick=state.tick;saveNotice='● 保存済み · 再開は停止状態';}
   else {clock.suspend();taps.cancel();hovered=null;saveNotice=store.protectedSave?'保存を利用できないため停止しました。以前のデータは保持しています。新seed/入力seedで始めると退避して保存を試せます。':'保存に失敗したため停止しました。現在の盤面はこの画面に残っています。再読込すると最後の保存へ戻ります。時間を進めるボタンで保存を再試行します。';}
   const label=document.getElementById('save-status');if(label){label.textContent=saveNotice;label.classList.toggle('save-error',saveFailed);label.setAttribute('role',saveFailed?'alert':'status');}
@@ -41,6 +44,9 @@ function refreshEnemyList(){
 }
 function statsHtml(s:Stats){return `<div class="stats"><span>攻撃 <b>${s.power.toFixed(1)}</b></span><span>射程 <b>${s.range.toFixed(1)}</b></span><span>存在感距離 <b>${s.presence.toFixed(1)}</b></span><span>生命 <b>${s.vitality}</b></span></div>`;}
 function refresh(){
+  document.querySelector<HTMLElement>('#app')!.dataset.ready=String(!introActive);
+  ($('speed') as HTMLSelectElement).disabled=introActive;
+  document.querySelectorAll<HTMLButtonElement>('.camera-controls button').forEach(b=>b.disabled=introActive);
   $('card').innerHTML=state.cards[0]?`<div class="plant-card"><strong>${labels[dominant(state.cards[0])]}が得意な芽</strong>${statsHtml(state.cards[0])}</div>`:'今回の植物はすべて配置しました。';
   $('supply').textContent=`配置力 ${state.charges} / 5 · 残りの芽 ${state.cards.length}`;
   ($('refill') as HTMLProgressElement).value=state.charges>=5?REFILL_TICKS:state.tick%REFILL_TICKS;
@@ -52,10 +58,10 @@ function refresh(){
   const decision=decisionHint(state);
   $('activity').textContent=decision.kind!=='other'?`${clock.paused?'停止中 · ':''}${decision.text}`:clock.paused&&state.started&&state.outcome==='playing'?'停止中 · 位置を動かして射程と広がりを確認':hints[runActivity(state)];
   $('skip').textContent=skip.active?'送り停止':'変化まで';
-  ($('skip') as HTMLButtonElement).disabled=!state.started||state.outcome!=='playing';
+  ($('skip') as HTMLButtonElement).disabled=introActive||!state.started||state.outcome!=='playing';
   $('play').textContent=skip.active?'送り停止':clock.paused?'▶ 時間を進める':'Ⅱ 停止して考える';
-  ($('play') as HTMLButtonElement).disabled=state.outcome!=='playing';
-  ($('tick') as HTMLButtonElement).disabled=state.outcome!=='playing'||!clock.paused||!state.started;
+  ($('play') as HTMLButtonElement).disabled=introActive||state.outcome!=='playing';
+  ($('tick') as HTMLButtonElement).disabled=introActive||state.outcome!=='playing'||!clock.paused||!state.started;
   ($('finish') as HTMLButtonElement).disabled=state.outcome!=='playing'||!state.started;
   const u=state.units.find(u=>u.id===selected);
   selectedPanel.hidden=!u;
@@ -71,11 +77,11 @@ function refresh(){
   }
 }
 function message(text:string){$('message').textContent=text;}
-function reset(seed:number){skip.cancel();if(!Number.isInteger(seed)||seed<0||seed>4294967295){message('seedは0〜4294967295の整数を指定してください。');return;}state=createState(seed);clock=new Clock();actions=[];savedTick=lastAttemptTick=-1;persist(true);taps.cancel();foreground.interrupt(clock);hovered=null;selected=null;($('speed') as HTMLSelectElement).value='1';($('seed') as HTMLInputElement).value=String(seed);message('存在感が低い場所の自由な位置に配置して、時間を進めましょう。');refresh();}
+function reset(seed:number){skip.cancel();if(!Number.isInteger(seed)||seed<0||seed>4294967295){message('seedは0〜4294967295の整数を指定してください。');return;}state=createState(seed);camera=new BoardCamera();introActive=true;introElapsed=0;introTarget=introView(state);clock=new Clock();actions=[];savedTick=lastAttemptTick=-1;persist(true);taps.cancel();foreground.interrupt(clock);hovered=null;selected=null;($('speed') as HTMLSelectElement).value='1';($('seed') as HTMLInputElement).value=String(seed);message('存在感が低い場所の自由な位置に配置して、時間を進めましょう。');refresh();}
 $('restart').onclick=()=>reset((state.seed+1)>>>0);
 $('same').onclick=()=>reset(Number(($('seed') as HTMLInputElement).value));
-$('play').onclick=()=>{if(skip.active){skip.cancel();clock.suspend();persist(false,true);refresh();return;}if(state.outcome!=='playing'||document.hidden)return;if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(!state.started){message('最初の植物を配置してから時間を進められます。');return;}clock.paused=!clock.paused;refresh();};
-$('skip').onclick=()=>{if(skip.active){skip.cancel();persist(false,true);refresh();return;}if(document.hidden)return;if(saveFailed){persist(false,true);if(saveFailed)return;}clock.suspend();skip.start(state);refresh();};
+$('play').onclick=()=>{if(skip.active){skip.cancel();clock.suspend();persist(false,true);refresh();return;}if(introActive||state.outcome!=='playing'||document.hidden)return;if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(!state.started){message('最初の植物を配置してから時間を進められます。');return;}clock.paused=!clock.paused;refresh();};
+$('skip').onclick=()=>{if(skip.active){skip.cancel();persist(false,true);refresh();return;}if(introActive||document.hidden)return;if(saveFailed){persist(false,true);if(saveFailed)return;}clock.suspend();skip.start(state);refresh();};
 $('tick').onclick=()=>{skip.cancel();if(saveFailed){persist(false,true);if(saveFailed){refresh();return;}}if(clock.paused)step(state);persist();refresh();};
 $('finish').onclick=()=>{skip.cancel();if(finishRun(state)){actions.push({tick:state.tick,kind:'finish'});lastAttemptTick=-1;persist();clock.suspend();message('ここまで広げた領域を残して、このrunを終えました。');refresh();}};
 $('speed').onchange=()=>{clock.speed=Number(($('speed') as HTMLSelectElement).value);lastAttemptTick=-1;persist();};
@@ -90,12 +96,19 @@ class Board extends Phaser.Scene {
   create(){
     this.graphics=this.add.graphics();
     const canvas=this.game.canvas;
-    const point=(e:PointerEvent)=>{const rect=canvas.getBoundingClientRect();if(rect.width<=0||rect.height<=0)return null;return {position:clientToWorld(e.clientX,e.clientY,rect),key:`${rect.left},${rect.top},${rect.width},${rect.height}`};};
-    const down=(e:PointerEvent)=>{if(document.hidden)return;const p=point(e);if(!p)return;hovered=p.position;taps.down(e.pointerId,e.clientX,e.clientY,e.timeStamp,p.key,e.isPrimary,e.button);};
+    let drag:{id:number;startX:number;startY:number;lastX:number;lastY:number;panning:boolean}|null=null;
+    const point=(e:PointerEvent)=>{const rect=canvas.getBoundingClientRect();if(rect.width<=0||rect.height<=0)return null;return {position:camera.point(e.clientX,e.clientY,rect),key:`${rect.left},${rect.top},${rect.width},${rect.height},${camera.view.x},${camera.view.y},${camera.view.zoom}`};};
+    const down=(e:PointerEvent)=>{if(introActive||document.hidden)return;const p=point(e);if(!p)return;hovered=p.position;taps.down(e.pointerId,e.clientX,e.clientY,e.timeStamp,p.key,e.isPrimary,e.button);drag=e.isPrimary&&e.button===0?{id:e.pointerId,startX:e.clientX,startY:e.clientY,lastX:e.clientX,lastY:e.clientY,panning:false}:null;};
     const outsideDown=(e:PointerEvent)=>{if(e.target!==canvas)taps.cancel();};
-    const move=(e:PointerEvent)=>{if(e.pointerType==='mouse'&&e.buttons!==0&&e.buttons!==1)taps.cancel();taps.move(e.pointerId,e.clientX,e.clientY);const pos=e.target===canvas?point(e)?.position??null:null;hovered=pos&&state.units.some(u=>Math.hypot(u.x-pos.x,u.y-pos.y)<=footprint(u))?null:pos;};
-    const cancel=()=>{taps.cancel();hovered=null;};
+    const move=(e:PointerEvent)=>{if(e.pointerType==='mouse'&&e.buttons!==0&&e.buttons!==1)taps.cancel();taps.move(e.pointerId,e.clientX,e.clientY);
+      if(drag&&!taps.tracking(drag.id))drag=null;
+      if(drag?.id===e.pointerId&&(drag.panning||Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY)>8)){
+        drag.panning=true;const rect=canvas.getBoundingClientRect();camera.pan(e.clientX-drag.lastX,e.clientY-drag.lastY,viewport(rect.width,rect.height).scale);drag.lastX=e.clientX;drag.lastY=e.clientY;hovered=null;return;
+      }
+      const pos=e.target===canvas?point(e)?.position??null:null;hovered=pos&&state.units.some(u=>Math.hypot(u.x-pos.x,u.y-pos.y)<=footprint(u))?null:pos;};
+    const cancel=()=>{if(drag?.panning)persist(false,true);drag=null;taps.cancel();hovered=null;};
     const up=(e:PointerEvent)=>{
+      if(drag?.id===e.pointerId&&drag.panning){cancel();message('盤面を移動しました。');return;}drag=null;
       if(!taps.tracking(e.pointerId))return;
       const p=point(e);if(!p||document.hidden){cancel();return;}
       const accepted=taps.up(e.pointerId,e.clientX,e.clientY,e.timeStamp,p.key);
@@ -108,14 +121,23 @@ class Board extends Phaser.Scene {
       refresh();
     };
     const leave=()=>{hovered=null;};const context=(e:Event)=>e.preventDefault();
+    const wheel=(e:WheelEvent)=>{e.preventDefault();if(introActive||document.hidden)return;cancel();const rect=canvas.getBoundingClientRect();camera.zoomAt(Math.exp(-Math.max(-500,Math.min(500,e.deltaY))*.002),camera.point(e.clientX,e.clientY,rect));persist(false,true);};
+    canvas.addEventListener('wheel',wheel,{passive:false});
     canvas.addEventListener('pointerdown',down);canvas.addEventListener('pointerleave',leave);canvas.addEventListener('contextmenu',context);
     window.addEventListener('pointerdown',outsideDown);window.addEventListener('pointermove',move);window.addEventListener('pointerup',up);window.addEventListener('pointercancel',cancel);
-    this.events.once(Phaser.Scenes.Events.SHUTDOWN,()=>{cancel();canvas.removeEventListener('pointerdown',down);canvas.removeEventListener('pointerleave',leave);canvas.removeEventListener('contextmenu',context);window.removeEventListener('pointerdown',outsideDown);window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',cancel);});
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN,()=>{cancel();canvas.removeEventListener('wheel',wheel);canvas.removeEventListener('pointerdown',down);canvas.removeEventListener('pointerleave',leave);canvas.removeEventListener('contextmenu',context);window.removeEventListener('pointerdown',outsideDown);window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',cancel);});
   }
-  update(_time:number,delta:number){this.viewTime=_time;if(!document.hidden){if(skip.active){const stopped=skip.chunk(state);if(stopped){persist(false,true);message('時間送り停止 · '+stopped);refresh();}}else clock.advance(state,foreground.frame(delta));}if(state.tick-lastAttemptTick>=10||(state.outcome!=='playing'&&lastAttemptTick!==state.tick))persist();this.elapsed+=delta;if(this.elapsed>150){refresh();this.elapsed=0;}this.draw();}
-  draw(){
+  update(_time:number,delta:number){
+    this.viewTime=_time;const safeDelta=document.hidden?0:foreground.frame(delta);
+    if(!document.hidden){
+      if(introActive){introElapsed+=safeDelta;const t=Math.max(0,Math.min(1,(introElapsed-200)/500)),a=t*t*(3-2*t);camera.set({zoom:1+(introTarget.zoom-1)*a,x:6+(introTarget.x-6)*a,y:4.5+(introTarget.y-4.5)*a});if(t===1){introActive=false;persist(false,true);refresh();}}
+      else if(skip.active){const stopped=skip.chunk(state);if(stopped){persist(false,true);message('時間送り停止 · '+stopped);refresh();}}
+      else clock.advance(state,safeDelta);
+    }
+    if(!introActive&&(state.tick-lastAttemptTick>=10||(state.outcome!=='playing'&&lastAttemptTick!==state.tick)))persist();this.elapsed+=delta;if(this.elapsed>150){refresh();this.elapsed=0;}this.draw();
+  }  draw(){
     if(this.scale.width<=0||this.scale.height<=0)return;
-    const g=this.graphics;g.clear();const layout=viewport(this.scale.width,this.scale.height);this.cell=layout.scale;this.ox=layout.ox;this.oy=layout.oy;
+    const g=this.graphics;g.clear();const layout=camera.layout(this.scale.width,this.scale.height);this.cell=layout.scale;this.ox=layout.ox;this.oy=layout.oy;
     g.fillStyle(0x182a2c);g.fillRect(this.ox,this.oy,WIDTH*this.cell,HEIGHT*this.cell);
     g.fillStyle(0x294e43);g.fillRect(this.ox,this.oy,WIDTH*this.cell,HEIGHT*this.cell);
     for(const t of state.territory)g.fillCircle(this.ox+t.x*this.cell,this.oy+t.y*this.cell,t.radius*this.cell);
@@ -168,6 +190,9 @@ class Board extends Phaser.Scene {
   }
 }
 const game=new Phaser.Game({type:Phaser.AUTO,parent:'board',backgroundColor:'#101f21',scene:Board,scale:{mode:Phaser.Scale.NONE,width:600,height:450},render:{antialias:true},banner:false});
+const cameraControls=document.createElement('div');cameraControls.className='camera-controls';
+for(const [label,action] of [['−',()=>camera.zoomAt(.8,camera.view)],['＋',()=>camera.zoomAt(1.25,camera.view)],['全体',()=>camera.set({x:6,y:4.5,zoom:1})]] as const){const button=document.createElement('button');button.textContent=label;button.setAttribute('aria-label',label==='全体'?'盤面全体を表示':label==='＋'?'拡大':'縮小');button.onclick=()=>{if(introActive)return;taps.cancel();hovered=null;action();persist(false,true);};cameraControls.append(button);}
+$('board').append(cameraControls);
 new ResizeObserver(entries=>{taps.cancel();const size=canvasSize(entries[0].contentRect.width,entries[0].contentRect.height);if(size){game.scale.resize(size.width,size.height);hovered=null;}}).observe($('board'));
 const saveStatus=document.createElement('p');saveStatus.id='save-status';saveStatus.className=saveFailed?'hint save-error':'hint';saveStatus.textContent=saveNotice;saveStatus.setAttribute('role',saveFailed?'alert':'status');document.querySelector('header')!.after(saveStatus);
 ($('speed') as HTMLSelectElement).value=String(clock.speed);($('seed') as HTMLInputElement).value=String(state.seed);

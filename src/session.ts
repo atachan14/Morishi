@@ -1,14 +1,15 @@
 import {createState,WIDTH,HEIGHT,RULES,type State,type Stats} from './sim.js';
+import {BoardCamera,type View} from './camera.js';
 export const SAVE_KEY='morishi.run.v1', BACKUP_KEY='morishi.run.previous.v1';
-const VERSION='2026-10-11-snapshot-3';
+const VERSION='2026-10-11-snapshot-4',PREVIOUS='2026-10-11-snapshot-3';
 const withinLimit=(raw:string)=>raw.length<=64000&&new TextEncoder().encode(raw).length<=64000;
 export type Action={tick:number;kind:'place';x:number;y:number}|{tick:number;kind:'finish'};
-export type RunSave={version:typeof VERSION;rules:typeof RULES;seed:number;tick:number;speed:number;actions:Action[];snapshot:State;checksum:string};
+export type RunSave={version:typeof VERSION;rules:typeof RULES;seed:number;tick:number;speed:number;actions:Action[];snapshot:State;view:View;checksum:string};
 export interface StorageLike {getItem(key:string):string|null;setItem(key:string,value:string):void;}
 // Corruption detection is paired with structural validation, not used as authentication.
 function checksum(value:unknown){const raw=JSON.stringify(value);let hash=2166136261;for(let i=0;i<raw.length;i++)hash=Math.imul(hash^raw.charCodeAt(i),16777619);return (hash>>>0).toString(16);}
-export function capture(state:State,speed:number,actions:Action[]):RunSave {
-  const payload:Omit<RunSave,'checksum'>={version:VERSION,rules:RULES,seed:state.seed,tick:state.tick,speed,actions:structuredClone(actions),snapshot:structuredClone(state)};
+export function capture(state:State,speed:number,actions:Action[],view:View={x:6,y:4.5,zoom:1}):RunSave {
+  const payload:Omit<RunSave,'checksum'>={version:VERSION,rules:RULES,seed:state.seed,tick:state.tick,speed,actions:structuredClone(actions),snapshot:structuredClone(state),view:{...view}};
   return {...payload,checksum:checksum(payload)};
 }
 const integer=(v:unknown,min:number,max=Number.MAX_SAFE_INTEGER):v is number=>typeof v==='number'&&Number.isSafeInteger(v)&&v>=min&&v<=max;
@@ -45,11 +46,14 @@ function validatedSnapshot(s:State,seed:number,tick:number,actions:Action[]):Sta
 export function replay(input:unknown):{state:State;save:RunSave} {
   const v=input as RunSave;
   if(!v||!integer(v.seed,0,4294967295)||!integer(v.tick,0)||![1,2,4].includes(v.speed)||!actionsValid(v.actions,v.tick))throw new Error('Invalid save');
-  if(v.version!==VERSION||v.rules!==RULES)throw new Error('Unsupported save');
-  const payload={version:v.version,rules:v.rules,seed:v.seed,tick:v.tick,speed:v.speed,actions:v.actions,snapshot:v.snapshot};
+  if(![VERSION,PREVIOUS].includes(v.version)||v.rules!==RULES)throw new Error('Unsupported save');
+  const payload={version:v.version,rules:v.rules,seed:v.seed,tick:v.tick,speed:v.speed,actions:v.actions,snapshot:v.snapshot,...(v.version===VERSION?{view:v.view}:{})};
   if(v.checksum!==checksum(payload))throw new Error('Corrupt save');
   const state=validatedSnapshot(v.snapshot,v.seed,v.tick,v.actions);
-  return {state,save:capture(state,v.speed,v.actions)};
+  const view=v.version===VERSION?v.view:{x:6,y:4.5,zoom:1};
+  if(!view||!finite(view.x,0,WIDTH)||!finite(view.y,0,HEIGHT)||!finite(view.zoom,1,3))throw new Error('Invalid view');
+  const bounded=new BoardCamera(view).view;if(Math.abs(bounded.x-view.x)>1e-9||Math.abs(bounded.y-view.y)>1e-9)throw new Error('Out of bounds view');
+  return {state,save:capture(state,v.speed,v.actions,view)};
 }
 export type LoadResult={kind:'empty'}|{kind:'loaded';state:State;save:RunSave}|{kind:'unavailable'}|{kind:'invalid'};
 export class RunStore {

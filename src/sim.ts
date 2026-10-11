@@ -154,6 +154,7 @@ export function step(s:State) {
 }
 export class Clock {
   paused=true; speed=1; private accumulated=0;
+  suspend(){this.paused=true;this.accumulated=0;}
   advance(s:State,elapsedMs:number) {
     if(!Number.isFinite(elapsedMs)||elapsedMs<0)throw new Error('Invalid elapsed time');
     if(this.paused||s.outcome!=='playing')return;

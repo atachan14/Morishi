@@ -1,0 +1,284 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 900,
+      "mobile": false,
+      "checks": [
+        "fixed low footer rows for time and five display toggles; hand alone folds without moving footer; exclusive speeds; exact 10s/80s forward and restored settings",
+        "header side buttons return actual SP to MainPane",
+        "shared ally/enemy/card full-width HP gauge with readable numbers; two-column basics and defenses; Power/Technique dash/Range/Speed; parent cards and light child rows",
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel and overlay/board mixed touches consume nothing; camera buttons removed",
+        "world-free outer placement and zoom below one restore; full-unit field toggles are display-only; single-line cards without index; enemy/ally range filters",
+        "real attack lowers target HP with visible shot; real-time fade while paused never advances saved combat",
+        "real heal shows referenced-element effect and increases hurt ally HP without replaying persisted effects",
+        "signed presence ownership and placement mask separate; real card placed in enemy gap at zero summed positive score",
+        "empty tap pins world point; signed top3 per enabled team with negative values; growth updates scores; footer flags persist; drag cannot reseed; clear point",
+        "editable six-species catalog; ally/card/enemy names derive from current stats; growth switches name and restored stats remain exact",
+        "natural growth passes 200; giant merge exceeds 1536; tiny zoom renders and exact save reload",
+        "left/right exclusive groups auto-open without mixing teams or card data; manual close retained; absorbed enemy selection follows receiver; dead selection clears to Forest safely",
+        "new game selects range/presence generation profile with original save backup; legacy loaded units remain frozen",
+        "zero-ally disk opening; independent activation and backed-up legacy-policy migration; canvas enemy selection without enemy list; native placement; elemental tabs and skill accordion; exact stopped reload; SP equal-width panes and persisted mode; vertical six-row hand scroll independent of zoom; resize/mode cancels placement; old save keys untouched"
+      ],
+      "failures": [],
+      "spGeometry": {
+        "mode": true,
+        "panels": [
+          {
+            "width": 459.5625,
+            "height": 773,
+            "x": 0
+          },
+          {
+            "width": 459.5625,
+            "height": 773,
+            "x": 459.5625
+          },
+          {
+            "width": 459.5625,
+            "height": 773,
+            "x": 919.125
+          }
+        ],
+        "scroll": 1379,
+        "client": 1379,
+        "hand": 0
+      },
+      "resizePlacement": {
+        "expected": {
+          "x": 903.3286394925008,
+          "y": 716.8000000000004
+        },
+        "actual": {
+          "x": 903.3286821395498,
+          "y": 716.7999786871275
+        },
+        "error": 0.00004767608772094744,
+        "onePixelWorld": 3.493646256055546
+      },
+      "migrations": [
+        {
+          "policy": "unset",
+          "rawBackup": true,
+          "clocksPreserved": true
+        },
+        {
+          "policy": "alternating",
+          "rawBackup": true,
+          "clocksPreserved": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "fixed low footer rows for time and five display toggles; hand alone folds without moving footer; exclusive speeds; exact 10s/80s forward and restored settings",
+        "header side buttons return actual SP to MainPane",
+        "shared ally/enemy/card full-width HP gauge with readable numbers; two-column basics and defenses; Power/Technique dash/Range/Speed; parent cards and light child rows",
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel and overlay/board mixed touches consume nothing; camera buttons removed",
+        "world-free outer placement and zoom below one restore; full-unit field toggles are display-only; single-line cards without index; enemy/ally range filters",
+        "real attack lowers target HP with visible shot; real-time fade while paused never advances saved combat",
+        "real heal shows referenced-element effect and increases hurt ally HP without replaying persisted effects",
+        "signed presence ownership and placement mask separate; real card placed in enemy gap at zero summed positive score",
+        "empty tap pins world point; signed top3 per enabled team with negative values; growth updates scores; footer flags persist; drag cannot reseed; clear point",
+        "editable six-species catalog; ally/card/enemy names derive from current stats; growth switches name and restored stats remain exact",
+        "natural growth passes 200; giant merge exceeds 1536; tiny zoom renders and exact save reload",
+        "left/right exclusive groups auto-open without mixing teams or card data; manual close retained; absorbed enemy selection follows receiver; dead selection clears to Forest safely",
+        "new game selects range/presence generation profile with original save backup; legacy loaded units remain frozen",
+        "zero-ally disk opening; independent activation and backed-up legacy-policy migration; canvas enemy selection without enemy list; native placement; elemental tabs and skill accordion; exact stopped reload; SP equal-width panes and persisted mode; vertical six-row hand scroll independent of zoom; resize/mode cancels placement; old save keys untouched"
+      ],
+      "failures": [],
+      "spGeometry": {
+        "mode": false,
+        "panels": [
+          {
+            "width": 0,
+            "height": 0,
+            "x": 0
+          },
+          {
+            "width": 390,
+            "height": 800,
+            "x": 0
+          },
+          {
+            "width": 0,
+            "height": 0,
+            "x": 0
+          }
+        ],
+        "scroll": 390,
+        "client": 390,
+        "hand": 0
+      },
+      "resizePlacement": {
+        "expected": {
+          "x": 850.7076923076922,
+          "y": 716.7999999999998
+        },
+        "actual": {
+          "x": 850.7076923076922,
+          "y": 716.8
+        },
+        "error": 1.1368683772161603e-13,
+        "onePixelWorld": 7.001709401709402
+      },
+      "migrations": [
+        {
+          "policy": "unset",
+          "rawBackup": true,
+          "clocksPreserved": true
+        },
+        {
+          "policy": "alternating",
+          "rawBackup": true,
+          "clocksPreserved": true
+        }
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mobile": true,
+      "checks": [
+        "fixed low footer rows for time and five display toggles; hand alone folds without moving footer; exclusive speeds; exact 10s/80s forward and restored settings",
+        "header side buttons return actual SP to MainPane",
+        "shared ally/enemy/card full-width HP gauge with readable numbers; two-column basics and defenses; Power/Technique dash/Range/Speed; parent cards and light child rows",
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel and overlay/board mixed touches consume nothing; camera buttons removed",
+        "world-free outer placement and zoom below one restore; full-unit field toggles are display-only; single-line cards without index; enemy/ally range filters",
+        "real attack lowers target HP with visible shot; real-time fade while paused never advances saved combat",
+        "real heal shows referenced-element effect and increases hurt ally HP without replaying persisted effects",
+        "signed presence ownership and placement mask separate; real card placed in enemy gap at zero summed positive score",
+        "empty tap pins world point; signed top3 per enabled team with negative values; growth updates scores; footer flags persist; drag cannot reseed; clear point",
+        "editable six-species catalog; ally/card/enemy names derive from current stats; growth switches name and restored stats remain exact",
+        "natural growth passes 200; giant merge exceeds 1536; tiny zoom renders and exact save reload",
+        "left/right exclusive groups auto-open without mixing teams or card data; manual close retained; absorbed enemy selection follows receiver; dead selection clears to Forest safely",
+        "new game selects range/presence generation profile with original save backup; legacy loaded units remain frozen",
+        "zero-ally disk opening; independent activation and backed-up legacy-policy migration; canvas enemy selection without enemy list; native placement; elemental tabs and skill accordion; exact stopped reload; SP equal-width panes and persisted mode; vertical six-row hand scroll independent of zoom; resize/mode cancels placement; old save keys untouched"
+      ],
+      "failures": [],
+      "spGeometry": {
+        "mode": false,
+        "panels": [
+          {
+            "width": 0,
+            "height": 0,
+            "x": 0
+          },
+          {
+            "width": 844,
+            "height": 346,
+            "x": 0
+          },
+          {
+            "width": 0,
+            "height": 0,
+            "x": 0
+          }
+        ],
+        "scroll": 844,
+        "client": 844,
+        "hand": 0
+      },
+      "resizePlacement": {
+        "expected": {
+          "x": 866.9472061657032,
+          "y": 716.7999999999998
+        },
+        "actual": {
+          "x": 866.9471640173408,
+          "y": 716.7999909682081
+        },
+        "error": 0.00004310519354489409,
+        "onePixelWorld": 5.91907514450867
+      },
+      "migrations": [
+        {
+          "policy": "unset",
+          "rawBackup": true,
+          "clocksPreserved": true
+        },
+        {
+          "policy": "alternating",
+          "rawBackup": true,
+          "clocksPreserved": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "mobile": true,
+      "checks": [
+        "fixed low footer rows for time and five display toggles; hand alone folds without moving footer; exclusive speeds; exact 10s/80s forward and restored settings",
+        "header side buttons return actual SP to MainPane",
+        "shared ally/enemy/card full-width HP gauge with readable numbers; two-column basics and defenses; Power/Technique dash/Range/Speed; parent cards and light child rows",
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel and overlay/board mixed touches consume nothing; camera buttons removed",
+        "world-free outer placement and zoom below one restore; full-unit field toggles are display-only; single-line cards without index; enemy/ally range filters",
+        "real attack lowers target HP with visible shot; real-time fade while paused never advances saved combat",
+        "real heal shows referenced-element effect and increases hurt ally HP without replaying persisted effects",
+        "signed presence ownership and placement mask separate; real card placed in enemy gap at zero summed positive score",
+        "empty tap pins world point; signed top3 per enabled team with negative values; growth updates scores; footer flags persist; drag cannot reseed; clear point",
+        "editable six-species catalog; ally/card/enemy names derive from current stats; growth switches name and restored stats remain exact",
+        "natural growth passes 200; giant merge exceeds 1536; tiny zoom renders and exact save reload",
+        "left/right exclusive groups auto-open without mixing teams or card data; manual close retained; absorbed enemy selection follows receiver; dead selection clears to Forest safely",
+        "new game selects range/presence generation profile with original save backup; legacy loaded units remain frozen",
+        "zero-ally disk opening; independent activation and backed-up legacy-policy migration; canvas enemy selection without enemy list; native placement; elemental tabs and skill accordion; exact stopped reload; SP equal-width panes and persisted mode; vertical six-row hand scroll independent of zoom; resize/mode cancels placement; old save keys untouched"
+      ],
+      "failures": [],
+      "spGeometry": {
+        "mode": false,
+        "panels": [
+          {
+            "width": 0,
+            "height": 0,
+            "x": 0
+          },
+          {
+            "width": 320,
+            "height": 524,
+            "x": 0
+          },
+          {
+            "width": 0,
+            "height": 0,
+            "x": 0
+          }
+        ],
+        "scroll": 320,
+        "client": 320,
+        "hand": 0
+      },
+      "resizePlacement": {
+        "expected": {
+          "x": 827.7333333333333,
+          "y": 716.7999999999998
+        },
+        "actual": {
+          "x": 827.7333333333333,
+          "y": 716.8
+        },
+        "error": 1.1368683772161603e-13,
+        "onePixelWorld": 8.533333333333333
+      },
+      "migrations": [
+        {
+          "policy": "unset",
+          "rawBackup": true,
+          "clocksPreserved": true
+        },
+        {
+          "policy": "alternating",
+          "rawBackup": true,
+          "clocksPreserved": true
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": []
+}

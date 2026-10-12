@@ -1,18 +1,18 @@
 # Morishi v2: Stats→進化分類・描画asset基盤案
 
-現段階は計画。カタログ判定/画像統合と50画像の取得は未実装。防御の全属性配分は独立修正済み。次に攻撃距離仕様を確定する。「点対象」が180度の点対称か、俯瞰など別の意味かはユーザー確認待ち。形の対称性以外のasset規格は先に共通化できる。
+6種のschema/条件評価/名前切替/画像adapter小ロットを実装済み。実カタログは public/plant-catalog.json。6種は現在既存描画のfallbackを使用し、50画像の取得は未実装。防御の全属性配分は独立修正済み。次に攻撃距離仕様を確定する。「点対象」が180度の点対称か、俯瞰など別の意味かはユーザー確認待ち。形の対称性以外のasset規格は先に共通化できる。
 
 ## 分類の契約
 
 - seed種族から能力を決めず、`currentV2Stats`の実効値から名前/画像を選ぶ。
 - 候補の条件はall/anyの比較データ。対象はMaxHP/HPReg/diameter/presenceと、4属性のattack/range/speed/defense。Techniqueは未実装なので条件に使わない。
-- 優先度降順、同値は安定したid昇順。最低優先度のfallbackを必須にし、条件が該当しない/データが読めない/画像が欠ける場合も既存描画で遊べる。
+- 優先度降順、同値は安定したid昇順。fallbackは通常候補の競合から除き、他に該当しないときだけ選ぶ。fallbackを必須にし、条件が該当しない/データが読めない/画像が欠ける場合も既存描画で遊べる。
 - 分類で戦闘能力、Skill、成長率、存在感、合体、報酬は変えない。攻撃と治癒のSkill表示を保ち、名前だけで攻撃能力を新設しない。
 - 成長/合体/復元でStatsが変われば再評価。分類idは保存の必須項目にせず、保存したStatsから導出する。既存unit id/lineage/selectionを維持する。
 
 ## 編集できるデータ
 
-想定ファイルは `public/plant-catalog.json` と `public/assets/plants/<id>.png`。name、priority、conditions、sprite、styleをデータに置く。未知のstat/op、id重複、fallback欠落、asset参照欠落を検証する。次はschema/parser/分類純関数/Canvas adapterを小ロットで作る。以下の閾値は仮例で、配分修正後の分布と画面評価で決める。
+想定ファイルは `public/plant-catalog.json` と `public/assets/plants/<id>.png`。name、priority、conditions、sprite、styleをデータに置く。未知のstat/op、id重複、fallback欠落、asset参照欠落を検証する。schema/parser/分類純関数/Canvas adapterを小ロットで作成済み。以下の閾値は仮例で、配分修正後の分布と画面評価で決める。
 
 ```json
 {

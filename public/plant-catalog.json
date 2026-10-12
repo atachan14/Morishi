@@ -1,0 +1,14 @@
+{
+  "$schema":"./plant-catalog.schema.json",
+  "schemaVersion":1,
+  "fallbackId":"sprout",
+  "spriteDefaults":{"anchor":[0.5,0.5],"footprintDiameter":0.9},
+  "entries":[
+    {"id":"sprout","name":"若芽","priority":0,"style":"cute","sprite":null,"conditions":{"all":[]}},
+    {"id":"fire-archer","name":"ファイアアーチャー","priority":100,"style":"cute","sprite":null,"conditions":{"all":[{"stat":"elements.fire.attack","op":">=","value":60},{"stat":"elements.fire.range","op":">=","value":20}]}},
+    {"id":"mammoth-flower","name":"マンモス花","priority":110,"style":"grotesque","sprite":null,"conditions":{"all":[{"stat":"elements.ice.defense","op":">=","value":12},{"stat":"maxHp","op":">=","value":240}]}},
+    {"id":"thunder-bud","name":"雷鳴つぼみ","priority":80,"style":"cute","sprite":null,"conditions":{"all":[{"stat":"elements.electric.speed","op":">=","value":1.35},{"stat":"elements.electric.attack","op":">=","value":50}]}},
+    {"id":"shadow-maw","name":"喰らい蔓","priority":90,"style":"grotesque","sprite":null,"conditions":{"all":[{"stat":"elements.dark.attack","op":">=","value":65},{"stat":"maxHp","op":">=","value":190}]}},
+    {"id":"nurse-flower","name":"癒し蓮","priority":70,"style":"cute","sprite":null,"conditions":{"all":[{"stat":"hpReg","op":">=","value":0.2},{"stat":"maxHp","op":">=","value":180}]}}
+  ]
+}

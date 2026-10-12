@@ -1,0 +1,1 @@
+{"assetCases":[{"name":"image-ready","status":"ready","colored":2550,"statsUnchanged":true},{"name":"image-missing","status":"ready","colored":0,"statsUnchanged":true},{"name":"invalid-catalog","status":"fallback","colored":0,"statsUnchanged":true}],"errors":0}

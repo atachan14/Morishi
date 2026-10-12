@@ -158,3 +158,16 @@ seed0の合法配置は距離23.528704。両者攻撃Skill。約3.84秒で接触
 全223テスト・型チェック・build成功。隔離Edge320x568で新規4属性値、基本欄、操作、旧run保全と新規ゲームprofile適用を確認、実行時エラー0。実機スマホではない。証跡 evidence/ecosystem-v2-defense/。
 
 進化と画像の独立計画は docs/ecosystem-v2-evolution-plan.md。現在Stats→条件→優先度/idによる安定分類→名前/画像だけを切替。俯瞰512px透過PNGの小ロットから50種へ拡張する案。点対称の解釈と画像取得は未確定、50画像は未生成。
+## 2026-10-12: 6種進化カタログ小ロット
+
+public/plant-catalog.jsonに6種「若芽」「ファイアアーチャー」「マンモス花」「雷鳴つぼみ」「喰らい蔓」「癒し蓮」。実効現在Statsによるall/any比較をデータ化し、名前・優先度・style・PNGパスを編集できる。JSON schemaはpublic/plant-catalog.schema.json、厳密runtime検証はeco-v2-evolution.ts。未知のstat/op、Technique、重複id、fallback欠落、過剰条件/深度、外部画像URLなどは拒否して既存描画/若芽へfallback。
+
+条件一致の優先度降順→同値id昇順で安定選択し、fallbackは他に候補がないときだけ選ぶ。名前は手札ボタンと手札/味方/敵の共通詳細へ表示し、拡大時のCanvasにも表示。成長/合体/復元で再評価する。描画中の分類はimmutable seed、diameter/HP/lineage長、catalog revisionに基づくWeakMapで再利用し、虚像手札IDや死体を強く保持しない。
+
+分類は能力→名前/見た目だけで、Skill、攻撃/治癒、数値bonus、成長率、配置、保存済みStatsを変更しない。種族idを保存必須項目へ追加せず、旧runからも同じStatsで導出。画像変更やカタログ編集の再読込で分類が変わっても、元のStatsはそのまま。攻撃不発の中心距離仕様は判断待ちで未変更。
+
+PNGは512透過・中心固定の個別file。sprite=nullなら既存Plant描画を使用。パスを設定した画像は表示時だけlazy decodeし、最大64画像cache。読込中/欠損も既存描画へfallbackし、陣営色/選択枠/Skill色を維持。footprintDiameter=0.9の余白率で外形を実直径へ合わせ、巨大表示は画像解像度を増やさず画面内部分を切り出す。public/assets/plants/README.mdに差替え手順。実6画像/50画像はまだ未生成で、点対称の絵柄は確認待ち。
+
+全229テスト・型チェック・build成功。6種境界、all/any、優先/tie/順序、fallback、不正データ、実成長/接触合体、旧新保存不変、治癒Plantへの攻撃非付与、画像decode/fail/cropを検証。隔離Edge4サイズ（1366x900、390x844、844x390、320x568）で手札/味方/敵の分類名、成長でのファイアアーチャー切替、保存復元と既存操作を確認、全成功・実行時エラー0。
+
+画像adapterは隔離ブラウザ内だけの円形仮PNG（制作assetではない）をHTTP応答へ差込み、正常画像表示・404時の既存描画・不正カタログ時の若芽fallbackを確認。全3ケースでStatsが完全不変、実行時エラー0。証跡 evidence/ecosystem-v2-evolution/、browser/、verified-assets/、tests.txt/build.txt。実機スマホではない。次は点対称確認→小ロット実画像→条件到達/競合調整→50種拡張。

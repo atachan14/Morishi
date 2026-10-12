@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "species": 6,
+  "fallback": "sprout",
+  "assignedImages": 0,
+  "pendingImages": 6,
+  "missing": []
+}

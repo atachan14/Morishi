@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Morishi v2 plant catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "fallbackId",
+    "spriteDefaults",
+    "entries"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "fallbackId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+    },
+    "spriteDefaults": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchor",
+        "footprintDiameter"
+      ],
+      "properties": {
+        "anchor": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "footprintDiameter": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 1
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "condition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stat",
+            "op",
+            "value"
+          ],
+          "properties": {
+            "stat": {
+              "enum": [
+                "hp",
+                "maxHp",
+                "hpReg",
+                "diameter",
+                "presence",
+                "elements.fire.attack",
+                "elements.fire.range",
+                "elements.fire.speed",
+                "elements.fire.defense",
+                "elements.ice.attack",
+                "elements.ice.range",
+                "elements.ice.speed",
+                "elements.ice.defense",
+                "elements.electric.attack",
+                "elements.electric.range",
+                "elements.electric.speed",
+                "elements.electric.defense",
+                "elements.dark.attack",
+                "elements.dark.range",
+                "elements.dark.speed",
+                "elements.dark.defense"
+              ]
+            },
+            "op": {
+              "enum": [
+                ">=",
+                ">",
+                "<=",
+                "<",
+                "==",
+                "!="
+              ]
+            },
+            "value": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "all"
+          ],
+          "properties": {
+            "all": {
+              "type": "array",
+              "maxItems": 32,
+              "items": {
+                "$ref": "#/$defs/condition"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "any"
+          ],
+          "properties": {
+            "any": {
+              "type": "array",
+              "maxItems": 32,
+              "items": {
+                "$ref": "#/$defs/condition"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "priority",
+        "style",
+        "sprite",
+        "conditions"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{0,63}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": -100000,
+          "maximum": 100000
+        },
+        "style": {
+          "enum": [
+            "cute",
+            "grotesque",
+            "neutral"
+          ]
+        },
+        "sprite": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "pattern": "^/assets/plants/[a-z0-9/_-]+\\.png$"
+            }
+          ]
+        },
+        "conditions": {
+          "$ref": "#/$defs/condition"
+        }
+      }
+    }
+  }
+}

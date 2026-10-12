@@ -1,0 +1,37 @@
+// Existing Edge, isolated temporary profile, local loopback only.
+import {spawn} from 'node:child_process';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
+import assert from 'node:assert/strict';
+import {createV2Game,stepV2,placeV2} from '../.test-dist/src/eco-v2-game.js';
+import {canPlaceV2,currentV2Stats} from '../.test-dist/src/eco-v2-foundation.js';
+import {captureV2,replayV2 as ecoReplay} from '../.test-dist/src/eco-v2-save.js';
+import {parsePlantCatalog,classifyUnit} from '../.test-dist/src/eco-v2-evolution.js';
+import {createV2Unit} from '../.test-dist/src/eco-v2-foundation.js';
+import {SUGGESTED_V2_GENERATION} from '../.test-dist/src/eco-v2-contract.js';
+const plantCatalog=parsePlantCatalog(JSON.parse(await fs.readFile('public/plant-catalog.json','utf8')));
+const output=process.argv[2]??path.join(os.tmpdir(),'morishi-browser-check');await fs.mkdir(output,{recursive:true});
+const profile=await fs.mkdtemp(path.join(os.tmpdir(),'morishi-headless-'));
+const edge=spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',['--headless=new','--remote-debugging-port=0','--remote-debugging-address=127.0.0.1',`--user-data-dir=${profile}`,'--no-first-run','--no-default-browser-check','--disable-background-networking','--window-size=1366,768','about:blank'],{windowsHide:true,stdio:['ignore','pipe','pipe']});
+let stderr='';edge.stderr.on('data',b=>stderr=(stderr+b.toString()).slice(-5000));edge.on('error',e=>stderr+=String(e));
+const delay=ms=>new Promise(r=>setTimeout(r,ms));let ws;
+const report={browser:null,isolated:true,userBrowserTouched:false,viewports:[],runtimeErrors:[]};
+try{
+ let port;for(let i=0;i<100;i++){try{port=+(await fs.readFile(path.join(profile,'DevToolsActivePort'),'utf8')).split('\n')[0];break;}catch{}await delay(100);}
+ if(!port)throw new Error(`Headless launch failed: ${stderr}`);
+ const version=await(await fetch(`http://127.0.0.1:${port}/json/version`)).json();report.browser=version.Browser;ws=new WebSocket(version.webSocketDebuggerUrl);await new Promise((r,j)=>{ws.onopen=r;ws.onerror=j;});
+ let seq=0;const pending=new Map();ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){const p=pending.get(m.id);pending.delete(m.id);if(p){clearTimeout(p.timer);m.error?p.reject(new Error(JSON.stringify(m.error))):p.resolve(m.result);}}else if(m.method==='Runtime.exceptionThrown'||(m.method==='Runtime.consoleAPICalled'&&m.params.type==='error'))report.runtimeErrors.push({sessionId:m.sessionId,method:m.method,details:m.params});};
+ const call=(method,params={},sessionId)=>new Promise((resolve,reject)=>{const id=++seq,timer=setTimeout(()=>{pending.delete(id);reject(new Error(`CDP timeout: ${method}`));},15000);pending.set(id,{resolve,reject,timer});ws.send(JSON.stringify({id,method,params,...(sessionId?{sessionId}:{})}));});
+
+ report.assetCases=[];const scene=createV2Game(2387,SUGGESTED_V2_GENERATION);scene.units.forEach((u,i)=>{u.x=(i+1)*100000;u.y=0;});scene.units[0].x=scene.units[0].y=1000;const saved=captureV2(scene,{x:1000,y:1000,zoom:32});
+ for(const [name,mode] of [['image-ready','ready'],['image-missing','missing'],['invalid-catalog','invalid']]){const {browserContextId}=await call('Target.createBrowserContext');const {targetId}=await call('Target.createTarget',{url:'about:blank',browserContextId});const {sessionId}=await call('Target.attachToTarget',{targetId,flatten:true});const cmd=(method,params={})=>call(method,params,sessionId),evaluate=async expression=>{const r=await cmd('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));return r.result.value;};await cmd('Runtime.enable');await cmd('Page.enable');await cmd('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});const png=await evaluate('(()=>{const c=document.createElement("canvas");c.width=c.height=512;const x=c.getContext("2d");x.fillStyle="#12ab34";x.beginPath();x.arc(256,256,230.4,0,Math.PI*2);x.fill();return c.toDataURL("image/png").split(",")[1];})()');const data=structuredClone(plantCatalog);for(const entry of data.entries)entry.sprite='/assets/plants/qa-fixture.png';if(mode==='invalid')data.entries[1].conditions={all:[{stat:'elements.fire.technique',op:'>=',value:1}]};
+ const listener=async event=>{const m=JSON.parse(event.data);if(m.method!=='Fetch.requestPaused'||m.sessionId!==sessionId)return;const catalog=m.params.request.url.includes('plant-catalog.json');try{await cmd('Fetch.fulfillRequest',{requestId:m.params.requestId,responseCode:catalog||mode==='ready'?200:404,responseHeaders:[{name:'Content-Type',value:catalog?'application/json':'image/png'}],body:catalog?Buffer.from(JSON.stringify(data)).toString('base64'):mode==='ready'?png:''});}catch(e){report.runtimeErrors.push({fetch:String(e)});}};ws.addEventListener('message',listener);await cmd('Fetch.enable',{patterns:[{urlPattern:'*plant-catalog.json'},{urlPattern:'*/assets/plants/*'}]});const injected=await cmd('Page.addScriptToEvaluateOnNewDocument',{source:'localStorage.setItem("morishi.element-skills.v1",'+JSON.stringify(JSON.stringify(saved))+');localStorage.setItem("morishi.element-skills.overlays.v1",JSON.stringify({area:false,allyRanges:false,enemyRanges:false,allyPresence:false,enemyPresence:false}));'});await cmd('Page.navigate',{url:'http://127.0.0.1:8781/ecosystem-v2.html'});for(let i=0;i<100;i++){if(await evaluate('document.getElementById("app")?.dataset.ready==="true"&&document.getElementById("app").dataset.catalog!=="loading"'))break;await delay(50);}await delay(500);const status=await evaluate('document.getElementById("app").dataset.catalog'),actual=await evaluate('JSON.parse(localStorage.getItem("morishi.element-skills.v1")).state'),colored=await evaluate('(()=>{const c=document.querySelector("canvas"),d=c.getContext("2d").getImageData(0,0,c.width,c.height).data;let n=0;for(let i=0;i<d.length;i+=4)if(d[i]===18&&d[i+1]===171&&d[i+2]===52&&d[i+3]>200)n++;return n;})()');assert.deepEqual(actual,scene);assert.equal(status,mode==='invalid'?'fallback':'ready');if(mode==='ready')assert.ok(colored>50);else assert.equal(colored,0);const shot=await cmd('Page.captureScreenshot',{format:'png'});await fs.writeFile(path.join(output,name+'.png'),Buffer.from(shot.data,'base64'));report.assetCases.push({name,status,colored,statsUnchanged:true});await cmd('Fetch.disable');ws.removeEventListener('message',listener);await call('Target.disposeBrowserContext',{browserContextId});}
+ await fs.writeFile(path.join(output,'browser-check.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({assetCases:report.assetCases,errors:report.runtimeErrors.length}));assert.equal(report.runtimeErrors.length,0);
+}catch(e){console.error(e);process.exitCode=1;await fs.writeFile(path.join(output,'browser-check.json'),JSON.stringify({...report,fatal:String(e),stderr},null,2)+'\n');}
+finally{
+ if(ws?.readyState===1)ws.close();if(edge.exitCode===null)edge.kill();await delay(200);
+ // Only the exact temporary profile created by this process may be removed.
+ const resolved=path.resolve(profile),tempRoot=path.resolve(os.tmpdir());
+ if(path.dirname(resolved)===tempRoot&&path.basename(resolved).startsWith('morishi-headless-'))try{await fs.rm(resolved,{recursive:true,force:true,maxRetries:3,retryDelay:100});}catch(e){console.error(`Temporary profile cleanup failed: ${e}`);}
+}

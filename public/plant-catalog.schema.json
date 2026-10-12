@@ -110,6 +110,82 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
+            "stat",
+            "op",
+            "otherStat"
+          ],
+          "properties": {
+            "stat": {
+              "enum": [
+                "hp",
+                "maxHp",
+                "hpReg",
+                "diameter",
+                "presence",
+                "elements.fire.attack",
+                "elements.fire.range",
+                "elements.fire.speed",
+                "elements.fire.defense",
+                "elements.ice.attack",
+                "elements.ice.range",
+                "elements.ice.speed",
+                "elements.ice.defense",
+                "elements.electric.attack",
+                "elements.electric.range",
+                "elements.electric.speed",
+                "elements.electric.defense",
+                "elements.dark.attack",
+                "elements.dark.range",
+                "elements.dark.speed",
+                "elements.dark.defense"
+              ]
+            },
+            "op": {
+              "enum": [
+                ">=",
+                ">",
+                "<=",
+                "<",
+                "==",
+                "!="
+              ]
+            },
+            "otherStat": {
+              "enum": [
+                "hp",
+                "maxHp",
+                "hpReg",
+                "diameter",
+                "presence",
+                "elements.fire.attack",
+                "elements.fire.range",
+                "elements.fire.speed",
+                "elements.fire.defense",
+                "elements.ice.attack",
+                "elements.ice.range",
+                "elements.ice.speed",
+                "elements.ice.defense",
+                "elements.electric.attack",
+                "elements.electric.range",
+                "elements.electric.speed",
+                "elements.electric.defense",
+                "elements.dark.attack",
+                "elements.dark.range",
+                "elements.dark.speed",
+                "elements.dark.defense"
+              ]
+            },
+            "factor": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
             "all"
           ],
           "properties": {
@@ -186,6 +262,69 @@
         },
         "conditions": {
           "$ref": "#/$defs/condition"
+        },
+        "assetId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{0,63}$"
+        },
+        "art": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "phase",
+            "element",
+            "role",
+            "silhouette",
+            "palette",
+            "firstBatch"
+          ],
+          "properties": {
+            "phase": {
+              "enum": [
+                "initial",
+                "mid",
+                "high",
+                "any"
+              ]
+            },
+            "element": {
+              "enum": [
+                "fire",
+                "ice",
+                "electric",
+                "dark",
+                "none"
+              ]
+            },
+            "role": {
+              "enum": [
+                "brawler",
+                "archer",
+                "swift",
+                "defender",
+                "support",
+                "fallback"
+              ]
+            },
+            "silhouette": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 180
+            },
+            "palette": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 6,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40
+              }
+            },
+            "firstBatch": {
+              "type": "boolean"
+            }
+          }
         }
       }
     }

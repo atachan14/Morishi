@@ -1,0 +1,93 @@
+{
+  "seeds": 256,
+  "distributions": {
+    "enemy": {
+      "before": {
+        "n": 6144,
+        "min": 133.255957,
+        "mean": 183.93295443603498,
+        "median": 184.009273,
+        "max": 237.985062
+      },
+      "after": {
+        "n": 6144,
+        "min": 15.545596,
+        "mean": 20.69272252555335,
+        "median": 20.7060795,
+        "max": 26.178507
+      },
+      "presence": {
+        "n": 6144,
+        "min": 14.665249,
+        "mean": 20.909527718587295,
+        "median": 20.971858,
+        "max": 27.885744
+      },
+      "attack": 5535,
+      "heal": 609
+    },
+    "hand": {
+      "before": {
+        "n": 1024,
+        "min": 128.45249,
+        "mean": 172.14752481933604,
+        "median": 173.076437,
+        "max": 213.957125
+      },
+      "after": {
+        "n": 1024,
+        "min": 9.634592,
+        "mean": 13.457908433593733,
+        "median": 13.539188,
+        "max": 17.116249
+      },
+      "presence": {
+        "n": 1024,
+        "min": 11.075045,
+        "mean": 13.24211544140627,
+        "median": 13.305979,
+        "max": 15.30965
+      },
+      "attack": 922,
+      "heal": 102
+    }
+  },
+  "boards": {
+    "count": 128,
+    "legalBodyFreeMidpoints": 34965,
+    "bodyFreeMidpoints": 35203,
+    "cardsWithInitiallyReachableEnemy": 127,
+    "cards": 512,
+    "attackCards": 460,
+    "attackCardsWithInitiallyReachableEnemy": 121,
+    "examples": [
+      {
+        "seed": 3448175267,
+        "card": 2,
+        "kind": "attack",
+        "enemy": 3,
+        "range": 16.63946,
+        "distance": 15.528799999999999,
+        "attackDistanceCoefficient": 0.06674856034991528
+      },
+      {
+        "seed": 3448175267,
+        "card": 3,
+        "kind": "attack",
+        "enemy": 3,
+        "range": 15.645921,
+        "distance": 15.528799999999999,
+        "attackDistanceCoefficient": 0.007485721038729576
+      },
+      {
+        "seed": 1807643740,
+        "card": 0,
+        "kind": "attack",
+        "enemy": 24,
+        "range": 15.473248,
+        "distance": 14.878670999999999,
+        "attackDistanceCoefficient": 0.03842612746851859
+      }
+    ]
+  }
+}

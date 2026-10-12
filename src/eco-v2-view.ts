@@ -1,3 +1,4 @@
+import {bodyRadius} from './eco-contract.js';
 import {currentV2Stats,type UnitV2} from './eco-v2-foundation.js';
 import {ELEMENTS,type Element} from './eco-v2-contract.js';
 import {WORLD} from './eco-sim.js';
@@ -12,7 +13,9 @@ export function v2MinimumZoom(units:UnitV2[],width:number,height:number){if(!uni
 export function v2CellPlaceable(facts:FieldFact[],x:number,y:number,halfDiagonal:number,diameter:number){if(Math.abs(x)+halfDiagonal>V2_COORD_LIMIT||Math.abs(y)+halfDiagonal>V2_COORD_LIMIT)return false;let sum=0;for(const u of facts){const distance=Math.hypot(u.x-x,u.y-y),near=Math.max(0,distance-halfDiagonal);if(near<u.radius+diameter/2-1e-6)return false;if(u.team==='enemy'){sum+=Math.max(0,u.presence-near);if(sum>0)return false;}}return true;}
 export function v2VisibleRanges(facts:FieldFact[],options:LayerOptions){return facts.filter(u=>u.team==='ally'?options.allyRanges:options.enemyRanges).flatMap(u=>u.ranges.map(r=>({unit:u,...r,color:FIELD_COLORS[r.element]})));}
 
-export function v2PresenceOwner(facts:FieldFact[],x:number,y:number){let owner:FieldFact|null=null,best=0,tie=false;for(const u of facts){const score=u.presence-Math.hypot(u.x-x,u.y-y);if(score>best){best=score;owner=u;tie=false;}else if(score>0&&Math.abs(score-best)<1e-9){tie=true;if(owner&&u.id<owner.id)owner=u;}}return {owner,score:best,tie};}
+export function v2PresenceOwner(facts:FieldFact[],x:number,y:number,includeNonPositive=false){let owner:FieldFact|null=null,best=includeNonPositive?-Infinity:0,tie=false;for(const u of facts){const score=u.presence-Math.hypot(u.x-x,u.y-y);if(score>best){best=score;owner=u;tie=false;}else if((includeNonPositive||score>0)&&Math.abs(score-best)<1e-9){tie=true;if(owner&&u.id<owner.id)owner=u;}}return {owner,score:best,tie};}
 
 export function v2ReadLayers(raw:unknown):LayerOptions{const v=raw as Record<string,unknown>;if(v&&Object.keys(DEFAULT_LAYERS).every(k=>typeof v[k]==='boolean'))return Object.fromEntries(Object.keys(DEFAULT_LAYERS).map(k=>[k,v[k]])) as LayerOptions;if(v&&['area','ranges','presence','allies','enemies'].every(k=>typeof v[k]==='boolean'))return {area:v.area as boolean,allyRanges:!!(v.ranges&&v.allies),enemyRanges:!!(v.ranges&&v.enemies),allyPresence:!!(v.presence&&v.allies),enemyPresence:!!(v.presence&&v.enemies)};return {...DEFAULT_LAYERS};}
 export function v2ProbeLines(facts:FieldFact[],x:number,y:number,options:LayerOptions){return (['ally','enemy'] as const).flatMap(team=>(team==='ally'?options.allyPresence:options.enemyPresence)?facts.filter(u=>u.team===team).map(u=>({unit:u,score:u.presence-Math.hypot(u.x-x,u.y-y)})).sort((a,b)=>b.score-a.score||a.unit.id-b.unit.id).slice(0,3):[]);}
+
+export function v2PlacementDisks(facts:FieldFact[],diameter:number){const plantRadius=bodyRadius(diameter);return facts.map(u=>({id:u.id,x:u.x,y:u.y,radius:Math.max(u.radius+plantRadius-1e-6,u.team==='enemy'?u.presence:0)}));}

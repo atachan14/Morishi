@@ -1,0 +1,2152 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "phase": "before",
+  "cases": [
+    {
+      "width": 640,
+      "height": 480,
+      "name": "overlap",
+      "zoom": 0.005,
+      "ms": 5.399999998509884,
+      "tested": 774,
+      "mismatches": 9,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 317,
+          "py": 238,
+          "x": -2975,
+          "y": -1770,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 337,
+          "py": 277,
+          "x": 22625,
+          "y": 48150,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 379,
+          "py": 277,
+          "x": 76385,
+          "y": 48150,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "overlap",
+      "zoom": 0.05,
+      "ms": 3,
+      "tested": 774,
+      "mismatches": 0,
+      "partial": 0,
+      "examples": []
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "overlap",
+      "zoom": 1,
+      "ms": 3,
+      "tested": 770,
+      "mismatches": 8,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 255,
+          "py": 181,
+          "x": -187.8,
+          "y": -224.39999999999998,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 181,
+          "x": 209,
+          "y": -224.39999999999998,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 399,
+          "py": 219,
+          "x": 733.8,
+          "y": 18.80000000000001,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "overlap",
+      "zoom": 4,
+      "ms": 1.3000000044703484,
+      "tested": 760,
+      "mismatches": 23,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 48,
+          "py": 27,
+          "x": -209.39999999999998,
+          "y": -190,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 337,
+          "py": 27,
+          "x": 253,
+          "y": -190,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 585,
+          "py": 27,
+          "x": 649.8,
+          "y": -190,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "overlap",
+      "zoom": 16,
+      "ms": 0.5999999940395355,
+      "tested": 767,
+      "mismatches": 12,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 317,
+          "py": 238,
+          "x": 224,
+          "y": 149.4,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 337,
+          "py": 257,
+          "x": 232,
+          "y": 157,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 255,
+          "py": 315,
+          "x": 199.2,
+          "y": 180.2,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "overlap",
+      "zoom": 128,
+      "ms": 0.8000000044703484,
+      "tested": 767,
+      "mismatches": 17,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 337,
+          "py": 104,
+          "x": 225.875,
+          "y": 143.225,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 142,
+          "x": 224.875,
+          "y": 145.125,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 276,
+          "py": 200,
+          "x": 222.825,
+          "y": 148.025,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "ally-contact",
+      "zoom": 4,
+      "ms": 1.6000000014901161,
+      "tested": 772,
+      "mismatches": 8,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 172,
+          "py": 27,
+          "x": 688,
+          "y": -140,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 172,
+          "py": 200,
+          "x": 688,
+          "y": 136.8,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 296,
+          "py": 219,
+          "x": 886.4,
+          "y": 167.2,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "ally-contact",
+      "zoom": 16,
+      "ms": 5.200000002980232,
+      "tested": 768,
+      "mismatches": 7,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 234,
+          "py": 181,
+          "x": 889.8,
+          "y": 176.6,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 296,
+          "py": 181,
+          "x": 914.6,
+          "y": 176.6,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 193,
+          "py": 219,
+          "x": 873.4,
+          "y": 191.8,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "ally-contact",
+      "zoom": 128,
+      "ms": 1.7999999970197678,
+      "tested": 770,
+      "mismatches": 6,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 296,
+          "py": 65,
+          "x": 922.825,
+          "y": 191.275,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 296,
+          "py": 85,
+          "x": 922.825,
+          "y": 192.275,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 161,
+          "x": 923.875,
+          "y": 196.075,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "enemy-halo",
+      "zoom": 4,
+      "ms": 1.6000000014901161,
+      "tested": 766,
+      "mismatches": 18,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 482,
+          "py": 65,
+          "x": -7.312760000000026,
+          "y": -279.2,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 503,
+          "py": 65,
+          "x": 26.287239999999997,
+          "y": -279.2,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 399,
+          "py": 85,
+          "x": -140.11276000000004,
+          "y": -247.2,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "enemy-halo",
+      "zoom": 16,
+      "ms": 1.2000000029802322,
+      "tested": 773,
+      "mismatches": 16,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 358,
+          "py": 8,
+          "x": -251.91276000000002,
+          "y": -92.6,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 337,
+          "py": 46,
+          "x": -260.31276,
+          "y": -77.4,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 337,
+          "py": 65,
+          "x": -260.31276,
+          "y": -69.8,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "enemy-halo",
+      "zoom": 128,
+      "ms": 1.1000000014901161,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 317,
+          "py": 8,
+          "x": -267.43776,
+          "y": -11.575,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 27,
+          "x": -267.43776,
+          "y": -10.625,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 46,
+          "x": -267.43776,
+          "y": -9.675,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "coordinate-edge",
+      "zoom": 0.05,
+      "ms": 1.2999999970197678,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 317,
+          "py": 8,
+          "x": 999999999680,
+          "y": -29632,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 27,
+          "x": 999999999680,
+          "y": -27200,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 46,
+          "x": 999999999680,
+          "y": -24768,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "coordinate-edge",
+      "zoom": 4,
+      "ms": 1.1000000014901161,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 317,
+          "py": 8,
+          "x": 999999999996,
+          "y": -370.4,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 27,
+          "x": 999999999996,
+          "y": -340,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 46,
+          "x": 999999999996,
+          "y": -309.6,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "coordinate-edge",
+      "zoom": 128,
+      "ms": 1,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 317,
+          "py": 8,
+          "x": 999999999999.875,
+          "y": -11.575,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 27,
+          "x": 999999999999.875,
+          "y": -10.625,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 46,
+          "x": 999999999999.875,
+          "y": -9.675,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "giant-partial",
+      "zoom": 0.05,
+      "ms": 2,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 317,
+          "py": 8,
+          "x": -4760050.905639648,
+          "y": -29632,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 27,
+          "x": -4760050.905639648,
+          "y": -27200,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 46,
+          "x": -4760050.905639648,
+          "y": -24768,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "giant-partial",
+      "zoom": 4,
+      "ms": 1.3999999985098839,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 317,
+          "py": 8,
+          "x": -4759734.905639648,
+          "y": -370.4,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 27,
+          "x": -4759734.905639648,
+          "y": -340,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 46,
+          "x": -4759734.905639648,
+          "y": -309.6,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "giant-partial",
+      "zoom": 128,
+      "ms": 1,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 317,
+          "py": 8,
+          "x": -4759731.030639648,
+          "y": -11.575,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 27,
+          "x": -4759731.030639648,
+          "y": -10.625,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 317,
+          "py": 46,
+          "x": -4759731.030639648,
+          "y": -9.675,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "127-units",
+      "zoom": 1,
+      "ms": 7.399999998509884,
+      "tested": 765,
+      "mismatches": 39,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 234,
+          "py": 181,
+          "x": -547.2,
+          "y": -374.4,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 255,
+          "py": 181,
+          "x": -412.8,
+          "y": -374.4,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 296,
+          "py": 181,
+          "x": -150.4,
+          "y": -374.4,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "127-units",
+      "zoom": 4,
+      "ms": 6.299999997019768,
+      "tested": 726,
+      "mismatches": 172,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 90,
+          "py": 65,
+          "x": -367.2,
+          "y": -279.2,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 110,
+          "py": 65,
+          "x": -335.2,
+          "y": -279.2,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 131,
+          "py": 65,
+          "x": -301.6,
+          "y": -279.2,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "name": "capacity-full",
+      "zoom": 1,
+      "ms": 1,
+      "tested": 765,
+      "mismatches": 0,
+      "partial": 0,
+      "examples": []
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "overlap",
+      "zoom": 0.005,
+      "ms": 1.0999999940395355,
+      "tested": 769,
+      "mismatches": 6,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 158,
+          "py": 260,
+          "x": -3615,
+          "y": -3690,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 281,
+          "x": -3615,
+          "y": 50070,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 189,
+          "py": 281,
+          "x": 75745,
+          "y": 50070,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "overlap",
+      "zoom": 0.05,
+      "ms": 1.1000000014901161,
+      "tested": 774,
+      "mismatches": 2,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 230,
+          "py": 449,
+          "x": 18273,
+          "y": 48150,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 313,
+          "py": 449,
+          "x": 39521,
+          "y": 48150,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "overlap",
+      "zoom": 1,
+      "ms": 1.5,
+      "tested": 773,
+      "mismatches": 7,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 138,
+          "py": 218,
+          "x": -50.19999999999999,
+          "y": -406.79999999999995,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 148,
+          "py": 218,
+          "x": 77.80000000000001,
+          "y": -406.79999999999995,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 168,
+          "py": 218,
+          "x": 333.8,
+          "y": -406.79999999999995,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "overlap",
+      "zoom": 4,
+      "ms": 0.7999999970197678,
+      "tested": 760,
+      "mismatches": 29,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 45,
+          "py": 134,
+          "x": -141.39999999999998,
+          "y": -258,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 55,
+          "py": 134,
+          "x": -109.39999999999998,
+          "y": -258,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 117,
+          "py": 134,
+          "x": 89,
+          "y": -258,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "overlap",
+      "zoom": 16,
+      "ms": 1.1000000014901161,
+      "tested": 764,
+      "mismatches": 14,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 158,
+          "py": 260,
+          "x": 223.8,
+          "y": 148.8,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 148,
+          "py": 281,
+          "x": 215.8,
+          "y": 165.6,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 168,
+          "py": 281,
+          "x": 231.8,
+          "y": 165.6,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "overlap",
+      "zoom": 128,
+      "ms": 0.6000000014901161,
+      "tested": 760,
+      "mismatches": 20,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 168,
+          "py": 197,
+          "x": 225.85,
+          "y": 143.55,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 148,
+          "py": 239,
+          "x": 223.85,
+          "y": 147.75,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 127,
+          "py": 260,
+          "x": 221.75,
+          "y": 149.85,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "ally-contact",
+      "zoom": 4,
+      "ms": 1.1000000014901161,
+      "tested": 770,
+      "mismatches": 13,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 3,
+          "py": 113,
+          "x": 423.2,
+          "y": -275.2,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 14,
+          "py": 113,
+          "x": 458.4,
+          "y": -275.2,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 24,
+          "py": 113,
+          "x": 490.4,
+          "y": -275.2,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "ally-contact",
+      "zoom": 16,
+      "ms": 1.1000000014901161,
+      "tested": 772,
+      "mismatches": 3,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 96,
+          "py": 260,
+          "x": 873.2,
+          "y": 198.8,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 96,
+          "py": 281,
+          "x": 873.2,
+          "y": 215.6,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 281,
+          "x": 922.8,
+          "y": 215.6,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "ally-contact",
+      "zoom": 128,
+      "ms": 1,
+      "tested": 769,
+      "mismatches": 20,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 3,
+          "py": 29,
+          "x": 908.35,
+          "y": 176.75,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 45,
+          "py": 50,
+          "x": 912.55,
+          "y": 178.85,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 55,
+          "py": 50,
+          "x": 913.55,
+          "y": 178.85,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "enemy-halo",
+      "zoom": 4,
+      "ms": 0.8999999985098839,
+      "tested": 767,
+      "mismatches": 21,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 220,
+          "py": 176,
+          "x": -73.71276000000003,
+          "y": -273.6,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 230,
+          "py": 176,
+          "x": -41.71276000000003,
+          "y": -273.6,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 241,
+          "py": 176,
+          "x": -6.512760000000014,
+          "y": -273.6,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "enemy-halo",
+      "zoom": 16,
+      "ms": 0.6999999955296516,
+      "tested": 772,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 272,
+          "py": 9,
+          "x": -177.31276000000003,
+          "y": -202,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 241,
+          "py": 29,
+          "x": -202.11276000000004,
+          "y": -186,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 251,
+          "py": 29,
+          "x": -194.11276000000004,
+          "y": -186,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "enemy-halo",
+      "zoom": 128,
+      "ms": 0.6999999955296516,
+      "tested": 772,
+      "mismatches": 26,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 168,
+          "py": 9,
+          "x": -266.46276,
+          "y": -25.25,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 29,
+          "x": -267.46276,
+          "y": -23.25,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 168,
+          "py": 29,
+          "x": -266.46276,
+          "y": -23.25,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "coordinate-edge",
+      "zoom": 0.05,
+      "ms": 0.6000000014901161,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 158,
+          "py": 9,
+          "x": 999999999616,
+          "y": -64640,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 29,
+          "x": 999999999616,
+          "y": -59520,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 50,
+          "x": 999999999616,
+          "y": -54144,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "coordinate-edge",
+      "zoom": 4,
+      "ms": 0.7999999970197678,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 158,
+          "py": 9,
+          "x": 999999999995.2,
+          "y": -808,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 29,
+          "x": 999999999995.2,
+          "y": -744,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 50,
+          "x": 999999999995.2,
+          "y": -676.8,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "coordinate-edge",
+      "zoom": 128,
+      "ms": 0.6999999955296516,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 158,
+          "py": 9,
+          "x": 999999999999.85,
+          "y": -25.25,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 29,
+          "x": 999999999999.85,
+          "y": -23.25,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 50,
+          "x": 999999999999.85,
+          "y": -21.15,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "giant-partial",
+      "zoom": 0.05,
+      "ms": 0.6999999955296516,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 158,
+          "py": 9,
+          "x": -4760114.905639648,
+          "y": -64640,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 29,
+          "x": -4760114.905639648,
+          "y": -59520,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 50,
+          "x": -4760114.905639648,
+          "y": -54144,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "giant-partial",
+      "zoom": 4,
+      "ms": 0.6000000014901161,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 158,
+          "py": 9,
+          "x": -4759735.705639648,
+          "y": -808,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 29,
+          "x": -4759735.705639648,
+          "y": -744,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 50,
+          "x": -4759735.705639648,
+          "y": -676.8,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "giant-partial",
+      "zoom": 128,
+      "ms": 0.5999999940395355,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 158,
+          "py": 9,
+          "x": -4759731.055639649,
+          "y": -25.25,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 29,
+          "x": -4759731.055639649,
+          "y": -23.25,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 158,
+          "py": 50,
+          "x": -4759731.055639649,
+          "y": -21.15,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "127-units",
+      "zoom": 1,
+      "ms": 7.100000001490116,
+      "tested": 759,
+      "mismatches": 11,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 168,
+          "py": 260,
+          "x": 108.8,
+          "y": -19.2,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 189,
+          "py": 260,
+          "x": 377.6,
+          "y": -19.2,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 117,
+          "py": 281,
+          "x": -544,
+          "y": 249.6,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "127-units",
+      "zoom": 4,
+      "ms": 3.7000000029802322,
+      "tested": 689,
+      "mismatches": 122,
+      "partial": 0,
+      "examples": [
+        {
+          "px": 14,
+          "py": 176,
+          "x": -465.6,
+          "y": -273.6,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 45,
+          "py": 176,
+          "x": -366.4,
+          "y": -273.6,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 55,
+          "py": 176,
+          "x": -334.4,
+          "y": -273.6,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 524,
+      "name": "capacity-full",
+      "zoom": 1,
+      "ms": 0.7000000029802322,
+      "tested": 759,
+      "mismatches": 0,
+      "partial": 0,
+      "examples": []
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "overlap",
+      "zoom": 0.005,
+      "ms": 2.399999998509884,
+      "tested": 775,
+      "mismatches": 7,
+      "partial": 75,
+      "examples": [
+        {
+          "px": 677,
+          "py": 370,
+          "x": -4304.758713136729,
+          "y": -1908.9812332439678,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 721,
+          "py": 430,
+          "x": 31933.310991957103,
+          "y": 47506.56836461126,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 765,
+          "py": 430,
+          "x": 68171.38069705093,
+          "y": 47506.56836461126,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "overlap",
+      "zoom": 0.05,
+      "ms": 2.399999998509884,
+      "tested": 774,
+      "mismatches": 0,
+      "partial": 75,
+      "examples": []
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "overlap",
+      "zoom": 1,
+      "ms": 2.3000000044703484,
+      "tested": 772,
+      "mismatches": 8,
+      "partial": 75,
+      "examples": [
+        {
+          "px": 589,
+          "py": 281,
+          "x": -160.029490616622,
+          "y": -226.79356568364614,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 545,
+          "py": 311,
+          "x": -341.21983914209113,
+          "y": -103.25469168900804,
+          "alpha": 6,
+          "expected": true
+        },
+        {
+          "px": 545,
+          "py": 341,
+          "x": -341.21983914209113,
+          "y": 20.284182305630026,
+          "alpha": 6,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "overlap",
+      "zoom": 4,
+      "ms": 1.6000000014901161,
+      "tested": 769,
+      "mismatches": 22,
+      "partial": 43,
+      "examples": [
+        {
+          "px": 677,
+          "py": 72,
+          "x": 219.3378016085791,
+          "y": -159.3619302949062,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 1117,
+          "py": 72,
+          "x": 672.313672922252,
+          "y": -159.3619302949062,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 1161,
+          "py": 162,
+          "x": 717.6112600536194,
+          "y": -66.70777479892763,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "overlap",
+      "zoom": 16,
+      "ms": 0.6999999955296516,
+      "tested": 771,
+      "mismatches": 12,
+      "partial": 9,
+      "examples": [
+        {
+          "px": 677,
+          "py": 370,
+          "x": 223.58445040214477,
+          "y": 149.35656836461126,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 721,
+          "py": 400,
+          "x": 234.9088471849866,
+          "y": 157.07774798927613,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 633,
+          "py": 430,
+          "x": 212.26005361930294,
+          "y": 164.79892761394103,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "overlap",
+      "zoom": 128,
+      "ms": 0.7999999970197678,
+      "tested": 773,
+      "mismatches": 10,
+      "partial": 15,
+      "examples": [
+        {
+          "px": 677,
+          "py": 221,
+          "x": 224.8230563002681,
+          "y": 145.12600536193028,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 633,
+          "py": 281,
+          "x": 223.40750670241286,
+          "y": 147.05630026809652,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 809,
+          "py": 311,
+          "x": 229.0697050938338,
+          "y": 148.0214477211796,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "ally-contact",
+      "zoom": 4,
+      "ms": 1.8000000044703484,
+      "tested": 773,
+      "mismatches": 11,
+      "partial": 62,
+      "examples": [
+        {
+          "px": 16,
+          "py": 12,
+          "x": 237.84450402144773,
+          "y": -171.1313672922252,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 456,
+          "py": 42,
+          "x": 690.8203753351206,
+          "y": -140.24664879356567,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 501,
+          "py": 162,
+          "x": 737.1474530831099,
+          "y": -16.70777479892763,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "ally-contact",
+      "zoom": 16,
+      "ms": 2,
+      "tested": 771,
+      "mismatches": 5,
+      "partial": 69,
+      "examples": [
+        {
+          "px": 545,
+          "py": 281,
+          "x": 888.6112600536193,
+          "y": 176.4504021447721,
+          "alpha": 6,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 311,
+          "x": 922.5844504021447,
+          "y": 184.171581769437,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 430,
+          "x": 922.5844504021447,
+          "y": 214.79892761394103,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "ally-contact",
+      "zoom": 128,
+      "ms": 1.8999999985098839,
+      "tested": 770,
+      "mismatches": 4,
+      "partial": 25,
+      "examples": [
+        {
+          "px": 677,
+          "py": 221,
+          "x": 923.8230563002681,
+          "y": 195.12600536193028,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 251,
+          "x": 923.8230563002681,
+          "y": 196.0911528150134,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 490,
+          "x": 923.8230563002681,
+          "y": 203.78016085790884,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "enemy-halo",
+      "zoom": 4,
+      "ms": 1.5999999940395355,
+      "tested": 775,
+      "mismatches": 24,
+      "partial": 58,
+      "examples": [
+        {
+          "px": 897,
+          "py": 102,
+          "x": -46.48702273458446,
+          "y": -278.47721179624665,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 941,
+          "py": 102,
+          "x": -1.1894356032171913,
+          "y": -278.47721179624665,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 985,
+          "py": 102,
+          "x": 44.10815152815013,
+          "y": -278.47721179624665,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "enemy-halo",
+      "zoom": 16,
+      "ms": 1.2999999970197678,
+      "tested": 775,
+      "mismatches": 11,
+      "partial": 50,
+      "examples": [
+        {
+          "px": 721,
+          "py": 72,
+          "x": -257.4039128150134,
+          "y": -77.34048257372655,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 251,
+          "x": -268.72830959785523,
+          "y": -31.27077747989276,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 281,
+          "x": -268.72830959785523,
+          "y": -23.549597855227884,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "enemy-halo",
+      "zoom": 128,
+      "ms": 1.2000000029802322,
+      "tested": 775,
+      "mismatches": 23,
+      "partial": 50,
+      "examples": [
+        {
+          "px": 677,
+          "py": 42,
+          "x": -267.48970369973193,
+          "y": -10.632707774798927,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 72,
+          "x": -267.48970369973193,
+          "y": -9.667560321715818,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 102,
+          "x": -267.48970369973193,
+          "y": -8.702412868632708,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "coordinate-edge",
+      "zoom": 0.05,
+      "ms": 1.5,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 50,
+      "examples": [
+        {
+          "px": 677,
+          "py": 12,
+          "x": 999999999547.0242,
+          "y": -29690.509383378016,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 42,
+          "x": 999999999547.0242,
+          "y": -27219.731903485255,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 72,
+          "x": 999999999547.0242,
+          "y": -24748.95442359249,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "coordinate-edge",
+      "zoom": 4,
+      "ms": 1.1000000014901161,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 50,
+      "examples": [
+        {
+          "px": 677,
+          "py": 12,
+          "x": 999999999994.3378,
+          "y": -371.1313672922252,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 42,
+          "x": 999999999994.3378,
+          "y": -340.24664879356567,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 72,
+          "x": 999999999994.3378,
+          "y": -309.3619302949062,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "coordinate-edge",
+      "zoom": 128,
+      "ms": 1.1000000014901161,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 50,
+      "examples": [
+        {
+          "px": 677,
+          "py": 12,
+          "x": 999999999999.823,
+          "y": -11.597855227882038,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 42,
+          "x": 999999999999.823,
+          "y": -10.632707774798927,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 72,
+          "x": 999999999999.823,
+          "y": -9.667560321715818,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "giant-partial",
+      "zoom": 0.05,
+      "ms": 1.2999999970197678,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 50,
+      "examples": [
+        {
+          "px": 677,
+          "py": 12,
+          "x": -4760183.881510962,
+          "y": -29690.509383378016,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 42,
+          "x": -4760183.881510962,
+          "y": -27219.731903485255,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 72,
+          "x": -4760183.881510962,
+          "y": -24748.95442359249,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "giant-partial",
+      "zoom": 4,
+      "ms": 1.2999999970197678,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 50,
+      "examples": [
+        {
+          "px": 677,
+          "py": 12,
+          "x": -4759736.56783804,
+          "y": -371.1313672922252,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 42,
+          "x": -4759736.56783804,
+          "y": -340.24664879356567,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 72,
+          "x": -4759736.56783804,
+          "y": -309.3619302949062,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "giant-partial",
+      "zoom": 128,
+      "ms": 1.1000000014901161,
+      "tested": 775,
+      "mismatches": 25,
+      "partial": 50,
+      "examples": [
+        {
+          "px": 677,
+          "py": 12,
+          "x": -4759731.082583348,
+          "y": -11.597855227882038,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 42,
+          "x": -4759731.082583348,
+          "y": -10.632707774798927,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 677,
+          "py": 72,
+          "x": -4759731.082583348,
+          "y": -9.667560321715818,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "127-units",
+      "zoom": 1,
+      "ms": 8,
+      "tested": 767,
+      "mismatches": 24,
+      "partial": 70,
+      "examples": [
+        {
+          "px": 545,
+          "py": 311,
+          "x": -566.2198391420911,
+          "y": -253.25469168900804,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 589,
+          "py": 311,
+          "x": -385.029490616622,
+          "y": -253.25469168900804,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 633,
+          "py": 311,
+          "x": -203.8391420911528,
+          "y": -253.25469168900804,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "127-units",
+      "zoom": 4,
+      "ms": 7.399999998509884,
+      "tested": 754,
+      "mismatches": 168,
+      "partial": 50,
+      "examples": [
+        {
+          "px": 280,
+          "py": 72,
+          "x": -414.36997319034856,
+          "y": -309.3619302949062,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 412,
+          "py": 72,
+          "x": -278.47721179624665,
+          "y": -309.3619302949062,
+          "alpha": 0,
+          "expected": true
+        },
+        {
+          "px": 809,
+          "py": 72,
+          "x": 130.23056300268098,
+          "y": -309.3619302949062,
+          "alpha": 0,
+          "expected": true
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 746,
+      "name": "capacity-full",
+      "zoom": 1,
+      "ms": 0.8000000044703484,
+      "tested": 767,
+      "mismatches": 0,
+      "partial": 0,
+      "examples": []
+    }
+  ],
+  "summary": {
+    "cases": 63,
+    "samples": 48432,
+    "mismatches": 1458,
+    "worstPaintMs": 8,
+    "meanPaintMs": 1.903174602796161
+  }
+}

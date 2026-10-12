@@ -2,64 +2,64 @@
   "samples": 36864,
   "overlaps": 0,
   "unreached": [],
-  "minGenotypes": 93,
-  "minHandGenotypes": 22,
+  "minGenotypes": 113,
+  "minHandGenotypes": 13,
   "rarest": [
     {
-      "id": "ice-mitten",
-      "n": 93,
-      "hand": 47,
-      "selected": 174,
-      "matched": 174
-    },
-    {
-      "id": "brick-petal",
-      "n": 121,
-      "hand": 58,
-      "selected": 221,
-      "matched": 221
-    },
-    {
       "id": "thunder-wheel",
-      "n": 130,
-      "hand": 102,
-      "selected": 589,
-      "matched": 589
+      "n": 113,
+      "hand": 88,
+      "selected": 431,
+      "matched": 431
     },
     {
       "id": "shade-whirl",
+      "n": 119,
+      "hand": 98,
+      "selected": 444,
+      "matched": 444
+    },
+    {
+      "id": "phoenix-vine",
+      "n": 131,
+      "hand": 102,
+      "selected": 497,
+      "matched": 497
+    },
+    {
+      "id": "switchgrass",
+      "n": 131,
+      "hand": 103,
+      "selected": 255,
+      "matched": 255
+    },
+    {
+      "id": "ghost-wisp",
       "n": 131,
       "hand": 109,
-      "selected": 602,
-      "matched": 602
+      "selected": 267,
+      "matched": 267
     },
     {
-      "id": "thunder-bud",
-      "n": 139,
-      "hand": 104,
-      "selected": 199,
-      "matched": 199
-    },
-    {
-      "id": "glacier-cushion",
-      "n": 142,
-      "hand": 66,
-      "selected": 241,
-      "matched": 241
-    },
-    {
-      "id": "night-shield",
-      "n": 142,
-      "hand": 64,
-      "selected": 262,
-      "matched": 262
+      "id": "sprout",
+      "n": 135,
+      "hand": 122,
+      "selected": 187,
+      "matched": 0
     },
     {
       "id": "polar-dancer",
-      "n": 148,
-      "hand": 124,
-      "selected": 683,
-      "matched": 683
+      "n": 138,
+      "hand": 114,
+      "selected": 517,
+      "matched": 517
+    },
+    {
+      "id": "rocket-leaf",
+      "n": 151,
+      "hand": 120,
+      "selected": 304,
+      "matched": 304
     }
   ]
 }

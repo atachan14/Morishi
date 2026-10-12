@@ -1,0 +1,65 @@
+{
+  "samples": 36864,
+  "overlaps": 0,
+  "unreached": [],
+  "minGenotypes": 32,
+  "minHandGenotypes": 7,
+  "rarest": [
+    {
+      "id": "thunder-bud",
+      "n": 32,
+      "hand": 7,
+      "selected": 32,
+      "matched": 32
+    },
+    {
+      "id": "mammoth-flower",
+      "n": 63,
+      "hand": 31,
+      "selected": 252,
+      "matched": 252
+    },
+    {
+      "id": "glacier-cushion",
+      "n": 64,
+      "hand": 31,
+      "selected": 254,
+      "matched": 254
+    },
+    {
+      "id": "ice-mitten",
+      "n": 65,
+      "hand": 32,
+      "selected": 65,
+      "matched": 65
+    },
+    {
+      "id": "brick-petal",
+      "n": 83,
+      "hand": 37,
+      "selected": 83,
+      "matched": 83
+    },
+    {
+      "id": "kiln-flower",
+      "n": 83,
+      "hand": 37,
+      "selected": 332,
+      "matched": 332
+    },
+    {
+      "id": "basalt-garden",
+      "n": 83,
+      "hand": 37,
+      "selected": 332,
+      "matched": 332
+    },
+    {
+      "id": "velvet-armor",
+      "n": 91,
+      "hand": 44,
+      "selected": 364,
+      "matched": 364
+    }
+  ]
+}

@@ -1,0 +1,2461 @@
+{
+  "samples": 36864,
+  "seedPairs": 2048,
+  "projection": "deterministic free growth at unchanged +1 percent point/s; no combat/contact/merging or artificial stat bonuses",
+  "overlaps": 0,
+  "unreached": [],
+  "minGenotypes": 32,
+  "minHandGenotypes": 7,
+  "rows": [
+    {
+      "id": "sprout",
+      "name": "若芽",
+      "phase": "any",
+      "selected": 512,
+      "matched": 0,
+      "genotypes": 339,
+      "handGenotypes": 206,
+      "witness": {
+        "runSeed": 162140167,
+        "source": "hand",
+        "index": 1,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 115.286848,
+          "maxHp": 115.286848,
+          "hpReg": 0.063507,
+          "diameter": 100,
+          "presence": 11.369478,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 3.515989
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.3359
+            },
+            "electric": {
+              "attack": 42.411467,
+              "range": 9.904459,
+              "speed": 1.236345,
+              "defense": 10.264185
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 11.619607
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ember-bud",
+      "name": "火種つぼみ",
+      "phase": "initial",
+      "selected": 334,
+      "matched": 334,
+      "genotypes": 334,
+      "handGenotypes": 219,
+      "witness": {
+        "runSeed": 2281372350,
+        "source": "hand",
+        "index": 0,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 133.402137,
+          "maxHp": 133.402137,
+          "hpReg": 0.153108,
+          "diameter": 100,
+          "presence": 9.208539,
+          "elements": {
+            "fire": {
+              "attack": 50.929857,
+              "range": 13.229291,
+              "speed": 0.998698,
+              "defense": 5.575822
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 11.710293
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 6.125403
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 3.717832
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "spark-trumpet",
+      "name": "火花ラッパ",
+      "phase": "initial",
+      "selected": 384,
+      "matched": 384,
+      "genotypes": 384,
+      "handGenotypes": 66,
+      "witness": {
+        "runSeed": 936694081,
+        "source": "hand",
+        "index": 3,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 113.155125,
+          "maxHp": 113.155125,
+          "hpReg": 0.074803,
+          "diameter": 100,
+          "presence": 11.829606,
+          "elements": {
+            "fire": {
+              "attack": 41.182236,
+              "range": 15.261849,
+              "speed": 0.898826,
+              "defense": 14.142348
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.311228
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 10.190609
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 6.665412
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "candle-sprig",
+      "name": "灯芯こびと",
+      "phase": "initial",
+      "selected": 232,
+      "matched": 232,
+      "genotypes": 232,
+      "handGenotypes": 194,
+      "witness": {
+        "runSeed": 3295276592,
+        "source": "hand",
+        "index": 2,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 98.761956,
+          "maxHp": 98.761956,
+          "hpReg": 0.085062,
+          "diameter": 100,
+          "presence": 7.851912,
+          "elements": {
+            "fire": {
+              "attack": 43.500099,
+              "range": 15.537236,
+              "speed": 1.14791,
+              "defense": 4.7337
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.656975
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.920052
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 6.807356
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "brick-petal",
+      "name": "焼瓦花",
+      "phase": "initial",
+      "selected": 83,
+      "matched": 83,
+      "genotypes": 83,
+      "handGenotypes": 37,
+      "witness": {
+        "runSeed": 2337875280,
+        "source": "hand",
+        "index": 2,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 136.370812,
+          "maxHp": 136.370812,
+          "hpReg": 0.067038,
+          "diameter": 100,
+          "presence": 10.330491,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 10.868228
+            },
+            "ice": {
+              "attack": 33.450753,
+              "range": 13.969471,
+              "speed": 1.2882,
+              "defense": 10.656029
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 9.516846
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0.761261
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "blast-cabbage",
+      "name": "爆裂キャベツ",
+      "phase": "mid",
+      "selected": 1214,
+      "matched": 1214,
+      "genotypes": 332,
+      "handGenotypes": 218,
+      "witness": {
+        "runSeed": 2281372350,
+        "source": "hand",
+        "index": 0,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 200.103206,
+          "maxHp": 200.103206,
+          "hpReg": 0.229662,
+          "diameter": 150,
+          "presence": 13.812808,
+          "elements": {
+            "fire": {
+              "attack": 76.394785,
+              "range": 19.843936,
+              "speed": 1.498047,
+              "defense": 8.363733
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 17.56544
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 9.188105
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.576748
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "fire-archer",
+      "name": "ファイアアーチャー",
+      "phase": "mid",
+      "selected": 1059,
+      "matched": 1059,
+      "genotypes": 353,
+      "handGenotypes": 56,
+      "witness": {
+        "runSeed": 936694081,
+        "source": "hand",
+        "index": 3,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 169.732687,
+          "maxHp": 169.732687,
+          "hpReg": 0.112204,
+          "diameter": 150,
+          "presence": 17.744409,
+          "elements": {
+            "fire": {
+              "attack": 61.773354,
+              "range": 22.892774,
+              "speed": 1.348239,
+              "defense": 21.213522
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 7.966842
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 15.285913
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 9.998118
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "rocket-leaf",
+      "name": "ロケット葉",
+      "phase": "mid",
+      "selected": 848,
+      "matched": 848,
+      "genotypes": 230,
+      "handGenotypes": 193,
+      "witness": {
+        "runSeed": 3295276592,
+        "source": "hand",
+        "index": 2,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 148.142934,
+          "maxHp": 148.142934,
+          "hpReg": 0.127593,
+          "diameter": 150,
+          "presence": 11.777868,
+          "elements": {
+            "fire": {
+              "attack": 65.250148,
+              "range": 23.305854,
+              "speed": 1.721865,
+              "defense": 7.10055
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 8.485463
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 8.880078
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 10.211034
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "kiln-flower",
+      "name": "炉守り花",
+      "phase": "mid",
+      "selected": 332,
+      "matched": 332,
+      "genotypes": 83,
+      "handGenotypes": 37,
+      "witness": {
+        "runSeed": 2337875280,
+        "source": "hand",
+        "index": 2,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 204.556218,
+          "maxHp": 204.556218,
+          "hpReg": 0.100557,
+          "diameter": 150,
+          "presence": 15.495736,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 16.302342
+            },
+            "ice": {
+              "attack": 50.17613,
+              "range": 20.954207,
+              "speed": 1.9323,
+              "defense": 15.984044
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 14.275269
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.141891
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "volcano-bloom",
+      "name": "火山咲き",
+      "phase": "high",
+      "selected": 1100,
+      "matched": 1100,
+      "genotypes": 275,
+      "handGenotypes": 180,
+      "witness": {
+        "runSeed": 2281372350,
+        "source": "hand",
+        "index": 0,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 533.74195,
+          "maxHp": 533.74195,
+          "hpReg": 0.612585,
+          "diameter": 400.1,
+          "presence": 36.843365,
+          "elements": {
+            "fire": {
+              "attack": 203.770358,
+              "range": 52.930393,
+              "speed": 3.995791,
+              "defense": 22.308864
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 46.852882
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 24.507737
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 14.875046
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "siege-lotus",
+      "name": "砲蓮",
+      "phase": "high",
+      "selected": 1288,
+      "matched": 1288,
+      "genotypes": 322,
+      "handGenotypes": 56,
+      "witness": {
+        "runSeed": 936694081,
+        "source": "hand",
+        "index": 3,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 452.733655,
+          "maxHp": 452.733655,
+          "hpReg": 0.299287,
+          "diameter": 400.1,
+          "presence": 47.330254,
+          "elements": {
+            "fire": {
+              "attack": 164.770126,
+              "range": 61.062658,
+              "speed": 3.596203,
+              "defense": 56.583534
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 21.250223
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 40.772627
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 26.668313
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "phoenix-vine",
+      "name": "不死鳥ツル",
+      "phase": "high",
+      "selected": 776,
+      "matched": 776,
+      "genotypes": 194,
+      "handGenotypes": 162,
+      "witness": {
+        "runSeed": 3295276592,
+        "source": "hand",
+        "index": 2,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 395.146586,
+          "maxHp": 395.146586,
+          "hpReg": 0.340333,
+          "diameter": 400.1,
+          "presence": 31.4155,
+          "elements": {
+            "fire": {
+              "attack": 174.043896,
+              "range": 62.164481,
+              "speed": 4.592788,
+              "defense": 18.939534
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 22.633557
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 23.686128
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 27.236231
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "basalt-garden",
+      "name": "玄武岩樹",
+      "phase": "high",
+      "selected": 332,
+      "matched": 332,
+      "genotypes": 83,
+      "handGenotypes": 37,
+      "witness": {
+        "runSeed": 2337875280,
+        "source": "hand",
+        "index": 2,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 545.619619,
+          "maxHp": 545.619619,
+          "hpReg": 0.268219,
+          "diameter": 400.1,
+          "presence": 41.332294,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 43.48378
+            },
+            "ice": {
+              "attack": 133.836463,
+              "range": 55.891853,
+              "speed": 5.154088,
+              "defense": 42.634772
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 38.076901
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 3.045805
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "snow-pea",
+      "name": "雪豆",
+      "phase": "initial",
+      "selected": 357,
+      "matched": 357,
+      "genotypes": 357,
+      "handGenotypes": 258,
+      "witness": {
+        "runSeed": 3055926264,
+        "source": "hand",
+        "index": 2,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 95.394181,
+          "maxHp": 95.394181,
+          "hpReg": 0.126077,
+          "diameter": 100,
+          "presence": 10.325808,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.929799
+            },
+            "ice": {
+              "attack": 53.540581,
+              "range": 11.703472,
+              "speed": 1.057314,
+              "defense": 4.713042
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 7.335227
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 9.513385
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ice-flute",
+      "name": "氷笛草",
+      "phase": "initial",
+      "selected": 388,
+      "matched": 388,
+      "genotypes": 388,
+      "handGenotypes": 58,
+      "witness": {
+        "runSeed": 2907999635,
+        "source": "hand",
+        "index": 1,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 125.548353,
+          "maxHp": 125.548353,
+          "hpReg": 0.148689,
+          "diameter": 100,
+          "presence": 11.00616,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 8.919928
+            },
+            "ice": {
+              "attack": 40.523701,
+              "range": 14.903005,
+              "speed": 1.061556,
+              "defense": 8.831047
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.077322
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 4.908281
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "frost-skater",
+      "name": "霜すべり",
+      "phase": "initial",
+      "selected": 217,
+      "matched": 217,
+      "genotypes": 217,
+      "handGenotypes": 188,
+      "witness": {
+        "runSeed": 2429298979,
+        "source": "hand",
+        "index": 1,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 115.801236,
+          "maxHp": 115.801236,
+          "hpReg": 0.09514,
+          "diameter": 100,
+          "presence": 8.347944,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.303885
+            },
+            "ice": {
+              "attack": 41.898946,
+              "range": 13.786051,
+              "speed": 1.155219,
+              "defense": 15.634794
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0.348515
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 17.674041
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ice-mitten",
+      "name": "氷手袋花",
+      "phase": "initial",
+      "selected": 65,
+      "matched": 65,
+      "genotypes": 65,
+      "handGenotypes": 32,
+      "witness": {
+        "runSeed": 1471897667,
+        "source": "hand",
+        "index": 1,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 123.707934,
+          "maxHp": 123.707934,
+          "hpReg": 0.098138,
+          "diameter": 100,
+          "presence": 8.472711,
+          "elements": {
+            "fire": {
+              "attack": 33.85275,
+              "range": 14.63645,
+              "speed": 1.150607,
+              "defense": 0.236296
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 21.578416
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 6.910392
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 11.177034
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "hail-cabbage",
+      "name": "雹玉キャベツ",
+      "phase": "mid",
+      "selected": 1326,
+      "matched": 1326,
+      "genotypes": 354,
+      "handGenotypes": 256,
+      "witness": {
+        "runSeed": 3055926264,
+        "source": "hand",
+        "index": 2,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 143.091272,
+          "maxHp": 143.091272,
+          "hpReg": 0.189115,
+          "diameter": 150,
+          "presence": 15.488712,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 2.894699
+            },
+            "ice": {
+              "attack": 80.310872,
+              "range": 17.555208,
+              "speed": 1.585971,
+              "defense": 7.069563
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 11.00284
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 14.270077
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "crystal-archer",
+      "name": "水晶アーチャー",
+      "phase": "mid",
+      "selected": 1384,
+      "matched": 1384,
+      "genotypes": 383,
+      "handGenotypes": 58,
+      "witness": {
+        "runSeed": 2907999635,
+        "source": "hand",
+        "index": 1,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 188.32253,
+          "maxHp": 188.32253,
+          "hpReg": 0.223033,
+          "diameter": 150,
+          "presence": 16.50924,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 13.379892
+            },
+            "ice": {
+              "attack": 60.785552,
+              "range": 22.354508,
+              "speed": 1.592334,
+              "defense": 13.246571
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.615983
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 7.362421
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "blizzard-wing",
+      "name": "吹雪羽草",
+      "phase": "mid",
+      "selected": 822,
+      "matched": 822,
+      "genotypes": 216,
+      "handGenotypes": 187,
+      "witness": {
+        "runSeed": 2429298979,
+        "source": "hand",
+        "index": 1,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 173.701854,
+          "maxHp": 173.701854,
+          "hpReg": 0.14271,
+          "diameter": 150,
+          "presence": 12.521916,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.955827
+            },
+            "ice": {
+              "attack": 62.848419,
+              "range": 20.679077,
+              "speed": 1.732829,
+              "defense": 23.452191
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0.522773
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 26.511061
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "glacier-cushion",
+      "name": "氷河クッション",
+      "phase": "mid",
+      "selected": 254,
+      "matched": 254,
+      "genotypes": 64,
+      "handGenotypes": 31,
+      "witness": {
+        "runSeed": 1471897667,
+        "source": "hand",
+        "index": 1,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 185.561901,
+          "maxHp": 185.561901,
+          "hpReg": 0.147207,
+          "diameter": 150,
+          "presence": 12.709067,
+          "elements": {
+            "fire": {
+              "attack": 50.779125,
+              "range": 21.954675,
+              "speed": 1.72591,
+              "defense": 0.354444
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 32.367624
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 10.365588
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 16.765551
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ice-jaw",
+      "name": "氷牙花",
+      "phase": "high",
+      "selected": 1236,
+      "matched": 1236,
+      "genotypes": 309,
+      "handGenotypes": 223,
+      "witness": {
+        "runSeed": 788767452,
+        "source": "hand",
+        "index": 2,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 466.683026,
+          "maxHp": 466.683026,
+          "hpReg": 0.49692,
+          "diameter": 400.1,
+          "presence": 39.245957,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 21.527
+            },
+            "ice": {
+              "attack": 184.467941,
+              "range": 45.455825,
+              "speed": 3.797641,
+              "defense": 64.537786
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 49.314414
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.261139
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "aurora-spire",
+      "name": "オーロラ塔草",
+      "phase": "high",
+      "selected": 1236,
+      "matched": 1236,
+      "genotypes": 309,
+      "handGenotypes": 41,
+      "witness": {
+        "runSeed": 2907999635,
+        "source": "hand",
+        "index": 1,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 502.31896,
+          "maxHp": 502.31896,
+          "hpReg": 0.594905,
+          "diameter": 400.1,
+          "presence": 44.035646,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 35.688632
+            },
+            "ice": {
+              "attack": 162.135328,
+              "range": 59.626923,
+              "speed": 4.247286,
+              "defense": 35.333019
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 4.310365
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 19.638032
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "polar-dancer",
+      "name": "極光ダンサー",
+      "phase": "high",
+      "selected": 780,
+      "matched": 780,
+      "genotypes": 195,
+      "handGenotypes": 169,
+      "witness": {
+        "runSeed": 2429298979,
+        "source": "hand",
+        "index": 1,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 463.320745,
+          "maxHp": 463.320745,
+          "hpReg": 0.380655,
+          "diameter": 400.1,
+          "presence": 33.400124,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.216844
+            },
+            "ice": {
+              "attack": 167.637683,
+              "range": 55.15799,
+              "speed": 4.622031,
+              "defense": 62.554811
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.394409
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 70.713838
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mammoth-flower",
+      "name": "マンモス花",
+      "phase": "high",
+      "selected": 252,
+      "matched": 252,
+      "genotypes": 63,
+      "handGenotypes": 31,
+      "witness": {
+        "runSeed": 1471897667,
+        "source": "hand",
+        "index": 1,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 494.955444,
+          "maxHp": 494.955444,
+          "hpReg": 0.39265,
+          "diameter": 400.1,
+          "presence": 33.899317,
+          "elements": {
+            "fire": {
+              "attack": 135.444853,
+              "range": 58.560436,
+              "speed": 4.603579,
+              "defense": 0.94542
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 86.335242
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 27.648478
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 44.719313
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "static-bud",
+      "name": "静電つぼみ",
+      "phase": "initial",
+      "selected": 334,
+      "matched": 334,
+      "genotypes": 334,
+      "handGenotypes": 221,
+      "witness": {
+        "runSeed": 253563866,
+        "source": "hand",
+        "index": 0,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 116.840489,
+          "maxHp": 116.840489,
+          "hpReg": 0.096572,
+          "diameter": 100,
+          "presence": 10.016976,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 14.146116
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 7.332559
+            },
+            "electric": {
+              "attack": 54.374906,
+              "range": 11.904039,
+              "speed": 1.357272,
+              "defense": 3.541314
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 14.671825
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "antenna-flower",
+      "name": "アンテナ花",
+      "phase": "initial",
+      "selected": 385,
+      "matched": 385,
+      "genotypes": 385,
+      "handGenotypes": 62,
+      "witness": {
+        "runSeed": 1267468108,
+        "source": "hand",
+        "index": 2,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 125.252383,
+          "maxHp": 125.252383,
+          "hpReg": 0.116125,
+          "diameter": 100,
+          "presence": 9.774876,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.553828
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 10.634069
+            },
+            "electric": {
+              "attack": 39.096954,
+              "range": 15.932981,
+              "speed": 0.821618,
+              "defense": 10.570359
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 9.95542
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "thunder-bud",
+      "name": "雷鳴つぼみ",
+      "phase": "initial",
+      "selected": 32,
+      "matched": 32,
+      "genotypes": 32,
+      "handGenotypes": 7,
+      "witness": {
+        "runSeed": 2932730294,
+        "source": "hand",
+        "index": 0,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 135.611819,
+          "maxHp": 135.611819,
+          "hpReg": 0.149732,
+          "diameter": 100,
+          "presence": 10.550664,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 12.154218
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 8.301453
+            },
+            "electric": {
+              "attack": 52.111787,
+              "range": 11.417715,
+              "speed": 1.377405,
+              "defense": 9.977424
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 4.825525
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "rubber-petal",
+      "name": "絶縁ゴム花",
+      "phase": "initial",
+      "selected": 106,
+      "matched": 106,
+      "genotypes": 106,
+      "handGenotypes": 56,
+      "witness": {
+        "runSeed": 14213538,
+        "source": "hand",
+        "index": 0,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 134.129992,
+          "maxHp": 134.129992,
+          "hpReg": 0.075446,
+          "diameter": 100,
+          "presence": 7.687854,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 3.054896
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 7.59048
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 8.357894
+            },
+            "dark": {
+              "attack": 35.016681,
+              "range": 13.619712,
+              "speed": 0.965353,
+              "defense": 5.412717
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "tesla-cactus",
+      "name": "テスラサボテン",
+      "phase": "mid",
+      "selected": 1234,
+      "matched": 1234,
+      "genotypes": 332,
+      "handGenotypes": 219,
+      "witness": {
+        "runSeed": 253563866,
+        "source": "hand",
+        "index": 0,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 175.260734,
+          "maxHp": 175.260734,
+          "hpReg": 0.144858,
+          "diameter": 150,
+          "presence": 15.025464,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 21.219174
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 10.998838
+            },
+            "electric": {
+              "attack": 81.562359,
+              "range": 17.856058,
+              "speed": 2.035908,
+              "defense": 5.311971
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 22.007738
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "coil-lily",
+      "name": "コイル百合",
+      "phase": "mid",
+      "selected": 1394,
+      "matched": 1394,
+      "genotypes": 384,
+      "handGenotypes": 61,
+      "witness": {
+        "runSeed": 1267468108,
+        "source": "hand",
+        "index": 2,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 187.878574,
+          "maxHp": 187.878574,
+          "hpReg": 0.174187,
+          "diameter": 150,
+          "presence": 14.662314,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 2.330742
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 15.951104
+            },
+            "electric": {
+              "attack": 58.645431,
+              "range": 23.899472,
+              "speed": 1.232427,
+              "defense": 15.855538
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 14.93313
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "switchgrass",
+      "name": "早替えススキ",
+      "phase": "mid",
+      "selected": 708,
+      "matched": 708,
+      "genotypes": 195,
+      "handGenotypes": 157,
+      "witness": {
+        "runSeed": 162140167,
+        "source": "hand",
+        "index": 1,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 172.930272,
+          "maxHp": 172.930272,
+          "hpReg": 0.09526,
+          "diameter": 150,
+          "presence": 17.054217,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.273983
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 2.00385
+            },
+            "electric": {
+              "attack": 63.617201,
+              "range": 14.856688,
+              "speed": 1.854518,
+              "defense": 15.396278
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 17.42941
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "capacitor-gourd",
+      "name": "蓄電ひょうたん",
+      "phase": "mid",
+      "selected": 420,
+      "matched": 420,
+      "genotypes": 105,
+      "handGenotypes": 56,
+      "witness": {
+        "runSeed": 14213538,
+        "source": "hand",
+        "index": 0,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 201.194988,
+          "maxHp": 201.194988,
+          "hpReg": 0.113169,
+          "diameter": 150,
+          "presence": 11.531781,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 4.582344
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 11.38572
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 12.536841
+            },
+            "dark": {
+              "attack": 52.525021,
+              "range": 20.429568,
+              "speed": 1.44803,
+              "defense": 8.119075
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "storm-maw",
+      "name": "雷雲あぎと",
+      "phase": "high",
+      "selected": 1140,
+      "matched": 1140,
+      "genotypes": 285,
+      "handGenotypes": 185,
+      "witness": {
+        "runSeed": 253563866,
+        "source": "hand",
+        "index": 0,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 467.478796,
+          "maxHp": 467.478796,
+          "hpReg": 0.386385,
+          "diameter": 400.1,
+          "presence": 40.077921,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 56.59861
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 29.337569
+            },
+            "electric": {
+              "attack": 217.553999,
+              "range": 47.62806,
+              "speed": 5.430445,
+              "defense": 14.168797
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 58.701972
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "lightning-spire",
+      "name": "稲妻塔花",
+      "phase": "high",
+      "selected": 1252,
+      "matched": 1252,
+      "genotypes": 313,
+      "handGenotypes": 50,
+      "witness": {
+        "runSeed": 1267468108,
+        "source": "hand",
+        "index": 2,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 501.134784,
+          "maxHp": 501.134784,
+          "hpReg": 0.464616,
+          "diameter": 400.1,
+          "presence": 39.109279,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 6.216866
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 42.54691
+            },
+            "electric": {
+              "attack": 156.426913,
+              "range": 63.747857,
+              "speed": 3.287294,
+              "defense": 42.292006
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 39.831635
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "thunder-wheel",
+      "name": "雷輪草",
+      "phase": "high",
+      "selected": 636,
+      "matched": 636,
+      "genotypes": 159,
+      "handGenotypes": 129,
+      "witness": {
+        "runSeed": 162140167,
+        "source": "hand",
+        "index": 1,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 461.262679,
+          "maxHp": 461.262679,
+          "hpReg": 0.254092,
+          "diameter": 400.1,
+          "presence": 45.489281,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 14.067472
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.344936
+            },
+            "electric": {
+              "attack": 169.688279,
+              "range": 39.62774,
+              "speed": 4.946616,
+              "defense": 41.067004
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 46.490048
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "fortress-fern",
+      "name": "要塞シダ",
+      "phase": "high",
+      "selected": 420,
+      "matched": 420,
+      "genotypes": 105,
+      "handGenotypes": 56,
+      "witness": {
+        "runSeed": 14213538,
+        "source": "hand",
+        "index": 0,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 536.654098,
+          "maxHp": 536.654098,
+          "hpReg": 0.301859,
+          "diameter": 400.1,
+          "presence": 30.759104,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 12.222639
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 30.36951
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 33.439934
+            },
+            "dark": {
+              "attack": 140.101741,
+              "range": 54.492468,
+              "speed": 3.862377,
+              "defense": 21.656281
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ink-bud",
+      "name": "墨つぼみ",
+      "phase": "initial",
+      "selected": 326,
+      "matched": 326,
+      "genotypes": 326,
+      "handGenotypes": 223,
+      "witness": {
+        "runSeed": 1654745065,
+        "source": "hand",
+        "index": 3,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 127.659049,
+          "maxHp": 127.659049,
+          "hpReg": 0.10767,
+          "diameter": 100,
+          "presence": 11.244177,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 11.500249
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 4.020848
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 3.863563
+            },
+            "dark": {
+              "attack": 48.549542,
+              "range": 12.266351,
+              "speed": 0.823943,
+              "defense": 18.498238
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "dusk-trumpet",
+      "name": "夕闇ラッパ",
+      "phase": "initial",
+      "selected": 395,
+      "matched": 395,
+      "genotypes": 395,
+      "handGenotypes": 57,
+      "witness": {
+        "runSeed": 3443203221,
+        "source": "hand",
+        "index": 3,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 126.818132,
+          "maxHp": 126.818132,
+          "hpReg": 0.095881,
+          "diameter": 100,
+          "presence": 9.86484,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.394215
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.854755
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.746346
+            },
+            "dark": {
+              "attack": 36.924732,
+              "range": 14.612445,
+              "speed": 1.102896,
+              "defense": 7.58058
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "shadow-skipper",
+      "name": "影跳び草",
+      "phase": "initial",
+      "selected": 200,
+      "matched": 200,
+      "genotypes": 200,
+      "handGenotypes": 174,
+      "witness": {
+        "runSeed": 401490495,
+        "source": "hand",
+        "index": 1,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 107.442553,
+          "maxHp": 107.442553,
+          "hpReg": 0.085112,
+          "diameter": 100,
+          "presence": 8.632827,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 20.703287
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 7.896201
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.533326
+            },
+            "dark": {
+              "attack": 35.680181,
+              "range": 9.540116,
+              "speed": 1.371193,
+              "defense": 4.475196
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "night-shield",
+      "name": "夜盾花",
+      "phase": "initial",
+      "selected": 93,
+      "matched": 93,
+      "genotypes": 93,
+      "handGenotypes": 45,
+      "witness": {
+        "runSeed": 3921903877,
+        "source": "hand",
+        "index": 3,
+        "ticks": 0,
+        "diameter": 100,
+        "stats": {
+          "hp": 132.538384,
+          "maxHp": 132.538384,
+          "hpReg": 0.099237,
+          "diameter": 100,
+          "presence": 11.338446,
+          "elements": {
+            "fire": {
+              "attack": 36.484627,
+              "range": 12.611611,
+              "speed": 0.945421,
+              "defense": 11.510058
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 2.05546
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 8.274859
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 15.026567
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "hungry-vine",
+      "name": "飢えツル",
+      "phase": "mid",
+      "selected": 1212,
+      "matched": 1212,
+      "genotypes": 325,
+      "handGenotypes": 222,
+      "witness": {
+        "runSeed": 1654745065,
+        "source": "hand",
+        "index": 3,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 191.488574,
+          "maxHp": 191.488574,
+          "hpReg": 0.161505,
+          "diameter": 150,
+          "presence": 16.866266,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 17.250374
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 6.031272
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.795345
+            },
+            "dark": {
+              "attack": 72.824313,
+              "range": 18.399527,
+              "speed": 1.235915,
+              "defense": 27.747357
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "moon-archer",
+      "name": "月影アーチャー",
+      "phase": "mid",
+      "selected": 1450,
+      "matched": 1450,
+      "genotypes": 392,
+      "handGenotypes": 57,
+      "witness": {
+        "runSeed": 3443203221,
+        "source": "hand",
+        "index": 3,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 190.227198,
+          "maxHp": 190.227198,
+          "hpReg": 0.143821,
+          "diameter": 150,
+          "presence": 14.79726,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 2.091322
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 8.782132
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 8.619519
+            },
+            "dark": {
+              "attack": 55.387098,
+              "range": 21.918667,
+              "speed": 1.654344,
+              "defense": 11.37087
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ghost-wisp",
+      "name": "幽灯草",
+      "phase": "mid",
+      "selected": 730,
+      "matched": 730,
+      "genotypes": 199,
+      "handGenotypes": 173,
+      "witness": {
+        "runSeed": 401490495,
+        "source": "hand",
+        "index": 1,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 161.16383,
+          "maxHp": 161.16383,
+          "hpReg": 0.127668,
+          "diameter": 150,
+          "presence": 12.949241,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 31.05493
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 11.844302
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 2.299989
+            },
+            "dark": {
+              "attack": 53.520271,
+              "range": 14.310174,
+              "speed": 2.05679,
+              "defense": 6.712794
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "velvet-armor",
+      "name": "黒絨鎧草",
+      "phase": "mid",
+      "selected": 364,
+      "matched": 364,
+      "genotypes": 91,
+      "handGenotypes": 44,
+      "witness": {
+        "runSeed": 3921903877,
+        "source": "hand",
+        "index": 3,
+        "ticks": 500,
+        "diameter": 150,
+        "stats": {
+          "hp": 198.807576,
+          "maxHp": 198.807576,
+          "hpReg": 0.148856,
+          "diameter": 150,
+          "presence": 17.007669,
+          "elements": {
+            "fire": {
+              "attack": 54.726941,
+              "range": 18.917417,
+              "speed": 1.418131,
+              "defense": 17.265087
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 3.08319
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 12.412288
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 22.539851
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "shadow-maw",
+      "name": "喰らい蔓",
+      "phase": "high",
+      "selected": 1124,
+      "matched": 1124,
+      "genotypes": 281,
+      "handGenotypes": 190,
+      "witness": {
+        "runSeed": 1654745065,
+        "source": "hand",
+        "index": 3,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 510.763855,
+          "maxHp": 510.763855,
+          "hpReg": 0.430788,
+          "diameter": 400.1,
+          "presence": 44.987952,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 46.012496
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 16.087413
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 15.458116
+            },
+            "dark": {
+              "attack": 194.246718,
+              "range": 49.07767,
+              "speed": 3.296596,
+              "defense": 74.01145
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "abyss-eye",
+      "name": "深淵の目玉花",
+      "phase": "high",
+      "selected": 1332,
+      "matched": 1332,
+      "genotypes": 333,
+      "handGenotypes": 49,
+      "witness": {
+        "runSeed": 3443203221,
+        "source": "hand",
+        "index": 3,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 507.399346,
+          "maxHp": 507.399346,
+          "hpReg": 0.38362,
+          "diameter": 400.1,
+          "presence": 39.469225,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 5.578254
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 23.424875
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 22.99113
+            },
+            "dark": {
+              "attack": 147.735853,
+              "range": 58.464392,
+              "speed": 4.412687,
+              "defense": 30.329901
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "shade-whirl",
+      "name": "暗黒旋回草",
+      "phase": "high",
+      "selected": 664,
+      "matched": 664,
+      "genotypes": 166,
+      "handGenotypes": 143,
+      "witness": {
+        "runSeed": 401490495,
+        "source": "hand",
+        "index": 1,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 429.877655,
+          "maxHp": 429.877655,
+          "hpReg": 0.340533,
+          "diameter": 400.1,
+          "presence": 34.539941,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 82.833851
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 31.5927
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 6.134837
+            },
+            "dark": {
+              "attack": 142.756404,
+              "range": 38.170004,
+              "speed": 5.486143,
+              "defense": 17.905259
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "obsidian-lotus",
+      "name": "黒曜蓮",
+      "phase": "high",
+      "selected": 364,
+      "matched": 364,
+      "genotypes": 91,
+      "handGenotypes": 44,
+      "witness": {
+        "runSeed": 3921903877,
+        "source": "hand",
+        "index": 3,
+        "ticks": 3001,
+        "diameter": 400.1,
+        "stats": {
+          "hp": 530.286074,
+          "maxHp": 530.286074,
+          "hpReg": 0.397047,
+          "diameter": 400.1,
+          "presence": 45.365122,
+          "elements": {
+            "fire": {
+              "attack": 145.974993,
+              "range": 50.459056,
+              "speed": 3.782629,
+              "defense": 46.051742
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 8.223895
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 33.107711
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 60.121295
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "nurse-flower",
+      "name": "癒し蓮",
+      "phase": "any",
+      "selected": 3738,
+      "matched": 3738,
+      "genotypes": 613,
+      "handGenotypes": 303,
+      "witness": {
+        "runSeed": 3682553549,
+        "source": "hand",
+        "index": 3,
+        "ticks": 1001,
+        "diameter": 200.1,
+        "stats": {
+          "hp": 202.18523,
+          "maxHp": 202.18523,
+          "hpReg": 0.319075,
+          "diameter": 200.1,
+          "presence": 16.64878,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 1.698869
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 15.361613
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 20.62975
+            },
+            "dark": {
+              "attack": 93.715802,
+              "range": 31.458005,
+              "speed": 1.831381,
+              "defense": 7.942947
+            }
+          }
+        }
+      }
+    }
+  ]
+}

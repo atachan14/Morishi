@@ -1,0 +1,261 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "name": "new-percent",
+      "cardStats": {
+        "hp": 95.830774,
+        "maxHp": 95.830774,
+        "hpReg": 0.067153,
+        "diameter": 100,
+        "presence": 8.148117,
+        "elements": {
+          "fire": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 10.192382
+          },
+          "ice": {
+            "attack": 51.304742,
+            "range": 14.898094,
+            "speed": 0.818005,
+            "defense": 10.164892
+          },
+          "electric": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 9.1688
+          },
+          "dark": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0.644334
+          }
+        }
+      },
+      "cardDisplay": "HP 95.8Max 95.8HPReg 0.07/sサイズ100.0%存在感8.1炎防御10.2氷防御10.2雷防御9.2闇防御0.6",
+      "backupPreserved": false,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 1366,
+      "height": 900,
+      "name": "legacy-migration",
+      "cardStats": {
+        "hp": 145.351525,
+        "maxHp": 145.351525,
+        "hpReg": 0.144549,
+        "diameter": 8,
+        "presence": 7.292565,
+        "elements": {
+          "fire": {
+            "attack": 43.503154,
+            "range": 15.929428,
+            "speed": 0.914922,
+            "defense": 22.781354
+          },
+          "ice": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0
+          },
+          "electric": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0
+          },
+          "dark": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0
+          }
+        }
+      },
+      "cardDisplay": "HP 145.4Max 145.4HPReg 0.14/sサイズ8.0%存在感7.3炎防御22.8氷防御0.0雷防御0.0闇防御0.0",
+      "backupPreserved": true,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "new-percent",
+      "cardStats": {
+        "hp": 95.830774,
+        "maxHp": 95.830774,
+        "hpReg": 0.067153,
+        "diameter": 100,
+        "presence": 8.148117,
+        "elements": {
+          "fire": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 10.192382
+          },
+          "ice": {
+            "attack": 51.304742,
+            "range": 14.898094,
+            "speed": 0.818005,
+            "defense": 10.164892
+          },
+          "electric": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 9.1688
+          },
+          "dark": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0.644334
+          }
+        }
+      },
+      "cardDisplay": "HP 95.8Max 95.8HPReg 0.07/sサイズ100.0%存在感8.1炎防御10.2氷防御10.2雷防御9.2闇防御0.6",
+      "backupPreserved": false,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "legacy-migration",
+      "cardStats": {
+        "hp": 145.351525,
+        "maxHp": 145.351525,
+        "hpReg": 0.144549,
+        "diameter": 8,
+        "presence": 7.292565,
+        "elements": {
+          "fire": {
+            "attack": 43.503154,
+            "range": 15.929428,
+            "speed": 0.914922,
+            "defense": 22.781354
+          },
+          "ice": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0
+          },
+          "electric": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0
+          },
+          "dark": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0
+          }
+        }
+      },
+      "cardDisplay": "HP 145.4Max 145.4HPReg 0.14/sサイズ8.0%存在感7.3炎防御22.8氷防御0.0雷防御0.0闇防御0.0",
+      "backupPreserved": true,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "name": "new-percent",
+      "cardStats": {
+        "hp": 95.830774,
+        "maxHp": 95.830774,
+        "hpReg": 0.067153,
+        "diameter": 100,
+        "presence": 8.148117,
+        "elements": {
+          "fire": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 10.192382
+          },
+          "ice": {
+            "attack": 51.304742,
+            "range": 14.898094,
+            "speed": 0.818005,
+            "defense": 10.164892
+          },
+          "electric": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 9.1688
+          },
+          "dark": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0.644334
+          }
+        }
+      },
+      "cardDisplay": "HP 95.8Max 95.8HPReg 0.07/sサイズ100.0%存在感8.1炎防御10.2氷防御10.2雷防御9.2闇防御0.6",
+      "backupPreserved": false,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "name": "legacy-migration",
+      "cardStats": {
+        "hp": 145.351525,
+        "maxHp": 145.351525,
+        "hpReg": 0.144549,
+        "diameter": 8,
+        "presence": 7.292565,
+        "elements": {
+          "fire": {
+            "attack": 43.503154,
+            "range": 15.929428,
+            "speed": 0.914922,
+            "defense": 22.781354
+          },
+          "ice": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0
+          },
+          "electric": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0
+          },
+          "dark": {
+            "attack": 0,
+            "range": 0,
+            "speed": 0,
+            "defense": 0
+          }
+        }
+      },
+      "cardDisplay": "HP 145.4Max 145.4HPReg 0.14/sサイズ8.0%存在感7.3炎防御22.8氷防御0.0雷防御0.0闇防御0.0",
+      "backupPreserved": true,
+      "forwardMatches": true,
+      "reloadMatches": true
+    }
+  ]
+}

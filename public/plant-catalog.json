@@ -44,7 +44,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.fire.attack",
@@ -92,7 +92,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -139,7 +139,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.fire.attack",
@@ -181,7 +181,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -228,7 +228,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.fire.attack",
@@ -276,7 +276,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -323,7 +323,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.fire.defense",
@@ -377,7 +377,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -424,12 +424,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.fire.attack",
@@ -477,7 +477,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -524,12 +524,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.fire.attack",
@@ -581,7 +581,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -628,12 +628,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.fire.attack",
@@ -681,7 +681,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -728,12 +728,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.fire.defense",
@@ -787,7 +787,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -834,7 +834,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.fire.attack",
@@ -882,7 +882,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -929,7 +929,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.fire.attack",
@@ -971,7 +971,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1018,7 +1018,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.fire.attack",
@@ -1066,7 +1066,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1113,7 +1113,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.fire.defense",
@@ -1167,7 +1167,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1214,7 +1214,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.ice.attack",
@@ -1262,7 +1262,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1309,7 +1309,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.ice.attack",
@@ -1351,7 +1351,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1398,7 +1398,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.ice.attack",
@@ -1446,7 +1446,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1493,7 +1493,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.ice.defense",
@@ -1547,7 +1547,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1594,12 +1594,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.ice.attack",
@@ -1647,7 +1647,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1694,12 +1694,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.ice.attack",
@@ -1741,7 +1741,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1788,12 +1788,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.ice.attack",
@@ -1841,7 +1841,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1888,12 +1888,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.ice.defense",
@@ -1947,7 +1947,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -1994,7 +1994,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.ice.attack",
@@ -2042,7 +2042,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2089,7 +2089,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.ice.attack",
@@ -2131,7 +2131,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2178,7 +2178,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.ice.attack",
@@ -2226,7 +2226,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2273,7 +2273,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.ice.defense",
@@ -2337,7 +2337,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2384,7 +2384,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.electric.attack",
@@ -2432,7 +2432,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2479,7 +2479,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.electric.attack",
@@ -2521,7 +2521,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2568,7 +2568,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.electric.attack",
@@ -2626,7 +2626,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2673,7 +2673,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.electric.defense",
@@ -2727,7 +2727,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2774,12 +2774,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.electric.attack",
@@ -2827,7 +2827,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2874,12 +2874,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.electric.attack",
@@ -2921,7 +2921,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -2968,12 +2968,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.electric.attack",
@@ -3021,7 +3021,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3068,12 +3068,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.electric.defense",
@@ -3127,7 +3127,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3174,7 +3174,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.electric.attack",
@@ -3222,7 +3222,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3269,7 +3269,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.electric.attack",
@@ -3311,7 +3311,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3358,7 +3358,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.electric.attack",
@@ -3406,7 +3406,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3453,7 +3453,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.electric.defense",
@@ -3507,7 +3507,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3554,7 +3554,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.dark.attack",
@@ -3602,7 +3602,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3649,7 +3649,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.dark.attack",
@@ -3691,7 +3691,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3738,7 +3738,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.dark.attack",
@@ -3786,7 +3786,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3833,7 +3833,7 @@
           {
             "stat": "diameter",
             "op": "<",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "elements.dark.defense",
@@ -3887,7 +3887,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -3934,12 +3934,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.dark.attack",
@@ -3987,7 +3987,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -4034,12 +4034,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.dark.attack",
@@ -4081,7 +4081,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -4128,12 +4128,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.dark.attack",
@@ -4181,7 +4181,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -4228,12 +4228,12 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "diameter",
             "op": "<",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.dark.defense",
@@ -4287,7 +4287,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -4334,7 +4334,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.dark.attack",
@@ -4392,7 +4392,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -4439,7 +4439,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.dark.attack",
@@ -4481,7 +4481,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -4528,7 +4528,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.dark.attack",
@@ -4576,7 +4576,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -4623,7 +4623,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 160
+            "value": 400
           },
           {
             "stat": "elements.dark.defense",
@@ -4677,7 +4677,7 @@
               {
                 "stat": "diameter",
                 "op": "<",
-                "value": 32
+                "value": 150
               },
               {
                 "stat": "maxHp",
@@ -4724,7 +4724,7 @@
           {
             "stat": "diameter",
             "op": ">=",
-            "value": 32
+            "value": 150
           },
           {
             "stat": "maxHp",

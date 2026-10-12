@@ -1,0 +1,34 @@
+{
+  "baselineHead": "2ee820c",
+  "newEntry": "http://127.0.0.1:8781/ecosystem-v2.html",
+  "legacyEntry": "http://127.0.0.1:8781/ecosystem.html",
+  "testsPassed": 182,
+  "testsFailed": 0,
+  "testConcurrency": 1,
+  "testDurationMs": 32495.7188,
+  "buildPassed": true,
+  "generationHoldoutSeeds": 64,
+  "initialEnemies": 24,
+  "initialAllies": 0,
+  "defaultHealingChance": 0.1,
+  "defaultEnemyDiskRadius": 1100,
+  "maxLayoutAttempts": 8,
+  "presenceFormula": "2/(1+d/H)",
+  "sameSkillMerge": "unique kind+element, receiver clock retained, newly acquired clock zero",
+  "differentSameElementDefault": "unset: stop and ask for explicit UI policy",
+  "uiModes": [
+    "normal",
+    "sp-preview"
+  ],
+  "spAspect": "9:16, equal panes from available viewport height",
+  "saveKeys": [
+    "morishi.element-skills.v1",
+    "morishi.element-skills.previous.v1",
+    "morishi.element-skills.ui.v1"
+  ],
+  "oldSaveKeysUntouched": true,
+  "oldSourceModulesUnchanged": true,
+  "realPhone": false,
+  "funAssessed": false,
+  "longNewModelSession": false
+}

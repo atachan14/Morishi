@@ -1,0 +1,154 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 900,
+      "mobile": false,
+      "checks": [
+        "selected donor follows living merge receiver; selected dead enemy clears without stale buttons (synthetic saves)",
+        "natural desktop/touch placement and phone confirmation; cancel/pan consume nothing; exact paused restore; independent clock settings; natural defeat freezes old hand; grown contact merges render at actual diameter; old save key untouched; no horizontal overflow"
+      ],
+      "failures": [],
+      "rewardProof": {
+        "tick": 132,
+        "boosts": {
+          "fire": 1.01,
+          "ice": 1,
+          "electric": 1,
+          "dark": 1
+        },
+        "rewards": [
+          {
+            "id": 1,
+            "tick": 132,
+            "species": "fire",
+            "elements": {
+              "fire": 48.13365,
+              "ice": 26.442066,
+              "electric": 46.119721,
+              "dark": 23.880562
+            },
+            "enemyOrigins": [
+              1
+            ]
+          }
+        ],
+        "handEntry": [
+          {
+            "tick": 20,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          },
+          {
+            "tick": 40,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          },
+          {
+            "tick": 60,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        ]
+      },
+      "growthProof": {
+        "tick": 900,
+        "merges": 14,
+        "maxDiameter": 397.127713,
+        "units": 9
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "selected donor follows living merge receiver; selected dead enemy clears without stale buttons (synthetic saves)",
+        "natural desktop/touch placement and phone confirmation; cancel/pan consume nothing; exact paused restore; independent clock settings; natural defeat freezes old hand; grown contact merges render at actual diameter; old save key untouched; no horizontal overflow"
+      ],
+      "failures": [],
+      "rewardProof": {
+        "tick": 132,
+        "boosts": {
+          "fire": 1.01,
+          "ice": 1,
+          "electric": 1,
+          "dark": 1
+        },
+        "rewards": [
+          {
+            "id": 1,
+            "tick": 132,
+            "species": "fire",
+            "elements": {
+              "fire": 48.13365,
+              "ice": 26.442066,
+              "electric": 46.119721,
+              "dark": 23.880562
+            },
+            "enemyOrigins": [
+              1
+            ]
+          }
+        ],
+        "handEntry": [
+          {
+            "tick": 20,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          },
+          {
+            "tick": 40,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          },
+          {
+            "tick": 60,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        ]
+      },
+      "growthProof": {
+        "tick": 900,
+        "merges": 14,
+        "maxDiameter": 397.127713,
+        "units": 9
+      }
+    }
+  ],
+  "runtimeErrors": []
+}

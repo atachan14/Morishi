@@ -11,7 +11,7 @@ dist/assets/ecosystem-DxEs-SS9.css                  7.83 kB 笏・gzip:   2.37 k
 dist/assets/main-B9Ttsclq.css                       8.50 kB 笏・gzip:   2.59 kB
 dist/assets/modulepreload-polyfill-B5Qt9EMX.js      0.71 kB 笏・gzip:   0.40 kB
 dist/assets/eco-sim-58ves34z.js                    10.27 kB 笏・gzip:   4.61 kB
-dist/assets/elementSkills-AxIOXyE2.js              42.54 kB 笏・gzip:  15.75 kB
+dist/assets/elementSkills-BF0LDit-.js              42.61 kB 笏・gzip:  15.76 kB
 dist/assets/ecosystem-BgTLk1Pz.js                  51.52 kB 笏・gzip:  19.04 kB
 dist/assets/main-CoZ2y6jv.js                    1,272.47 kB 笏・gzip: 355.46 kB
 
@@ -19,4 +19,4 @@ dist/assets/main-CoZ2y6jv.js                    1,272.47 kB 笏・gzip: 355.46 k
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-笨・built in 6.01s
+笨・built in 5.97s

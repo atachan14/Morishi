@@ -1,0 +1,6 @@
+import {createV2Game} from '../../.test-dist/src/eco-v2-game.js';
+import {v2PresenceAt,currentV2Stats,canPlaceV2} from '../../.test-dist/src/eco-v2-foundation.js';
+import fs from 'node:fs';
+const s=createV2Game(183741,{healChance:.1}),rows=[];
+for(let i=0;i<s.units.length;i++)for(let j=i+1;j<s.units.length;j++){const a=s.units[i],b=s.units[j],x=(a.x+b.x)/2,y=(a.y+b.y)/2,d=s.hand[0].seed.initialDiameter;if(s.units.some(u=>Math.hypot(u.x-x,u.y-y)<(u.diameter+d)/2))continue;const contributions=s.units.map(u=>({id:u.id,p:v2PresenceAt(u,x,y),distance:Math.hypot(u.x-x,u.y-y),H:currentV2Stats(u).presence})).sort((a,b)=>b.p-a.p);rows.push({pair:[a.id,b.id],gap:Math.hypot(a.x-b.x,a.y-b.y)-(a.diameter+b.diameter)/2,x,y,total:contributions.reduce((n,u)=>n+u.p,0),nearest2:contributions.slice(0,2).reduce((n,u)=>n+u.p,0),contributions:contributions.slice(0,3),legal:canPlaceV2(s.units,d,x,y,3)});}
+rows.sort((a,b)=>a.gap-b.gap);const report={seed:s.seed,diskRadius:s.diskRadius,enemies:s.units.length,density:s.units.length/(Math.PI*s.diskRadius**2),bodyFreeMidpoints:rows.length,legalMidpoints:rows.filter(r=>r.legal).length,examples:[rows[0],rows[Math.floor(rows.length/2)],rows.at(-1)]};fs.writeFileSync(new URL('presence-check.json',import.meta.url),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));

@@ -1,5 +1,5 @@
 import {ones,round,randomStream,type Element} from './eco-contract.js';
-import {ECO_LIMITS,WORLD,TICK_SECONDS,DRAW_SECONDS,TURN_SECONDS,PRESENCE_LIMIT} from './eco-sim.js';
+import {ECO_LIMITS,WORLD,TICK_SECONDS,DRAW_SECONDS,TURN_SECONDS} from './eco-sim.js';
 import {ELEMENTS,V2_RULES,generateV2Seed,type SeedV2,type GenerationConfig} from './eco-v2-contract.js';
 import {createV2Unit,currentV2Stats,v2PresenceAt,canPlaceV2,v2DistanceCoefficient,advanceV2Growth,uniqueSkillsKeepingReceiverClock,type FoundationV2,type UnitV2} from './eco-v2-foundation.js';
 export type SkillEffect={tick:number;kind:'attack'|'heal';element:Element;count:number;amount:number;from:{id:number;team:UnitV2['team'];x:number;y:number;diameter:number};to:{id:number;x:number;y:number;diameter:number}};
@@ -47,4 +47,4 @@ function stepV2Core(s:GameV2,onEffect?:EffectObserver){if(s.outcome!=='playing')
  if(s.charges<ECO_LIMITS.charges){s.turnProgress=round(s.turnProgress+TICK_SECONDS/TURN_SECONDS);if(s.turnProgress>=1){s.turnProgress=round(s.turnProgress-1);s.charges++;}}
  return true;
 }
-export {WORLD,PRESENCE_LIMIT};
+export {WORLD};export const PRESENCE_LIMIT=0;

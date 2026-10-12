@@ -1,5 +1,5 @@
 import {bodyRadius,elementScale,healthScale,round} from './eco-contract.js';
-import {ECO_LIMITS,WORLD,GROWTH_PER_SECOND,TICK_SECONDS,PRESENCE_STRENGTH,PRESENCE_LIMIT} from './eco-sim.js';
+import {ECO_LIMITS,WORLD,GROWTH_PER_SECOND,TICK_SECONDS} from './eco-sim.js';
 import {ELEMENTS,V2_FIELDS,V2_RULES,emptyElementTable,type SeedV2,type SkillClock,type ElementTable} from './eco-v2-contract.js';
 export type UnitV2={id:number;team:'ally'|'enemy';x:number;y:number;born:number;age:number;diameter:number;hp:number;seed:SeedV2;bonus:{maxHp:number;hpReg:number;elements:ElementTable};skills:SkillClock[];lineage:number[];enemyOrigins:number[]};
 export type FoundationV2={rules:typeof V2_RULES;tick:number;nextId:number;merges:number;units:UnitV2[]};
@@ -9,11 +9,11 @@ export function createV2Unit(id:number,seed:SeedV2,team:UnitV2['team'],x:number,
 }
 export function currentV2Stats(u:UnitV2){const elements=emptyElementTable();for(const e of ELEMENTS)for(const f of V2_FIELDS)elements[e][f]=round(u.seed.fixed.elements[e][f]*elementScale(u.diameter)+u.bonus.elements[e][f]);return {hp:u.hp,maxHp:round(u.seed.fixed.maxHp*healthScale(u.diameter)+u.bonus.maxHp),hpReg:round(u.seed.fixed.hpReg*healthScale(u.diameter)+u.bonus.hpReg),diameter:u.diameter,presence:round(bodyRadius(u.diameter)+u.seed.fixed.presenceHalo*Math.sqrt(u.diameter)),elements};}
 export function v2DistanceCoefficient(distance:number,range:number){if(!Number.isFinite(distance)||distance<0||!Number.isFinite(range)||range<0)throw Error('Invalid distance/range');return range===0?0:Math.max(0,1-distance/range);}
-// Center value fixed at legacy strength 2; displayed presence is the half-distance.
-export function v2PresenceAt(u:UnitV2,x:number,y:number){if(!Number.isFinite(x)||!Number.isFinite(y))throw Error('Invalid presence point');return PRESENCE_STRENGTH/(1+Math.hypot(u.x-x,u.y-y)/currentV2Stats(u).presence);}
-export function v2EnemyPresence(units:UnitV2[],x:number,y:number){return units.filter(u=>u.team==='enemy').reduce((n,u)=>n+v2PresenceAt(u,x,y),0);}
+// S inherits the legacy half-distance H in world-length units; signed score falls by 1 per unit.
+export function v2PresenceAt(u:UnitV2,x:number,y:number){if(!Number.isFinite(x)||!Number.isFinite(y))throw Error('Invalid presence point');return currentV2Stats(u).presence-Math.hypot(u.x-x,u.y-y);}
+export function v2EnemyPresence(units:UnitV2[],x:number,y:number){return units.filter(u=>u.team==='enemy').reduce((n,u)=>n+Math.max(0,v2PresenceAt(u,x,y)),0);}
 // Same body, capacity, charge and presence-threshold predicates. No placement resource mutation here.
-export function canPlaceV2(units:UnitV2[],diameter:number,x:number,y:number,charges:number){const r=bodyRadius(diameter);return Number.isFinite(x)&&Number.isFinite(y)&&charges>=1&&units.length<ECO_LIMITS.units&&Math.abs(x)<=1e12&&Math.abs(y)<=1e12&&!units.some(u=>Math.hypot(u.x-x,u.y-y)<bodyRadius(u.diameter)+r-1e-6)&&v2EnemyPresence(units,x,y)<=PRESENCE_LIMIT+1e-9;}
+export function canPlaceV2(units:UnitV2[],diameter:number,x:number,y:number,charges:number){const r=bodyRadius(diameter);return Number.isFinite(x)&&Number.isFinite(y)&&charges>=1&&units.length<ECO_LIMITS.units&&Math.abs(x)<=1e12&&Math.abs(y)<=1e12&&!units.some(u=>Math.hypot(u.x-x,u.y-y)<bodyRadius(u.diameter)+r-1e-6)&&v2EnemyPresence(units,x,y)===0;}
 // Candidate policy, not a default: same kind+element is one learned skill, receiver clock retained.
 export const uniqueSkillsKeepingReceiverClock:SkillMergeResolver=(receiver,donor)=>{const map=new Map(receiver.map(c=>[c.skill.key,structuredClone(c)]));for(const c of donor)if(!map.has(c.skill.key))map.set(c.skill.key,{skill:{...c.skill},progress:0});return [...map.values()].sort((a,b)=>a.skill.key.localeCompare(b.skill.key));};
 export function assertV2NumericUnit(u:UnitV2){const s=currentV2Stats(u);if(!Number.isFinite(u.diameter)||u.diameter<1||!Number.isFinite(u.hp)||!Number.isFinite(s.maxHp)||!Number.isFinite(s.hpReg)||!Number.isFinite(s.presence)||!ELEMENTS.every(e=>V2_FIELDS.every(f=>Number.isFinite(s.elements[e][f]))))throw RangeError('数値表現限界: サイズ/能力が非有限になります');}

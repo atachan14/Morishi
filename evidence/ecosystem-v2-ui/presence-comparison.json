@@ -1,0 +1,32 @@
+{
+  "seed": 183741,
+  "bodyFreeMidpoints": 276,
+  "oldLegal": 119,
+  "newLegal": 275,
+  "examples": [
+    {
+      "pair": [
+        1,
+        4
+      ],
+      "x": 2042.2533355,
+      "y": 1539.732966,
+      "old": 1.6438447913364385,
+      "now": 0,
+      "oldLegal": false,
+      "newLegal": true
+    },
+    {
+      "pair": [
+        4,
+        9
+      ],
+      "x": 2001.5858585,
+      "y": 2598.1672645,
+      "old": 3.2262940546293524,
+      "now": 5.756212076642047,
+      "oldLegal": false,
+      "newLegal": false
+    }
+  ]
+}

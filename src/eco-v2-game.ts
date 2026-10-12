@@ -2,7 +2,7 @@ import {ones,round,randomStream,type Element} from './eco-contract.js';
 import {ECO_LIMITS,WORLD,TICK_SECONDS,DRAW_SECONDS,TURN_SECONDS,PRESENCE_LIMIT} from './eco-sim.js';
 import {ELEMENTS,V2_RULES,generateV2Seed,type SeedV2,type GenerationConfig} from './eco-v2-contract.js';
 import {createV2Unit,currentV2Stats,v2PresenceAt,canPlaceV2,v2DistanceCoefficient,advanceV2Growth,uniqueSkillsKeepingReceiverClock,type FoundationV2} from './eco-v2-foundation.js';
-export type ActivationPolicy='unset'|'alternating'|'independent';
+export type ActivationPolicy='independent';
 export type GameV2=FoundationV2&{seed:number;config:GenerationConfig;diskRadius:number;layoutAttempt:number;activationPolicy:ActivationPolicy;hand:{id:number;seed:SeedV2}[];nextCard:number;charges:number;drawProgress:number;turnProgress:number;boosts:ReturnType<typeof ones>;rewards:{id:number;tick:number;element:Element;enemyOrigins:number[]}[];outcome:'playing'|'win'|'ended';events:string[];needsDecision:boolean;rotations:Record<number,Partial<Record<Element,string>>>};
 const log=(s:GameV2,text:string)=>{s.events.unshift(`${(s.tick/10).toFixed(1)}秒 ${text}`);s.events=s.events.slice(0,8);};
 export function createV2Game(seed:number,config:GenerationConfig,diskRadius=1100):GameV2{
@@ -20,19 +20,17 @@ function generateV2GameLayout(seed:number,config:GenerationConfig,diskRadius:num
  const hand=Array.from({length:4},(_,id)=>({id,seed:generateV2Seed(seed,'hand',id,config)}));
  const witness=[{x:40,y:40},{x:WORLD.width-40,y:40},{x:40,y:WORLD.height-40},{x:WORLD.width-40,y:WORLD.height-40},{x:WORLD.width/2,y:WORLD.height/2}].find(p=>canPlaceV2(units,hand[0].seed.initialDiameter,p.x,p.y,3));
  if(!witness)throw Error('No starting placement witness found; no automatic reroll or weakening');
- return {rules:V2_RULES,seed,config:{...config},diskRadius,layoutAttempt,activationPolicy:'unset',tick:0,nextId:25,merges:0,units,hand,nextCard:4,charges:3,drawProgress:0,turnProgress:0,boosts:ones(),rewards:[],outcome:'playing',events:['円盤内ランダム・味方0体開始。数値は仮設定。'],needsDecision:false,rotations:{}};
+ return {rules:V2_RULES,seed,config:{...config},diskRadius,layoutAttempt,activationPolicy:'independent',tick:0,nextId:25,merges:0,units,hand,nextCard:4,charges:3,drawProgress:0,turnProgress:0,boosts:ones(),rewards:[],outcome:'playing',events:['円盤内ランダム・味方0体開始。数値は仮設定。'],needsDecision:false,rotations:{}};
 }
 export function placeV2(s:GameV2,x:number,y:number,cardId:number){const card=s.hand.find(c=>c.id===cardId);if(!card||s.outcome!=='playing'||!canPlaceV2(s.units,card.seed.initialDiameter,x,y,s.charges))return false;const u=createV2Unit(s.nextId++,card.seed,'ally',x,y,s.tick);s.units.push(u);s.hand=s.hand.filter(c=>c.id!==cardId);s.charges--;log(s,`手札#${cardId+1}を配置`);return true;}
-export function hasV2SkillConflict(s:GameV2){return s.units.some(u=>ELEMENTS.some(e=>u.skills.filter(c=>c.skill.element===e).length>1));}
-export function stepV2(s:GameV2){if(s.outcome!=='playing')return false;if(s.activationPolicy==='unset'&&hasV2SkillConflict(s)){s.needsDecision=true;return false;}s.needsDecision=false;
- advanceV2Growth(s,uniqueSkillsKeepingReceiverClock);const live=new Set(s.units.map(u=>u.id));for(const id of Object.keys(s.rotations))if(!live.has(+id))delete s.rotations[+id];
- if(s.activationPolicy==='unset'&&hasV2SkillConflict(s)){s.needsDecision=true;log(s,'同属性の別Skillを習得。発動方式を選ぶまで停止');return false;}
+export function stepV2(s:GameV2){if(s.outcome!=='playing')return false;s.activationPolicy='independent';s.needsDecision=false;s.rotations={};
+ advanceV2Growth(s,uniqueSkillsKeepingReceiverClock);
  const damage=new Map<number,number>(),healing=new Map<number,number>();
  for(const u of [...s.units].sort((a,b)=>a.id-b.id)){const stats=currentV2Stats(u),due=new Map<string,{count:number;fraction:number}>();for(const clock of u.skills){const total=round(clock.progress+stats.elements[clock.skill.element].speed*TICK_SECONDS),count=Math.floor(total+1e-9);due.set(clock.skill.key,{count,fraction:round(total-count)});clock.progress=Math.min(1,total);}
-  for(const element of ELEMENTS){const ready=u.skills.filter(c=>c.skill.element===element&&c.progress>=1&&s.units.some(v=>(c.skill.kind==='heal'?v.team===u.team&&v.hp<currentV2Stats(v).maxHp:v.team!==u.team)&&Math.hypot(u.x-v.x,u.y-v.y)<stats.elements[element].range)).sort((a,b)=>a.skill.key.localeCompare(b.skill.key));let candidates=ready;if(s.activationPolicy!=='independent'&&ready.length>1){const last=s.rotations[u.id]?.[element],next=ready.find(c=>c.skill.key!==last)??ready[0];candidates=[next];}
+  for(const element of ELEMENTS){const ready=u.skills.filter(c=>c.skill.element===element&&c.progress>=1&&s.units.some(v=>(c.skill.kind==='heal'?v.team===u.team&&v.hp<currentV2Stats(v).maxHp:v.team!==u.team)&&Math.hypot(u.x-v.x,u.y-v.y)<stats.elements[element].range)).sort((a,b)=>a.skill.key.localeCompare(b.skill.key));const candidates=ready;
    for(const c of candidates){const material=stats.elements[element];if(c.skill.kind==='heal'){const targets=s.units.filter(v=>v.team===u.team&&v.hp<currentV2Stats(v).maxHp&&Math.hypot(u.x-v.x,u.y-v.y)<material.range);if(!targets.length)continue;for(const v of targets){const amount=round(material.attack*.5*due.get(c.skill.key)!.count*v2DistanceCoefficient(Math.hypot(u.x-v.x,u.y-v.y),material.range));healing.set(v.id,(healing.get(v.id)??0)+amount);}}
     else{const target=s.units.filter(v=>v.team!==u.team&&Math.hypot(u.x-v.x,u.y-v.y)<material.range).sort((a,b)=>v2PresenceAt(b,u.x,u.y)-v2PresenceAt(a,u.x,u.y)||a.id-b.id)[0];if(!target)continue;const amount=round(material.attack*due.get(c.skill.key)!.count/(1+currentV2Stats(target).elements[element].defense/70)*v2DistanceCoefficient(Math.hypot(u.x-target.x,u.y-target.y),material.range));damage.set(target.id,(damage.get(target.id)??0)+amount);}
-    c.progress=due.get(c.skill.key)!.fraction;(s.rotations[u.id]??={})[element]=c.skill.key;
+    c.progress=due.get(c.skill.key)!.fraction;
    }
   }
  }

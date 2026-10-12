@@ -1,0 +1,11 @@
+✔ charged attack clock waits for eligibility and immediately fires on gained range without an attack setting (125.8475ms)
+✔ center-distance range boundary excludes zero distance coefficient and a tiny inside margin permits a cast (83.3862ms)
+✔ healing-only generated cards never acquire attack merely through time or playback (114.3324ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 449.9696

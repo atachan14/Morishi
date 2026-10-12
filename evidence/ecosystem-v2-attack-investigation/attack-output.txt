@@ -1,0 +1,547 @@
+{
+  "cards": [
+    {
+      "id": 0,
+      "skill": {
+        "key": "attack:dark",
+        "kind": "attack",
+        "element": "dark"
+      },
+      "initialRange": 13.70620673,
+      "criticalOwnDiameter": 34.09864591353143
+    },
+    {
+      "id": 1,
+      "skill": {
+        "key": "attack:electric",
+        "kind": "attack",
+        "element": "electric"
+      },
+      "initialRange": 10.84819072,
+      "criticalOwnDiameter": 25.179960695913525
+    },
+    {
+      "id": 2,
+      "skill": {
+        "key": "attack:electric",
+        "kind": "attack",
+        "element": "electric"
+      },
+      "initialRange": 12.234102870000001,
+      "criticalOwnDiameter": 29.35053563271459
+    },
+    {
+      "id": 3,
+      "skill": {
+        "key": "attack:electric",
+        "kind": "attack",
+        "element": "electric"
+      },
+      "initialRange": 9.63801216,
+      "criticalOwnDiameter": 21.75376107714502
+    }
+  ],
+  "cases": [
+    {
+      "seed": 20261012,
+      "card": 0,
+      "enemy": 0,
+      "distance": 18.46828,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 14.534764,
+      "enemyRange": 24.621963,
+      "allyDiameter": 14.46828,
+      "enemyDiameter": 22.46828
+    },
+    {
+      "seed": 20261012,
+      "card": 0,
+      "enemy": 1,
+      "distance": 15.895389,
+      "seconds": 24.7,
+      "allyAttacks": 0,
+      "enemyAttacks": 34,
+      "stop": "no-allies",
+      "enemyRange": 17.918651,
+      "enemyDiameter": 17.895389
+    },
+    {
+      "seed": 20261012,
+      "card": 0,
+      "enemy": 2,
+      "distance": 22.369072000000003,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 14.778246,
+      "enemyRange": 20.836498,
+      "allyDiameter": 16.369072,
+      "enemyDiameter": 28.369072
+    },
+    {
+      "seed": 20261012,
+      "card": 0,
+      "enemy": 3,
+      "distance": 18.700316,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 14.564486,
+      "enemyRange": 17.132204,
+      "allyDiameter": 14.700316,
+      "enemyDiameter": 22.700316
+    },
+    {
+      "seed": 20261012,
+      "card": 1,
+      "enemy": 0,
+      "distance": 18.46828,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 11.503977,
+      "enemyRange": 24.621963,
+      "allyDiameter": 14.46828,
+      "enemyDiameter": 22.46828
+    },
+    {
+      "seed": 20261012,
+      "card": 1,
+      "enemy": 1,
+      "distance": 15.895389,
+      "seconds": 18.9,
+      "allyAttacks": 0,
+      "enemyAttacks": 26,
+      "stop": "no-allies",
+      "enemyRange": 17.918651,
+      "enemyDiameter": 17.895389
+    },
+    {
+      "seed": 20261012,
+      "card": 1,
+      "enemy": 2,
+      "distance": 22.369072000000003,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 11.696689,
+      "enemyRange": 20.836498,
+      "allyDiameter": 16.369072,
+      "enemyDiameter": 28.369072
+    },
+    {
+      "seed": 20261012,
+      "card": 1,
+      "enemy": 3,
+      "distance": 18.700316,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 11.527502,
+      "enemyRange": 17.132204,
+      "allyDiameter": 14.700316,
+      "enemyDiameter": 22.700316
+    },
+    {
+      "seed": 20261012,
+      "card": 2,
+      "enemy": 0,
+      "distance": 18.46828,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 12.973669,
+      "enemyRange": 24.621963,
+      "allyDiameter": 14.46828,
+      "enemyDiameter": 22.46828
+    },
+    {
+      "seed": 20261012,
+      "card": 2,
+      "enemy": 1,
+      "distance": 15.895389,
+      "seconds": 16.7,
+      "allyAttacks": 0,
+      "enemyAttacks": 23,
+      "stop": "no-allies",
+      "enemyRange": 17.918651,
+      "enemyDiameter": 17.895389
+    },
+    {
+      "seed": 20261012,
+      "card": 2,
+      "enemy": 2,
+      "distance": 22.369072000000003,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 13.191001,
+      "enemyRange": 20.836498,
+      "allyDiameter": 16.369072,
+      "enemyDiameter": 28.369072
+    },
+    {
+      "seed": 20261012,
+      "card": 2,
+      "enemy": 3,
+      "distance": 18.700316,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 13.0002,
+      "enemyRange": 17.132204,
+      "allyDiameter": 14.700316,
+      "enemyDiameter": 22.700316
+    },
+    {
+      "seed": 20261012,
+      "card": 3,
+      "enemy": 0,
+      "distance": 18.46828,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 10.220642,
+      "enemyRange": 24.621963,
+      "allyDiameter": 14.46828,
+      "enemyDiameter": 22.46828
+    },
+    {
+      "seed": 20261012,
+      "card": 3,
+      "enemy": 1,
+      "distance": 15.895389,
+      "seconds": 17.4,
+      "allyAttacks": 0,
+      "enemyAttacks": 24,
+      "stop": "no-allies",
+      "enemyRange": 17.918651,
+      "enemyDiameter": 17.895389
+    },
+    {
+      "seed": 20261012,
+      "card": 3,
+      "enemy": 2,
+      "distance": 22.369072000000003,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 10.391855,
+      "enemyRange": 20.836498,
+      "allyDiameter": 16.369072,
+      "enemyDiameter": 28.369072
+    },
+    {
+      "seed": 20261012,
+      "card": 3,
+      "enemy": 3,
+      "distance": 18.700316,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 10.241542,
+      "enemyRange": 17.132204,
+      "allyDiameter": 14.700316,
+      "enemyDiameter": 22.700316
+    },
+    {
+      "seed": 3448175267,
+      "card": 2,
+      "enemy": 2,
+      "distance": 15.528799999999999,
+      "seconds": 6.2,
+      "allyAttacks": 5,
+      "enemyAttacks": 10,
+      "stop": "no-allies",
+      "enemyRange": 20.389107,
+      "enemyDiameter": 17.5288
+    },
+    {
+      "seed": 0,
+      "card": 0,
+      "enemy": 0,
+      "distance": 23.528704,
+      "seconds": 200,
+      "allyAttacks": 0,
+      "enemyAttacks": 0,
+      "stop": null,
+      "allyRange": 14.874923,
+      "enemyRange": 18.846711,
+      "allyDiameter": 19.528704,
+      "enemyDiameter": 27.528704
+    }
+  ],
+  "silent": {
+    "seed": 0,
+    "cardId": 0,
+    "enemyIndex": 0,
+    "distance": 23.528704,
+    "start": {
+      "ally": {
+        "diameter": 8,
+        "hp": 140.515383,
+        "maxHp": 140.515383,
+        "range": 13.428113,
+        "speed": 1.062222,
+        "presence": 14.928457,
+        "progress": 0,
+        "skill": {
+          "key": "attack:ice",
+          "kind": "attack",
+          "element": "ice"
+        }
+      },
+      "enemy": {
+        "diameter": 16,
+        "hp": 166.069604,
+        "maxHp": 166.069604,
+        "range": 17.129487,
+        "speed": 0.921881,
+        "presence": 23.527704,
+        "progress": 0,
+        "skill": {
+          "key": "attack:dark",
+          "kind": "attack",
+          "element": "dark"
+        }
+      }
+    },
+    "seconds": 200,
+    "stop": null,
+    "allyAttacks": 0,
+    "positiveAllyAttacks": 0,
+    "enemyAttacks": 0,
+    "end": {
+      "ally": {
+        "diameter": 19.528704,
+        "hp": 159.135616,
+        "maxHp": 159.135616,
+        "range": 14.874923,
+        "speed": 1.176671,
+        "presence": 26.838953,
+        "progress": 1,
+        "skill": {
+          "key": "attack:ice",
+          "kind": "attack",
+          "element": "ice"
+        }
+      },
+      "enemy": {
+        "diameter": 27.528704,
+        "hp": 186.222945,
+        "maxHp": 186.222945,
+        "range": 18.846711,
+        "speed": 1.0143,
+        "presence": 34.131965,
+        "progress": 1,
+        "skill": {
+          "key": "attack:dark",
+          "kind": "attack",
+          "element": "dark"
+        }
+      }
+    },
+    "checkpoints": [
+      {
+        "seconds": 1,
+        "ally": {
+          "diameter": 11,
+          "hp": 145.360742,
+          "maxHp": 145.360742,
+          "range": 13.804602,
+          "speed": 1.092004,
+          "presence": 18.314752,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 19,
+          "hp": 171.313908,
+          "maxHp": 171.313908,
+          "range": 17.576343,
+          "speed": 0.94593,
+          "presence": 26.420923,
+          "progress": 0.93511,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 5,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 10,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 30,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 100,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 200,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      }
+    ]
+  }
+}

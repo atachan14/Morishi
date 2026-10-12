@@ -1,0 +1,157 @@
+{
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "name": "silent-contact",
+      "beforeTick": 2000,
+      "afterTick": 2030,
+      "baselineWhite": 0,
+      "maxWhite": 0,
+      "stats": [
+        {
+          "id": 1,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "progress": 1,
+          "range": 18.846711
+        },
+        {
+          "id": 25,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "progress": 1,
+          "range": 14.874923
+        }
+      ],
+      "emissions": [],
+      "stoppedStateStable": true
+    },
+    {
+      "width": 1366,
+      "height": 900,
+      "name": "normal-auto-attack",
+      "beforeTick": 0,
+      "afterTick": 14,
+      "baselineWhite": 0,
+      "maxWhite": 66,
+      "stats": [
+        {
+          "id": 3,
+          "hp": 154.530834,
+          "maxHp": 158.802783,
+          "progress": 0.210827,
+          "range": 20.156606
+        },
+        {
+          "id": 25,
+          "hp": 101.55028,
+          "maxHp": 126.560025,
+          "progress": 0.243872,
+          "range": 17.292597
+        }
+      ],
+      "emissions": [
+        {
+          "tick": 7,
+          "from": 3,
+          "to": 25,
+          "kind": "attack",
+          "amount": 12.098193
+        },
+        {
+          "tick": 12,
+          "from": 25,
+          "to": 3,
+          "kind": "attack",
+          "amount": 4.289655
+        },
+        {
+          "tick": 13,
+          "from": 3,
+          "to": 25,
+          "kind": "attack",
+          "amount": 12.99255
+        }
+      ],
+      "stoppedStateStable": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "silent-contact",
+      "beforeTick": 2000,
+      "afterTick": 2029,
+      "baselineWhite": 0,
+      "maxWhite": 0,
+      "stats": [
+        {
+          "id": 1,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "progress": 1,
+          "range": 18.846711
+        },
+        {
+          "id": 25,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "progress": 1,
+          "range": 14.874923
+        }
+      ],
+      "emissions": [],
+      "stoppedStateStable": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "normal-auto-attack",
+      "beforeTick": 0,
+      "afterTick": 13,
+      "baselineWhite": 0,
+      "maxWhite": 45,
+      "stats": [
+        {
+          "id": 3,
+          "hp": 154.021538,
+          "maxHp": 158.302354,
+          "progress": 0.050192,
+          "range": 20.104115
+        },
+        {
+          "id": 25,
+          "hp": 101.122278,
+          "maxHp": 126.143709,
+          "progress": 0.153438,
+          "range": 17.245945
+        }
+      ],
+      "emissions": [
+        {
+          "tick": 7,
+          "from": 3,
+          "to": 25,
+          "kind": "attack",
+          "amount": 12.098193
+        },
+        {
+          "tick": 12,
+          "from": 25,
+          "to": 3,
+          "kind": "attack",
+          "amount": 4.289655
+        },
+        {
+          "tick": 13,
+          "from": 3,
+          "to": 25,
+          "kind": "attack",
+          "amount": 12.99255
+        }
+      ],
+      "stoppedStateStable": true
+    }
+  ],
+  "errors": 0
+}

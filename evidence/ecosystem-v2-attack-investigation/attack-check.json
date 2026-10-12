@@ -1,0 +1,4418 @@
+{
+  "head": "6ac9519",
+  "config": {
+    "healChance": 0.1,
+    "initialBalance": "range-presence-2"
+  },
+  "defaultCards": [
+    {
+      "id": 0,
+      "skill": {
+        "key": "attack:dark",
+        "kind": "attack",
+        "element": "dark"
+      },
+      "initialRange": 13.70620673,
+      "criticalOwnDiameter": 34.09864591353143
+    },
+    {
+      "id": 1,
+      "skill": {
+        "key": "attack:electric",
+        "kind": "attack",
+        "element": "electric"
+      },
+      "initialRange": 10.84819072,
+      "criticalOwnDiameter": 25.179960695913525
+    },
+    {
+      "id": 2,
+      "skill": {
+        "key": "attack:electric",
+        "kind": "attack",
+        "element": "electric"
+      },
+      "initialRange": 12.234102870000001,
+      "criticalOwnDiameter": 29.35053563271459
+    },
+    {
+      "id": 3,
+      "skill": {
+        "key": "attack:electric",
+        "kind": "attack",
+        "element": "electric"
+      },
+      "initialRange": 9.63801216,
+      "criticalOwnDiameter": 21.75376107714502
+    }
+  ],
+  "cases": [
+    {
+      "seed": 20261012,
+      "cardId": 0,
+      "enemyIndex": 0,
+      "distance": 18.46828,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 135.33635,
+          "maxHp": 135.33635,
+          "range": 13.706207,
+          "speed": 0.870531,
+          "presence": 13.986922,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        },
+        "enemy": {
+          "diameter": 16,
+          "hp": 133.406434,
+          "maxHp": 133.406434,
+          "range": 23.310824,
+          "speed": 0.985716,
+          "presence": 18.46728,
+          "progress": 0,
+          "skill": {
+            "key": "heal:ice",
+            "kind": "heal",
+            "element": "ice"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 14.46828,
+          "hp": 145.398343,
+          "maxHp": 145.398343,
+          "range": 14.534764,
+          "speed": 0.923155,
+          "presence": 20.66473,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        },
+        "enemy": {
+          "diameter": 22.46828,
+          "hp": 142.489699,
+          "maxHp": 142.489699,
+          "range": 24.621963,
+          "speed": 1.041158,
+          "presence": 23.638055,
+          "progress": 1,
+          "skill": {
+            "key": "heal:ice",
+            "kind": "heal",
+            "element": "ice"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 140.00312,
+            "maxHp": 140.00312,
+            "range": 14.090493,
+            "speed": 0.894938,
+            "presence": 17.210704,
+            "progress": 0.883955,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 19,
+            "hp": 137.619269,
+            "maxHp": 137.619269,
+            "range": 23.918933,
+            "speed": 1.01143,
+            "presence": 20.906454,
+            "progress": 0.999859,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 145.398343,
+            "maxHp": 145.398343,
+            "range": 14.534764,
+            "speed": 0.923155,
+            "presence": 20.66473,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 145.398343,
+            "maxHp": 145.398343,
+            "range": 14.534764,
+            "speed": 0.923155,
+            "presence": 20.66473,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 145.398343,
+            "maxHp": 145.398343,
+            "range": 14.534764,
+            "speed": 0.923155,
+            "presence": 20.66473,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 145.398343,
+            "maxHp": 145.398343,
+            "range": 14.534764,
+            "speed": 0.923155,
+            "presence": 20.66473,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 145.398343,
+            "maxHp": 145.398343,
+            "range": 14.534764,
+            "speed": 0.923155,
+            "presence": 20.66473,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 0,
+      "enemyIndex": 1,
+      "distance": 15.895389,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 135.33635,
+          "maxHp": 135.33635,
+          "range": 13.706207,
+          "speed": 0.870531,
+          "presence": 13.986922,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        },
+        "enemy": {
+          "diameter": 12,
+          "hp": 133.056163,
+          "maxHp": 133.056163,
+          "range": 17.014959,
+          "speed": 1.313699,
+          "presence": 15.894389,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "seconds": 24.7,
+      "stop": "no-allies",
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 34,
+      "end": {
+        "ally": null,
+        "enemy": {
+          "diameter": 17.895389,
+          "hp": 141.676139,
+          "maxHp": 141.676139,
+          "range": 17.918651,
+          "speed": 1.383472,
+          "presence": 21.030532,
+          "progress": 0.106606,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 136.758033,
+            "maxHp": 140.00312,
+            "range": 14.090493,
+            "speed": 0.894938,
+            "presence": 17.210704,
+            "progress": 0.883955,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 15,
+            "hp": 137.44263,
+            "maxHp": 137.44263,
+            "range": 17.474823,
+            "speed": 1.349205,
+            "presence": 18.562263,
+            "progress": 0.333226,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 13.895389,
+            "hp": 120.235363,
+            "maxHp": 144.507159,
+            "range": 14.461379,
+            "speed": 0.918494,
+            "presence": 20.109698,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 17.895389,
+            "hp": 141.676139,
+            "maxHp": 141.676139,
+            "range": 17.918651,
+            "speed": 1.383472,
+            "presence": 21.030532,
+            "progress": 0.852247,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 13.895389,
+            "hp": 90.07673,
+            "maxHp": 144.507159,
+            "range": 14.461379,
+            "speed": 0.918494,
+            "presence": 20.109698,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 17.895389,
+            "hp": 141.676139,
+            "maxHp": 141.676139,
+            "range": 17.918651,
+            "speed": 1.383472,
+            "presence": 21.030532,
+            "progress": 0.769597,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 0,
+      "enemyIndex": 2,
+      "distance": 22.369072000000003,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 135.33635,
+          "maxHp": 135.33635,
+          "range": 13.706207,
+          "speed": 0.870531,
+          "presence": 13.986922,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        },
+        "enemy": {
+          "diameter": 20,
+          "hp": 127.204756,
+          "maxHp": 127.204756,
+          "range": 19.467388,
+          "speed": 1.174849,
+          "presence": 22.368072,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 16.369072,
+          "hp": 148.355196,
+          "maxHp": 148.355196,
+          "range": 14.778246,
+          "speed": 0.93862,
+          "presence": 22.470142,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        },
+        "enemy": {
+          "diameter": 28.369072,
+          "hp": 137.958148,
+          "maxHp": 137.958148,
+          "range": 20.836498,
+          "speed": 1.257474,
+          "presence": 28.914768,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 140.00312,
+            "maxHp": 140.00312,
+            "range": 14.090493,
+            "speed": 0.894938,
+            "presence": 17.210704,
+            "progress": 0.883955,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 23,
+            "hp": 131.059446,
+            "maxHp": 131.059446,
+            "range": 19.958163,
+            "speed": 1.204467,
+            "presence": 24.76328,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 148.355196,
+            "maxHp": 148.355196,
+            "range": 14.778246,
+            "speed": 0.93862,
+            "presence": 22.470142,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 148.355196,
+            "maxHp": 148.355196,
+            "range": 14.778246,
+            "speed": 0.93862,
+            "presence": 22.470142,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 148.355196,
+            "maxHp": 148.355196,
+            "range": 14.778246,
+            "speed": 0.93862,
+            "presence": 22.470142,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 148.355196,
+            "maxHp": 148.355196,
+            "range": 14.778246,
+            "speed": 0.93862,
+            "presence": 22.470142,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 148.355196,
+            "maxHp": 148.355196,
+            "range": 14.778246,
+            "speed": 0.93862,
+            "presence": 22.470142,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 0,
+      "enemyIndex": 3,
+      "distance": 18.700316,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 135.33635,
+          "maxHp": 135.33635,
+          "range": 13.706207,
+          "speed": 0.870531,
+          "presence": 13.986922,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        },
+        "enemy": {
+          "diameter": 16,
+          "hp": 131.431721,
+          "maxHp": 131.431721,
+          "range": 16.188975,
+          "speed": 1.096832,
+          "presence": 18.699316,
+          "progress": 0,
+          "skill": {
+            "key": "heal:fire",
+            "kind": "heal",
+            "element": "fire"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 14.700316,
+          "hp": 145.759296,
+          "maxHp": 145.759296,
+          "range": 14.564486,
+          "speed": 0.925043,
+          "presence": 20.888017,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        },
+        "enemy": {
+          "diameter": 22.700316,
+          "hp": 140.701553,
+          "maxHp": 140.701553,
+          "range": 17.132204,
+          "speed": 1.160737,
+          "presence": 24.09434,
+          "progress": 1,
+          "skill": {
+            "key": "heal:fire",
+            "kind": "heal",
+            "element": "fire"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 140.00312,
+            "maxHp": 140.00312,
+            "range": 14.090493,
+            "speed": 0.894938,
+            "presence": 17.210704,
+            "progress": 0.883955,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 19,
+            "hp": 135.582196,
+            "maxHp": 135.582196,
+            "range": 16.611297,
+            "speed": 1.125445,
+            "presence": 21.159309,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 145.759296,
+            "maxHp": 145.759296,
+            "range": 14.564486,
+            "speed": 0.925043,
+            "presence": 20.888017,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 145.759296,
+            "maxHp": 145.759296,
+            "range": 14.564486,
+            "speed": 0.925043,
+            "presence": 20.888017,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 145.759296,
+            "maxHp": 145.759296,
+            "range": 14.564486,
+            "speed": 0.925043,
+            "presence": 20.888017,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 145.759296,
+            "maxHp": 145.759296,
+            "range": 14.564486,
+            "speed": 0.925043,
+            "presence": 20.888017,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 145.759296,
+            "maxHp": 145.759296,
+            "range": 14.564486,
+            "speed": 0.925043,
+            "presence": 20.888017,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 1,
+      "enemyIndex": 0,
+      "distance": 18.46828,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 144.796349,
+          "maxHp": 144.796349,
+          "range": 10.848191,
+          "speed": 1.372478,
+          "presence": 14.075737,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 16,
+          "hp": 133.406434,
+          "maxHp": 133.406434,
+          "range": 23.310824,
+          "speed": 0.985716,
+          "presence": 18.46728,
+          "progress": 0,
+          "skill": {
+            "key": "heal:ice",
+            "kind": "heal",
+            "element": "ice"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 14.46828,
+          "hp": 155.561675,
+          "maxHp": 155.561675,
+          "range": 11.503977,
+          "speed": 1.455446,
+          "presence": 20.784171,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 22.46828,
+          "hp": 142.489699,
+          "maxHp": 142.489699,
+          "range": 24.621963,
+          "speed": 1.041158,
+          "presence": 23.638055,
+          "progress": 1,
+          "skill": {
+            "key": "heal:ice",
+            "kind": "heal",
+            "element": "ice"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 149.789327,
+            "maxHp": 149.789327,
+            "range": 11.152346,
+            "speed": 1.410959,
+            "presence": 17.314849,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 19,
+            "hp": 137.619269,
+            "maxHp": 137.619269,
+            "range": 23.918933,
+            "speed": 1.01143,
+            "presence": 20.906454,
+            "progress": 0.999859,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 155.561675,
+            "maxHp": 155.561675,
+            "range": 11.503977,
+            "speed": 1.455446,
+            "presence": 20.784171,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 155.561675,
+            "maxHp": 155.561675,
+            "range": 11.503977,
+            "speed": 1.455446,
+            "presence": 20.784171,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 155.561675,
+            "maxHp": 155.561675,
+            "range": 11.503977,
+            "speed": 1.455446,
+            "presence": 20.784171,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 155.561675,
+            "maxHp": 155.561675,
+            "range": 11.503977,
+            "speed": 1.455446,
+            "presence": 20.784171,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 155.561675,
+            "maxHp": 155.561675,
+            "range": 11.503977,
+            "speed": 1.455446,
+            "presence": 20.784171,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 1,
+      "enemyIndex": 1,
+      "distance": 15.895389,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 144.796349,
+          "maxHp": 144.796349,
+          "range": 10.848191,
+          "speed": 1.372478,
+          "presence": 14.075737,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 12,
+          "hp": 133.056163,
+          "maxHp": 133.056163,
+          "range": 17.014959,
+          "speed": 1.313699,
+          "presence": 15.894389,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "seconds": 18.9,
+      "stop": "no-allies",
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 26,
+      "end": {
+        "ally": null,
+        "enemy": {
+          "diameter": 17.895389,
+          "hp": 141.676139,
+          "maxHp": 141.676139,
+          "range": 17.918651,
+          "speed": 1.383472,
+          "presence": 21.030532,
+          "progress": 0.08248,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 145.312214,
+            "maxHp": 149.789327,
+            "range": 11.152346,
+            "speed": 1.410959,
+            "presence": 17.314849,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 15,
+            "hp": 137.44263,
+            "maxHp": 137.44263,
+            "range": 17.474823,
+            "speed": 1.349205,
+            "presence": 18.562263,
+            "progress": 0.333226,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 13.895389,
+            "hp": 120.527834,
+            "maxHp": 154.608197,
+            "range": 11.445894,
+            "speed": 1.448098,
+            "presence": 20.22675,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 17.895389,
+            "hp": 141.676139,
+            "maxHp": 141.676139,
+            "range": 17.918651,
+            "speed": 1.383472,
+            "presence": 21.030532,
+            "progress": 0.852247,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 13.895389,
+            "hp": 78.135537,
+            "maxHp": 154.608197,
+            "range": 11.445894,
+            "speed": 1.448098,
+            "presence": 20.22675,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 17.895389,
+            "hp": 141.676139,
+            "maxHp": 141.676139,
+            "range": 17.918651,
+            "speed": 1.383472,
+            "presence": 21.030532,
+            "progress": 0.769597,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 1,
+      "enemyIndex": 2,
+      "distance": 22.369072000000003,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 144.796349,
+          "maxHp": 144.796349,
+          "range": 10.848191,
+          "speed": 1.372478,
+          "presence": 14.075737,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 20,
+          "hp": 127.204756,
+          "maxHp": 127.204756,
+          "range": 19.467388,
+          "speed": 1.174849,
+          "presence": 22.368072,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 16.369072,
+          "hp": 158.725212,
+          "maxHp": 158.725212,
+          "range": 11.696689,
+          "speed": 1.479828,
+          "presence": 22.597187,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 28.369072,
+          "hp": 137.958148,
+          "maxHp": 137.958148,
+          "range": 20.836498,
+          "speed": 1.257474,
+          "presence": 28.914768,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 149.789327,
+            "maxHp": 149.789327,
+            "range": 11.152346,
+            "speed": 1.410959,
+            "presence": 17.314849,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 23,
+            "hp": 131.059446,
+            "maxHp": 131.059446,
+            "range": 19.958163,
+            "speed": 1.204467,
+            "presence": 24.76328,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 158.725212,
+            "maxHp": 158.725212,
+            "range": 11.696689,
+            "speed": 1.479828,
+            "presence": 22.597187,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 158.725212,
+            "maxHp": 158.725212,
+            "range": 11.696689,
+            "speed": 1.479828,
+            "presence": 22.597187,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 158.725212,
+            "maxHp": 158.725212,
+            "range": 11.696689,
+            "speed": 1.479828,
+            "presence": 22.597187,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 158.725212,
+            "maxHp": 158.725212,
+            "range": 11.696689,
+            "speed": 1.479828,
+            "presence": 22.597187,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 158.725212,
+            "maxHp": 158.725212,
+            "range": 11.696689,
+            "speed": 1.479828,
+            "presence": 22.597187,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 1,
+      "enemyIndex": 3,
+      "distance": 18.700316,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 144.796349,
+          "maxHp": 144.796349,
+          "range": 10.848191,
+          "speed": 1.372478,
+          "presence": 14.075737,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 16,
+          "hp": 131.431721,
+          "maxHp": 131.431721,
+          "range": 16.188975,
+          "speed": 1.096832,
+          "presence": 18.699316,
+          "progress": 0,
+          "skill": {
+            "key": "heal:fire",
+            "kind": "heal",
+            "element": "fire"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 14.700316,
+          "hp": 155.947858,
+          "maxHp": 155.947858,
+          "range": 11.527502,
+          "speed": 1.458423,
+          "presence": 21.008411,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 22.700316,
+          "hp": 140.701553,
+          "maxHp": 140.701553,
+          "range": 17.132204,
+          "speed": 1.160737,
+          "presence": 24.09434,
+          "progress": 1,
+          "skill": {
+            "key": "heal:fire",
+            "kind": "heal",
+            "element": "fire"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 149.789327,
+            "maxHp": 149.789327,
+            "range": 11.152346,
+            "speed": 1.410959,
+            "presence": 17.314849,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 19,
+            "hp": 135.582196,
+            "maxHp": 135.582196,
+            "range": 16.611297,
+            "speed": 1.125445,
+            "presence": 21.159309,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 155.947858,
+            "maxHp": 155.947858,
+            "range": 11.527502,
+            "speed": 1.458423,
+            "presence": 21.008411,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 155.947858,
+            "maxHp": 155.947858,
+            "range": 11.527502,
+            "speed": 1.458423,
+            "presence": 21.008411,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 155.947858,
+            "maxHp": 155.947858,
+            "range": 11.527502,
+            "speed": 1.458423,
+            "presence": 21.008411,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 155.947858,
+            "maxHp": 155.947858,
+            "range": 11.527502,
+            "speed": 1.458423,
+            "presence": 21.008411,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 155.947858,
+            "maxHp": 155.947858,
+            "range": 11.527502,
+            "speed": 1.458423,
+            "presence": 21.008411,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 2,
+      "enemyIndex": 0,
+      "distance": 18.46828,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 122.970237,
+          "maxHp": 122.970237,
+          "range": 12.234103,
+          "speed": 1.026895,
+          "presence": 14.876052,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 16,
+          "hp": 133.406434,
+          "maxHp": 133.406434,
+          "range": 23.310824,
+          "speed": 0.985716,
+          "presence": 18.46728,
+          "progress": 0,
+          "skill": {
+            "key": "heal:ice",
+            "kind": "heal",
+            "element": "ice"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 14.46828,
+          "hp": 132.112834,
+          "maxHp": 132.112834,
+          "range": 12.973669,
+          "speed": 1.088972,
+          "presence": 21.860448,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 22.46828,
+          "hp": 142.489699,
+          "maxHp": 142.489699,
+          "range": 24.621963,
+          "speed": 1.041158,
+          "presence": 23.638055,
+          "progress": 1,
+          "skill": {
+            "key": "heal:ice",
+            "kind": "heal",
+            "element": "ice"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 127.21059,
+            "maxHp": 127.21059,
+            "range": 12.577115,
+            "speed": 1.055686,
+            "presence": 18.253301,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 19,
+            "hp": 137.619269,
+            "maxHp": 137.619269,
+            "range": 23.918933,
+            "speed": 1.01143,
+            "presence": 20.906454,
+            "progress": 0.999859,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 132.112834,
+            "maxHp": 132.112834,
+            "range": 12.973669,
+            "speed": 1.088972,
+            "presence": 21.860448,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 132.112834,
+            "maxHp": 132.112834,
+            "range": 12.973669,
+            "speed": 1.088972,
+            "presence": 21.860448,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 132.112834,
+            "maxHp": 132.112834,
+            "range": 12.973669,
+            "speed": 1.088972,
+            "presence": 21.860448,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 132.112834,
+            "maxHp": 132.112834,
+            "range": 12.973669,
+            "speed": 1.088972,
+            "presence": 21.860448,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 132.112834,
+            "maxHp": 132.112834,
+            "range": 12.973669,
+            "speed": 1.088972,
+            "presence": 21.860448,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 2,
+      "enemyIndex": 1,
+      "distance": 15.895389,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 122.970237,
+          "maxHp": 122.970237,
+          "range": 12.234103,
+          "speed": 1.026895,
+          "presence": 14.876052,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 12,
+          "hp": 133.056163,
+          "maxHp": 133.056163,
+          "range": 17.014959,
+          "speed": 1.313699,
+          "presence": 15.894389,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "seconds": 16.7,
+      "stop": "no-allies",
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 23,
+      "end": {
+        "ally": null,
+        "enemy": {
+          "diameter": 17.895389,
+          "hp": 141.676139,
+          "maxHp": 141.676139,
+          "range": 17.918651,
+          "speed": 1.383472,
+          "presence": 21.030532,
+          "progress": 0.038846,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 122.73547,
+            "maxHp": 127.21059,
+            "range": 12.577115,
+            "speed": 1.055686,
+            "presence": 18.253301,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 15,
+            "hp": 137.44263,
+            "maxHp": 137.44263,
+            "range": 17.474823,
+            "speed": 1.349205,
+            "presence": 18.562263,
+            "progress": 0.333226,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 13.895389,
+            "hp": 97.265743,
+            "maxHp": 131.30308,
+            "range": 12.908166,
+            "speed": 1.083474,
+            "presence": 21.281504,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 17.895389,
+            "hp": 141.676139,
+            "maxHp": 141.676139,
+            "range": 17.918651,
+            "speed": 1.383472,
+            "presence": 21.030532,
+            "progress": 0.852247,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 13.895389,
+            "hp": 54.924898,
+            "maxHp": 131.30308,
+            "range": 12.908166,
+            "speed": 1.083474,
+            "presence": 21.281504,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 17.895389,
+            "hp": 141.676139,
+            "maxHp": 141.676139,
+            "range": 17.918651,
+            "speed": 1.383472,
+            "presence": 21.030532,
+            "progress": 0.769597,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 2,
+      "enemyIndex": 2,
+      "distance": 22.369072000000003,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 122.970237,
+          "maxHp": 122.970237,
+          "range": 12.234103,
+          "speed": 1.026895,
+          "presence": 14.876052,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 20,
+          "hp": 127.204756,
+          "maxHp": 127.204756,
+          "range": 19.467388,
+          "speed": 1.174849,
+          "presence": 22.368072,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 16.369072,
+          "hp": 134.79951,
+          "maxHp": 134.79951,
+          "range": 13.191001,
+          "speed": 1.107214,
+          "presence": 23.741982,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 28.369072,
+          "hp": 137.958148,
+          "maxHp": 137.958148,
+          "range": 20.836498,
+          "speed": 1.257474,
+          "presence": 28.914768,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 127.21059,
+            "maxHp": 127.21059,
+            "range": 12.577115,
+            "speed": 1.055686,
+            "presence": 18.253301,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 23,
+            "hp": 131.059446,
+            "maxHp": 131.059446,
+            "range": 19.958163,
+            "speed": 1.204467,
+            "presence": 24.76328,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 134.79951,
+            "maxHp": 134.79951,
+            "range": 13.191001,
+            "speed": 1.107214,
+            "presence": 23.741982,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 134.79951,
+            "maxHp": 134.79951,
+            "range": 13.191001,
+            "speed": 1.107214,
+            "presence": 23.741982,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 134.79951,
+            "maxHp": 134.79951,
+            "range": 13.191001,
+            "speed": 1.107214,
+            "presence": 23.741982,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 134.79951,
+            "maxHp": 134.79951,
+            "range": 13.191001,
+            "speed": 1.107214,
+            "presence": 23.741982,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 134.79951,
+            "maxHp": 134.79951,
+            "range": 13.191001,
+            "speed": 1.107214,
+            "presence": 23.741982,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 2,
+      "enemyIndex": 3,
+      "distance": 18.700316,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 122.970237,
+          "maxHp": 122.970237,
+          "range": 12.234103,
+          "speed": 1.026895,
+          "presence": 14.876052,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 16,
+          "hp": 131.431721,
+          "maxHp": 131.431721,
+          "range": 16.188975,
+          "speed": 1.096832,
+          "presence": 18.699316,
+          "progress": 0,
+          "skill": {
+            "key": "heal:fire",
+            "kind": "heal",
+            "element": "fire"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 14.700316,
+          "hp": 132.440805,
+          "maxHp": 132.440805,
+          "range": 13.0002,
+          "speed": 1.091199,
+          "presence": 22.093285,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 22.700316,
+          "hp": 140.701553,
+          "maxHp": 140.701553,
+          "range": 17.132204,
+          "speed": 1.160737,
+          "presence": 24.09434,
+          "progress": 1,
+          "skill": {
+            "key": "heal:fire",
+            "kind": "heal",
+            "element": "fire"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 127.21059,
+            "maxHp": 127.21059,
+            "range": 12.577115,
+            "speed": 1.055686,
+            "presence": 18.253301,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 19,
+            "hp": 135.582196,
+            "maxHp": 135.582196,
+            "range": 16.611297,
+            "speed": 1.125445,
+            "presence": 21.159309,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 132.440805,
+            "maxHp": 132.440805,
+            "range": 13.0002,
+            "speed": 1.091199,
+            "presence": 22.093285,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 132.440805,
+            "maxHp": 132.440805,
+            "range": 13.0002,
+            "speed": 1.091199,
+            "presence": 22.093285,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 132.440805,
+            "maxHp": 132.440805,
+            "range": 13.0002,
+            "speed": 1.091199,
+            "presence": 22.093285,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 132.440805,
+            "maxHp": 132.440805,
+            "range": 13.0002,
+            "speed": 1.091199,
+            "presence": 22.093285,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 132.440805,
+            "maxHp": 132.440805,
+            "range": 13.0002,
+            "speed": 1.091199,
+            "presence": 22.093285,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 3,
+      "enemyIndex": 0,
+      "distance": 18.46828,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 131.592437,
+          "maxHp": 131.592437,
+          "range": 9.638012,
+          "speed": 1.217267,
+          "presence": 13.918969,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 16,
+          "hp": 133.406434,
+          "maxHp": 133.406434,
+          "range": 23.310824,
+          "speed": 0.985716,
+          "presence": 18.46728,
+          "progress": 0,
+          "skill": {
+            "key": "heal:ice",
+            "kind": "heal",
+            "element": "ice"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 14.46828,
+          "hp": 141.376078,
+          "maxHp": 141.376078,
+          "range": 10.220642,
+          "speed": 1.290853,
+          "presence": 20.573346,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 22.46828,
+          "hp": 142.489699,
+          "maxHp": 142.489699,
+          "range": 24.621963,
+          "speed": 1.041158,
+          "presence": 23.638055,
+          "progress": 1,
+          "skill": {
+            "key": "heal:ice",
+            "kind": "heal",
+            "element": "ice"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 136.130108,
+            "maxHp": 136.130108,
+            "range": 9.908237,
+            "speed": 1.251396,
+            "presence": 17.131022,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 19,
+            "hp": 137.619269,
+            "maxHp": 137.619269,
+            "range": 23.918933,
+            "speed": 1.01143,
+            "presence": 20.906454,
+            "progress": 0.999859,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 141.376078,
+            "maxHp": 141.376078,
+            "range": 10.220642,
+            "speed": 1.290853,
+            "presence": 20.573346,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 141.376078,
+            "maxHp": 141.376078,
+            "range": 10.220642,
+            "speed": 1.290853,
+            "presence": 20.573346,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 141.376078,
+            "maxHp": 141.376078,
+            "range": 10.220642,
+            "speed": 1.290853,
+            "presence": 20.573346,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 141.376078,
+            "maxHp": 141.376078,
+            "range": 10.220642,
+            "speed": 1.290853,
+            "presence": 20.573346,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 14.46828,
+            "hp": 141.376078,
+            "maxHp": 141.376078,
+            "range": 10.220642,
+            "speed": 1.290853,
+            "presence": 20.573346,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.46828,
+            "hp": 142.489699,
+            "maxHp": 142.489699,
+            "range": 24.621963,
+            "speed": 1.041158,
+            "presence": 23.638055,
+            "progress": 1,
+            "skill": {
+              "key": "heal:ice",
+              "kind": "heal",
+              "element": "ice"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 3,
+      "enemyIndex": 1,
+      "distance": 15.895389,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 131.592437,
+          "maxHp": 131.592437,
+          "range": 9.638012,
+          "speed": 1.217267,
+          "presence": 13.918969,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 12,
+          "hp": 133.056163,
+          "maxHp": 133.056163,
+          "range": 17.014959,
+          "speed": 1.313699,
+          "presence": 15.894389,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "seconds": 17.4,
+      "stop": "no-allies",
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 24,
+      "end": {
+        "ally": null,
+        "enemy": {
+          "diameter": 17.895389,
+          "hp": 141.676139,
+          "maxHp": 141.676139,
+          "range": 17.918651,
+          "speed": 1.383472,
+          "presence": 21.030532,
+          "progress": 0.007275,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 131.670237,
+            "maxHp": 136.130108,
+            "range": 9.908237,
+            "speed": 1.251396,
+            "presence": 17.131022,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 15,
+            "hp": 137.44263,
+            "maxHp": 137.44263,
+            "range": 17.474823,
+            "speed": 1.349205,
+            "presence": 18.562263,
+            "progress": 0.333226,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 13.895389,
+            "hp": 106.801738,
+            "maxHp": 140.509548,
+            "range": 10.169039,
+            "speed": 1.284335,
+            "presence": 20.020141,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 17.895389,
+            "hp": 141.676139,
+            "maxHp": 141.676139,
+            "range": 17.918651,
+            "speed": 1.383472,
+            "presence": 21.030532,
+            "progress": 0.852247,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 13.895389,
+            "hp": 64.855091,
+            "maxHp": 140.509548,
+            "range": 10.169039,
+            "speed": 1.284335,
+            "presence": 20.020141,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 17.895389,
+            "hp": 141.676139,
+            "maxHp": 141.676139,
+            "range": 17.918651,
+            "speed": 1.383472,
+            "presence": 21.030532,
+            "progress": 0.769597,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 3,
+      "enemyIndex": 2,
+      "distance": 22.369072000000003,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 131.592437,
+          "maxHp": 131.592437,
+          "range": 9.638012,
+          "speed": 1.217267,
+          "presence": 13.918969,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 20,
+          "hp": 127.204756,
+          "maxHp": 127.204756,
+          "range": 19.467388,
+          "speed": 1.174849,
+          "presence": 22.368072,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 16.369072,
+          "hp": 144.251134,
+          "maxHp": 144.251134,
+          "range": 10.391855,
+          "speed": 1.312477,
+          "presence": 22.37294,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 28.369072,
+          "hp": 137.958148,
+          "maxHp": 137.958148,
+          "range": 20.836498,
+          "speed": 1.257474,
+          "presence": 28.914768,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 136.130108,
+            "maxHp": 136.130108,
+            "range": 9.908237,
+            "speed": 1.251396,
+            "presence": 17.131022,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 23,
+            "hp": 131.059446,
+            "maxHp": 131.059446,
+            "range": 19.958163,
+            "speed": 1.204467,
+            "presence": 24.76328,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 144.251134,
+            "maxHp": 144.251134,
+            "range": 10.391855,
+            "speed": 1.312477,
+            "presence": 22.37294,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 144.251134,
+            "maxHp": 144.251134,
+            "range": 10.391855,
+            "speed": 1.312477,
+            "presence": 22.37294,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 144.251134,
+            "maxHp": 144.251134,
+            "range": 10.391855,
+            "speed": 1.312477,
+            "presence": 22.37294,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 144.251134,
+            "maxHp": 144.251134,
+            "range": 10.391855,
+            "speed": 1.312477,
+            "presence": 22.37294,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 16.369072,
+            "hp": 144.251134,
+            "maxHp": 144.251134,
+            "range": 10.391855,
+            "speed": 1.312477,
+            "presence": 22.37294,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 28.369072,
+            "hp": 137.958148,
+            "maxHp": 137.958148,
+            "range": 20.836498,
+            "speed": 1.257474,
+            "presence": 28.914768,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 20261012,
+      "cardId": 3,
+      "enemyIndex": 3,
+      "distance": 18.700316,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 131.592437,
+          "maxHp": 131.592437,
+          "range": 9.638012,
+          "speed": 1.217267,
+          "presence": 13.918969,
+          "progress": 0,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 16,
+          "hp": 131.431721,
+          "maxHp": 131.431721,
+          "range": 16.188975,
+          "speed": 1.096832,
+          "presence": 18.699316,
+          "progress": 0,
+          "skill": {
+            "key": "heal:fire",
+            "kind": "heal",
+            "element": "fire"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 14.700316,
+          "hp": 141.727045,
+          "maxHp": 141.727045,
+          "range": 10.241542,
+          "speed": 1.293492,
+          "presence": 20.795903,
+          "progress": 1,
+          "skill": {
+            "key": "attack:electric",
+            "kind": "attack",
+            "element": "electric"
+          }
+        },
+        "enemy": {
+          "diameter": 22.700316,
+          "hp": 140.701553,
+          "maxHp": 140.701553,
+          "range": 17.132204,
+          "speed": 1.160737,
+          "presence": 24.09434,
+          "progress": 1,
+          "skill": {
+            "key": "heal:fire",
+            "kind": "heal",
+            "element": "fire"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 136.130108,
+            "maxHp": 136.130108,
+            "range": 9.908237,
+            "speed": 1.251396,
+            "presence": 17.131022,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 19,
+            "hp": 135.582196,
+            "maxHp": 135.582196,
+            "range": 16.611297,
+            "speed": 1.125445,
+            "presence": 21.159309,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 141.727045,
+            "maxHp": 141.727045,
+            "range": 10.241542,
+            "speed": 1.293492,
+            "presence": 20.795903,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 141.727045,
+            "maxHp": 141.727045,
+            "range": 10.241542,
+            "speed": 1.293492,
+            "presence": 20.795903,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 141.727045,
+            "maxHp": 141.727045,
+            "range": 10.241542,
+            "speed": 1.293492,
+            "presence": 20.795903,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 141.727045,
+            "maxHp": 141.727045,
+            "range": 10.241542,
+            "speed": 1.293492,
+            "presence": 20.795903,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 14.700316,
+            "hp": 141.727045,
+            "maxHp": 141.727045,
+            "range": 10.241542,
+            "speed": 1.293492,
+            "presence": 20.795903,
+            "progress": 1,
+            "skill": {
+              "key": "attack:electric",
+              "kind": "attack",
+              "element": "electric"
+            }
+          },
+          "enemy": {
+            "diameter": 22.700316,
+            "hp": 140.701553,
+            "maxHp": 140.701553,
+            "range": 17.132204,
+            "speed": 1.160737,
+            "presence": 24.09434,
+            "progress": 1,
+            "skill": {
+              "key": "heal:fire",
+              "kind": "heal",
+              "element": "fire"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 3448175267,
+      "cardId": 2,
+      "enemyIndex": 2,
+      "distance": 15.528799999999999,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 120.731603,
+          "maxHp": 120.731603,
+          "range": 16.63946,
+          "speed": 0.870181,
+          "presence": 14.117106,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        },
+        "enemy": {
+          "diameter": 12,
+          "hp": 151.796778,
+          "maxHp": 151.796778,
+          "range": 19.42173,
+          "speed": 1.547788,
+          "presence": 15.5278,
+          "progress": 0,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        }
+      },
+      "seconds": 6.2,
+      "stop": "no-allies",
+      "allyAttacks": 5,
+      "positiveAllyAttacks": 5,
+      "firstAllyAttack": {
+        "tick": 12,
+        "from": 25,
+        "to": 3,
+        "kind": "attack",
+        "amount": 4.289655
+      },
+      "enemyAttacks": 10,
+      "end": {
+        "ally": null,
+        "enemy": {
+          "diameter": 17.5288,
+          "hp": 136.939213,
+          "maxHp": 161.01935,
+          "range": 20.389107,
+          "speed": 1.624882,
+          "presence": 20.279776,
+          "progress": 0.007024,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 112.831052,
+            "maxHp": 124.894762,
+            "range": 17.105987,
+            "speed": 0.894578,
+            "presence": 17.363358,
+            "progress": 0.8836,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 15,
+            "hp": 156.801067,
+            "maxHp": 156.801067,
+            "range": 19.946642,
+            "speed": 1.589621,
+            "presence": 18.152404,
+            "progress": 0.570796,
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 13.5288,
+            "hp": 21.009778,
+            "maxHp": 128.404027,
+            "range": 17.499238,
+            "speed": 0.915144,
+            "presence": 19.920917,
+            "progress": 0.536496,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          },
+          "enemy": {
+            "diameter": 17.5288,
+            "hp": 141.891206,
+            "maxHp": 161.01935,
+            "range": 20.389107,
+            "speed": 1.624882,
+            "presence": 20.279776,
+            "progress": 0.057168,
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "cardId": 0,
+      "enemyIndex": 0,
+      "distance": 23.528704,
+      "start": {
+        "ally": {
+          "diameter": 8,
+          "hp": 140.515383,
+          "maxHp": 140.515383,
+          "range": 13.428113,
+          "speed": 1.062222,
+          "presence": 14.928457,
+          "progress": 0,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 16,
+          "hp": 166.069604,
+          "maxHp": 166.069604,
+          "range": 17.129487,
+          "speed": 0.921881,
+          "presence": 23.527704,
+          "progress": 0,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "seconds": 200,
+      "stop": null,
+      "allyAttacks": 0,
+      "positiveAllyAttacks": 0,
+      "enemyAttacks": 0,
+      "end": {
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      "checkpoints": [
+        {
+          "seconds": 1,
+          "ally": {
+            "diameter": 11,
+            "hp": 145.360742,
+            "maxHp": 145.360742,
+            "range": 13.804602,
+            "speed": 1.092004,
+            "presence": 18.314752,
+            "progress": 1,
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            }
+          },
+          "enemy": {
+            "diameter": 19,
+            "hp": 171.313908,
+            "maxHp": 171.313908,
+            "range": 17.576343,
+            "speed": 0.94593,
+            "presence": 26.420923,
+            "progress": 0.93511,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 5,
+          "ally": {
+            "diameter": 19.528704,
+            "hp": 159.135616,
+            "maxHp": 159.135616,
+            "range": 14.874923,
+            "speed": 1.176671,
+            "presence": 26.838953,
+            "progress": 1,
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            }
+          },
+          "enemy": {
+            "diameter": 27.528704,
+            "hp": 186.222945,
+            "maxHp": 186.222945,
+            "range": 18.846711,
+            "speed": 1.0143,
+            "presence": 34.131965,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 10,
+          "ally": {
+            "diameter": 19.528704,
+            "hp": 159.135616,
+            "maxHp": 159.135616,
+            "range": 14.874923,
+            "speed": 1.176671,
+            "presence": 26.838953,
+            "progress": 1,
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            }
+          },
+          "enemy": {
+            "diameter": 27.528704,
+            "hp": 186.222945,
+            "maxHp": 186.222945,
+            "range": 18.846711,
+            "speed": 1.0143,
+            "presence": 34.131965,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 30,
+          "ally": {
+            "diameter": 19.528704,
+            "hp": 159.135616,
+            "maxHp": 159.135616,
+            "range": 14.874923,
+            "speed": 1.176671,
+            "presence": 26.838953,
+            "progress": 1,
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            }
+          },
+          "enemy": {
+            "diameter": 27.528704,
+            "hp": 186.222945,
+            "maxHp": 186.222945,
+            "range": 18.846711,
+            "speed": 1.0143,
+            "presence": 34.131965,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 100,
+          "ally": {
+            "diameter": 19.528704,
+            "hp": 159.135616,
+            "maxHp": 159.135616,
+            "range": 14.874923,
+            "speed": 1.176671,
+            "presence": 26.838953,
+            "progress": 1,
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            }
+          },
+          "enemy": {
+            "diameter": 27.528704,
+            "hp": 186.222945,
+            "maxHp": 186.222945,
+            "range": 18.846711,
+            "speed": 1.0143,
+            "presence": 34.131965,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        },
+        {
+          "seconds": 200,
+          "ally": {
+            "diameter": 19.528704,
+            "hp": 159.135616,
+            "maxHp": 159.135616,
+            "range": 14.874923,
+            "speed": 1.176671,
+            "presence": 26.838953,
+            "progress": 1,
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            }
+          },
+          "enemy": {
+            "diameter": 27.528704,
+            "hp": 186.222945,
+            "maxHp": 186.222945,
+            "range": 18.846711,
+            "speed": 1.0143,
+            "presence": 34.131965,
+            "progress": 1,
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "foundSilent": {
+    "seed": 0,
+    "cardId": 0,
+    "enemyIndex": 0,
+    "distance": 23.528704,
+    "start": {
+      "ally": {
+        "diameter": 8,
+        "hp": 140.515383,
+        "maxHp": 140.515383,
+        "range": 13.428113,
+        "speed": 1.062222,
+        "presence": 14.928457,
+        "progress": 0,
+        "skill": {
+          "key": "attack:ice",
+          "kind": "attack",
+          "element": "ice"
+        }
+      },
+      "enemy": {
+        "diameter": 16,
+        "hp": 166.069604,
+        "maxHp": 166.069604,
+        "range": 17.129487,
+        "speed": 0.921881,
+        "presence": 23.527704,
+        "progress": 0,
+        "skill": {
+          "key": "attack:dark",
+          "kind": "attack",
+          "element": "dark"
+        }
+      }
+    },
+    "seconds": 200,
+    "stop": null,
+    "allyAttacks": 0,
+    "positiveAllyAttacks": 0,
+    "enemyAttacks": 0,
+    "end": {
+      "ally": {
+        "diameter": 19.528704,
+        "hp": 159.135616,
+        "maxHp": 159.135616,
+        "range": 14.874923,
+        "speed": 1.176671,
+        "presence": 26.838953,
+        "progress": 1,
+        "skill": {
+          "key": "attack:ice",
+          "kind": "attack",
+          "element": "ice"
+        }
+      },
+      "enemy": {
+        "diameter": 27.528704,
+        "hp": 186.222945,
+        "maxHp": 186.222945,
+        "range": 18.846711,
+        "speed": 1.0143,
+        "presence": 34.131965,
+        "progress": 1,
+        "skill": {
+          "key": "attack:dark",
+          "kind": "attack",
+          "element": "dark"
+        }
+      }
+    },
+    "checkpoints": [
+      {
+        "seconds": 1,
+        "ally": {
+          "diameter": 11,
+          "hp": 145.360742,
+          "maxHp": 145.360742,
+          "range": 13.804602,
+          "speed": 1.092004,
+          "presence": 18.314752,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 19,
+          "hp": 171.313908,
+          "maxHp": 171.313908,
+          "range": 17.576343,
+          "speed": 0.94593,
+          "presence": 26.420923,
+          "progress": 0.93511,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 5,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 10,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 30,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 100,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      },
+      {
+        "seconds": 200,
+        "ally": {
+          "diameter": 19.528704,
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "range": 14.874923,
+          "speed": 1.176671,
+          "presence": 26.838953,
+          "progress": 1,
+          "skill": {
+            "key": "attack:ice",
+            "kind": "attack",
+            "element": "ice"
+          }
+        },
+        "enemy": {
+          "diameter": 27.528704,
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "range": 18.846711,
+          "speed": 1.0143,
+          "presence": 34.131965,
+          "progress": 1,
+          "skill": {
+            "key": "attack:dark",
+            "kind": "attack",
+            "element": "dark"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,4245 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 900,
+      "mobile": false,
+      "checks": [
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel and overlay/board mixed touches consume nothing; camera buttons removed",
+        "world-free outer placement and zoom below one restore; full-unit field toggles are display-only; single-line cards without index; enemy/ally range filters",
+        "zero-ally disk opening; independent activation and backed-up legacy-policy migration; canvas enemy selection without enemy list; native placement; elemental tabs and skill accordion; exact stopped reload; SP equal-width panes and persisted mode; vertical six-row hand scroll independent of zoom; resize/mode cancels placement; old save keys untouched"
+      ],
+      "failures": [],
+      "spGeometry": {
+        "mode": true,
+        "panels": [
+          {
+            "width": 427.5,
+            "height": 760,
+            "x": 16
+          },
+          {
+            "width": 427.5,
+            "height": 760,
+            "x": 455.5
+          },
+          {
+            "width": 427.5,
+            "height": 760,
+            "x": 895
+          }
+        ],
+        "scroll": 1366,
+        "client": 1366,
+        "hand": 0
+      },
+      "resizePlacement": {
+        "expected": {
+          "x": 903.3286394925008,
+          "y": 716.8000000000004
+        },
+        "actual": {
+          "x": 903.3286821395498,
+          "y": 716.7999786871275
+        },
+        "error": 0.00004767608772094744,
+        "onePixelWorld": 3.493646256055546
+      },
+      "migrations": [
+        {
+          "policy": "unset",
+          "rawBackup": true,
+          "clocksPreserved": true
+        },
+        {
+          "policy": "alternating",
+          "rawBackup": true,
+          "clocksPreserved": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel and overlay/board mixed touches consume nothing; camera buttons removed",
+        "world-free outer placement and zoom below one restore; full-unit field toggles are display-only; single-line cards without index; enemy/ally range filters",
+        "zero-ally disk opening; independent activation and backed-up legacy-policy migration; canvas enemy selection without enemy list; native placement; elemental tabs and skill accordion; exact stopped reload; SP equal-width panes and persisted mode; vertical six-row hand scroll independent of zoom; resize/mode cancels placement; old save keys untouched"
+      ],
+      "failures": [],
+      "spGeometry": {
+        "mode": true,
+        "panels": [
+          {
+            "width": 404.4375,
+            "height": 719,
+            "x": 16
+          },
+          {
+            "width": 404.4375,
+            "height": 719,
+            "x": 432.4375
+          },
+          {
+            "width": 404.4375,
+            "height": 719,
+            "x": 848.875
+          }
+        ],
+        "scroll": 1269,
+        "client": 390,
+        "hand": 0
+      },
+      "resizePlacement": {
+        "expected": {
+          "x": 844.4289855072464,
+          "y": 716.7999999999998
+        },
+        "actual": {
+          "x": 844.4289798460145,
+          "y": 716.8000452898551
+        },
+        "error": 0.00004564231082366408,
+        "onePixelWorld": 7.420289855072464
+      },
+      "migrations": [
+        {
+          "policy": "unset",
+          "rawBackup": true,
+          "clocksPreserved": true
+        },
+        {
+          "policy": "alternating",
+          "rawBackup": true,
+          "clocksPreserved": true
+        }
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mobile": true,
+      "checks": [
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel and overlay/board mixed touches consume nothing; camera buttons removed"
+      ],
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'false' !== 'true'\n"
+      ],
+      "spGeometry": {
+        "mode": true,
+        "panels": [
+          {
+            "width": 149.0625,
+            "height": 265,
+            "x": 16
+          },
+          {
+            "width": 149.0625,
+            "height": 265,
+            "x": 177.0625
+          },
+          {
+            "width": 149.0625,
+            "height": 265,
+            "x": 338.125
+          }
+        ],
+        "scroll": 844,
+        "client": 844,
+        "hand": 0
+      },
+      "resizePlacement": {
+        "expected": {
+          "x": 800.5818181818183,
+          "y": 716.7999999999998
+        },
+        "actual": {
+          "x": 800.5817550505051,
+          "y": 716.8000315656566
+        },
+        "error": 0.00007058295402369664,
+        "onePixelWorld": 10.343434343434344
+      },
+      "failedSave": {
+        "version": "element-skills-save-1",
+        "state": {
+          "rules": "element-skills-foundation-v1",
+          "seed": 294882,
+          "config": {
+            "healChance": 0.1
+          },
+          "diskRadius": 1100,
+          "layoutAttempt": 0,
+          "activationPolicy": "independent",
+          "tick": 100,
+          "nextId": 25,
+          "merges": 0,
+          "units": [
+            {
+              "id": 1,
+              "team": "enemy",
+              "x": 2631.795833,
+              "y": 1640.364813,
+              "born": 0,
+              "age": 100,
+              "diameter": 50,
+              "hp": 170.879548,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 0,
+                "initialDiameter": 20,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 105.971813,
+                  "hpReg": 0.071,
+                  "presenceHalo": 3.046161,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 37.048672,
+                      "range": 147.715303,
+                      "speed": 1.122062,
+                      "defense": 20.343883
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 105.971813,
+                  "hpReg": 0.071,
+                  "presenceHalo": 3.046161,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 37.048672,
+                      "range": 147.715303,
+                      "speed": 1.122062,
+                      "defense": 20.343883
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                1
+              ],
+              "enemyOrigins": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "team": "enemy",
+              "x": 1827.343486,
+              "y": 1711.636671,
+              "born": 0,
+              "age": 100,
+              "diameter": 42,
+              "hp": 191.184772,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 1,
+                "initialDiameter": 12,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 126.403155,
+                  "hpReg": 0.104567,
+                  "presenceHalo": 3.795427,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 38.202584,
+                      "range": 130.4809,
+                      "speed": 1.259051,
+                      "defense": 29.308267
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 126.403155,
+                  "hpReg": 0.104567,
+                  "presenceHalo": 3.795427,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 38.202584,
+                      "range": 130.4809,
+                      "speed": 1.259051,
+                      "defense": 29.308267
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                2
+              ],
+              "enemyOrigins": [
+                2
+              ]
+            },
+            {
+              "id": 3,
+              "team": "enemy",
+              "x": 1117.327588,
+              "y": 1348.088721,
+              "born": 0,
+              "age": 100,
+              "diameter": 42,
+              "hp": 196.943765,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 2,
+                "initialDiameter": 12,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 130.210754,
+                  "hpReg": 0.115862,
+                  "presenceHalo": 3.848581,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 49.647018,
+                      "range": 165.685856,
+                      "speed": 0.830307,
+                      "defense": 24.371321
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 130.210754,
+                  "hpReg": 0.115862,
+                  "presenceHalo": 3.848581,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 49.647018,
+                      "range": 165.685856,
+                      "speed": 0.830307,
+                      "defense": 24.371321
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:ice",
+                    "kind": "attack",
+                    "element": "ice"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:ice",
+                    "kind": "attack",
+                    "element": "ice"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                3
+              ],
+              "enemyOrigins": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "team": "enemy",
+              "x": 1895.863454,
+              "y": 2515.834363,
+              "born": 0,
+              "age": 100,
+              "diameter": 42,
+              "hp": 147.549026,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 3,
+                "initialDiameter": 12,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 97.553075,
+                  "hpReg": 0.119468,
+                  "presenceHalo": 3.236063,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 42.988381,
+                      "range": 185.930863,
+                      "speed": 0.819578,
+                      "defense": 35.925745
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 97.553075,
+                  "hpReg": 0.119468,
+                  "presenceHalo": 3.236063,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 42.988381,
+                      "range": 185.930863,
+                      "speed": 0.819578,
+                      "defense": 35.925745
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                4
+              ],
+              "enemyOrigins": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "team": "enemy",
+              "x": 2685.714384,
+              "y": 1491.43665,
+              "born": 0,
+              "age": 100,
+              "diameter": 42,
+              "hp": 163.417231,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 4,
+                "initialDiameter": 12,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 108.04445,
+                  "hpReg": 0.149746,
+                  "presenceHalo": 3.3194,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 46.638949,
+                      "range": 164.38779,
+                      "speed": 1.062939,
+                      "defense": 27.655692
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 108.04445,
+                  "hpReg": 0.149746,
+                  "presenceHalo": 3.3194,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 46.638949,
+                      "range": 164.38779,
+                      "speed": 1.062939,
+                      "defense": 27.655692
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                5
+              ],
+              "enemyOrigins": [
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "team": "enemy",
+              "x": 2889.40398,
+              "y": 1488.837457,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 171.142703,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 5,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 109.53133,
+                  "hpReg": 0.144826,
+                  "presenceHalo": 2.853058,
+                  "elements": {
+                    "fire": {
+                      "attack": 32.429098,
+                      "range": 126.667666,
+                      "speed": 0.84051,
+                      "defense": 38.462872
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 109.53133,
+                  "hpReg": 0.144826,
+                  "presenceHalo": 2.853058,
+                  "elements": {
+                    "fire": {
+                      "attack": 32.429098,
+                      "range": 126.667666,
+                      "speed": 0.84051,
+                      "defense": 38.462872
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                6
+              ],
+              "enemyOrigins": [
+                6
+              ]
+            },
+            {
+              "id": 7,
+              "team": "enemy",
+              "x": 2018.333316,
+              "y": 2367.623414,
+              "born": 0,
+              "age": 100,
+              "diameter": 42,
+              "hp": 149.302975,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 6,
+                "initialDiameter": 12,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 98.712711,
+                  "hpReg": 0.128575,
+                  "presenceHalo": 3.708978,
+                  "elements": {
+                    "fire": {
+                      "attack": 49.945381,
+                      "range": 185.309989,
+                      "speed": 0.979947,
+                      "defense": 35.665766
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 98.712711,
+                  "hpReg": 0.128575,
+                  "presenceHalo": 3.708978,
+                  "elements": {
+                    "fire": {
+                      "attack": 49.945381,
+                      "range": 185.309989,
+                      "speed": 0.979947,
+                      "defense": 35.665766
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                7
+              ],
+              "enemyOrigins": [
+                7
+              ]
+            },
+            {
+              "id": 8,
+              "team": "enemy",
+              "x": 1383.900266,
+              "y": 1273.951195,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 159.122283,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 7,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 101.838261,
+                  "hpReg": 0.149886,
+                  "presenceHalo": 3.961366,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 50.729058,
+                      "range": 160.284682,
+                      "speed": 0.997803,
+                      "defense": 35.788513
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 101.838261,
+                  "hpReg": 0.149886,
+                  "presenceHalo": 3.961366,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 50.729058,
+                      "range": 160.284682,
+                      "speed": 0.997803,
+                      "defense": 35.788513
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                8
+              ],
+              "enemyOrigins": [
+                8
+              ]
+            },
+            {
+              "id": 9,
+              "team": "enemy",
+              "x": 2857.616151,
+              "y": 2026.116276,
+              "born": 0,
+              "age": 100,
+              "diameter": 50,
+              "hp": 160.857904,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 8,
+                "initialDiameter": 20,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 99.75684,
+                  "hpReg": 0.143338,
+                  "presenceHalo": 3.680676,
+                  "elements": {
+                    "fire": {
+                      "attack": 43.307687,
+                      "range": 179.849545,
+                      "speed": 0.985722,
+                      "defense": 37.091349
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 99.75684,
+                  "hpReg": 0.143338,
+                  "presenceHalo": 3.680676,
+                  "elements": {
+                    "fire": {
+                      "attack": 43.307687,
+                      "range": 179.849545,
+                      "speed": 0.985722,
+                      "defense": 37.091349
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                9
+              ],
+              "enemyOrigins": [
+                9
+              ]
+            },
+            {
+              "id": 10,
+              "team": "enemy",
+              "x": 1553.959823,
+              "y": 1037.102107,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 197.935014,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 9,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 126.678409,
+                  "hpReg": 0.084104,
+                  "presenceHalo": 2.914789,
+                  "elements": {
+                    "fire": {
+                      "attack": 36.539904,
+                      "range": 187.944325,
+                      "speed": 1.210246,
+                      "defense": 21.447676
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 126.678409,
+                  "hpReg": 0.084104,
+                  "presenceHalo": 2.914789,
+                  "elements": {
+                    "fire": {
+                      "attack": 36.539904,
+                      "range": 187.944325,
+                      "speed": 1.210246,
+                      "defense": 21.447676
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                10
+              ],
+              "enemyOrigins": [
+                10
+              ]
+            },
+            {
+              "id": 11,
+              "team": "enemy",
+              "x": 1596.891198,
+              "y": 956.914692,
+              "born": 0,
+              "age": 100,
+              "diameter": 50,
+              "hp": 166.139818,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 10,
+                "initialDiameter": 20,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 103.032445,
+                  "hpReg": 0.136864,
+                  "presenceHalo": 2.558002,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 42.712497,
+                      "range": 194.595707,
+                      "speed": 0.855529,
+                      "defense": 33.472841
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 103.032445,
+                  "hpReg": 0.136864,
+                  "presenceHalo": 2.558002,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 42.712497,
+                      "range": 194.595707,
+                      "speed": 0.855529,
+                      "defense": 33.472841
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                11
+              ],
+              "enemyOrigins": [
+                11
+              ]
+            },
+            {
+              "id": 12,
+              "team": "enemy",
+              "x": 988.637677,
+              "y": 1432.365215,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 155.233417,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 11,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 99.349387,
+                  "hpReg": 0.073546,
+                  "presenceHalo": 2.709465,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 46.650834,
+                      "range": 144.273451,
+                      "speed": 1.041699,
+                      "defense": 21.104638
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 99.349387,
+                  "hpReg": 0.073546,
+                  "presenceHalo": 2.709465,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 46.650834,
+                      "range": 144.273451,
+                      "speed": 1.041699,
+                      "defense": 21.104638
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                12
+              ],
+              "enemyOrigins": [
+                12
+              ]
+            },
+            {
+              "id": 13,
+              "team": "enemy",
+              "x": 1990.536362,
+              "y": 1748.253564,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 196.1121,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 12,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 125.511744,
+                  "hpReg": 0.10279,
+                  "presenceHalo": 3.831881,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 45.876363,
+                      "range": 195.323605,
+                      "speed": 0.946151,
+                      "defense": 22.972276
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 125.511744,
+                  "hpReg": 0.10279,
+                  "presenceHalo": 3.831881,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 45.876363,
+                      "range": 195.323605,
+                      "speed": 0.946151,
+                      "defense": 22.972276
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                13
+              ],
+              "enemyOrigins": [
+                13
+              ]
+            },
+            {
+              "id": 14,
+              "team": "enemy",
+              "x": 2371.889745,
+              "y": 1351.548893,
+              "born": 0,
+              "age": 100,
+              "diameter": 50,
+              "hp": 180.8435,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 13,
+                "initialDiameter": 20,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 112.151008,
+                  "hpReg": 0.066494,
+                  "presenceHalo": 3.673876,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 32.365759,
+                      "range": 143.154775,
+                      "speed": 0.948373,
+                      "defense": 31.686175
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 112.151008,
+                  "hpReg": 0.066494,
+                  "presenceHalo": 3.673876,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 32.365759,
+                      "range": 143.154775,
+                      "speed": 0.948373,
+                      "defense": 31.686175
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                14
+              ],
+              "enemyOrigins": [
+                14
+              ]
+            },
+            {
+              "id": 15,
+              "team": "enemy",
+              "x": 2279.370917,
+              "y": 647.173498,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 183.063388,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 14,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 117.160568,
+                  "hpReg": 0.141366,
+                  "presenceHalo": 2.639845,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 49.677236,
+                      "range": 166.286604,
+                      "speed": 0.814438,
+                      "defense": 24.671548
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 117.160568,
+                  "hpReg": 0.141366,
+                  "presenceHalo": 2.639845,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 49.677236,
+                      "range": 166.286604,
+                      "speed": 0.814438,
+                      "defense": 24.671548
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "heal:dark",
+                    "kind": "heal",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "heal:dark",
+                    "kind": "heal",
+                    "element": "dark"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                15
+              ],
+              "enemyOrigins": [
+                15
+              ]
+            },
+            {
+              "id": 16,
+              "team": "enemy",
+              "x": 1974.881149,
+              "y": 2300.101954,
+              "born": 0,
+              "age": 100,
+              "diameter": 50,
+              "hp": 189.948048,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 15,
+                "initialDiameter": 20,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 117.797239,
+                  "hpReg": 0.132643,
+                  "presenceHalo": 3.682012,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 39.943224,
+                      "range": 192.938361,
+                      "speed": 0.832355,
+                      "defense": 23.311271
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 117.797239,
+                  "hpReg": 0.132643,
+                  "presenceHalo": 3.682012,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 39.943224,
+                      "range": 192.938361,
+                      "speed": 0.832355,
+                      "defense": 23.311271
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:ice",
+                    "kind": "attack",
+                    "element": "ice"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:ice",
+                    "kind": "attack",
+                    "element": "ice"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                16
+              ],
+              "enemyOrigins": [
+                16
+              ]
+            },
+            {
+              "id": 17,
+              "team": "enemy",
+              "x": 1566.473254,
+              "y": 1898.562433,
+              "born": 0,
+              "age": 100,
+              "diameter": 50,
+              "hp": 208.957422,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 16,
+                "initialDiameter": 20,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 129.585998,
+                  "hpReg": 0.105744,
+                  "presenceHalo": 3.958335,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 41.240901,
+                      "range": 147.66866,
+                      "speed": 1.148218,
+                      "defense": 36.76155
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 129.585998,
+                  "hpReg": 0.105744,
+                  "presenceHalo": 3.958335,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 41.240901,
+                      "range": 147.66866,
+                      "speed": 1.148218,
+                      "defense": 36.76155
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                17
+              ],
+              "enemyOrigins": [
+                17
+              ]
+            },
+            {
+              "id": 18,
+              "team": "enemy",
+              "x": 2078.857452,
+              "y": 1035.709831,
+              "born": 0,
+              "age": 100,
+              "diameter": 42,
+              "hp": 159.315148,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 17,
+                "initialDiameter": 12,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 105.332329,
+                  "hpReg": 0.065882,
+                  "presenceHalo": 2.639963,
+                  "elements": {
+                    "fire": {
+                      "attack": 50.257325,
+                      "range": 176.147385,
+                      "speed": 0.865761,
+                      "defense": 34.026489
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 105.332329,
+                  "hpReg": 0.065882,
+                  "presenceHalo": 2.639963,
+                  "elements": {
+                    "fire": {
+                      "attack": 50.257325,
+                      "range": 176.147385,
+                      "speed": 0.865761,
+                      "defense": 34.026489
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                18
+              ],
+              "enemyOrigins": [
+                18
+              ]
+            },
+            {
+              "id": 19,
+              "team": "enemy",
+              "x": 1990.372232,
+              "y": 1371.970659,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 154.744625,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 18,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 99.03656,
+                  "hpReg": 0.126346,
+                  "presenceHalo": 3.097143,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 55.089301,
+                      "range": 125.81839,
+                      "speed": 1.048851,
+                      "defense": 33.924471
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 99.03656,
+                  "hpReg": 0.126346,
+                  "presenceHalo": 3.097143,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 55.089301,
+                      "range": 125.81839,
+                      "speed": 1.048851,
+                      "defense": 33.924471
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                19
+              ],
+              "enemyOrigins": [
+                19
+              ]
+            },
+            {
+              "id": 20,
+              "team": "enemy",
+              "x": 2187.693225,
+              "y": 688.625807,
+              "born": 0,
+              "age": 100,
+              "diameter": 42,
+              "hp": 173.359902,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 19,
+                "initialDiameter": 12,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 114.618117,
+                  "hpReg": 0.062686,
+                  "presenceHalo": 2.688268,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 44.79657,
+                      "range": 125.29224,
+                      "speed": 1.216572,
+                      "defense": 24.939203
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 114.618117,
+                  "hpReg": 0.062686,
+                  "presenceHalo": 2.688268,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 44.79657,
+                      "range": 125.29224,
+                      "speed": 1.216572,
+                      "defense": 24.939203
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                20
+              ],
+              "enemyOrigins": [
+                20
+              ]
+            },
+            {
+              "id": 21,
+              "team": "enemy",
+              "x": 2983.18996,
+              "y": 1381.288235,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 183.697237,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 20,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 117.566232,
+                  "hpReg": 0.12174,
+                  "presenceHalo": 3.459628,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 52.927157,
+                      "range": 137.715561,
+                      "speed": 0.88931,
+                      "defense": 25.305065
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 117.566232,
+                  "hpReg": 0.12174,
+                  "presenceHalo": 3.459628,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 52.927157,
+                      "range": 137.715561,
+                      "speed": 0.88931,
+                      "defense": 25.305065
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:ice",
+                    "kind": "attack",
+                    "element": "ice"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:ice",
+                    "kind": "attack",
+                    "element": "ice"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                21
+              ],
+              "enemyOrigins": [
+                21
+              ]
+            },
+            {
+              "id": 22,
+              "team": "enemy",
+              "x": 2589.410791,
+              "y": 607.431177,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 163.100642,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 21,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 104.384411,
+                  "hpReg": 0.141372,
+                  "presenceHalo": 3.493972,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 44.395034,
+                      "range": 149.131466,
+                      "speed": 1.222392,
+                      "defense": 20.900881
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 104.384411,
+                  "hpReg": 0.141372,
+                  "presenceHalo": 3.493972,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 44.395034,
+                      "range": 149.131466,
+                      "speed": 1.222392,
+                      "defense": 20.900881
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "heal:ice",
+                    "kind": "heal",
+                    "element": "ice"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "heal:ice",
+                    "kind": "heal",
+                    "element": "ice"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                22
+              ],
+              "enemyOrigins": [
+                22
+              ]
+            },
+            {
+              "id": 23,
+              "team": "enemy",
+              "x": 1670.389082,
+              "y": 1915.756991,
+              "born": 0,
+              "age": 100,
+              "diameter": 42,
+              "hp": 176.957855,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 22,
+                "initialDiameter": 12,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 116.996929,
+                  "hpReg": 0.090953,
+                  "presenceHalo": 3.235502,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 50.29223,
+                      "range": 150.004739,
+                      "speed": 0.801682,
+                      "defense": 22.902426
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 116.996929,
+                  "hpReg": 0.090953,
+                  "presenceHalo": 3.235502,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 50.29223,
+                      "range": 150.004739,
+                      "speed": 0.801682,
+                      "defense": 22.902426
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:electric",
+                    "kind": "attack",
+                    "element": "electric"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                23
+              ],
+              "enemyOrigins": [
+                23
+              ]
+            },
+            {
+              "id": 24,
+              "team": "enemy",
+              "x": 2182.628983,
+              "y": 1168.256217,
+              "born": 0,
+              "age": 100,
+              "diameter": 46,
+              "hp": 218.379041,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "enemy",
+                "index": 23,
+                "initialDiameter": 16,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 139.762586,
+                  "hpReg": 0.158349,
+                  "presenceHalo": 3.538558,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 50.778777,
+                      "range": 188.98114,
+                      "speed": 1.109299,
+                      "defense": 24.481707
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 139.762586,
+                  "hpReg": 0.158349,
+                  "presenceHalo": 3.538558,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 50.778777,
+                      "range": 188.98114,
+                      "speed": 1.109299,
+                      "defense": 24.481707
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:ice",
+                    "kind": "attack",
+                    "element": "ice"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              },
+              "bonus": {
+                "maxHp": 0,
+                "hpReg": 0,
+                "elements": {
+                  "fire": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "ice": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "electric": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  },
+                  "dark": {
+                    "attack": 0,
+                    "range": 0,
+                    "speed": 0,
+                    "defense": 0
+                  }
+                }
+              },
+              "skills": [
+                {
+                  "skill": {
+                    "key": "attack:ice",
+                    "kind": "attack",
+                    "element": "ice"
+                  },
+                  "progress": 1
+                }
+              ],
+              "lineage": [
+                24
+              ],
+              "enemyOrigins": [
+                24
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "id": 0,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "hand",
+                "index": 0,
+                "initialDiameter": 8,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 129.736382,
+                  "hpReg": 0.144946,
+                  "presenceHalo": 2.637346,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 52.328368,
+                      "range": 174.496752,
+                      "speed": 0.863922,
+                      "defense": 34.468476
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 129.736382,
+                  "hpReg": 0.144946,
+                  "presenceHalo": 2.637346,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 52.328368,
+                      "range": 174.496752,
+                      "speed": 0.863922,
+                      "defense": 34.468476
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              }
+            },
+            {
+              "id": 1,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "hand",
+                "index": 1,
+                "initialDiameter": 8,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 111.903558,
+                  "hpReg": 0.159789,
+                  "presenceHalo": 2.779725,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 43.438685,
+                      "range": 131.555524,
+                      "speed": 1.312145,
+                      "defense": 30.774005
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 111.903558,
+                  "hpReg": 0.159789,
+                  "presenceHalo": 2.779725,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 43.438685,
+                      "range": 131.555524,
+                      "speed": 1.312145,
+                      "defense": 30.774005
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:ice",
+                    "kind": "attack",
+                    "element": "ice"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              }
+            },
+            {
+              "id": 2,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "hand",
+                "index": 2,
+                "initialDiameter": 8,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 106.758296,
+                  "hpReg": 0.086051,
+                  "presenceHalo": 3.559701,
+                  "elements": {
+                    "fire": {
+                      "attack": 34.700557,
+                      "range": 151.401892,
+                      "speed": 1.292163,
+                      "defense": 25.370994
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 106.758296,
+                  "hpReg": 0.086051,
+                  "presenceHalo": 3.559701,
+                  "elements": {
+                    "fire": {
+                      "attack": 34.700557,
+                      "range": 151.401892,
+                      "speed": 1.292163,
+                      "defense": 25.370994
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              }
+            },
+            {
+              "id": 3,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "hand",
+                "index": 3,
+                "initialDiameter": 8,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 123.078576,
+                  "hpReg": 0.097666,
+                  "presenceHalo": 3.721154,
+                  "elements": {
+                    "fire": {
+                      "attack": 38.2843,
+                      "range": 132.974192,
+                      "speed": 1.082253,
+                      "defense": 33.021009
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 123.078576,
+                  "hpReg": 0.097666,
+                  "presenceHalo": 3.721154,
+                  "elements": {
+                    "fire": {
+                      "attack": 38.2843,
+                      "range": 132.974192,
+                      "speed": 1.082253,
+                      "defense": 33.021009
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:fire",
+                    "kind": "attack",
+                    "element": "fire"
+                  }
+                ],
+                "entry": {
+                  "tick": 0,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              }
+            },
+            {
+              "id": 4,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "hand",
+                "index": 4,
+                "initialDiameter": 8,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 116.415838,
+                  "hpReg": 0.105224,
+                  "presenceHalo": 3.776747,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 46.031909,
+                      "range": 153.404551,
+                      "speed": 1.067441,
+                      "defense": 23.520366
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 116.415838,
+                  "hpReg": 0.105224,
+                  "presenceHalo": 3.776747,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 46.031909,
+                      "range": 153.404551,
+                      "speed": 1.067441,
+                      "defense": 23.520366
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 40,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              }
+            },
+            {
+              "id": 5,
+              "seed": {
+                "generator": "element-seed-1",
+                "runSeed": 294882,
+                "source": "hand",
+                "index": 5,
+                "initialDiameter": 8,
+                "config": {
+                  "healChance": 0.1
+                },
+                "raw": {
+                  "maxHp": 111.707848,
+                  "hpReg": 0.119487,
+                  "presenceHalo": 3.042549,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 42.243844,
+                      "range": 133.618041,
+                      "speed": 1.289851,
+                      "defense": 28.90879
+                    }
+                  }
+                },
+                "fixed": {
+                  "maxHp": 111.707848,
+                  "hpReg": 0.119487,
+                  "presenceHalo": 3.042549,
+                  "elements": {
+                    "fire": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "ice": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "electric": {
+                      "attack": 0,
+                      "range": 0,
+                      "speed": 0,
+                      "defense": 0
+                    },
+                    "dark": {
+                      "attack": 42.243844,
+                      "range": 133.618041,
+                      "speed": 1.289851,
+                      "defense": 28.90879
+                    }
+                  }
+                },
+                "skills": [
+                  {
+                    "key": "attack:dark",
+                    "kind": "attack",
+                    "element": "dark"
+                  }
+                ],
+                "entry": {
+                  "tick": 80,
+                  "boosts": {
+                    "fire": 1,
+                    "ice": 1,
+                    "electric": 1,
+                    "dark": 1
+                  },
+                  "rewardIds": []
+                }
+              }
+            }
+          ],
+          "nextCard": 6,
+          "charges": 4,
+          "drawProgress": 0,
+          "turnProgress": 0.25,
+          "boosts": {
+            "fire": 1,
+            "ice": 1,
+            "electric": 1,
+            "dark": 1
+          },
+          "rewards": [],
+          "outcome": "playing",
+          "events": [
+            "円盤内ランダム・味方0体開始。数値は仮設定。"
+          ],
+          "needsDecision": false,
+          "rotations": {}
+        },
+        "view": {
+          "x": 2048,
+          "y": 1536,
+          "zoom": 1
+        },
+        "checksum": "dbe3d728"
+      }
+    }
+  ],
+  "runtimeErrors": []
+}

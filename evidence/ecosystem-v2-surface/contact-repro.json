@@ -1,0 +1,248 @@
+{
+  "before": {
+    "tick": 2000,
+    "centerDistance": 23.528704,
+    "surfaceDistance": 0,
+    "units": [
+      {
+        "id": 25,
+        "diameter": 19.528704,
+        "hp": 159.135616,
+        "stats": {
+          "hp": 159.135616,
+          "maxHp": 159.135616,
+          "hpReg": 0.095641,
+          "diameter": 19.528704,
+          "presence": 26.838953,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "ice": {
+              "attack": 44.403988,
+              "range": 14.874923,
+              "speed": 1.176671,
+              "defense": 44.53396
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            }
+          }
+        },
+        "clocks": [
+          {
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            },
+            "progress": 1
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "diameter": 27.528704,
+        "hp": 186.222945,
+        "stats": {
+          "hp": 186.222945,
+          "maxHp": 186.222945,
+          "hpReg": 0.161199,
+          "diameter": 27.528704,
+          "presence": 34.131965,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "dark": {
+              "attack": 57.160568,
+              "range": 18.846711,
+              "speed": 1.0143,
+              "defense": 45.647972
+            }
+          }
+        },
+        "clocks": [
+          {
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            },
+            "progress": 1
+          }
+        ]
+      }
+    ]
+  },
+  "after": {
+    "tick": 2001,
+    "units": [
+      {
+        "id": 25,
+        "diameter": 19.528704,
+        "hp": 101.975048,
+        "stats": {
+          "hp": 101.975048,
+          "maxHp": 159.135616,
+          "hpReg": 0.095641,
+          "diameter": 19.528704,
+          "presence": 26.838953,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "ice": {
+              "attack": 44.403988,
+              "range": 14.874923,
+              "speed": 1.176671,
+              "defense": 44.53396
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "dark": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            }
+          }
+        },
+        "clocks": [
+          {
+            "skill": {
+              "key": "attack:ice",
+              "kind": "attack",
+              "element": "ice"
+            },
+            "progress": 0.117667
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "diameter": 27.528704,
+        "hp": 141.818957,
+        "stats": {
+          "hp": 141.818957,
+          "maxHp": 186.222945,
+          "hpReg": 0.161199,
+          "diameter": 27.528704,
+          "presence": 34.131965,
+          "elements": {
+            "fire": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "ice": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "electric": {
+              "attack": 0,
+              "range": 0,
+              "speed": 0,
+              "defense": 0
+            },
+            "dark": {
+              "attack": 57.160568,
+              "range": 18.846711,
+              "speed": 1.0143,
+              "defense": 45.647972
+            }
+          }
+        },
+        "clocks": [
+          {
+            "skill": {
+              "key": "attack:dark",
+              "kind": "attack",
+              "element": "dark"
+            },
+            "progress": 0.10143
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "tick": 2001,
+      "kind": "attack",
+      "element": "dark",
+      "count": 1,
+      "amount": 57.160568,
+      "from": {
+        "id": 1,
+        "team": "enemy",
+        "x": 0,
+        "y": 0,
+        "diameter": 27.528704
+      },
+      "to": {
+        "id": 25,
+        "x": 23.528704,
+        "y": 0,
+        "diameter": 19.528704
+      }
+    },
+    {
+      "tick": 2001,
+      "kind": "attack",
+      "element": "ice",
+      "count": 1,
+      "amount": 44.403988,
+      "from": {
+        "id": 25,
+        "team": "ally",
+        "x": 23.528704,
+        "y": 0,
+        "diameter": 19.528704
+      },
+      "to": {
+        "id": 1,
+        "x": 0,
+        "y": 0,
+        "diameter": 27.528704
+      }
+    }
+  ]
+}

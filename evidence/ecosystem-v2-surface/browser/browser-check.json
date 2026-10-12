@@ -1,0 +1,219 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "name": "silent-contact",
+      "beforeTick": 2000,
+      "afterTick": 2011,
+      "baselineWhite": 0,
+      "maxWhite": 22,
+      "stats": [
+        {
+          "id": 1,
+          "hp": 97.576169,
+          "maxHp": 186.222945,
+          "progress": 0.11573,
+          "range": 18.846711
+        },
+        {
+          "id": 25,
+          "hp": 44.91012,
+          "maxHp": 159.135616,
+          "progress": 0.294337,
+          "range": 14.874923
+        }
+      ],
+      "emissions": [
+        {
+          "tick": 2001,
+          "from": 1,
+          "to": 25,
+          "kind": "attack",
+          "amount": 57.160568
+        },
+        {
+          "tick": 2001,
+          "from": 25,
+          "to": 1,
+          "kind": "attack",
+          "amount": 44.403988
+        },
+        {
+          "tick": 2009,
+          "from": 25,
+          "to": 1,
+          "kind": "attack",
+          "amount": 44.403988
+        },
+        {
+          "tick": 2010,
+          "from": 1,
+          "to": 25,
+          "kind": "attack",
+          "amount": 57.160568
+        }
+      ],
+      "stoppedStateStable": true
+    },
+    {
+      "width": 1366,
+      "height": 900,
+      "name": "normal-auto-attack",
+      "beforeTick": 0,
+      "afterTick": 14,
+      "baselineWhite": 0,
+      "maxWhite": 67,
+      "stats": [
+        {
+          "id": 3,
+          "hp": 119.607409,
+          "maxHp": 158.802783,
+          "progress": 0.210827,
+          "range": 20.156606
+        },
+        {
+          "id": 25,
+          "hp": 27.717923,
+          "maxHp": 126.560025,
+          "progress": 0.243872,
+          "range": 17.292597
+        }
+      ],
+      "emissions": [
+        {
+          "tick": 7,
+          "from": 3,
+          "to": 25,
+          "kind": "attack",
+          "amount": 46.458636
+        },
+        {
+          "tick": 12,
+          "from": 25,
+          "to": 3,
+          "kind": "attack",
+          "amount": 39.21308
+        },
+        {
+          "tick": 13,
+          "from": 3,
+          "to": 25,
+          "kind": "attack",
+          "amount": 52.464464
+        }
+      ],
+      "stoppedStateStable": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "silent-contact",
+      "beforeTick": 2000,
+      "afterTick": 2012,
+      "baselineWhite": 0,
+      "maxWhite": 17,
+      "stats": [
+        {
+          "id": 1,
+          "hp": 97.592289,
+          "maxHp": 186.222945,
+          "progress": 0.21716,
+          "range": 18.846711
+        },
+        {
+          "id": 25,
+          "hp": 44.919684,
+          "maxHp": 159.135616,
+          "progress": 0.412004,
+          "range": 14.874923
+        }
+      ],
+      "emissions": [
+        {
+          "tick": 2001,
+          "from": 1,
+          "to": 25,
+          "kind": "attack",
+          "amount": 57.160568
+        },
+        {
+          "tick": 2001,
+          "from": 25,
+          "to": 1,
+          "kind": "attack",
+          "amount": 44.403988
+        },
+        {
+          "tick": 2009,
+          "from": 25,
+          "to": 1,
+          "kind": "attack",
+          "amount": 44.403988
+        },
+        {
+          "tick": 2010,
+          "from": 1,
+          "to": 25,
+          "kind": "attack",
+          "amount": 57.160568
+        }
+      ],
+      "stoppedStateStable": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "normal-auto-attack",
+      "beforeTick": 0,
+      "afterTick": 13,
+      "baselineWhite": 0,
+      "maxWhite": 45,
+      "stats": [
+        {
+          "id": 3,
+          "hp": 119.098113,
+          "maxHp": 158.302354,
+          "progress": 0.050192,
+          "range": 20.104115
+        },
+        {
+          "id": 25,
+          "hp": 27.289921,
+          "maxHp": 126.143709,
+          "progress": 0.153438,
+          "range": 17.245945
+        }
+      ],
+      "emissions": [
+        {
+          "tick": 7,
+          "from": 3,
+          "to": 25,
+          "kind": "attack",
+          "amount": 46.458636
+        },
+        {
+          "tick": 12,
+          "from": 25,
+          "to": 3,
+          "kind": "attack",
+          "amount": 39.21308
+        },
+        {
+          "tick": 13,
+          "from": 3,
+          "to": 25,
+          "kind": "attack",
+          "amount": 52.464464
+        }
+      ],
+      "stoppedStateStable": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "samples": 256,
+  "config": {
+    "healChance": 0.1,
+    "initialBalance": "range-presence-2",
+    "defenseAllocation": "all-elements-1"
+  },
+  "meanTotal": 29.65760930859376,
+  "meanDefense": {
+    "fire": 7.489266667968752,
+    "ice": 7.087238898437501,
+    "electric": 7.608585355468751,
+    "dark": 7.472518386718748
+  },
+  "largestMatchesSkill": 78,
+  "largestMatchesSkillFraction": 0.3046875,
+  "maxBudgetDiff": 7.105427357601002e-15
+}

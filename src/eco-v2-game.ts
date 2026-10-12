@@ -8,7 +8,7 @@ export type ActivationPolicy='independent';
 export type GameV2=FoundationV2&{seed:number;config:GenerationConfig;diskRadius:number;layoutAttempt:number;activationPolicy:ActivationPolicy;hand:{id:number;seed:SeedV2}[];nextCard:number;charges:number;drawProgress:number;turnProgress:number;boosts:ReturnType<typeof ones>;rewards:{id:number;tick:number;element:Element;enemyOrigins:number[]}[];outcome:'playing'|'win'|'ended';events:string[];needsDecision:boolean;rotations:Record<number,Partial<Record<Element,string>>>};
 const log=(s:GameV2,text:string)=>{s.events.unshift(`${(s.tick/10).toFixed(1)}秒 ${text}`);s.events=s.events.slice(0,8);};
 export function createV2Game(seed:number,config:GenerationConfig,diskRadius=1100):GameV2{
- if(!Number.isSafeInteger(seed)||seed<0||seed>4294967295||!Number.isFinite(config.healChance)||config.healChance<0||config.healChance>1||config.initialBalance!==undefined&&config.initialBalance!=='range-presence-2'||!Number.isFinite(diskRadius)||diskRadius<200||diskRadius>1400)throw Error('Invalid new-run settings');
+ if(!Number.isSafeInteger(seed)||seed<0||seed>4294967295||!Number.isFinite(config.healChance)||config.healChance<0||config.healChance>1||config.initialBalance!==undefined&&config.initialBalance!=='range-presence-2'||config.defenseAllocation!==undefined&&config.defenseAllocation!=='all-elements-1'||!Number.isFinite(diskRadius)||diskRadius<200||diskRadius>1400)throw Error('Invalid new-run settings');
  let failure:unknown;for(let layoutAttempt=0;layoutAttempt<8;layoutAttempt++){try{return generateV2GameLayout(seed,config,diskRadius,layoutAttempt);}catch(e){failure=e;}}
  throw Error(`Generation failed after 8 bounded layout attempts: ${String(failure)}`);
 }

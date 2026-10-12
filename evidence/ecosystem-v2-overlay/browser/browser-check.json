@@ -1,0 +1,143 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 900,
+      "mobile": false,
+      "checks": [
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel consume nothing; camera buttons removed",
+        "zero-ally disk opening; independent activation and backed-up legacy-policy migration; canvas enemy selection without enemy list; native placement; elemental tabs and skill accordion; exact stopped reload; SP equal-width panes and persisted mode; vertical six-row hand scroll independent of zoom; resize/mode cancels placement; old save keys untouched"
+      ],
+      "failures": [],
+      "spGeometry": {
+        "mode": true,
+        "panels": [
+          {
+            "width": 427.5,
+            "height": 760,
+            "x": 16
+          },
+          {
+            "width": 427.5,
+            "height": 760,
+            "x": 455.5
+          },
+          {
+            "width": 427.5,
+            "height": 760,
+            "x": 895
+          }
+        ],
+        "scroll": 1366,
+        "client": 1366,
+        "hand": 0
+      },
+      "migrations": [
+        {
+          "policy": "unset",
+          "rawBackup": true,
+          "clocksPreserved": true
+        },
+        {
+          "policy": "alternating",
+          "rawBackup": true,
+          "clocksPreserved": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "checks": [
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel consume nothing; camera buttons removed",
+        "zero-ally disk opening; independent activation and backed-up legacy-policy migration; canvas enemy selection without enemy list; native placement; elemental tabs and skill accordion; exact stopped reload; SP equal-width panes and persisted mode; vertical six-row hand scroll independent of zoom; resize/mode cancels placement; old save keys untouched"
+      ],
+      "failures": [],
+      "spGeometry": {
+        "mode": true,
+        "panels": [
+          {
+            "width": 404.4375,
+            "height": 719,
+            "x": 16
+          },
+          {
+            "width": 404.4375,
+            "height": 719,
+            "x": 432.4375
+          },
+          {
+            "width": 404.4375,
+            "height": 719,
+            "x": 848.875
+          }
+        ],
+        "scroll": 1269,
+        "client": 390,
+        "hand": 0
+      },
+      "migrations": [
+        {
+          "policy": "unset",
+          "rawBackup": true,
+          "clocksPreserved": true
+        },
+        {
+          "policy": "alternating",
+          "rawBackup": true,
+          "clocksPreserved": true
+        }
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mobile": true,
+      "checks": [
+        "full-pane canvas unaffected by folded hand; trusted pinch, two-to-one drag and pointercancel consume nothing; camera buttons removed",
+        "zero-ally disk opening; independent activation and backed-up legacy-policy migration; canvas enemy selection without enemy list; native placement; elemental tabs and skill accordion; exact stopped reload; SP equal-width panes and persisted mode; vertical six-row hand scroll independent of zoom; resize/mode cancels placement; old save keys untouched"
+      ],
+      "failures": [],
+      "spGeometry": {
+        "mode": true,
+        "panels": [
+          {
+            "width": 149.0625,
+            "height": 265,
+            "x": 16
+          },
+          {
+            "width": 149.0625,
+            "height": 265,
+            "x": 177.0625
+          },
+          {
+            "width": 149.0625,
+            "height": 265,
+            "x": 338.125
+          }
+        ],
+        "scroll": 844,
+        "client": 844,
+        "hand": 0
+      },
+      "migrations": [
+        {
+          "policy": "unset",
+          "rawBackup": true,
+          "clocksPreserved": true
+        },
+        {
+          "policy": "alternating",
+          "rawBackup": true,
+          "clocksPreserved": true
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": []
+}

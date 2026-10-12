@@ -1,0 +1,87 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "mode": "fresh",
+      "radius": 2400,
+      "initialEnemies": 100,
+      "initialAllies": 0,
+      "settingsRejection": null,
+      "oldBackupPreserved": false,
+      "forwardWallMs": 568.7017000000001,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 1366,
+      "height": 900,
+      "mode": "old-settings",
+      "radius": 4000,
+      "initialEnemies": 100,
+      "initialAllies": 0,
+      "settingsRejection": "Error: 設定値が不正です。敵生成円の半径は200〜100000、敵数は1〜100です。",
+      "oldBackupPreserved": true,
+      "forwardWallMs": 521.2911000000004,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "fresh",
+      "radius": 2400,
+      "initialEnemies": 100,
+      "initialAllies": 0,
+      "settingsRejection": null,
+      "oldBackupPreserved": false,
+      "forwardWallMs": 571.3068000000003,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "old-settings",
+      "radius": 4000,
+      "initialEnemies": 100,
+      "initialAllies": 0,
+      "settingsRejection": "Error: 設定値が不正です。敵生成円の半径は200〜100000、敵数は1〜100です。",
+      "oldBackupPreserved": true,
+      "forwardWallMs": 541.2500999999993,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "mode": "fresh",
+      "radius": 2400,
+      "initialEnemies": 100,
+      "initialAllies": 0,
+      "settingsRejection": null,
+      "oldBackupPreserved": false,
+      "forwardWallMs": 572.3135999999995,
+      "forwardMatches": true,
+      "reloadMatches": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "mode": "old-settings",
+      "radius": 4000,
+      "initialEnemies": 100,
+      "initialAllies": 0,
+      "settingsRejection": "Error: 設定値が不正です。敵生成円の半径は200〜100000、敵数は1〜100です。",
+      "oldBackupPreserved": true,
+      "forwardWallMs": 561.7623999999996,
+      "forwardMatches": true,
+      "reloadMatches": true
+    }
+  ]
+}

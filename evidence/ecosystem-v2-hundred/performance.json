@@ -1,0 +1,15 @@
+{
+  "denseRadius": 800,
+  "denseFailure": "Error: 生成範囲が密すぎて配置できませんでした。円の半径を広げて再度生成してください。",
+  "denseFailureMs": 45.877700000000004,
+  "actors": 101,
+  "generationMs": 13.225299999999997,
+  "ticks": 100,
+  "tickMeanMs": 5.296830000000003,
+  "tickP95Ms": 6.147599999999997,
+  "tickMaxMs": 8.959900000000005,
+  "saveBytes": 203952,
+  "restoreMs": 18.471200000000067,
+  "events": 2,
+  "singleProcess": true
+}

@@ -1,0 +1,17 @@
+笨・independent display flags preserve old choices without changing simulation (6.4814ms)
+笨・probe ranks signed scores independently by team, bounds six lines, keeps deterministic ties and excludes disabled team (0.5183ms)
+笨・fixed probe coordinates update signed values with natural growth (5.5205ms)
+笨・placement-only area is an independent preference and never mutates permanent visibility (0.2334ms)
+笨・combined range and Aura switches enable both teams from a legacy mixed setting then disable both (0.1843ms)
+笨・contact stops size and all capability growth without spending growth water; uptake and real attacks continue with authoritative wounds (143.0024ms)
+笨・root HPReg occurs once and referenced healing persists through the next root tick without revival or double scale (66.1116ms)
+笨・root death removes absorption participants once, retires finite reservoirs and produces victory without another growth step (187.3827ms)
+笨・same-side root contact merges; metric values expose live HP materials and undefined Tech (60.472ms)
+邃ｹ tests 9
+邃ｹ suites 0
+邃ｹ pass 9
+邃ｹ fail 0
+邃ｹ cancelled 0
+邃ｹ skipped 0
+邃ｹ todo 0
+邃ｹ duration_ms 572.9253

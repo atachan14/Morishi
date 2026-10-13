@@ -1,0 +1,5 @@
+import {ROOT_KEYS,type RootSoil} from './eco-root-trial.js';
+export function nutrientKey(metric:string){if(metric==='hp')return 'maxHp';if(metric==='reg')return 'hpReg';if(metric==='presence'||metric==='root')return metric;const [e,f]=metric.split('.');const key=e+'.'+({power:'attack',resist:'defense',range:'range',speed:'speed'} as Record<string,string>)[f];return ROOT_KEYS.includes(key)?key:null;}
+// Display the same fixed nutrient fractions used by uptake; no soil inventories or clocks mutate.
+export function nutrientCells(soil:RootSoil,flags:ReadonlySet<string>){const keys=[...new Set([...flags].map(nutrientKey).filter((k):k is string=>k!==null))];return soil.cells.map(cell=>({id:cell.id,components:keys.map(key=>({key,fraction:cell.profiles.reduce((n,p)=>n+p[ROOT_KEYS.indexOf(key)],0)/cell.profiles.length})).filter(c=>c.fraction>0)}));}
+export const NUTRIENT_COLORS:Record<string,string>={maxHp:'#b44764',hpReg:'#588f42',presence:'#8c69a7',root:'#a38a4a',fire:'#e2534a',ice:'#65c5e9',electric:'#efcf47',dark:'#9b6fd0'};

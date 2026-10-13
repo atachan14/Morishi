@@ -1,3 +1,4 @@
+import {validateWeather,weatherSeed} from './eco-v2-weather.js';
 import {ROOT_PROFILE_VERSION,ROOT_KEYS,createRootSoil,validateRootTrial,type RootVector,type RootSoil,type RootSoilRecipe} from './eco-root-trial.js';
 import {validateV2State} from './eco-v2-save.js';
 import type {GameV2} from './eco-v2-game.js';
@@ -33,6 +34,7 @@ function unpackSoil(p:PackedSoil,seed:number):RootSoil{const base=blueprint(p);i
  return {...base,recipe:structuredClone(p.recipe),cells:base.cells.map(c=>({...c,water:p.water[c.id],bonus:[...(bonuses.get(c.id)??c.bonus)]}))};
 }
 function validateRootState(s:GameV2,view:View){const r=s.rootGrowth;if(!r)throw Error('根runではありません');validateV2State(s,view,s.sizeModel==='percent-1'?'surface-unit-zero-2':'linear-unit-zero-1');validateRootTrial(r);
+ if(r.weather){validateWeather(r.weather);if(r.weather.seed!==weatherSeed(s.seed)||r.weather.startTick>s.tick||r.weather.domain.x!==r.soil.x||r.weather.domain.y!==r.soil.y||r.weather.domain.width!==r.soil.columns*r.soil.cellSize||r.weather.domain.height!==r.soil.rows*r.soil.cellSize)throw Error('天候seed/範囲/時刻が不一致');}
  if(s.activationPolicy!=='independent'||s.needsDecision||Object.keys(s.rotations).length||!num(s.diskRadius,200,4000)||![0,1].includes(r.sunlight)||!num(r.retiredWater)||!num(r.retiredBonus)||!vector(r.corpseAdded)||!int(r.deathsDeposited,0,s.nextId-1)||!num(r.corpseRules?.diameterFactor,Number.MIN_VALUE)||!num(r.corpseRules?.statFraction,0,1)||!num(r.corpseRules?.recoveryWaterPerDiameter,Number.MIN_VALUE)||r.elapsed>s.tick*.1+Math.max(1e-7,s.tick*.1*1e-8))throw Error('根の時刻/規則/帳簿が不正');
  const units=new Map(s.units.map(u=>[u.id,u])),plants=new Map(r.plants.map(p=>[p.id,p]));for(const p of r.plants){const u=units.get(p.id);if(!u||!u.rootData||!same(u.rootData.stats,p.stats)||u.hp!==p.hp||u.diameter!==p.sizePercent||u.x!==p.x||u.y!==p.y||u.rootData.water!==p.water||u.rootData.capacity!==(p.capacity??r.config.capacity)||!num(u.rootData.rate,-Number.MAX_VALUE)||u.rootData.blocked!==undefined&&!['enemy-contact','merge-pending'].includes(u.rootData.blocked))throw Error('Unitと根runtimeの不一致');}
  for(const u of s.units)if(!plants.has(u.id)){if(u.rootData||u.born!==s.tick||u.age!==0||u.lineage.length!==1||u.lineage[0]!==u.id||u.diameter!==u.seed.initialDiameter)throw Error('未初期化の根個体が不正');}

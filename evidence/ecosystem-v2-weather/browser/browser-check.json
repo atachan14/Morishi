@@ -1,0 +1,43 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "wetTick": 100,
+      "acceptedRain": 4957.1647240903285,
+      "weatherVersion": "root-weather-1",
+      "exactWeatherRestore": true,
+      "previewQueriesReadOnly": true,
+      "enableDisableSaved": true,
+      "oldSaveUntouched": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "wetTick": 100,
+      "acceptedRain": 4957.1647240903285,
+      "weatherVersion": "root-weather-1",
+      "exactWeatherRestore": true,
+      "previewQueriesReadOnly": true,
+      "enableDisableSaved": true,
+      "oldSaveUntouched": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "wetTick": 100,
+      "acceptedRain": 4957.1647240903285,
+      "weatherVersion": "root-weather-1",
+      "exactWeatherRestore": true,
+      "previewQueriesReadOnly": true,
+      "enableDisableSaved": true,
+      "oldSaveUntouched": true
+    }
+  ],
+  "attempts": []
+}

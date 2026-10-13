@@ -1,5 +1,7 @@
 # v2根モードの新形式保存・再開
 
+天候基盤の接続状況は [v2天候基盤](ecosystem-v2-weather.md) を参照。予報操作UIは次段階。
+
 対象: http://localhost:8781/ecosystem-v2.html 。基準HEAD `9dcc301` の根合体・死亡栄養を保持。天候本体は追加しない。
 
 ## 保存と再開

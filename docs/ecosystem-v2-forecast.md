@@ -1,3 +1,5 @@
+現行本体の長期観測と修正は [根・雨・成長の観測](ecosystem-v2-balance-observation.md) を参照。
+
 # v2 独立天気予報UI
 
 対象は http://localhost:8781/ecosystem-v2.html のrootモード。Forestの「天気予報」から入ると実ゲームを停止してMainへ移動する。青い外枠、手札の上の日付・降雨バー・操作列と「天気予報終了」で表示する。

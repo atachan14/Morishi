@@ -1,0 +1,68 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "samples": [
+    {
+      "segment": 0,
+      "phase": "paused",
+      "elapsed": 0,
+      "alive": 100,
+      "frameMs": {
+        "p50": 17.600000000000364,
+        "p95": 18.299999999999272,
+        "max": 69.89999999999986,
+        "count": 1134
+      },
+      "metrics": {
+        "Timestamp": 134691.191451,
+        "AudioHandlers": 0,
+        "AudioWorkletProcessors": 0,
+        "Documents": 1,
+        "Frames": 1,
+        "JSEventListeners": 112,
+        "LayoutObjects": 2211,
+        "MediaKeySessions": 0,
+        "MediaKeys": 0,
+        "Nodes": 2802,
+        "Resources": 0,
+        "ContextLifecycleStateObservers": 23,
+        "V8PerContextDatas": 1,
+        "WorkerGlobalScopes": 0,
+        "UACSSResources": 0,
+        "RTCPeerConnections": 0,
+        "ResourceFetchers": 1,
+        "AdSubframes": 0,
+        "DetachedScriptStates": 0,
+        "ArrayBufferContents": 0,
+        "LayoutCount": 101,
+        "RecalcStyleCount": 104,
+        "LayoutDuration": 0.121795,
+        "RecalcStyleDuration": 0.012963,
+        "DevToolsCommandDuration": 0.206435,
+        "ScriptDuration": 0.517067,
+        "V8CompileDuration": 0,
+        "TaskDuration": 1.113758,
+        "TaskOtherDuration": 0.255498,
+        "ThreadTime": 1.139695,
+        "ProcessTime": 1.700577,
+        "JSHeapUsedSize": 41762048,
+        "JSHeapTotalSize": 87703552,
+        "FirstMeaningfulPaint": 134670.997847,
+        "DomContentLoaded": 134670.890886,
+        "NavigationStart": 134670.402797
+      },
+      "dom": {
+        "documents": 1,
+        "nodes": 2802,
+        "jsEventListeners": 112
+      },
+      "postGcHeap": 17772764,
+      "saveBytes": 256512
+    }
+  ],
+  "fatal": "Error: {\"exceptionId\":1,\"text\":\"Uncaught\",\"lineNumber\":0,\"columnNumber\":16,\"scriptId\":\"63\",\"stackTrace\":{\"callFrames\":[{\"functionName\":\"\",\"scriptId\":\"63\",\"url\":\"\",\"lineNumber\":0,\"columnNumber\":16}]},\"exception\":{\"type\":\"object\",\"subtype\":\"error\",\"className\":\"TypeError\",\"description\":\"TypeError: Cannot read properties of undefined (reading 'splice')\\n    at <anonymous>:1:17\",\"objectId\":\"-6146400622230868624.3.2\"}}",
+  "stderr": "\r\nDevTools listening on ws://127.0.0.1:60477/devtools/browser/34e0b468-6ce2-4745-b02c-92980657acca\r\n[29704:26180:1013/230946.635:ERROR:chrome\\browser\\task_manager\\providers\\fallback_task_provider.cc:126] Every renderer should have at least one task provided by a primary task provider. If a \"Renderer\" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/40528867.\r\n"
+}

@@ -1,0 +1,26 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "samples": [],
+  "injectedRoot": "evidence/ecosystem-v2-balance/late-idle-root.json",
+  "forwardProbe": [
+    {
+      "speed": 1,
+      "durationMs": 450.69999998807907,
+      "before": 4319.999999998185,
+      "after": 4329.999999998221,
+      "play": "再生"
+    },
+    {
+      "speed": 8,
+      "durationMs": 2089.199999988079,
+      "before": 4329.999999998221,
+      "after": 4409.999999998512,
+      "play": "再生"
+    }
+  ],
+  "oldSaveUntouched": true
+}

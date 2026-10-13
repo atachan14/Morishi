@@ -1,0 +1,41 @@
+{
+  "reference": "0eed53e",
+  "cases": [
+    {
+      "name": "late-idle-root.json",
+      "sunlight": 0,
+      "ticks": 16,
+      "allRootFieldsExactlyEqual": true
+    },
+    {
+      "name": "late-idle-root.json",
+      "sunlight": 1,
+      "ticks": 16,
+      "allRootFieldsExactlyEqual": true
+    },
+    {
+      "name": "614-idle-final-root.json",
+      "sunlight": 0,
+      "ticks": 16,
+      "allRootFieldsExactlyEqual": true
+    },
+    {
+      "name": "614-idle-final-root.json",
+      "sunlight": 1,
+      "ticks": 16,
+      "allRootFieldsExactlyEqual": true
+    },
+    {
+      "name": "614-placed-final-root.json",
+      "sunlight": 0,
+      "ticks": 16,
+      "allRootFieldsExactlyEqual": true
+    },
+    {
+      "name": "614-placed-final-root.json",
+      "sunlight": 1,
+      "ticks": 16,
+      "allRootFieldsExactlyEqual": true
+    }
+  ]
+}

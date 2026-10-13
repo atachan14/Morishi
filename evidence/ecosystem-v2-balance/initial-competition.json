@@ -1,0 +1,3276 @@
+{
+  "cases": [
+    {
+      "seed": 424,
+      "scenario": "idle",
+      "probe": "fresh standard100,1 nighttime tick to isolate uptake; not long-run day schedule",
+      "plants": [
+        {
+          "id": 1,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 2,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 3,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 4,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 5,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 6,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 7,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 8,
+          "team": "enemy",
+          "water": 0.37687890524160816,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263158,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 9,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 10,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 11,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 12,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 13,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 14,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 15,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 16,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 17,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 18,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 19,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 20,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 21,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 22,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 23,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 24,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 25,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 26,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 27,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 28,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 29,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 30,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 3
+        },
+        {
+          "id": 31,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 32,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 33,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 34,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9561447445075724,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 35,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 36,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 37,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 38,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 39,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 40,
+          "team": "enemy",
+          "water": 0.35650707252584557,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9722222222222221,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 41,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 42,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526317,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 43,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 44,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 45,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 46,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9262977259447877,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 47,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 48,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 49,
+          "team": "enemy",
+          "water": 0.41762257067313346,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9994264937825341,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 50,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 51,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 52,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 53,
+          "team": "enemy",
+          "water": 0.35650707252584557,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9210526315789475,
+          "overlappingRoots": 3
+        },
+        {
+          "id": 54,
+          "team": "enemy",
+          "water": 0.3768789052416082,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263159,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 55,
+          "team": "enemy",
+          "water": 0.4176225706731334,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.999426493782534,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 56,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 57,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 58,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 59,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 60,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 61,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526317,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 62,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526316,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 63,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 64,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 65,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 66,
+          "team": "enemy",
+          "water": 0.3768789052416082,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263159,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 67,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 68,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526317,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 69,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 70,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 71,
+          "team": "enemy",
+          "water": 0.3768789052416082,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263159,
+          "overlappingRoots": 3
+        },
+        {
+          "id": 72,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 73,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 74,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 75,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 76,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 77,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 78,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 79,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 80,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 81,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 82,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 83,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 84,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 85,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 86,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 87,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 88,
+          "team": "enemy",
+          "water": 0.4176225706731334,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.999426493782534,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 89,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 90,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 91,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 92,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 93,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 94,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 95,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 96,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 97,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 98,
+          "team": "enemy",
+          "water": 0.41762257067313335,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9994264937825339,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 99,
+          "team": "enemy",
+          "water": 0.40481822843552134,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 100,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        }
+      ],
+      "contested": 16,
+      "ratioMin": 0.9210526315789475,
+      "uptakeMin": 0.35650707252584557
+    },
+    {
+      "seed": 424,
+      "scenario": "placed",
+      "probe": "fresh standard100,1 nighttime tick to isolate uptake; not long-run day schedule",
+      "plants": [
+        {
+          "id": 1,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 2,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 3,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 4,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 5,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 6,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 7,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 8,
+          "team": "enemy",
+          "water": 0.37687890524160816,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263158,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 9,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 10,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 11,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 12,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 13,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 14,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 15,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 16,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 17,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 18,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 19,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 20,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 21,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 22,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 23,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 24,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 25,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 26,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 27,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 28,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 29,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 30,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 3
+        },
+        {
+          "id": 31,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 32,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 33,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 34,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9561447445075724,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 35,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 36,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 37,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 38,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 39,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 40,
+          "team": "enemy",
+          "water": 0.35650707252584557,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9722222222222221,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 41,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 42,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526317,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 43,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 44,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 45,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 46,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9262977259447877,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 47,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 48,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 49,
+          "team": "enemy",
+          "water": 0.41762257067313346,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9994264937825341,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 50,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 51,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 52,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 53,
+          "team": "enemy",
+          "water": 0.35650707252584557,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9210526315789475,
+          "overlappingRoots": 3
+        },
+        {
+          "id": 54,
+          "team": "enemy",
+          "water": 0.3768789052416082,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263159,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 55,
+          "team": "enemy",
+          "water": 0.4176225706731334,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.999426493782534,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 56,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 57,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 58,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 59,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 60,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 61,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526317,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 62,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526316,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 63,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 64,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 65,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 66,
+          "team": "enemy",
+          "water": 0.3768789052416082,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263159,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 67,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 68,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526317,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 69,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 70,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 71,
+          "team": "enemy",
+          "water": 0.3768789052416082,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263159,
+          "overlappingRoots": 3
+        },
+        {
+          "id": 72,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 73,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 74,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 75,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 76,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 77,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 78,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 79,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 80,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 81,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 82,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 83,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 84,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 85,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 86,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 87,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 88,
+          "team": "enemy",
+          "water": 0.4176225706731334,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.999426493782534,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 89,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 90,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 91,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 92,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 93,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 94,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 95,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 96,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 97,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 98,
+          "team": "enemy",
+          "water": 0.41762257067313335,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9994264937825339,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 99,
+          "team": "enemy",
+          "water": 0.40481822843552134,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 100,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 101,
+          "team": "ally",
+          "water": 0.6143981518004324,
+          "soloOffer": 0.6143981518004326,
+          "ratio": 0.9999999999999998,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 103,
+          "team": "ally",
+          "water": 0.3908312988611864,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9654488642263236,
+          "overlappingRoots": 1
+        }
+      ],
+      "contested": 17,
+      "ratioMin": 0.9210526315789475,
+      "uptakeMin": 0.35650707252584557
+    },
+    {
+      "seed": 614,
+      "scenario": "idle",
+      "probe": "fresh standard100,1 nighttime tick to isolate uptake; not long-run day schedule",
+      "plants": [
+        {
+          "id": 1,
+          "team": "enemy",
+          "water": 0.3972507379573708,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9813064483104033,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 2,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 3,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 4,
+          "team": "enemy",
+          "water": 0.37687890524160816,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263158,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 5,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 6,
+          "team": "enemy",
+          "water": 0.3463211561679643,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9444444444444443,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 7,
+          "team": "enemy",
+          "water": 0.40743665431525206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9750502378366184,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 8,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 9,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 10,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 11,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 12,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 13,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 14,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9058213369019107,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 15,
+          "team": "enemy",
+          "water": 0.4176225706731334,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.999426493782534,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 16,
+          "team": "enemy",
+          "water": 0.37687890524160816,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263158,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 17,
+          "team": "enemy",
+          "water": 0.40481822843552134,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 18,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 19,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 20,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 21,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 22,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 23,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 24,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 25,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 26,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 27,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 28,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 29,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 30,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 31,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 32,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 33,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 34,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 35,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 36,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 37,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 38,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 39,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 40,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 41,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 42,
+          "team": "enemy",
+          "water": 0.4176225706731334,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.999426493782534,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 43,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 44,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 45,
+          "team": "enemy",
+          "water": 0.41762257067313346,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9994264937825341,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 46,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 47,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 48,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 49,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 50,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 51,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 52,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526317,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 53,
+          "team": "enemy",
+          "water": 0.3666929888837268,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999997,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 54,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 55,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 56,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 57,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 58,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 59,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 60,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 61,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 62,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 63,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 64,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 65,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 66,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 67,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 68,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 69,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 70,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 71,
+          "team": "enemy",
+          "water": 0.3259493234522017,
+          "soloOffer": 0.3259493234522017,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 72,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 73,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 74,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 75,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 76,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 77,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 78,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 79,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 80,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 81,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526316,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 82,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 83,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 84,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 85,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 86,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 87,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 88,
+          "team": "enemy",
+          "water": 0.37687890524160816,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263158,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 89,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9561447445075724,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 90,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 91,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 92,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 93,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9561447445075723,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 94,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 95,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 96,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 97,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 98,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 99,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 100,
+          "team": "enemy",
+          "water": 0.3972507379573708,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9813064483104033,
+          "overlappingRoots": 1
+        }
+      ],
+      "contested": 15,
+      "ratioMin": 0.9058213369019107,
+      "uptakeMin": 0.3259493234522017
+    },
+    {
+      "seed": 614,
+      "scenario": "placed",
+      "probe": "fresh standard100,1 nighttime tick to isolate uptake; not long-run day schedule",
+      "plants": [
+        {
+          "id": 1,
+          "team": "enemy",
+          "water": 0.3972507379573708,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9813064483104033,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 2,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 3,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 4,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526316,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 5,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 6,
+          "team": "enemy",
+          "water": 0.3463211561679643,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9444444444444443,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 7,
+          "team": "enemy",
+          "water": 0.40743665431525206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9750502378366184,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 8,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 9,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 10,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 11,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 12,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 13,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 14,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9058213369019107,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 15,
+          "team": "enemy",
+          "water": 0.4176225706731334,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.999426493782534,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 16,
+          "team": "enemy",
+          "water": 0.3431027020221705,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.88642181587143,
+          "overlappingRoots": 2
+        },
+        {
+          "id": 17,
+          "team": "enemy",
+          "water": 0.40481822843552134,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 18,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 19,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 20,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 21,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 22,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 23,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 24,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 25,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 26,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 27,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 28,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 29,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 30,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 31,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 32,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 33,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 34,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 35,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 36,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 37,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 38,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 39,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 40,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 41,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 42,
+          "team": "enemy",
+          "water": 0.4176225706731334,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.999426493782534,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 43,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 44,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 45,
+          "team": "enemy",
+          "water": 0.41762257067313346,
+          "soloOffer": 0.417862217252772,
+          "ratio": 0.9994264937825341,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 46,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 47,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 48,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 49,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 50,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 51,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 52,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526317,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 53,
+          "team": "enemy",
+          "water": 0.3666929888837268,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999997,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 54,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 55,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 56,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 57,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 58,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 59,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 60,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 61,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 62,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 63,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 64,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 65,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 66,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 67,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 68,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 69,
+          "team": "enemy",
+          "water": 0.40481822843552123,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 70,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 71,
+          "team": "enemy",
+          "water": 0.3259493234522017,
+          "soloOffer": 0.3259493234522017,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 72,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 73,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 74,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 75,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 76,
+          "team": "enemy",
+          "water": 0.3666929888837269,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 77,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 78,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 79,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 80,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 81,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9473684210526316,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 82,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 83,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 84,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 85,
+          "team": "enemy",
+          "water": 0.36669298888372687,
+          "soloOffer": 0.3666929888837269,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 86,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 87,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 88,
+          "team": "enemy",
+          "water": 0.37687890524160816,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9736842105263158,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 89,
+          "team": "enemy",
+          "water": 0.3870648215994895,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9561447445075724,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 90,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 91,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 92,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 93,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9561447445075723,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 94,
+          "team": "enemy",
+          "water": 0.41786221725277206,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 95,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 96,
+          "team": "enemy",
+          "water": 0.38706482159948946,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 1,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 97,
+          "team": "enemy",
+          "water": 0.417862217252772,
+          "soloOffer": 0.417862217252772,
+          "ratio": 1,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 98,
+          "team": "enemy",
+          "water": 0.4048182284355213,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 1.0000000000000002,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 99,
+          "team": "enemy",
+          "water": 0.3870648215994894,
+          "soloOffer": 0.38706482159948946,
+          "ratio": 0.9999999999999999,
+          "overlappingRoots": 0
+        },
+        {
+          "id": 100,
+          "team": "enemy",
+          "water": 0.3972507379573708,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9813064483104033,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 101,
+          "team": "ally",
+          "water": 0.3972507379573708,
+          "soloOffer": 0.40481822843552123,
+          "ratio": 0.9813064483104033,
+          "overlappingRoots": 1
+        },
+        {
+          "id": 102,
+          "team": "ally",
+          "water": 0.6248597595595959,
+          "soloOffer": 0.6248597595595959,
+          "ratio": 1,
+          "overlappingRoots": 1
+        }
+      ],
+      "contested": 16,
+      "ratioMin": 0.88642181587143,
+      "uptakeMin": 0.3259493234522017
+    }
+  ]
+}

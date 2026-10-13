@@ -1,3 +1,5 @@
+現行本体の長期観測と修正は [根・雨・成長の観測](ecosystem-v2-balance-observation.md) を参照。
+
 現行の独立予報UIは [v2予報UI](ecosystem-v2-forecast.md) を参照。以下は天気基盤・当初要件の記録。
 
 # v2天候基盤の安全な区切り

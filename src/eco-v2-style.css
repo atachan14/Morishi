@@ -12,3 +12,5 @@ header button,.game-header button{color:#244c39}header button[aria-pressed=true]
 .species-name{font-size:13px;font-weight:600;margin:4px 0 7px;color:#477456;overflow-wrap:anywhere}.species-name:empty{display:none}
 
 #root-controls{display:flex;align-items:center;gap:5px;padding:4px;background:#e7efe0}#root-controls[hidden]{display:none}#root-status{font-size:11px;color:#325442}#root-mode{width:auto}
+
+#time-content{position:relative;cursor:pointer;padding-right:22px!important;min-height:38px}#display-arrow{position:absolute;right:7px;top:10px;font-size:13px}#display-pane[hidden]{display:none!important}#display-content{display:flex!important;flex-direction:column;gap:3px}.display-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;width:100%}.display-row button{min-width:0;padding:5px 2px;font-size:10px}.display-row button:disabled{opacity:.4;cursor:default}

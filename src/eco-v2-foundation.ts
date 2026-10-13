@@ -2,7 +2,7 @@ import {ROOT_KEYS,type RootVector} from './eco-root-trial.js';
 import {bodyRadius,elementScale,healthScale,round} from './eco-contract.js';
 import {ECO_LIMITS,WORLD,GROWTH_PER_SECOND,TICK_SECONDS} from './eco-sim.js';
 import {ELEMENTS,V2_FIELDS,V2_RULES,emptyElementTable,type SeedV2,type SkillClock,type BasisV2,type ElementTable} from './eco-v2-contract.js';
-export type UnitV2={rootData?:{stats:RootVector;water:number;rate:number};sizeModel?:'percent-1';basis?:BasisV2;id:number;team:'ally'|'enemy';x:number;y:number;born:number;age:number;diameter:number;hp:number;seed:SeedV2;bonus:{maxHp:number;hpReg:number;elements:ElementTable};skills:SkillClock[];lineage:number[];enemyOrigins:number[]};
+export type UnitV2={rootData?:{stats:RootVector;water:number;rate:number;blocked?:'enemy-contact'|'merge-pending'};sizeModel?:'percent-1';basis?:BasisV2;id:number;team:'ally'|'enemy';x:number;y:number;born:number;age:number;diameter:number;hp:number;seed:SeedV2;bonus:{maxHp:number;hpReg:number;elements:ElementTable};skills:SkillClock[];lineage:number[];enemyOrigins:number[]};
 export type FoundationV2={sizeModel?:'percent-1';rules:typeof V2_RULES;tick:number;nextId:number;merges:number;units:UnitV2[]};
 export type SkillMergeResolver=(receiver:SkillClock[],donor:SkillClock[])=>SkillClock[];
 export function createV2Unit(id:number,seed:SeedV2,team:UnitV2['team'],x:number,y:number,born=0,sizeModel=seed.config.sizeModel):UnitV2{

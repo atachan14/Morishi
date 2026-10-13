@@ -1,0 +1,129 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "sixDisplayRows": true,
+      "buttonPropagationBlocked": true,
+      "hpSamples": [
+        79.555563,
+        79.576985,
+        79.587696,
+        79.598407,
+        79.609118,
+        79.619829,
+        79.619829,
+        79.641251,
+        79.641251,
+        60.05878,
+        60.069491,
+        60.080202
+      ],
+      "rootHpMaintained": true,
+      "oldSaveUntouched": true,
+      "attackCount": 2,
+      "metric": {
+        "target": 54,
+        "values": [
+          {
+            "key": "root",
+            "value": "100.0"
+          },
+          {
+            "key": "hp",
+            "value": "138.4/138.4"
+          },
+          {
+            "key": "fire.power",
+            "value": "0.0"
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "sixDisplayRows": true,
+      "buttonPropagationBlocked": true,
+      "hpSamples": [
+        76.010587,
+        76.032009,
+        76.04272,
+        76.053431,
+        76.064142,
+        76.074853,
+        76.085564,
+        76.096275,
+        76.106986,
+        52.968828,
+        52.979539,
+        52.99025
+      ],
+      "rootHpMaintained": true,
+      "oldSaveUntouched": true,
+      "attackCount": 3,
+      "metric": {
+        "target": 54,
+        "values": [
+          {
+            "key": "root",
+            "value": "100.0"
+          },
+          {
+            "key": "hp",
+            "value": "138.4/138.4"
+          },
+          {
+            "key": "fire.power",
+            "value": "0.0"
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "sixDisplayRows": true,
+      "buttonPropagationBlocked": true,
+      "hpSamples": [
+        76.01049,
+        76.031912,
+        76.042623,
+        76.053334,
+        76.064045,
+        76.074756,
+        76.085467,
+        76.096178,
+        76.106889,
+        52.968634,
+        52.979345,
+        53.000767
+      ],
+      "rootHpMaintained": true,
+      "oldSaveUntouched": true,
+      "attackCount": 3,
+      "metric": {
+        "target": 54,
+        "values": [
+          {
+            "key": "root",
+            "value": "100.0"
+          },
+          {
+            "key": "hp",
+            "value": "138.4/138.4"
+          },
+          {
+            "key": "fire.power",
+            "value": "0.0"
+          }
+        ]
+      }
+    }
+  ]
+}

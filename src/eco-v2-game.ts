@@ -1,4 +1,4 @@
-import {advanceRootGame,type RootGameRuntime} from './eco-v2-root.js';
+import {advanceRootGame,syncRootCombat,type RootGameRuntime} from './eco-v2-root.js';
 import {ones,round,randomStream,type Element} from './eco-contract.js';
 import {ECO_LIMITS,WORLD,TICK_SECONDS,DRAW_SECONDS,TURN_SECONDS} from './eco-sim.js';
 import {ELEMENTS,V2_RULES,generateV2Seed,V2_DISK_LIMITS,v2EnemyCount,validV2Population,type SeedV2,type GenerationConfig} from './eco-v2-contract.js';
@@ -30,8 +30,7 @@ export function placeV2(s:GameV2,x:number,y:number,cardId:number){const card=s.h
 // Extreme values use a shadow transaction; this is not a game size ceiling.
 export function stepV2(s:GameV2,onEffect?:EffectObserver){const extreme=s.units.some(u=>{const stats=currentV2Stats(u);return u.diameter>1e100||stats.maxHp>1e100||Object.values(stats.elements).some(e=>e.speed>Number.MAX_SAFE_INTEGER||Object.values(e).some(v=>v>1e100));});if(!extreme)return stepV2Core(s,onEffect);const shadow=structuredClone(s),effects:SkillEffect[]=[];const result=stepV2Core(shadow,onEffect?e=>effects.push(e):undefined);Object.assign(s,shadow);for(const e of effects)try{onEffect?.(e);}catch{}return result;}
 function stepV2Core(s:GameV2,onEffect?:EffectObserver){if(s.outcome!=='playing')return false;s.activationPolicy='independent';s.needsDecision=false;s.rotations={};
- if(s.rootGrowth){advanceRootGame(s);advanceSupply(s);return true;}
- advanceV2Growth(s,uniqueSkillsKeepingReceiverClock);
+ if(s.rootGrowth)advanceRootGame(s);else advanceV2Growth(s,uniqueSkillsKeepingReceiverClock);
  let visualBudget=128;const emit=(kind:SkillEffect['kind'],element:Element,from:UnitV2,to:UnitV2,amount:number,count:number)=>{if(!onEffect||visualBudget--<=0)return;try{onEffect({tick:s.tick,kind,element,count,amount,from:{id:from.id,team:from.team,x:from.x,y:from.y,diameter:from.diameter},to:{id:to.id,x:to.x,y:to.y,diameter:to.diameter}});}catch{/* Presentation cannot interrupt combat. */}};
  // Growth/merges are complete; material values stay fixed during simultaneous effect collection.
  const sheets=new Map(s.units.map(u=>[u.id,currentV2Stats(u)]));
@@ -39,14 +38,14 @@ function stepV2Core(s:GameV2,onEffect?:EffectObserver){if(s.outcome!=='playing')
  for(const u of [...s.units].sort((a,b)=>a.id-b.id)){const stats=sheets.get(u.id)!,due=new Map<string,{count:number;fraction:number}>();for(const clock of u.skills){const total=round(clock.progress+stats.elements[clock.skill.element].speed*TICK_SECONDS),count=Math.floor(total+1e-9);if(!Number.isSafeInteger(count))throw RangeError('数値表現限界: 発動回数を正確に表現できません');due.set(clock.skill.key,{count,fraction:round(total-count)});clock.progress=Math.min(1,total);}
   for(const element of ELEMENTS){const ready=u.skills.filter(c=>c.skill.element===element&&c.progress>=1&&s.units.some(v=>(c.skill.kind==='heal'?v.team===u.team&&v.hp<sheets.get(v.id)!.maxHp:v.team!==u.team)&&v2SurfaceDistance(u,v)<stats.elements[element].range)).sort((a,b)=>a.skill.key.localeCompare(b.skill.key));const candidates=ready;
    for(const c of candidates){const material=stats.elements[element];if(c.skill.kind==='heal'){const targets=s.units.filter(v=>v.team===u.team&&v.hp<sheets.get(v.id)!.maxHp&&v2SurfaceDistance(u,v)<material.range);if(!targets.length)continue;for(const v of targets){const amount=round(material.attack*.5*due.get(c.skill.key)!.count*v2DistanceCoefficient(v2SurfaceDistance(u,v),material.range));if(!Number.isFinite(amount)||!Number.isFinite((healing.get(v.id)??0)+amount))throw RangeError('数値表現限界: 回復量が非有限になります');healing.set(v.id,(healing.get(v.id)??0)+amount);emit('heal',element,u,v,amount,due.get(c.skill.key)!.count);}}
-    else{const target=s.units.filter(v=>v.team!==u.team&&v2SurfaceDistance(u,v)<material.range).sort((a,b)=>v2PresenceAt(b,u.x,u.y)-v2PresenceAt(a,u.x,u.y)||a.id-b.id)[0];if(!target)continue;const amount=round(material.attack*due.get(c.skill.key)!.count/(1+sheets.get(target.id)!.elements[element].defense/70)*v2DistanceCoefficient(v2SurfaceDistance(u,target),material.range));if(!Number.isFinite(amount)||!Number.isFinite((damage.get(target.id)??0)+amount))throw RangeError('数値表現限界: damageが非有限になります');damage.set(target.id,(damage.get(target.id)??0)+amount);emit('attack',element,u,target,amount,due.get(c.skill.key)!.count);}
+    else{const target=s.units.filter(v=>v.team!==u.team&&v2SurfaceDistance(u,v)<material.range).sort((a,b)=>v2PresenceAt(b,u.x,u.y)-v2PresenceAt(a,u.x,u.y)||a.id-b.id)[0];if(!target)continue;const amount=round(material.attack*due.get(c.skill.key)!.count/(1+sheets.get(target.id)!.elements[element].defense/(s.rootGrowth?100:70))*v2DistanceCoefficient(v2SurfaceDistance(u,target),material.range));if(!Number.isFinite(amount)||!Number.isFinite((damage.get(target.id)??0)+amount))throw RangeError('数値表現限界: damageが非有限になります');damage.set(target.id,(damage.get(target.id)??0)+amount);emit('attack',element,u,target,amount,due.get(c.skill.key)!.count);}
     c.progress=due.get(c.skill.key)!.fraction;
    }
   }
  }
  // Same-tick effects collected from the living pre-damage board; heal before damage, no revival.
- for(const u of s.units)u.hp=round(Math.max(0,Math.min(sheets.get(u.id)!.maxHp,u.hp+(healing.get(u.id)??0))-(damage.get(u.id)??0)));
- for(const u of s.units.filter(u=>u.hp<=0).sort((a,b)=>a.id-b.id)){if(u.team==='enemy'){const element=u.seed.skills[0].element;s.rewards.push({id:u.id,tick:s.tick,element,enemyOrigins:[...u.enemyOrigins]});s.boosts[element]=round(s.boosts[element]+.01);s.charges=Math.min(ECO_LIMITS.charges,s.charges+1);}delete s.rotations[u.id];log(s,`${u.team==='enemy'?'敵':'味方'}#${u.id}消滅`);}s.units=s.units.filter(u=>u.hp>0);
+ for(const u of s.units)u.hp=Math.min(sheets.get(u.id)!.maxHp,round(Math.max(0,Math.min(sheets.get(u.id)!.maxHp,u.hp+(healing.get(u.id)??0))-(damage.get(u.id)??0))));
+ for(const u of s.units.filter(u=>u.hp<=0).sort((a,b)=>a.id-b.id)){if(u.team==='enemy'){const element=u.seed.skills[0].element;s.rewards.push({id:u.id,tick:s.tick,element,enemyOrigins:[...u.enemyOrigins]});s.boosts[element]=round(s.boosts[element]+.01);s.charges=Math.min(ECO_LIMITS.charges,s.charges+1);}delete s.rotations[u.id];log(s,`${u.team==='enemy'?'敵':'味方'}#${u.id}消滅`);}s.units=s.units.filter(u=>u.hp>0);if(s.rootGrowth)syncRootCombat(s);
  if(!s.units.some(u=>u.team==='enemy')){s.outcome='win';return false;}
  advanceSupply(s);
  return true;

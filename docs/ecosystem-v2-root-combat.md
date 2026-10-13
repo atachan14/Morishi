@@ -1,5 +1,7 @@
 # 根と戦闘・表示UIの接続
 
+合体接続の現行仕様・証跡は [v2根合体](ecosystem-v2-root-merge.md) を参照。以下はこの文書作成時の段階記録。
+
 URL: http://localhost:8781/ecosystem-v2.html 。Settingの根成長ONで新規作成。根runは引き続き保存なし、旧保存と通常モードは保持。独立比較ページroot-trial.htmlも継続。
 
 本体UnitのHP/直接Stats/サイズ/生存IDを根へ渡してから吸水成長し、HPRegを一度適用して戦闘・治癒を集計。被ダメージ・治癒・死亡処理後に根へ同期する。死者は根参加者から除外し、次tickで吸水しない。死者の残り貯水/有限bonusはretiredWater/retiredBonusに保持し、土壌への死亡栄養投入はまだ行わない。勝利後は根も停止。サイズStatsの再乗算なし。根モードの防御係数は確定案100/(100+Defense)、旧runは既存式を維持。

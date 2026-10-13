@@ -1,0 +1,401 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "worldPoint": {
+        "x": 708,
+        "y": 196,
+        "clearance": 605.6483205722034
+      },
+      "pair": [
+        {
+          "id": 101,
+          "team": "ally",
+          "x": 708.3538372348721,
+          "y": 196,
+          "presence": 7.987434,
+          "diameter": 100,
+          "hp": 99.159456,
+          "maxHp": 99.159456,
+          "attack": true,
+          "attackRange": 12.654054
+        },
+        {
+          "id": 102,
+          "team": "ally",
+          "x": 808.4437958539072,
+          "y": 196,
+          "presence": 8.811318,
+          "diameter": 100,
+          "hp": 122.852342,
+          "maxHp": 122.852342,
+          "attack": true,
+          "attackRange": 9.720082
+        }
+      ],
+      "receiver": {
+        "id": 101,
+        "team": "ally",
+        "x": 708.3538372348721,
+        "y": 196,
+        "presence": 16.84718265252352,
+        "diameter": 146.46277759354794,
+        "hp": 224.00815,
+        "maxHp": 224.0081500410704,
+        "rootHp": 224.00815,
+        "attack": true,
+        "attackRange": 12.750915305046993,
+        "water": 46.58706759373835,
+        "capacity": 200,
+        "root": 143.8156101155482
+      },
+      "donorRemoved": true,
+      "night": {
+        "id": 101,
+        "team": "ally",
+        "x": 708.3538372348721,
+        "y": 196,
+        "presence": 16.84718265252352,
+        "diameter": 146.46277759354794,
+        "hp": 224.00815,
+        "maxHp": 224.0081500410704,
+        "rootHp": 224.00815,
+        "attack": true,
+        "attackRange": 12.750915305046993,
+        "water": 114.16965309424702,
+        "capacity": 200,
+        "root": 143.8156101155482
+      },
+      "detail": "HP 224.0Max 224.0HPReg 0.23/sサイズ146.5%水分114.2/200存在感16.8根143.8吸水 6.76/s",
+      "oldSaveUntouched": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "worldPoint": {
+        "x": 708,
+        "y": 196,
+        "clearance": 605.6483205722034
+      },
+      "pair": [
+        {
+          "id": 101,
+          "team": "ally",
+          "x": 708,
+          "y": 196,
+          "presence": 7.987434,
+          "diameter": 100,
+          "hp": 99.159456,
+          "maxHp": 99.159456,
+          "attack": true,
+          "attackRange": 12.654054
+        },
+        {
+          "id": 102,
+          "team": "ally",
+          "x": 808.0399839743591,
+          "y": 196,
+          "presence": 8.811318,
+          "diameter": 100,
+          "hp": 122.852342,
+          "maxHp": 122.852342,
+          "attack": true,
+          "attackRange": 9.720082
+        }
+      ],
+      "receiver": {
+        "id": 101,
+        "team": "ally",
+        "x": 708,
+        "y": 196,
+        "presence": 16.84680983651497,
+        "diameter": 146.44206691542928,
+        "hp": 223.94982,
+        "maxHp": 223.9498201243088,
+        "rootHp": 223.94982,
+        "attack": true,
+        "attackRange": 12.750169673029939,
+        "water": 47.27717096154471,
+        "capacity": 200,
+        "root": 143.810573519984
+      },
+      "donorRemoved": true,
+      "night": {
+        "id": 101,
+        "team": "ally",
+        "x": 708,
+        "y": 196,
+        "presence": 16.84680983651497,
+        "diameter": 146.44206691542928,
+        "hp": 223.94982,
+        "maxHp": 223.9498201243088,
+        "rootHp": 223.94982,
+        "attack": true,
+        "attackRange": 12.750169673029939,
+        "water": 114.8597564620534,
+        "capacity": 200,
+        "root": 143.810573519984
+      },
+      "detail": "HP 223.9Max 223.9HPReg 0.23/sサイズ146.4%水分114.9/200存在感16.8根143.8吸水 6.76/s",
+      "oldSaveUntouched": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "worldPoint": {
+        "x": 708,
+        "y": 196,
+        "clearance": 605.6483205722034
+      },
+      "pair": [
+        {
+          "id": 101,
+          "team": "ally",
+          "x": 708,
+          "y": 196,
+          "presence": 7.987434,
+          "diameter": 100,
+          "hp": 99.159456,
+          "maxHp": 99.159456,
+          "attack": true,
+          "attackRange": 12.654054
+        },
+        {
+          "id": 102,
+          "team": "ally",
+          "x": 808.039990234375,
+          "y": 196,
+          "presence": 8.811318,
+          "diameter": 100,
+          "hp": 122.852342,
+          "maxHp": 122.852342,
+          "attack": true,
+          "attackRange": 9.720082
+        }
+      ],
+      "receiver": {
+        "id": 101,
+        "team": "ally",
+        "x": 708,
+        "y": 196,
+        "presence": 16.84680983651497,
+        "diameter": 146.44206691542928,
+        "hp": 223.94982,
+        "maxHp": 223.9498201243088,
+        "rootHp": 223.94982,
+        "attack": true,
+        "attackRange": 12.750169673029939,
+        "water": 47.27717096154471,
+        "capacity": 200,
+        "root": 143.810573519984
+      },
+      "donorRemoved": true,
+      "night": {
+        "id": 101,
+        "team": "ally",
+        "x": 708,
+        "y": 196,
+        "presence": 16.84680983651497,
+        "diameter": 146.44206691542928,
+        "hp": 223.94982,
+        "maxHp": 223.9498201243088,
+        "rootHp": 223.94982,
+        "attack": true,
+        "attackRange": 12.750169673029939,
+        "water": 114.8597564620534,
+        "capacity": 200,
+        "root": 143.810573519984
+      },
+      "detail": "HP 223.9Max 223.9HPReg 0.23/sサイズ146.4%水分114.9/200存在感16.8根143.8吸水 6.76/s",
+      "oldSaveUntouched": true
+    }
+  ],
+  "attempts": [
+    {
+      "width": 1366,
+      "height": 900,
+      "id": 0,
+      "point": {
+        "x": 427.357421875,
+        "y": 248.669921875
+      },
+      "plants": [
+        {
+          "id": 101,
+          "team": "ally",
+          "x": 708.3538372348721,
+          "y": 196,
+          "presence": 7.987434,
+          "diameter": 100,
+          "hp": 99.159456,
+          "maxHp": 99.159456,
+          "attack": true,
+          "attackRange": 12.654054
+        }
+      ],
+      "message": "配置しました。"
+    },
+    {
+      "width": 1366,
+      "height": 900,
+      "id": 1,
+      "point": {
+        "x": 446.45685546875,
+        "y": 248.669921875
+      },
+      "plants": [
+        {
+          "id": 101,
+          "team": "ally",
+          "x": 708.3538372348721,
+          "y": 196,
+          "presence": 7.987434,
+          "diameter": 100,
+          "hp": 99.159456,
+          "maxHp": 99.159456,
+          "attack": true,
+          "attackRange": 12.654054
+        },
+        {
+          "id": 102,
+          "team": "ally",
+          "x": 808.4437958539072,
+          "y": 196,
+          "presence": 8.811318,
+          "diameter": 100,
+          "hp": 122.852342,
+          "maxHp": 122.852342,
+          "attack": true,
+          "attackRange": 9.720082
+        }
+      ],
+      "message": "配置しました。"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": 0,
+      "point": {
+        "x": 67.412109375,
+        "y": 316.412109375
+      },
+      "plants": [
+        {
+          "id": 101,
+          "team": "ally",
+          "x": 708,
+          "y": 196,
+          "presence": 7.987434,
+          "diameter": 100,
+          "hp": 99.159456,
+          "maxHp": 99.159456,
+          "attack": true,
+          "attackRange": 12.654054
+        }
+      ],
+      "message": "配置しました。"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": 1,
+      "point": {
+        "x": 76.93740234375,
+        "y": 316.412109375
+      },
+      "plants": [
+        {
+          "id": 101,
+          "team": "ally",
+          "x": 708,
+          "y": 196,
+          "presence": 7.987434,
+          "diameter": 100,
+          "hp": 99.159456,
+          "maxHp": 99.159456,
+          "attack": true,
+          "attackRange": 12.654054
+        },
+        {
+          "id": 102,
+          "team": "ally",
+          "x": 808.0399839743591,
+          "y": 196,
+          "presence": 8.811318,
+          "diameter": 100,
+          "hp": 122.852342,
+          "maxHp": 122.852342,
+          "attack": true,
+          "attackRange": 9.720082
+        }
+      ],
+      "message": "配置しました。"
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "id": 0,
+      "point": {
+        "x": 55.3125,
+        "y": 201.3125
+      },
+      "plants": [
+        {
+          "id": 101,
+          "team": "ally",
+          "x": 708,
+          "y": 196,
+          "presence": 7.987434,
+          "diameter": 100,
+          "hp": 99.159456,
+          "maxHp": 99.159456,
+          "attack": true,
+          "attackRange": 12.654054
+        }
+      ],
+      "message": "配置しました。"
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "id": 1,
+      "point": {
+        "x": 63.128125,
+        "y": 201.3125
+      },
+      "plants": [
+        {
+          "id": 101,
+          "team": "ally",
+          "x": 708,
+          "y": 196,
+          "presence": 7.987434,
+          "diameter": 100,
+          "hp": 99.159456,
+          "maxHp": 99.159456,
+          "attack": true,
+          "attackRange": 12.654054
+        },
+        {
+          "id": 102,
+          "team": "ally",
+          "x": 808.039990234375,
+          "y": 196,
+          "presence": 8.811318,
+          "diameter": 100,
+          "hp": 122.852342,
+          "maxHp": 122.852342,
+          "attack": true,
+          "attackRange": 9.720082
+        }
+      ],
+      "message": "配置しました。"
+    }
+  ]
+}

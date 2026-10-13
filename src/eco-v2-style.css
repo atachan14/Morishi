@@ -26,3 +26,5 @@ header button,.game-header button{color:#244c39}header button[aria-pressed=true]
 #main-footer #display-content .display-row button{height:var(--display-stat-height,24px)}#main-footer #display-content [data-layer="areaPlacement"]{font-size:9px;line-height:1;padding:2px}#main-footer #display-content [data-layer="areaPlacement"] span{display:block}
 .display-height-reference{position:absolute;visibility:hidden;pointer-events:none;grid-template-columns:repeat(5,minmax(0,1fr))!important}.display-height-reference button{height:auto!important;font-size:12px!important;line-height:normal!important;padding:4px 6px!important}
 #display-content{position:relative}
+
+.display-row button:disabled{filter:grayscale(1)}

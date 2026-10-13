@@ -1,0 +1,7 @@
+import {weatherSummary,type WeatherState} from './eco-v2-weather.js';
+export const FORECAST_DEFAULTS={backTicks:3600,aheadTicks:14400,smallTicks:10,largeTicks:600,barSamples:128} as const;
+export type ForecastSession={weather:WeatherState;tick:number;min:number;max:number;playing:boolean;speed:1|2|4|10;fraction:number;series:number[]};
+export function createForecast(weather:WeatherState,tick:number):ForecastSession{const min=Math.max(0,tick-FORECAST_DEFAULTS.backTicks),max=Math.min(Number.MAX_SAFE_INTEGER,tick+FORECAST_DEFAULTS.aheadTicks),copy=structuredClone(weather);return {weather:copy,tick,min,max,playing:false,speed:1,fraction:0,series:Array.from({length:FORECAST_DEFAULTS.barSamples},(_,i)=>weatherSummary(copy,Math.round(min+(max-min)*i/(FORECAST_DEFAULTS.barSamples-1))).totalRain)};}
+export function seekForecast(s:ForecastSession,tick:number){if(!Number.isFinite(tick))return;s.tick=Math.max(s.min,Math.min(s.max,Math.round(tick)));s.fraction=0;s.playing=false;}
+export function moveForecast(s:ForecastSession,delta:number){seekForecast(s,s.tick+delta);}
+export function advanceForecast(s:ForecastSession,seconds:number){if(!s.playing||!Number.isFinite(seconds)||seconds<0)return;s.fraction+=Math.min(1,seconds)*s.speed*10;const ticks=Math.floor(s.fraction);s.fraction-=ticks;s.tick=Math.min(s.max,s.tick+ticks);if(s.tick===s.max){s.playing=false;s.fraction=0;}}

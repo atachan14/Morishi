@@ -1,3 +1,5 @@
+現行の独立予報UIは [v2予報UI](ecosystem-v2-forecast.md) を参照。以下は天気基盤・当初要件の記録。
+
 # 将来の予報UI（未実装）
 
 天候基盤の接続状況は [v2天候基盤](ecosystem-v2-weather.md) を参照。予報操作UIは次段階。

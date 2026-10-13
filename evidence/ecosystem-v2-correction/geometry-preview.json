@@ -1,0 +1,82 @@
+{
+  "version": "geometry-migration-preview-1",
+  "model": "zero-correction-geometry-1",
+  "status": "preview-not-playable",
+  "source": {
+    "key": "morishi.element-root.v1",
+    "version": "element-root-save-1",
+    "hash": "104ddda8",
+    "backupKey": "morishi.geometry-migration.source.v1.root.104ddda8"
+  },
+  "seed": 424,
+  "tick": 0,
+  "units": [
+    {
+      "id": 1,
+      "old": {
+        "bodyRadius": 60,
+        "auraReach": 9.848452,
+        "rootRadius": 100
+      },
+      "corrections": {
+        "model": "zero-correction-geometry-1",
+        "size": -66.66666666666667,
+        "aura": -1930.7760041882723,
+        "root": -400
+      },
+      "effective": {
+        "bodyRadius": 60,
+        "auraReach": 9.848452,
+        "auraOuterRadius": 69.848452,
+        "rootReach": 40,
+        "rootRadius": 100
+      },
+      "pointStrength": null
+    },
+    {
+      "id": 2,
+      "old": {
+        "bodyRadius": 50,
+        "auraReach": 11.122074,
+        "rootRadius": 100
+      },
+      "corrections": {
+        "model": "zero-correction-geometry-1",
+        "size": -100,
+        "aura": -1698.2257625691038,
+        "root": -300
+      },
+      "effective": {
+        "bodyRadius": 50,
+        "auraReach": 11.122073999999998,
+        "auraOuterRadius": 61.122074,
+        "rootReach": 50,
+        "rootRadius": 100
+      },
+      "pointStrength": null
+    },
+    {
+      "id": 3,
+      "old": {
+        "bodyRadius": 50,
+        "auraReach": 10.288131,
+        "rootRadius": 100
+      },
+      "corrections": {
+        "model": "zero-correction-geometry-1",
+        "size": -100,
+        "aura": -1843.9876883371721,
+        "root": -300
+      },
+      "effective": {
+        "bodyRadius": 50,
+        "auraReach": 10.288131,
+        "auraOuterRadius": 60.288131,
+        "rootReach": 50,
+        "rootRadius": 100
+      },
+      "pointStrength": null
+    }
+  ],
+  "checksum": "f69da990"
+}

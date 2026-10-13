@@ -1,0 +1,32 @@
+{
+  "version": "geometry-migration-preview-1",
+  "model": "zero-correction-geometry-1",
+  "status": "preview-not-playable",
+  "isolatedInMemoryStorage": true,
+  "userBrowserTouched": false,
+  "oldSaveUnchanged": true,
+  "exactByteBackup": true,
+  "writes": [
+    "morishi.geometry-migration.source.v1.root.104ddda8",
+    "morishi.geometry-migration.preview.v1"
+  ],
+  "sourceSeed": 424,
+  "sourceTick": 0,
+  "units": 3,
+  "baseline": {
+    "corrections": {
+      "model": "zero-correction-geometry-1",
+      "size": 0,
+      "aura": 0,
+      "root": 0
+    },
+    "effective": {
+      "bodyRadius": 100,
+      "auraReach": 200,
+      "auraOuterRadius": 300,
+      "rootReach": 200,
+      "rootRadius": 300
+    },
+    "pointStrength": 1
+  }
+}

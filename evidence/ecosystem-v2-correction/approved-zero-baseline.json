@@ -1,0 +1,16 @@
+{
+  "corrections": {
+    "model": "zero-correction-geometry-1",
+    "size": 0,
+    "aura": 0,
+    "root": 0
+  },
+  "effective": {
+    "bodyRadius": 100,
+    "auraReach": 200,
+    "auraOuterRadius": 300,
+    "rootReach": 200,
+    "rootRadius": 300
+  },
+  "pointStrength": 1
+}

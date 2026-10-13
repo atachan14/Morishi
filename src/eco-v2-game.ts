@@ -1,4 +1,4 @@
-import {advanceRootGame,syncRootCombat,type RootGameRuntime} from './eco-v2-root.js';
+import {advanceRootGame,syncRootCombat,retireRootDeath,type RootGameRuntime} from './eco-v2-root.js';
 import {ones,round,randomStream,type Element} from './eco-contract.js';
 import {ECO_LIMITS,WORLD,TICK_SECONDS,DRAW_SECONDS,TURN_SECONDS} from './eco-sim.js';
 import {ELEMENTS,V2_RULES,generateV2Seed,V2_DISK_LIMITS,v2EnemyCount,validV2Population,type SeedV2,type GenerationConfig} from './eco-v2-contract.js';
@@ -45,7 +45,7 @@ function stepV2Core(s:GameV2,onEffect?:EffectObserver){if(s.outcome!=='playing')
  }
  // Same-tick effects collected from the living pre-damage board; heal before damage, no revival.
  for(const u of s.units)u.hp=Math.min(sheets.get(u.id)!.maxHp,round(Math.max(0,Math.min(sheets.get(u.id)!.maxHp,u.hp+(healing.get(u.id)??0))-(damage.get(u.id)??0))));
- for(const u of s.units.filter(u=>u.hp<=0).sort((a,b)=>a.id-b.id)){if(u.team==='enemy'){const element=u.seed.skills[0].element;s.rewards.push({id:u.id,tick:s.tick,element,enemyOrigins:[...u.enemyOrigins]});s.boosts[element]=round(s.boosts[element]+.01);s.charges=Math.min(ECO_LIMITS.charges,s.charges+1);}delete s.rotations[u.id];log(s,`${u.team==='enemy'?'敵':'味方'}#${u.id}消滅`);}s.units=s.units.filter(u=>u.hp>0);if(s.rootGrowth)syncRootCombat(s);
+ for(const u of s.units.filter(u=>u.hp<=0).sort((a,b)=>a.id-b.id)){if(s.rootGrowth)retireRootDeath(s,u);if(u.team==='enemy'){const element=u.seed.skills[0].element;s.rewards.push({id:u.id,tick:s.tick,element,enemyOrigins:[...u.enemyOrigins]});s.boosts[element]=round(s.boosts[element]+.01);s.charges=Math.min(ECO_LIMITS.charges,s.charges+1);}delete s.rotations[u.id];log(s,`${u.team==='enemy'?'敵':'味方'}#${u.id}消滅`);}s.units=s.units.filter(u=>u.hp>0);if(s.rootGrowth)syncRootCombat(s);
  if(!s.units.some(u=>u.team==='enemy')){s.outcome='win';return false;}
  advanceSupply(s);
  return true;

@@ -1,0 +1,108 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "separateRates": [
+        4.0069547131746575,
+        4.0069547131746575
+      ],
+      "sharedRates": [
+        2.005352282957702,
+        2.005352282957702
+      ],
+      "wideNarrowRates": [
+        0.9167324722093179,
+        9.820414647085336
+      ],
+      "dayGrowth": [
+        0.2750197416627742,
+        0.29999999999998295
+      ],
+      "waterError": 7.275957614183426e-12,
+      "drag": {
+        "id": 1,
+        "x": 343.20997605630015,
+        "y": 333.1700176274011,
+        "root": 100,
+        "water": 0,
+        "size": 100,
+        "maxHp": 100,
+        "rate": 0
+      },
+      "stableSaveUntouched": true,
+      "pauseStable": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "separateRates": [
+        4.0069547131746575,
+        4.0069547131746575
+      ],
+      "sharedRates": [
+        2.005352282957702,
+        2.005352282957702
+      ],
+      "wideNarrowRates": [
+        0.9167324722093179,
+        9.820414647085336
+      ],
+      "dayGrowth": [
+        0.2750197416627742,
+        0.29999999999998295
+      ],
+      "waterError": 7.275957614183426e-12,
+      "drag": {
+        "id": 1,
+        "x": 343.20999716692427,
+        "y": 333.1256588352923,
+        "root": 100,
+        "water": 0,
+        "size": 100,
+        "maxHp": 100,
+        "rate": 0
+      },
+      "stableSaveUntouched": true,
+      "pauseStable": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "separateRates": [
+        4.0069547131746575,
+        4.0069547131746575
+      ],
+      "sharedRates": [
+        2.005352282957702,
+        2.005352282957702
+      ],
+      "wideNarrowRates": [
+        0.9167324722093179,
+        9.820414647085336
+      ],
+      "dayGrowth": [
+        0.2750197416627742,
+        0.29999999999998295
+      ],
+      "waterError": 7.275957614183426e-12,
+      "drag": {
+        "id": 1,
+        "x": 343.21000852082904,
+        "y": 333.2245817441027,
+        "root": 100,
+        "water": 0,
+        "size": 100,
+        "maxHp": 100,
+        "rate": 0
+      },
+      "stableSaveUntouched": true,
+      "pauseStable": true
+    }
+  ]
+}

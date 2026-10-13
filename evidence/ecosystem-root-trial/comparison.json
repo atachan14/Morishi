@@ -1,0 +1,75 @@
+{
+  "samePosition100": {
+    "tickMs": 14.260899999999992,
+    "totalAbsorbed": 4.0743665431525296,
+    "shareSpread": 0
+  },
+  "independent": true,
+  "stableGameUnchanged": true,
+  "plants": 100,
+  "cells": 4900,
+  "subsamplesPerCell": 16,
+  "soilBuildMs": 219.40490000000003,
+  "ticks": 100,
+  "tickMeanMs": 16.135878,
+  "tickP95Ms": 28.91729999999984,
+  "tickMaxMs": 41.260400000000004,
+  "waterError": 3.984155227954034e-9,
+  "waterConsumed": 1000.0000000000904,
+  "rainAdded": 6272.000000064397,
+  "waterStored": 2987.7645882777483,
+  "comparisons": [
+    {
+      "name": "narrow-alone",
+      "absorbed": [
+        0.8148733086305041
+      ]
+    },
+    {
+      "name": "reference-alone",
+      "absorbed": [
+        4.048182284355211
+      ]
+    },
+    {
+      "name": "wide-alone",
+      "absorbed": [
+        9.886627514983292
+      ]
+    },
+    {
+      "name": "reference-overlap",
+      "absorbed": [
+        2.0371832715762603,
+        2.0371832715762603
+      ]
+    },
+    {
+      "name": "reference-partial",
+      "absorbed": [
+        3.259493234522016,
+        3.2594932345220164
+      ]
+    },
+    {
+      "name": "reference-separated",
+      "absorbed": [
+        4.048182284355211,
+        4.048182284355211
+      ]
+    },
+    {
+      "name": "full-does-not-compete",
+      "absorbed": [
+        0,
+        4.048182284355211
+      ]
+    },
+    {
+      "name": "dry",
+      "absorbed": [
+        0
+      ]
+    }
+  ]
+}

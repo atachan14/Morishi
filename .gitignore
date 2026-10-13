@@ -17,3 +17,8 @@ logs/
 *.key
 .DS_Store
 Thumbs.db
+
+*.pfx
+*.p12
+.ssh/
+.aws/

@@ -1,0 +1,39 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "nightAbsorbers": 100,
+      "dayGrowers": 100,
+      "oldSaveUntouched": true,
+      "rootFieldsVisible": true,
+      "allyWater": 18.706482159949005,
+      "allyGrowth": 4.999999999999716
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "nightAbsorbers": 100,
+      "dayGrowers": 100,
+      "oldSaveUntouched": true,
+      "rootFieldsVisible": true,
+      "allyWater": 20.481822843552223,
+      "allyGrowth": 4.999999999999716
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "nightAbsorbers": 100,
+      "dayGrowers": 100,
+      "oldSaveUntouched": true,
+      "rootFieldsVisible": true,
+      "allyWater": 20.48182284355221,
+      "allyGrowth": 4.999999999999716
+    }
+  ]
+}

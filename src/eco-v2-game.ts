@@ -1,3 +1,4 @@
+import {advanceRootGame,type RootGameRuntime} from './eco-v2-root.js';
 import {ones,round,randomStream,type Element} from './eco-contract.js';
 import {ECO_LIMITS,WORLD,TICK_SECONDS,DRAW_SECONDS,TURN_SECONDS} from './eco-sim.js';
 import {ELEMENTS,V2_RULES,generateV2Seed,V2_DISK_LIMITS,v2EnemyCount,validV2Population,type SeedV2,type GenerationConfig} from './eco-v2-contract.js';
@@ -5,7 +6,7 @@ import {createV2Unit,currentV2Stats,v2PresenceAt,canPlaceV2,v2DistanceCoefficien
 export type SkillEffect={tick:number;kind:'attack'|'heal';element:Element;count:number;amount:number;from:{id:number;team:UnitV2['team'];x:number;y:number;diameter:number};to:{id:number;x:number;y:number;diameter:number}};
 export type EffectObserver=(effect:SkillEffect)=>void;
 export type ActivationPolicy='independent';
-export type GameV2=FoundationV2&{seed:number;config:GenerationConfig;diskRadius:number;layoutAttempt:number;activationPolicy:ActivationPolicy;hand:{id:number;seed:SeedV2}[];nextCard:number;charges:number;drawProgress:number;turnProgress:number;boosts:ReturnType<typeof ones>;rewards:{id:number;tick:number;element:Element;enemyOrigins:number[]}[];outcome:'playing'|'win'|'ended';events:string[];needsDecision:boolean;rotations:Record<number,Partial<Record<Element,string>>>};
+export type GameV2=FoundationV2&{rootGrowth?:RootGameRuntime;seed:number;config:GenerationConfig;diskRadius:number;layoutAttempt:number;activationPolicy:ActivationPolicy;hand:{id:number;seed:SeedV2}[];nextCard:number;charges:number;drawProgress:number;turnProgress:number;boosts:ReturnType<typeof ones>;rewards:{id:number;tick:number;element:Element;enemyOrigins:number[]}[];outcome:'playing'|'win'|'ended';events:string[];needsDecision:boolean;rotations:Record<number,Partial<Record<Element,string>>>};
 const log=(s:GameV2,text:string)=>{s.events.unshift(`${(s.tick/10).toFixed(1)}秒 ${text}`);s.events=s.events.slice(0,8);};
 export function createV2Game(seed:number,config:GenerationConfig,diskRadius=config.enemyCount===undefined?V2_DISK_LIMITS.legacyDefault:V2_DISK_LIMITS.currentDefault):GameV2{
  if(!validV2Population(config)||!Number.isSafeInteger(seed)||seed<0||seed>4294967295||!Number.isFinite(config.healChance)||config.healChance<0||config.healChance>1||config.sizeModel!==undefined&&config.sizeModel!=='percent-1'||config.initialBalance!==undefined&&config.initialBalance!=='range-presence-2'||config.defenseAllocation!==undefined&&config.defenseAllocation!=='all-elements-1'||!Number.isFinite(diskRadius)||diskRadius<V2_DISK_LIMITS.min||diskRadius>V2_DISK_LIMITS.max)throw Error('設定値が不正です。敵生成円の半径は200〜100000、敵数は1〜100です。');
@@ -29,6 +30,7 @@ export function placeV2(s:GameV2,x:number,y:number,cardId:number){const card=s.h
 // Extreme values use a shadow transaction; this is not a game size ceiling.
 export function stepV2(s:GameV2,onEffect?:EffectObserver){const extreme=s.units.some(u=>{const stats=currentV2Stats(u);return u.diameter>1e100||stats.maxHp>1e100||Object.values(stats.elements).some(e=>e.speed>Number.MAX_SAFE_INTEGER||Object.values(e).some(v=>v>1e100));});if(!extreme)return stepV2Core(s,onEffect);const shadow=structuredClone(s),effects:SkillEffect[]=[];const result=stepV2Core(shadow,onEffect?e=>effects.push(e):undefined);Object.assign(s,shadow);for(const e of effects)try{onEffect?.(e);}catch{}return result;}
 function stepV2Core(s:GameV2,onEffect?:EffectObserver){if(s.outcome!=='playing')return false;s.activationPolicy='independent';s.needsDecision=false;s.rotations={};
+ if(s.rootGrowth){advanceRootGame(s);advanceSupply(s);return true;}
  advanceV2Growth(s,uniqueSkillsKeepingReceiverClock);
  let visualBudget=128;const emit=(kind:SkillEffect['kind'],element:Element,from:UnitV2,to:UnitV2,amount:number,count:number)=>{if(!onEffect||visualBudget--<=0)return;try{onEffect({tick:s.tick,kind,element,count,amount,from:{id:from.id,team:from.team,x:from.x,y:from.y,diameter:from.diameter},to:{id:to.id,x:to.x,y:to.y,diameter:to.diameter}});}catch{/* Presentation cannot interrupt combat. */}};
  // Growth/merges are complete; material values stay fixed during simultaneous effect collection.
@@ -46,8 +48,11 @@ function stepV2Core(s:GameV2,onEffect?:EffectObserver){if(s.outcome!=='playing')
  for(const u of s.units)u.hp=round(Math.max(0,Math.min(sheets.get(u.id)!.maxHp,u.hp+(healing.get(u.id)??0))-(damage.get(u.id)??0)));
  for(const u of s.units.filter(u=>u.hp<=0).sort((a,b)=>a.id-b.id)){if(u.team==='enemy'){const element=u.seed.skills[0].element;s.rewards.push({id:u.id,tick:s.tick,element,enemyOrigins:[...u.enemyOrigins]});s.boosts[element]=round(s.boosts[element]+.01);s.charges=Math.min(ECO_LIMITS.charges,s.charges+1);}delete s.rotations[u.id];log(s,`${u.team==='enemy'?'敵':'味方'}#${u.id}消滅`);}s.units=s.units.filter(u=>u.hp>0);
  if(!s.units.some(u=>u.team==='enemy')){s.outcome='win';return false;}
+ advanceSupply(s);
+ return true;
+}
+function advanceSupply(s:GameV2){
  if(s.hand.length<ECO_LIMITS.hand&&s.nextCard<ECO_LIMITS.generations){s.drawProgress=round(s.drawProgress+TICK_SECONDS/DRAW_SECONDS);if(s.drawProgress>=1){s.drawProgress=round(s.drawProgress-1);const id=s.nextCard++;s.hand.push({id,seed:generateV2Seed(s.seed,'hand',id,s.config,s.tick,s.boosts,s.rewards.map(r=>r.id))});}}
  if(s.charges<ECO_LIMITS.charges){s.turnProgress=round(s.turnProgress+TICK_SECONDS/TURN_SECONDS);if(s.turnProgress>=1){s.turnProgress=round(s.turnProgress-1);s.charges++;}}
- return true;
 }
 export {WORLD};export const PRESENCE_LIMIT=0;

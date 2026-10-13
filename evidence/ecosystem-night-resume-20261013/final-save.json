@@ -1,0 +1,2424 @@
+{
+  "version": "eco-2026-10-11-v1",
+  "state": {
+    "rules": "diameter-linear-1",
+    "seed": 811,
+    "tick": 17264,
+    "nextId": 42,
+    "nextCard": 20,
+    "units": [
+      {
+        "id": 1,
+        "team": "enemy",
+        "x": 1000,
+        "y": 1000,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 0,
+          "initialDiameter": 12,
+          "bindings": {
+            "fire": "defense",
+            "ice": "range",
+            "electric": "speed",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 108.004661,
+            "hpReg": 0.063683,
+            "presenceHalo": 3.425965,
+            "elements": {
+              "fire": 17.567981,
+              "ice": 27.822286,
+              "electric": 32.185722,
+              "dark": 18.424011
+            }
+          },
+          "fixed": {
+            "hp": 108.004661,
+            "hpReg": 0.063683,
+            "presenceHalo": 3.425965,
+            "elements": {
+              "fire": 17.567981,
+              "ice": 27.822286,
+              "electric": 32.185722,
+              "dark": 18.424011
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 434680.044883,
+        "attackProgress": 0.8,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 500000,
+          "regen": 162.02851600000002
+        },
+        "lineage": [
+          1
+        ],
+        "enemyOrigins": [
+          1
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1",
+        "lastShot": {
+          "tick": 17262,
+          "x": 700,
+          "y": 1000,
+          "target": 25,
+          "damage": 2.786176
+        }
+      },
+      {
+        "id": 2,
+        "team": "enemy",
+        "x": 2400,
+        "y": 300,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 1,
+          "initialDiameter": 12,
+          "bindings": {
+            "fire": "attack",
+            "ice": "range",
+            "electric": "defense",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 133.892969,
+            "hpReg": 0.150625,
+            "presenceHalo": 3.645873,
+            "elements": {
+              "fire": 28.913913,
+              "ice": 33.603228,
+              "electric": 15.960646,
+              "dark": 17.522213
+            }
+          },
+          "fixed": {
+            "hp": 133.892969,
+            "hpReg": 0.150625,
+            "presenceHalo": 3.645873,
+            "elements": {
+              "fire": 28.913913,
+              "ice": 33.603228,
+              "electric": 15.960646,
+              "dark": 17.522213
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 466.951729,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          2
+        ],
+        "enemyOrigins": [
+          2
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 3,
+        "team": "enemy",
+        "x": 3000,
+        "y": 300,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 2,
+          "initialDiameter": 12,
+          "bindings": {
+            "fire": "attack",
+            "ice": "defense",
+            "electric": "speed",
+            "dark": "range"
+          },
+          "raw": {
+            "hp": 122.630277,
+            "hpReg": 0.159394,
+            "presenceHalo": 2.883354,
+            "elements": {
+              "fire": 30.815247,
+              "ice": 26.48029,
+              "electric": 20.230551,
+              "dark": 18.473912
+            }
+          },
+          "fixed": {
+            "hp": 122.630277,
+            "hpReg": 0.159394,
+            "presenceHalo": 2.883354,
+            "elements": {
+              "fire": 30.815247,
+              "ice": 26.48029,
+              "electric": 20.230551,
+              "dark": 18.473912
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 427.673091,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          3
+        ],
+        "enemyOrigins": [
+          3
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 4,
+        "team": "enemy",
+        "x": 3600,
+        "y": 300,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 3,
+          "initialDiameter": 12,
+          "bindings": {
+            "fire": "speed",
+            "ice": "range",
+            "electric": "defense",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 99.492115,
+            "hpReg": 0.117231,
+            "presenceHalo": 3.080406,
+            "elements": {
+              "fire": 37.802115,
+              "ice": 14.854012,
+              "electric": 16.941296,
+              "dark": 26.402577
+            }
+          },
+          "fixed": {
+            "hp": 99.492115,
+            "hpReg": 0.117231,
+            "presenceHalo": 3.080406,
+            "elements": {
+              "fire": 37.802115,
+              "ice": 14.854012,
+              "electric": 16.941296,
+              "dark": 26.402577
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 346.978751,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          4
+        ],
+        "enemyOrigins": [
+          4
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 5,
+        "team": "enemy",
+        "x": 1800,
+        "y": 750,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 4,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "defense",
+            "ice": "attack",
+            "electric": "range",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 127.046694,
+            "hpReg": 0.087107,
+            "presenceHalo": 2.503465,
+            "elements": {
+              "fire": 19.177626,
+              "ice": 22.083671,
+              "electric": 36.316011,
+              "dark": 18.422692
+            }
+          },
+          "fixed": {
+            "hp": 127.046694,
+            "hpReg": 0.087107,
+            "presenceHalo": 2.503465,
+            "elements": {
+              "fire": 19.177626,
+              "ice": 22.083671,
+              "electric": 36.316011,
+              "dark": 18.422692
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 443.075345,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          5
+        ],
+        "enemyOrigins": [
+          5
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 6,
+        "team": "enemy",
+        "x": 2400,
+        "y": 750,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 5,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "attack",
+            "ice": "defense",
+            "electric": "range",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 97.329243,
+            "hpReg": 0.078375,
+            "presenceHalo": 3.515656,
+            "elements": {
+              "fire": 29.72071,
+              "ice": 18.569543,
+              "electric": 30.015859,
+              "dark": 17.693888
+            }
+          },
+          "fixed": {
+            "hp": 97.329243,
+            "hpReg": 0.078375,
+            "presenceHalo": 3.515656,
+            "elements": {
+              "fire": 29.72071,
+              "ice": 18.569543,
+              "electric": 30.015859,
+              "dark": 17.693888
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 339.435735,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          6
+        ],
+        "enemyOrigins": [
+          6
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 7,
+        "team": "enemy",
+        "x": 3000,
+        "y": 750,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 6,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "attack",
+            "ice": "speed",
+            "electric": "defense",
+            "dark": "range"
+          },
+          "raw": {
+            "hp": 132.887938,
+            "hpReg": 0.075749,
+            "presenceHalo": 2.612589,
+            "elements": {
+              "fire": 30.731222,
+              "ice": 27.232349,
+              "electric": 19.402922,
+              "dark": 18.633507
+            }
+          },
+          "fixed": {
+            "hp": 132.887938,
+            "hpReg": 0.075749,
+            "presenceHalo": 2.612589,
+            "elements": {
+              "fire": 30.731222,
+              "ice": 27.232349,
+              "electric": 19.402922,
+              "dark": 18.633507
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 463.446684,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          7
+        ],
+        "enemyOrigins": [
+          7
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 8,
+        "team": "enemy",
+        "x": 3600,
+        "y": 750,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 7,
+          "initialDiameter": 12,
+          "bindings": {
+            "fire": "range",
+            "ice": "defense",
+            "electric": "speed",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 111.774192,
+            "hpReg": 0.090294,
+            "presenceHalo": 3.462886,
+            "elements": {
+              "fire": 21.862751,
+              "ice": 25.591392,
+              "electric": 22.213605,
+              "dark": 26.332253
+            }
+          },
+          "fixed": {
+            "hp": 111.774192,
+            "hpReg": 0.090294,
+            "presenceHalo": 3.462886,
+            "elements": {
+              "fire": 21.862751,
+              "ice": 25.591392,
+              "electric": 22.213605,
+              "dark": 26.332253
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 389.812495,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          8
+        ],
+        "enemyOrigins": [
+          8
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 9,
+        "team": "enemy",
+        "x": 1800,
+        "y": 1200,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 8,
+          "initialDiameter": 16,
+          "bindings": {
+            "fire": "defense",
+            "ice": "range",
+            "electric": "attack",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 104.854954,
+            "hpReg": 0.069797,
+            "presenceHalo": 3.393823,
+            "elements": {
+              "fire": 29.136624,
+              "ice": 22.288826,
+              "electric": 22.318737,
+              "dark": 22.255814
+            }
+          },
+          "fixed": {
+            "hp": 104.854954,
+            "hpReg": 0.069797,
+            "presenceHalo": 3.393823,
+            "elements": {
+              "fire": 29.136624,
+              "ice": 22.288826,
+              "electric": 22.318737,
+              "dark": 22.255814
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 365.681652,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          9
+        ],
+        "enemyOrigins": [
+          9
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 10,
+        "team": "enemy",
+        "x": 2400,
+        "y": 1200,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 9,
+          "initialDiameter": 16,
+          "bindings": {
+            "fire": "attack",
+            "ice": "range",
+            "electric": "defense",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 106.123193,
+            "hpReg": 0.139068,
+            "presenceHalo": 3.666919,
+            "elements": {
+              "fire": 35.490057,
+              "ice": 17.053641,
+              "electric": 25.265363,
+              "dark": 18.190939
+            }
+          },
+          "fixed": {
+            "hp": 106.123193,
+            "hpReg": 0.139068,
+            "presenceHalo": 3.666919,
+            "elements": {
+              "fire": 35.490057,
+              "ice": 17.053641,
+              "electric": 25.265363,
+              "dark": 18.190939
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 370.104636,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          10
+        ],
+        "enemyOrigins": [
+          10
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 11,
+        "team": "enemy",
+        "x": 3000,
+        "y": 1200,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 10,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "range",
+            "ice": "speed",
+            "electric": "defense",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 112.893344,
+            "hpReg": 0.07014,
+            "presenceHalo": 2.785153,
+            "elements": {
+              "fire": 18.00856,
+              "ice": 24.19092,
+              "electric": 28.051246,
+              "dark": 25.749274
+            }
+          },
+          "fixed": {
+            "hp": 112.893344,
+            "hpReg": 0.07014,
+            "presenceHalo": 2.785153,
+            "elements": {
+              "fire": 18.00856,
+              "ice": 24.19092,
+              "electric": 28.051246,
+              "dark": 25.749274
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 393.715537,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          11
+        ],
+        "enemyOrigins": [
+          11
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 12,
+        "team": "enemy",
+        "x": 3600,
+        "y": 1200,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 11,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "speed",
+            "ice": "range",
+            "electric": "defense",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 114.088655,
+            "hpReg": 0.074318,
+            "presenceHalo": 3.185166,
+            "elements": {
+              "fire": 19.286279,
+              "ice": 19.52532,
+              "electric": 22.816668,
+              "dark": 34.371733
+            }
+          },
+          "fixed": {
+            "hp": 114.088655,
+            "hpReg": 0.074318,
+            "presenceHalo": 3.185166,
+            "elements": {
+              "fire": 19.286279,
+              "ice": 19.52532,
+              "electric": 22.816668,
+              "dark": 34.371733
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 397.884184,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          12
+        ],
+        "enemyOrigins": [
+          12
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 13,
+        "team": "enemy",
+        "x": 1800,
+        "y": 1650,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 12,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "range",
+            "ice": "defense",
+            "electric": "attack",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 125.933452,
+            "hpReg": 0.081961,
+            "presenceHalo": 2.523356,
+            "elements": {
+              "fire": 29.458208,
+              "ice": 27.160389,
+              "electric": 16.63759,
+              "dark": 22.743813
+            }
+          },
+          "fixed": {
+            "hp": 125.933452,
+            "hpReg": 0.081961,
+            "presenceHalo": 2.523356,
+            "elements": {
+              "fire": 29.458208,
+              "ice": 27.160389,
+              "electric": 16.63759,
+              "dark": 22.743813
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 439.192914,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          13
+        ],
+        "enemyOrigins": [
+          13
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 14,
+        "team": "enemy",
+        "x": 2400,
+        "y": 1650,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 13,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "speed",
+            "ice": "range",
+            "electric": "attack",
+            "dark": "defense"
+          },
+          "raw": {
+            "hp": 131.936294,
+            "hpReg": 0.153545,
+            "presenceHalo": 3.780101,
+            "elements": {
+              "fire": 26.152727,
+              "ice": 26.869197,
+              "electric": 24.577606,
+              "dark": 18.40047
+            }
+          },
+          "fixed": {
+            "hp": 131.936294,
+            "hpReg": 0.153545,
+            "presenceHalo": 3.780101,
+            "elements": {
+              "fire": 26.152727,
+              "ice": 26.869197,
+              "electric": 24.577606,
+              "dark": 18.40047
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 460.127825,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          14
+        ],
+        "enemyOrigins": [
+          14
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 15,
+        "team": "enemy",
+        "x": 3000,
+        "y": 1650,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 14,
+          "initialDiameter": 16,
+          "bindings": {
+            "fire": "range",
+            "ice": "attack",
+            "electric": "defense",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 132.786238,
+            "hpReg": 0.125711,
+            "presenceHalo": 3.419808,
+            "elements": {
+              "fire": 28.176389,
+              "ice": 17.071715,
+              "electric": 33.92562,
+              "dark": 16.826276
+            }
+          },
+          "fixed": {
+            "hp": 132.786238,
+            "hpReg": 0.125711,
+            "presenceHalo": 3.419808,
+            "elements": {
+              "fire": 28.176389,
+              "ice": 17.071715,
+              "electric": 33.92562,
+              "dark": 16.826276
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 463.092005,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          15
+        ],
+        "enemyOrigins": [
+          15
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 16,
+        "team": "enemy",
+        "x": 3600,
+        "y": 1650,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 15,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "attack",
+            "ice": "speed",
+            "electric": "range",
+            "dark": "defense"
+          },
+          "raw": {
+            "hp": 123.014934,
+            "hpReg": 0.089046,
+            "presenceHalo": 3.171788,
+            "elements": {
+              "fire": 29.454169,
+              "ice": 30.018376,
+              "electric": 18.599551,
+              "dark": 17.927903
+            }
+          },
+          "fixed": {
+            "hp": 123.014934,
+            "hpReg": 0.089046,
+            "presenceHalo": 3.171788,
+            "elements": {
+              "fire": 29.454169,
+              "ice": 30.018376,
+              "electric": 18.599551,
+              "dark": 17.927903
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 429.014582,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          16
+        ],
+        "enemyOrigins": [
+          16
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 17,
+        "team": "enemy",
+        "x": 1800,
+        "y": 2100,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 16,
+          "initialDiameter": 16,
+          "bindings": {
+            "fire": "defense",
+            "ice": "speed",
+            "electric": "attack",
+            "dark": "range"
+          },
+          "raw": {
+            "hp": 105.930238,
+            "hpReg": 0.061751,
+            "presenceHalo": 3.856061,
+            "elements": {
+              "fire": 26.061784,
+              "ice": 25.955504,
+              "electric": 20.400511,
+              "dark": 23.582201
+            }
+          },
+          "fixed": {
+            "hp": 105.930238,
+            "hpReg": 0.061751,
+            "presenceHalo": 3.856061,
+            "elements": {
+              "fire": 26.061784,
+              "ice": 25.955504,
+              "electric": 20.400511,
+              "dark": 23.582201
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 369.431705,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          17
+        ],
+        "enemyOrigins": [
+          17
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 18,
+        "team": "enemy",
+        "x": 2400,
+        "y": 2100,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 17,
+          "initialDiameter": 12,
+          "bindings": {
+            "fire": "speed",
+            "ice": "range",
+            "electric": "defense",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 122.289987,
+            "hpReg": 0.155315,
+            "presenceHalo": 2.818654,
+            "elements": {
+              "fire": 15.631777,
+              "ice": 26.561146,
+              "electric": 24.86767,
+              "dark": 28.939407
+            }
+          },
+          "fixed": {
+            "hp": 122.289987,
+            "hpReg": 0.155315,
+            "presenceHalo": 2.818654,
+            "elements": {
+              "fire": 15.631777,
+              "ice": 26.561146,
+              "electric": 24.86767,
+              "dark": 28.939407
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 426.48633,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          18
+        ],
+        "enemyOrigins": [
+          18
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 19,
+        "team": "enemy",
+        "x": 3000,
+        "y": 2100,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 18,
+          "initialDiameter": 16,
+          "bindings": {
+            "fire": "range",
+            "ice": "attack",
+            "electric": "defense",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 133.873371,
+            "hpReg": 0.130414,
+            "presenceHalo": 3.528849,
+            "elements": {
+              "fire": 18.957598,
+              "ice": 21.960549,
+              "electric": 27.111954,
+              "dark": 27.969899
+            }
+          },
+          "fixed": {
+            "hp": 133.873371,
+            "hpReg": 0.130414,
+            "presenceHalo": 3.528849,
+            "elements": {
+              "fire": 18.957598,
+              "ice": 21.960549,
+              "electric": 27.111954,
+              "dark": 27.969899
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 466.883381,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          19
+        ],
+        "enemyOrigins": [
+          19
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 20,
+        "team": "enemy",
+        "x": 3600,
+        "y": 2100,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 19,
+          "initialDiameter": 16,
+          "bindings": {
+            "fire": "range",
+            "ice": "speed",
+            "electric": "defense",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 137.853807,
+            "hpReg": 0.154505,
+            "presenceHalo": 3.836005,
+            "elements": {
+              "fire": 27.142838,
+              "ice": 26.12077,
+              "electric": 28.087143,
+              "dark": 14.649248
+            }
+          },
+          "fixed": {
+            "hp": 137.853807,
+            "hpReg": 0.154505,
+            "presenceHalo": 3.836005,
+            "elements": {
+              "fire": 27.142838,
+              "ice": 26.12077,
+              "electric": 28.087143,
+              "dark": 14.649248
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 480.765152,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          20
+        ],
+        "enemyOrigins": [
+          20
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 21,
+        "team": "enemy",
+        "x": 1800,
+        "y": 2550,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 20,
+          "initialDiameter": 12,
+          "bindings": {
+            "fire": "defense",
+            "ice": "attack",
+            "electric": "range",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 133.343353,
+            "hpReg": 0.075155,
+            "presenceHalo": 2.522784,
+            "elements": {
+              "fire": 30.54413,
+              "ice": 27.590899,
+              "electric": 15.740299,
+              "dark": 22.124671
+            }
+          },
+          "fixed": {
+            "hp": 133.343353,
+            "hpReg": 0.075155,
+            "presenceHalo": 2.522784,
+            "elements": {
+              "fire": 30.54413,
+              "ice": 27.590899,
+              "electric": 15.740299,
+              "dark": 22.124671
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 465.034944,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          21
+        ],
+        "enemyOrigins": [
+          21
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 22,
+        "team": "enemy",
+        "x": 2400,
+        "y": 2550,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 21,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "range",
+            "ice": "attack",
+            "electric": "speed",
+            "dark": "defense"
+          },
+          "raw": {
+            "hp": 136.720465,
+            "hpReg": 0.101963,
+            "presenceHalo": 3.167518,
+            "elements": {
+              "fire": 21.090532,
+              "ice": 38.134774,
+              "electric": 15.367442,
+              "dark": 21.407252
+            }
+          },
+          "fixed": {
+            "hp": 136.720465,
+            "hpReg": 0.101963,
+            "presenceHalo": 3.167518,
+            "elements": {
+              "fire": 21.090532,
+              "ice": 38.134774,
+              "electric": 15.367442,
+              "dark": 21.407252
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 476.812622,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          22
+        ],
+        "enemyOrigins": [
+          22
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 23,
+        "team": "enemy",
+        "x": 3000,
+        "y": 2550,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 22,
+          "initialDiameter": 20,
+          "bindings": {
+            "fire": "attack",
+            "ice": "range",
+            "electric": "speed",
+            "dark": "defense"
+          },
+          "raw": {
+            "hp": 118.942594,
+            "hpReg": 0.063326,
+            "presenceHalo": 2.542894,
+            "elements": {
+              "fire": 14.915198,
+              "ice": 34.369328,
+              "electric": 20.04078,
+              "dark": 26.674694
+            }
+          },
+          "fixed": {
+            "hp": 118.942594,
+            "hpReg": 0.063326,
+            "presenceHalo": 2.542894,
+            "elements": {
+              "fire": 14.915198,
+              "ice": 34.369328,
+              "electric": 20.04078,
+              "dark": 26.674694
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 414.812297,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          23
+        ],
+        "enemyOrigins": [
+          23
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 24,
+        "team": "enemy",
+        "x": 3600,
+        "y": 2550,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "enemy",
+          "index": 23,
+          "initialDiameter": 12,
+          "bindings": {
+            "fire": "range",
+            "ice": "speed",
+            "electric": "defense",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 120.173813,
+            "hpReg": 0.103095,
+            "presenceHalo": 2.64545,
+            "elements": {
+              "fire": 23.77874,
+              "ice": 24.941465,
+              "electric": 29.630079,
+              "dark": 17.649716
+            }
+          },
+          "fixed": {
+            "hp": 120.173813,
+            "hpReg": 0.103095,
+            "presenceHalo": 2.64545,
+            "elements": {
+              "fire": 23.77874,
+              "ice": 24.941465,
+              "electric": 29.630079,
+              "dark": 17.649716
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 419.106173,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          24
+        ],
+        "enemyOrigins": [
+          24
+        ],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 25,
+        "team": "ally",
+        "x": 700,
+        "y": 1000,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "initial",
+          "index": 0,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "defense",
+            "ice": "attack",
+            "electric": "speed",
+            "dark": "range"
+          },
+          "raw": {
+            "hp": 118.643841,
+            "hpReg": 0.073142,
+            "presenceHalo": 2.682929,
+            "elements": {
+              "fire": 31.722893,
+              "ice": 18.996928,
+              "electric": 13.723187,
+              "dark": 31.556992
+            }
+          },
+          "fixed": {
+            "hp": 118.643841,
+            "hpReg": 0.073142,
+            "presenceHalo": 2.682929,
+            "elements": {
+              "fire": 31.722893,
+              "ice": 18.996928,
+              "electric": 13.723187,
+              "dark": 31.556992
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 205.91877,
+        "hp": 502225.889787,
+        "attackProgress": 0,
+        "bonus": {
+          "elements": {
+            "fire": 105.743251,
+            "ice": 85.158903,
+            "electric": 94.472865,
+            "dark": 591.28098
+          },
+          "hp": 501803.341571,
+          "regen": 24.502852
+        },
+        "lineage": [
+          25,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ],
+        "enemyOrigins": [],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1",
+        "lastShot": {
+          "tick": 17264,
+          "x": 1000,
+          "y": 1000,
+          "target": 1,
+          "damage": 81.743484
+        }
+      },
+      {
+        "id": 26,
+        "team": "ally",
+        "x": 300,
+        "y": 2500,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "initial",
+          "index": 1,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "defense",
+            "ice": "range",
+            "electric": "speed",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 110.441629,
+            "hpReg": 0.107053,
+            "presenceHalo": 3.149686,
+            "elements": {
+              "fire": 25.200481,
+              "ice": 30.267397,
+              "electric": 13.350033,
+              "dark": 27.182089
+            }
+          },
+          "fixed": {
+            "hp": 110.441629,
+            "hpReg": 0.107053,
+            "presenceHalo": 3.149686,
+            "elements": {
+              "fire": 25.200481,
+              "ice": 30.267397,
+              "electric": 13.350033,
+              "dark": 27.182089
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 385.165181,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          26
+        ],
+        "enemyOrigins": [],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      },
+      {
+        "id": 27,
+        "team": "ally",
+        "x": 300,
+        "y": 2800,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "initial",
+          "index": 2,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "attack",
+            "ice": "speed",
+            "electric": "range",
+            "dark": "defense"
+          },
+          "raw": {
+            "hp": 106.409373,
+            "hpReg": 0.084686,
+            "presenceHalo": 3.440034,
+            "elements": {
+              "fire": 17.842882,
+              "ice": 17.274472,
+              "electric": 20.618135,
+              "dark": 40.264511
+            }
+          },
+          "fixed": {
+            "hp": 106.409373,
+            "hpReg": 0.084686,
+            "presenceHalo": 3.440034,
+            "elements": {
+              "fire": 17.842882,
+              "ice": 17.274472,
+              "electric": 20.618135,
+              "dark": 40.264511
+            }
+          },
+          "entry": {
+            "tick": 0,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        },
+        "born": 0,
+        "age": 17264,
+        "diameter": 200,
+        "hp": 371.102688,
+        "attackProgress": 1,
+        "bonus": {
+          "elements": {
+            "fire": 0,
+            "ice": 0,
+            "electric": 0,
+            "dark": 0
+          },
+          "hp": 0,
+          "regen": 0
+        },
+        "lineage": [
+          27
+        ],
+        "enemyOrigins": [],
+        "rangeFactor": 2,
+        "mergePolicy": "quarter-v1",
+        "targetPolicy": "presence-nearest-v1"
+      }
+    ],
+    "hand": [
+      {
+        "kind": "plant",
+        "id": 14,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "hand",
+          "index": 14,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "attack",
+            "ice": "speed",
+            "electric": "range",
+            "dark": "defense"
+          },
+          "raw": {
+            "hp": 131.153838,
+            "hpReg": 0.121014,
+            "presenceHalo": 3.566506,
+            "elements": {
+              "fire": 19.011289,
+              "ice": 31.020392,
+              "electric": 20.79796,
+              "dark": 25.170358
+            }
+          },
+          "fixed": {
+            "hp": 131.153838,
+            "hpReg": 0.121014,
+            "presenceHalo": 3.566506,
+            "elements": {
+              "fire": 19.011289,
+              "ice": 31.020392,
+              "electric": 20.79796,
+              "dark": 25.170358
+            }
+          },
+          "entry": {
+            "tick": 10481,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        }
+      },
+      {
+        "kind": "plant",
+        "id": 15,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "hand",
+          "index": 15,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "attack",
+            "ice": "defense",
+            "electric": "speed",
+            "dark": "range"
+          },
+          "raw": {
+            "hp": 104.024669,
+            "hpReg": 0.157184,
+            "presenceHalo": 2.859574,
+            "elements": {
+              "fire": 18.270968,
+              "ice": 18.42348,
+              "electric": 30.941132,
+              "dark": 28.36442
+            }
+          },
+          "fixed": {
+            "hp": 104.024669,
+            "hpReg": 0.157184,
+            "presenceHalo": 2.859574,
+            "elements": {
+              "fire": 18.270968,
+              "ice": 18.42348,
+              "electric": 30.941132,
+              "dark": 28.36442
+            }
+          },
+          "entry": {
+            "tick": 11734,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        }
+      },
+      {
+        "kind": "plant",
+        "id": 16,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "hand",
+          "index": 16,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "defense",
+            "ice": "range",
+            "electric": "speed",
+            "dark": "attack"
+          },
+          "raw": {
+            "hp": 110.070523,
+            "hpReg": 0.099818,
+            "presenceHalo": 3.919716,
+            "elements": {
+              "fire": 30.543445,
+              "ice": 17.938755,
+              "electric": 24.311624,
+              "dark": 23.206176
+            }
+          },
+          "fixed": {
+            "hp": 110.070523,
+            "hpReg": 0.099818,
+            "presenceHalo": 3.919716,
+            "elements": {
+              "fire": 30.543445,
+              "ice": 17.938755,
+              "electric": 24.311624,
+              "dark": 23.206176
+            }
+          },
+          "entry": {
+            "tick": 12784,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        }
+      },
+      {
+        "kind": "plant",
+        "id": 17,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "hand",
+          "index": 17,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "range",
+            "ice": "defense",
+            "electric": "attack",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 99.072304,
+            "hpReg": 0.154109,
+            "presenceHalo": 3.825099,
+            "elements": {
+              "fire": 21.792334,
+              "ice": 29.96832,
+              "electric": 22.437873,
+              "dark": 21.801472
+            }
+          },
+          "fixed": {
+            "hp": 99.072304,
+            "hpReg": 0.154109,
+            "presenceHalo": 3.825099,
+            "elements": {
+              "fire": 21.792334,
+              "ice": 29.96832,
+              "electric": 22.437873,
+              "dark": 21.801472
+            }
+          },
+          "entry": {
+            "tick": 14035,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        }
+      },
+      {
+        "kind": "plant",
+        "id": 18,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "hand",
+          "index": 18,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "range",
+            "ice": "attack",
+            "electric": "defense",
+            "dark": "speed"
+          },
+          "raw": {
+            "hp": 103.718804,
+            "hpReg": 0.07492,
+            "presenceHalo": 3.733862,
+            "elements": {
+              "fire": 27.87965,
+              "ice": 24.207728,
+              "electric": 19.101922,
+              "dark": 24.810699
+            }
+          },
+          "fixed": {
+            "hp": 103.718804,
+            "hpReg": 0.07492,
+            "presenceHalo": 3.733862,
+            "elements": {
+              "fire": 27.87965,
+              "ice": 24.207728,
+              "electric": 19.101922,
+              "dark": 24.810699
+            }
+          },
+          "entry": {
+            "tick": 15096,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        }
+      },
+      {
+        "kind": "plant",
+        "id": 19,
+        "seed": {
+          "generator": "eco-seed-1",
+          "runSeed": 811,
+          "source": "hand",
+          "index": 19,
+          "initialDiameter": 8,
+          "bindings": {
+            "fire": "range",
+            "ice": "speed",
+            "electric": "attack",
+            "dark": "defense"
+          },
+          "raw": {
+            "hp": 130.102096,
+            "hpReg": 0.149805,
+            "presenceHalo": 3.574529,
+            "elements": {
+              "fire": 18.752702,
+              "ice": 22.2651,
+              "electric": 35.671079,
+              "dark": 19.31112
+            }
+          },
+          "fixed": {
+            "hp": 130.102096,
+            "hpReg": 0.149805,
+            "presenceHalo": 3.574529,
+            "elements": {
+              "fire": 18.752702,
+              "ice": 22.2651,
+              "electric": 35.671079,
+              "dark": 19.31112
+            }
+          },
+          "entry": {
+            "tick": 16146,
+            "boosts": {
+              "fire": 1,
+              "ice": 1,
+              "electric": 1,
+              "dark": 1
+            },
+            "rewardIds": []
+          }
+        }
+      }
+    ],
+    "charges": 5,
+    "drawProgress": 0,
+    "turnProgress": 0,
+    "player": {
+      "boosts": {
+        "fire": 1,
+        "ice": 1,
+        "electric": 1,
+        "dark": 1
+      },
+      "drowHeist": 1,
+      "turnHeist": 1,
+      "rewards": []
+    },
+    "merges": 14,
+    "outcome": "playing",
+    "events": [
+      {
+        "tick": 16186,
+        "kind": "charge",
+        "text": "配置力＋1。"
+      },
+      {
+        "tick": 16146,
+        "kind": "draw",
+        "text": "芽 #20 が手札へ。能力はこの時点で確定。"
+      },
+      {
+        "tick": 16123,
+        "kind": "merge",
+        "text": "味方 #25 が #41 を吸収 · 直径 205.9"
+      },
+      {
+        "tick": 16106,
+        "kind": "place",
+        "text": "芽 #14 を配置。次の札はドロー時計で補充します。"
+      },
+      {
+        "tick": 15136,
+        "kind": "charge",
+        "text": "配置力＋1。"
+      },
+      {
+        "tick": 15096,
+        "kind": "draw",
+        "text": "芽 #19 が手札へ。能力はこの時点で確定。"
+      },
+      {
+        "tick": 15073,
+        "kind": "merge",
+        "text": "味方 #25 が #40 を吸収 · 直径 205.5"
+      },
+      {
+        "tick": 15056,
+        "kind": "place",
+        "text": "芽 #13 を配置。次の札はドロー時計で補充します。"
+      }
+    ],
+    "enemyLayout": "spaced-pockets-v1",
+    "rangeFactor": 2,
+    "mergePolicy": "quarter-v1",
+    "targetPolicy": "presence-nearest-v1"
+  },
+  "view": {
+    "x": 850,
+    "y": 1000,
+    "zoom": 8
+  },
+  "speed": 1,
+  "checksum": "aa3c298e"
+}

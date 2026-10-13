@@ -1,0 +1,54 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "uniformButtonSize": {
+        "w": 190.140625,
+        "h": 40
+      },
+      "resistInBasic": true,
+      "speciesId": true,
+      "combinedToggles": true,
+      "conditionalArea": true,
+      "permanentArea": true,
+      "gameSaveUnchanged": true,
+      "preferencesRestore": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "uniformButtonSize": {
+        "w": 92.25,
+        "h": 40
+      },
+      "resistInBasic": true,
+      "speciesId": true,
+      "combinedToggles": true,
+      "conditionalArea": true,
+      "permanentArea": true,
+      "gameSaveUnchanged": true,
+      "preferencesRestore": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "uniformButtonSize": {
+        "w": 74.75,
+        "h": 40
+      },
+      "resistInBasic": true,
+      "speciesId": true,
+      "combinedToggles": true,
+      "conditionalArea": true,
+      "permanentArea": true,
+      "gameSaveUnchanged": true,
+      "preferencesRestore": true
+    }
+  ]
+}

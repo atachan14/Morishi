@@ -1,0 +1,10 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [],
+  "fatal": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    checksum: '16d1866f',\n    phase: 'night',\n    resume: 'paused',\n    root: {\n...\n          rootData: {\n+           blocked: undefined,\n            capacity: 10000,\n            rate: 0,\n            stats: [\n              17247.948778605383,\n              17.578117719520453,\n",
+  "stderr": "\r\nDevTools listening on ws://127.0.0.1:55870/devtools/browser/8e4e1c62-5a9d-498d-9cf2-e2c17b823732\r\n[26304:27660:1014/011551.419:ERROR:chrome\\browser\\task_manager\\providers\\fallback_task_provider.cc:126] Every renderer should have at least one task provided by a primary task provider. If a \"Renderer\" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/40528867.\r\n"
+}

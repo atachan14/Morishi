@@ -1,0 +1,72 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "responsive": {
+        "durationMs": 2942.600000023842,
+        "beats": 206,
+        "maxGap": 32.5,
+        "p95": 19.69999998807907
+      },
+      "cancelledTicks": 34,
+      "savedTicks": 23,
+      "visibilityMode": "native-tab",
+      "exactFullStep": true,
+      "resumePlayingPreserved": true,
+      "exactPrefixes": true,
+      "reloadPaused": true,
+      "newRunNoStaleWork": true,
+      "restoreNoStaleWork": true,
+      "forecastNoStaleWork": true,
+      "normalSaveUntouched": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "responsive": {
+        "durationMs": 2878,
+        "beats": 209,
+        "maxGap": 29.69999998807907,
+        "p95": 18.900000005960464
+      },
+      "cancelledTicks": 35,
+      "savedTicks": 40,
+      "visibilityMode": "native-tab",
+      "exactFullStep": true,
+      "resumePlayingPreserved": true,
+      "exactPrefixes": true,
+      "reloadPaused": true,
+      "newRunNoStaleWork": true,
+      "restoreNoStaleWork": true,
+      "forecastNoStaleWork": true,
+      "normalSaveUntouched": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "responsive": {
+        "durationMs": 2869.899999976158,
+        "beats": 207,
+        "maxGap": 31,
+        "p95": 18.600000023841858
+      },
+      "cancelledTicks": 40,
+      "savedTicks": 48,
+      "visibilityMode": "native-tab",
+      "exactFullStep": true,
+      "resumePlayingPreserved": true,
+      "exactPrefixes": true,
+      "reloadPaused": true,
+      "newRunNoStaleWork": true,
+      "restoreNoStaleWork": true,
+      "forecastNoStaleWork": true,
+      "normalSaveUntouched": true
+    }
+  ]
+}

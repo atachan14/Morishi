@@ -1,3 +1,5 @@
+後続の [最終再検証と配置比較](ecosystem-v2-regression-comparison.md)、[分割時間送り](ecosystem-v2-chunked-time.md) を参照。
+
 現行本体の長期観測と修正は [根・雨・成長の観測](ecosystem-v2-balance-observation.md) を参照。
 
 # v2 独立天気予報UI

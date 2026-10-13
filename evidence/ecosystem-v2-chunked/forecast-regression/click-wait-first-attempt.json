@@ -1,0 +1,11 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [],
+  "attempts": [],
+  "fatal": "ReferenceError: sel is not defined",
+  "stderr": "\r\nDevTools listening on ws://127.0.0.1:55169/devtools/browser/fdac790e-6b45-41d3-a473-fef7831239de\r\n[30336:23344:1014/014549.367:ERROR:chrome\\browser\\task_manager\\providers\\fallback_task_provider.cc:126] Every renderer should have at least one task provided by a primary task provider. If a \"Renderer\" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/40528867.\r\n"
+}

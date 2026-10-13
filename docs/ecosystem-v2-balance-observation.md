@@ -1,3 +1,5 @@
+後続の [最終再検証と配置比較](ecosystem-v2-regression-comparison.md)、[分割時間送り](ecosystem-v2-chunked-time.md) を参照。
+
 # v2 根・雨・成長の長期観測
 
 基準HEAD3070485から、既存本体の再現可能な計測を実施。停止・隔離修正はローカルコミット0eed53e。ルールや調整値は変更しない。対象はecosystem-v2.htmlのrootモード。

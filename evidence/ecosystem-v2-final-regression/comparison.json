@@ -1,0 +1,226 @@
+{
+  "referenceHead": "0eed53e;424-idle initial25200 ticks include pre-fix data",
+  "rerunHead": "b0d4d7c",
+  "sampleTolerance": "absolute1e-5 + relative1e-12; counts and strings exact",
+  "rawStateTolerance": "absolute1e-6 + relative1e-12; checksum excluded for numerical rounding differences",
+  "cases": [
+    {
+      "seed": 424,
+      "scenario": "idle",
+      "samples": {
+        "structureExactlyEqual": true,
+        "numericDifferenceCount": 50,
+        "maxAbsoluteDelta": 7.392372936010361e-8,
+        "allWithinTolerance": true,
+        "largest": [
+          {
+            "path": ".12.rainAdded",
+            "old": 666516.1343216638,
+            "new": 666516.1343215898,
+            "absoluteDelta": 7.392372936010361e-8,
+            "withinTolerance": true
+          },
+          {
+            "path": ".11.rainAdded",
+            "old": 664492.7055966709,
+            "new": 664492.705596597,
+            "absoluteDelta": 7.380731403827667e-8,
+            "withinTolerance": true
+          },
+          {
+            "path": ".9.rainAdded",
+            "old": 646029.1536580786,
+            "new": 646029.1536580053,
+            "absoluteDelta": 7.334165275096893e-8,
+            "withinTolerance": true
+          },
+          {
+            "path": ".10.rainAdded",
+            "old": 654014.0861061752,
+            "new": 654014.0861061021,
+            "absoluteDelta": 7.310882210731506e-8,
+            "withinTolerance": true
+          },
+          {
+            "path": ".8.rainAdded",
+            "old": 636770.1060193717,
+            "new": 636770.1060192995,
+            "absoluteDelta": 7.217749953269958e-8,
+            "withinTolerance": true
+          },
+          {
+            "path": ".7.soilWater",
+            "old": 1102934.4115919757,
+            "new": 1102934.4115920248,
+            "absoluteDelta": 4.912726581096649e-8,
+            "withinTolerance": true
+          },
+          {
+            "path": ".7.rainAdded",
+            "old": 604188.8115920108,
+            "new": 604188.811591985,
+            "absoluteDelta": 2.5727786123752594e-8,
+            "withinTolerance": true
+          },
+          {
+            "path": ".6.rainAdded",
+            "old": 582374.8229125165,
+            "new": 582374.8229125282,
+            "absoluteDelta": 1.1641532182693481e-8,
+            "withinTolerance": true
+          }
+        ]
+      },
+      "finalState": {
+        "structureExactlyEqual": true,
+        "numericDifferenceCount": 123,
+        "maxAbsoluteDelta": 7.392372936010361e-8,
+        "allWithinTolerance": true,
+        "largest": [
+          {
+            "path": ".root.rainAdded",
+            "old": 666516.1343216638,
+            "new": 666516.1343215898,
+            "absoluteDelta": 7.392372936010361e-8,
+            "withinTolerance": true
+          },
+          {
+            "path": ".root.plants.0.mix.17",
+            "old": 798.5559526785743,
+            "new": 798.5559526672333,
+            "absoluteDelta": 1.1340944183757529e-8,
+            "withinTolerance": true
+          },
+          {
+            "path": ".root.plants.0.mix.16",
+            "old": 647.3899054175822,
+            "new": 647.3899054088106,
+            "absoluteDelta": 8.771621651249006e-9,
+            "withinTolerance": true
+          },
+          {
+            "path": ".root.plants.0.mix.11",
+            "old": 505.17129792746107,
+            "new": 505.1712979187144,
+            "absoluteDelta": 8.746667390369112e-9,
+            "withinTolerance": true
+          },
+          {
+            "path": ".root.plants.0.mix.18",
+            "old": 649.62631573633,
+            "new": 649.6263157287005,
+            "absoluteDelta": 7.62940999265993e-9,
+            "withinTolerance": true
+          },
+          {
+            "path": ".root.plants.0.mix.15",
+            "old": 401.0406868020327,
+            "new": 401.04068679618797,
+            "absoluteDelta": 5.844754014106002e-9,
+            "withinTolerance": true
+          },
+          {
+            "path": ".root.plants.0.mix.19",
+            "old": 366.8145315819369,
+            "new": 366.81453157734944,
+            "absoluteDelta": 4.587434432323789e-9,
+            "withinTolerance": true
+          },
+          {
+            "path": ".root.plants.0.mix.7",
+            "old": 459.66885885453854,
+            "new": 459.66885885050476,
+            "absoluteDelta": 4.033779532619519e-9,
+            "withinTolerance": true
+          }
+        ]
+      },
+      "causes": {
+        "enemyUnits": 1,
+        "livingEnemyOrigins": 100,
+        "enemyBattleDeaths": 0,
+        "enemyMerges": 99,
+        "allyMerges": 0,
+        "allyBattleDeaths": 0
+      },
+      "restoreChecks": 12
+    },
+    {
+      "seed": 424,
+      "scenario": "placed",
+      "samples": {
+        "structureExactlyEqual": true,
+        "numericDifferenceCount": 0,
+        "maxAbsoluteDelta": 0,
+        "allWithinTolerance": true,
+        "largest": []
+      },
+      "finalState": {
+        "unavailable": "old424-near final raw save was not retained; all13 sample points compared"
+      },
+      "causes": {
+        "enemyUnits": 1,
+        "livingEnemyOrigins": 100,
+        "enemyBattleDeaths": 0,
+        "enemyMerges": 99,
+        "allyMerges": 2,
+        "allyBattleDeaths": 1
+      },
+      "restoreChecks": 12
+    },
+    {
+      "seed": 614,
+      "scenario": "idle",
+      "samples": {
+        "structureExactlyEqual": true,
+        "numericDifferenceCount": 0,
+        "maxAbsoluteDelta": 0,
+        "allWithinTolerance": true,
+        "largest": []
+      },
+      "finalState": {
+        "structureExactlyEqual": true,
+        "numericDifferenceCount": 0,
+        "maxAbsoluteDelta": 0,
+        "allWithinTolerance": true,
+        "largest": []
+      },
+      "causes": {
+        "enemyUnits": 2,
+        "livingEnemyOrigins": 100,
+        "enemyBattleDeaths": 0,
+        "enemyMerges": 98,
+        "allyMerges": 0,
+        "allyBattleDeaths": 0
+      },
+      "restoreChecks": 12
+    },
+    {
+      "seed": 614,
+      "scenario": "placed",
+      "samples": {
+        "structureExactlyEqual": true,
+        "numericDifferenceCount": 0,
+        "maxAbsoluteDelta": 0,
+        "allWithinTolerance": true,
+        "largest": []
+      },
+      "finalState": {
+        "structureExactlyEqual": true,
+        "numericDifferenceCount": 0,
+        "maxAbsoluteDelta": 0,
+        "allWithinTolerance": true,
+        "largest": []
+      },
+      "causes": {
+        "enemyUnits": 2,
+        "livingEnemyOrigins": 100,
+        "enemyBattleDeaths": 0,
+        "enemyMerges": 98,
+        "allyMerges": 1,
+        "allyBattleDeaths": 2
+      },
+      "restoreChecks": 12
+    }
+  ]
+}

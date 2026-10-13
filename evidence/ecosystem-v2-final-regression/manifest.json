@@ -1,0 +1,7 @@
+{
+  "head": "b0d4d7cdaffba16d9ca0d6c429ec61ac9a7dd5da",
+  "rootCompiledSha256": "C94AF360163882D979EF0660AF4470F7368577054A0B78C630065FF816642785",
+  "node": "24.19.0",
+  "mode": "unchanged b0d4d7c executable, fresh output, sequential BelowNormal, expose-gc",
+  "reference": "evidence/ecosystem-v2-balance/measurements.json"
+}

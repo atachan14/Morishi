@@ -1,3 +1,4 @@
+import type {RootStepObserver} from './eco-root-trial.js';
 import {advanceRootGame,syncRootCombat,retireRootDeath,type RootGameRuntime} from './eco-v2-root.js';
 import {ones,round,randomStream,type Element} from './eco-contract.js';
 import {ECO_LIMITS,WORLD,TICK_SECONDS,DRAW_SECONDS,TURN_SECONDS} from './eco-sim.js';
@@ -28,9 +29,9 @@ function generateV2GameLayout(seed:number,config:GenerationConfig,diskRadius:num
 }
 export function placeV2(s:GameV2,x:number,y:number,cardId:number){const card=s.hand.find(c=>c.id===cardId);if(!card||s.outcome!=='playing'||!canPlaceV2(s.units,card.seed.initialDiameter,x,y,s.charges))return false;const u=createV2Unit(s.nextId++,card.seed,'ally',x,y,s.tick,s.sizeModel);s.units.push(u);s.hand=s.hand.filter(c=>c.id!==cardId);s.charges--;log(s,`手札#${cardId+1}を配置`);return true;}
 // Extreme values use a shadow transaction; this is not a game size ceiling.
-export function stepV2(s:GameV2,onEffect?:EffectObserver){const extreme=s.units.some(u=>{const stats=currentV2Stats(u);return u.diameter>1e100||stats.maxHp>1e100||Object.values(stats.elements).some(e=>e.speed>Number.MAX_SAFE_INTEGER||Object.values(e).some(v=>v>1e100));});if(!extreme)return stepV2Core(s,onEffect);const shadow=structuredClone(s),effects:SkillEffect[]=[];const result=stepV2Core(shadow,onEffect?e=>effects.push(e):undefined);Object.assign(s,shadow);for(const e of effects)try{onEffect?.(e);}catch{}return result;}
-function stepV2Core(s:GameV2,onEffect?:EffectObserver){if(s.outcome!=='playing')return false;s.activationPolicy='independent';s.needsDecision=false;s.rotations={};
- if(s.rootGrowth)advanceRootGame(s);else advanceV2Growth(s,uniqueSkillsKeepingReceiverClock);
+export function stepV2(s:GameV2,onEffect?:EffectObserver,onRootStep?:RootStepObserver){const extreme=s.units.some(u=>{const stats=currentV2Stats(u);return u.diameter>1e100||stats.maxHp>1e100||Object.values(stats.elements).some(e=>e.speed>Number.MAX_SAFE_INTEGER||Object.values(e).some(v=>v>1e100));});if(!extreme)return stepV2Core(s,onEffect,onRootStep);const shadow=structuredClone(s),effects:SkillEffect[]=[],rootSteps:Parameters<RootStepObserver>[0][]=[];const result=stepV2Core(shadow,onEffect?e=>effects.push(e):undefined,onRootStep?m=>rootSteps.push(m):undefined);Object.assign(s,shadow);if(onRootStep)for(const m of rootSteps)onRootStep(m);for(const e of effects)try{onEffect?.(e);}catch{}return result;}
+function stepV2Core(s:GameV2,onEffect?:EffectObserver,onRootStep?:RootStepObserver){if(s.outcome!=='playing')return false;s.activationPolicy='independent';s.needsDecision=false;s.rotations={};
+ if(s.rootGrowth)advanceRootGame(s,onRootStep);else advanceV2Growth(s,uniqueSkillsKeepingReceiverClock);
  let visualBudget=128;const emit=(kind:SkillEffect['kind'],element:Element,from:UnitV2,to:UnitV2,amount:number,count:number)=>{if(!onEffect||visualBudget--<=0)return;try{onEffect({tick:s.tick,kind,element,count,amount,from:{id:from.id,team:from.team,x:from.x,y:from.y,diameter:from.diameter},to:{id:to.id,x:to.x,y:to.y,diameter:to.diameter}});}catch{/* Presentation cannot interrupt combat. */}};
  // Growth/merges are complete; material values stay fixed during simultaneous effect collection.
  const sheets=new Map(s.units.map(u=>[u.id,currentV2Stats(u)]));

@@ -1,0 +1,20 @@
+[
+  {
+    "radius": 2400,
+    "units": 100,
+    "cells": 1156,
+    "packedBytes": 255484,
+    "fullBytes": 8123382,
+    "profileVersion": "root-profile-1",
+    "profileHash": "d8113ee5"
+  },
+  {
+    "radius": 4000,
+    "units": 100,
+    "cells": 2916,
+    "packedBytes": 262606,
+    "fullBytes": 20141921,
+    "profileVersion": "root-profile-1",
+    "profileHash": "4ae53aef"
+  }
+]

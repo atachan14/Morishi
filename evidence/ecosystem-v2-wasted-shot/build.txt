@@ -1,0 +1,31 @@
+vite v7.3.7 building client environment for production...
+transforming...
+笨・48 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                     0.46 kB 笏・gzip:   0.32 kB
+dist/ecosystem-v2.html                              0.56 kB 笏・gzip:   0.34 kB
+dist/ecosystem.html                                 0.58 kB 笏・gzip:   0.35 kB
+dist/assets/ecosystem-DxEs-SS9.css                  7.83 kB 笏・gzip:   2.37 kB
+dist/assets/main-B9Ttsclq.css                       8.50 kB 笏・gzip:   2.59 kB
+dist/assets/elementSkills-BD0_So0Q.css             11.68 kB 笏・gzip:   3.05 kB
+dist/assets/modulepreload-polyfill-B5Qt9EMX.js      0.71 kB 笏・gzip:   0.40 kB
+dist/assets/eco-sim-nfCRDbUB.js                    10.27 kB 笏・gzip:   4.61 kB
+dist/assets/ecosystem-C3W38xzO.js                  51.52 kB 笏・gzip:  19.04 kB
+dist/assets/elementSkills-jhd-Tx5u.js             103.96 kB 笏・gzip:  36.56 kB
+dist/assets/main-CoZ2y6jv.js                    1,272.47 kB 笏・gzip: 355.46 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+笨・built in 6.40s
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 6 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/root-trial/root-trial.html                 0.37 kB │ gzip: 0.29 kB
+dist/root-trial/assets/rootTrial-BRNRzBg9.css   1.53 kB │ gzip: 0.68 kB
+dist/root-trial/assets/rootTrial-DCkXA5KM.js   17.66 kB │ gzip: 7.04 kB
+✓ built in 156ms

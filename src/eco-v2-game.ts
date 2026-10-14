@@ -1,3 +1,4 @@
+import {referenceWitnessCandidates} from './eco-v2-reference-witness.js';
 import {SkillConfig} from './eco-v2-config.js';
 import {referenceMaterial} from './eco-v2-reference.js';
 import {skillWaterCost} from './eco-v2-zero-runtime.js';
@@ -26,7 +27,7 @@ function generateV2GameLayout(seed:number,config:GenerationConfig,diskRadius:num
   if(!point)throw Error('Non-overlapping disk generation exhausted its bounded budget; no enemies removed');units.push(createV2Unit(index+1,seedData,'enemy',point.x,point.y));
  }
  const hand=Array.from({length:4},(_,id)=>({id,seed:generateV2Seed(seed,'hand',id,config)}));
- const witness=[{x:40,y:40},{x:WORLD.width-40,y:40},{x:40,y:WORLD.height-40},{x:WORLD.width-40,y:WORLD.height-40},{x:WORLD.width/2,y:WORLD.height/2}].find(p=>canPlaceV2(units,hand[0].seed.initialDiameter,p.x,p.y,3));
+ const witness=[{x:40,y:40},{x:WORLD.width-40,y:40},{x:40,y:WORLD.height-40},{x:WORLD.width-40,y:WORLD.height-40},{x:WORLD.width/2,y:WORLD.height/2},...(config.statModel?referenceWitnessCandidates(units,diskRadius,hand[0].seed.initialDiameter):[])].find(p=>canPlaceV2(units,hand[0].seed.initialDiameter,p.x,p.y,3));
  if(!witness)throw Error('No starting placement witness found; no automatic reroll or weakening');
  return {...(config.sizeModel?{sizeModel:config.sizeModel}:{}),rules:V2_RULES,seed,config:{...config},diskRadius,layoutAttempt,activationPolicy:'independent',tick:0,nextId:v2EnemyCount(config)+1,merges:0,units,hand,nextCard:4,charges:3,drawProgress:0,turnProgress:0,boosts:ones(),rewards:[],outcome:'playing',events:['円盤内ランダム・味方0体開始。数値は仮設定。'],needsDecision:false,rotations:{}};
 }

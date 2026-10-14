@@ -1,0 +1,3 @@
+import {referenceMaterial,type ReferenceStats} from './eco-v2-reference.js';
+// Bounded candidate expansion for the new, much wider surface Aura. No generation retry or weakening.
+export function referenceWitnessCandidates(units:readonly {diameter:number;reference?:ReferenceStats}[],diskRadius:number,cardDiameter:number){const reach=Math.max(0,...units.map(u=>u.diameter/2+(u.reference?referenceMaterial(u.reference,u.diameter).stats[2]:0))),outer=diskRadius+reach+cardDiameter/2+40,points:{x:number;y:number}[]=[];for(const radius of [diskRadius*.8,diskRadius,outer])for(let i=0;i<32;i++){const angle=i*2*Math.PI/32;points.push({x:2048+radius*Math.cos(angle),y:1536+radius*Math.sin(angle)});}return points;}

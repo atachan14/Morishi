@@ -52,3 +52,7 @@ npm run build
 朝の試遊版の横断境界と実時間確認： [ecosystem-boundary](docs/ecosystem-boundary.md)。
 
 タッチ相当のスマホ操作と保存失敗への対処： [ecosystem-mobile](docs/ecosystem-mobile.md)。
+
+## Reference Stats / Size（新規庭）
+
+新規の ecosystem-v2 は0基準補正とSize連動のReferenceモデルです。Power100＋100＝200の合体、有限栄養・Skill先払い・旧保存原本保持を維持します。仮係数は src/eco-v2-config.ts、仕様と検証は [Referenceモデル](docs/ecosystem-v2-reference-model.md)、操作説明は [HELP](http://127.0.0.1:8781/help/reference.html) を参照。画像生成とTier/MNの追加実装は保留です。

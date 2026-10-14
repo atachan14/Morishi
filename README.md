@@ -53,6 +53,6 @@ npm run build
 
 タッチ相当のスマホ操作と保存失敗への対処： [ecosystem-mobile](docs/ecosystem-mobile.md)。
 
-## Reference Stats / Size（新規庭）
+## Reference Stats / Size（新規ラン）
 
-新規の ecosystem-v2 は0基準補正とSize連動のReferenceモデルです。Power100＋100＝200の合体、有限栄養・Skill先払い・旧保存原本保持を維持します。仮係数は src/eco-v2-config.ts、仕様と検証は [Referenceモデル](docs/ecosystem-v2-reference-model.md)、操作説明は [HELP](http://127.0.0.1:8781/help/reference.html) を参照。画像生成とTier/MNの追加実装は保留です。
+新規 ecosystem-v2 は0基準補正とSizeに連動する reference-stats-2 です。土壌は恒久供給、遺骸と水は有限。土壌の共通Resist/Power/Tech/Range/Speedは現在種族の属性倍率へ配分し、HPRegは新規ランから廃止しています。Skill支払いと成長は共通水予算を守り、旧保存の原本を保護します。設定は src/eco-v2-config.ts、現行仕様・検証は [恒久土壌モデル](docs/ecosystem-v2-continuous-soil.md)、[HELP](http://127.0.0.1:8781/help/reference.html) を参照してください。画像生成やTier/MN/PlayerPanelの実装は保留です。

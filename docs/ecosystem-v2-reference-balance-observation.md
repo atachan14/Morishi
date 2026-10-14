@@ -1,5 +1,7 @@
 # Bounded Reference model balance observation
 
+この観察は旧 `reference-stats-1` の有限土壌モデルの記録です。新規ランの恒久土壌・共通ElementStats・HPReg廃止は [continuous soil](ecosystem-v2-continuous-soil.md) を参照してください。旧モデル測定値を新モデルの性能結果として使いません。
+
 Model baseline: cff7ea7. Coefficients, rules and images unchanged. New generated states only; no user saves. Node step wall time is separate from total observation wall time (which includes ledger checks, species queries and save/replay). This is neither physical SP verification nor a guarantee of optimal play. Auto placement simply tries bounded legal candidates every24 seconds.
 
 | Case | Seed | Ticks | Game sec | Step wall sec | Recorded observation wall sec |

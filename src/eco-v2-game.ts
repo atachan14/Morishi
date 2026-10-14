@@ -1,3 +1,6 @@
+import {CONTINUOUS_REFERENCE_MODEL} from './eco-v2-config.js';
+import {NUTRIENT_SPECIES} from './eco-v2-species-config.js';
+import type {PlantCatalog} from './eco-v2-evolution.js';
 import {referenceWitnessCandidates} from './eco-v2-reference-witness.js';
 import {SkillConfig} from './eco-v2-config.js';
 import {referenceMaterial} from './eco-v2-reference.js';
@@ -11,12 +14,12 @@ import {createV2Unit,currentV2Stats,v2PresenceAt,canPlaceV2,v2DistanceCoefficien
 export type SkillEffect={tick:number;kind:'attack'|'heal';element:Element;count:number;amount:number;from:{id:number;team:UnitV2['team'];x:number;y:number;diameter:number};to:{id:number;x:number;y:number;diameter:number}};
 export type EffectObserver=(effect:SkillEffect)=>void;
 export type ActivationPolicy='independent';
-export type GameV2=FoundationV2&{rootGrowth?:RootGameRuntime;seed:number;config:GenerationConfig;diskRadius:number;layoutAttempt:number;activationPolicy:ActivationPolicy;hand:{id:number;seed:SeedV2}[];nextCard:number;charges:number;drawProgress:number;turnProgress:number;boosts:ReturnType<typeof ones>;rewards:{id:number;tick:number;element:Element;enemyOrigins:number[]}[];outcome:'playing'|'win'|'ended';events:string[];needsDecision:boolean;rotations:Record<number,Partial<Record<Element,string>>>};
+export type GameV2=FoundationV2&{nutrientSpecies?:PlantCatalog;rootGrowth?:RootGameRuntime;seed:number;config:GenerationConfig;diskRadius:number;layoutAttempt:number;activationPolicy:ActivationPolicy;hand:{id:number;seed:SeedV2}[];nextCard:number;charges:number;drawProgress:number;turnProgress:number;boosts:ReturnType<typeof ones>;rewards:{id:number;tick:number;element:Element;enemyOrigins:number[]}[];outcome:'playing'|'win'|'ended';events:string[];needsDecision:boolean;rotations:Record<number,Partial<Record<Element,string>>>};
 const log=(s:GameV2,text:string)=>{s.events.unshift(`${(s.tick/10).toFixed(1)}秒 ${text}`);s.events=s.events.slice(0,8);};
 export function createV2Game(seed:number,config:GenerationConfig,diskRadius=config.enemyCount===undefined?V2_DISK_LIMITS.legacyDefault:V2_DISK_LIMITS.currentDefault):GameV2{
  if(config.soilLayout!==undefined&&config.soilLayout!=='finite-scattered-2'||config.targetPolicy!==undefined&&config.targetPolicy!=='aura-any-distance-1'||!validV2Population(config)||!Number.isSafeInteger(seed)||seed<0||seed>4294967295||!Number.isFinite(config.healChance)||config.healChance<0||config.healChance>1||config.sizeModel!==undefined&&config.sizeModel!=='percent-1'||config.initialBalance!==undefined&&config.initialBalance!=='range-presence-2'||config.defenseAllocation!==undefined&&config.defenseAllocation!=='all-elements-1'||!Number.isFinite(diskRadius)||diskRadius<V2_DISK_LIMITS.min||diskRadius>V2_DISK_LIMITS.max)throw Error('設定値が不正です。敵生成円の半径は200〜100000、敵数は1〜100です。');
  const gap=config.initialGap??0,requiredArea=Array.from({length:v2EnemyCount(config)},(_,index)=>{const body=generateV2Seed(seed,'enemy',index,config).initialDiameter/2;return (body+gap/2)**2;}).reduce((a,b)=>a+b,0);if(requiredArea>(diskRadius+gap/2)**2)throw Error('敵の体と間隔を収める面積が不足しています。生成円の半径を広げてください。');
- for(let layoutAttempt=0;layoutAttempt<8;layoutAttempt++){try{return generateV2GameLayout(seed,config,diskRadius,layoutAttempt);}catch{}}
+ for(let layoutAttempt=0;layoutAttempt<8;layoutAttempt++){try{const game=generateV2GameLayout(seed,config,diskRadius,layoutAttempt);if(config.statModel===CONTINUOUS_REFERENCE_MODEL)game.nutrientSpecies=structuredClone(NUTRIENT_SPECIES);return game;}catch{}}
  throw Error("生成範囲が密すぎて配置できませんでした。円の半径を広げて再度生成してください。");
 }
 function generateV2GameLayout(seed:number,config:GenerationConfig,diskRadius:number,layoutAttempt:number):GameV2{

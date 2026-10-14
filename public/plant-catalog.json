@@ -30,6 +30,12 @@
           "淡黄"
         ],
         "firstBatch": true
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -125,6 +131,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -214,6 +226,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -309,6 +327,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -410,6 +434,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -510,6 +540,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -614,6 +650,12 @@
           "焦げ茶"
         ],
         "firstBatch": true
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -714,6 +756,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -820,6 +868,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -915,6 +969,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1004,6 +1064,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1099,6 +1165,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1200,6 +1272,12 @@
           "焦げ茶"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1295,6 +1373,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1384,6 +1468,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1479,6 +1569,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1580,6 +1676,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1680,6 +1782,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1774,6 +1882,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1874,6 +1988,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -1980,6 +2100,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -2075,6 +2201,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -2164,6 +2296,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -2259,6 +2397,12 @@
           "青灰"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -2370,6 +2514,12 @@
           "青灰"
         ],
         "firstBatch": true
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 1,
+        "electric": 0,
+        "dark": 0
       }
     },
     {
@@ -2465,6 +2615,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -2554,6 +2710,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -2659,6 +2821,12 @@
           "青白"
         ],
         "firstBatch": true
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -2760,6 +2928,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -2860,6 +3034,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -2954,6 +3134,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -3054,6 +3240,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -3160,6 +3352,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -3255,6 +3453,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -3344,6 +3548,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -3439,6 +3649,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -3540,6 +3756,12 @@
           "青白"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 1,
+        "dark": 0
       }
     },
     {
@@ -3635,6 +3857,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -3724,6 +3952,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -3819,6 +4053,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -3920,6 +4160,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -4020,6 +4266,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -4114,6 +4366,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -4214,6 +4472,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -4320,6 +4584,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -4425,6 +4695,12 @@
           "灰緑"
         ],
         "firstBatch": true
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -4514,6 +4790,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -4609,6 +4891,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -4710,6 +4998,12 @@
           "灰緑"
         ],
         "firstBatch": false
+      },
+      "elementWeights": {
+        "fire": 0,
+        "ice": 0,
+        "electric": 0,
+        "dark": 1
       }
     },
     {
@@ -4755,6 +5049,12 @@
           "薄桃"
         ],
         "firstBatch": true
+      },
+      "elementWeights": {
+        "fire": 1,
+        "ice": 0,
+        "electric": 0,
+        "dark": 0
       }
     }
   ]

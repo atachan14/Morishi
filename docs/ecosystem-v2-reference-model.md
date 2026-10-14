@@ -1,5 +1,7 @@
 # Reference Stats / Size model
 
+現行新規ランは `reference-stats-2` です。恒久土壌・共通ElementStats・HPReg廃止・v5保存は [恒久土壌モデル](ecosystem-v2-continuous-soil.md) を参照してください。以下の `reference-stats-1` の有限土壌/HPRegの説明は旧保存互換の記録です。Size補正とReference計算の基礎は現行でも共通です。
+
 New gardens use `reference-stats-1`; historical runs retain their own generator, growth, merge and Skill behavior. No historical save is automatically converted. Images remain on hold until the user reviews sample directions; no new Tier/MN subsystem is included.
 
 ## Settings and units

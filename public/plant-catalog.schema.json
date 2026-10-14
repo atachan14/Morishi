@@ -325,6 +325,38 @@
               "type": "boolean"
             }
           }
+        },
+        "elementWeights": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "fire",
+            "ice",
+            "electric",
+            "dark"
+          ],
+          "properties": {
+            "fire": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "ice": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "electric": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "dark": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
         }
       }
     }

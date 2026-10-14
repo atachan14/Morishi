@@ -62,6 +62,8 @@ v1/v2のroot保存は既存codecで読み、mix/bonusと旧挙動をそのまま
 
 証跡evidence/ecosystem-v2-direct、再実行scripts/ecosystem-v2-direct-check.mjs、direct-browser-check.mjs、旧保存QA用finite-soil-browser-check.mjs。任意の追加Cost/待機表示は新表示不要の指示により実装しない。
 
-Dashboardのバランスtask-10bf579f42dae2a9、Tech task-bb29b49faa946f09、土壌task-53a55d44c5945234への最新モデル反映は自動承認レビューに拒否され、未実行。理由は土壌以外の更新承認を委譲内容として信頼しなかったため。迂回していない。モデル・docsのcommitとローカル反映は進め、Dashboardは別途直接承認による再試行待ち。
+Dashboard更新は当初自動承認レビューに拒否されたが、ユーザーのタスク追加/編集/書込みの明示許可を受けた1回の再試行で成功。現在はバランスtask-10bf579f42dae2a9=waiting、Tech task-bb29b49faa946f09=acceptance、土壌task-53a55d44c5945234=completed。全てai/Codex・acceptanceVersion f66c46f。実際の確認時刻だけprogress/completedへ記録し、過去の開始日時は補っていない。validator全127件、保存データ読戻し、8780/snapshotのstale=false/3件の版一致を確認。権限/共有設定は変更せず、拒否を迂回していない。
 
 接触境界は既存の1e-6基準へ揃え、微小な正の隙間でも接触停止と判定する範囲では栄養/成長水消費0とする。near-contactケースを追加し、全371tests・型検査・両buildを再確認。
+
+本体接続commit82c20ed、接触境界修正commitf66c46f。371tests・型検査・両build、8781 HTTP200まで確認。Dashboard反映のブロッカーは解消済み。

@@ -43,4 +43,4 @@ Techによる軽減・無駄撃ち消費の採用自体は承認済み。上記4
 
 [純水・土壌/遺骸の直接有限取得](ecosystem-v2-direct-nutrients.md) を現在の入口とする。水に栄養を保持しない。初期土壌は現行20種各1000の密度積分総量、遺骸も有限在庫から直接取得し、実取得量を両方共通の残水で支払う。旧のSkill使用水mix/bonus比例消費案は撤回・未採用。Skillの固定順支払・不足準備1保持・吸水→Skill→成長は採用済み。本体の新規root runへ接続済み、旧mix/bonus保存は旧方式を保持。
 
-名称は土壌/遺骸、総称栄養。上の過去欄のTech未接続/水中栄養保管は今回の接続で更新される。非幾何StatsのSkillBase/0補正表示、Tier変態/累積Skill、MN/Card Cost、季節/自動日光、50種画像、実機QAは別途残る。Dashboardの指定3件への最新記述更新は権限レビュー拒否で未反映。
+名称は土壌/遺骸、総称栄養。上の過去欄のTech未接続/水中栄養保管は今回の接続で更新される。非幾何StatsのSkillBase/0補正表示、Tier変態/累積Skill、MN/Card Cost、季節/自動日光、50種画像、実機QAは別途残る。Dashboard指定3件は再承認後に反映済み。土壌completed、Tech acceptance、バランスwaiting、版f66c46f、validator/読戻し/配信確認済み。

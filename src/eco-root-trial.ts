@@ -1,3 +1,4 @@
+import type {ReferenceStats} from './eco-v2-reference.js';
 import type {DirectNutrition} from './eco-v2-direct-root.js';
 // Pure root/soil model shared by the standalone trial and transient v2 game.
 export const ROOT_KEYS=['maxHp','hpReg','presence','root',...(['fire','ice','electric','dark'] as const).flatMap(e=>(['attack','range','speed','defense'] as const).map(f=>`${e}.${f}`))] as readonly string[];
@@ -17,7 +18,7 @@ export type RootSoil={recipe?:RootSoilRecipe;x:number;y:number;columns:number;ro
 export type RootCorpse={initialNutrients?:RootVector;id:number;x:number;y:number;diameter:number;waterRemaining:number;initialWater:number;remaining:RootVector};
 export type RootCorpseRules={diameterFactor:number;statFraction:number;recoveryWaterPerDiameter:number};
 export const ROOT_CORPSE_DEFAULTS:RootCorpseRules={diameterFactor:4,statFraction:.25,recoveryWaterPerDiameter:.25};
-export type RootPlant={id:number;x:number;y:number;sizePercent:number;hp:number;stats:RootVector;water:number;capacity?:number;mix:RootVector;bonus:RootVector};
+export type RootPlant={reference?:ReferenceStats;id:number;x:number;y:number;sizePercent:number;hp:number;stats:RootVector;water:number;capacity?:number;mix:RootVector;bonus:RootVector};
 export type RootConfig={capacity:number;radiusPerPoint:number;referenceRadius:number;referenceUptake:number;areaExponent:number;soilFluxPerArea:number;soilCapacityPerArea:number;consumePerSecond:number;sizePerWater:number;corpsePerWater:number;gains:RootVector};
 export type RootStepMeasurement={growthWaterAvailable?:number;nutrientLimited?:boolean;id:number;waterBefore:number;waterAfter:number;eligibleArea:number;contestedArea:number;soloOffer:number;uptakeLimit:number;received:number;growthWish:number;growthAllowed:number;growthConsumed:number;receivedMix:readonly number[];receivedBonus:readonly number[]};
 export type RootStepObserver=(measurements:readonly Readonly<RootStepMeasurement>[])=>void;

@@ -1,3 +1,6 @@
+import {REFERENCE_MODEL} from './eco-v2-config.js';
+import {referenceSeed} from './eco-v2-reference-spawn.js';
+import type {ReferenceStats} from './eco-v2-reference.js';
 import {ELEMENTS,ones,randomStream,round,type Element,type Elements} from './eco-contract.js';
 export {ELEMENTS};
 export const V2_RULES='element-skills-foundation-v1' as const;
@@ -7,7 +10,7 @@ export type ElementTable=Record<Element,ElementStats>;
 export type SkillKind='attack'|'heal';
 export type Skill={key:string;kind:SkillKind;element:Element};
 export type SkillClock={skill:Skill;progress:number;waterWaiting?:boolean};
-export type GenerationConfig={soilLayout?:'finite-scattered-2';targetPolicy?:'aura-any-distance-1';healChance:number;enemyCount?:number;initialGap?:number;sizeModel?:'percent-1';initialBalance?:'range-presence-2';defenseAllocation?:'all-elements-1'};
+export type GenerationConfig={statModel?:typeof REFERENCE_MODEL;soilLayout?:'finite-scattered-2';targetPolicy?:'aura-any-distance-1';healChance:number;enemyCount?:number;initialGap?:number;sizeModel?:'percent-1';initialBalance?:'range-presence-2';defenseAllocation?:'all-elements-1'};
 // Proposal only: callers pass config explicitly; changing it affects new seeds alone.
 export const SUGGESTED_V2_GENERATION:GenerationConfig={healChance:.1,initialBalance:'range-presence-2',defenseAllocation:'all-elements-1'};
 export const CURRENT_V2_GENERATION:GenerationConfig={...SUGGESTED_V2_GENERATION,sizeModel:'percent-1',enemyCount:100,initialGap:40};
@@ -15,10 +18,11 @@ export const V2_DISK_LIMITS={min:200,max:100000,currentDefault:2400,legacyDefaul
 export const v2EnemyCount=(config:GenerationConfig)=>config.enemyCount??24;
 export function validV2Population(config:GenerationConfig){return (config.enemyCount===undefined||Number.isSafeInteger(config.enemyCount)&&config.enemyCount>=1&&config.enemyCount<=100)&&(config.initialGap===undefined||Number.isFinite(config.initialGap)&&config.initialGap>=0&&config.initialGap<=500);}
 export type BasisV2={maxHp:number;hpReg:number;presenceHalo:number;elements:ElementTable};
-export type SeedV2={generator:'element-seed-1';runSeed:number;source:'enemy'|'initial'|'hand';index:number;initialDiameter:number;config:GenerationConfig;raw:BasisV2;fixed:BasisV2;skills:Skill[];entry:{tick:number;boosts:Elements;rewardIds:number[]}};
+export type SeedV2={reference?:ReferenceStats;generator:'element-seed-1';runSeed:number;source:'enemy'|'initial'|'hand';index:number;initialDiameter:number;config:GenerationConfig;raw:BasisV2;fixed:BasisV2;skills:Skill[];entry:{tick:number;boosts:Elements;rewardIds:number[]}};
 export const emptyElementTable=():ElementTable=>Object.fromEntries(ELEMENTS.map(e=>[e,{attack:0,range:0,speed:0,defense:0}])) as ElementTable;
 export const skillKey=(kind:SkillKind,element:Element)=>`${kind}:${element}`;
 export function generateV2Seed(runSeed:number,source:SeedV2['source'],index:number,config:GenerationConfig,entryTick=0,boosts=ones(),rewardIds:number[]=[]):SeedV2{
+ if(config.statModel===REFERENCE_MODEL){const {statModel,...oldConfig}=config;return referenceSeed(generateV2Seed(runSeed,source,index,oldConfig,entryTick,boosts,rewardIds),config);}if(config.statModel!==undefined)throw Error('Unknown stat model');
  if(config.soilLayout!==undefined&&config.soilLayout!=='finite-scattered-2'||config.targetPolicy!==undefined&&config.targetPolicy!=='aura-any-distance-1'||!validV2Population(config)||!Number.isSafeInteger(runSeed)||runSeed<0||runSeed>4294967295||!['enemy','initial','hand'].includes(source)||!Number.isSafeInteger(index)||index<0||index>1000000||!Number.isSafeInteger(entryTick)||entryTick<0||!Number.isFinite(config.healChance)||config.healChance<0||config.healChance>1||config.sizeModel!==undefined&&config.sizeModel!=='percent-1'||config.initialBalance!==undefined&&config.initialBalance!=='range-presence-2'||config.defenseAllocation!==undefined&&config.defenseAllocation!=='all-elements-1'||!ELEMENTS.every(e=>Number.isFinite(boosts[e])&&boosts[e]>=1)||new Set(rewardIds).size!==rewardIds.length||rewardIds.some(id=>!Number.isSafeInteger(id)||id<1||id>v2EnemyCount(config))||rewardIds.length>v2EnemyCount(config))throw Error('Invalid v2 generation input');
  const salt={enemy:0x454E454D,initial:0x414C4C59,hand:0x48414E44}[source],r=randomStream((runSeed^salt^Math.imul(index+1,0x27D4EB2D))>>>0);
  const element=ELEMENTS[Math.floor(r()*4)],kind:SkillKind=r()<config.healChance?'heal':'attack',elements=emptyElementTable();

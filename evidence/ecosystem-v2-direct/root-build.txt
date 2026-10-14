@@ -6,4 +6,4 @@ computing gzip size...
 dist/root-trial/root-trial.html                 0.37 kB │ gzip: 0.29 kB
 dist/root-trial/assets/rootTrial-BRNRzBg9.css   1.53 kB │ gzip: 0.68 kB
 dist/root-trial/assets/rootTrial-AyJFJff3.js   18.62 kB │ gzip: 7.41 kB
-✓ built in 155ms
+✓ built in 156ms

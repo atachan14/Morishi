@@ -1,0 +1,51 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "cells": 10404,
+      "cellSize": 560,
+      "initialCornerRadius": 12980.909099476898,
+      "flatRadius": 20400,
+      "outerRadius": 28560,
+      "rootLimit": 8000,
+      "normalLimit": 100000,
+      "saveVersion": "element-root-save-2",
+      "exactReload": true,
+      "normalSaveUntouched": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "cells": 12769,
+      "cellSize": 560,
+      "initialCornerRadius": 20542.03109254308,
+      "flatRadius": 22596.23420179739,
+      "outerRadius": 31634.727882516345,
+      "rootLimit": 8000,
+      "normalLimit": 100000,
+      "saveVersion": "element-root-save-2",
+      "exactReload": true,
+      "normalSaveUntouched": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "cells": 10404,
+      "cellSize": 560,
+      "initialCornerRadius": 17271.293135501026,
+      "flatRadius": 20400,
+      "outerRadius": 28560,
+      "rootLimit": 8000,
+      "normalLimit": 100000,
+      "saveVersion": "element-root-save-2",
+      "exactReload": true,
+      "normalSaveUntouched": true
+    }
+  ]
+}

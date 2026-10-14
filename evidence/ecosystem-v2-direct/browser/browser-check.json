@@ -1,0 +1,48 @@
+{
+  "browser": "Edg/155.0.4283.45",
+  "isolated": true,
+  "userBrowserTouched": false,
+  "viewports": [],
+  "runtimeErrors": [],
+  "cases": [
+    {
+      "width": 1366,
+      "height": 900,
+      "cardText": "HP 99.2Max 99.2HPReg 0.11/ssize-100.0水分0.0/100Aura-2403.9根-300.0炎 Resist12.6氷 Resist5.6電 Resist8.6闇 Resist9.0根・栄養条件 未配置・昼・貯水0直前 —・未計測能力増分（栄養を消費後）直前土壌直前遺骸周辺遺骸Power———Resist———Range———Speed———水は栄養を保管しない。土壌・遺骸の実取得に水を消費。周辺は配分前。",
+      "allyText": "HP 99.2Max 99.2HPReg 0.11/ssize-100.0水分0.0/100Aura-2403.9根-300.0炎 Resist12.6氷 Resist5.6電 Resist8.6闇 Resist9.0根・栄養条件 配置直後・昼・貯水0直前 —・未計測能力増分（栄養を消費後）直前土壌直前遺骸周辺遺骸Power———Resist———Range———Speed———水は栄養を保管しない。土壌・遺骸の実取得に水を消費。周辺は配分前。",
+      "directFiniteModel": true,
+      "zeroTechDisplayed": true,
+      "pendingBirthDisplayed": true,
+      "viewDoesNotRegisterOrAdvance": true,
+      "pausedSaveExact": true,
+      "reloadStillPending": true,
+      "normalSaveUntouched": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "cardText": "HP 99.2Max 99.2HPReg 0.11/ssize-100.0水分0.0/100Aura-2403.9根-300.0炎 Resist12.6氷 Resist5.6電 Resist8.6闇 Resist9.0根・栄養条件 未配置・昼・貯水0直前 —・未計測能力増分（栄養を消費後）直前土壌直前遺骸周辺遺骸Power———Resist———Range———Speed———水は栄養を保管しない。土壌・遺骸の実取得に水を消費。周辺は配分前。",
+      "allyText": "HP 99.2Max 99.2HPReg 0.11/ssize-100.0水分0.0/100Aura-2403.9根-300.0炎 Resist12.6氷 Resist5.6電 Resist8.6闇 Resist9.0根・栄養条件 配置直後・昼・貯水0直前 —・未計測能力増分（栄養を消費後）直前土壌直前遺骸周辺遺骸Power———Resist———Range———Speed———水は栄養を保管しない。土壌・遺骸の実取得に水を消費。周辺は配分前。",
+      "directFiniteModel": true,
+      "zeroTechDisplayed": true,
+      "pendingBirthDisplayed": true,
+      "viewDoesNotRegisterOrAdvance": true,
+      "pausedSaveExact": true,
+      "reloadStillPending": true,
+      "normalSaveUntouched": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "cardText": "HP 99.2Max 99.2HPReg 0.11/ssize-100.0水分0.0/100Aura-2403.9根-300.0炎 Resist12.6氷 Resist5.6電 Resist8.6闇 Resist9.0根・栄養条件 未配置・昼・貯水0直前 —・未計測能力増分（栄養を消費後）直前土壌直前遺骸周辺遺骸Power———Resist———Range———Speed———水は栄養を保管しない。土壌・遺骸の実取得に水を消費。周辺は配分前。",
+      "allyText": "HP 99.2Max 99.2HPReg 0.11/ssize-100.0水分0.0/100Aura-2403.9根-300.0炎 Resist12.6氷 Resist5.6電 Resist8.6闇 Resist9.0根・栄養条件 配置直後・昼・貯水0直前 —・未計測能力増分（栄養を消費後）直前土壌直前遺骸周辺遺骸Power———Resist———Range———Speed———水は栄養を保管しない。土壌・遺骸の実取得に水を消費。周辺は配分前。",
+      "directFiniteModel": true,
+      "zeroTechDisplayed": true,
+      "pendingBirthDisplayed": true,
+      "viewDoesNotRegisterOrAdvance": true,
+      "pausedSaveExact": true,
+      "reloadStillPending": true,
+      "normalSaveUntouched": true
+    }
+  ]
+}

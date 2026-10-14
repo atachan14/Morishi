@@ -6,7 +6,7 @@ export type ElementStats=Record<typeof V2_FIELDS[number],number>;
 export type ElementTable=Record<Element,ElementStats>;
 export type SkillKind='attack'|'heal';
 export type Skill={key:string;kind:SkillKind;element:Element};
-export type SkillClock={skill:Skill;progress:number};
+export type SkillClock={skill:Skill;progress:number;waterWaiting?:boolean};
 export type GenerationConfig={soilLayout?:'finite-scattered-2';targetPolicy?:'aura-any-distance-1';healChance:number;enemyCount?:number;initialGap?:number;sizeModel?:'percent-1';initialBalance?:'range-presence-2';defenseAllocation?:'all-elements-1'};
 // Proposal only: callers pass config explicitly; changing it affects new seeds alone.
 export const SUGGESTED_V2_GENERATION:GenerationConfig={healChance:.1,initialBalance:'range-presence-2',defenseAllocation:'all-elements-1'};

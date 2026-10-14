@@ -28,3 +28,5 @@ header button,.game-header button{color:#244c39}header button[aria-pressed=true]
 #display-content{position:relative}
 
 .display-row button:disabled{filter:grayscale(1)}
+
+.draw-bar{position:relative;min-height:32px;border:1px solid #b6c8ac;border-radius:5px;overflow:hidden;margin:8px 0;background:#edf2e8}.draw-bar>span{position:absolute;inset:0 auto 0 0;background:#a3c6a2}.draw-bar>b{position:relative;display:block;padding:6px;font-size:12px;font-weight:500}.card-cost{margin:4px 0 6px}

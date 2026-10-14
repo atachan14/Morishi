@@ -8,7 +8,8 @@ export const ROOT_FINITE_PROFILE_VERSION='root-profile-2' as const;
 export type RootEnvelope={x:number;y:number;innerRadius:number;outerRadius:number};
 export function rootSupportAt(e:RootEnvelope,x:number,y:number){const d=Math.hypot(x-e.x,y-e.y);if(d<=e.innerRadius)return 1;if(d>=e.outerRadius)return 0;const t=(d-e.innerRadius)/(e.outerRadius-e.innerRadius);return (1-t)**2*(1+2*t);}
 export function validateRootEnvelope(e:RootEnvelope){if(!e||![e.x,e.y,e.innerRadius,e.outerRadius].every(Number.isFinite)||e.innerRadius<=0||e.outerRadius<=e.innerRadius)throw Error('Invalid root envelope');}
-export function rootCellSupport(cell:RootCell){return cell.support?cell.support.reduce((n,v)=>n+v,0)/cell.support.length:1;}
+const supportMeans=new WeakMap<readonly number[],number>();
+export function rootCellSupport(cell:RootCell){const values=cell.support;if(!values)return 1;const cached=supportMeans.get(values);if(cached!==undefined)return cached;const mean=values.reduce((n,v)=>n+v,0)/values.length;if(Object.isFrozen(values))supportMeans.set(values,mean);return mean;}
 export type RootSoilRecipe={version:typeof ROOT_PROFILE_VERSION|typeof ROOT_FINITE_PROFILE_VERSION;envelope?:RootEnvelope;patches:RootPatch[]};
 export type RootSoil={recipe?:RootSoilRecipe;x:number;y:number;columns:number;rows:number;cellSize:number;samples:number;cells:RootCell[]};
 // remaining uses RootPlant.bonus nutrient units. waterRemaining/initialWater are uptake quotas, not stored water.
